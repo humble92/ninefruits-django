@@ -1,3 +1,5 @@
+from django.contrib.auth.models import User
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 from django_extensions.db.models import TimeStampedModel
 
@@ -43,10 +45,40 @@ class Course(TimeStampedModel):
     department = models.ForeignKey(
         'Department', blank=True, null=True, on_delete=models.SET_NULL, related_name="courses"
     )
-    students = models.ManyToManyField(TotalStudent, blank=True)
 
     def __str__(self):
         return self.name if self.name else self.subject.base_name
 
     class Meta:
         unique_together = ('code', 'division', 'opening_semester',)
+
+
+class CourseApplication(TimeStampedModel):
+    SCORE_CHOICES = [
+        ('A+', 'A+'),
+        ('A',  'A'),
+        ('A-', 'A-'),
+        ('B+', 'B+'),
+        ('B',  'B'),
+        ('B-', 'B-'),
+        ('C+', 'C+'),
+        ('C',  'C'),
+        ('C-', 'C-'),
+        ('D+', 'D+'),
+        ('D',  'D'),
+        ('D-', 'D-'),
+        ('F', 'F'),
+    ]
+
+    course = models.ForeignKey(
+        'Course', blank=False, null=False, on_delete=models.CASCADE, related_name="applications"
+    )
+    student = models.ForeignKey(
+        'user.TotalStudent', blank=False, null=False, on_delete=models.CASCADE, related_name="course_applications"
+    )
+    score = models.PositiveIntegerField(default=0,
+        validators=[
+            MinValueValidator(0),
+            MaxValueValidator(100),
+        ])
+    grade = models.CharField(blank=True, null=True, max_length=2, choices=SCORE_CHOICES)

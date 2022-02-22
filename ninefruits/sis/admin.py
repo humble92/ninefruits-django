@@ -1,10 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from django.contrib.auth.forms import UserChangeForm, UserCreationForm
 from django.contrib.auth.models import User
-from django.utils.translation import gettext, gettext_lazy as _
-from itertools import chain
-from .models import Faculty, Department, BaseSubject, Course
+from .models import Faculty, Department, BaseSubject, Course, CourseApplication
 
 
 class CustomUserAdmin(UserAdmin):
@@ -46,3 +43,10 @@ class CourseAdmin(admin.ModelAdmin):
     list_display = ('__str__', 'code', 'division', 'department', 'opening_semester')
     list_filter = ('department', 'opening_semester')
     search_fields = ['name', 'subject__base_name', 'code']
+
+
+@admin.register(CourseApplication)
+class CourseApplicationAdmin(admin.ModelAdmin):
+    list_display = ('course', 'student', 'score', 'grade')
+    list_filter = ('student', 'course')
+    search_fields = ['course__code', 'course__name', 'course__subject__base_name', 'student__username', 'student__profile__id_no']
