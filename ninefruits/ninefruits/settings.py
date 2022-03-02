@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_extensions',
     'rest_framework',
+    'django_svelte',
     'user',
     'sis',
 ]
@@ -76,6 +77,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ninefruits.wsgi.application'
 
+STATICFILES_DIRS = [
+    BASE_DIR.parent / "django_svelte" / "public" / "build",
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
