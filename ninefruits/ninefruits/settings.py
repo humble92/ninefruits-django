@@ -78,7 +78,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ninefruits.wsgi.application'
 
 STATICFILES_DIRS = [
-    BASE_DIR.parent / "django_svelte" / "public" / "build",
+    '/app/django_svelte/public/build',
 ]
 
 # Database
