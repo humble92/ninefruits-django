@@ -18,6 +18,8 @@ env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Read .env file
+environ.Env.read_env(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -78,7 +80,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ninefruits.wsgi.application'
 
 STATICFILES_DIRS = [
-    '/app/django_svelte/public/build',
+    BASE_DIR.parent / 'django_svelte' / 'public' / 'build',
 ]
 
 # Database
