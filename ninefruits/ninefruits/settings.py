@@ -18,6 +18,8 @@ env = environ.Env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+# Read .env file
+environ.Env.read_env(BASE_DIR / '.env')
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -43,7 +45,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'django_svelte',
-    'user',
+    'user.apps.UserConfig', # Corrected to use simpler AppConfig path
     'sis',
 ]
 
@@ -78,7 +80,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'ninefruits.wsgi.application'
 
 STATICFILES_DIRS = [
-    '/app/django_svelte/public/build',
+    BASE_DIR.parent / 'django_svelte' / 'public' / 'build',
 ]
 
 # Database
@@ -164,4 +166,9 @@ STATIC_URL = 'static/'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
+from django.urls import reverse_lazy
+
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_URL = 'user:login'
+LOGIN_REDIRECT_URL = 'user:mypage' # Updated value

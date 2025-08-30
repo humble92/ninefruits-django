@@ -14,11 +14,21 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, reverse_lazy # Ensure reverse_lazy is imported
+
+from django.contrib import admin
+from django.urls import include, path, reverse_lazy # Ensure reverse_lazy is imported
+# RedirectView import is removed as it's no longer used.
+# from django.views.generic.base import RedirectView 
+
+# The line admin.site.login_url = reverse_lazy('user:login') is removed from here.
+# It's now handled in user/apps.py.
 
 urlpatterns = [
+    # The RedirectView path for 'admin/login/' is removed.
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls')),
-    path('user/', include('user.urls')),
+    # Using 'user.urls' as it has been confirmed to work.
+    path('user/', include('user.urls')), 
     path('', include('sis.urls')),
 ]
