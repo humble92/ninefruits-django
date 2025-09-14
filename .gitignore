@@ -131,3 +131,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+ninefruits/db*.sqlite3

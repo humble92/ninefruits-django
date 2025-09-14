@@ -46,7 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_svelte',
     'user.apps.UserConfig', # Corrected to use simpler AppConfig path
-    'sis',
+    'sis.apps.SisConfig',
 ]
 
 MIDDLEWARE = [

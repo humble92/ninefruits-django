@@ -2,7 +2,7 @@ import svelte from 'rollup-plugin-svelte';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import css from 'rollup-plugin-css-only';
 
 const production = !process.env.ROLLUP_WATCH;
@@ -34,8 +34,8 @@ function componentExportDetails(componentName) {
 		output: {
 			sourcemap: true,
 			format: 'iife',
-      name: `${componentName.toLowerCase()}`,
-      file: `public/build/${componentName}.js`,
+			name: `${componentName.toLowerCase()}`,
+			file: `public/build/${componentName}.js`,
 		},
 		plugins: [
 			svelte({
@@ -55,7 +55,8 @@ function componentExportDetails(componentName) {
 			// https://github.com/rollup/plugins/tree/master/packages/commonjs
 			resolve({
 				browser: true,
-				dedupe: ['svelte']
+				dedupe: ['svelte'],
+				exportConditions: ['svelte']
 			}),
 			commonjs(),
 
