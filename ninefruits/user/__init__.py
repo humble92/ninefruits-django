@@ -1,1 +1,1 @@
-default_app_config = 'user.apps.UserConfig' # Corrected path
+default_app_config = 'user.apps.UserConfig'

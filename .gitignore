@@ -132,4 +132,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
+# Database files (SQLite)
 ninefruits/db*.sqlite3
+
+# DevDB files
+.devdbrc

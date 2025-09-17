@@ -14,15 +14,16 @@ class UserAuthTests(TestCase):
         self.assertTemplateUsed(response, 'user/login.html')
 
     def test_valid_login(self):
-        # Note: LOGIN_REDIRECT_URL should be set to 'admin:index' or 'user:mypage' in settings for this to pass as is
+        # Note: LOGIN_REDIRECT_URL should be set to 'user:mypage' in settings for this to pass
         # For now, we test if the user is logged in and if the redirect happens.
-        # The actual redirect target will be adjusted later based on the new "mypage" requirement.
         login_url = reverse('user:login')
         response = self.client.post(login_url, {'username': 'testuser', 'password': 'testpassword'})
         
-        self.assertEqual(response.status_code, 302) # Should redirect
-        # Check if user is authenticated
+        # Check if user is authenticated and redirected to the correct page.
+        # assertRedirects checks both the status code (302) and the redirect URL.
+        self.assertRedirects(response, reverse('user:mypage'))
         self.assertTrue(self.client.session.get('_auth_user_id') is not None)
+        
 
     def test_invalid_login(self):
         login_url = reverse('user:login')
@@ -43,7 +44,7 @@ class UserAuthTests(TestCase):
         self.assertEqual(response.url, reverse('user:login')) # Redirects to login page
         self.assertFalse(self.client.session.get('_auth_user_id')) # User is logged out
 
-    def test_unauthenticated_admin_access(self):
+    def test_admin_access_renders(self):
         admin_url = reverse('admin:index')
         
         # Follow redirects to the final destination

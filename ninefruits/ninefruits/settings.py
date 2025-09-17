@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'django_extensions',
     'rest_framework',
     'django_svelte',
-    'user.apps.UserConfig', # Corrected to use simpler AppConfig path
+    'user.apps.UserConfig',
     'sis.apps.SisConfig',
 ]
 
@@ -162,13 +162,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
-from django.urls import reverse_lazy
-
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 LOGIN_URL = 'user:login'
-LOGIN_REDIRECT_URL = 'user:mypage' # Updated value
+LOGIN_REDIRECT_URL = 'user:mypage'

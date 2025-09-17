@@ -14,21 +14,31 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import include, path, reverse_lazy # Ensure reverse_lazy is imported
+from django.urls import include, path, reverse_lazy
+from django.views.generic.base import RedirectView
+from django.contrib.auth import views as auth_views
 
-from django.contrib import admin
-from django.urls import include, path, reverse_lazy # Ensure reverse_lazy is imported
-# RedirectView import is removed as it's no longer used.
-# from django.views.generic.base import RedirectView 
-
-# The line admin.site.login_url = reverse_lazy('user:login') is removed from here.
-# It's now handled in user/apps.py.
+# Authentication URL settings for DRF to redirect to admin page after login
+drf_auth_patterns = [
+    path('login/', 
+        auth_views.LoginView.as_view(
+            template_name='rest_framework/login.html',
+            redirect_authenticated_user=True,
+            next_page=reverse_lazy('admin:index')
+        ), name='login'),
+    path('logout/', 
+        auth_views.LogoutView.as_view(
+            next_page=reverse_lazy('rest_framework:login')
+        ), name='logout'),
+]
 
 urlpatterns = [
-    # The RedirectView path for 'admin/login/' is removed.
+    path('', RedirectView.as_view(url=reverse_lazy('user:user_index'))),
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    # Using 'user.urls' as it has been confirmed to work.
+
+    path('api-auth/', include((drf_auth_patterns, 'rest_framework'))),
+    path('api/sis/', include('sis.urls_api')),
+
     path('user/', include('user.urls')), 
-    path('', include('sis.urls')),
+    path('sis/', include('sis.urls')),
 ]
