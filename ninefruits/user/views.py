@@ -3,6 +3,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import redirect, render
 from django.contrib.auth import logout as auth_logout
 from django.contrib.auth.decorators import login_required
+from django.http import JsonResponse
 
 class CustomLoginView(LoginView):
     template_name = 'user/login.html'
@@ -36,3 +37,17 @@ def custom_logout_view(request):
 @login_required
 def mypage_view(request):
     return render(request, 'user/mypage.html')
+
+@login_required
+def user_info(request):
+    user = request.user
+    profile = user.profile
+    data = {
+        'username': user.username,
+        'email': user.email,
+        'first_name': user.first_name,
+        'last_name': user.last_name,
+        'profile_type': profile.get_profile_type_display(),
+        'profile_type_code': profile.profile_type,
+    }
+    return JsonResponse(data)
