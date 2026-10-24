@@ -1,0 +1,16 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}"Degree audit" on a student record (original ViewStudentRecord degreeAudit action): the
+audit evaluated now, and a button to store it.{% endcomment %}
+{% block content %}
+<div class="max-w-4xl">
+    <h1 class="mb-1 text-lg font-semibold">{{ title }}</h1>
+    <p class="mb-6 text-sm text-base-500">{{ subtitle }}</p>
+    {% include "graduation/partials/degree_audits.html" %}
+    <form method="post" class="mt-6 flex gap-3">
+        {% csrf_token %}
+        {% if can_save %}<button type="submit" class="rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white">{% translate "Save this audit" %}</button>{% endif %}
+        <a href="{{ back_url }}" class="px-4 py-2 text-sm">{% translate "Cancel" context "common" %}</a>
+    </form>
+</div>
+{% endblock %}

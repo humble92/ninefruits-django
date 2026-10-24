@@ -1,0 +1,29 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}Bulk "Graduate" (original DegreeAuditResource toolbar action): graduation date and reason
+for the selected students. Students whose latest audit is not satisfied are reported.{% endcomment %}
+{% block content %}
+<div class="max-w-2xl">
+    <h1 class="mb-1 text-lg font-semibold">{{ title }}</h1>
+    <ul class="mb-6 text-sm text-base-600" data-selected>
+        {% for audit in queryset %}<li>{{ audit.student_record.student_number }} {{ audit.student_record.person.display_name }}</li>{% endfor %}
+    </ul>
+    <form method="post" class="flex flex-col gap-4">
+        {% csrf_token %}
+        {% for audit in queryset %}<input type="hidden" name="{{ action_checkbox_name }}" value="{{ audit.pk }}">{% endfor %}
+        <input type="hidden" name="action" value="graduate_selected">
+        <input type="hidden" name="apply" value="1">
+        {% for field in form %}
+            <div>
+                <label for="{{ field.id_for_label }}" class="mb-1 block text-sm font-medium">{{ field.label }}</label>
+                {{ field }}
+                {% for error in field.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+            </div>
+        {% endfor %}
+        <div class="flex gap-3">
+            <button type="submit" class="rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white">{{ title }}</button>
+            <a href="{{ back_url }}" class="px-4 py-2 text-sm">{% translate "Cancel" context "common" %}</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

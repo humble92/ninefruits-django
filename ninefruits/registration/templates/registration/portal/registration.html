@@ -110,7 +110,7 @@ results (partial "results").{% endcomment %}
             {% partialdef results inline %}
             <div id="registration-results" class="mt-3 space-y-2" data-results>
                 {% for result in results %}
-                    <div class="flex flex-wrap items-center justify-between gap-2 rounded border border-zinc-200 p-3 text-sm">
+                    <div class="flex flex-wrap items-center justify-between gap-2 rounded border border-zinc-200 p-3 text-sm" data-section="{{ result.section.pk }}" data-open-seats="{{ result.general }}">
                         <span>
                             <span class="font-medium">{{ result.label }} {{ result.title }}</span> · {{ result.credits }}
                             <span class="block text-xs text-zinc-500">

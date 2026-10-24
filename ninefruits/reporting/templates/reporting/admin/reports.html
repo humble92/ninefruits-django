@@ -1,0 +1,41 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}Standard reports (original Filament page Reports and filament/admin/report).{% endcomment %}
+{% block content %}
+<div class="flex flex-col gap-6" data-reports>
+    <h1 class="text-lg font-semibold">{{ title }}</h1>
+    <form method="get" class="grid gap-4 md:grid-cols-4">
+        {% for field in fields %}
+            <div>
+                <label for="{{ field.id_for_label }}" class="mb-1 block text-sm font-medium">{{ field.label|capfirst }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <div class="md:col-span-4"><button type="submit" class="rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white">{% translate "Show" %}</button></div>
+    </form>
+    <div class="space-y-3">
+        <div class="flex items-center justify-between text-sm">
+            <span class="text-base-500">{% blocktranslate with count=row_count %}{{ count }} row(s) (first 500 on screen; the CSV has them all){% endblocktranslate %}</span>
+            <a href="{{ csv_url }}" class="underline" data-csv>{% translate "Download CSV" %}</a>
+        </div>
+        <div class="overflow-x-auto rounded border border-base-200">
+            <table class="w-full text-sm">
+                <thead>
+                    <tr class="text-left">
+                        {% for column, label in columns %}<th class="whitespace-nowrap px-3 py-2 font-medium">{{ label }}</th>{% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                        <tr class="border-t border-base-200">
+                            {% for value in row %}<td class="whitespace-nowrap px-3 py-1.5">{{ value }}</td>{% endfor %}
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="{{ columns|length }}" class="px-3 py-6 text-center text-base-500">{% translate "No rows. Choose the filters above." %}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

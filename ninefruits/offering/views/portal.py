@@ -162,8 +162,16 @@ class SectionDetailView(LoginRequiredMixin, View):
             "can_edit": can_edit,
             "syllabus": syllabus,
             "syllabus_parts": _syllabus_parts(syllabus),
+            "lms_links": _lms_links(section, request.user),
         }
         return render(request, self.template_name, context)
+
+
+def _lms_links(section: Section, user: Any) -> list[dict[str, str]]:
+    """The section's linked LMS courses: URL and label (Phase 12, original ``SectionDetail``)."""
+    from ninefruits.lms.services import portal_links
+
+    return portal_links(section, user)
 
 
 def _part_labels() -> dict[str, str]:

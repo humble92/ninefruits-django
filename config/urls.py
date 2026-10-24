@@ -9,12 +9,14 @@ urlpatterns = [
     path("auth/sso/", include("ninefruits.security.sso_urls")),
     path("i18n/", include("ninefruits.i18n.urls")),
     path("portal/", include("ninefruits.portal.urls")),
+    path("api/", include("ninefruits.api.urls")),
     path("", include("ninefruits.person.urls")),
     path("", include("ninefruits.admission.urls")),
     path("", include("ninefruits.grading.urls")),
     path("", include("ninefruits.certificate.urls")),
     path("", include("ninefruits.assessment.urls")),
     path("", include("ninefruits.attendance.urls")),
+    path("", include("ninefruits.reporting.urls")),
     path("", include("ninefruits.core.urls")),
 ]
 

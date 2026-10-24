@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 22:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: actions/_support.py:24
+msgid "Enter a reason."
+msgstr "사유를 입력하세요."
+
+# key: graduation.errors.not_enrolled
+#: actions/graduate_students.py:44
+msgid "Only an enrolled student can graduate."
+msgstr "재학 중인 학생만 졸업 처리할 수 있습니다."
+
+# key: graduation.errors.no_audit
+#: actions/graduate_students.py:51
+msgid "No stored degree audit: run the audit first."
+msgstr "저장된 졸업 요건 점검이 없습니다. 먼저 점검을 실행하세요."
+
+# key: graduation.errors.audit_not_satisfied
+#: actions/graduate_students.py:53
+msgid "The latest degree audit is not satisfied."
+msgstr "최신 졸업 요건 점검이 미충족입니다."
+
+# key: graduation.errors.waiver_exists
+#: actions/waive_requirement.py:39
+msgid "A pending or approved waiver already exists for this requirement."
+msgstr "이 요건에 대기 중이거나 승인된 면제가 이미 있습니다."
+
+# key: graduation.errors.waiver_not_approved
+#: actions/waive_requirement.py:69
+msgid "Only an approved waiver can be lifted."
+msgstr "승인된 면제만 해제할 수 있습니다."
+
+# key: grading.errors.request_decided
+#: actions/waive_requirement.py:106
+msgid "The request is already decided."
+msgstr "이미 처리된 요청입니다."
+
+# key: graduation.errors.own_waiver
+#: actions/waive_requirement.py:108
+msgid "You cannot decide your own waiver request."
+msgstr "자신이 요청한 면제는 결정할 수 없습니다."
+
+# key: curriculum.fields.program_role
+#: admin/audits.py:36 models.py:68
+msgid "Program role"
+msgstr "이수 구분"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: admin/audits.py:43 admin/audits.py:47 admin/audits.py:192 models.py:78 templates/graduation/partials/degree_audit.html:9 templates/graduation/partials/degree_audit.html:24
+msgid "Satisfied"
+msgstr "충족"
+
+# key: graduation.satisfied.no
+#: admin/audits.py:47 templates/graduation/partials/degree_audit.html:9 templates/graduation/partials/degree_audit.html:24
+msgid "Not satisfied"
+msgstr "미충족"
+
+# key: graduation.report_columns.program_name
+#: admin/audits.py:56 admin/audits.py:180 models.py:73
+msgctxt "graduation"
+msgid "Program"
+msgstr "과정"
+
+# key: registration.fields.status
+#: admin/audits.py:69 admin/audits.py:188 admin/waivers.py:41 admin/waivers.py:131
+msgctxt "registration"
+msgid "Status"
+msgstr "상태"
+
+# key: security.scope_types.global
+#: admin/audits.py:75
+msgid "All"
+msgstr "전체"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/audits.py:172 admin/waivers.py:115
+msgid "Student number"
+msgstr "학번"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/audits.py:176
+msgctxt "people"
+msgid "Name"
+msgstr "이름"
+
+# key: people.fields.year_level
+#: admin/audits.py:184
+msgctxt "people"
+msgid "Year"
+msgstr "학년"
+
+# key: graduation.fields.earned_credits
+#: admin/audits.py:196 models.py:79 templates/graduation/partials/degree_audit.html:10
+msgctxt "graduation"
+msgid "Earned credits"
+msgstr "취득 학점"
+
+# key: grading.fields.cumulative_gpa
+#: admin/audits.py:201 models.py:84 templates/graduation/partials/degree_audit.html:11
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "누적 평점"
+
+# key: graduation.actions.run_audits
+#: admin/audits.py:223 admin/audits.py:233
+msgid "Run audits"
+msgstr "점검 실행"
+
+# key: graduation.notifications.audits_run
+#: admin/audits.py:231
+#, python-format
+msgid "%(students)s student(s) audited, %(satisfied)s satisfied."
+msgstr "학생 %(students)s명 점검, 충족 %(satisfied)s명."
+
+# key: graduation.actions.open
+#: admin/audits.py:235
+msgctxt "graduation"
+msgid "Open"
+msgstr "열기"
+
+# key: graduation.actions.rerun
+#: admin/audits.py:249 admin/audits.py:263
+msgid "Audit again"
+msgstr "다시 점검"
+
+# key: graduation.notifications.audit_saved
+#: admin/audits.py:257 admin/student_record.py:60
+msgid "Degree audit saved."
+msgstr "졸업 요건 점검을 저장했습니다."
+
+# key: graduation.actions.graduate
+#: admin/audits.py:269 admin/audits.py:293
+msgid "Graduate"
+msgstr "졸업 처리"
+
+# key: graduation.notifications.graduated
+#: admin/audits.py:280
+#, python-format
+msgid "%(count)s student(s) graduated, %(errors)s not processed."
+msgstr "졸업 처리 %(count)s명, 미처리 %(errors)s명."
+
+# key: common.reason
+#: admin/forms.py:18 admin/waivers.py:123 models.py:138
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: graduation.report_columns.term_code
+#: admin/forms.py:29 models.py:76
+msgid "Term"
+msgstr "학기"
+
+# key: graduation.fields.min_year_level
+#: admin/forms.py:32
+msgid "From year level"
+msgstr "학년 이상"
+
+# key: people.fields.graduation_date
+#: admin/forms.py:51
+msgid "Graduation date"
+msgstr "졸업일"
+
+# key: curriculum.sections.requirements
+#: admin/forms.py:63 admin/waivers.py:119 models.py:136
+msgid "Requirements"
+msgstr "요건"
+
+# key: graduation.actions.audit_now
+#: admin/student_record.py:40 admin/student_record.py:65
+msgctxt "graduation.actions"
+msgid "Degree audit"
+msgstr "졸업 요건 점검"
+
+# key: graduation.actions.waive
+#: admin/student_record.py:75 admin/student_record.py:107
+msgid "Waive a requirement"
+msgstr "요건 면제"
+
+# key: graduation.notifications.waiver_requested
+#: admin/student_record.py:101
+msgid "Waiver requested; it counts once another person approves it."
+msgstr "면제를 요청했습니다. 다른 담당자가 승인하면 적용됩니다."
+
+# key: graduation.help.waiver
+#: admin/student_record.py:110
+msgid "Another person with the graduation permission must approve the waiver before it counts."
+msgstr "졸업 처리 권한이 있는 다른 담당자가 승인해야 면제가 적용됩니다."
+
+# key: grading.fields.requested_by
+#: admin/waivers.py:127
+msgctxt "grading"
+msgid "Requested by"
+msgstr "요청자"
+
+# key: grading.fields.decided_by
+#: admin/waivers.py:135
+msgctxt "grading"
+msgid "Decided by"
+msgstr "처리자"
+
+# key: grading.fields.decision_note
+#: admin/waivers.py:139 models.py:151
+msgctxt "grading"
+msgid "Note"
+msgstr "처리 의견"
+
+# key: graduation.fields.lift_reason
+#: admin/waivers.py:143 models.py:154
+msgid "Lift reason"
+msgstr "해제 사유"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/waivers.py:164 admin/waivers.py:180
+msgid "Approve"
+msgstr "승인"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: admin/waivers.py:174 enums.py:14
+msgid "Approved"
+msgstr "승인"
+
+# key: grading.actions.reject
+#: admin/waivers.py:186 admin/waivers.py:202
+msgctxt "grading"
+msgid "Reject"
+msgstr "반려"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: admin/waivers.py:196 enums.py:15
+msgid "Rejected"
+msgstr "반려"
+
+# key: graduation.actions.lift
+#: admin/waivers.py:208 admin/waivers.py:221
+msgid "Lift the waiver"
+msgstr "면제 해제"
+
+# key: graduation.waiver_statuses.lifted
+#: admin/waivers.py:218 enums.py:16
+msgid "Lifted"
+msgstr "해제"
+
+# key: admin.navigation.graduation
+# key: permissions.resources.graduation
+# key: portal.navigation.graduation
+#: apps.py:21
+msgctxt "portal"
+msgid "Graduation"
+msgstr "졸업"
+
+# key: graduation.waiver_statuses.pending
+#: enums.py:13
+msgctxt "graduation"
+msgid "Pending"
+msgstr "대기"
+
+# key: people.sections.record
+#: models.py:57 models.py:129
+msgid "Student record"
+msgstr "학적"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: models.py:66
+msgid "graduation requirements"
+msgstr "졸업 요건"
+
+# key: graduation.report_columns.required_credits
+#: models.py:81
+msgctxt "graduation"
+msgid "Required"
+msgstr "필요 학점"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: models.py:88 templates/graduation/partials/degree_audit.html:18
+msgid "Audited"
+msgstr "점검 시각"
+
+# key: graduation.actions.audit_now
+# key: graduation.resources.audits.label
+#: models.py:96
+msgid "Degree audit"
+msgstr "졸업 요건 점검"
+
+# key: graduation.resources.audits.plural_label
+#: models.py:97
+msgid "Degree audits"
+msgstr "졸업 요건 점검"
+
+# key: graduation.report_columns.status
+#: models.py:140
+msgctxt "graduation"
+msgid "Status"
+msgstr "상태"
+
+# key: grading.fields.requested_at
+#: models.py:148
+msgctxt "grading"
+msgid "Requested"
+msgstr "요청 시각"
+
+# key: graduation.resources.waivers.label
+#: models.py:161
+msgid "Requirement waiver"
+msgstr "요건 면제"
+
+# key: graduation.resources.waivers.plural_label
+#: models.py:162
+msgid "Requirement waivers"
+msgstr "요건 면제"
+
+# key: graduation.issues.no_requirement_set
+#: services/degree_audit.py:103
+#, python-format
+msgid "No graduation requirements are defined for catalog year %(year)s."
+msgstr "교육과정 연도 %(year)s의 졸업 요건이 정의되지 않았습니다."
+
+# key: graduation.issues.requirement
+#: services/degree_audit.py:116
+#, python-format
+msgid "Requirement not met: %(name)s"
+msgstr "미충족 요건: %(name)s"
+
+# key: graduation.issues.total_credits
+#: services/degree_audit.py:121
+#, python-format
+msgid "Total credits %(earned)s of %(required)s required."
+msgstr "총 취득 학점 %(earned)s / 필요 %(required)s."
+
+# key: graduation.issues.gpa
+#: services/degree_audit.py:127
+#, python-format
+msgid "Cumulative GPA %(gpa)s below the minimum %(minimum)s."
+msgstr "누계 평점 %(gpa)s이 최저 기준 %(minimum)s에 미달합니다."
+
+# key: graduation.settings.degree_number_pattern
+#: settings_pages.py:20
+msgid "Degree number pattern"
+msgstr "학위번호 형식"
+
+# key: graduation.settings.degree_number_pattern_help
+#: settings_pages.py:25
+#, python-brace-format
+msgid "Tokens: {PROGRAM} program code, {YYYY} or {YY} graduation year, {SEQ:5} sequence per distinct prefix (required). Default {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+msgstr "항목: {PROGRAM} 과정 코드, {YYYY} 또는 {YY} 졸업 연도, {SEQ:5} 접두어별 일련번호(필수). 기본 {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+
+# key: graduation.settings.minimum_cumulative_gpa
+#: settings_pages.py:30
+msgid "Minimum cumulative GPA"
+msgstr "최저 누계 평점"
+
+# key: graduation.settings.minimum_cumulative_gpa_help
+#: settings_pages.py:36
+msgid "Required to graduate (primary program). Leave empty for none."
+msgstr "졸업에 필요한 누계 평점(주전공). 비우면 적용하지 않는다."
+
+# key: graduation.settings.title
+#: settings_pages.py:45
+msgid "Graduation settings"
+msgstr "졸업 설정"
+
+# key: evaluation.portal.back
+#: templates/graduation/admin/audit_detail.html:10
+msgid "Back"
+msgstr "목록으로"
+
+# key: graduation.actions.save_audit
+#: templates/graduation/admin/audit_now.html:13
+msgid "Save this audit"
+msgstr "이 점검 저장"
+
+# key: assessment.portal.cancel
+#: templates/graduation/admin/audit_now.html:14 templates/graduation/admin/graduate.html:26
+msgctxt "common"
+msgid "Cancel"
+msgstr "취소"
+
+# key: graduation.fields.waived
+#: templates/graduation/partials/degree_audit.html:24
+msgid "Waived"
+msgstr "면제"
+
+# key: curriculum.fields.credits
+#: templates/graduation/partials/degree_audit.html:28
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "학점"
+
+# key: graduation.fields.courses
+#: templates/graduation/partials/degree_audit.html:29
+msgctxt "graduation"
+msgid "courses"
+msgstr "과목"
+
+# key: graduation.fields.missing
+#: templates/graduation/partials/degree_audit.html:33
+msgctxt "graduation"
+msgid "Not passed"
+msgstr "미이수"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: templates/graduation/portal/my_graduation.html:8
+msgid "Graduation requirements"
+msgstr "졸업 요건"
+
+# key: graduation.portal.intro
+#: templates/graduation/portal/my_graduation.html:9
+#, python-format
+msgid "Your progress against the requirements of catalog year %(year)s, evaluated now. Ask your department about waivers."
+msgstr "교육과정 연도 %(year)s 요건에 대한 현재 이수 상황입니다. 면제는 학과에 문의하세요."

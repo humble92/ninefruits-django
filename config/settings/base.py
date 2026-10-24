@@ -1,5 +1,6 @@
 """Settings shared by every environment. Values come from the environment (.env) only."""
 
+from datetime import timedelta
 from pathlib import Path
 
 import environ
@@ -76,6 +77,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "knox",
     "drf_spectacular",
+    "drf_spectacular_sidecar",
     "django_filters",
     "django_celery_beat",
     "import_export",
@@ -197,7 +199,18 @@ SOCIALACCOUNT_ADAPTER = "ninefruits.security.adapters.SocialAccountAdapter"
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = False
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = False
 # Original "login" limiter: 5 per minute per account (or sign-in name) and IP address.
-ACCOUNT_RATE_LIMITS = {"login_failed": "5/m/key"}
+# allauth adds a limit on all sign-ins per IP address (default 30 a minute); the original had none.
+# Campuses behind one NAT address may need more on the first registration morning:
+# LOGIN_RATE_LIMIT_PER_IP=300/m/ip (empty: no per-address limit, as in the original).
+ACCOUNT_RATE_LIMITS = {
+    "login_failed": "5/m/key",
+    "login": env.str("LOGIN_RATE_LIMIT_PER_IP", default="30/m/ip") or None,
+}
+# Reverse proxies in front of the app that append to X-Forwarded-For (0: none, use REMOTE_ADDR).
+# Rate limits and audit use the client address they report (ninefruits.core.http.client_ip).
+TRUSTED_PROXY_COUNT = env.int("TRUSTED_PROXY_COUNT", default=0)
+ALLAUTH_TRUSTED_PROXY_COUNT = TRUSTED_PROXY_COUNT
+RATELIMIT_IP_META_KEY = "ninefruits.core.http.client_ip"
 ACCOUNT_FORMS = {
     "login": "ninefruits.security.forms.LoginForm",
     # Applicant self registration (RegisterApplicant, Phase 3).
@@ -283,21 +296,45 @@ PII_HASH_KEY = env.str("PII_HASH_KEY", default="")
 GOTENBERG_URL = env.str("GOTENBERG_URL", default="http://127.0.0.1:3000")
 GOTENBERG_TIMEOUT = env.int("GOTENBERG_TIMEOUT", default=60)
 
-# --- REST framework (porting-plan 12) --------------------------------------------------------
+# --- REST framework (porting-plan 12, ADR 0004-django) -------------------------------------
 REST_FRAMEWORK = {
+    # Session (portal and admin pages) and knox tokens (integrations); token requests get the
+    # user's database session context in ninefruits.api.authentication.
+    # Token first: unauthenticated requests get 401 with "WWW-Authenticate: Token".
     "DEFAULT_AUTHENTICATION_CLASSES": [
+        "ninefruits.api.authentication.TokenAuthentication",
         "rest_framework.authentication.SessionAuthentication",
-        "knox.auth.TokenAuthentication",
     ],
     "DEFAULT_PERMISSION_CLASSES": ["rest_framework.permissions.IsAuthenticated"],
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
+    "DEFAULT_PAGINATION_CLASS": "ninefruits.api.pagination.LimitOffsetPagination",
+    # Anonymous by address, signed-in users by account, integration tokens by token.
     "DEFAULT_THROTTLE_CLASSES": [
-        "rest_framework.throttling.AnonRateThrottle",
-        "rest_framework.throttling.UserRateThrottle",
+        "ninefruits.api.throttling.AnonThrottle",
+        "ninefruits.api.throttling.UserThrottle",
+        "ninefruits.api.throttling.IntegrationThrottle",
     ],
-    "DEFAULT_THROTTLE_RATES": {"anon": "30/min", "user": "120/min", "integration": "600/min"},
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": env.str("API_THROTTLE_ANON", default="30/min"),
+        "user": env.str("API_THROTTLE_USER", default="120/min"),
+        "integration": env.str("API_THROTTLE_INTEGRATION", default="600/min"),
+    },
 }
-SPECTACULAR_SETTINGS = {"TITLE": "Ninefruits API", "VERSION": "1.0.0", "SERVE_INCLUDE_SCHEMA": False}
+REST_KNOX = {
+    # Tokens are stored as SHA-512 digests; the default lifetime of an issued token.
+    "TOKEN_TTL": timedelta(days=env.int("API_TOKEN_TTL_DAYS", default=90)),
+    "AUTO_REFRESH": False,
+    "TOKEN_LIMIT_PER_USER": None,
+}
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Ninefruits API",
+    "VERSION": "1.0.0",
+    "SERVE_INCLUDE_SCHEMA": False,
+    "SCHEMA_PATH_PREFIX": "/api/v1",
+    # Swagger UI assets are served from this site (CSP: no third-party scripts).
+    "SWAGGER_UI_DIST": "SIDECAR",
+    "SWAGGER_UI_FAVICON_HREF": "SIDECAR",
+}
 
 # --- Security headers (porting-plan 11) ------------------------------------------------------
 from django.utils.csp import CSP  # noqa: E402

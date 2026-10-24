@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}A stored degree audit (original DegreeAuditResource "Open" action).{% endcomment %}
+{% block content %}
+<div class="max-w-4xl">
+    <h1 class="mb-1 text-lg font-semibold">{{ title }}</h1>
+    <p class="mb-6 text-sm text-base-500">{{ subtitle }}</p>
+    {% include "graduation/partials/degree_audit.html" with result=audit.result audited_at=audit.audited_at %}
+    <p class="mt-6"><a href="{{ back_url }}" class="text-sm underline">{% translate "Back" %}</a></p>
+</div>
+{% endblock %}

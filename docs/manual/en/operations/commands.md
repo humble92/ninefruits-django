@@ -333,7 +333,49 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ## Graduation (Phase 11)
 
+### `degree_audit_run`
+
+- Purpose: saves a graduation requirement audit for every enrolled student. Same as **Degree audits > Run audits** in the administration panel. The latest saved audit is the basis for graduation processing. Every run adds new snapshots.
+- Options: `--term=` (term code the audit belongs to), `--student-number=` (one student), `--min-year-level=` (only this year level and above), `--actor=`.
+- Audit: recorded (number of students, number satisfied). With `--actor` the business audit `graduation.audits_run` is recorded as well.
+- Exit codes: 1 for an unknown term code.
+- When: before graduation review (end of term), and after changing requirement sets or equivalent courses.
+- Example: `uv run manage.py degree_audit_run --term=2026-FA --min-year-level=4 --actor=registrar@example.edu`
+
 ## LMS integration (Phase 12)
+
+### `lms_sync`
+
+- Purpose: pushes published sections to the platform (course creation and linking, instructors, enrolled students). Does for a whole term what **Course links > Synchronize again** does in the administration panel. Sections already linked are only re-ensured (idempotent). Every step is kept in the **Sync logs**.
+- Arguments/options: `{platform}` platform code, `--term=` (term code, default every term that has not ended), `--section=` (one course code-section code, for example `CSE2010-01`), `--dry-run` (only records what would be sent as "skipped"), `--actor=`.
+- Audit: recorded (platform, sections, members, failures)
+- Exit codes: 1 for an unknown platform or term code, 2 when any section failed (the error per section is printed).
+- When: before the term starts, after a new platform is made active.
+- Example: `uv run manage.py lms_sync DEMO --term=2026-FA --dry-run`
+
+### `lms_reconcile`
+
+- Purpose: compares the platform's course rosters with the enrollment lists in the student information system, adds missing members and removes extra ones. Sections not linked yet are synchronized whole. Differences are kept in the sync log (`reconcile`, `missing` and `extra` in the `payload`).
+- Arguments/options: `{platform?}` (every active platform if omitted), `--term=` (default the terms that have not ended), `--dry-run` (records differences only), `--actor=`.
+- Audit: recorded (sections per platform, added/removed/failed counts)
+- Exit codes: 1 for an unknown platform or term code or when no platform is active, 2 when any section failed.
+- When: scheduled daily at 02:30 as the task `lms.reconcile` (Celery beat). Run manually after a platform outage.
+
+### `api_issue_token`
+
+- Purpose: issues an API integration token for an account ([ADR 0004-django](../../../../porting/decisions/0004-django-api-tokens.md)), usually a service account with only the permissions it needs (LMS: `lms.manage`, BI: `reports.view`). The token is printed **once**, on the first line of standard output; the database keeps only its digest. Requests send it in the header `Authorization: Token <token>`.
+- Arguments/options: `{email}` account email, `--days=` (lifetime 1 to 365 days, default `API_TOKEN_TTL_DAYS` = 90), `--reason=` (what it is for, recorded in the audit), `--actor=`.
+- Audit: recorded (`api.token_issued`: key prefix and expiry; never the token itself)
+- Exit codes: 1 for an unknown or inactive account or a lifetime out of range.
+- Example: `uv run manage.py api_issue_token moodle-sync@example.ac.kr --days=365 --reason="Moodle callbacks" --actor=admin@example.ac.kr`
+
+### `api_revoke_tokens`
+
+- Purpose: revokes an account's API tokens (all, or one with `--key=`). `--list` only lists the tokens (key prefix, issue and expiry times).
+- Arguments/options: `{email}`, `--key=` (key prefix), `--list`, `--reason=`, `--actor=`.
+- Audit: recorded (`api.token_revoked`: the key prefixes revoked)
+- Exit codes: 1 for an unknown account or no token with the `--key`.
+- When: when an integration ends, a token may have leaked, or the person in charge changes.
 
 ## Operational checks and cleanup (Phase 13)
 

@@ -333,7 +333,49 @@
 
 ## 毕业（Phase 11）
 
+### `degree_audit_run`
+
+- 用途：为每个在读学生保存毕业资格审核。与管理界面 **毕业资格审核 > 执行审核** 相同。保存的最新审核是毕业处理的依据。每次执行都会新增快照。
+- 选项：`--term=`（审核所属的学期代码）、`--student-number=`（单个学生）、`--min-year-level=`（只限该年级及以上）、`--actor=`。
+- 审计：记录（学生数、满足数）。指定 `--actor` 时还记录业务审计 `graduation.audits_run`。
+- 退出码：学期代码未知时为 1。
+- 执行时机：毕业审定之前（学期末），以及修改要求集或替代课程之后。
+- 示例：`uv run manage.py degree_audit_run --term=2026-FA --min-year-level=4 --actor=registrar@example.edu`
+
 ## LMS 对接（Phase 12）
+
+### `lms_sync`
+
+- 用途：把已公开的开课推送到平台（创建和关联课程、任课教师、选课中的学生）。按学期执行与管理界面 **课程关联 > 重新同步** 相同的处理。已关联的课程只做再次保证（幂等）。每个步骤都记录在**同步日志**中。
+- 参数/选项：`{platform}` 平台代码、`--term=`（学期代码，默认为所有未结束的学期）、`--section=`（单个课程代码-班号，例如 `CSE2010-01`）、`--dry-run`（只把要发送的内容记录为"跳过"）、`--actor=`。
+- 审计：记录（平台、课程班数、成员数、失败数）
+- 退出码：平台或学期代码未知时为 1，有失败的课程班时为 2（会输出各课程班的错误）。
+- 执行时机：学期开始前、新平台启用后。
+- 示例：`uv run manage.py lms_sync DEMO --term=2026-FA --dry-run`
+
+### `lms_reconcile`
+
+- 用途：比较平台的课程名单与教务系统的选课名单，补充缺少的成员，移除多余的成员。尚未关联的课程会整体同步。差异记录在同步日志（`reconcile`，`payload` 中的 `missing`、`extra`）中。
+- 参数/选项：`{platform?}`（省略时为所有启用的平台）、`--term=`（默认为未结束的学期）、`--dry-run`（只记录差异）、`--actor=`。
+- 审计：记录（各平台的课程班数、添加、移除、失败数）
+- 退出码：平台或学期代码未知或没有启用的平台时为 1，有失败的课程班时为 2。
+- 执行时机：每天 02:30 由定时任务 `lms.reconcile`（Celery beat）执行。平台故障后手动执行。
+
+### `api_issue_token`
+
+- 用途：为账户签发 API 对接令牌（[ADR 0004-django](../../../../porting/decisions/0004-django-api-tokens.md)）。通常签发给只拥有所需权限的服务账户（LMS：`lms.manage`，BI：`reports.view`）。令牌只在标准输出的第一行**显示一次**，数据库只保存其摘要。请求时用 `Authorization: Token <令牌>` 请求头发送。
+- 参数/选项：`{email}` 账户邮箱、`--days=`（有效期 1～365 天，默认 `API_TOKEN_TTL_DAYS` = 90）、`--reason=`（用途，记录在审计中）、`--actor=`。
+- 审计：记录（`api.token_issued`：键前缀和到期时间，不保存令牌原文）
+- 退出码：账户未知、账户未启用或有效期超出范围时为 1。
+- 示例：`uv run manage.py api_issue_token moodle-sync@example.ac.kr --days=365 --reason="Moodle 回调" --actor=admin@example.ac.kr`
+
+### `api_revoke_tokens`
+
+- 用途：撤销账户的 API 令牌（全部，或用 `--key=` 指定一个）。`--list` 只列出令牌（键前缀、签发和到期时间）。
+- 参数/选项：`{email}`、`--key=`（键前缀）、`--list`、`--reason=`、`--actor=`。
+- 审计：记录（`api.token_revoked`：被撤销的键前缀）
+- 退出码：账户未知或没有 `--key` 对应的令牌时为 1。
+- 执行时机：对接结束、怀疑令牌泄露、负责人变更时。
 
 ## 运维检查与清理（Phase 13）
 

@@ -64,6 +64,15 @@ def register_teaching_column() -> None:
     register_column("grades", gettext_lazy("Grade entry"), render_link, order=20)
 
 
+def _lms_import(section: Section) -> dict[str, str] | None:
+    """The **Load scores from the LMS** button when a platform pulling scores has the section
+    linked (Phase 12, original ``hasLmsScores``)."""
+    from ninefruits.lms.services.grades import LmsScoreImport
+
+    lms = LmsScoreImport()
+    return {"label": lms.button_label()} if lms.available(section) else None
+
+
 class GradeEntryView(LoginRequiredMixin, View):
     template_name = "grading/portal/grade_entry.html"
 
@@ -215,6 +224,15 @@ class GradeEntryView(LoginRequiredMixin, View):
             "flash": flash,
             "change_values": change_values or {},
             "reason_max": REASON_MAX,
+            # Original: next to the method request, for the instructor before submission.
+            "lms_import": (
+                _lms_import(section)
+                if can_enter
+                and method_request is None
+                and taught
+                and counts.get("submitted", 0) + counts.get("finalized", 0) == 0
+                else None
+            ),
         }
 
     # -- POST ------------------------------------------------------------------------------------------
@@ -226,7 +244,30 @@ class GradeEntryView(LoginRequiredMixin, View):
         "cancel_method_request",
         "request_change",
         "cancel_change",
+        "import_lms",
     )
+
+    def _import_lms(self, request: HttpRequest, section: Section) -> HttpResponse:
+        """Loads the LMS final scores into the score fields as a draft and shows the page again;
+        nothing is saved until the user saves (Phase 12, original ``importLmsScores``)."""
+        from ninefruits.lms.services.grades import LmsScoreImport
+
+        lms = LmsScoreImport()
+        scores = lms.load(section, request.user)
+        posted = self._posted(request, section)
+        imported = 0
+        for enrollment in self._enrollments(section):
+            if enrollment.pk not in scores:
+                continue
+            entry = posted.get(enrollment.pk) or {
+                "score": score_text(enrollment.score),
+                "grade_code": enrollment.grade_code or "",
+            }
+            entry["score"] = lms.score_text(scores[enrollment.pk])
+            posted[enrollment.pk] = entry
+            imported += 1
+        flash = {"tone": "success" if imported else "info", "messages": [lms.message(imported)]}
+        return render(request, self.template_name, self._context(request, section, flash, posted=posted))
 
     def post(self, request: HttpRequest, pk: int) -> HttpResponse:
         section = self._section(request, pk)
@@ -236,6 +277,8 @@ class GradeEntryView(LoginRequiredMixin, View):
         if argument:
             request.POST = request.POST.copy()
             request.POST["request_id"] = argument
+        if action == "import_lms":
+            return self._import_lms(request, section)
         handler: Callable[[HttpRequest, Section], tuple[list[Any], str]] = getattr(self, f"_{action}")
         try:
             messages, tone = handler(request, section)

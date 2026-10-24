@@ -333,7 +333,49 @@
 
 ## 졸업 (Phase 11)
 
+### `degree_audit_run`
+
+- 용도: 재학생마다 졸업 요건 점검을 저장한다. 관리 화면 **졸업 요건 점검 > 점검 실행**과 같다. 저장된 최신 점검이 졸업 처리의 근거가 된다. 실행할 때마다 새 스냅샷이 쌓인다.
+- 옵션: `--term=`(점검이 속하는 학기 코드), `--student-number=`(한 명), `--min-year-level=`(이 학년 이상만), `--actor=`.
+- 감사: 기록 (학생 수, 충족 수). `--actor`가 있으면 업무 감사 `graduation.audits_run`도 남는다.
+- 종료 코드: 1 학기 코드를 모를 때.
+- 실행 시점: 졸업 사정 전(학기 말), 요건 세트나 대체과목을 고친 뒤.
+- 예시: `uv run manage.py degree_audit_run --term=2026-FA --min-year-level=4 --actor=registrar@example.ac.kr`
+
 ## LMS 연동 (Phase 12)
+
+### `lms_sync`
+
+- 용도: 공개된 개설강좌를 플랫폼으로 밀어넣는다(강좌 생성·연결, 담당 교원, 수강 중인 학생). 관리 화면 **강좌 연결 > 다시 동기화**와 같은 처리를 학기 단위로 한다. 이미 연결된 강좌는 다시 보장만 한다(멱등). 단계마다 **동기화 기록**에 남는다.
+- 인수/옵션: `{platform}` 플랫폼 코드, `--term=`(학기 코드, 기본은 끝나지 않은 학기 전부), `--section=`(과목코드-분반 하나, 예: `CSE2010-01`), `--dry-run`(보낼 내용을 "건너뜀"으로 기록만), `--actor=`.
+- 감사: 기록 (플랫폼, 강좌 수, 구성원 수, 실패 수)
+- 종료 코드: 1 플랫폼·학기 코드를 모를 때, 2 실패한 강좌가 있을 때(강좌별 오류가 출력된다).
+- 실행 시점: 학기 시작 전, 새 플랫폼을 사용으로 바꾼 뒤.
+- 예시: `uv run manage.py lms_sync DEMO --term=2026-FA --dry-run`
+
+### `lms_reconcile`
+
+- 용도: 플랫폼의 강좌 명단과 학사 시스템의 수강 명단을 비교해 빠진 구성원을 추가하고 남은 구성원을 제거한다. 아직 연결되지 않은 강좌는 전체를 동기화한다. 차이는 동기화 기록(`reconcile`, `payload`의 `missing`·`extra`)에 남는다.
+- 인수/옵션: `{platform?}`(없으면 활성 플랫폼 전부), `--term=`(기본은 끝나지 않은 학기), `--dry-run`(차이만 기록), `--actor=`.
+- 감사: 기록 (플랫폼별 강좌 수, 추가·제거·실패 수)
+- 종료 코드: 1 플랫폼·학기 코드를 모르거나 활성 플랫폼이 없을 때, 2 실패한 강좌가 있을 때.
+- 실행 시점: 매일 02:30 스케줄 작업 `lms.reconcile`(Celery beat). 플랫폼 장애 뒤 수동 실행.
+
+### `api_issue_token`
+
+- 용도: API 연동 토큰을 계정에 발급한다([ADR 0004-django](../../../../porting/decisions/0004-django-api-tokens.md)). 보통 필요한 권한만 가진 서비스 계정(LMS: `lms.manage`, BI: `reports.view`)에 발급한다. 토큰은 표준 출력의 첫 줄에 **한 번만** 나온다. DB에는 다이제스트만 남는다. 요청에는 `Authorization: Token <토큰>` 헤더로 보낸다.
+- 인수/옵션: `{email}` 계정 이메일, `--days=`(수명 1~365일, 기본 `API_TOKEN_TTL_DAYS` = 90), `--reason=`(용도, 감사에 기록), `--actor=`.
+- 감사: 기록 (`api.token_issued`: 키 접두와 만료 시각. 토큰 원문은 남지 않음)
+- 종료 코드: 1 계정을 모르거나 비활성 계정이거나 수명이 범위를 벗어날 때.
+- 예시: `uv run manage.py api_issue_token moodle-sync@example.ac.kr --days=365 --reason="Moodle 콜백" --actor=admin@example.ac.kr`
+
+### `api_revoke_tokens`
+
+- 용도: 계정의 API 토큰을 회수한다(전부, 또는 `--key=`로 하나). `--list`는 토큰 목록(키 접두, 발급·만료 시각)만 보여 준다.
+- 인수/옵션: `{email}`, `--key=`(키 접두), `--list`, `--reason=`, `--actor=`.
+- 감사: 기록 (`api.token_revoked`: 회수한 키 접두)
+- 종료 코드: 1 계정을 모르거나 `--key`의 토큰이 없을 때.
+- 실행 시점: 연동 종료, 토큰 유출 의심, 담당자 변경 시.
 
 ## 운영 점검과 정리 (Phase 13)
 

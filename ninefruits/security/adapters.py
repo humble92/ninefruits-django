@@ -25,6 +25,7 @@ from django.http import Http404, HttpRequest
 from django.utils.translation import gettext_lazy as _
 from django.views.defaults import page_not_found
 
+from ninefruits.core.http import client_ip
 from ninefruits.security.crypto import decrypt_string, encrypt_string
 
 TWO_FACTOR_STAGE = "ninefruits.security.stages.TwoFactorChallengeStage"
@@ -77,7 +78,8 @@ class AccountAdapter(DefaultAccountAdapter):
         return f"{key}|{self.get_client_ip(request)}"
 
     def get_client_ip(self, request: HttpRequest) -> str:
-        return str(request.META.get("REMOTE_ADDR") or "")
+        """``TRUSTED_PROXY_COUNT`` aware, like audit and the other rate limits."""
+        return client_ip(request)
 
 
 class SocialAccountAdapter(DefaultSocialAccountAdapter):

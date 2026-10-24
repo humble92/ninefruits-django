@@ -1,0 +1,43 @@
+{% load i18n %}
+{% comment %}One program's degree audit (original filament/admin/degree-audit): the outcome with the
+issues, then each requirement with what counted. Used by the admin screens and the portal.
+`result` is the stored snapshot (DegreeAuditResult.to_dict), `audited_at` the time it was stored.{% endcomment %}
+<div class="space-y-4 text-sm" data-degree-audit data-satisfied="{{ result.satisfied|yesno:'yes,no' }}">
+    <div class="rounded-lg border p-3 {% if result.satisfied %}border-green-300 bg-green-50{% else %}border-red-300 bg-red-50{% endif %}">
+        <div class="font-medium">
+            {% if result.satisfied %}{% translate "Satisfied" %}{% else %}{% translate "Not satisfied" %}{% endif %}
+            · {% translate "Earned credits" context "graduation" %} {{ result.earned_credits }}{% if result.required_credits is not None %} / {{ result.required_credits }}{% endif %}
+            · {% translate "Cumulative GPA" context "grading" %} {{ result.cumulative_gpa|default_if_none:"-" }}{% if result.minimum_gpa is not None %} (≥ {{ result.minimum_gpa }}){% endif %}
+        </div>
+        {% if result.issues %}
+            <ul class="mt-1 list-inside list-disc">
+                {% for issue in result.issues %}<li>{{ issue }}</li>{% endfor %}
+            </ul>
+        {% endif %}
+        {% if audited_at %}<div class="mt-1 text-xs opacity-70">{% translate "Audited" %}: {{ audited_at|date:"DATETIME_FORMAT" }}</div>{% endif %}
+    </div>
+    {% for requirement in result.requirements %}
+        <details class="rounded-lg border border-zinc-200 p-3" {% if not requirement.satisfied %}open{% endif %} data-requirement="{{ requirement.requirement_id }}">
+            <summary class="flex cursor-pointer flex-wrap items-center justify-between gap-2">
+                <span>
+                    <span class="mr-2 rounded px-1.5 py-0.5 text-xs {% if requirement.satisfied %}bg-green-100 text-green-800{% else %}bg-red-100 text-red-800{% endif %}">{% if requirement.waived %}{% translate "Waived" %}{% elif requirement.satisfied %}{% translate "Satisfied" %}{% else %}{% translate "Not satisfied" %}{% endif %}</span>
+                    {{ requirement.name }}
+                </span>
+                <span class="opacity-70">
+                    {% if requirement.required_credits is not None %}{{ requirement.achieved_credits }} / {{ requirement.required_credits }} {% translate "Credits" context "curriculum" %}{% endif %}
+                    {% if requirement.required_courses is not None %} · {{ requirement.achieved_courses }} / {{ requirement.required_courses }} {% translate "courses" context "graduation" %}{% endif %}
+                </span>
+            </summary>
+            {% if requirement.missing %}
+                <p class="mt-2 text-red-700">{% translate "Not passed" context "graduation" %}: {{ requirement.missing|join:", " }}</p>
+            {% endif %}
+            {% if requirement.courses %}
+                <table class="mt-2 w-full text-xs">
+                    {% for course in requirement.courses %}
+                        <tr><td class="pr-3">{{ course.code }}</td><td class="pr-3">{{ course.title }}</td><td class="pr-3">{{ course.credits }}</td><td>{{ course.grade|default_if_none:"" }}</td></tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
+        </details>
+    {% endfor %}
+</div>

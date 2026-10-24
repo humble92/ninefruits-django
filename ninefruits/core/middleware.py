@@ -12,6 +12,7 @@ from django.http import HttpRequest, HttpResponse
 
 from ninefruits.core import context
 from ninefruits.core.db import session_context
+from ninefruits.core.http import client_ip
 
 _REQUEST_ID = re.compile(r"^[A-Za-z0-9._-]{8,64}$")
 
@@ -29,7 +30,7 @@ class AssignRequestContextMiddleware:
         request.request_id = request_id  # type: ignore[attr-defined]
         with context.bound(
             request_id=request_id,
-            ip_address=request.META.get("REMOTE_ADDR"),
+            ip_address=client_ip(request),
             user_agent=request.headers.get("User-Agent", "")[:500],
             user_id=None,
             actor=None,

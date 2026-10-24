@@ -7,6 +7,9 @@
         <a href="{% url 'portal:catalog' %}?term={{ section.term_id }}" class="text-sm text-zinc-600 underline">{% translate "Course catalog" context "offering" %}</a>
         <h1 class="mt-1 text-2xl font-semibold">{{ section.label }} {{ version.title }}</h1>
         <p class="text-sm text-zinc-600">{{ section.term.name }} · {{ section.session.name }} ({{ section.session.start_date|date:"Y-m-d" }} ~ {{ section.session.end_date|date:"Y-m-d" }})</p>
+        {% for link in lms_links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener" class="mt-1 inline-block text-sm underline" data-lms-link>{{ link.label }}</a>
+        {% endfor %}
     </div>
 
     <section class="rounded-lg border border-zinc-200 bg-white p-6">

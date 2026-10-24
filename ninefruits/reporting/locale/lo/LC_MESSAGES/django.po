@@ -1,0 +1,402 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 22:31+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: admin/__init__.py:17 admin/reports.py:90
+msgid "Reports"
+msgstr "ບົດລາຍງານ"
+
+# key: graduation.reports.report
+#: admin/reports.py:30
+msgid "Report"
+msgstr "ບົດລາຍງານ"
+
+# key: reference.resources.terms.label
+#: admin/reports.py:32
+msgid "term"
+msgstr "ພາກຮຽນ"
+
+# key: reference.resources.org_units.label
+#: admin/reports.py:35
+msgid "org unit"
+msgstr "ໜ່ວຍງານ"
+
+# key: registration.fields.status
+#: admin/reports.py:38
+msgctxt "registration"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: people.fields.year_level
+#: admin/reports.py:41
+msgctxt "people"
+msgid "Year"
+msgstr "ປີຮຽນ"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: admin/reports.py:48
+msgid "Academic standing"
+msgstr "ສະຖານະພາບການຮຽນ"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: admin/reports.py:49 admin/reports.py:65 services/catalog.py:179
+msgid "Satisfied"
+msgstr "ຄົບເງື່ອນໄຂ"
+
+# key: reference.fields.start_date
+#: admin/reports.py:50
+msgid "Start date"
+msgstr "ວັນທີເລີ່ມ"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: admin/reports.py:51
+msgid "End date"
+msgstr "ວັນທີສິ້ນສຸດ"
+
+# key: graduation.satisfied.no
+#: admin/reports.py:65
+msgid "Not satisfied"
+msgstr "ບໍ່ຄົບເງື່ອນໄຂ"
+
+# key: people.sections.record
+#: models.py:116
+msgid "Student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: models.py:117 services/catalog.py:156
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: people.sections.person
+# key: people.fields.person
+#: models.py:118
+msgid "Person"
+msgstr "ບຸກຄົນ"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.sections.name
+# key: people.fields.name
+# key: reference.fields.name
+#: models.py:119
+msgid "Name"
+msgstr "ຊື່"
+
+# key: grading.fields.count
+# key: graduation.report_columns.students
+# key: registration.fields.applies_to
+#: models.py:146
+msgid "Students"
+msgstr "ນັກສຶກສາ"
+
+#: models.py:176
+msgid "Headcount"
+msgstr "ຈຳນວນນັກສຶກສາ"
+
+#: models.py:206
+msgid "Term records"
+msgstr "ສະຫຼຸບຜົນການຮຽນປະຈຳພາກ"
+
+#: models.py:237
+msgid "Course grades"
+msgstr "ຄະແນນລາຍວິຊາ"
+
+#: models.py:265
+msgid "Section enrollments"
+msgstr "ຈຳນວນຜູ້ລົງທະບຽນຕາມຫ້ອງຮຽນ"
+
+#: models.py:293
+msgid "Section meetings"
+msgstr "ເວລາຮຽນ"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: models.py:319 services/catalog.py:149
+msgid "Status changes"
+msgstr "ການປ່ຽນສະຖານະ"
+
+# key: graduation.resources.audits.plural_label
+#: models.py:346
+msgid "Degree audits"
+msgstr "ການກວດສອບເງື່ອນໄຂຈົບການສຶກສາ"
+
+# key: graduation.reports.names.students
+#: services/catalog.py:145
+msgid "Student list"
+msgstr "ລາຍຊື່ນັກສຶກສາ"
+
+# key: graduation.reports.names.headcount
+#: services/catalog.py:146
+msgid "Headcount by unit, program, year and status"
+msgstr "ຈຳນວນນັກສຶກສາຕາມໜ່ວຍງານ, ຫຼັກສູດ, ປີຮຽນ ແລະ ສະຖານະ"
+
+# key: graduation.reports.names.term_records
+#: services/catalog.py:147
+msgid "Term grade summary (warnings, honors)"
+msgstr "ສະຫຼຸບເກຣດປະຈຳພາກຮຽນ (ການເຕືອນ, ກຽດນິຍົມ)"
+
+# key: graduation.reports.names.graduation_candidates
+#: services/catalog.py:148
+msgid "Graduation candidates (latest audit)"
+msgstr "ຜູ້ມີສິດຈົບການສຶກສາ (ການກວດສອບຫຼ້າສຸດ)"
+
+# key: graduation.reports.names.section_enrollments
+#: services/catalog.py:150
+msgid "Enrollment per section"
+msgstr "ການລົງທະບຽນຕາມກຸ່ມຮຽນ"
+
+# key: graduation.reports.names.not_registered
+#: services/catalog.py:151
+msgid "Students not registered in a term"
+msgstr "ນັກສຶກສາທີ່ບໍ່ໄດ້ລົງທະບຽນໃນພາກຮຽນ"
+
+# key: graduation.report_columns.student_name
+#: services/catalog.py:157
+msgctxt "graduation"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: graduation.report_columns.program_name
+#: services/catalog.py:158
+msgctxt "graduation"
+msgid "Program"
+msgstr "ຫຼັກສູດ"
+
+# key: graduation.report_columns.program_code
+#: services/catalog.py:159
+msgid "Program code"
+msgstr "ລະຫັດຫຼັກສູດ"
+
+# key: graduation.report_columns.program_role
+#: services/catalog.py:160
+msgctxt "graduation"
+msgid "Role"
+msgstr "ບົດບາດ"
+
+# key: graduation.report_columns.org_unit_name
+#: services/catalog.py:161
+msgid "Unit"
+msgstr "ໜ່ວຍງານ"
+
+# key: graduation.report_columns.org_unit_code
+#: services/catalog.py:162
+msgid "Unit code"
+msgstr "ລະຫັດໜ່ວຍງານ"
+
+# key: graduation.report_columns.year_level
+#: services/catalog.py:163
+msgctxt "graduation"
+msgid "Year"
+msgstr "ປີຮຽນ"
+
+# key: graduation.report_columns.status
+#: services/catalog.py:164
+msgctxt "graduation"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: graduation.report_columns.admission_date
+#: services/catalog.py:165
+msgctxt "graduation"
+msgid "Admitted"
+msgstr "ວັນທີຮັບເຂົ້າ"
+
+# key: graduation.report_columns.graduation_date
+#: services/catalog.py:166
+msgctxt "graduation"
+msgid "Graduated"
+msgstr "ວັນທີຈົບ"
+
+# key: graduation.report_columns.degree_number
+#: services/catalog.py:167
+msgid "Degree number"
+msgstr "ເລກທີປະລິນຍາ"
+
+# key: graduation.report_columns.students
+#: services/catalog.py:168
+msgctxt "graduation"
+msgid "Students"
+msgstr "ນັກສຶກສາ"
+
+# key: graduation.report_columns.term_code
+#: services/catalog.py:169
+msgid "Term"
+msgstr "ພາກຮຽນ"
+
+# key: graduation.report_columns.attempted_credits
+#: services/catalog.py:170
+msgid "Attempted"
+msgstr "ໜ່ວຍກິດທີ່ລົງ"
+
+# key: graduation.report_columns.earned_credits
+#: services/catalog.py:171
+msgid "Earned"
+msgstr "ໜ່ວຍກິດທີ່ໄດ້"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: services/catalog.py:172
+msgid "Term GPA"
+msgstr "GPA ພາກຮຽນ"
+
+# key: graduation.report_columns.cumulative_earned_credits
+#: services/catalog.py:173
+msgid "Cumulative earned"
+msgstr "ໜ່ວຍກິດສະສົມ"
+
+# key: graduation.report_columns.cumulative_gpa
+#: services/catalog.py:174
+msgctxt "graduation"
+msgid "Cumulative GPA"
+msgstr "GPA ສະສົມ"
+
+# key: graduation.report_columns.academic_standing
+#: services/catalog.py:175
+msgid "Standing"
+msgstr "ສະຖານະພາບການຮຽນ"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: services/catalog.py:176
+msgid "Warnings"
+msgstr "ການເຕືອນ"
+
+# key: graduation.report_columns.is_honors
+#: services/catalog.py:177
+msgctxt "graduation"
+msgid "Honors"
+msgstr "ກຽດນິຍົມ"
+
+# key: graduation.report_columns.honors_rank
+#: services/catalog.py:178
+msgctxt "graduation"
+msgid "Honors rank"
+msgstr "ລຳດັບກຽດນິຍົມ"
+
+# key: graduation.report_columns.required_credits
+#: services/catalog.py:180
+msgctxt "graduation"
+msgid "Required"
+msgstr "ທີ່ຕ້ອງການ"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: services/catalog.py:181
+msgid "Audited"
+msgstr "ກວດສອບເມື່ອ"
+
+# key: graduation.report_columns.type_name
+#: services/catalog.py:182
+msgctxt "graduation"
+msgid "Change"
+msgstr "ການປ່ຽນແປງ"
+
+# key: graduation.report_columns.from_status
+#: services/catalog.py:183
+msgid "From"
+msgstr "ຈາກ"
+
+# key: graduation.report_columns.to_status
+#: services/catalog.py:184
+msgid "To"
+msgstr "ເປັນ"
+
+# key: graduation.report_columns.effective_date
+#: services/catalog.py:185
+msgid "Effective"
+msgstr "ມີຜົນ"
+
+# key: graduation.report_columns.decided_at
+#: services/catalog.py:186
+msgctxt "graduation"
+msgid "Decided"
+msgstr "ຕັດສິນເມື່ອ"
+
+# key: graduation.report_columns.course_code
+#: services/catalog.py:187
+msgctxt "graduation.report_columns"
+msgid "Course"
+msgstr "ວິຊາ"
+
+# key: graduation.report_columns.course_title
+#: services/catalog.py:188
+msgctxt "graduation"
+msgid "Title"
+msgstr "ຊື່ວິຊາ"
+
+# key: graduation.report_columns.section_code
+#: services/catalog.py:189
+msgctxt "graduation"
+msgid "Section"
+msgstr "ກຸ່ມຮຽນ"
+
+# key: graduation.report_columns.instructors
+#: services/catalog.py:190
+msgctxt "graduation"
+msgid "Instructors"
+msgstr "ອາຈານ"
+
+# key: graduation.report_columns.capacity
+#: services/catalog.py:191
+msgctxt "graduation"
+msgid "Capacity"
+msgstr "ຄວາມຈຸ"
+
+# key: graduation.report_columns.enrolled
+#: services/catalog.py:192
+msgctxt "graduation"
+msgid "Enrolled"
+msgstr "ລົງທະບຽນແລ້ວ"
+
+# key: graduation.report_columns.waiting
+#: services/catalog.py:193
+msgctxt "graduation"
+msgid "Waiting"
+msgstr "ລໍຖ້າ"
+
+# key: offering.timetable.mode
+#: templates/reporting/admin/reports.html:15
+msgid "Show"
+msgstr "ສະແດງ"
+
+# key: graduation.reports.rows
+#: templates/reporting/admin/reports.html:19
+#, python-format
+msgid "%(count)s row(s) (first 500 on screen; the CSV has them all)"
+msgstr "%(count)s ແຖວ (ສະແດງ 500 ແຖວທຳອິດໃນໜ້າຈໍ; ໄຟລ໌ CSV ມີຄົບທັງໝົດ)"
+
+# key: graduation.reports.download_csv
+#: templates/reporting/admin/reports.html:20
+msgid "Download CSV"
+msgstr "ດາວໂຫຼດ CSV"
+
+# key: graduation.reports.empty
+#: templates/reporting/admin/reports.html:35
+msgid "No rows. Choose the filters above."
+msgstr "ບໍ່ມີຂໍ້ມູນ. ກະລຸນາເລືອກຕົວກອງຂ້າງເທິງ."

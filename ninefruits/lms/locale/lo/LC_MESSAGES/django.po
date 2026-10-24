@@ -1,0 +1,368 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 22:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "ຄະແນນແຕ່ລະອັນຕ້ອງເປັນຕົວເລກແຕ່ 0 ຫາ 100."
+
+#: actions/deliver.py
+msgid "Unknown operation."
+msgstr "ບໍ່ຮູ້ຈັກການດຳເນີນການນີ້."
+
+#: actions/deliver.py
+msgid "Unknown status."
+msgstr "ບໍ່ຮູ້ຈັກສະຖານະນີ້."
+
+#: actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "ບໍ່ຮູ້ຈັກບັນທຶກການຊິງນີ້."
+
+#: actions/deliver.py
+msgid "This step is already finished."
+msgstr "ຂັ້ນຕອນນີ້ສິ້ນສຸດແລ້ວ."
+
+#: actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "ການດຳເນີນການບໍ່ກົງກັບບັນທຶກການຊິງ."
+
+#: actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "ກຸ່ມຮຽນນີ້ບໍ່ໄດ້ເຊື່ອມຕໍ່ກັບແພລັດຟອມນີ້."
+
+#: actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "ໃຫ້ສົ່ງ object ຂອງ user id ກັບຄະແນນ."
+
+#: actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "ບໍ່ມີກຸ່ມຮຽນໃດເຊື່ອມຕໍ່ກັບຫ້ອງຮຽນນີ້."
+
+# key: lms.resources.platforms.label
+#: admin/course_links.py admin/sync_logs.py models.py
+msgid "LMS platform"
+msgstr "ແພລດຟອມ LMS"
+
+# key: registration.fields.status
+#: admin/course_links.py admin/sync_logs.py models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: reference.resources.terms.label
+#: admin/course_links.py
+msgid "term"
+msgstr "ພາກຮຽນ"
+
+# key: offering.fields.section
+#: admin/course_links.py admin/sync_logs.py models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "ກຸ່ມຮຽນ"
+
+# key: lms.fields.external_course_id
+#: admin/course_links.py models.py
+msgid "Course id on the platform"
+msgstr "ID ວິຊາໃນແພລດຟອມ"
+
+# key: lms.fields.external_url
+#: admin/course_links.py models.py
+msgid "Course URL"
+msgstr "URL ຂອງວິຊາ"
+
+# key: lms.fields.last_error
+#: admin/course_links.py models.py
+msgid "Last error"
+msgstr "ຂໍ້ຜິດພາດຫຼ້າສຸດ"
+
+# key: lms.actions.resync
+#: admin/course_links.py
+msgid "Synchronize again"
+msgstr "ຊິງຄ໌ອີກຄັ້ງ"
+
+#: admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "ການຊິງລົ້ມເຫຼວ: %(error)s"
+
+# key: lms.notifications.synced
+#: admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "ຊິງຄ໌ແລ້ວ: ສະມາຊິກ %(members)s ຄົນ."
+
+#: admin/course_links.py
+msgid ""
+"Pushes the course, its instructors and its enrolled students to the platform"
+" again."
+msgstr "ສົ່ງຫ້ອງຮຽນ, ອາຈານຜູ້ສອນ ແລະ ນັກສຶກສາທີ່ລົງທະບຽນຮຽນໄປແພລັດຟອມອີກຄັ້ງ."
+
+#: admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "ແຖວທີ %(number)s: ໃຫ້ຂຽນເປັນ key=value."
+
+# key: reference.fields.code
+#: admin/platforms.py models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: lms.fields.driver
+#: admin/platforms.py models.py
+msgid "Driver"
+msgstr "ໄດຣເວີ"
+
+# key: lms.help.driver
+#: admin/platforms.py
+msgid ""
+"The connector that talks to the platform. \"null\" records what would be "
+"sent without calling anything; use it to prepare and test."
+msgstr ""
+"ຕົວເຊື່ອມຕໍ່ທີ່ສື່ສານກັບແພລດຟອມ. \"null\" "
+"ບັນທຶກສິ່ງທີ່ຈະຖືກສົ່ງໂດຍບໍ່ເອີ້ນໃຊ້ຫຍັງເລີຍ; ໃຊ້ເພື່ອກຽມ ແລະ ທົດສອບ."
+
+# key: lms.fields.base_url
+#: admin/platforms.py models.py
+msgid "Base URL"
+msgstr "URL ຫຼັກ"
+
+# key: lms.fields.credentials
+#: admin/platforms.py models.py
+msgid "Credentials"
+msgstr "ຂໍ້ມູນການເຂົ້າເຖິງ"
+
+# key: lms.help.credentials
+#: admin/platforms.py
+msgid ""
+"Tokens and secrets the driver needs (see docs/lms-integration-guide.md). "
+"Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr ""
+"ໂທເຄັນ ແລະ ລະຫັດລັບທີ່ໄດຣເວີຕ້ອງການ (ເບິ່ງ docs/lms-integration-guide.md). "
+"ເກັບແບບເຂົ້າລະຫັດ; ປ່ອຍຫວ່າງເມື່ອແກ້ໄຂເພື່ອຮັກສາຄ່າທີ່ເກັບໄວ້."
+
+#: admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "ແຖວລະໜຶ່ງ key=value, ເຊັ່ນ token=..."
+
+# key: lms.help.is_active
+#: admin/platforms.py
+msgid ""
+"Active platforms receive published sections and roster changes as they "
+"happen, and the nightly reconcile."
+msgstr ""
+"ແພລດຟອມທີ່ເປີດໃຊ້ຈະໄດ້ຮັບກຸ່ມຮຽນທີ່ເຜີຍແຜ່ ແລະ ການປ່ຽນແປງລາຍຊື່ຜູ້ຮຽນທັນທີ, "
+"ພ້ອມທັງການກວດທຽບປະຈຳຄືນ."
+
+# key: lms.help.should_pull_grades
+#: admin/platforms.py
+msgid ""
+"Lets instructors load the platform's final scores into the grade entry "
+"screen as a draft."
+msgstr ""
+"ອະນຸຍາດໃຫ້ອາຈານໂຫຼດຄະແນນສຸດທ້າຍຈາກແພລດຟອມເຂົ້າໜ້າປ້ອນເກຣດເປັນສະບັບຮ່າງ."
+
+#: admin/platforms.py
+msgid "This code is already used."
+msgstr "ລະຫັດນີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: reference.fields.name
+#: admin/platforms.py models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: admin/platforms.py models.py
+msgid "Course links"
+msgstr "ການເຊື່ອມຕໍ່ວິຊາ"
+
+# key: admin.record_changes.fields.operation
+#: admin/sync_logs.py models.py
+msgid "Operation"
+msgstr "ການດຳເນີນການ"
+
+# key: admin.audit.fields.actor
+#: admin/sync_logs.py
+msgid "User"
+msgstr "ຜູ້ໃຊ້"
+
+# key: lms.fields.message
+#: admin/sync_logs.py models.py
+msgid "Message"
+msgstr "ຂໍ້ຄວາມ"
+
+#: admin/sync_logs.py
+msgid "Payload"
+msgstr "ເນື້ອໃນ"
+
+# key: lms.link_statuses.pending
+#: enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "ລໍຖ້າ"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: enums.py
+msgid "Linked"
+msgstr "ເຊື່ອມຕໍ່ແລ້ວ"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "ລົ້ມເຫຼວ"
+
+# key: lms.drivers.null
+#: enums.py
+msgid "None (records only)"
+msgstr "ບໍ່ມີ (ບັນທຶກເທົ່ານັ້ນ)"
+
+# key: lms.operations.course.sync
+#: enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "ວິຊາ"
+
+# key: lms.operations.enrollment.add
+#: enums.py
+msgid "Add member"
+msgstr "ເພີ່ມສະມາຊິກ"
+
+# key: lms.operations.enrollment.remove
+#: enums.py
+msgid "Remove member"
+msgstr "ລຶບສະມາຊິກ"
+
+# key: lms.operations.grades.pull
+#: enums.py
+msgid "Pull scores"
+msgstr "ດຶງຄະແນນ"
+
+#: enums.py
+msgid "Scores delivered"
+msgstr "ສົ່ງຄະແນນມາແລ້ວ"
+
+# key: lms.operations.reconcile
+#: enums.py
+msgid "Reconcile"
+msgstr "ກວດທຽບ"
+
+# key: lms.sync_statuses.queued
+#: enums.py
+msgid "Queued"
+msgstr "ຢູ່ໃນຄິວ"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: enums.py
+msgid "Succeeded"
+msgstr "ສຳເລັດ"
+
+# key: lms.sync_statuses.skipped
+#: enums.py
+msgid "Skipped"
+msgstr "ຂ້າມ"
+
+#: models.py
+msgid "Options"
+msgstr "ຕົວເລືອກ"
+
+# key: reference.fields.is_active
+#: models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: lms.fields.should_sync_enrollments
+#: models.py
+msgid "Synchronize rosters"
+msgstr "ຊິງຄ໌ລາຍຊື່ຜູ້ຮຽນ"
+
+# key: lms.fields.should_pull_grades
+#: models.py
+msgid "Pull final scores"
+msgstr "ດຶງຄະແນນສຸດທ້າຍ"
+
+# key: lms.resources.platforms.plural_label
+#: models.py
+msgid "LMS platforms"
+msgstr "ແພລດຟອມ LMS"
+
+# key: lms.fields.last_synced_at
+#: models.py
+msgid "Last synced"
+msgstr "ຊິງຄ໌ຫຼ້າສຸດ"
+
+# key: lms.resources.course_links.label
+#: models.py
+msgid "Course link"
+msgstr "ການເຊື່ອມຕໍ່ວິຊາ"
+
+#: models.py
+msgid "User id on the platform"
+msgstr "ID ຜູ້ໃຊ້ໃນແພລັດຟອມ"
+
+#: models.py
+msgid "User link"
+msgstr "ການເຊື່ອມຕໍ່ຜູ້ໃຊ້"
+
+#: models.py
+msgid "User links"
+msgstr "ການເຊື່ອມຕໍ່ຜູ້ໃຊ້"
+
+# key: lms.fields.started_at
+#: models.py
+msgid "Started"
+msgstr "ເລີ່ມເມື່ອ"
+
+#: models.py
+msgid "Finished"
+msgstr "ສິ້ນສຸດ"
+
+# key: lms.resources.sync_logs.label
+#: models.py
+msgid "Sync log"
+msgstr "ບັນທຶກການຊິງຄ໌"
+
+# key: lms.resources.sync_logs.plural_label
+#: models.py
+msgid "Sync logs"
+msgstr "ບັນທຶກການຊິງຄ໌"
+
+# key: grading.entry.import_lms
+#: services/grades.py
+msgid "Load scores from the LMS"
+msgstr "ໂຫຼດຄະແນນຈາກ LMS"
+
+# key: grading.entry.lms_imported
+#: services/grades.py
+#, python-format
+msgid ""
+"%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr ""
+"ໂຫຼດຄະແນນ %(count)s ລາຍການຈາກ LMS ເປັນຮ່າງແລ້ວ. ກະລຸນາກວດສອບ ແລະ ບັນທຶກ."
+
+# key: lms.portal.open_course
+#: services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "ເປີດວິຊາໃນ %(platform)s"
