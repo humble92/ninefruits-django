@@ -1,0 +1,2 @@
+-- @apply views/reporting.sql
+

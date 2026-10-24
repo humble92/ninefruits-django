@@ -1,0 +1,94 @@
+[project]
+name = "ninefruits"
+version = "0.1.0"
+requires-python = ">=3.14"
+dependencies = [
+    "argon2-cffi>=25.1.0",
+    "babel>=2.18.0",
+    "celery[redis]>=5.6.3",
+    "cryptography>=50.0.2",
+    "django>=6.1.2,<6.2",
+    "django-allauth[mfa,socialaccount]>=65.20.1",
+    "django-celery-beat>=2.1.0",
+    "django-environ>=0.14.0",
+    "django-filter>=26.2",
+    "django-health-check>=4.10.0",
+    "django-import-export>=4.4.3",
+    "django-permissions-policy>=4.34.0",
+    "django-ratelimit>=4.1.0",
+    "django-redis>=7.0.0",
+    "django-rest-knox>=5.1.0",
+    "django-storages>=1.14.6",
+    "django-unfold>=0.110.0",
+    "django-vite>=3.2.0",
+    "djangorestframework>=3.18.3",
+    "drf-spectacular>=0.30.0",
+    "flower>=2.2.0",
+    "gunicorn>=26.2.0",
+    "httpx>=0.28.1",
+    "openpyxl>=3.1.5",
+    "pillow>=13.0.0",
+    "psycopg[binary,pool]>=3.3.6",
+    "pydantic>=2.14.1",
+    "python-magic>=0.4.27",
+    "qrcode>=8.2",
+    "questionary>=2.1.1",
+    "rich>=15.0.0",
+    "structlog>=26.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "bandit>=1.9.4",
+    "django-seal>=1.7.1",
+    "django-stubs>=6.1.2",
+    "djangorestframework-stubs>=3.18.1",
+    "factory-boy>=3.3.3",
+    "faker>=40.43.0",
+    "locust>=2.47.0",
+    "mypy>=2.4.0",
+    "pip-audit>=2.10.1",
+    "playwright>=1.64.1",
+    "pytest>=9.1.1",
+    "pytest-django>=4.14.0",
+    "pytest-xdist>=3.8.0",
+    "respx>=0.23.1",
+    "ruff>=0.17.2",
+    "time-machine>=3.5.1",
+]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "config.settings.test"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-p no:cacheprovider --strict-markers"
+markers = [
+    "concurrency: multi-process tests (run separately, not with -n)",
+    "gotenberg: needs a running Gotenberg service",
+]
+filterwarnings = ["ignore::DeprecationWarning:celery.*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py314"
+extend-exclude = ["ninefruits/*/migrations/*"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "DJ", "S", "SIM", "RUF"]
+ignore = ["S101", "RUF012", "S308", "RUF001", "RUF002", "RUF003", "DJ001", "SIM117", "B039"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S105", "S106", "S311"]
+
+[tool.mypy]
+python_version = "3.14"
+plugins = ["mypy_django_plugin.main", "mypy_drf_plugin.main"]
+strict = true
+ignore_missing_imports = true
+exclude = ["migrations/", "tests/"]
+
+[tool.django-stubs]
+django_settings_module = "config.settings.test"
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]
