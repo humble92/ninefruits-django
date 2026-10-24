@@ -4,14 +4,18 @@ from __future__ import annotations
 
 import importlib
 
-from django.urls import URLPattern, path
+from django.urls import URLPattern, URLResolver, include, path
 
 from .views.dashboard import DashboardView
 
 app_name = "portal"
 
-urlpatterns: list[URLPattern] = [
+urlpatterns: list[URLPattern | URLResolver] = [
     path("", DashboardView.as_view(), name="dashboard"),
+    # Course catalog, section pages, syllabus editor, teaching (Phase 4).
+    path("", include("ninefruits.offering.portal_urls")),
+    # My records, my details, advisees (Phase 2).
+    path("", include("ninefruits.person.portal_urls")),
 ]
 
 # Security settings page (two-factor, sign-in methods), built by the security work.

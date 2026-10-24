@@ -2,10 +2,9 @@
 
 Providers are configured in ``AuthenticationSettings.sso_providers`` (client secrets encrypted
 with ``ninefruits.security.crypto``). Links between accounts and provider subjects live in
-``user_identities`` (``LinkIdentity``/``UnlinkIdentity``). The sign-in flow itself (allauth
-``openid_connect`` apps built from these settings, linking by institutional email, the
-``trusts_mfa`` rule) is part of Phase 2 together with people and student records; until then
-the portal only lists linked identities and lets users unlink them."""
+``user_identities`` (``LinkIdentity``/``UnlinkIdentity``). The sign-in flow (authorization
+code + PKCE, state, nonce, local ID token verification, linking by institutional email, the
+``trusts_mfa`` rule) is ``ninefruits.security.services.oidc`` and ``ninefruits.security.views_sso``."""
 
 from __future__ import annotations
 

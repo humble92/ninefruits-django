@@ -1,0 +1,51 @@
+{% load i18n %}
+{% comment %}Weekly timetable (original components/timetable). Phones: a list per weekday;
+larger screens: a weekly grid. Styles are local so the admin and the portal render alike.
+Context: timetable (ninefruits.offering.services.Timetable.build).{% endcomment %}
+<style>
+.nf-tt-list{display:flex;flex-direction:column;gap:.75rem}
+.nf-tt-grid-wrap{display:none;overflow-x:auto}
+@media (min-width:640px){.nf-tt-list{display:none}.nf-tt-grid-wrap{display:block}}
+.nf-tt-day h3{margin:0 0 .25rem;font-size:.875rem;font-weight:500}
+.nf-tt-item{margin-bottom:.25rem;border:1px solid #e4e4e7;border-radius:.25rem;padding:.5rem .75rem;font-size:.875rem}
+.nf-tt-muted{color:#71717a}
+.nf-tt-sub{display:block;font-size:.75rem;color:#71717a}
+.nf-tt-grid{display:grid;min-width:40rem;font-size:.75rem}
+.nf-tt-head{border-bottom:1px solid #e4e4e7;padding:.25rem .5rem;text-align:center;font-weight:500}
+.nf-tt-hour{border-top:1px solid #f4f4f5;padding-inline-end:.5rem;text-align:end;color:#71717a}
+.nf-tt-cell{border-top:1px solid #f4f4f5}
+.nf-tt-entry{margin:.125rem;overflow:hidden;border:1px solid #7dd3fc;border-radius:.25rem;background:#f0f9ff;color:#18181b;padding:.25rem .5rem}
+.nf-tt-entry strong{font-weight:500}
+.nf-tt-entry span{display:block;color:#52525b}
+</style>
+{% if not timetable.entries %}
+    <p class="nf-tt-muted" data-timetable-empty>{% translate "Nothing scheduled." %}</p>
+{% else %}
+    <div class="nf-tt-list" data-timetable-list>
+        {% for day in timetable.days %}{% if day.entries %}
+            <section class="nf-tt-day">
+                <h3>{{ day.label }}</h3>
+                {% for entry in day.entries %}
+                    <div class="nf-tt-item"><span class="nf-tt-muted">{{ entry.time }}</span> {{ entry.title }}<span class="nf-tt-sub">{{ entry.subtitle }}</span></div>
+                {% endfor %}
+            </section>
+        {% endif %}{% endfor %}
+    </div>
+    <div class="nf-tt-grid-wrap">
+        <div class="nf-tt-grid" data-timetable-grid style="grid-template-columns: 4rem repeat({{ timetable.columns }}, minmax(0, 1fr)); grid-template-rows: 2rem repeat({{ timetable.rows|length }}, 1.75rem);">
+            <div></div>
+            {% for day in timetable.days %}
+                <div class="nf-tt-head" style="grid-column: {{ day.column }}; grid-row: 1;">{{ day.label }}</div>
+            {% endfor %}
+            {% for row in timetable.row_labels %}
+                <div class="nf-tt-hour" style="grid-column: 1; grid-row: {{ row.row }};">{{ row.label }}</div>
+                {% for day in timetable.days %}<div class="nf-tt-cell" style="grid-column: {{ day.column }}; grid-row: {{ row.row }};"></div>{% endfor %}
+            {% endfor %}
+            {% for entry in timetable.entries %}
+                <div class="nf-tt-entry" title="{{ entry.title }} {{ entry.time }}" style="grid-column: {{ entry.column }}; grid-row: {{ entry.row }} / span {{ entry.span }};">
+                    <strong>{{ entry.title }}</strong><span>{{ entry.time }}</span><span>{{ entry.subtitle }}</span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}

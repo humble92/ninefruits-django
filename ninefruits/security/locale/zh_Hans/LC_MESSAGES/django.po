@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 18:08+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,105 +19,105 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # key: security.errors.cannot_deactivate_self
-#: ninefruits/security/actions/accounts.py
+#: actions/accounts.py
 msgid "You cannot deactivate your own account."
 msgstr "不能停用自己的账户。"
 
 # key: security.errors.target_more_privileged
-#: ninefruits/security/actions/accounts.py
+#: actions/accounts.py
 #, python-format
 msgid "This account holds permissions you do not have (%(permissions)s); only an administrator with those permissions can change it."
 msgstr "该账户拥有您不具备的权限（%(permissions)s），只有拥有这些权限的管理员才能修改。"
 
 # key: json.The provided password does not match your current password.
-#: ninefruits/security/actions/accounts.py
+#: actions/accounts.py
 msgid "The provided password does not match your current password."
 msgstr "当前密码不正确"
 
-#: ninefruits/security/actions/accounts.py
+#: actions/accounts.py
 msgid "The password field confirmation does not match."
 msgstr "两次输入的密码不一致。"
 
-#: ninefruits/security/actions/accounts.py ninefruits/security/admin.py
+#: actions/accounts.py admin.py
 msgid "The email has already been taken."
 msgstr "该电子邮件已被使用。"
 
 # key: security.errors.persona_role_not_assignable
-#: ninefruits/security/actions/assign_role.py
+#: actions/assign_role.py
 msgid "Persona roles are granted automatically and cannot be assigned."
 msgstr "身份角色由系统自动授予，不能手动分配。"
 
 # key: security.errors.scope_id_mismatch
-#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+#: actions/assign_role.py admin.py
 msgid "Choose a scope target for scoped assignments, and none for global assignments."
 msgstr "范围分配需要指定对象，全部范围分配不需要指定。"
 
 # key: offering.errors.meeting_time_order
-#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+#: actions/assign_role.py admin.py
 msgid "The end must be after the start."
 msgstr "结束时间须晚于开始时间。"
 
 # key: security.errors.self_assignment
-#: ninefruits/security/actions/assign_role.py
+#: actions/assign_role.py
 msgid "You cannot assign a role to yourself."
 msgstr "不能为自己分配角色。"
 
 # key: security.errors.role_exceeds_actor
-#: ninefruits/security/actions/assign_role.py
+#: actions/assign_role.py
 #, python-format
 msgid "This role carries permissions you do not hold (%(permissions)s)."
 msgstr "该角色包含您不具备的权限（%(permissions)s）。"
 
 # key: security.errors.scope_exceeds_actor
-#: ninefruits/security/actions/assign_role.py
+#: actions/assign_role.py
 msgid "This scope is wider than the one you manage role assignments for."
 msgstr "该范围超出了您管理角色分配的范围。"
 
 # key: security.sso.linked_to_another_account
-#: ninefruits/security/actions/identities.py
+#: actions/identities.py
 msgid "This school account is linked to another user."
 msgstr "该学校账户已关联其他用户。"
 
 # key: security.sso.already_linked
-#: ninefruits/security/actions/identities.py
+#: actions/identities.py
 msgid "Your account is already linked to another account of this provider."
 msgstr "您的账户已关联该提供方的另一个账户。"
 
 # key: json.The provided two factor authentication code was invalid.
-#: ninefruits/security/actions/mfa.py
+#: actions/mfa.py
 msgid "The provided two factor authentication code was invalid."
 msgstr "双因素认证代码错误"
 
-#: ninefruits/security/actions/mfa.py
+#: actions/mfa.py
 msgid "Recovery codes need an authenticator app. Set one up first."
 msgstr "恢复代码需要身份验证器应用。请先设置。"
 
 # key: security.email_code.not_allowed
-#: ninefruits/security/actions/mfa.py
+#: actions/mfa.py
 msgid "Email codes are not available at this institution."
 msgstr "本机构不提供邮件验证码。"
 
 # key: security.email_code.invalid
-#: ninefruits/security/actions/mfa.py ninefruits/security/views.py
+#: actions/mfa.py views.py
 msgid "The code is invalid or has expired."
 msgstr "验证码无效或已过期。"
 
 # key: security.mfa.cannot_disable_required
-#: ninefruits/security/actions/mfa.py
+#: actions/mfa.py
 msgid "Two-factor authentication is required for your account and cannot be disabled."
 msgstr "您的账户必须使用双重身份验证，无法停用。"
 
 # key: auth.failed
-#: ninefruits/security/adapters.py
+#: adapters.py views_sso.py
 msgid "These credentials do not match our records."
 msgstr "用户名或密码错误。"
 
-#: ninefruits/security/adapters.py
+#: adapters.py
 msgid "Too many login attempts. Please try again later."
 msgstr "登录尝试次数过多。请稍后再试。"
 
 # key: common.reason
-#: ninefruits/security/admin.py
+#: admin.py
 msgctxt "common"
 msgid "Reason"
 msgstr "原因"
@@ -125,7 +125,7 @@ msgstr "原因"
 # key: admin.users.fields.locale
 # key: assessment.categories.language
 # key: common.language
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Language"
 msgstr "语言"
 
@@ -134,13 +134,13 @@ msgstr "语言"
 # key: graduation.report_columns.student_name
 # key: people.sections.name
 # key: people.fields.name
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Name"
 msgstr "姓名"
 
 # key: admin.users.fields.email
 # key: authentication.fields.email
-#: ninefruits/security/admin.py ninefruits/security/forms.py
+#: admin.py forms.py
 msgctxt "authentication"
 msgid "Email"
 msgstr "电子邮箱"
@@ -148,132 +148,132 @@ msgstr "电子邮箱"
 # key: admin.users.fields.is_active
 # key: reference.fields.is_active
 # key: registration.fields.is_active
-#: ninefruits/security/admin.py ninefruits/security/templates/security/widgets/sso_providers.html
+#: admin.py templates/security/widgets/sso_providers.html
 msgid "Active"
 msgstr "启用"
 
 # key: admin.users.help.name
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Used only for accounts without a person (e.g. service accounts). Linked accounts show the person's name."
 msgstr "仅用于未关联人员的账户（如服务账户）。已关联的账户显示人员姓名。"
 
 # key: admin.role_assignments.fields.role
 # key: offering.fields.instructor_role
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Role"
 msgstr "角色"
 
 # key: admin.role_assignments.fields.scope
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Scope"
 msgstr "范围"
 
 # key: admin.role_assignments.fields.scope_target
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Scope target"
 msgstr "范围对象"
 
 # key: reference.help.org_unit_descendants
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Includes all units below the selected ones."
 msgstr "包含所选单位下的所有单位。"
 
 # key: admin.role_assignments.fields.starts_at
 # key: registration.fields.starts_at
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Starts"
 msgstr "开始"
 
 # key: admin.role_assignments.fields.ends_at
 # key: registration.fields.ends_at
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Ends"
 msgstr "结束"
 
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Role assignment"
 msgstr "角色分配"
 
 # key: admin.role_assignments.title
 # key: permissions.resources.role_assignments
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Role assignments"
 msgstr "角色分配"
 
 # key: admin.role_assignments.actions.revoke
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "End assignment"
 msgstr "结束分配"
 
 # key: permissions.resources.users
-#: ninefruits/security/admin.py
+#: admin.py
 msgctxt "admin"
 msgid "Users"
 msgstr "用户"
 
 # key: admin.users.fields.mfa_enrolled
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Two-factor"
 msgstr "双重验证"
 
 # key: admin.users.fields.linked_person
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Linked person"
 msgstr "关联人员"
 
 # key: common.yes
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Yes"
 msgstr "是"
 
 # key: common.none
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "None"
 msgstr "无"
 
 # key: admin.users.actions.reset_mfa
 # key: permissions.users.reset_mfa
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Reset two-factor authentication"
 msgstr "重置双重身份验证"
 
 # key: admin.users.notifications.mfa_reset
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Two-factor authentication was reset."
 msgstr "已重置双重身份验证。"
 
 # key: admin.users.actions.unlock
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Unlock sign-in"
 msgstr "解除登录锁定"
 
 # key: admin.users.notifications.unlocked
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Sign-in unlocked."
 msgstr "已解除登录锁定。"
 
 # key: admin.role_assignments.actions.assign
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Assign role"
 msgstr "分配角色"
 
 # key: admin.role_assignments.notifications.assigned
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Role assigned."
 msgstr "已分配角色。"
 
 # key: admin.role_assignments.notifications.revoked
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Assignment ended."
 msgstr "已结束分配。"
 
 # key: admin.roles.fields.name
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Internal name"
 msgstr "内部名称"
 
 # key: admin.roles.fields.display_name
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Display name"
 msgstr "显示名称"
 
@@ -281,295 +281,295 @@ msgstr "显示名称"
 # key: admissions.fields.description
 # key: evaluation.fields.description
 # key: reference.fields.description
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Description"
 msgstr "说明"
 
 # key: admin.roles.fields.name_help
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Lowercase letters, digits and underscores, e.g. registrar."
 msgstr "仅使用小写英文字母、数字和下划线，例如 registrar。"
 
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "The name has already been taken."
 msgstr "该名称已被使用。"
 
 # key: permissions.resources.roles
 # key: portal.dashboard.roles
-#: ninefruits/security/admin.py
+#: admin.py
 msgctxt "admin"
 msgid "Roles"
 msgstr "角色"
 
 # key: admin.roles.system_role_permissions
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "System roles always have every permission."
 msgstr "系统角色始终拥有全部权限。"
 
 # key: admin.roles.sections.general
 # key: admin.settings.institution.general
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "General"
 msgstr "基本信息"
 
 # key: admin.roles.fields.permissions_count
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Permissions"
 msgstr "权限数"
 
 # key: admin.roles.fields.persona
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Persona"
 msgstr "身份"
 
 # key: admin.roles.fields.active_assignments_count
-#: ninefruits/security/admin.py
+#: admin.py
 msgid "Active assignments"
 msgstr "当前分配数"
 
 # key: permissions.resources.people
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "People"
 msgstr "人员"
 
 # key: permissions.resources.accounts
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Accounts"
 msgstr "账户"
 
 # key: permissions.resources.student_records
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Student records"
 msgstr "学籍"
 
 # key: graduation.reports.names.status_changes
 # key: permissions.resources.student_status_changes
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Status changes"
 msgstr "学籍异动"
 
 # key: permissions.resources.instructors
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Instructors"
 msgstr "教师"
 
 # key: permissions.resources.advisors
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Advisors"
 msgstr "导师"
 
 # key: permissions.resources.authentication_settings
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Sign-in settings"
 msgstr "登录设置"
 
 # key: admin.navigation.reference_data
 # key: permissions.resources.reference_data
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Reference data"
 msgstr "基础数据"
 
 # key: permissions.resources.lookup_values
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Code data"
 msgstr "代码数据"
 
 # key: permissions.resources.org_units
 # key: reference.fields.org_units
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Org units"
 msgstr "组织单位"
 
 # key: permissions.resources.programs
 # key: reference.fields.programs
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Programs"
 msgstr "专业项目"
 
 # key: permissions.resources.facilities
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Buildings and rooms"
 msgstr "楼宇与教室"
 
 # key: permissions.resources.terms
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Academic years and terms"
 msgstr "学年与学期"
 
 # key: permissions.resources.term_windows
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Term windows"
 msgstr "业务期间"
 
 # key: permissions.resources.course_categories
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Course categories"
 msgstr "课程类别"
 
 # key: permissions.resources.grade_scales
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Grade scales"
 msgstr "成绩等级"
 
 # key: permissions.resources.admin_panel
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Administration panel"
 msgstr "管理界面"
 
 # key: permissions.resources.users
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Users"
 msgstr "用户"
 
 # key: permissions.resources.roles
 # key: portal.dashboard.roles
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Roles"
 msgstr "角色"
 
 # key: admin.role_assignments.title
 # key: permissions.resources.role_assignments
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Role assignments"
 msgstr "角色分配"
 
 # key: permissions.resources.audit_records
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Audit records"
 msgstr "审计记录"
 
 # key: permissions.resources.security_events
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Security events"
 msgstr "安全事件"
 
 # key: permissions.resources.security_settings
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Security settings"
 msgstr "安全设置"
 
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Queue monitor (Flower)"
 msgstr "队列监控 (Flower)"
 
 # key: permissions.resources.institution_settings
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Institution settings"
 msgstr "机构设置"
 
 # key: permissions.resources.admission_cycles
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Admission cycles"
 msgstr "招生批次"
 
 # key: permissions.resources.applications
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Applications"
 msgstr "申请"
 
 # key: permissions.resources.courses
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Courses"
 msgstr "课程"
 
 # key: graduation.portal.title
 # key: permissions.resources.curriculum
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Graduation requirements"
 msgstr "毕业要求"
 
 # key: permissions.resources.sections
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Sections"
 msgstr "开课"
 
 # key: permissions.resources.additional_programs
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Second majors and minors"
 msgstr "第二专业与辅修"
 
 # key: permissions.resources.enrollments
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Registrations"
 msgstr "选课情况"
 
 # key: permissions.resources.registration
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Registration adjustments"
 msgstr "选课调整"
 
 # key: permissions.resources.registration_rules
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Registration rules"
 msgstr "选课规则"
 
 # key: permissions.resources.registration_holds
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Registration holds and overrides"
 msgstr "选课限制与例外"
 
 # key: permissions.resources.grades
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Grades"
 msgstr "成绩"
 
 # key: permissions.resources.grade_changes
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Grade changes"
 msgstr "成绩更正"
 
 # key: grading.settings.title
 # key: permissions.resources.grading_policies
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Grading policy"
 msgstr "成绩处理政策"
 
 # key: permissions.resources.grade_exceptions
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Grade exceptions"
 msgstr "成绩例外提交"
 
 # key: permissions.resources.evaluations
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Course evaluation"
 msgstr "课程评价"
@@ -578,7 +578,7 @@ msgstr "课程评价"
 # key: assessment.portal.title
 # key: permissions.resources.assessments
 # key: portal.navigation.assessments
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Examinations"
 msgstr "语言/综合考试"
@@ -586,7 +586,7 @@ msgstr "语言/综合考试"
 # key: admin.navigation.graduation
 # key: permissions.resources.graduation
 # key: portal.navigation.graduation
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Graduation"
 msgstr "毕业"
@@ -594,558 +594,558 @@ msgstr "毕业"
 # key: admin.navigation.reports
 # key: graduation.reports.title
 # key: permissions.resources.reports
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Reports"
 msgstr "报表"
 
 # key: admin.navigation.lms
 # key: permissions.resources.lms
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "LMS integration"
 msgstr "LMS 对接"
 
 # key: permissions.resources.certificates
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Certificates"
 msgstr "证明书"
 
 # key: permissions.admin_panel.access
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Open the administration panel"
 msgstr "使用管理界面"
 
 # key: permissions.users.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View users"
 msgstr "查看用户"
 
 # key: permissions.users.create
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Create users"
 msgstr "创建用户"
 
 # key: permissions.users.update
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Edit users"
 msgstr "编辑用户"
 
 # key: permissions.users.reset_mfa
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Reset two-factor authentication"
 msgstr "重置双重身份验证"
 
 # key: permissions.roles.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View roles"
 msgstr "查看角色"
 
 # key: permissions.roles.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Create and edit roles"
 msgstr "创建和编辑角色"
 
 # key: permissions.role_assignments.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Assign and end roles"
 msgstr "分配和结束角色"
 
 # key: permissions.audit_records.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View audit records"
 msgstr "查看审计记录"
 
 # key: permissions.security_events.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View security events"
 msgstr "查看安全事件"
 
 # key: permissions.security_settings.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage security settings"
 msgstr "管理安全设置"
 
 # key: permissions.institution_settings.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage institution settings"
 msgstr "管理机构设置"
 
 # key: permissions.queue_monitor.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View the queue monitor"
 msgstr "查看队列监控"
 
 # key: permissions.reference_data.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View reference data"
 msgstr "查看基础数据"
 
 # key: permissions.reference_data.import
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Import reference data from CSV"
 msgstr "通过 CSV 导入基础数据"
 
 # key: permissions.lookup_values.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage code data, countries and languages"
 msgstr "管理代码数据、国家和语言"
 
 # key: permissions.org_units.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage org units and reorganizations"
 msgstr "管理组织单位与重组"
 
 # key: permissions.programs.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage programs"
 msgstr "管理专业项目"
 
 # key: permissions.facilities.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage buildings and rooms"
 msgstr "管理楼宇与教室"
 
 # key: permissions.terms.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage academic years, terms, term types and time slots"
 msgstr "管理学年、学期、学期类型和节次"
 
 # key: permissions.term_windows.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage term windows"
 msgstr "管理业务期间"
 
 # key: permissions.course_categories.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage course categories"
 msgstr "管理课程类别"
 
 # key: permissions.grade_scales.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage grade scales"
 msgstr "管理成绩等级"
 
 # key: permissions.people.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View all people"
 msgstr "查看所有人员"
 
 # key: permissions.people.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Create and edit people"
 msgstr "登记和编辑人员"
 
 # key: permissions.people.view_sensitive
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Reveal national ID and passport numbers"
 msgstr "显示身份证号和护照号"
 
 # key: permissions.people.merge
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Merge duplicate people"
 msgstr "合并重复人员"
 
 # key: permissions.accounts.invite
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Invite people to create an account"
 msgstr "邀请创建账户"
 
 # key: permissions.student_records.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View student records"
 msgstr "查看学籍"
 
 # key: permissions.student_records.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Create and edit student records"
 msgstr "登记和编辑学籍"
 
 # key: permissions.student_status_changes.approve
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Approve and record status changes"
 msgstr "审批和办理学籍异动"
 
 # key: permissions.instructors.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage instructors"
 msgstr "管理教师"
 
 # key: permissions.advisors.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Assign advisors"
 msgstr "分配导师"
 
 # key: permissions.authentication_settings.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage sign-in methods and SSO"
 msgstr "管理登录方式和 SSO"
 
 # key: permissions.admission_cycles.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage admission cycles and admission settings"
 msgstr "管理招生批次和招生设置"
 
 # key: permissions.applications.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View applications"
 msgstr "查看申请"
 
 # key: permissions.applications.review
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Review and decide applications"
 msgstr "审核申请并作出录取决定"
 
 # key: permissions.applications.matriculate
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Create student records for admitted applicants"
 msgstr "为录取者创建学籍"
 
 # key: permissions.courses.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage courses, versions and requisites"
 msgstr "管理课程、版本和先修课程"
 
 # key: permissions.curriculum.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage graduation requirements"
 msgstr "管理毕业要求"
 
 # key: permissions.sections.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View sections"
 msgstr "查看开课"
 
 # key: permissions.sections.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Plan sections (instructors, times, rooms)"
 msgstr "编排开课（任课教师、时间、教室）"
 
 # key: permissions.additional_programs.approve
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Decide second major and minor applications"
 msgstr "审批第二专业与辅修申请"
 
 # key: permissions.enrollments.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View registrations and rosters"
 msgstr "查看选课情况和课程名单"
 
 # key: permissions.registration.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Register, drop and withdraw students for them (with a reason)"
 msgstr "代学生选课、退课、撤课（需填写理由）"
 
 # key: permissions.registration_rules.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage registration rule sets and credit limits"
 msgstr "管理选课规则集和学分上限"
 
 # key: permissions.registration_holds.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Place and release holds, grant rule overrides"
 msgstr "设置和解除选课限制，批准规则例外"
 
 # key: permissions.grades.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View grades, grade progress and term records"
 msgstr "查看成绩、成绩处理进度和学期记录"
 
 # key: permissions.grades.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Finalize and return grades, enter grades for instructors, close terms"
 msgstr "确定和退回成绩、代教师录入成绩、学期结算"
 
 # key: permissions.grade_changes.request
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Request a change to a finalized grade"
 msgstr "申请更正已确定的成绩"
 
 # key: permissions.grade_changes.approve
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Approve or reject grade changes (not your own requests)"
 msgstr "批准或驳回成绩更正（本人申请除外）"
 
 # key: permissions.grading_policies.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage GPA, retake, academic standing and honors policy"
 msgstr "管理绩点、重修、学业警告和成绩优秀政策"
 
 # key: permissions.grade_exceptions.review
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Be told when staff submit grades outside the grade caps (department heads, academic office)"
 msgstr "教职员超出等级比例例外提交成绩时接收通知（系主任、教务负责人）"
 
 # key: permissions.evaluations.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View course evaluation response rates and results"
 msgstr "查看课程评价回答率和结果"
 
 # key: permissions.evaluations.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage evaluation forms, term evaluations and publication"
 msgstr "管理评价表、学期课程评价和结果公布"
 
 # key: permissions.certificates.issue
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Issue, re-render and revoke certificates"
 msgstr "开具、重新生成和撤销证明书"
 
 # key: permissions.certificates.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage certificate kinds, templates and settings"
 msgstr "管理证明书种类、模板和设置"
 
 # key: permissions.assessments.record
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Register students, enter and publish results, record external results"
 msgstr "登记考生、录入和公布成绩、登记外部成绩"
 
 # key: permissions.assessments.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage examination kinds, areas and sessions"
 msgstr "管理考试种类、领域和场次"
 
 # key: permissions.graduation.audit
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Run and view degree audits"
 msgstr "执行和查看毕业资格审核"
 
 # key: permissions.graduation.process
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Process graduations, grant requirement waivers"
 msgstr "办理毕业、批准要求豁免"
 
 # key: permissions.reports.view
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "View standard reports and download them"
 msgstr "查看和下载标准报表"
 
 # key: permissions.lms.manage
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "permissions"
 msgid "Manage LMS platforms, links and synchronization"
 msgstr "管理 LMS 平台、关联和同步"
 
 # key: security.mfa_enforcement.disabled
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Not used"
 msgstr "不使用"
 
 # key: security.mfa_enforcement.recommended
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Recommended (optional)"
 msgstr "建议（可选）"
 
 # key: security.mfa_enforcement.required_for_roles
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Required for selected roles"
 msgstr "指定角色必须使用"
 
 # key: security.mfa_enforcement.required_for_all
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Required for everyone"
 msgstr "所有人必须使用"
 
 # key: security.mfa_methods.authenticator_app
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Authenticator app"
 msgstr "身份验证器应用"
 
 # key: authentication.two_factor.email_code
 # key: security.mfa_methods.email_code
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Email code"
 msgstr "邮件验证码"
 
 # key: admissions.sections.applicant
 # key: security.personas.applicant
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Applicant"
 msgstr "申请人"
 
 # key: registration.enrollment_sources.student
 # key: security.personas.student
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Student"
 msgstr "学生"
 
 # key: security.personas.alumni
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Alumni"
 msgstr "校友"
 
 # key: security.personas.instructor
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Instructor"
 msgstr "教师"
 
 # key: security.personas.advisor
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Advisor"
 msgstr "指导教师"
 
 # key: security.scope_types.global
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "All"
 msgstr "全部"
 
 # key: reference.fields.org_unit
 # key: security.scope_types.org_unit
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Org unit"
 msgstr "组织单位"
 
 # key: security.scope_types.program
-#: ninefruits/security/enums.py
+#: enums.py
 msgctxt "security"
 msgid "Program"
 msgstr "专业项目"
 
 # key: security.sso_link_modes.manual
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Users link their own accounts"
 msgstr "用户自行关联"
 
 # key: security.sso_link_modes.institutional_email
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Link automatically by verified school email"
 msgstr "按已验证的学校邮箱自动关联"
 
 # key: security.student_number_login.disabled
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Not allowed"
 msgstr "不允许"
 
 # key: security.student_number_login.active_records
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Current students only"
 msgstr "仅在读学生"
 
 # key: security.student_number_login.all_records
-#: ninefruits/security/enums.py
+#: enums.py
 msgid "Current students and graduates"
 msgstr "在读学生和毕业生"
 
 # key: authentication.fields.email_or_student_number
-#: ninefruits/security/forms.py
+#: forms.py
 msgid "Email or student number"
 msgstr "邮箱或学号"
 
 # key: authentication.fields.password
-#: ninefruits/security/forms.py
+#: forms.py
 msgctxt "authentication"
 msgid "Password"
 msgstr "密码"
 
 # key: authentication.login.remember_me
-#: ninefruits/security/forms.py
+#: forms.py
 msgid "Keep me signed in"
 msgstr "保持登录状态"
 
 # key: auth.inactive
-#: ninefruits/security/middleware.py
+#: middleware.py
 msgid "This account has been deactivated. Contact the administrator."
 msgstr "该账户已停用，请联系管理员。"
 
 # key: security.mfa.enrollment_required
-#: ninefruits/security/middleware.py
+#: middleware.py
 msgid "Two-factor authentication is required for your account. Please set it up to continue."
 msgstr "您的账户需要双重身份验证，请完成设置后继续。"
 
 # key: security.email_code.mail_greeting
-#: ninefruits/security/notifications.py
+#: notifications.py
 msgid "Hello,"
 msgstr "您好，"
 
 # key: security.email_code.mail_intro
-#: ninefruits/security/notifications.py
+#: notifications.py
 msgid "Use this code to finish signing in:"
 msgstr "请使用以下验证码完成登录："
 
 # key: security.email_code.mail_expiry
-#: ninefruits/security/notifications.py
+#: notifications.py
 #, python-format
 msgid "The code expires in %(minutes)s minutes and can be used once."
 msgstr "验证码将在 %(minutes)s 分钟后失效，且只能使用一次。"
 
 # key: security.email_code.mail_ignore
-#: ninefruits/security/notifications.py
+#: notifications.py
 msgid "If you did not try to sign in, change your password."
 msgstr "如果不是您本人尝试登录，请修改密码。"
 
 # key: security.email_code.mail_salutation
-#: ninefruits/security/notifications.py
+#: notifications.py
 #, python-format
 msgid ""
 "Thank you,\n"
@@ -1156,245 +1156,274 @@ msgstr ""
 "%(app)s"
 
 # key: security.email_code.mail_subject
-#: ninefruits/security/notifications.py
+#: notifications.py
 msgid "Your sign-in code"
 msgstr "您的登录验证码"
 
 # key: admin.settings.security.mfa_enforcement
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Policy"
 msgstr "策略"
 
 # key: admin.users.actions.reset_mfa
 # key: permissions.users.reset_mfa
 # key: admin.settings.security.mfa_required_roles
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Roles that must use two-factor authentication"
 msgstr "必须使用双重验证的角色"
 
 # key: security.mfa_enforcement.required_for_roles
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Used when the policy is Required for selected roles."
 msgstr "当策略为“对所选角色必需”时使用。"
 
 # key: admin.settings.security.mfa_grace_period_days
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Grace period (days)"
 msgstr "宽限期（天）"
 
 # key: admin.settings.security.mfa_grace_period_help
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Days a user can keep working after the requirement first applies to them. 0 means immediately."
 msgstr "要求首次适用于用户后，可继续使用而不设置的天数。0 表示立即生效。"
 
 # key: admin.settings.security.mfa_remember_device_days
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Remember devices for (days)"
 msgstr "记住设备（天）"
 
 # key: admin.settings.security.mfa_remember_device_help
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Users can skip the code on a trusted device for this many days. 0 turns this off."
 msgstr "在受信任的设备上，此期间内可免输验证码。0 表示不使用。"
 
 # key: authentication.two_factor.email_code
 # key: security.mfa_methods.email_code
 # key: admin.settings.security.mfa_email_code_enabled
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Allow email codes"
 msgstr "允许邮件验证码"
 
 # key: admin.settings.security.mfa_email_code_help
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Users can choose one-time codes by email instead of an authenticator app. Turning this off stops email codes from counting as two-factor authentication."
 msgstr "用户可以选择通过邮件接收一次性验证码来代替身份验证器应用。关闭后，邮件验证码不再视为双重身份验证。"
 
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Choose at least one role."
 msgstr "请至少选择一个角色。"
 
 # key: permissions.resources.security_events
 # key: admin.settings.security.title
 # key: portal.navigation.security
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Security"
 msgstr "安全"
 
 # key: admin.settings.security.mfa_section
 # key: authentication.two_factor.title
 # key: security.mfa.title
-#: ninefruits/security/settings_pages.py ninefruits/security/views.py
+#: settings_pages.py views.py
 msgid "Two-factor authentication"
 msgstr "双重身份验证"
 
 # key: admin.settings.security.mfa_description
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Changes apply to every user immediately."
 msgstr "更改会立即对所有用户生效。"
 
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 #, python-format
 msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
 msgstr "%(key)s：键只能使用小写字母、数字和连字符。"
 
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 #, python-format
 msgid "%(key)s: each provider needs its own key."
 msgstr "%(key)s：每个提供方需要不同的键。"
 
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 #, python-format
 msgid "%(key)s: the button label is required (64 characters at most)."
 msgstr "%(key)s：按钮名称为必填项（最多 64 个字符）。"
 
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 #, python-format
 msgid "%(key)s: the issuer must be a URL."
 msgstr "%(key)s：颁发者必须是 URL。"
 
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 #, python-format
 msgid "%(key)s: the client ID is required."
 msgstr "%(key)s：客户端 ID 为必填项。"
 
 # key: authentication.fields.email_or_student_number
 # key: admin.settings.authentication.student_number_login
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Sign in with student number"
 msgstr "使用学号登录"
 
 # key: admin.settings.authentication.password_login_for_sso_users
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Allow passwords for users with school sign-in"
 msgstr "允许已关联学校账户的用户使用密码登录"
 
 # key: admin.settings.authentication.password_login_for_sso_users_help
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "When off, users who have linked a school account must use it to sign in."
 msgstr "关闭后，已关联学校账户的用户只能通过学校统一登录。"
 
 # key: admin.settings.authentication.lockout_threshold
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Lock after failed attempts"
 msgstr "锁定前失败次数"
 
 # key: admin.settings.authentication.lockout_threshold_help
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Failed passwords in a row before the account is locked. 0 turns locking off."
 msgstr "连续输错密码达到此次数时锁定账户。0 表示不锁定。"
 
 # key: admin.settings.authentication.lockout_minutes
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Lock duration (minutes)"
 msgstr "锁定时长（分钟）"
 
 # key: permissions.resources.accounts
 # key: admin.settings.authentication.sso_link_mode
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Account linking"
 msgstr "账户关联方式"
 
 # key: admin.settings.authentication.sso_providers
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Providers"
 msgstr "提供方"
 
 # key: permissions.resources.authentication_settings
 # key: admin.settings.authentication.title
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Sign-in methods"
 msgstr "登录方式"
 
 # key: authentication.fields.password
 # key: admin.settings.authentication.password_section
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "Passwords"
 msgstr "密码"
 
 # key: admin.settings.authentication.sso_section
-#: ninefruits/security/settings_pages.py
+#: settings_pages.py
 msgid "School sign-in (SSO)"
 msgstr "学校统一登录（SSO）"
 
 # key: assessment.portal.cancel
-#: ninefruits/security/templates/security/admin/action_form.html
+#: templates/security/admin/action_form.html
 msgctxt "common"
 msgid "Cancel"
 msgstr "取消"
 
 # key: admin.settings.authentication.provider_key
 # key: lms.fields.credential_key
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgctxt "security"
 msgid "Key"
 msgstr "键"
 
 # key: admin.settings.authentication.provider_label
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Button label"
 msgstr "按钮名称"
 
 # key: admin.settings.authentication.issuer
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Issuer URL"
 msgstr "签发者（Issuer）URL"
 
 # key: admin.settings.authentication.client_id
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Client ID"
 msgstr "客户端 ID"
 
 # key: admin.settings.authentication.client_secret
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Client secret"
 msgstr "客户端密钥"
 
 # key: admin.settings.authentication.client_secret_help
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Stored encrypted. Leave empty to keep the stored value."
 msgstr "加密保存。留空则保留已保存的值。"
 
 # key: admin.role_assignments.fields.scope
 # key: admin.settings.authentication.scopes
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Scopes"
 msgstr "范围（scope）"
 
 # key: admin.users.actions.reset_mfa
 # key: permissions.users.reset_mfa
 # key: admin.settings.authentication.trusts_mfa
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Counts as two-factor authentication"
 msgstr "视为双重验证"
 
 # key: admin.settings.authentication.trusts_mfa_help
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Turn on only if the school's sign-in itself requires two-factor authentication."
 msgstr "仅当学校统一登录本身要求双重验证时开启。"
 
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Remove this provider"
 msgstr "删除此提供方"
 
 # key: admin.settings.authentication.redirect_uri
-#: ninefruits/security/templates/security/widgets/sso_providers.html
+#: templates/security/widgets/sso_providers.html
 msgid "Redirect URI to register with the provider"
 msgstr "需在提供方登记的重定向 URI"
 
-#: ninefruits/security/views.py
+#: views.py
 msgid "The email code must be 6 digits."
 msgstr "电子邮件代码必须是 6 位数字。"
 
 # key: security.email_code.sent
-#: ninefruits/security/views.py
+#: views.py
 msgid "A new code has been sent to your email."
 msgstr "新的验证码已发送到您的邮箱。"
 
 # key: security.email_code.wait
-#: ninefruits/security/views.py
+#: views.py
 #, python-format
 msgid "Please wait %(seconds)s seconds before requesting another code."
 msgstr "请在 %(seconds)s 秒后再次请求。"
+
+# key: security.sso.failed
+#: views_sso.py
+msgid "School sign-in failed. Try again or sign in with your password."
+msgstr "学校统一登录失败。请重试或使用密码登录。"
+
+# key: security.sso.expired
+#: views_sso.py
+msgid "The sign-in attempt expired. Try again."
+msgstr "登录请求已过期，请重试。"
+
+# key: admin.users.notifications.unlocked
+# key: security.sso.cancelled
+#: views_sso.py
+#| msgid "Sign-in unlocked."
+msgid "Sign-in was cancelled."
+msgstr "已取消登录。"
+
+# key: security.sso.linked
+#: views_sso.py
+#, python-format
+msgid "%(provider)s account linked."
+msgstr "已关联 %(provider)s 账户。"
+
+# key: security.sso.not_linked
+#: views_sso.py
+#, python-format
+msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
+msgstr "您的 %(provider)s 账户尚未与此处账户关联。请用密码登录后在安全设置中关联。"
 
 #~ msgid "Org unit or program id. An org unit also covers every unit below it."
 #~ msgstr "组织单位或专业的 ID。组织单位包括其下所有单位。"

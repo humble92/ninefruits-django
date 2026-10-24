@@ -9,7 +9,8 @@
   is on; the admission settings group and ``RegisterApplicant`` arrive in Phase 3, so sign-up is
   closed until then.
 - SSO never creates accounts (accounts belong to people); the OIDC sign-in flow and linking rules
-  are Phase 2 (``ninefruits.security.services.sso``)."""
+  are ``ninefruits.security.views_sso`` (links in ``user_identities``, not allauth's
+  ``socialaccount`` tables)."""
 
 from __future__ import annotations
 

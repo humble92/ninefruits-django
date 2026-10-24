@@ -1190,3 +1190,8 @@ msgstr "로그아웃"
 msgctxt "security"
 msgid "Set up now"
 msgstr "지금 설정"
+
+# key: authentication.login.sso
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "%(provider)s로 로그인"

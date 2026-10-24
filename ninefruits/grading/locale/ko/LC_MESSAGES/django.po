@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 18:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,153 +19,164 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # key: grading.errors.scale_fixed
-#: ninefruits/grading/actions/save_grade_scale.py
+#: actions/save_grade_scale.py:28
 msgid "The grade scale is fixed at installation and cannot change."
 msgstr "성적 척도는 설치할 때 정해지며 바꿀 수 없습니다."
 
 # key: grading.help.scale_fixed
-#: ninefruits/grading/admin.py
+#: admin.py:32
 msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
 msgstr "성적 척도는 설치할 때 정해진다. 성적과 평점이 이 척도에 있으므로 다른 척도로 바꿀 수 없다."
 
 # key: validation.required
-#: ninefruits/grading/admin.py
+#: admin.py:64
 #, python-format
 msgid "The %(attribute)s field is required."
 msgstr "%(attribute)s 필드는 필수입니다."
 
 # key: reference.fields.grade_points
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:64 admin.py:70 models/grade_scale.py:46
 msgid "Grade points"
 msgstr "평점"
 
 # key: validation.max.numeric
-#: ninefruits/grading/admin.py
+#: admin.py:69
 #, python-format
 msgid "The %(attribute)s field must not be greater than %(max)s."
 msgstr "%(attribute)s은(는) %(max)s보다 클 수 없습니다."
 
 # key: validation.gte.numeric
-#: ninefruits/grading/admin.py
+#: admin.py:76
 #, python-format
 msgid "The %(attribute)s field must be greater than or equal to %(value)s."
 msgstr "%(attribute)s의 값은 %(value)s보다 같거나 커야 합니다."
 
 # key: reference.fields.max_percentage
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:77 models/grade_scale.py:57
 msgid "To (%)"
 msgstr "상한(%)"
 
 # key: reference.fields.min_percentage
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:77 models/grade_scale.py:49
 msgid "From (%)"
 msgstr "하한(%)"
 
 # key: reference.resources.grade_scale_items.label
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:87 models/grade_scale.py:82
 msgid "grade"
 msgstr "등급"
 
 # key: reference.resources.grade_scale_items.plural_label
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:88 models/grade_scale.py:83
 msgid "grades"
 msgstr "등급"
 
 # key: reference.fields.name
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:124 models/grade_scale.py:20 models/grade_scale.py:44
 msgctxt "reference"
 msgid "Name"
 msgstr "이름"
 
 # key: reference.fields.items_count
-#: ninefruits/grading/admin.py
+#: admin.py:128
 msgctxt "reference"
 msgid "Grades"
 msgstr "등급 수"
 
 # key: grading.applies_to.graded
-#: ninefruits/grading/enums.py
+#: enums.py:12
 msgid "Graded courses"
 msgstr "일반 과목"
 
 # key: grading.applies_to.pass_fail
-#: ninefruits/grading/enums.py
+#: enums.py:13
 msgid "Pass/fail courses"
 msgstr "P/F 과목"
 
 # key: grading.applies_to.both
-#: ninefruits/grading/enums.py
+#: enums.py:14
 msgid "Both"
 msgstr "둘 다"
 
+# key: grading.evaluation_methods.absolute
+#: enums.py:21
+msgid "Absolute evaluation"
+msgstr "절대평가"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: enums.py:22
+msgid "Relative evaluation"
+msgstr "상대평가"
+
 # key: grading.standings.good
-#: ninefruits/grading/enums.py
+#: enums.py:30
 msgid "Good standing"
 msgstr "정상"
 
 # key: grading.standings.warning
-#: ninefruits/grading/enums.py
+#: enums.py:31
 msgid "Academic warning"
 msgstr "학사경고"
 
 # key: grading.standings.dismissal_review
-#: ninefruits/grading/enums.py
+#: enums.py:32
 msgid "Dismissal review"
 msgstr "제적 검토"
 
 # key: reference.fields.code
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:19
 msgctxt "reference"
 msgid "Code"
 msgstr "코드"
 
 # key: reference.fields.max_grade_points
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:22
 msgid "Maximum grade points"
 msgstr "만점 평점"
 
 # key: reference.fields.is_default
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:27
 msgid "Default"
 msgstr "기본"
 
 # key: reference.resources.grade_scales.label
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:34
 msgid "grade scale"
 msgstr "성적 척도"
 
 # key: reference.resources.grade_scales.plural_label
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:35
 msgid "grade scales"
 msgstr "성적 척도"
 
 # key: reference.fields.grade
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:43
 msgctxt "reference"
 msgid "Grade"
 msgstr "등급"
 
 # key: reference.fields.counts_in_gpa
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:64
 msgid "Counts in GPA"
 msgstr "평점 계산 포함"
 
 # key: reference.fields.is_passing
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:65
 msgid "Passing"
 msgstr "이수"
 
 # key: certificate.fields.audience
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:67
 msgid "For"
 msgstr "대상"
 
 # key: grading.help.applies_to
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:72
 msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
 msgstr "등급은 일반 과목, P/NP는 P/F 과목에 쓴다. \"둘 다\"는 예를 들어 I(미완)."
 
 # key: reference.fields.sort_order
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:75
 msgid "Order"
 msgstr "순서"

@@ -1,0 +1,1391 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 18:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: people.errors.additional_program_not_offered
+#: actions/additional_programs.py
+msgid "This program does not accept that kind of application."
+msgstr "该专业不接受此类申请。"
+
+# key: people.errors.additional_program_already_held
+#: actions/additional_programs.py
+msgid "You already follow this program."
+msgstr "您已在修读该专业。"
+
+# key: people.errors.additional_program_limit
+#: actions/additional_programs.py
+#, python-format
+msgid ""
+"You can have at most %(count)s at a time (including pending applications)."
+msgstr "同时最多 %(count)s 个（包括处理中的申请）。"
+
+# key: people.errors.not_own_record
+#: actions/additional_programs.py actions/status_changes.py
+msgid "You can only make requests for your own record."
+msgstr "只能为本人学籍提出申请。"
+
+# key: people.errors.additional_program_inactive_record
+#: actions/additional_programs.py
+msgid "Only current students can apply."
+msgstr "只有在读学生可以申请。"
+
+# key: people.errors.additional_program_window_closed
+#: actions/additional_programs.py
+msgid "Applications for a second major or minor are not open for you now."
+msgstr "现在不是第二专业与辅修的申请期间。"
+
+# key: people.errors.additional_program_pending
+#: actions/additional_programs.py
+msgid "There is already a pending application for this program."
+msgstr "该专业已有处理中的申请。"
+
+# key: people.errors.already_decided
+#: actions/additional_programs.py actions/status_changes.py
+msgid "This request has already been decided."
+msgstr "该申请已处理。"
+
+# key: people.errors.own_request
+#: actions/additional_programs.py actions/status_changes.py
+msgid "You cannot decide a request you made yourself."
+msgstr "不能处理本人提出的申请。"
+
+# key: people.errors.additional_program_end_invalid
+#: actions/additional_programs.py
+msgid "This program has already ended, or the date is before it started."
+msgstr "已经结束，或日期早于开始日期。"
+
+# key: people.errors.instructor_not_current
+#: actions/advisors.py
+msgid "This instructor is not currently employed."
+msgstr "该教师不在职。"
+
+# key: people.errors.already_has_account
+#: actions/invitations.py
+msgid "This person already has an account."
+msgstr "该人员已有账户。"
+
+# key: people.errors.email_in_use
+#: actions/invitations.py
+msgid "Another account uses this email."
+msgstr "该邮箱已被其他账户使用。"
+
+# key: people.invitations.invalid
+#: actions/invitations.py templates/person/accept_invitation.html
+msgid ""
+"This invitation link is invalid or has expired. Ask the school office for a "
+"new one."
+msgstr "邀请链接无效或已过期，请向学校申请新的邀请。"
+
+# key: people.errors.merge_invalid
+#: actions/merge.py
+msgid "Choose a different person who has not been merged."
+msgstr "请选择另一位未合并的人员。"
+
+# key: people.errors.merge_two_instructors
+#: actions/merge.py
+msgid ""
+"Both people have instructor records. Merge the instructor records first."
+msgstr "两位人员都有教师信息，请先整理教师信息。"
+
+# key: people.errors.merge_two_open_applications
+#: actions/merge.py
+msgid ""
+"Both people have an open application in the same admission cycle. Withdraw "
+"one first."
+msgstr "两位人员在同一招生批次都有进行中的申请，请先放弃其中一份。"
+
+# key: people.errors.type_not_applicable
+#: actions/status_changes.py
+#, python-format
+msgid "This change does not apply to a student who is %(status)s."
+msgstr "当前状态（%(status)s）不能申请此异动。"
+
+# key: people.errors.not_requestable
+#: actions/status_changes.py
+msgid "Students cannot request this type of change."
+msgstr "学生不能申请此类异动。"
+
+# key: people.errors.request_pending
+#: actions/status_changes.py
+msgid "There is already a pending request for this record."
+msgstr "该学籍已有待处理的申请。"
+
+# key: people.errors.status_changed_meanwhile
+#: actions/status_changes.py
+msgid ""
+"The student's status changed after the request was made. Reject it and ask "
+"for a new request."
+msgstr "申请后学籍状态已改变。请驳回并让学生重新申请。"
+
+# key: people.errors.person_merged
+#: actions/students.py
+msgid "This person was merged into another person. Use that person instead."
+msgstr "该人员已合并至其他人员，请使用合并后的人员。"
+
+#: actions/students.py
+msgid "Enter a valid date."
+msgstr "请输入有效日期。"
+
+# key: people.errors.program_not_effective
+#: actions/students.py
+msgid "The program is not in effect on the admission date."
+msgstr "该专业在入学日期无效。"
+
+# key: people.errors.student_number_taken
+#: actions/students.py
+msgid "This student number is already used."
+msgstr "该学号已被使用。"
+
+# key: common.reason
+#: admin/common.py templates/person/portal/records.html
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: admissions.fields.decision_note
+# key: people.fields.decision_note
+#: admin/common.py models/additional_program.py models/status_change.py
+#| msgid "Decision note"
+msgctxt "people"
+msgid "Decision note"
+msgstr "处理意见"
+
+# key: people.fields.employee_number
+#: admin/instructors.py models/instructor.py
+msgid "Employee number"
+msgstr "工号"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: admin/instructors.py models/instructor.py models/student_record.py
+#: templates/person/portal/records.html
+msgid "Org unit"
+msgstr "组织单位"
+
+# key: people.fields.employment_type
+#: admin/instructors.py models/instructor.py
+msgid "Employment type"
+msgstr "聘用类型"
+
+# key: people.fields.academic_title
+#: admin/instructors.py models/instructor.py
+msgid "Academic title"
+msgstr "职称"
+
+# key: people.fields.hire_date
+#: admin/instructors.py models/instructor.py
+msgid "Hire date"
+msgstr "聘用日期"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: admin/instructors.py admin/student_records.py models/advisor.py
+#: models/instructor.py models/student_record.py
+msgid "End date"
+msgstr "结束日期"
+
+# key: validation.after_or_equal
+#: admin/instructors.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s 必须要等于 %(date)s 或更晚。"
+
+#: admin/instructors.py
+msgid "The employee number has already been taken."
+msgstr "该工号已被使用。"
+
+# key: people.sections.person
+# key: people.fields.person
+#: admin/instructors.py admin/student_records.py models/instructor.py
+#: models/student_record.py
+msgid "Person"
+msgstr "人员"
+
+# key: people.fields.new_person
+#: admin/instructors.py admin/student_records.py
+msgid "New person"
+msgstr "新人员"
+
+# key: people.fields.existing_person
+#: admin/instructors.py admin/student_records.py
+msgid "Existing person"
+msgstr "已有人员"
+
+#: admin/instructors.py admin/student_records.py
+msgid "This field is required."
+msgstr "此字段为必填项。"
+
+# key: people.filters.current_instructors
+#: admin/instructors.py
+msgid "Current instructors only"
+msgstr "仅在职教师"
+
+# key: common.yes
+#: admin/instructors.py admin/people.py
+msgid "Yes"
+msgstr "是"
+
+#: admin/instructors.py admin/people.py
+msgid "No"
+msgstr "否"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.sections.name
+# key: people.fields.name
+#: admin/instructors.py admin/people.py admin/requests.py
+#: admin/student_records.py models/person.py models/status_change.py
+#: templates/person/portal/advisees.html templates/person/portal/profile.html
+#| msgid "Name"
+msgctxt "people"
+msgid "Name"
+msgstr "姓名"
+
+#: admin/instructors.py
+msgid "Instructor created."
+msgstr "已添加教师。"
+
+#: admin/instructors.py
+msgid "New instructor"
+msgstr "新建教师"
+
+# key: people.fields.from_statuses
+#: admin/instructors.py models/status_change.py
+msgid "Allowed from statuses"
+msgstr "可异动的当前状态"
+
+# key: validation.not_regex
+# key: validation.regex
+#: admin/instructors.py
+#, python-format
+#| msgid "The %(attribute)s field format is invalid."
+msgctxt "validation.regex"
+msgid "The %(attribute)s field format is invalid."
+msgstr "%(attribute)s 格式不正确。"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: admin/instructors.py models/status_change.py
+#| msgid "Code"
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: people.fields.new_status
+#: admin/instructors.py admin/requests.py models/status_change.py
+msgid "New status"
+msgstr "异动后状态"
+
+# key: people.fields.family_name
+#: admin/people.py models/person.py
+msgid "Family name"
+msgstr "姓（拉丁字母）"
+
+# key: people.help.romanized
+#: admin/people.py
+msgid ""
+"Legal name in Latin letters, as in the passport. Add the name as written in "
+"other languages below."
+msgstr "与护照一致的拉丁字母法定姓名。其他语言的姓名在下方各语言姓名中填写。"
+
+# key: people.fields.given_name
+#: admin/people.py models/person.py
+msgid "Given name"
+msgstr "名（拉丁字母）"
+
+# key: people.help.national_id_keep
+#: admin/people.py
+msgid "Leave empty to keep the stored value. Enter a new value to replace it."
+msgstr "留空则保留已保存的值，输入新值则替换。"
+
+# key: people.help.encrypted
+#: admin/people.py
+msgid "Stored encrypted. Shown masked; revealing it is logged."
+msgstr "加密保存，显示时遮盖，查看完整值会被记录。"
+
+# key: people.fields.birth_date
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "Birth date"
+msgstr "出生日期"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: admin/people.py models/person.py
+msgid "Gender"
+msgstr "性别"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: admin/people.py models/person.py
+msgid "Nationality"
+msgstr "国籍"
+
+# key: people.fields.ethnicity
+#: admin/people.py models/person.py
+msgid "Ethnicity"
+msgstr "民族"
+
+# key: people.fields.national_id
+#: admin/people.py
+msgid "National ID number"
+msgstr "身份证号"
+
+# key: people.fields.passport_number
+#: admin/people.py
+msgid "Passport number"
+msgstr "护照号"
+
+# key: people.fields.contact_email
+#: admin/people.py models/person.py views/portal.py
+msgid "Contact email"
+msgstr "联系邮箱"
+
+# key: people.fields.phone
+#: admin/people.py models/person.py templates/person/portal/profile.html
+#: views/portal.py
+msgid "Phone"
+msgstr "电话"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "Address"
+msgstr "地址"
+
+# key: people.fields.postal_code
+#: admin/people.py models/person.py views/portal.py
+msgid "Postal code"
+msgstr "邮政编码"
+
+#: admin/people.py
+msgid "The birth date must not be in the future."
+msgstr "出生日期不能晚于今天。"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: admin/people.py
+msgid "Photo"
+msgstr "照片"
+
+#: admin/people.py
+msgid "JPEG, PNG or WebP, at most 2 MB."
+msgstr "JPEG、PNG 或 WebP，最大 2 MB。"
+
+#: admin/people.py
+msgid "The photo must not be larger than 2 MB."
+msgstr "照片不能超过 2 MB。"
+
+# key: people.resources.guardians.label
+#: admin/people.py models/person.py
+msgid "guardian"
+msgstr "监护人"
+
+# key: people.resources.guardians.plural_label
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "guardians"
+msgstr "监护人"
+
+# key: people.resources.student_records.label
+#: admin/people.py models/student_record.py
+msgid "student record"
+msgstr "学籍"
+
+# key: people.resources.student_records.plural_label
+#: admin/people.py importers.py models/student_record.py
+msgid "student records"
+msgstr "学籍"
+
+# key: admissions.fields.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+# key: people.fields.status
+#: admin/people.py admin/student_records.py models/status_change.py
+#: models/student_record.py templates/person/portal/advisees.html
+#: templates/person/portal/records.html
+#| msgid "Status"
+msgctxt "people"
+msgid "Status"
+msgstr "学籍状态"
+
+# key: people.fields.login_email
+#: admin/people.py models/invitation.py
+msgid "Sign-in email"
+msgstr "登录邮箱"
+
+# key: people.help.invitation_email
+#: admin/people.py
+msgid "The invitation link is sent here. This becomes the sign-in email."
+msgstr "注册链接将发送到此地址，此地址即为登录邮箱。"
+
+# key: people.fields.merge_target
+#: admin/people.py
+msgid "Keep this person"
+msgstr "保留的人员"
+
+# key: people.filters.merged
+#: admin/people.py
+#| msgid "Merged"
+msgctxt "people"
+msgid "Merged"
+msgstr "已合并"
+
+# key: security.scope_types.global
+#: admin/people.py
+msgid "All"
+msgstr "全部"
+
+# key: admin.settings.student_records.title
+# key: permissions.resources.student_records
+#: admin/people.py settings_pages.py
+msgid "Student records"
+msgstr "学籍"
+
+# key: people.sections.account
+# key: people.fields.has_account
+#: admin/people.py
+msgid "Account"
+msgstr "账户"
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: admin/people.py
+msgid "Personal details"
+msgstr "个人信息"
+
+# key: people.sections.contact
+#: admin/people.py
+msgid "Contact"
+msgstr "联系方式"
+
+# key: people.fields.romanized_name
+#: admin/people.py
+msgid "Romanized name"
+msgstr "拉丁字母姓名"
+
+# key: people.fields.no_account
+#: admin/people.py
+msgid "No account"
+msgstr "无账户"
+
+# key: people.fields.merged_into
+#: admin/people.py models/person.py
+msgid "Merged into"
+msgstr "已合并至"
+
+# key: people.actions.reveal_national_id
+#: admin/people.py
+msgid "Show national ID number"
+msgstr "查看身份证号"
+
+# key: people.help.reveal
+#: admin/people.py templates/person/admin/revealed.html
+msgid ""
+"The full value is shown once and the reveal is recorded in the security log."
+msgstr "完整值仅显示一次，并记录在安全日志中。"
+
+# key: people.actions.reveal_passport_number
+#: admin/people.py
+msgid "Show passport number"
+msgstr "查看护照号"
+
+# key: people.actions.invite
+#: admin/people.py
+msgid "Invite to create an account"
+msgstr "发送账户注册邀请"
+
+# key: people.notifications.invited
+#: admin/people.py
+msgid "Invitation sent."
+msgstr "已发送邀请。"
+
+# key: people.actions.merge
+#: admin/people.py
+msgid "Merge duplicate"
+msgstr "合并重复人员"
+
+# key: people.notifications.merged
+#: admin/people.py
+msgid "People merged."
+msgstr "已合并人员。"
+
+# key: people.help.merge
+#: admin/people.py
+msgid ""
+"The other person's student records, instructor record, guardians and account"
+" move to the person you keep. The other person is marked as merged and "
+"cannot be used again. This cannot be undone."
+msgstr "将另一人员的学籍、教师信息、监护人和账户移到保留的人员。另一人员将标记为已合并，不能再使用。此操作不可撤销。"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/requests.py admin/student_records.py models/student_record.py
+#: templates/person/portal/advisees.html templates/person/portal/records.html
+msgid "Student number"
+msgstr "学号"
+
+# key: people.fields.request_status
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgid "Request status"
+msgstr "处理状态"
+
+# key: common.reason
+#: admin/requests.py models/status_change.py
+msgid "Reason"
+msgstr "原因"
+
+# key: grading.fields.requested_by
+# key: people.fields.requested_by
+#: admin/requests.py models/additional_program.py models/status_change.py
+#| msgid "Requested by"
+msgctxt "people"
+msgid "Requested by"
+msgstr "申请人"
+
+# key: grading.fields.decided_by
+# key: people.fields.decided_by
+#: admin/requests.py models/additional_program.py models/status_change.py
+#| msgid "Decided by"
+msgctxt "people"
+msgid "Decided by"
+msgstr "处理人"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/requests.py
+msgid "Approve"
+msgstr "批准"
+
+# key: people.notifications.approved
+#: admin/requests.py
+msgid "Request approved."
+msgstr "已批准申请。"
+
+# key: grading.actions.reject
+# key: people.actions.reject
+#: admin/requests.py
+#| msgid "Reject"
+msgctxt "people"
+msgid "Reject"
+msgstr "驳回"
+
+# key: people.notifications.rejected
+#: admin/requests.py
+msgid "Request rejected."
+msgstr "已驳回申请。"
+
+# key: curriculum.program_roles.primary
+# key: people.fields.primary_program
+#: admin/requests.py
+#| msgid "Primary program"
+msgctxt "people"
+msgid "Primary program"
+msgstr "主修专业"
+
+# key: assessment.fields.type
+# key: certificate.fields.type
+# key: people.fields.program_role
+#: admin/requests.py models/additional_program.py models/student_record.py
+#: templates/person/portal/records.html
+#| msgid "Kind"
+msgctxt "people"
+msgid "Kind"
+msgstr "类型"
+
+# key: people.fields.statement
+#: admin/requests.py models/additional_program.py
+#: templates/person/portal/records.html
+msgid "Statement"
+msgstr "申请理由"
+
+# key: people.fields.catalog_year
+#: admin/student_records.py models/student_record.py
+msgid "Catalog year"
+msgstr "培养方案年份"
+
+# key: people.help.catalog_year
+#: admin/student_records.py
+msgid ""
+"Year of the curriculum that applies to this student, usually the admission "
+"year."
+msgstr "适用于该学生的培养方案年份，通常为入学年份。"
+
+# key: certificate.facts.year_level
+# key: graduation.report_columns.year_level
+# key: people.fields.year_level
+#: admin/student_records.py models/student_record.py
+#: templates/person/portal/advisees.html templates/person/portal/records.html
+#| msgid "Year"
+msgctxt "people"
+msgid "Year"
+msgstr "年级"
+
+# key: people.fields.admission_type
+#: admin/student_records.py models/student_record.py
+msgid "Admission type"
+msgstr "入学类别"
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: admin/student_records.py models/student_record.py
+msgid "Admission term"
+msgstr "入学学期"
+
+# key: people.fields.institutional_email
+#: admin/student_records.py models/student_record.py
+msgid "School email"
+msgstr "学校邮箱"
+
+# key: people.help.institutional_email
+#: admin/student_records.py
+msgid ""
+"School email address. Used to link school sign-in (SSO) accounts "
+"automatically when enabled."
+msgstr "学校邮箱地址。启用时用于自动关联学校统一登录（SSO）账户。"
+
+# key: people.fields.tags
+#: admin/student_records.py models/student_record.py
+msgid "Tags"
+msgstr "标签"
+
+# key: people.help.tags
+#: admin/student_records.py
+msgid "Free labels for grouping, e.g. scholarship programs."
+msgstr "用于分组的自由标签，例如奖学金项目。"
+
+# key: certificate.facts.program
+# key: graduation.report_columns.program_name
+# key: security.scope_types.program
+#: admin/student_records.py models/student_record.py
+#: templates/person/portal/advisees.html templates/person/portal/records.html
+#| msgid "Program"
+msgctxt "security"
+msgid "Program"
+msgstr "专业项目"
+
+# key: people.fields.admission_date
+#: admin/student_records.py models/student_record.py
+#: templates/person/portal/records.html
+msgid "Admission date"
+msgstr "入学日期"
+
+# key: people.help.student_number_generated
+#: admin/student_records.py
+msgid "Leave empty to generate one with the student number pattern."
+msgstr "留空则按学号格式自动生成。"
+
+# key: people.resources.status_changes.label
+#: admin/student_records.py models/status_change.py
+msgid "status change"
+msgstr "学籍异动"
+
+# key: people.resources.status_changes.plural_label
+#: admin/student_records.py models/status_change.py
+#: templates/person/portal/records.html
+msgid "status changes"
+msgstr "学籍异动"
+
+# key: people.resources.advisor_assignments.label
+#: admin/student_records.py models/advisor.py
+msgid "advisor"
+msgstr "导师"
+
+# key: people.resources.advisor_assignments.plural_label
+#: admin/student_records.py models/advisor.py
+msgid "advisors"
+msgstr "导师"
+
+# key: people.resources.additional_programs.label
+#: admin/student_records.py models/student_record.py
+msgid "second major or minor"
+msgstr "第二专业与辅修"
+
+# key: people.resources.additional_programs.plural_label
+#: admin/student_records.py models/student_record.py
+#: templates/person/portal/records.html
+msgid "second majors and minors"
+msgstr "第二专业与辅修"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: admin/student_records.py
+msgid "End"
+msgstr "结束"
+
+# key: people.fields.status_change_type
+#: admin/student_records.py models/status_change.py
+#: templates/person/portal/records.html
+msgid "Change type"
+msgstr "异动类型"
+
+# key: people.fields.effective_date
+#: admin/student_records.py models/status_change.py
+#: templates/person/portal/records.html
+#| msgid "Effective date"
+msgctxt "people"
+msgid "Effective date"
+msgstr "生效日期"
+
+# key: people.fields.advisor
+#: admin/student_records.py models/advisor.py
+#: templates/person/portal/records.html
+#| msgid "Advisor"
+msgctxt "people"
+msgid "Advisor"
+msgstr "导师"
+
+# key: people.fields.advisor_role
+#: admin/student_records.py models/advisor.py
+msgid "Advisor role"
+msgstr "指导类型"
+
+# key: reference.fields.start_date
+#: admin/student_records.py models/advisor.py models/student_record.py
+msgid "Start date"
+msgstr "开始日期"
+
+# key: people.sections.record
+#: admin/student_records.py models/additional_program.py
+#: models/status_change.py
+msgid "Student record"
+msgstr "学籍"
+
+# key: admin.audit.fields.properties
+#: admin/student_records.py
+msgid "Details"
+msgstr "详情"
+
+#: admin/student_records.py
+msgid "Student registered."
+msgstr "已登记学籍。"
+
+# key: people.actions.register_student
+#: admin/student_records.py
+msgid "Register student"
+msgstr "登记学籍"
+
+# key: people.actions.record_status_change
+#: admin/student_records.py
+msgid "Record status change"
+msgstr "办理学籍异动"
+
+# key: people.notifications.status_changed
+#: admin/student_records.py
+msgid "Status change recorded."
+msgstr "已办理学籍异动。"
+
+# key: people.actions.assign_advisor
+#: admin/student_records.py
+msgid "Assign advisor"
+msgstr "分配导师"
+
+# key: people.notifications.advisor_assigned
+#: admin/student_records.py
+msgid "Advisor assigned."
+msgstr "已分配导师。"
+
+# key: people.notifications.additional_program_ended
+#: admin/student_records.py
+msgid "Program ended."
+msgstr "已结束。"
+
+# key: graduation.report_columns.enrolled
+# key: people.student_statuses.enrolled
+#: enums.py
+#| msgid "Enrolled"
+msgctxt "people"
+msgid "Enrolled"
+msgstr "在读"
+
+# key: people.student_statuses.on_leave
+#: enums.py
+msgid "On leave"
+msgstr "休学"
+
+# key: admissions.application_statuses.withdrawn
+# key: people.student_statuses.withdrawn
+#: enums.py
+#| msgid "Withdrawn"
+msgctxt "people"
+msgid "Withdrawn"
+msgstr "退学"
+
+# key: people.student_statuses.dismissed
+#: enums.py
+msgid "Dismissed"
+msgstr "开除学籍"
+
+# key: certificate.facts.graduation_date
+# key: graduation.report_columns.graduation_date
+# key: people.student_statuses.graduated
+#: enums.py
+#| msgid "Graduated"
+msgctxt "people"
+msgid "Graduated"
+msgstr "毕业"
+
+# key: grading.fields.requested_at
+# key: registration.fields.requested_at
+# key: people.status_change_statuses.requested
+#: enums.py
+#| msgid "Requested"
+msgctxt "people"
+msgid "Requested"
+msgstr "已申请"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: enums.py
+msgid "Approved"
+msgstr "已批准"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: enums.py
+msgid "Rejected"
+msgstr "已驳回"
+
+# key: assessment.registration_statuses.cancelled
+# key: assessment.correction_statuses.cancelled
+# key: people.status_change_statuses.cancelled
+# key: people.additional_program_request_statuses.cancelled
+#: enums.py
+#| msgid "Cancelled"
+msgctxt "people"
+msgid "Cancelled"
+msgstr "已取消"
+
+# key: assessment.correction_statuses.pending
+# key: grading.change_statuses.pending
+# key: graduation.waiver_statuses.pending
+# key: lms.link_statuses.pending
+# key: people.additional_program_request_statuses.requested
+#: enums.py
+#| msgid "Pending"
+msgctxt "people"
+msgid "Pending"
+msgstr "处理中"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: enums.py
+msgid "Second major"
+msgstr "第二专业"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: enums.py
+msgid "Minor"
+msgstr "辅修"
+
+# key: people.advisor_roles.primary
+#: enums.py
+msgid "Primary advisor"
+msgstr "主导师"
+
+# key: people.advisor_roles.co_advisor
+#: enums.py
+msgid "Co-advisor"
+msgstr "联合导师"
+
+# key: people.employment_types.full_time
+#: enums.py
+msgid "Full-time"
+msgstr "专职"
+
+# key: people.employment_types.part_time
+#: enums.py
+msgid "Part-time"
+msgstr "兼职"
+
+# key: people.employment_types.adjunct
+#: enums.py
+msgid "Adjunct"
+msgstr "兼任"
+
+# key: people.employment_types.visiting
+#: enums.py
+msgid "Visiting"
+msgstr "客座"
+
+# key: people.employment_types.emeritus
+#: enums.py
+msgid "Emeritus"
+msgstr "荣誉"
+
+# key: people.genders.female
+#: enums.py
+msgid "Female"
+msgstr "女"
+
+# key: people.genders.male
+#: enums.py
+msgid "Male"
+msgstr "男"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: enums.py
+msgid "Other"
+msgstr "其他"
+
+# key: people.genders.undisclosed
+#: enums.py
+msgid "Not disclosed"
+msgstr "不透露"
+
+# key: people.guardian_relationships.father
+#: enums.py
+msgid "Father"
+msgstr "父亲"
+
+# key: people.guardian_relationships.mother
+#: enums.py
+msgid "Mother"
+msgstr "母亲"
+
+# key: people.guardian_relationships.guardian
+#: enums.py
+msgid "Guardian"
+msgstr "监护人"
+
+# key: people.guardian_relationships.spouse
+#: enums.py
+msgid "Spouse"
+msgstr "配偶"
+
+# key: people.guardian_relationships.sibling
+#: enums.py
+msgid "Sibling"
+msgstr "兄弟姐妹"
+
+# key: people.guardian_relationships.grandparent
+#: enums.py
+msgid "Grandparent"
+msgstr "祖父母"
+
+# key: validation.email
+#: importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid email address."
+msgstr "%(attribute)s 不是一个合法的邮箱。"
+
+# key: people.import.unknown_program
+#: importers.py
+#, python-format
+msgid "No program with the code %(code)s."
+msgstr "没有代码为 %(code)s 的专业。"
+
+# key: people.resources.instructors.plural_label
+#: importers.py models/instructor.py
+msgid "instructors"
+msgstr "教师"
+
+# key: people.fields.requested_program
+#: models/additional_program.py
+msgid "Applied program"
+msgstr "申请专业"
+
+# key: people.fields.start_term
+#: models/additional_program.py
+msgid "Starting term"
+msgstr "开始学期"
+
+# key: people.fields.requested_at
+#: models/additional_program.py models/status_change.py
+msgid "Requested at"
+msgstr "申请时间"
+
+# key: people.resources.additional_program_requests.label
+#: models/additional_program.py
+msgid "second major or minor application"
+msgstr "第二专业与辅修申请"
+
+# key: people.resources.additional_program_requests.plural_label
+#: models/additional_program.py
+msgid "second major and minor applications"
+msgstr "第二专业与辅修申请"
+
+# key: people.resources.instructors.label
+#: models/instructor.py
+msgid "instructor"
+msgstr "教师"
+
+# key: people.fields.name_variants
+#: models/person.py
+msgid "Name in other languages"
+msgstr "各语言姓名"
+
+# key: people.resources.people.label
+#: models/person.py
+msgid "person"
+msgstr "人员"
+
+# key: people.resources.people.plural_label
+#: models/person.py
+msgid "people"
+msgstr "人员"
+
+# key: people.fields.relationship
+#: models/person.py templates/person/portal/profile.html
+msgid "Relationship"
+msgstr "关系"
+
+# key: people.fields.is_primary_contact
+#: models/person.py
+msgid "Primary contact"
+msgstr "主要联系人"
+
+# key: people.fields.can_student_request
+#: models/status_change.py
+msgid "Students can request"
+msgstr "学生可申请"
+
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: models/status_change.py
+#| msgid "Active"
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "启用"
+
+# key: reference.fields.sort_order
+#: models/status_change.py
+msgid "Order"
+msgstr "排序"
+
+# key: people.resources.status_change_types.label
+#: models/status_change.py
+msgid "status change type"
+msgstr "学籍异动类型"
+
+# key: people.resources.status_change_types.plural_label
+#: models/status_change.py
+msgid "status change types"
+msgstr "学籍异动类型"
+
+# key: graduation.report_columns.term_code
+#: models/status_change.py
+msgid "Term"
+msgstr "学期"
+
+# key: people.fields.graduation_date
+#: models/student_record.py templates/person/portal/records.html
+msgid "Graduation date"
+msgstr "毕业日期"
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "您好，"
+
+# key: people.invitations.mail_intro
+#: notifications.py
+msgid "Your school has invited you to create an account."
+msgstr "学校邀请您创建账户。"
+
+# key: people.invitations.mail_expiry
+#: notifications.py
+#, python-format
+msgid "This link works until %(date)s."
+msgstr "此链接在 %(date)s 前有效。"
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"此致\n"
+"%(app)s"
+
+# key: people.invitations.mail_subject
+#: notifications.py
+#, python-format
+msgid "Create your %(app)s account"
+msgstr "创建您的 %(app)s 账户"
+
+# key: admin.settings.student_records.student_number_pattern
+#: settings_pages.py
+msgid "Student number pattern"
+msgstr "学号格式"
+
+# key: admin.settings.student_records.student_number_pattern_help
+#: settings_pages.py
+#, python-brace-format
+msgid ""
+"{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n "
+"digits. Example: {YYYY}{SEQ:5} gives 202600001."
+msgstr "{YYYY} 入学年份，{YY} 年份后两位，{SEQ:n} n 位序号。例：{YYYY}{SEQ:5} → 202600001"
+
+# key: admin.settings.student_records.invitation_valid_days
+#: settings_pages.py
+msgid "Invitation links valid for (days)"
+msgstr "邀请链接有效期（天）"
+
+# key: admin.settings.student_records.max_second_majors
+#: settings_pages.py
+msgid "Second majors at a time"
+msgstr "同时第二专业数"
+
+# key: admin.settings.student_records.max_minors
+#: settings_pages.py
+msgid "Minors at a time"
+msgstr "同时辅修数"
+
+# key: people.invitations.title
+#: templates/person/accept_invitation.html
+msgid "Create your account"
+msgstr "创建账户"
+
+# key: people.invitations.instructions
+#: templates/person/accept_invitation.html
+#, python-format
+msgid "Choose a password for %(email)s."
+msgstr "请为 %(email)s 设置密码。"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/person/accept_invitation.html
+msgid "Create account"
+msgstr "创建账户"
+
+#: templates/person/admin/history.html
+msgid "Change history"
+msgstr "变更记录"
+
+# key: admin.audit.fields.occurred_at
+#: templates/person/admin/history.html
+msgctxt "admin"
+msgid "Time"
+msgstr "时间"
+
+# key: admin.record_changes.fields.table
+#: templates/person/admin/history.html
+msgid "Table"
+msgstr "表"
+
+# key: admin.record_changes.fields.operation
+#: templates/person/admin/history.html
+msgctxt "admin"
+msgid "Operation"
+msgstr "操作"
+
+# key: admin.record_changes.fields.changed_columns
+#: templates/person/admin/history.html
+msgid "Changed columns"
+msgstr "变更字段"
+
+# key: admin.audit.fields.actor
+#: templates/person/admin/history.html
+msgid "User"
+msgstr "用户"
+
+#: templates/person/admin/history.html
+msgid "No changes recorded yet."
+msgstr "尚无变更记录。"
+
+# key: evaluation.portal.back
+#: templates/person/admin/revealed.html
+msgid "Back"
+msgstr "返回"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: templates/person/portal/advisees.html views/portal.py
+msgid "Advisees"
+msgstr "指导学生"
+
+# key: common.none
+#: templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "common"
+msgid "None"
+msgstr "无"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: templates/person/portal/profile.html views/portal.py
+msgid "My details"
+msgstr "我的信息"
+
+# key: portal.profile.registrar_fields
+#: templates/person/portal/profile.html
+msgid ""
+"Contact the registrar's office to change your name, birth date or identity "
+"numbers."
+msgstr "如需修改姓名、出生日期或证件号码，请联系学籍管理部门。"
+
+# key: common.save
+#: templates/person/portal/profile.html
+msgctxt "common"
+msgid "Save"
+msgstr "保存"
+
+# key: portal.profile.remove_confirm
+#: templates/person/portal/profile.html
+msgid "Remove this guardian?"
+msgstr "删除此监护人？"
+
+# key: portal.profile.remove
+#: templates/person/portal/profile.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "删除"
+
+# key: portal.profile.add_guardian
+#: templates/person/portal/profile.html
+msgid "Add guardian"
+msgstr "添加监护人"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: templates/person/portal/records.html views/portal.py
+msgid "My records"
+msgstr "我的学籍"
+
+# key: portal.records.choose
+#: templates/person/portal/records.html
+msgid "You have more than one student record. Choose one:"
+msgstr "您有多个学籍，请选择："
+
+# key: portal.records.none
+#: templates/person/portal/records.html
+msgid "You have no student record."
+msgstr "您没有学籍。"
+
+# key: portal.records.pending
+#: templates/person/portal/records.html
+#, python-format
+msgid "Pending request: %(type)s from %(date)s."
+msgstr "待处理申请：%(type)s（自 %(date)s 起）"
+
+# key: portal.records.cancel_confirm
+#: templates/person/portal/records.html
+msgid "Cancel this request?"
+msgstr "取消此申请？"
+
+# key: grading.actions.cancel_request
+# key: portal.records.cancel
+#: templates/person/portal/records.html
+#| msgid "Cancel request"
+msgctxt "portal"
+msgid "Cancel request"
+msgstr "取消申请"
+
+# key: portal.records.request_title
+#: templates/person/portal/records.html
+msgid "Request a status change"
+msgstr "申请学籍异动"
+
+# key: portal.records.submit_request
+#: templates/person/portal/records.html
+msgid "Submit request"
+msgstr "提交申请"
+
+# key: portal.records.additional_program_request
+#: templates/person/portal/records.html
+#, python-format
+msgid "%(role)s application for %(program)s: %(status)s"
+msgstr "%(program)s %(role)s 申请：%(status)s"
+
+# key: portal.records.additional_program_open
+#: templates/person/portal/records.html
+#, python-format
+msgid "Applications for a second major or minor are open (starting %(term)s)."
+msgstr "第二专业与辅修申请开放中（自 %(term)s 开始修读）。"
+
+#: templates/person/portal/records.html
+msgid "Show programs"
+msgstr "显示专业"
+
+# key: portal.records.apply_additional_program
+#: templates/person/portal/records.html
+msgctxt "portal"
+msgid "Apply"
+msgstr "申请"
+
+# key: authentication.fields.new_password
+#: views/invitations.py
+msgid "New password"
+msgstr "新密码"
+
+# key: authentication.fields.password_confirmation
+#: views/invitations.py
+msgid "Confirm password"
+msgstr "确认密码"
+
+#: views/invitations.py
+msgid "The password field confirmation does not match."
+msgstr "两次输入的密码不一致。"
+
+# key: people.invitations.accepted
+#: views/invitations.py
+msgid "Your account is ready. Welcome."
+msgstr "账户已创建，欢迎。"
+
+# key: portal.records.request_submitted
+#: views/portal.py
+msgid "Your request was submitted. The registrar's office will review it."
+msgstr "申请已提交，学籍管理部门将进行审核。"
+
+# key: portal.records.additional_program_requested
+#: views/portal.py
+msgid "Your application was submitted. The program's office will review it."
+msgstr "已提交申请，相关院系将进行审核。"
+
+# key: portal.profile.saved
+#: views/portal.py
+msgid "Your details were saved."
+msgstr "已保存。"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: views/portal.py
+msgctxt "portal"
+msgid "My records"
+msgstr "我的学籍"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: views/portal.py
+msgctxt "portal"
+msgid "My details"
+msgstr "我的信息"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: views/portal.py
+msgctxt "portal"
+msgid "Advisees"
+msgstr "指导学生"

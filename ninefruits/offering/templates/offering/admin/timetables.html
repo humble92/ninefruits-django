@@ -1,0 +1,24 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}Room and instructor timetables (original filament/admin/timetable).{% endcomment %}
+{% block content %}
+<div class="flex flex-col gap-6">
+    <h1 class="text-lg font-semibold">{{ title }}</h1>
+    <form method="get" class="grid gap-4 md:grid-cols-3" data-timetable-form>
+        {% for field in form %}
+            <div>
+                <label for="{{ field.id_for_label }}" class="mb-1 block text-sm font-medium">{{ field.label|capfirst }}</label>
+                {{ field }}
+            </div>
+        {% endfor %}
+        <div class="md:col-span-3"><button type="submit" class="rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white">{% translate "Show" %}</button></div>
+    </form>
+    <div>
+        {% if timetable is None %}
+            <p class="text-sm text-base-500">{% translate "Choose a term and a room or instructor." %}</p>
+        {% else %}
+            {% include "offering/partials/timetable.html" %}
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

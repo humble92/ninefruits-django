@@ -34,4 +34,24 @@ ENG,college,UNI,College of Engineering,공과대학,1990-03-01
 CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 ```
 
-학생, 교원(Phase 2)과 교과목(Phase 4) 가져오기는 해당 기능과 함께 추가된다.
+## 학생과 교원
+
+학적은 `student_number`(학번), 교원은 `employee_number`(교직원 번호)로 기존 행을 찾아 갱신한다. 두 종류 모두 인물 열을 함께 쓴다.
+
+| 종류 | 새 행 필수 열 | 선택 열 |
+|---|---|---|
+| 학적 | `student_number`, `program`(프로그램 코드), `admission_date`, `family_name` | `catalog_year`(비면 입학 연도), `year_level`, `status`, `graduation_date`, `institutional_email` |
+| 교원 | `employee_number`, `org_unit`(조직 코드), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| 인물 열(공통) | — | `given_name`, `name_ko` 등 언어별 이름, `birth_date`, `gender`, `email`, `phone`, `national_id` |
+
+- `status` 값: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated`(졸업이면 `graduation_date` 필수). 가져오기로 바꾼 상태는 **자료 정정**으로 취급해 학적 변동 이력을 만들지 않는다. 실제 변동은 화면에서 처리한다([13장](13-status-changes-and-advisors.md)).
+- `employment_type` 값: `full_time`, `part_time`, `adjunct`, `visiting`, `emeritus`. `gender` 값: `female`, `male`, `other`, `undisclosed`.
+- 새 학적의 `national_id`가 기존 인물과 같으면 그 인물에 학적을 붙인다(재입학). 그 밖에는 새 인물을 만든다. 갱신할 때 빈 칸은 기존 값을 지우지 않는다.
+- 가져온 학생, 교원은 계정이 없다. [계정 초대](14-merge-and-invitations.md#계정-초대)로 가입 안내를 보낸다.
+
+```csv
+student_number,program,admission_date,year_level,status,family_name,given_name,name_ko,birth_date
+202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
+```
+
+교과목(Phase 4) 가져오기는 해당 기능과 함께 추가된다.

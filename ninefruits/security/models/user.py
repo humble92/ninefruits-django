@@ -41,8 +41,11 @@ class User(AbstractBaseUser):
     remember_token = models.CharField(max_length=100, null=True, blank=True, editable=False)
     created_at = models.DateTimeField(null=True, blank=True, default=timezone.now)
     updated_at = models.DateTimeField(null=True, blank=True, auto_now=True)
-    # Replaced by a OneToOneField to person.Person in Phase 2.
-    person_id = models.BigIntegerField(null=True, blank=True, unique=True)
+    # The account's person (ADR 0007): one account per person; the display name is the
+    # person's name and ``name`` is only for accounts without a person.
+    person = models.OneToOneField(
+        "person.Person", on_delete=models.SET_NULL, null=True, blank=True, related_name="user"
+    )
     failed_login_count = models.IntegerField(default=0)
     locked_until = models.DateTimeField(null=True, blank=True)
 
@@ -56,7 +59,7 @@ class User(AbstractBaseUser):
         db_table = "users"
 
     def __str__(self) -> str:
-        return self.name or self.email
+        return self.display_name()
 
     def __repr__(self) -> str:
         # Never include secrets or personal data (original Phase 13 H1).
@@ -68,10 +71,10 @@ class User(AbstractBaseUser):
         return self.last_login
 
     def display_name(self) -> str:
-        """The person's name when linked (Phase 2), otherwise the account's own name."""
+        """The person's name when linked, otherwise the account's own name."""
         if self.person_id is not None:
-            person = getattr(self, "person", None)
-            if person is not None and hasattr(person, "display_name"):
+            person = self.person
+            if person is not None:
                 return str(person.display_name())
         return self.name or self.email
 

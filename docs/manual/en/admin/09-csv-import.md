@@ -34,4 +34,24 @@ ENG,college,UNI,College of Engineering,공과대학,1990-03-01
 CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 ```
 
-Imports for students and instructors (Phase 2) and courses (Phase 4) are added together with those features.
+## Students and instructors
+
+Student records are matched and updated by `student_number`, instructors by `employee_number`. Both kinds share the person columns.
+
+| Kind | Required columns for new rows | Optional columns |
+|---|---|---|
+| Student records | `student_number`, `program` (program code), `admission_date`, `family_name` | `catalog_year` (admission year when empty), `year_level`, `status`, `graduation_date`, `institutional_email` |
+| Instructors | `employee_number`, `org_unit` (org unit code), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Person columns (shared) | — | `given_name`, per-language names such as `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
+
+- `status` values: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (`graduation_date` is required for graduated). A status changed by import is treated as a **data correction** and creates no status change history. Real changes are recorded on screen ([chapter 13](13-status-changes-and-advisors.md)).
+- `employment_type` values: `full_time`, `part_time`, `adjunct`, `visiting`, `emeritus`. `gender` values: `female`, `male`, `other`, `undisclosed`.
+- If the `national_id` of a new student record matches an existing person, the record is attached to that person (readmission). Otherwise a new person is created. On update, empty cells do not erase existing values.
+- Imported students and instructors have no account. Send them an invitation with [account invitations](14-merge-and-invitations.md#account-invitations).
+
+```csv
+student_number,program,admission_date,year_level,status,family_name,given_name,name_ko,birth_date
+202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
+```
+
+The course import (Phase 4) is added together with that feature.

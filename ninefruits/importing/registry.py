@@ -32,9 +32,16 @@ def permission_for(type_key: str) -> Permission:
     return _permissions.get(type_key, Permission.REFERENCE_DATA_IMPORT)
 
 
+_defaults_loaded = False
+
+
 def _ensure_defaults() -> None:
-    if _types:
+    # Later phases register from AppConfig.ready(), so a filled registry does not mean the
+    # defaults are there.
+    global _defaults_loaded
+    if _defaults_loaded:
         return
+    _defaults_loaded = True
     from ninefruits.importing import importers
 
     for resource in (

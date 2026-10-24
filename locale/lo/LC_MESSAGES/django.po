@@ -1190,3 +1190,8 @@ msgstr "ອອກຈາກລະບົບ"
 msgctxt "security"
 msgid "Set up now"
 msgstr "ຕັ້ງຄ່າດຽວນີ້"
+
+# key: authentication.login.sso
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "ເຂົ້າລະບົບດ້ວຍ %(provider)s"

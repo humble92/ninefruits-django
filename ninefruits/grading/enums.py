@@ -14,6 +14,14 @@ class GradeAppliesTo(models.TextChoices):
     BOTH = "both", _("Both")
 
 
+class EvaluationMethod(models.TextChoices):
+    """How a section is graded (``sections.evaluation_method``). Absolute: instructors enter
+    scores and the grades follow. Relative: instructors give grades within the grade caps."""
+
+    ABSOLUTE = "absolute", _("Absolute evaluation")
+    RELATIVE = "relative", _("Relative evaluation")
+
+
 class AcademicStanding(models.TextChoices):
     """Standing decided at term close (legacy academic warning reports). Dismissal is only
     flagged for review; the status change itself is a student status change with its own

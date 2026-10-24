@@ -1,0 +1,27 @@
+{% extends "layouts/guest.html" %}
+{% load i18n %}
+{% block title %}{% translate "Create your account" %}{% endblock %}
+{% block content %}
+    <h1 class="mb-2 text-xl font-semibold">{% translate "Create your account" %}</h1>
+
+    {% if email is None %}
+        <p class="text-sm text-red-700">{% translate "This invitation link is invalid or has expired. Ask the school office for a new one." %}</p>
+    {% else %}
+        <p class="mb-6 text-sm text-zinc-600">{% blocktranslate %}Choose a password for {{ email }}.{% endblocktranslate %}</p>
+
+        <form method="post" action="{% url 'person:invitation' token %}" class="space-y-4">
+            {% csrf_token %}
+            {% for error in form.non_field_errors %}<p class="text-sm text-red-600" role="alert">{{ error }}</p>{% endfor %}
+            <div>
+                <label for="password" class="block text-sm font-medium">{{ form.password.label }}</label>
+                <input id="password" name="password" type="password" required autocomplete="new-password" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                {% for error in form.password.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+            </div>
+            <div>
+                <label for="password_confirmation" class="block text-sm font-medium">{{ form.password_confirmation.label }}</label>
+                <input id="password_confirmation" name="password_confirmation" type="password" required autocomplete="new-password" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+            </div>
+            <button type="submit" class="w-full rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Create account" %}</button>
+        </form>
+    {% endif %}
+{% endblock %}

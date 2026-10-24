@@ -145,9 +145,8 @@ class SsoProvidersWidget(forms.Widget):
         context["widget"]["rows"] = [
             {"index": index, "values": row, "prefix": f"{name}-{index}"} for index, row in enumerate(rows)
         ]
-        context["widget"]["redirect_uri"] = (
-            f"{django_settings.APP_URL.rstrip('/')}/accounts/oidc/{{key}}/login/callback/"
-        )
+        # ninefruits.security.sso_urls: /auth/sso/<key>/callback/
+        context["widget"]["redirect_uri"] = f"{django_settings.APP_URL.rstrip('/')}/auth/sso/{{key}}/callback/"
         return context
 
     def value_from_datadict(self, data: Any, files: Any, name: str) -> list[dict[str, Any]]:

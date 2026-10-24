@@ -25,6 +25,9 @@ class TwoFactorChallengeStage(LoginStage):
         user = self.login.user
         if user is None:
             return None, True
+        # School sign-in with a provider trusted for two-factor (``views_sso``).
+        if self.login.state.get("sso_trusts_mfa"):
+            return None, True
         policy = MfaPolicy()
         if TrustedDevices(policy).is_trusted(self.request, user):
             return None, True

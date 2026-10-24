@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 18:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,154 +18,165 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # key: grading.errors.scale_fixed
-#: ninefruits/grading/actions/save_grade_scale.py
+#: actions/save_grade_scale.py:28
 msgid "The grade scale is fixed at installation and cannot change."
 msgstr "ມາດຕາເກຣດຖືກກຳນົດຕາຍຕົວຕອນຕິດຕັ້ງ ແລະ ບໍ່ສາມາດປ່ຽນໄດ້."
 
 # key: grading.help.scale_fixed
-#: ninefruits/grading/admin.py
+#: admin.py:32
 msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
 msgstr "ມາດຕາເກຣດຖືກກຳນົດຕາຍຕົວຕອນຕິດຕັ້ງ: ເກຣດ ແລະ GPA ອີງຕາມມັນ. ບໍ່ສາມາດຍ້າຍໄປມາດຕາອື່ນໄດ້."
 
 # key: validation.required
-#: ninefruits/grading/admin.py
+#: admin.py:64
 #, python-format
 msgid "The %(attribute)s field is required."
 msgstr "ຈຳເປັນຕ້ອງປ້ອນຊ່ອງ %(attribute)s."
 
 # key: reference.fields.grade_points
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:64 admin.py:70 models/grade_scale.py:46
 msgid "Grade points"
 msgstr "ຄະແນນເກຣດ"
 
 # key: validation.max.numeric
-#: ninefruits/grading/admin.py
+#: admin.py:69
 #, python-format
 msgid "The %(attribute)s field must not be greater than %(max)s."
 msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າບໍ່ເກີນ %(max)s."
 
 # key: validation.gte.numeric
-#: ninefruits/grading/admin.py
+#: admin.py:76
 #, python-format
 msgid "The %(attribute)s field must be greater than or equal to %(value)s."
 msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າຫຼາຍກວ່າ ຫຼື ເທົ່າກັບ %(value)s."
 
 # key: reference.fields.max_percentage
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:77 models/grade_scale.py:57
 msgid "To (%)"
 msgstr "ເຖິງ (%)"
 
 # key: reference.fields.min_percentage
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:77 models/grade_scale.py:49
 msgid "From (%)"
 msgstr "ຕັ້ງແຕ່ (%)"
 
 # key: reference.resources.grade_scale_items.label
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:87 models/grade_scale.py:82
 msgid "grade"
 msgstr "ເກຣດ"
 
 # key: reference.resources.grade_scale_items.plural_label
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:88 models/grade_scale.py:83
 msgid "grades"
 msgstr "ເກຣດ"
 
 # key: reference.fields.name
-#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+#: admin.py:124 models/grade_scale.py:20 models/grade_scale.py:44
 msgctxt "reference"
 msgid "Name"
 msgstr "ຊື່"
 
 # key: reference.fields.items_count
-#: ninefruits/grading/admin.py
+#: admin.py:128
 msgctxt "reference"
 msgid "Grades"
 msgstr "ເກຣດ"
 
 # key: grading.applies_to.graded
-#: ninefruits/grading/enums.py
+#: enums.py:12
 msgid "Graded courses"
 msgstr "ວິຊາທີ່ໃຫ້ເກຣດ"
 
 # key: grading.applies_to.pass_fail
-#: ninefruits/grading/enums.py
+#: enums.py:13
 msgid "Pass/fail courses"
 msgstr "ວິຊາຜ່ານ/ບໍ່ຜ່ານ"
 
 # key: grading.applies_to.both
-#: ninefruits/grading/enums.py
+#: enums.py:14
 msgid "Both"
 msgstr "ທັງສອງ"
 
+# key: grading.evaluation_methods.absolute
+#: enums.py:21
+msgid "Absolute evaluation"
+msgstr "ການປະເມີນອິງເກນ"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: enums.py:22
+msgid "Relative evaluation"
+msgstr "ການປະເມີນອິງກຸ່ມ"
+
 # key: grading.standings.good
-#: ninefruits/grading/enums.py
+#: enums.py:30
 msgid "Good standing"
 msgstr "ສະຖານະພາບປົກກະຕິ"
 
 # key: grading.standings.warning
-#: ninefruits/grading/enums.py
+#: enums.py:31
 msgid "Academic warning"
 msgstr "ເຕືອນທາງວິຊາການ"
 
 # key: grading.standings.dismissal_review
-#: ninefruits/grading/enums.py
+#: enums.py:32
 msgid "Dismissal review"
 msgstr "ພິຈາລະນາພົ້ນສະພາບ"
 
 # key: reference.fields.code
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:19
 msgctxt "reference"
 msgid "Code"
 msgstr "ລະຫັດ"
 
 # key: reference.fields.max_grade_points
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:22
 msgid "Maximum grade points"
 msgstr "ຄະແນນເກຣດສູງສຸດ"
 
 # key: reference.fields.is_default
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:27
 msgid "Default"
 msgstr "ຄ່າເລີ່ມຕົ້ນ"
 
 # key: reference.resources.grade_scales.label
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:34
 msgid "grade scale"
 msgstr "ມາດຕາເກຣດ"
 
 # key: reference.resources.grade_scales.plural_label
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:35
 msgid "grade scales"
 msgstr "ມາດຕາເກຣດ"
 
 # key: reference.fields.grade
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:43
 msgctxt "reference"
 msgid "Grade"
 msgstr "ເກຣດ"
 
 # key: reference.fields.counts_in_gpa
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:64
 msgid "Counts in GPA"
 msgstr "ນັບເຂົ້າ GPA"
 
 # key: reference.fields.is_passing
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:65
 msgid "Passing"
 msgstr "ຜ່ານ"
 
 # key: certificate.fields.audience
 # key: grading.fields.applies_to
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:67
 msgid "For"
 msgstr "ສຳລັບ"
 
 # key: grading.help.applies_to
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:72
 msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
 msgstr "ເກຣດຕົວອັກສອນສຳລັບວິຊາທີ່ໃຫ້ເກຣດ, P/NP ສຳລັບວິຊາຜ່ານ/ບໍ່ຜ່ານ; \"ທັງສອງ\" ເຊັ່ນ ສຳລັບ I (ບໍ່ສົມບູນ)."
 
 # key: reference.fields.sort_order
-#: ninefruits/grading/models/grade_scale.py
+#: models/grade_scale.py:75
 msgid "Order"
 msgstr "ລຳດັບ"

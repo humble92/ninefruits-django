@@ -6,8 +6,10 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("accounts/", include("ninefruits.security.urls")),
     path("accounts/", include("allauth.urls")),
+    path("auth/sso/", include("ninefruits.security.sso_urls")),
     path("i18n/", include("ninefruits.i18n.urls")),
     path("portal/", include("ninefruits.portal.urls")),
+    path("", include("ninefruits.person.urls")),
     path("", include("ninefruits.core.urls")),
 ]
 

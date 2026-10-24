@@ -1,65 +1,51 @@
 """Original tests/Feature/Security/SignInMethodsTest.php: student number sign-in, the same
-failure for every reason, and the account lockout. The SSO cases (fake OIDC provider, linking
-by institutional email, second factor after SSO) are Phase 2 with the SSO sign-in flow."""
+failure for every reason, the account lockout, and school sign-in (SSO) with a fake OIDC
+provider (linking by institutional email, second factor after SSO)."""
 
 from __future__ import annotations
 
+import json
+import time
 from collections.abc import Callable
-from datetime import timedelta
+from datetime import date, timedelta
 from typing import Any
+from urllib.parse import parse_qs, urlparse
 
+import httpx
+import jwt
 import pytest
 import time_machine
-from django.db import connection
 from django.test import Client
+from django.urls import reverse
 from django.utils import timezone
 
-from ninefruits.security.enums import MfaEnforcement, StudentNumberLogin
+from ninefruits.person.enums import StudentStatus
+from ninefruits.person.models import StudentRecord
+from ninefruits.security import views_sso
+from ninefruits.security.crypto import encrypt_string
+from ninefruits.security.enums import MfaEnforcement, SsoLinkMode, StudentNumberLogin
 from ninefruits.security.models import User, UserIdentity
-from tests.factories.security import PASSWORD, UserFactory
-from tests.security.conftest import create_program
+from ninefruits.security.services.oidc import OidcClient
+from tests.factories.person import StudentRecordFactory
+from tests.factories.security import PASSWORD, UserFactory, current_otp
+from tests.security.conftest import confirm_password, signed_in
 
 pytestmark = pytest.mark.django_db
 
 FAILED = "These credentials do not match our records."
 
 
-def create_student_record(student_number: str) -> tuple[int, int]:
-    """A person with a student record (person models arrive in Phase 2). Returns
-    (person_id, student_record_id)."""
-    program_id = create_program()
-    with connection.cursor() as cursor:
-        cursor.execute("SELECT org_unit_id FROM programs WHERE id = %s", [program_id])
-        org_unit_id = cursor.fetchone()[0]
-        cursor.execute(
-            "INSERT INTO people (family_name, given_name, created_at, updated_at) VALUES (%s, %s, now(), now()) "
-            "RETURNING id",
-            ["Kim", "Minsu"],
-        )
-        person_id = cursor.fetchone()[0]
-        cursor.execute(
-            "INSERT INTO student_records (person_id, student_number, program_id, org_unit_id, admission_date, "
-            "catalog_year, created_at, updated_at) VALUES (%s, %s, %s, %s, '2026-03-02', 2026, now(), now()) "
-            "RETURNING id",
-            [person_id, student_number, program_id, org_unit_id],
-        )
-        return person_id, cursor.fetchone()[0]
-
-
 def set_record_status(record_id: int, status: str) -> None:
-    with connection.cursor() as cursor:
-        cursor.execute(
-            "UPDATE student_records SET status = %s, graduation_date = CASE WHEN %s = 'graduated' "
-            "THEN DATE '2026-02-20' END WHERE id = %s",
-            [status, status, record_id],
-        )
+    StudentRecord.objects.filter(pk=record_id).update(
+        status=status, graduation_date=date(2026, 2, 20) if status == StudentStatus.GRADUATED else None
+    )
 
 
 @pytest.fixture
 def student(set_security_settings: Callable[..., None]) -> tuple[User, int]:
     set_security_settings(mfa_enforcement=MfaEnforcement.RECOMMENDED)
-    person_id, record_id = create_student_record("202612345")
-    return UserFactory(person_id=person_id, email="minsu@example.test"), record_id
+    record = StudentRecordFactory(student_number="202612345")
+    return UserFactory(person=record.person, email="minsu@example.test"), record.pk
 
 
 def sign_in(client: Client, identifier: str, password: str = PASSWORD) -> Any:
@@ -164,3 +150,168 @@ def test_lets_an_sso_linked_graduate_sign_in_with_the_personal_email(
 
     sign_in(client, "minsu@example.test")
     assert signed_in_as(client) is None
+
+
+# -- SSO with a fake OIDC provider. Keys are generated per test run. ---------------------------
+ISSUER = "https://idp.example.test"
+
+
+class FakeProvider:
+    def __init__(self) -> None:
+        from cryptography.hazmat.primitives.asymmetric import rsa
+
+        self.private_key = rsa.generate_private_key(public_exponent=65537, key_size=2048)
+        self.next_id_token = ""
+        jwk = json.loads(jwt.algorithms.RSAAlgorithm.to_jwk(self.private_key.public_key()))
+        self.jwks = {"keys": [{**jwk, "alg": "RS256", "use": "sig", "kid": "test-key"}]}
+
+    def handler(self, request: httpx.Request) -> httpx.Response:
+        url = str(request.url)
+        if url == f"{ISSUER}/.well-known/openid-configuration":
+            return httpx.Response(
+                200,
+                json={
+                    "issuer": ISSUER,
+                    "authorization_endpoint": f"{ISSUER}/authorize",
+                    "token_endpoint": f"{ISSUER}/token",
+                    "jwks_uri": f"{ISSUER}/jwks",
+                },
+            )
+        if url == f"{ISSUER}/jwks":
+            return httpx.Response(200, json=self.jwks)
+        if url == f"{ISSUER}/token":
+            return httpx.Response(200, json={"id_token": self.next_id_token})
+        return httpx.Response(404)
+
+    def sign(self, claims: dict[str, Any]) -> str:
+        return jwt.encode(claims, self.private_key, algorithm="RS256", headers={"kid": "test-key"})
+
+
+@pytest.fixture
+def fake_provider(monkeypatch: pytest.MonkeyPatch, set_authentication_settings: Callable[..., None]) -> FakeProvider:
+    provider = FakeProvider()
+    transport = httpx.MockTransport(provider.handler)
+    monkeypatch.setattr(views_sso, "oidc_client_factory", lambda: OidcClient(httpx.Client(transport=transport)))
+    set_authentication_settings(
+        sso_providers=[
+            {
+                "key": "school",
+                "label": "School account",
+                "issuer": ISSUER,
+                "client_id": "sis-client",
+                "client_secret": encrypt_string("secret"),
+                "scopes": "openid email",
+                "trusts_mfa": False,
+                "is_enabled": True,
+            }
+        ]
+    )
+    return provider
+
+
+def sso_sign_in(client: Client, provider: FakeProvider, claims: dict[str, Any]) -> Any:
+    """Runs the browser part of the flow and returns the callback response."""
+    redirect = client.get("/auth/sso/school/redirect/")
+    assert redirect.status_code == 302
+    query = parse_qs(urlparse(redirect["Location"]).query)
+    assert query["code_challenge_method"] == ["S256"]
+    now = int(time.time())
+    provider.next_id_token = provider.sign(
+        {"iss": ISSUER, "aud": "sis-client", "iat": now, "exp": now + 300, "nonce": query["nonce"][0], **claims}
+    )
+    return client.get("/auth/sso/school/callback/", {"state": query["state"][0], "code": "abc"})
+
+
+def test_signs_in_with_a_linked_school_account(student: tuple[User, int], fake_provider: FakeProvider) -> None:
+    user, _record = student
+    UserIdentity.objects.create(user=user, provider="school", subject="sub-123")
+    client = Client()
+
+    response = sso_sign_in(client, fake_provider, {"sub": "sub-123"})
+
+    assert response.status_code == 302
+    assert response["Location"] == "/portal/"
+    assert signed_in_as(client) == user.pk
+
+
+@pytest.mark.parametrize(
+    "claims",
+    [{"aud": "another-client"}, {"nonce": "replayed"}, {"iss": "https://evil.example.test"}],
+    ids=["audience", "nonce", "issuer"],
+)
+def test_rejects_tokens_with_a_wrong_audience_or_nonce(
+    student: tuple[User, int], fake_provider: FakeProvider, claims: dict[str, Any]
+) -> None:
+    user, _record = student
+    UserIdentity.objects.create(user=user, provider="school", subject="sub-123")
+    client = Client()
+
+    response = sso_sign_in(client, fake_provider, {"sub": "sub-123", **claims})
+
+    assert response.status_code == 302
+    assert response["Location"] == "/accounts/login/"
+    assert signed_in_as(client) is None
+
+
+def test_links_on_first_sign_in_by_institutional_email_when_configured_otherwise_asks_to_link_manually(
+    student: tuple[User, int], fake_provider: FakeProvider, set_authentication_settings: Callable[..., None]
+) -> None:
+    user, record_id = student
+    StudentRecord.objects.filter(pk=record_id).update(institutional_email="minsu@school.example.test")
+    claims = {"sub": "sub-new", "email": "minsu@school.example.test", "email_verified": True}
+    client = Client()
+
+    response = sso_sign_in(client, fake_provider, claims)
+    assert response["Location"] == "/accounts/login/"
+    assert signed_in_as(client) is None
+
+    set_authentication_settings(sso_link_mode=SsoLinkMode.INSTITUTIONAL_EMAIL)
+
+    response = sso_sign_in(client, fake_provider, claims)
+    assert response["Location"] == "/portal/"
+    assert signed_in_as(client) == user.pk
+    assert UserIdentity.objects.get(subject="sub-new").user_id == user.pk
+
+
+def test_still_asks_enrolled_users_for_their_second_factor_after_sso(
+    student: tuple[User, int], fake_provider: FakeProvider
+) -> None:
+    user = UserFactory(with_mfa=True)
+    UserIdentity.objects.create(user=user, provider="school", subject="sub-mfa")
+    client = Client()
+
+    response = sso_sign_in(client, fake_provider, {"sub": "sub-mfa"})
+    assert response["Location"] == reverse("security:two_factor_challenge")
+    assert signed_in_as(client) is None
+
+    response = client.post(reverse("security:two_factor_challenge"), {"code": current_otp()})
+    assert response.status_code == 302
+    assert response["Location"] == "/portal/"
+    assert signed_in_as(client) == user.pk
+
+
+def test_links_a_school_account_from_the_security_page_after_password_confirmation(
+    student: tuple[User, int], fake_provider: FakeProvider
+) -> None:
+    user, _record = student
+    client = signed_in(user)
+
+    response = client.get("/auth/sso/school/redirect/?link=1")
+    assert response["Location"].startswith(reverse("account_reauthenticate"))
+
+    confirm_password(client)
+    response = sso_sign_in_link(client, fake_provider, {"sub": "sub-777", "email": "kim@school.example.test"})
+    assert response["Location"] == reverse("portal:security")
+    identity = UserIdentity.objects.get(subject="sub-777")
+    assert identity.user_id == user.pk
+    assert identity.email == "kim@school.example.test"
+
+
+def sso_sign_in_link(client: Client, provider: FakeProvider, claims: dict[str, Any]) -> Any:
+    redirect = client.get("/auth/sso/school/redirect/?link=1")
+    query = parse_qs(urlparse(redirect["Location"]).query)
+    now = int(time.time())
+    provider.next_id_token = provider.sign(
+        {"iss": ISSUER, "aud": "sis-client", "iat": now, "exp": now + 300, "nonce": query["nonce"][0], **claims}
+    )
+    return client.get("/auth/sso/school/callback/", {"state": query["state"][0], "code": "abc"})

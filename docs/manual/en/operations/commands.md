@@ -102,7 +102,7 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 ### `reference_import`
 
 - Purpose: imports reference data from CSV, with the same rules as **Import CSV** in the administration panel (rows are found by code and updated, empty translation cells keep existing values, failed rows are kept separately).
-- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values` (students, instructors, courses and registration holds are added by their phases) / `file` UTF-8 CSV with a header row.
+- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students` (student records, Phase 2), `instructors` (Phase 2), `courses` (course versions, Phase 4; registration holds are added in Phase 5) / `file` UTF-8 CSV with a header row.
 - Options: `--actor=` (required; the import is recorded under this account and its result appears on that account's **CSV imports** screen), `--chunk=100` (rows per Celery task), `--dry-run` (header check and row count only).
 - Audit: recorded (type, file name, rows, import number, failed rows)
 - Column format: [administrator manual chapter 9](../admin/09-csv-import.md).
@@ -153,9 +153,35 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ## People and student records (Phase 2)
 
+### `people_find_duplicates`
+
+- Purpose: lists people who appear to be the same person. The criteria are an identical national ID number (search hash), or an identical romanized name and date of birth. Merged people are excluded.
+- Options: `--limit=100` (number of groups to print).
+- Audit: not recorded (read only)
+- Exit codes: 2 when duplicate candidates exist.
+- Follow-up: review each group under **People** in the administration panel and, if they are the same person, run **Merge duplicate** from the page of the person to keep. A merge cannot be undone ([Administrator manual chapter 14](../admin/14-merge-and-invitations.md)).
+- Example: `uv run manage.py people_find_duplicates --limit=50`
+
 ## Admissions (Phase 3)
 
 ## Course sections (Phase 4)
+
+### `section_copy`
+
+- Purpose: starts the planning of a new term from the sections of a previous term. Same as **Sections > Copy from another term** in the administration panel (`CopySections`). Copies the sections that were not cancelled as drafts, together with the instructors (if still employed), meeting times and rooms, seat allocations (release times shifted by the difference between term start dates) and the syllabus (as a private draft). The course version is replaced by the version in effect at the start of the new session.
+- Arguments/options: `from-term`, `to-term` term codes (for example `2026-FA`), `--org-unit=` (only sections of this org unit code; repeatable), `--dry-run` (does the copy in a transaction and rolls it back, so the report is exact), `--actor=` (required. Only sections within that account's `Plan sections` permission scope are copied).
+- Audit: recorded (source and target term, copied, skipped and needs-review counts; a real copy also records the business audit event `sections.copied`)
+- Reading the output: `skipped` means the target term already has the same section code or there is no course version in effect; `note` means the section was copied but something was left out (copied without a room because the room is already taken, a retired instructor, and so on). Sessions are matched by code; if there is none, the section goes into the full-term session.
+- Exit codes: 1 for an unknown term code or a missing `--actor`.
+- Example: `uv run manage.py section_copy 2026-FA 2027-FA --actor=academic@example.ac.kr --dry-run`
+
+### `schedule_check_conflicts`
+
+- Purpose: checks the sections of a term before publishing the timetable. Double booking of rooms and instructors is already prevented by the DB; this finds the problems the DB allows: capacity above the room capacity, a course version not in effect at the session start date, a retired instructor, seat allocations above capacity, meeting dates outside the session. It also checks room conflicts in data that came in without constraints, such as a backup restore.
+- Arguments: `term` term code.
+- Audit: not recorded (read only)
+- Exit codes: 2 when problems exist, 1 for an unknown term code. Sections that have no instructor, room or meeting time yet are shown for information only (`Note`).
+- Example: `uv run manage.py schedule_check_conflicts 2027-SP`
 
 ## Registration (Phase 5)
 

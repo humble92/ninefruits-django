@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 18:01+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,40 +18,465 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+# key: curriculum.errors.no_version_to_revise
+#: actions/revise_course.py:32
+msgid "There is no version in effect on that date."
+msgstr "그 날짜에 유효한 버전이 없습니다."
+
+# key: curriculum.errors.revise_same_start
+#: actions/revise_course.py:35
+msgid "A version already starts on that date. Edit it instead."
+msgstr "그 날짜에 시작하는 버전이 이미 있습니다. 그 버전을 수정하세요."
+
 # key: reference.fields.name
-#: ninefruits/curriculum/admin.py ninefruits/curriculum/models/course_category.py
+#: admin/course_category.py:45 admin/requirements.py:227
+#: models/course_category.py:16 models/requirement.py:56
+#: models/requirement.py:90
 msgctxt "reference"
 msgid "Name"
 msgstr "이름"
 
 # key: reference.fields.parent
-#: ninefruits/curriculum/admin.py ninefruits/curriculum/models/course_category.py
+#: admin/course_category.py:49 models/course_category.py:18
 msgid "Parent"
 msgstr "상위"
 
+# key: validation.after_or_equal
+#: admin/courses.py:120 admin/courses.py:169 admin/courses.py:257
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s은(는) %(date)s 이후 날짜이거나 같은 날짜여야 합니다."
+
+# key: reference.fields.effective_end_date
+#: admin/courses.py:121 admin/courses.py:170 admin/courses.py:258
+msgid "Valid until"
+msgstr "적용 종료일"
+
+# key: reference.fields.effective_start_date
+#: admin/courses.py:121 admin/courses.py:170 admin/courses.py:258
+msgid "Valid from"
+msgstr "적용 시작일"
+
+# key: curriculum.errors.version_overlap
+#: admin/courses.py:124 admin/courses.py:469 admin/courses.py:587
+msgid "This period overlaps another version of the course."
+msgstr "이 기간은 같은 교과목의 다른 버전과 겹칩니다."
+
+# key: validation.alpha_dash
+#: admin/courses.py:146
+#, python-format
+msgid ""
+"The %(attribute)s field must only contain letters, numbers, dashes, and "
+"underscores."
+msgstr "%(attribute)s은(는) 문자, 숫자, 대쉬(-), 밑줄(_)만 포함할 수 있습니다."
+
+# key: reference.resources.course_categories.plural_label
+# key: curriculum.fields.code
+#: admin/courses.py:147 models/course.py:26
+#| msgid "course categories"
+msgid "Course code"
+msgstr "교과목 코드"
+
+# key: reference.resources.course_categories.plural_label
+# key: curriculum.resources.course_versions.label
+#: admin/courses.py:198 models/course.py:111
+#| msgid "course categories"
+msgid "course version"
+msgstr "교과목 버전"
+
+# key: curriculum.resources.course_versions.plural_label
+#: admin/courses.py:199 admin/courses.py:372 models/course.py:112
+msgid "versions"
+msgstr "버전"
+
+# key: curriculum.fields.title
+#: admin/courses.py:218 admin/courses.py:424 models/course.py:69
+msgctxt "curriculum"
+msgid "Title"
+msgstr "교과목명"
+
+# key: curriculum.fields.requisites
+#: admin/courses.py:222 admin/courses.py:511 admin/courses.py:512
+#: models/course.py:158 models/course.py:159
+msgid "Requisites"
+msgstr "선수·동시수강 과목"
+
+# key: curriculum.actions.revise
+#: admin/courses.py:234 admin/courses.py:477
+msgid "Revise from a date"
+msgstr "날짜부터 개정"
+
+# key: curriculum.resources.course_equivalencies.label
+#: admin/courses.py:271 models/course.py:191
+msgid "equivalency"
+msgstr "대체과목"
+
+# key: curriculum.resources.course_equivalencies.plural_label
+#: admin/courses.py:272 models/course.py:192
+msgid "equivalent courses"
+msgstr "대체과목"
+
+# key: curriculum.fields.managing_unit
+#: admin/courses.py:283 admin/courses.py:434 models/course.py:28
+msgid "Managing unit"
+msgstr "관리 조직"
+
+# key: curriculum.fields.effective_from
+#: admin/courses.py:295 admin/courses.py:324
+msgid "New version from"
+msgstr "새 버전 시작일"
+
+# key: common.reason
+#: admin/courses.py:297
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: validation.after
+#: admin/courses.py:323
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s은(는) %(date)s 이후 날짜여야 합니다."
+
+# key: curriculum.sections.course
+#: admin/courses.py:364
+msgctxt "curriculum.sections"
+msgid "Course"
+msgstr "교과목"
+
+# key: curriculum.sections.first_version
+#: admin/courses.py:365
+msgid "First version"
+msgstr "첫 버전"
+
+#: admin/courses.py:377
+msgid "Add course version"
+msgstr "교과목 버전 추가"
+
+# key: curriculum.fields.credits
+#: admin/courses.py:429 models/course.py:73
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "학점"
+
+# key: curriculum.notifications.revised
+#: admin/courses.py:471
+msgid "New version created."
+msgstr "새 버전을 만들었습니다."
+
+# key: curriculum.help.revise
+#: admin/courses.py:481
+msgid ""
+"The current version ends the day before; the new version starts with a copy "
+"of it and its requisites. Sections already offered keep their version."
+msgstr "현재 버전은 전날 끝나고, 새 버전은 현재 버전과 선수과목을 복사해 시작한다. 이미 개설된 강좌는 원래 버전을 유지한다."
+
+# key: validation.gte.numeric
+#: admin/requirements.py:58
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s의 값은 %(value)s보다 같거나 커야 합니다."
+
+# key: curriculum.fields.catalog_year_to
+#: admin/requirements.py:59 models/requirement.py:51
+msgid "Catalog year to"
+msgstr "적용 교육과정 연도(까지)"
+
+# key: curriculum.fields.catalog_year_from
+#: admin/requirements.py:59 models/requirement.py:49
+msgid "Catalog year from"
+msgstr "적용 교육과정 연도(부터)"
+
+# key: curriculum.errors.requirement_set_overlap
+#: admin/requirements.py:73
+msgid ""
+"These catalog years overlap another requirement set of the program and role."
+msgstr "같은 프로그램, 이수 구분의 다른 요건과 적용 연도가 겹칩니다."
+
+# key: curriculum.resources.courses.plural_label
+#: admin/requirements.py:89 importers.py:50 models/course.py:38
+#: models/requirement.py:112
+msgctxt "curriculum"
+msgid "courses"
+msgstr "교과목"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: admin/requirements.py:112 admin/requirements.py:139
+#: models/requirement.py:101
+msgid "Examination kind"
+msgstr "시험 종류"
+
+# key: validation.required
+#: admin/requirements.py:124
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s 필드는 필수입니다."
+
+# key: reference.resources.course_categories.label
+# key: curriculum.fields.category
+#: admin/requirements.py:127 models/course.py:83 models/requirement.py:98
+#| msgid "course category"
+msgid "Course category"
+msgstr "교과 구분"
+
+# key: curriculum.fields.min_credits
+#: admin/requirements.py:129 admin/requirements.py:135
+#: models/requirement.py:103
+msgctxt "curriculum"
+msgid "Minimum credits"
+msgstr "최소 학점"
+
+# key: curriculum.sections.requirements
+#: admin/requirements.py:168 admin/requirements.py:169
+#: admin/requirements.py:231 models/requirement.py:120
+#: models/requirement.py:121
+msgid "Requirements"
+msgstr "요건"
+
+# key: curriculum.fields.program_role
+#: admin/requirements.py:177 admin/requirements.py:223 models/requirement.py:47
+msgid "Program role"
+msgstr "이수 구분"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: admin/requirements.py:219 models/requirement.py:44
+msgid "Programs"
+msgstr "프로그램"
+
+# key: curriculum.grading_bases.graded
+#: enums.py:11
+msgid "Letter grade"
+msgstr "등급제"
+
+# key: curriculum.grading_bases.pass_fail
+#: enums.py:12
+msgctxt "curriculum"
+msgid "Pass/fail"
+msgstr "P/F"
+
+# key: curriculum.program_roles.primary
+#: enums.py:19
+msgctxt "curriculum"
+msgid "Primary program"
+msgstr "주전공"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: enums.py:20
+msgid "Second major"
+msgstr "복수전공"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: enums.py:21
+msgid "Minor"
+msgstr "부전공"
+
+# key: reference.resources.course_categories.label
+# key: curriculum.requirement_kinds.category_credits
+#: enums.py:31
+#| msgid "course category"
+msgid "Credits in a category"
+msgstr "교과 구분별 학점"
+
+# key: curriculum.requirement_kinds.required_courses
+#: enums.py:33
+msgid "Required courses"
+msgstr "필수 과목"
+
+# key: curriculum.requirement_kinds.course_group
+#: enums.py:35
+msgid "Choice from courses"
+msgstr "지정 과목 중 선택"
+
+# key: curriculum.requirement_kinds.assessment_pass
+#: enums.py:37
+msgid "Passed examination"
+msgstr "시험 합격"
+
+# key: curriculum.requisite_kinds.prerequisite
+#: enums.py:44
+msgid "Prerequisite"
+msgstr "선수과목"
+
+# key: curriculum.requisite_kinds.corequisite
+#: enums.py:45
+msgid "Corequisite"
+msgstr "동시수강 과목"
+
+# key: validation.enum
+#: importers.py:27
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "%(attribute)s의 값이 잘못되었습니다."
+
+# key: curriculum.import.org_unit_required
+#: importers.py:92
+msgid "New courses need an org_unit (code of the managing unit)."
+msgstr "새 교과목에는 org_unit(관리 조직 코드)이 필요합니다."
+
+# key: reference.fields.is_active
+#: models/course.py:30 models/course_category.py:21
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: curriculum.resources.courses.label
+#: models/course.py:37
+msgid "course"
+msgstr "교과목"
+
+# key: curriculum.fields.description
+#: models/course.py:71
+msgctxt "curriculum"
+msgid "Description"
+msgstr "교과목 개요"
+
+# key: curriculum.fields.lecture_hours
+#: models/course.py:74
+msgid "Lecture hours"
+msgstr "이론 시간"
+
+# key: curriculum.fields.lab_hours
+#: models/course.py:75
+msgid "Lab hours"
+msgstr "실습 시간"
+
+# key: curriculum.fields.grading_basis
+#: models/course.py:86
+msgid "Grading"
+msgstr "성적 평가"
+
+# key: curriculum.fields.counts_toward_credit_limit
+#: models/course.py:89
+msgid "Counts toward the credit limit"
+msgstr "학기 학점 상한에 포함"
+
+# key: curriculum.help.counts_toward_credit_limit
+#: models/course.py:91
+msgid ""
+"Turn off for courses outside the term credit limit (e.g. credit bank "
+"courses)."
+msgstr "학기 학점 상한 밖의 과목(예: 학점은행 과목)은 끈다."
+
+# key: curriculum.fields.is_repeatable
+#: models/course.py:94
+msgid "May be taken again for credit"
+msgstr "반복 이수 가능"
+
+# key: curriculum.help.is_repeatable
+#: models/course.py:97
+msgid ""
+"Taking it again earns credits again (e.g. seminars with changing topics) "
+"instead of being a retake."
+msgstr "다시 들어도 재수강이 아니라 학점을 또 받는 과목(예: 주제가 바뀌는 세미나)."
+
+# key: evaluation.fields.requires_evaluation
+#: models/course.py:101
+msgctxt "evaluation.fields"
+msgid "Course evaluation"
+msgstr "강의평가 대상"
+
+# key: evaluation.help.requires_evaluation
+#: models/course.py:103
+msgid "Off for internships or practica that are not evaluated."
+msgstr "평가하지 않는 실습·인턴십 과목은 끈다."
+
+# key: curriculum.fields.requisite_kind
+#: models/course.py:142
+msgctxt "curriculum"
+msgid "Kind"
+msgstr "구분"
+
+# key: curriculum.fields.group_number
+#: models/course.py:143
+msgid "Group"
+msgstr "묶음"
+
+# key: curriculum.fields.required_course
+#: models/course.py:148
+msgctxt "curriculum.fields"
+msgid "Course"
+msgstr "과목"
+
+# key: curriculum.fields.minimum_grade
+#: models/course.py:150
+msgid "Minimum grade"
+msgstr "최저 성적"
+
+# key: curriculum.fields.allows_concurrent
+#: models/course.py:151
+msgid "May be taken in the same term"
+msgstr "같은 학기 수강 허용"
+
+# key: curriculum.fields.equivalent_course
+#: models/course.py:177
+msgid "Equivalent course"
+msgstr "대체과목"
+
+# key: curriculum.fields.is_mutual
+#: models/course.py:180
+msgid "Mutual"
+msgstr "상호 인정"
+
+# key: curriculum.help.is_mutual
+#: models/course.py:182
+msgid ""
+"Each counts for the other. Off: only the equivalent course counts for this "
+"one."
+msgstr "서로 대신 인정한다. 끄면 대체과목이 이 과목을 대신하는 것만 인정한다."
+
+# key: curriculum.fields.note
+#: models/course.py:184 models/requirement.py:58
+msgctxt "curriculum"
+msgid "Note"
+msgstr "비고"
+
 # key: reference.fields.code
-#: ninefruits/curriculum/models/course_category.py
+#: models/course_category.py:15
 msgctxt "reference"
 msgid "Code"
 msgstr "코드"
 
 # key: reference.fields.sort_order
-#: ninefruits/curriculum/models/course_category.py
+#: models/course_category.py:20 models/requirement.py:106
 msgid "Order"
 msgstr "순서"
 
-# key: reference.fields.is_active
-#: ninefruits/curriculum/models/course_category.py
-msgctxt "reference.fields"
-msgid "Active"
-msgstr "사용"
-
 # key: reference.resources.course_categories.label
-#: ninefruits/curriculum/models/course_category.py
+#: models/course_category.py:28
 msgid "course category"
 msgstr "교과 구분"
 
 # key: reference.resources.course_categories.plural_label
-#: ninefruits/curriculum/models/course_category.py
+#: models/course_category.py:29
 msgid "course categories"
 msgstr "교과 구분"
+
+# key: curriculum.help.catalog_year_to
+#: models/requirement.py:54
+msgid "Empty: also for later catalog years until another set starts."
+msgstr "비우면 다른 요건이 시작될 때까지 이후 연도에도 적용한다."
+
+# key: curriculum.fields.total_credits
+#: models/requirement.py:57
+msgid "Total credits"
+msgstr "졸업 학점"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: models/requirement.py:65 models/requirement.py:66
+msgid "graduation requirements"
+msgstr "졸업 요건"
+
+# key: curriculum.fields.requirement_kind
+#: models/requirement.py:89
+msgid "Requirement"
+msgstr "요건 종류"
+
+# key: curriculum.fields.min_courses
+#: models/requirement.py:105
+msgid "Minimum courses"
+msgstr "최소 과목 수"

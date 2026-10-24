@@ -149,7 +149,7 @@ def _model_items(site: AdminSite, request: HttpRequest) -> list[tuple[Navigation
     items = []
     for model, model_admin in site._registry.items():
         group = group_for(model_admin)
-        if group is None:
+        if group is None or getattr(model_admin, "navigation_hidden", False):
             continue
         if not model_admin.has_view_permission(request):
             continue

@@ -34,4 +34,24 @@ ENG,college,UNI,College of Engineering,공과대학,1990-03-01
 CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 ```
 
-ການນຳເຂົ້ານັກສຶກສາ, ອາຈານ (Phase 2) ແລະ ວິຊາ (Phase 4) ຈະຖືກເພີ່ມພ້ອມກັບໜ້າທີ່ທີ່ກ່ຽວຂ້ອງ.
+## ນັກສຶກສາ ແລະ ອາຈານ
+
+ບັນທຶກນັກສຶກສາຄົ້ນຫາແຖວເດີມດ້ວຍ `student_number` (ລະຫັດນັກສຶກສາ) ແລະ ອາຈານດ້ວຍ `employee_number` (ລະຫັດພະນັກງານ) ເພື່ອອັບເດດ. ທັງສອງປະເພດໃຊ້ຖັນບຸກຄົນຮ່ວມກັນ.
+
+| ປະເພດ | ຖັນບັງຄັບສຳລັບແຖວໃໝ່ | ຖັນທາງເລືອກ |
+|---|---|---|
+| ບັນທຶກນັກສຶກສາ | `student_number`, `program` (ລະຫັດຫຼັກສູດ), `admission_date`, `family_name` | `catalog_year` (ຖ້າວ່າງ ໃຊ້ປີຮັບເຂົ້າ), `year_level`, `status`, `graduation_date`, `institutional_email` |
+| ອາຈານ | `employee_number`, `org_unit` (ລະຫັດໜ່ວຍງານ), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| ຖັນບຸກຄົນ (ຮ່ວມກັນ) | — | `given_name`, ຊື່ຕາມພາສາ ເຊັ່ນ `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
+
+- ຄ່າ `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (ຖ້າຈົບການສຶກສາ ຕ້ອງມີ `graduation_date`). ສະຖານະທີ່ປ່ຽນດ້ວຍການນຳເຂົ້າຖືກຖືວ່າເປັນ **ການແກ້ໄຂຂໍ້ມູນ** ແລະ ຈະບໍ່ສ້າງປະຫວັດການປ່ຽນສະຖານະ. ການປ່ຽນສະຖານະຕົວຈິງໃຫ້ດຳເນີນການຈາກໜ້າຈໍ ([ບົດ 13](13-status-changes-and-advisors.md)).
+- ຄ່າ `employment_type`: `full_time`, `part_time`, `adjunct`, `visiting`, `emeritus`. ຄ່າ `gender`: `female`, `male`, `other`, `undisclosed`.
+- ຖ້າ `national_id` ຂອງບັນທຶກນັກສຶກສາໃໝ່ກົງກັບບຸກຄົນທີ່ມີຢູ່ແລ້ວ ບັນທຶກນັກສຶກສາຈະຖືກຕິດກັບບຸກຄົນນັ້ນ (ການເຂົ້າຮຽນຄືນ). ນອກນັ້ນຈະສ້າງບຸກຄົນໃໝ່. ເມື່ອອັບເດດ ຊ່ອງວ່າງຈະບໍ່ລຶບຄ່າເດີມ.
+- ນັກສຶກສາ ແລະ ອາຈານທີ່ນຳເຂົ້າມາຈະບໍ່ມີບັນຊີ. ສົ່ງຄຳເຊີນສ້າງບັນຊີດ້ວຍ [ການເຊີນສ້າງບັນຊີ](14-merge-and-invitations.md#ການເຊີນສ້າງບັນຊີ).
+
+```csv
+student_number,program,admission_date,year_level,status,family_name,given_name,name_ko,birth_date
+202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
+```
+
+ການນຳເຂົ້າວິຊາ (Phase 4) ຈະຖືກເພີ່ມພ້ອມກັບໜ້າທີ່ທີ່ກ່ຽວຂ້ອງ.

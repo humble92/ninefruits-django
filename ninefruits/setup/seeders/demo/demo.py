@@ -16,16 +16,19 @@ class DemoSeeder(Seeder):
     SEEDERS: list[str] = [
         "ninefruits.setup.seeders.demo.accounts.DemoAccountSeeder",
         "ninefruits.setup.seeders.demo.reference.DemoReferenceSeeder",
+        "ninefruits.setup.seeders.demo.people.DemoPeopleSeeder",
+        "ninefruits.setup.seeders.demo.curriculum.DemoCurriculumSeeder",
     ]
 
     #: Functions returning the fixed demo account emails printed by ``setup_demo``.
     ACCOUNT_LISTS: list[str] = [
         "ninefruits.setup.seeders.demo.accounts.demo_account_emails",
+        "ninefruits.setup.seeders.demo.people.demo_people_emails",
     ]
 
     #: Functions yielding ``(email, password)`` of student accounts for ``--student-accounts``
     #: (Phase 2 adds the enrolled students).
-    STUDENT_ACCOUNT_PROVIDERS: list[str] = []
+    STUDENT_ACCOUNT_PROVIDERS: list[str] = ["ninefruits.setup.seeders.demo.people.enrolled_student_accounts"]
 
     def run(self) -> None:
         ensure_not_production()

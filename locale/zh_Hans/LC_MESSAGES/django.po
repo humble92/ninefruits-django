@@ -1190,3 +1190,8 @@ msgstr "退出登录"
 msgctxt "security"
 msgid "Set up now"
 msgstr "立即设置"
+
+# key: authentication.login.sso
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "使用 %(provider)s 登录"

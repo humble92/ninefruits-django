@@ -34,4 +34,24 @@ ENG,college,UNI,College of Engineering,공과대학,1990-03-01
 CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 ```
 
-学生、教师（Phase 2）和课程（Phase 4）的导入随相应功能一起添加。
+## 学生与教师
+
+学籍按 `student_number`（学号）、教师按 `employee_number`（工号）查找并更新已有行。两种类型都同时使用人员列。
+
+| 种类 | 新行必填列 | 可选列 |
+|---|---|---|
+| 学籍 | `student_number`、`program`（专业项目代码）、`admission_date`、`family_name` | `catalog_year`（为空时取入学年份）、`year_level`、`status`、`graduation_date`、`institutional_email` |
+| 教师 | `employee_number`、`org_unit`（单位代码）、`employment_type`、`family_name` | `academic_title_*`、`hire_date`、`end_date` |
+| 人员列（通用） | — | `given_name`、`name_ko` 等各语言姓名、`birth_date`、`gender`、`email`、`phone`、`national_id` |
+
+- `status` 的值：`enrolled`、`on_leave`、`withdrawn`、`dismissed`、`graduated`（为毕业时 `graduation_date` 必填）。通过导入更改的状态视为 **资料更正**，不会生成学籍异动历史。实际的异动在界面上办理（[第 13 章](13-status-changes-and-advisors.md)）。
+- `employment_type` 的值：`full_time`、`part_time`、`adjunct`、`visiting`、`emeritus`。`gender` 的值：`female`、`male`、`other`、`undisclosed`。
+- 新学籍的 `national_id` 与已有人员相同时，学籍会挂到该人员名下（重新入学）。否则创建新人员。更新时空白单元格不会删除已有值。
+- 导入的学生、教师没有账户。通过 [账户邀请](14-merge-and-invitations.md#账户邀请) 发送注册邀请。
+
+```csv
+student_number,program,admission_date,year_level,status,family_name,given_name,name_ko,birth_date
+202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
+```
+
+课程（Phase 4）的导入随相应功能一起添加。
