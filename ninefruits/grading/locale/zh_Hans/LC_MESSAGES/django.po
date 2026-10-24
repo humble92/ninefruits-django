@@ -1,0 +1,171 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: grading.errors.scale_fixed
+#: ninefruits/grading/actions/save_grade_scale.py
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "成绩等级制在安装时确定，不能更改。"
+
+# key: grading.help.scale_fixed
+#: ninefruits/grading/admin.py
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "成绩等级制在安装时确定。成绩和绩点都基于它，不能改为其他等级制。"
+
+# key: validation.required
+#: ninefruits/grading/admin.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s 不能为空。"
+
+# key: reference.fields.grade_points
+#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+msgid "Grade points"
+msgstr "绩点"
+
+# key: validation.max.numeric
+#: ninefruits/grading/admin.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "%(attribute)s 不能大于 %(max)s。"
+
+# key: validation.gte.numeric
+#: ninefruits/grading/admin.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s 必须大于或等于 %(value)s。"
+
+# key: reference.fields.max_percentage
+#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+msgid "To (%)"
+msgstr "上限（%）"
+
+# key: reference.fields.min_percentage
+#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+msgid "From (%)"
+msgstr "下限（%）"
+
+# key: reference.resources.grade_scale_items.label
+#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+msgid "grade"
+msgstr "等级"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+msgid "grades"
+msgstr "等级"
+
+# key: reference.fields.name
+#: ninefruits/grading/admin.py ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: reference.fields.items_count
+#: ninefruits/grading/admin.py
+msgctxt "reference"
+msgid "Grades"
+msgstr "等级数"
+
+# key: grading.applies_to.graded
+#: ninefruits/grading/enums.py
+msgid "Graded courses"
+msgstr "普通课程"
+
+# key: grading.applies_to.pass_fail
+#: ninefruits/grading/enums.py
+msgid "Pass/fail courses"
+msgstr "合格制课程"
+
+# key: grading.applies_to.both
+#: ninefruits/grading/enums.py
+msgid "Both"
+msgstr "两者"
+
+# key: grading.standings.good
+#: ninefruits/grading/enums.py
+msgid "Good standing"
+msgstr "正常"
+
+# key: grading.standings.warning
+#: ninefruits/grading/enums.py
+msgid "Academic warning"
+msgstr "学业警告"
+
+# key: grading.standings.dismissal_review
+#: ninefruits/grading/enums.py
+msgid "Dismissal review"
+msgstr "退学审查"
+
+# key: reference.fields.code
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: reference.fields.max_grade_points
+#: ninefruits/grading/models/grade_scale.py
+msgid "Maximum grade points"
+msgstr "满分绩点"
+
+# key: reference.fields.is_default
+#: ninefruits/grading/models/grade_scale.py
+msgid "Default"
+msgstr "默认"
+
+# key: reference.resources.grade_scales.label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scale"
+msgstr "成绩等级制"
+
+# key: reference.resources.grade_scales.plural_label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scales"
+msgstr "成绩等级制"
+
+# key: reference.fields.grade
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Grade"
+msgstr "等级"
+
+# key: reference.fields.counts_in_gpa
+#: ninefruits/grading/models/grade_scale.py
+msgid "Counts in GPA"
+msgstr "计入绩点"
+
+# key: reference.fields.is_passing
+#: ninefruits/grading/models/grade_scale.py
+msgid "Passing"
+msgstr "及格"
+
+# key: certificate.fields.audience
+#: ninefruits/grading/models/grade_scale.py
+msgid "For"
+msgstr "对象"
+
+# key: grading.help.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "等级成绩用于普通课程，P/NP 用于合格制课程；\"两者\"例如 I（未完成）。"
+
+# key: reference.fields.sort_order
+#: ninefruits/grading/models/grade_scale.py
+msgid "Order"
+msgstr "排序"

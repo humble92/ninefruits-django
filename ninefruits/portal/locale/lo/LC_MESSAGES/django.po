@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,20 +61,23 @@ msgstr "ສະຖານະຜູ້ໃຊ້"
 # key: admin.settings.security.mfa_section
 # key: authentication.two_factor.title
 # key: security.mfa.title
-#: ninefruits/portal/templates/portal/security.html ninefruits/portal/views/security.py
+#: ninefruits/portal/templates/portal/security.html
+#: ninefruits/portal/views/security.py
 msgid "Two-factor authentication"
 msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
 
 # key: security.mfa.description
 #: ninefruits/portal/templates/portal/security.html
-msgid "Two-factor authentication protects your account with a code from an authenticator app in addition to your password."
+msgid ""
+"Two-factor authentication protects your account with a code from an "
+"authenticator app in addition to your password."
 msgstr "ການຢືນຢັນສອງຂັ້ນຕອນປົກປ້ອງບັນຊີຂອງທ່ານດ້ວຍລະຫັດຈາກແອັບຢືນຢັນຕົວຕົນ ນອກເໜືອຈາກລະຫັດຜ່ານ."
 
 # key: security.mfa.enrollment_required
 #: ninefruits/portal/templates/portal/security.html
-#| msgctxt "security"
-#| msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
-msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgid ""
+"Two-factor authentication is required for your account. Please set it up to "
+"continue."
 msgstr "ບັນຊີຂອງທ່ານຈຳເປັນຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ. ກະລຸນາຕັ້ງຄ່າເພື່ອດຳເນີນການຕໍ່."
 
 # key: security.mfa_methods.authenticator_app
@@ -105,7 +108,8 @@ msgstr "ປິດໃຊ້"
 
 # key: security.mfa.scan_qr_code
 #: ninefruits/portal/templates/portal/security.html
-msgid "Scan this QR code with your authenticator app, then enter the code it shows."
+msgid ""
+"Scan this QR code with your authenticator app, then enter the code it shows."
 msgstr "ສະແກນລະຫັດ QR ນີ້ດ້ວຍແອັບຢືນຢັນຕົວຕົນຂອງທ່ານ, ແລ້ວປ້ອນລະຫັດທີ່ສະແດງ."
 
 # key: security.mfa.setup_key
@@ -128,14 +132,14 @@ msgstr "ຢືນຢັນ"
 
 # key: security.mfa.enable
 #: ninefruits/portal/templates/portal/security.html
-#| msgctxt "security"
-#| msgid "We recommend enabling two-factor authentication for your account."
 msgid "Enable two-factor authentication"
 msgstr "ເປີດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ"
 
 # key: security.mfa.recovery_codes_instructions
 #: ninefruits/portal/templates/portal/security.html
-msgid "Store these recovery codes in a safe place. Each can be used once if you lose your device."
+msgid ""
+"Store these recovery codes in a safe place. Each can be used once if you "
+"lose your device."
 msgstr "ກະລຸນາເກັບລະຫັດກູ້ຄືນເຫຼົ່ານີ້ໄວ້ໃນບ່ອນປອດໄພ. ແຕ່ລະລະຫັດໃຊ້ໄດ້ຄັ້ງດຽວຖ້າທ່ານເສຍອຸປະກອນ."
 
 # key: authentication.two_factor.email_code
@@ -147,8 +151,12 @@ msgstr "ລະຫັດທາງອີເມວ"
 # key: security.email_code.description
 #: ninefruits/portal/templates/portal/security.html
 #, python-format
-msgid "Receive a one-time code at %(email)s each time you sign in. Less secure than an authenticator app; use it if you cannot install one."
-msgstr "ຮັບລະຫັດໃຊ້ຄັ້ງດຽວທີ່ %(email)s ທຸກຄັ້ງທີ່ເຂົ້າສູ່ລະບົບ. ປອດໄພໜ້ອຍກວ່າແອັບຢືນຢັນຕົວຕົນ; ໃຊ້ເມື່ອທ່ານບໍ່ສາມາດຕິດຕັ້ງແອັບໄດ້."
+msgid ""
+"Receive a one-time code at %(email)s each time you sign in. Less secure than "
+"an authenticator app; use it if you cannot install one."
+msgstr ""
+"ຮັບລະຫັດໃຊ້ຄັ້ງດຽວທີ່ %(email)s ທຸກຄັ້ງທີ່ເຂົ້າສູ່ລະບົບ. ປອດໄພໜ້ອຍກວ່າແອັບຢືນຢັນຕົວຕົນ; "
+"ໃຊ້ເມື່ອທ່ານບໍ່ສາມາດຕິດຕັ້ງແອັບໄດ້."
 
 # key: security.email_code.enabled
 #: ninefruits/portal/templates/portal/security.html
@@ -183,10 +191,16 @@ msgstr "ອຸປະກອນທີ່ຈື່ໄວ້"
 
 #: ninefruits/portal/templates/portal/security.html
 #, python-format
-msgid "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s day."
-msgid_plural "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s days."
-msgstr[0] "ເມື່ອທ່ານເລືອກ \"ຈື່ອຸປະກອນນີ້\" ຕອນເຂົ້າສູ່ລະບົບ, ບຣາວເຊີນີ້ຈະບໍ່ຖາມລະຫັດເປັນເວລາ %(days)s ມື້."
-msgstr[1] "ເມື່ອທ່ານເລືອກ \"ຈື່ອຸປະກອນນີ້\" ຕອນເຂົ້າສູ່ລະບົບ, ບຣາວເຊີນີ້ຈະບໍ່ຖາມລະຫັດເປັນເວລາ %(days)s ມື້."
+msgid ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s day."
+msgid_plural ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s days."
+msgstr[0] ""
+"ເມື່ອທ່ານເລືອກ \"ຈື່ອຸປະກອນນີ້\" ຕອນເຂົ້າສູ່ລະບົບ, ບຣາວເຊີນີ້ຈະບໍ່ຖາມລະຫັດເປັນເວລາ %(days)s ມື້."
+msgstr[1] ""
+"ເມື່ອທ່ານເລືອກ \"ຈື່ອຸປະກອນນີ້\" ຕອນເຂົ້າສູ່ລະບົບ, ບຣາວເຊີນີ້ຈະບໍ່ຖາມລະຫັດເປັນເວລາ %(days)s ມື້."
 
 #: ninefruits/portal/templates/portal/security.html
 msgid "Changing your two-factor setup forgets every remembered device."
@@ -257,7 +271,9 @@ msgstr "ເຊື່ອມຕໍ່"
 #: ninefruits/portal/templatetags/portal.py
 #, python-format
 msgctxt "security"
-msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
+msgid ""
+"Two-factor authentication is required for your account. Please set it up by "
+"%(date)s."
 msgstr "ບັນຊີຂອງທ່ານຈຳເປັນຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ. ກະລຸນາຕັ້ງຄ່າພາຍໃນ %(date)s."
 
 #: ninefruits/portal/templatetags/portal.py

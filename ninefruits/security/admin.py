@@ -120,12 +120,15 @@ class AssignRoleForm(forms.Form):
     scope_type = forms.ChoiceField(
         label=_("Scope"), choices=(), initial=ScopeType.GLOBAL.value, widget=UnfoldAdminSelectWidget
     )
-    scope_id = forms.IntegerField(
+    scope_org_unit = forms.ModelChoiceField(
         label=_("Scope target"),
+        queryset=None,
         required=False,
-        min_value=1,
-        help_text=_("Org unit or program id. An org unit also covers every unit below it."),
-        widget=UnfoldAdminTextInputWidget,
+        help_text=_("Includes all units below the selected ones."),
+        widget=UnfoldAdminSelectWidget,
+    )
+    scope_program = forms.ModelChoiceField(
+        label=_("Scope target"), queryset=None, required=False, widget=UnfoldAdminSelectWidget
     )
     starts_at = forms.SplitDateTimeField(label=_("Starts"), required=False, widget=UnfoldAdminSplitDateTimeWidget)
     ends_at = forms.SplitDateTimeField(label=_("Ends"), required=False, widget=UnfoldAdminSplitDateTimeWidget)
@@ -135,18 +138,30 @@ class AssignRoleForm(forms.Form):
         super().__init__(*args, **kwargs)
         self.fields["role"].queryset = Role.objects.assignable()  # type: ignore[attr-defined]
         self.fields["scope_type"].choices = ScopeType.choices()
+        from ninefruits.organization.models import OrgUnit, Program
+
+        self.fields["scope_org_unit"].queryset = OrgUnit.objects.order_by("code")  # type: ignore[attr-defined]
+        self.fields["scope_program"].queryset = Program.objects.order_by("code")  # type: ignore[attr-defined]
 
     def clean(self) -> dict[str, Any]:
         cleaned = super().clean() or {}
         starts_at, ends_at = cleaned.get("starts_at"), cleaned.get("ends_at")
         if starts_at and ends_at and ends_at <= starts_at:
             self.add_error("ends_at", _("The end must be after the start."))
-        if cleaned.get("scope_type") == ScopeType.GLOBAL.value:
-            cleaned["scope_id"] = None
-        elif not cleaned.get("scope_id"):
-            self.add_error(
-                "scope_id", _("Choose a scope target for scoped assignments, and none for global assignments.")
-            )
+        scope_type = cleaned.get("scope_type")
+        target = {
+            ScopeType.ORG_UNIT.value: ("scope_org_unit", cleaned.get("scope_org_unit")),
+            ScopeType.PROGRAM.value: ("scope_program", cleaned.get("scope_program")),
+        }.get(str(scope_type))
+        cleaned["scope_id"] = None
+        if target is not None:
+            field, value = target
+            if value is None:
+                self.add_error(
+                    field, _("Choose a scope target for scoped assignments, and none for global assignments.")
+                )
+            else:
+                cleaned["scope_id"] = value.pk
         return cleaned
 
 

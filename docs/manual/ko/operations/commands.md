@@ -69,7 +69,52 @@
 
 ## 설치와 데모 (Phase 1)
 
+### `setup_install`
+
+- 용도: 신규 설치와 업데이트. 마이그레이션, 필수 데이터(역할 템플릿과 권한 동기화, 국가, 언어, 코드 목록 유형, 조직 단위 유형), 기관 기본 설정, 성적 척도 고정, 설치 프로파일, 최초 관리자를 차례로 처리한다. 다시 실행해도 안전하다(이미 있는 데이터와 관리자가 바꾼 값은 유지).
+- 실행 시점: 최초 설치, 그리고 배포할 때마다.
+- 옵션: `--institution-name=`, `--locale=`(기본 언어), `--timezone=`(예: `Asia/Seoul`), `--profile=`(설치 프로파일 키, 여러 번 지정 가능: `korean-university`, `yust-legacy`), `--grade-scale=`(성적 척도 `4.5` 또는 `4.3`. 한 번 정하면 바꿀 수 없다. 비우면 첫 프로파일의 척도), `--admin-email=`, `--admin-name=`, `--force`(질문 없이 실행. 관리자 비밀번호는 표준 입력으로 받음).
+- 감사: 기록 (적용한 프로파일, 관리자 생성 여부)
+- 예시
+
+  ```bash
+  uv run manage.py setup_install
+  echo "$ADMIN_PASSWORD" | uv run manage.py setup_install --force --locale=ko --timezone=Asia/Seoul \
+      --institution-name="데모대학교" --profile=korean-university \
+      --admin-email=admin@example.ac.kr --admin-name="관리자"
+  ```
+
+- 출력 해석: 단계별 `DONE`. `Administrator exists`는 시스템 관리자 할당이 이미 있어 생성을 건너뛴 것이다.
+- 실패 시: 키가 없다는 오류면 `DJANGO_SECRET_KEY`와 `pii_generate_key`로 만든 값을 환경 설정에 넣는다. 마이그레이션 실패는 DB 역할 준비([설치](installation.md))를 확인한다. `The grade scale is fixed`는 이미 정해진 척도와 다른 `--grade-scale`을 준 것이다.
+
+### `setup_demo`
+
+- 용도: 가상 대학 데이터를 만든다(조직, 프로그램, 건물·강의실, 오늘을 기준으로 지난·현재·다음 학기와 업무 기간, 한국 대학 프로파일). 역할별 고정 데모 계정(`registrar@demo.test` 등, 비밀번호 `demo-password`)을 출력한다. 대량 데이터는 일괄 삽입으로 만든다.
+- 실행 시점: 개발, 교육, 시연 환경. **운영 환경(`DJANGO_ENV=production`)에서는 `--force`를 줘도 실행되지 않는다.**
+- 옵션: `--size=tiny|small|medium|large`(학생 약 20/100/2,000/20,000명. `tiny`는 테스트와 빠른 확인용), `--seed=`(같은 값이면 같은 데이터), `--force`(확인 질문 생략).
+- `--student-accounts`: 재학생 전원에게 계정을 만들고 비공개 저장소의 `load-accounts.csv`(이메일, 비밀번호)에 적는다. 부하 테스트용([부하 테스트](load-testing.md)). 학적 데이터는 Phase 2부터 생기므로 그 전에는 머리글만 적힌다.
+- 감사: 기록 (크기, 시드, 소요 시간)
+- 예시: `uv run manage.py setup_demo --size=small --seed=42 --force`
+- 실패 시: 필수 데이터가 없으면 데모 계정의 역할이 없어 건너뛴다. 먼저 `setup_install`을 실행한다. 같은 DB에서 다시 실행하면 이미 있는 데모 데이터는 건너뛴다.
+
 ## 기준정보와 학기 (Phase 1)
+
+### `reference_import`
+
+- 용도: 기준정보 CSV를 가져온다. 관리 화면의 **CSV 가져오기**와 같은 가져오기 규칙을 쓴다(코드로 기존 행을 찾아 갱신, 빈 번역 칸은 기존 값 유지, 실패한 행만 따로 기록).
+- 인수: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`(학생·교원·교과목·수강 제한은 해당 Phase에서 추가) / `file` 머리글 행이 있는 UTF-8 CSV.
+- 옵션: `--actor=`(필수. 가져오기 기록이 이 계정으로 남고 결과가 이 계정의 **CSV 가져오기** 화면에 보인다), `--chunk=100`(Celery 작업당 행 수), `--dry-run`(머리글 검사와 행 수만).
+- 감사: 기록 (유형, 파일 이름, 행 수, 가져오기 번호, 실패 행 수)
+- 열 형식: [관리자 매뉴얼 9장](../admin/09-csv-import.md).
+- 종료 코드: 작업이 바로 실행되면(작업자가 동기 실행 설정이거나 행이 처리된 경우) 결과를 출력하고 실패 행이 있으면 2. 큐로 접수만 되면 0. 결과와 실패 행 CSV는 관리 화면 **기준정보 > CSV 가져오기**에서 본다.
+- 예시: `uv run manage.py reference_import org_units /srv/import/org-units.csv --actor=admin@example.ac.kr --dry-run`
+
+### `term_inspect`
+
+- 용도: 지정 시각에 수업 중인 학기와 열려 있는 업무 기간(종류, 학기, 세션, 이름, 대상 조건, 종료 시각)을 보여 준다. 학기와 업무 기간 설정을 점검하거나 "왜 수강신청이 안 열렸는가" 같은 문의에 쓴다.
+- 옵션: `--at=`(기본 현재. 예: `"2027-02-15 09:00"`. 시간대를 붙이지 않으면 서버 시간대(UTC)로 해석한다. `"2027-02-15 09:00 Asia/Seoul"` 또는 `2027-02-15T09:00+09:00`처럼 지정할 수 있다).
+- 감사: 기록 안 함 (조회만)
+- 출력 해석: 날짜 판단은 기관 시간대 기준이다. 계획(planned)이나 보관(archived) 상태 학기의 업무 기간은 열리지 않는다. 종료 시각은 기관 시간대로 표시한다.
 
 ## 보안 (Phase 0, 2)
 

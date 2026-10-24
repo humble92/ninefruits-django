@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,20 +62,24 @@ msgstr "身份"
 # key: admin.settings.security.mfa_section
 # key: authentication.two_factor.title
 # key: security.mfa.title
-#: ninefruits/portal/templates/portal/security.html ninefruits/portal/views/security.py
+#: ninefruits/portal/templates/portal/security.html
+#: ninefruits/portal/views/security.py
 msgid "Two-factor authentication"
 msgstr "双重身份验证"
 
 # key: security.mfa.description
 #: ninefruits/portal/templates/portal/security.html
-msgid "Two-factor authentication protects your account with a code from an authenticator app in addition to your password."
-msgstr "双重身份验证在密码之外还会验证身份验证器应用中的验证码，以保护您的账户。"
+msgid ""
+"Two-factor authentication protects your account with a code from an "
+"authenticator app in addition to your password."
+msgstr ""
+"双重身份验证在密码之外还会验证身份验证器应用中的验证码，以保护您的账户。"
 
 # key: security.mfa.enrollment_required
 #: ninefruits/portal/templates/portal/security.html
-#| msgctxt "security"
-#| msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
-msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgid ""
+"Two-factor authentication is required for your account. Please set it up to "
+"continue."
 msgstr "您的账户需要双重身份验证，请完成设置后继续。"
 
 # key: security.mfa_methods.authenticator_app
@@ -106,7 +110,8 @@ msgstr "停用"
 
 # key: security.mfa.scan_qr_code
 #: ninefruits/portal/templates/portal/security.html
-msgid "Scan this QR code with your authenticator app, then enter the code it shows."
+msgid ""
+"Scan this QR code with your authenticator app, then enter the code it shows."
 msgstr "请用身份验证器应用扫描二维码，然后输入显示的验证码。"
 
 # key: security.mfa.setup_key
@@ -129,14 +134,14 @@ msgstr "确认"
 
 # key: security.mfa.enable
 #: ninefruits/portal/templates/portal/security.html
-#| msgctxt "security"
-#| msgid "We recommend enabling two-factor authentication for your account."
 msgid "Enable two-factor authentication"
 msgstr "启用双重身份验证"
 
 # key: security.mfa.recovery_codes_instructions
 #: ninefruits/portal/templates/portal/security.html
-msgid "Store these recovery codes in a safe place. Each can be used once if you lose your device."
+msgid ""
+"Store these recovery codes in a safe place. Each can be used once if you "
+"lose your device."
 msgstr "请将恢复码保存在安全的地方。设备丢失时，每个恢复码可使用一次。"
 
 # key: authentication.two_factor.email_code
@@ -148,8 +153,12 @@ msgstr "邮件验证码"
 # key: security.email_code.description
 #: ninefruits/portal/templates/portal/security.html
 #, python-format
-msgid "Receive a one-time code at %(email)s each time you sign in. Less secure than an authenticator app; use it if you cannot install one."
-msgstr "每次登录时向 %(email)s 发送一次性验证码。安全性低于身份验证器应用，请在无法安装应用时使用。"
+msgid ""
+"Receive a one-time code at %(email)s each time you sign in. Less secure than "
+"an authenticator app; use it if you cannot install one."
+msgstr ""
+"每次登录时向 %(email)s 发送一次性验证码。安全性低于身份验证器应用，请在无法安"
+"装应用时使用。"
 
 # key: security.email_code.enabled
 #: ninefruits/portal/templates/portal/security.html
@@ -184,8 +193,12 @@ msgstr "记住的设备"
 
 #: ninefruits/portal/templates/portal/security.html
 #, python-format
-msgid "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s day."
-msgid_plural "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s days."
+msgid ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s day."
+msgid_plural ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s days."
 msgstr[0] "登录时勾选\"记住此设备\"后，此浏览器在 %(days)s 天内无需输入代码。"
 
 #: ninefruits/portal/templates/portal/security.html
@@ -257,7 +270,9 @@ msgstr "关联"
 #: ninefruits/portal/templatetags/portal.py
 #, python-format
 msgctxt "security"
-msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
+msgid ""
+"Two-factor authentication is required for your account. Please set it up by "
+"%(date)s."
 msgstr "您的账户需要双重身份验证，请在 %(date)s 之前完成设置。"
 
 #: ninefruits/portal/templatetags/portal.py

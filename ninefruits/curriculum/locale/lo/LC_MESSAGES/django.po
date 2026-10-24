@@ -1,0 +1,56 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: reference.fields.name
+#: ninefruits/curriculum/admin.py ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: reference.fields.parent
+#: ninefruits/curriculum/admin.py ninefruits/curriculum/models/course_category.py
+msgid "Parent"
+msgstr "ໜ່ວຍງານແມ່"
+
+# key: reference.fields.code
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: reference.fields.sort_order
+#: ninefruits/curriculum/models/course_category.py
+msgid "Order"
+msgstr "ລຳດັບ"
+
+# key: reference.fields.is_active
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: reference.resources.course_categories.label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course category"
+msgstr "ປະເພດວິຊາ"
+
+# key: reference.resources.course_categories.plural_label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course categories"
+msgstr "ປະເພດວິຊາ"

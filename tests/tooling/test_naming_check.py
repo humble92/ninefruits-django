@@ -88,6 +88,7 @@ def test_command_names() -> None:
 
 def test_translation_msgids_are_english_source_text() -> None:
     assert check_catalog_entries([("portal", "Welcome, %(name)s"), (None, "Home")], "x.po") == []
+    assert check_catalog_entries([("reference.term_statuses", "Published")], "x.po") == []
     assert check_catalog_entries([(None, "registration.errors.credit_limit_exceeded")], "x.po") == [
         "x.po: msgid [registration.errors.credit_limit_exceeded] looks like a translation key; "
         "use the English source text"

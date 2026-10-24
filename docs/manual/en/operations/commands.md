@@ -69,7 +69,52 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ## Installation and demo (Phase 1)
 
+### `setup_install`
+
+- Purpose: new installation and update. Runs, in order: migrations, essential data (role templates and permission sync, countries, languages, code list types, org unit types), institution settings, the grade scale, installation profiles and the first administrator. Safe to run again (existing data and values administrators changed are kept).
+- When: on first installation and on every deployment.
+- Options: `--institution-name=`, `--locale=` (default language), `--timezone=` (e.g. `Asia/Seoul`), `--profile=` (installation profile key, may be repeated: `korean-university`, `yust-legacy`), `--grade-scale=` (grade scale `4.5` or `4.3`; fixed once set; empty means the first profile's scale), `--admin-email=`, `--admin-name=`, `--force` (no questions; the administrator password is read from standard input).
+- Audit: recorded (profiles applied, whether an administrator was created)
+- Examples
+
+  ```bash
+  uv run manage.py setup_install
+  echo "$ADMIN_PASSWORD" | uv run manage.py setup_install --force --locale=ko --timezone=Asia/Seoul \
+      --institution-name="Demo University" --profile=korean-university \
+      --admin-email=admin@example.ac.kr --admin-name="Administrator"
+  ```
+
+- Reading the output: `DONE` per step. `Administrator exists` means a System Administrator assignment exists, so creating one was skipped.
+- On failure: a missing key error means `DJANGO_SECRET_KEY` and the values from `pii_generate_key` must be set in the environment. A migration failure: check the database roles ([installation](installation.md)). `The grade scale is fixed` means `--grade-scale` differs from the scale already fixed.
+
+### `setup_demo`
+
+- Purpose: creates a fictional university (org units, programs, buildings and rooms, the last, current and next term around today with their windows, the Korean university profile). Prints the fixed demo accounts per role (`registrar@demo.test` and so on, password `demo-password`). Volumes are created with bulk inserts.
+- When: development, training and demonstration environments. **Never runs in production (`DJANGO_ENV=production`), even with `--force`.**
+- Options: `--size=tiny|small|medium|large` (about 20/100/2,000/20,000 students; `tiny` for tests and quick checks), `--seed=` (same value, same data), `--force` (no confirmation).
+- `--student-accounts`: gives every enrolled student an account and writes `load-accounts.csv` (email, password) in private storage, for load tests ([load testing](load-testing.md)). Student records arrive in Phase 2; until then only the header is written.
+- Audit: recorded (size, seed, duration)
+- Example: `uv run manage.py setup_demo --size=small --seed=42 --force`
+- On failure: without essential data the demo accounts are skipped (their roles are missing); run `setup_install` first. Running again on the same database skips the demo data that exists.
+
 ## Reference data and terms (Phase 1)
+
+### `reference_import`
+
+- Purpose: imports reference data from CSV, with the same rules as **Import CSV** in the administration panel (rows are found by code and updated, empty translation cells keep existing values, failed rows are kept separately).
+- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values` (students, instructors, courses and registration holds are added by their phases) / `file` UTF-8 CSV with a header row.
+- Options: `--actor=` (required; the import is recorded under this account and its result appears on that account's **CSV imports** screen), `--chunk=100` (rows per Celery task), `--dry-run` (header check and row count only).
+- Audit: recorded (type, file name, rows, import number, failed rows)
+- Column format: [administrator manual chapter 9](../admin/09-csv-import.md).
+- Exit codes: when the tasks run right away (eager workers), the result is printed and failed rows give 2. When the import is only queued, 0. The result and the failed rows CSV are under **Reference data > CSV imports** in the administration panel.
+- Example: `uv run manage.py reference_import org_units /srv/import/org-units.csv --actor=admin@example.ac.kr --dry-run`
+
+### `term_inspect`
+
+- Purpose: shows the terms in session and the open business windows (type, term, session, name, eligibility, closing time) at a point in time. Used to check term and window settings, or questions such as "why is registration not open?".
+- Options: `--at=` (default now; e.g. `"2027-02-15 09:00"`; without a time zone the server time zone (UTC) applies; `"2027-02-15 09:00 Asia/Seoul"` or `2027-02-15T09:00+09:00` name one).
+- Audit: not recorded (read only)
+- Reading the output: dates are judged in the institution time zone. Windows of planned or archived terms never open. Closing times are shown in the institution time zone.
 
 ## Security (Phase 0, 2)
 

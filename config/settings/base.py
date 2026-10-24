@@ -95,6 +95,7 @@ MIDDLEWARE = [
     # Before the security middleware: they add flash messages (deactivated account, MFA).
     "django.contrib.messages.middleware.MessageMiddleware",
     "ninefruits.i18n.middleware.SetLocaleMiddleware",
+    "ninefruits.adminpanel.middleware.AdminTimezoneMiddleware",
     "ninefruits.core.middleware.SetDatabaseSessionContextMiddleware",
     "ninefruits.security.middleware.EnsureUserIsActiveMiddleware",
     "ninefruits.security.middleware.EnforceMfaPolicyMiddleware",

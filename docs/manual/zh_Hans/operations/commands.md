@@ -69,7 +69,52 @@
 
 ## 安装与演示（Phase 1）
 
+### `setup_install`
+
+- 用途：新安装与更新。依次执行迁移、必需数据（角色模板与权限同步、国家、语言、代码列表类型、组织单位类型）、机构基本设置、成绩等级制固定、安装配置方案和首位管理员。可重复执行（已有数据及管理员修改的值保持不变）。
+- 执行时机：首次安装，以及每次部署时。
+- 选项：`--institution-name=`、`--locale=`（默认语言）、`--timezone=`（例：`Asia/Seoul`）、`--profile=`（安装配置方案键，可多次指定：`korean-university`、`yust-legacy`）、`--grade-scale=`（成绩等级制 `4.5` 或 `4.3`，一经确定不可更改；留空则使用第一个配置方案的等级制）、`--admin-email=`、`--admin-name=`、`--force`（不提问直接执行，管理员密码从标准输入读取）。
+- 审计：记录（应用的配置方案、是否创建管理员）
+- 示例
+
+  ```bash
+  uv run manage.py setup_install
+  echo "$ADMIN_PASSWORD" | uv run manage.py setup_install --force --locale=ko --timezone=Asia/Seoul \
+      --institution-name="演示大学" --profile=korean-university \
+      --admin-email=admin@example.ac.kr --admin-name="管理员"
+  ```
+
+- 输出说明：各步骤显示 `DONE`。`Administrator exists` 表示已有系统管理员分配，跳过创建。
+- 失败时：若提示缺少密钥，请把 `DJANGO_SECRET_KEY` 以及 `pii_generate_key` 生成的值写入环境配置。迁移失败请检查数据库角色准备（[安装](installation.md)）。`The grade scale is fixed` 表示 `--grade-scale` 与已固定的等级制不同。
+
+### `setup_demo`
+
+- 用途：创建虚拟大学数据（组织、专业项目、楼宇与教室、以今天为基准的上一、当前、下一学期及业务期间、韩国大学配置方案）。输出各角色的固定演示账户（`registrar@demo.test` 等，密码 `demo-password`）。大量数据以批量插入方式创建。
+- 执行时机：开发、培训、演示环境。**在生产环境（`DJANGO_ENV=production`）中即使加 `--force` 也不会执行。**
+- 选项：`--size=tiny|small|medium|large`（学生约 20/100/2,000/20,000 名；`tiny` 用于测试和快速检查）、`--seed=`（相同的值生成相同的数据）、`--force`（省略确认）。
+- `--student-accounts`：为所有在读学生创建账户，并写入私有存储中的 `load-accounts.csv`（邮箱、密码），用于负载测试（[负载测试](load-testing.md)）。学籍数据自 Phase 2 起才有，在此之前只写入表头。
+- 审计：记录（规模、种子、耗时）
+- 示例：`uv run manage.py setup_demo --size=small --seed=42 --force`
+- 失败时：没有必需数据时，因缺少角色会跳过演示账户。请先执行 `setup_install`。在同一数据库中再次执行时会跳过已有的演示数据。
+
 ## 基础数据与学期（Phase 1）
+
+### `reference_import`
+
+- 用途：导入基础数据 CSV。使用与管理界面 **导入 CSV** 相同的规则（按代码查找已有行并更新，空的翻译单元格保留原值，失败行单独记录）。
+- 参数：`type` `org_units`、`programs`、`buildings`、`rooms`、`lookup_values`（学生、教师、课程、选课限制在各自的 Phase 中添加）/ `file` 带表头行的 UTF-8 CSV。
+- 选项：`--actor=`（必填；导入记录归属该账户，结果显示在该账户的 **CSV 导入** 界面）、`--chunk=100`（每个 Celery 任务的行数）、`--dry-run`（只检查表头和行数）。
+- 审计：记录（类型、文件名、行数、导入编号、失败行数）
+- 列格式：[管理员手册第 9 章](../admin/09-csv-import.md)。
+- 退出码：任务立即执行时（同步执行的工作进程）输出结果，有失败行时为 2。仅加入队列时为 0。结果和失败行 CSV 在管理界面 **基础数据 > CSV 导入** 中查看。
+- 示例：`uv run manage.py reference_import org_units /srv/import/org-units.csv --actor=admin@example.ac.kr --dry-run`
+
+### `term_inspect`
+
+- 用途：显示指定时刻正在上课的学期和已开放的业务期间（类型、学期、时段、名称、对象条件、结束时间）。用于检查学期和业务期间设置，或回答“为什么选课还没开放”之类的问题。
+- 选项：`--at=`（默认当前；例：`"2027-02-15 09:00"`；不带时区时按服务器时区（UTC）解释；可写成 `"2027-02-15 09:00 Asia/Seoul"` 或 `2027-02-15T09:00+09:00`）。
+- 审计：不记录（仅查询）
+- 输出说明：日期按机构时区判断。计划（planned）或归档（archived）状态学期的业务期间不会开放。结束时间以机构时区显示。
 
 ## 安全（Phase 0、2）
 

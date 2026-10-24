@@ -63,6 +63,9 @@ FRAMEWORK_COMMANDS = frozenset(
 )
 
 SNAKE_CASE = re.compile(r"^[a-z][a-z0-9_]*$")
+#: msgctxt: the original group, or the key's parent path when the group itself is ambiguous
+#: (``registration.actions``, see tools/convert_translations.py).
+CATALOG_CONTEXT = re.compile(r"^[a-z][a-z0-9_]*(\.[a-z][a-z0-9_]*)*$")
 LANGUAGE_CODE = re.compile(r"(^|_)(ko|kr|kor|en|eng|cn|zh|chn|ja|jp|lo|lao)(_|$)")
 FORBIDDEN_SUFFIX = re.compile(r"(_old|_new|_backup|_bak|_tmp|_temp|_copy|_\d{6,8}|\d+)$")
 BOOLEAN_PREFIX = re.compile(r"^(is|has|can|should|counts|allows|requires|blocks)_")
@@ -148,7 +151,7 @@ def check_catalog_entries(entries: Iterable[tuple[str | None, str]], label: str)
     for context, msgid in entries:
         if SEMANTIC_KEY.match(msgid):
             problems.append(f"{label}: msgid [{msgid}] looks like a translation key; use the English source text")
-        if context is not None and not SNAKE_CASE.match(context):
+        if context is not None and not CATALOG_CONTEXT.match(context):
             problems.append(f"{label}: msgctxt [{context}] should be a snake_case group name")
     return problems
 

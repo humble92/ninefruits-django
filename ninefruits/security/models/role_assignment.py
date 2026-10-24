@@ -7,7 +7,7 @@ from __future__ import annotations
 from datetime import datetime
 
 from django.conf import settings
-from django.db import connection, models
+from django.db import models
 from django.utils import timezone
 
 from ninefruits.core.models import VisibleQuerySet
@@ -67,13 +67,9 @@ class RoleAssignment(models.Model):
         """ "All", or the scope type with the org unit / program code and name."""
         if self.scope == ScopeType.GLOBAL:
             return self.scope.label
-        table_lookup = {
-            ScopeType.ORG_UNIT: "SELECT code, util.i18n(name) FROM org_units WHERE id = %s",
-            ScopeType.PROGRAM: "SELECT code, util.i18n(name) FROM programs WHERE id = %s",
-        }
-        # Org units and programs get models in Phase 1; until then read the two columns.
-        with connection.cursor() as cursor:
-            cursor.execute(table_lookup[self.scope], [self.scope_id])
-            row = cursor.fetchone()
-        target = f"#{self.scope_id}" if row is None else f"{row[0]} {row[1] or ''}".strip()
+        from ninefruits.organization.models import OrgUnit, Program
+
+        model = OrgUnit if self.scope == ScopeType.ORG_UNIT else Program
+        row = model.objects.filter(pk=self.scope_id).first()
+        target = f"#{self.scope_id}" if row is None else str(row)
         return f"{self.scope.label}: {target}"

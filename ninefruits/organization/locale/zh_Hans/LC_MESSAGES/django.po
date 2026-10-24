@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.errors.successor_required
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "Choose the successor unit."
+msgstr "请选择承接单位。"
+
+# key: reference.errors.single_successor
+#: ninefruits/organization/actions/reorganize_org_unit.py ninefruits/organization/admin.py
+msgid "Only a split can have several successors."
+msgstr "只有拆分可以有多个承接单位。"
+
+# key: reference.errors.reorganization_before_start
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "The effective date must be after the unit started."
+msgstr "重组生效日期必须晚于该单位的生效日期。"
+
+# key: reference.errors.successor_is_self
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "A unit cannot succeed itself."
+msgstr "单位不能承接自身。"
+
+# key: validation.after_or_equal
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s 必须要等于 %(date)s 或更晚。"
+
+# key: reference.fields.effective_end_date
+#: ninefruits/organization/admin.py
+msgid "Valid until"
+msgstr "失效日期"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/organization/admin.py
+msgid "Valid from"
+msgstr "生效日期"
+
+# key: reference.fields.name
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: reference.filters.current_only
+#: ninefruits/organization/admin.py
+msgid "Currently valid only"
+msgstr "仅当前有效"
+
+# key: security.scope_types.global
+#: ninefruits/organization/admin.py
+msgid "All"
+msgstr "全部"
+
+# key: reference.resources.org_unit_successions.label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successor"
+msgstr "承接单位"
+
+# key: reference.resources.org_unit_successions.plural_label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successors"
+msgstr "承接单位"
+
+# key: reference.fields.successors
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Successor"
+msgstr "承接单位"
+
+# key: reference.fields.change_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Change"
+msgstr "变更类型"
+
+# key: reference.fields.reorganization_date
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Effective date"
+msgstr "重组生效日期"
+
+# key: reference.help.reorganization_date
+#: ninefruits/organization/admin.py
+msgid "The unit ends the day before this date; the successor takes over from this date."
+msgstr "原单位在此日期前一天结束，承接单位自此日期起接管。"
+
+# key: common.reason
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Type"
+msgstr "类型"
+
+# key: reference.fields.parent
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Parent"
+msgstr "上级"
+
+# key: reference.actions.reorganize
+#: ninefruits/organization/admin.py
+msgid "Reorganize"
+msgstr "组织重组"
+
+# key: reference.notifications.reorganized
+#: ninefruits/organization/admin.py
+msgid "Reorganization recorded."
+msgstr "已记录组织重组。"
+
+# key: validation.between.numeric
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s 必须介于 %(min)s - %(max)s 之间。"
+
+# key: reference.fields.standard_duration_years
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Standard duration (years)"
+msgstr "学制（年）"
+
+# key: reference.fields.degree_level
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Degree level"
+msgstr "学位层次"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Org unit"
+msgstr "组织单位"
+
+# key: reference.degree_levels.associate
+#: ninefruits/organization/enums.py
+msgid "Associate"
+msgstr "专科"
+
+# key: reference.degree_levels.bachelor
+#: ninefruits/organization/enums.py
+msgid "Bachelor"
+msgstr "学士"
+
+# key: reference.degree_levels.master
+#: ninefruits/organization/enums.py
+msgid "Master"
+msgstr "硕士"
+
+# key: reference.degree_levels.doctorate
+#: ninefruits/organization/enums.py
+msgid "Doctorate"
+msgstr "博士"
+
+# key: reference.degree_levels.certificate
+#: ninefruits/organization/enums.py
+msgid "Certificate"
+msgstr "结业证书"
+
+# key: reference.degree_levels.non_degree
+#: ninefruits/organization/enums.py
+msgid "Non-degree"
+msgstr "非学位"
+
+# key: reference.org_unit_change_types.renamed
+#: ninefruits/organization/enums.py
+msgid "Renamed"
+msgstr "更名"
+
+# key: reference.org_unit_change_types.merged
+#: ninefruits/organization/enums.py
+msgctxt "reference"
+msgid "Merged"
+msgstr "合并"
+
+# key: reference.org_unit_change_types.split
+#: ninefruits/organization/enums.py
+msgid "Split"
+msgstr "拆分"
+
+# key: reference.org_unit_change_types.moved
+#: ninefruits/organization/enums.py
+msgid "Moved"
+msgstr "隶属变更"
+
+# key: reference.fields.code
+#: ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: reference.fields.is_academic
+#: ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Academic"
+msgstr "教学单位"
+
+# key: reference.fields.sort_order
+#: ninefruits/organization/models/org_unit.py
+msgid "Order"
+msgstr "排序"
+
+# key: reference.resources.org_unit_types.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit type"
+msgstr "组织单位类型"
+
+# key: reference.resources.org_unit_types.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit types"
+msgstr "组织单位类型"
+
+# key: reference.fields.short_name
+#: ninefruits/organization/models/org_unit.py
+msgid "Short name"
+msgstr "简称"
+
+# key: reference.resources.org_units.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit"
+msgstr "组织单位"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org units"
+msgstr "组织单位"
+
+# key: reference.fields.degree_title
+#: ninefruits/organization/models/program.py
+msgid "Degree title"
+msgstr "学位名称"
+
+# key: reference.fields.allows_second_major
+#: ninefruits/organization/models/program.py
+msgid "Accepts second majors"
+msgstr "接受第二专业"
+
+# key: reference.fields.allows_minor
+#: ninefruits/organization/models/program.py
+msgid "Accepts minors"
+msgstr "接受辅修"
+
+# key: reference.resources.programs.label
+#: ninefruits/organization/models/program.py
+msgid "program"
+msgstr "专业项目"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/organization/models/program.py
+msgid "programs"
+msgstr "专业项目"

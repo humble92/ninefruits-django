@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,6 +107,12 @@ msgstr "设置"
 msgctxt "admin"
 msgid "Dashboard"
 msgstr "仪表板"
+
+# key: assessment.portal.cancel
+#: ninefruits/adminpanel/templates/adminpanel/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "取消"
 
 #: ninefruits/adminpanel/templates/adminpanel/dashboard.html
 #, python-format

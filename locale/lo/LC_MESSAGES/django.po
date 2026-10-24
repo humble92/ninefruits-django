@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ninefruits\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
 "Language: lo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,7 +73,7 @@ msgid " By %(filter_title)s "
 msgstr " ຕາມ %(filter_title)s "
 
 # vendor: Django/allauth/unfold
-#: ninefruits/i18n/vendor_strings.py ninefruits/security/admin.py
+#: ninefruits/i18n/vendor_strings.py
 msgid "Yes"
 msgstr "ແມ່ນ"
 
@@ -1075,24 +1075,6 @@ msgstr "ທາງເລືອກອື່ນ"
 msgid "Use authenticator app or code"
 msgstr "ໃຊ້ແອັບຢືນຢັນ ຫຼື ລະຫັດ"
 
-# key: authentication.fields.password
-#: ninefruits/security/forms.py templates/account/login.html templates/account/reauthenticate.html
-msgctxt "authentication"
-msgid "Password"
-msgstr "ລະຫັດຜ່ານ"
-
-# key: authentication.login.remember_me
-#: ninefruits/security/forms.py templates/account/login.html
-msgid "Keep me signed in"
-msgstr "ຈື່ການເຂົ້າລະບົບໄວ້"
-
-# key: admin.settings.security.mfa_section
-# key: authentication.two_factor.title
-# key: security.mfa.title
-#: ninefruits/security/views.py templates/mfa/two_factor_challenge.html
-msgid "Two-factor authentication"
-msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
-
 # key: admissions.public.sign_in
 # key: authentication.login.title
 # key: authentication.login.submit
@@ -1100,6 +1082,17 @@ msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
 msgctxt "authentication"
 msgid "Sign in"
 msgstr "ເຂົ້າລະບົບ"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "ລະຫັດຜ່ານ"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "ຈື່ການເຂົ້າລະບົບໄວ້"
 
 # key: authentication.confirm_password.title
 #: templates/account/reauthenticate.html
@@ -1117,6 +1110,13 @@ msgstr "ເພື່ອຄວາມປອດໄພ, ກະລຸນາຢືນ�
 msgctxt "security"
 msgid "Confirm"
 msgstr "ຢືນຢັນ"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
 
 # key: authentication.two_factor.instructions
 #: templates/mfa/two_factor_challenge.html

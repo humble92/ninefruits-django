@@ -30,6 +30,7 @@ dependencies = [
     "pillow>=13.0.0",
     "polib>=1.2.0",
     "psycopg[binary,pool]>=3.3.6",
+    "pycountry>=26.2.16",
     "pydantic>=2.14.1",
     "python-magic>=0.4.27",
     "qrcode>=8.2",

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ninefruits\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
 "Language: zh-hans\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -73,7 +73,7 @@ msgid " By %(filter_title)s "
 msgstr " 按 %(filter_title)s "
 
 # vendor: Django/allauth/unfold
-#: ninefruits/i18n/vendor_strings.py ninefruits/security/admin.py
+#: ninefruits/i18n/vendor_strings.py
 msgid "Yes"
 msgstr "是"
 
@@ -1075,24 +1075,6 @@ msgstr "可选项"
 msgid "Use authenticator app or code"
 msgstr "请使用认证APP或代码"
 
-# key: authentication.fields.password
-#: ninefruits/security/forms.py templates/account/login.html templates/account/reauthenticate.html
-msgctxt "authentication"
-msgid "Password"
-msgstr "密码"
-
-# key: authentication.login.remember_me
-#: ninefruits/security/forms.py templates/account/login.html
-msgid "Keep me signed in"
-msgstr "保持登录状态"
-
-# key: admin.settings.security.mfa_section
-# key: authentication.two_factor.title
-# key: security.mfa.title
-#: ninefruits/security/views.py templates/mfa/two_factor_challenge.html
-msgid "Two-factor authentication"
-msgstr "双重身份验证"
-
 # key: admissions.public.sign_in
 # key: authentication.login.title
 # key: authentication.login.submit
@@ -1100,6 +1082,17 @@ msgstr "双重身份验证"
 msgctxt "authentication"
 msgid "Sign in"
 msgstr "登录"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "密码"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "保持登录状态"
 
 # key: authentication.confirm_password.title
 #: templates/account/reauthenticate.html
@@ -1117,6 +1110,13 @@ msgstr "为了您的安全，请确认密码后继续。"
 msgctxt "security"
 msgid "Confirm"
 msgstr "确认"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "双重身份验证"
 
 # key: authentication.two_factor.instructions
 #: templates/mfa/two_factor_challenge.html
