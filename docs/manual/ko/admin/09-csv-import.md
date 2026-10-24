@@ -1,6 +1,6 @@
 # 9. CSV 가져오기
 
-조직 단위, 프로그램, 건물, 강의실, 코드 데이터 목록 화면 위쪽 **CSV 가져오기** 버튼을 쓴다(`기준정보 CSV 가져오기` 권한). 학적, 교원, 교과목, 수강신청 제한 가져오기는 해당 Phase에서 같은 방식으로 추가된다. 아주 큰 파일은 IT 운영자가 `reference_import` 명령으로 같은 방식으로 가져올 수 있다.
+조직 단위, 프로그램, 건물, 강의실, 코드 데이터 목록 화면 위쪽 **CSV 가져오기** 버튼을 쓴다(`기준정보 CSV 가져오기` 권한). 학적, 교원, 교과목, 수강신청 제한도 같은 방식으로 가져온다(아래). 아주 큰 파일은 IT 운영자가 `reference_import` 명령으로 같은 방식으로 가져올 수 있다.
 
 ## 공통 규칙
 
@@ -55,3 +55,21 @@ student_number,program,admission_date,year_level,status,family_name,given_name,n
 ```
 
 교과목(Phase 4) 가져오기는 해당 기능과 함께 추가된다.
+
+## 수강신청 제한
+
+**수강신청 > 수강신청 제한** 목록 위쪽의 **CSV 가져오기**(`수강신청 제한 설정·해제, 규칙 예외 허용` 권한) 또는 `uv run manage.py reference_import registration_holds`. 레거시 `SRDENY` 자료나 재무 부서의 미납자 명단을 넣을 때 쓴다.
+
+| 필수 열 | 선택 열 |
+|---|---|
+| `student_number`, `hold_type`(`unregistered`, `financial`, `academic`, `administrative`, `other`), `reason` | `starts_at`(기본: 가져온 시각), `ends_at`, `blocks_registration`(기본 1), `blocks_grades`, `blocks_certificates` |
+
+- 행마다 새 제한을 만든다(출처 `import`). 같은 파일을 두 번 가져오면 제한이 두 번 생기므로, 다시 가져오기 전에 목록을 확인한다.
+- 시각은 `2027-03-15` 또는 `2027-03-15 09:00` 형식이다(시간대가 없으면 서버 시간대 UTC). `ends_at`은 `starts_at`보다 뒤여야 한다.
+- 없는 학번의 행은 실패한다. 해제는 화면에서 사유와 함께 한다([20장](20-registration.md)).
+
+```csv
+student_number,hold_type,reason,ends_at
+202312345,financial,2027-1 등록금 미납,
+202254321,academic,학사경고 상담 필요,2027-03-15
+```

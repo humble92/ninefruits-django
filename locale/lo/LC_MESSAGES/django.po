@@ -920,6 +920,7 @@ msgid "Are you sure you want to sign out?"
 msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກຈາກລະບົບ?"
 
 # vendor: Django/allauth/unfold
+# key: authentication.fields.email
 #: ninefruits/i18n/vendor_strings.py
 msgid "Email"
 msgstr "ອີເມວ"
@@ -1195,3 +1196,35 @@ msgstr "ຕັ້ງຄ່າດຽວນີ້"
 #, python-format
 msgid "Sign in with %(provider)s"
 msgstr "ເຂົ້າລະບົບດ້ວຍ %(provider)s"
+
+# key: admissions.register.title
+msgid "Create an account"
+msgstr "ສ້າງບັນຊີ"
+
+# key: admissions.register.instructions
+msgid "For applicants. Staff and current students already have an account."
+msgstr "ສຳລັບຜູ້ສະໝັກ. ພະນັກງານ ແລະ ນັກສຶກສາປັດຈຸບັນມີບັນຊີຢູ່ແລ້ວ."
+
+# key: people.help.romanized
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "ຊື່ຕາມກົດໝາຍເປັນຕົວອັກສອນລາຕິນ ຕາມໜັງສືຜ່ານແດນ. ເພີ່ມຊື່ທີ່ຂຽນໃນພາສາອື່ນຢູ່ຂ້າງລຸ່ມ."
+
+# key: authentication.fields.password_confirmation
+msgid "Confirm password"
+msgstr "ຢືນຢັນລະຫັດຜ່ານ"
+
+# key: admissions.register.submit
+msgid "Create account"
+msgstr "ສ້າງບັນຊີ"
+
+# key: admissions.register.have_account
+msgid "Already have an account?"
+msgstr "ມີບັນຊີແລ້ວບໍ?"
+
+# key: admissions.register.prompt
+msgid "Want to apply?"
+msgstr "ຕ້ອງການສະໝັກບໍ?"
+
+# key: admissions.register.see_cycles
+msgid "See open admissions"
+msgstr "ເບິ່ງຮອບທີ່ເປີດຮັບ"

@@ -102,7 +102,7 @@
 ### `reference_import`
 
 - 용도: 기준정보 CSV를 가져온다. 관리 화면의 **CSV 가져오기**와 같은 가져오기 규칙을 쓴다(코드로 기존 행을 찾아 갱신, 빈 번역 칸은 기존 값 유지, 실패한 행만 따로 기록).
-- 인수: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students`(학적, Phase 2), `instructors`(교원, Phase 2), `courses`(교과목 버전, Phase 4. 수강 제한은 Phase 5에서 추가) / `file` 머리글 행이 있는 UTF-8 CSV.
+- 인수: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students`(학적, Phase 2), `instructors`(교원, Phase 2), `courses`(교과목 버전, Phase 4), `registration_holds`(수강신청 제한, Phase 5) / `file` 머리글 행이 있는 UTF-8 CSV.
 - 옵션: `--actor=`(필수. 가져오기 기록이 이 계정으로 남고 결과가 이 계정의 **CSV 가져오기** 화면에 보인다), `--chunk=100`(Celery 작업당 행 수), `--dry-run`(머리글 검사와 행 수만).
 - 감사: 기록 (유형, 파일 이름, 행 수, 가져오기 번호, 실패 행 수)
 - 열 형식: [관리자 매뉴얼 9장](../admin/09-csv-import.md).
@@ -164,6 +164,23 @@
 
 ## 입학 (Phase 3)
 
+### `admission_matriculate`
+
+- 용도: 모집 회차의 등록 확정 지원자에게 학적을 만든다(새 학번). 관리 화면 **입학 > 지원서**의 일괄 **학적 생성**과 같다(`MatriculateApplicant`). 지원자마다 따로 처리하므로 한 명이 실패해도 나머지는 계속한다.
+- 인수/옵션: `cycle` 모집 회차 코드, `--term=`(필수. 입학 학기 코드, 예: `2027-SP`. 입학일은 학기 첫날), `--actor=`(필수. `합격자 학적 생성` 권한이 있는 계정. 그 계정의 권한 범위 안의 지원자만 처리), `--dry-run`(대상 목록만).
+- 감사: 기록 (회차, 학기, 대상 수, 생성 수, 실패한 수험 번호). 지원자별로 업무 감사(`application.matriculated`)도 남는다.
+- 종료 코드: 회차나 학기 코드가 없거나 `--actor`가 없으면 1, 실패한 지원자가 있으면 2.
+- 예시: `uv run manage.py admission_matriculate DEMO-2027-REG --term=2027-SP --actor=admissions@example.ac.kr --dry-run`
+- 실패 시: `Only accepted offers without a student record ...`는 이미 학적이 있거나 등록 확정 상태가 아닌 경우, `The program is not in effect on the admission date.`는 입학일에 프로그램이 유효하지 않은 경우다(기준정보 > 프로그램의 적용 기간 확인). `not in your scope`는 `--actor` 계정의 권한 범위 밖이다.
+
+### `admission_expire_drafts`
+
+- 용도: 마감된 회차의 작성 중 지원서와, 설정한 기간(**설정 > 입학 > 작성 중 지원서 만료(일)**, 기본 90일) 동안 고치지 않은 작성 중 지원서를 **기한 만료**로 바꾼다. 만료된 지원서는 같은 회차의 새 지원을 막지 않는다.
+- 실행 시점: 스케줄(매일 03:10, Celery beat 작업 `admission.expire_drafts`가 이 명령을 실행).
+- 옵션: `--dry-run`(대상 수만).
+- 감사: 기록 (만료한 수)
+- 예시: `uv run manage.py admission_expire_drafts --dry-run`
+
 ## 개설강좌 (Phase 4)
 
 ### `section_copy`
@@ -184,6 +201,39 @@
 - 예시: `uv run manage.py schedule_check_conflicts 2027-SP`
 
 ## 수강신청 (Phase 5)
+
+### `registration_preflight`
+
+- 용도: 수강신청을 열기 전에 학기를 점검한다. 수강신청·수강 정정 기간, 규칙 세트, 공개 강좌 수, 정원 0인 강좌, 정원을 넘는 좌석 할당, 세션 시작일에 유효하지 않은 교과목 버전, 학점 상한이 적용되지 않는 재학생 수, 수강신청 제한이 걸린 학생 수를 보여 준다.
+- 인수: `term` 학기 코드(예: `2027-SP`).
+- 감사: 기록 안 함 (조회만)
+- 종료 코드: 문제가 있으면 2. 규칙 세트가 없으면 문제가 아니라 참고로 보여 준다(규칙 기본값 적용).
+- 예시: `uv run manage.py registration_preflight 2027-SP`
+
+### `registration_simulate`
+
+- 용도: 학생이 지금(또는 지정 시각에) 강좌를 신청하면 어떻게 되는지 규칙별 결과를 보여 준다. 저장하지 않고 시도 기록도 남기지 않는다. "왜 신청이 안 되나요?" 문의에 쓴다.
+- 인수: `student-number` 학번, `section` `과목코드-분반`(예: `CSE2010-01`).
+- 옵션: `--term=`(학기 코드. 기본은 그 분반이 있는 가장 최근 학기), `--at=`(판단 시각. 예: `"2027-02-10 10:00 Asia/Seoul"`).
+- 감사: 기록 안 함 (조회만)
+- 출력 해석: 규칙마다 통과/실패, 차단/경고, 메시지. 예외(override)가 적용된 규칙은 실패로 보이지만 차단하지 않는다. 정원은 규칙 표 아래에 따로 나온다.
+- 종료 코드: 신청이 거절될 상황이면 2.
+- 예시: `uv run manage.py registration_simulate 202612345 CSE2010-01 --at="2027-02-10 10:00 Asia/Seoul"`
+
+### `waitlist_promote`
+
+- 용도: 빈자리가 있는 강좌의 대기자를 순서대로 신청 처리한다. 승격 때 모든 규칙을 다시 확인하고, 규칙을 통과하지 못한 대기자는 대기에서 제외(사유 기록)한다. 수강신청·수강 정정 기간이 모두 닫힌 강좌의 대기는 만료한다. 학생에게 결과 메일을 보낸다.
+- 인수/옵션: `term?` 학기 코드(기본: 대기자가 있는 모든 학기), `--actor=`.
+- 감사: 기록 (강좌 수, 승격, 제외, 만료 수)
+- 실행 시점: 취소·철회와 좌석 할당 해제 때 해당 강좌만 큐 작업으로 즉시 처리된다. 이 명령은 매시간 스케줄로 빠진 것을 처리하는 안전망이다.
+- 예시: `uv run manage.py waitlist_promote 2027-SP --actor=registrar@example.ac.kr`
+
+### `registration_release_reserved_seats`
+
+- 용도: 전환 시각이 지난 좌석 할당(예: 전공자 유보석)을 처리 완료로 표시하고 그 강좌의 대기자 승격 작업을 큐에 넣는다. 유보석은 전환 시각이 지나면 계산상 바로 일반석이 되므로, 이 명령은 대기자에게 자리를 넘기는 역할만 한다.
+- 감사: 기록 안 함 (5분마다 실행. 승격 결과는 수강신청 기록에 남는다)
+- 실행 시점: 스케줄(5분마다, Celery beat 작업 `registration.release_reserved_seats`). 승격 작업은 강좌별 `registration.promote_waitlist`(Redis 잠금으로 한 강좌에 하나씩).
+- 예시: `uv run manage.py registration_release_reserved_seats`
 
 ## 성적 (Phase 6)
 

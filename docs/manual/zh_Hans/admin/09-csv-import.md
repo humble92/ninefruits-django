@@ -55,3 +55,21 @@ student_number,program,admission_date,year_level,status,family_name,given_name,n
 ```
 
 课程（Phase 4）的导入随相应功能一起添加。
+
+## 选课限制
+
+使用 **选课 > 选课限制** 列表上方的 **CSV 导入**（`设置和解除选课限制，批准规则例外` 权限）或 `uv run manage.py reference_import registration_holds`。用于导入旧系统（YUSTIC）的 `SRDENY` 数据或财务部门的欠费名单。
+
+| 必填列 | 可选列 |
+|---|---|
+| `student_number`、`hold_type`（`unregistered`、`financial`、`academic`、`administrative`、`other`）、`reason` | `starts_at`（默认：导入时刻）、`ends_at`、`blocks_registration`（默认 1）、`blocks_grades`、`blocks_certificates` |
+
+- 每行创建一条新限制（来源 `import`）。同一文件导入两次会生成两条限制，因此重新导入前请先确认列表。
+- 时间写作 `2027-03-15` 或 `2027-03-15 09:00`（没有时区时按服务器时区 UTC）。`ends_at` 必须晚于 `starts_at`。
+- 学号不存在的行会失败。解除在界面上连同原因一起办理（[第 20 章](20-registration.md)）。
+
+```csv
+student_number,hold_type,reason,ends_at
+202312345,financial,2027-1 学费未缴,
+202254321,academic,需要学业警告面谈,2027-03-15
+```

@@ -4,6 +4,7 @@ from typing import Any
 
 from django.contrib.auth import get_backends
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 from django.utils import timezone
 
@@ -71,9 +72,13 @@ class User(AbstractBaseUser):
         return self.last_login
 
     def display_name(self) -> str:
-        """The person's name when linked, otherwise the account's own name."""
+        """The person's name when linked, otherwise the account's own name (also when row level
+        security hides the person, e.g. the verification mail sent during applicant sign-up)."""
         if self.person_id is not None:
-            person = self.person
+            try:
+                person = self.person
+            except ObjectDoesNotExist:
+                person = None
             if person is not None:
                 return str(person.display_name())
         return self.name or self.email

@@ -1,0 +1,910 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 18:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admissions.errors.no_person
+#: actions/applications.py
+msgid "This account is not linked to a person."
+msgstr "인물과 연결되지 않은 계정입니다."
+
+# key: admissions.errors.cycle_closed
+#: actions/applications.py
+msgid "This cycle is not taking applications."
+msgstr "접수 중인 회차가 아닙니다."
+
+# key: admissions.errors.already_applied
+#: actions/applications.py
+msgid "You already have an open application in this cycle."
+msgstr "이 회차에 진행 중인 지원서가 이미 있습니다."
+
+# key: admissions.errors.program_not_offered
+#: actions/applications.py
+msgid "This program is not offered in the cycle."
+msgstr "이 회차에서 모집하지 않는 프로그램입니다."
+
+# key: admissions.errors.not_draft
+#: actions/applications.py
+msgid "Only applications that have not been submitted can be changed."
+msgstr "제출하지 않은 지원서만 고칠 수 있습니다."
+
+#: actions/applications.py
+msgid "Select a valid choice."
+msgstr "올바른 항목을 선택하세요."
+
+#: actions/applications.py
+msgid "The birth date must be a date before today."
+msgstr "생년월일은 오늘 이전 날짜여야 합니다."
+
+# key: admissions.errors.identity_locked
+#: actions/applications.py
+msgid "Your name and birth date are kept by the registrar's office."
+msgstr "이름과 생년월일은 학적 담당 부서에서 관리합니다."
+
+# key: admissions.errors.document_type_not_requested
+#: actions/applications.py
+msgid "This cycle does not ask for this document."
+msgstr "이 회차에서 요구하지 않는 서류입니다."
+
+# key: admissions.errors.document_too_large
+#: actions/applications.py
+#, python-format
+msgid "The file is larger than %(mb)s MB."
+msgstr "파일이 %(mb)s MB보다 큽니다."
+
+# key: admissions.errors.document_type_invalid
+#: actions/applications.py
+msgid "Upload a PDF, JPEG or PNG file."
+msgstr "PDF, JPEG, PNG 파일을 올려 주세요."
+
+# key: admissions.errors.required_field
+#: actions/applications.py
+msgid "This field is required to submit."
+msgstr "제출하려면 입력해야 합니다."
+
+# key: admissions.errors.documents_missing
+#: actions/applications.py
+#, python-format
+msgid "Upload the required documents: %(documents)s."
+msgstr "필수 서류를 올려 주세요: %(documents)s"
+
+# key: admissions.errors.invalid_transition
+#: actions/applications.py actions/decisions.py
+msgid "This is not possible in the application's current status."
+msgstr "지원서의 현재 상태에서는 할 수 없습니다."
+
+# key: admissions.errors.reason_required
+#: actions/decisions.py
+msgid "Give the reason when recording a response for the applicant."
+msgstr "지원자 대신 응답을 입력할 때는 사유가 필요합니다."
+
+# key: admissions.errors.no_open_offer
+#: actions/decisions.py
+msgid "There is no offer to answer."
+msgstr "응답할 합격 통지가 없습니다."
+
+# key: admissions.errors.offer_expired
+#: actions/decisions.py
+msgid "The deadline to accept this offer has passed. Contact the admissions office."
+msgstr "등록 의사 응답 기한이 지났습니다. 입학처에 문의하세요."
+
+# key: admissions.errors.not_ready_to_matriculate
+#: actions/matriculation.py
+msgid "Only accepted offers without a student record can be matriculated."
+msgstr "등록을 확정했고 학적이 없는 지원서만 학적을 만들 수 있습니다."
+
+# key: admissions.errors.registration_closed
+#: actions/registration.py forms.py
+msgid "Creating an account is not available. Contact the admissions office."
+msgstr "계정 만들기를 사용할 수 없습니다. 입학처에 문의하세요."
+
+#: actions/registration.py
+msgid "The email has already been taken."
+msgstr "이미 사용 중인 이메일입니다."
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: admin/applications.py
+msgid "Admission term"
+msgstr "입학 학기"
+
+# key: admissions.help.admission_term
+#: admin/applications.py
+msgid "The term the new students start in. Their admission date is the term's first day."
+msgstr "신입생이 시작하는 학기. 입학일은 학기 첫날이 된다."
+
+# key: admissions.fields.decision_note
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Decision note"
+msgstr "결정 의견"
+
+# key: admissions.fields.response
+#: admin/applications.py
+msgid "Response"
+msgstr "응답"
+
+# key: admissions.portal.accept
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Accept the offer"
+msgstr "등록하겠습니다"
+
+# key: admissions.portal.decline
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Decline"
+msgstr "등록하지 않겠습니다"
+
+# key: common.reason
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: admissions.sections.application
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Application"
+msgstr "지원 내용"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: admin/applications.py
+msgid "Applicant"
+msgstr "지원자"
+
+# key: admissions.sections.decision
+#: admin/applications.py
+msgid "Decision"
+msgstr "결정"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/applications.py
+msgctxt "people"
+msgid "Name"
+msgstr "이름"
+
+# key: security.scope_types.program
+#: admin/applications.py models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgctxt "security"
+msgid "Program"
+msgstr "프로그램"
+
+# key: admissions.fields.cycle
+#: admin/applications.py models.py templates/admission/portal/applications.html
+msgid "Admission cycle"
+msgstr "모집 회차"
+
+# key: admissions.fields.status
+#: admin/applications.py models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Status"
+msgstr "상태"
+
+# key: admissions.fields.decision_released
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Released"
+msgstr "발표됨"
+
+# key: people.fields.admission_type
+#: admin/applications.py models.py
+msgid "Admission type"
+msgstr "입학 구분"
+
+# key: admissions.fields.previous_school_country
+#: admin/applications.py models.py templates/admission/portal/application_detail.html
+msgid "Country of previous school"
+msgstr "출신 학교 국가"
+
+# key: people.fields.birth_date
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Birth date"
+msgstr "생년월일"
+
+# key: people.fields.contact_email
+#: admin/applications.py
+msgid "Contact email"
+msgstr "연락용 이메일"
+
+# key: people.fields.phone
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Phone"
+msgstr "전화번호"
+
+# key: admissions.fields.earlier_records
+#: admin/applications.py
+msgid "Earlier student records"
+msgstr "이전 학적"
+
+# key: common.none
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "None"
+msgstr "없음"
+
+# key: admissions.sections.documents
+#: admin/applications.py admin/cycles.py models.py templates/admission/portal/application_detail.html
+msgid "Documents"
+msgstr "제출 서류"
+
+# key: admissions.fields.decided_by
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Decided by"
+msgstr "결정자"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/applications.py
+msgid "Student number"
+msgstr "학번"
+
+# key: admissions.actions.start_review
+#: admin/applications.py
+msgid "Start review"
+msgstr "검토 시작"
+
+# key: admissions.actions.admit
+#: admin/applications.py
+msgid "Admit"
+msgstr "합격"
+
+# key: admissions.notifications.decided
+#: admin/applications.py
+msgid "Decision saved. The applicant sees it once it is released."
+msgstr "결정을 저장했습니다. 발표 후 지원자에게 보입니다."
+
+# key: admissions.actions.reject
+#: admin/applications.py
+msgctxt "admissions"
+msgid "Reject"
+msgstr "불합격"
+
+# key: admissions.actions.release_decision
+#: admin/applications.py
+msgid "Release decision"
+msgstr "결과 발표"
+
+# key: admissions.actions.matriculate
+#: admin/applications.py
+msgid "Create student record"
+msgstr "학적 생성"
+
+# key: admissions.notifications.matriculated
+#: admin/applications.py
+#, python-format
+msgid "Student record %(number)s created."
+msgstr "학적(%(number)s)을 만들었습니다."
+
+# key: admissions.actions.record_response
+#: admin/applications.py
+msgid "Record offer response"
+msgstr "등록 의사 대리 입력"
+
+# key: admissions.actions.release_decisions
+#: admin/applications.py admin/cycles.py
+msgid "Release decisions"
+msgstr "결과 발표"
+
+# key: admissions.notifications.matriculated_bulk
+#: admin/applications.py
+#, python-format
+msgid "%(count)s student record(s) created, %(skipped)s skipped."
+msgstr "학적 %(count)s건을 만들었고 %(skipped)s건은 건너뛰었습니다."
+
+# key: admissions.help.release_decisions
+#: admin/cycles.py
+msgid "Applicants see their decision and get an email. A released decision can no longer be changed."
+msgstr "지원자가 결과를 보고 이메일을 받는다. 발표한 결정은 바꿀 수 없다."
+
+# key: admissions.fields.description
+#: admin/cycles.py models.py
+msgctxt "admissions"
+msgid "Description"
+msgstr "안내"
+
+#: admin/cycles.py
+msgid "Use only letters, numbers, dashes and underscores."
+msgstr "영문자, 숫자, 하이픈(-), 밑줄(_)만 쓸 수 있습니다."
+
+#: admin/cycles.py models.py
+msgid "program offered"
+msgstr "모집 프로그램"
+
+# key: admissions.sections.programs
+#: admin/cycles.py models.py
+msgid "Programs offered"
+msgstr "모집 프로그램"
+
+# key: admissions.resources.applications.plural_label
+#: admin/cycles.py models.py
+msgid "applications"
+msgstr "지원서"
+
+#: admin/cycles.py models.py
+msgid "document"
+msgstr "제출 서류"
+
+# key: admissions.sections.cycle
+#: admin/cycles.py
+msgid "Cycle"
+msgstr "회차"
+
+# key: admissions.fields.closes_at
+#: admin/cycles.py models.py
+msgctxt "admissions"
+msgid "Closes"
+msgstr "접수 마감"
+
+# key: admissions.fields.rolling
+#: admin/cycles.py
+msgid "Rolling (no deadline)"
+msgstr "상시 접수(마감 없음)"
+
+#: admin/cycles.py
+msgid "No decisions to release."
+msgstr "발표할 결정이 없습니다."
+
+# key: admissions.notifications.released
+#: admin/cycles.py
+#, python-format
+msgid "One decision released."
+msgid_plural "%(count)s decisions released."
+msgstr[0] "%(count)s건을 발표했습니다."
+
+# key: admissions.application_statuses.draft
+#: enums.py
+msgctxt "admissions"
+msgid "Draft"
+msgstr "작성 중"
+
+# key: admissions.application_statuses.submitted
+#: enums.py
+msgctxt "admissions.application_statuses"
+msgid "Submitted"
+msgstr "제출"
+
+# key: admissions.application_statuses.under_review
+#: enums.py
+msgid "Under review"
+msgstr "검토 중"
+
+# key: admissions.application_statuses.admitted
+#: enums.py
+msgctxt "admissions"
+msgid "Admitted"
+msgstr "합격"
+
+# key: admissions.application_statuses.rejected
+#: enums.py
+msgid "Not admitted"
+msgstr "불합격"
+
+# key: admissions.application_statuses.confirmed
+#: enums.py
+msgid "Enrollment confirmed"
+msgstr "등록 확정"
+
+# key: admissions.application_statuses.withdrawn
+#: enums.py
+msgctxt "admissions"
+msgid "Withdrawn"
+msgstr "포기"
+
+# key: admissions.application_statuses.expired
+#: enums.py
+msgctxt "admissions"
+msgid "Expired"
+msgstr "기한 만료"
+
+# key: people.fields.family_name
+#: forms.py templates/admission/portal/application_detail.html
+msgid "Family name"
+msgstr "성(로마자)"
+
+# key: people.fields.given_name
+#: forms.py templates/admission/portal/application_detail.html
+msgid "Given name"
+msgstr "이름(로마자)"
+
+# key: admissions.register.email_help
+#: forms.py
+msgid "Your personal email. It stays your sign-in name after you graduate."
+msgstr "개인 이메일. 졸업 후에도 로그인 이름으로 계속 쓰입니다."
+
+# key: reference.fields.code
+#: models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: admissions.help.cycle_code
+#: models.py
+msgid "Short identifier used in application numbers, e.g. 2027-SPRING."
+msgstr "수험 번호에 쓰이는 짧은 식별자. 예: 2027-SPRING"
+
+# key: reference.fields.name
+#: models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "이름"
+
+# key: admissions.fields.opens_at
+#: models.py
+msgctxt "admissions"
+msgid "Opens"
+msgstr "접수 시작"
+
+# key: admissions.help.closes_at
+#: models.py
+msgid "Leave empty for rolling admission without a deadline."
+msgstr "비워 두면 마감 없는 상시 접수다."
+
+# key: admissions.fields.is_published
+#: models.py
+msgctxt "admissions.fields"
+msgid "Published"
+msgstr "공개"
+
+# key: admissions.help.is_published
+#: models.py
+msgid "Applicants can see and apply to published cycles between the opening and closing times."
+msgstr "공개된 회차는 접수 기간 동안 지원자에게 보이고 지원할 수 있다."
+
+# key: admissions.fields.should_release_decisions_immediately
+#: models.py
+msgid "Release decisions immediately"
+msgstr "결정 즉시 발표"
+
+# key: admissions.help.should_release_decisions_immediately
+#: models.py
+msgid "Tell each applicant as soon as they are decided. Otherwise decisions are released together with the release action."
+msgstr "결정하는 즉시 지원자에게 알린다. 끄면 결과 발표 기능으로 한꺼번에 발표한다."
+
+# key: admissions.fields.offer_response_days
+#: models.py
+msgid "Days to accept an offer"
+msgstr "합격 응답 기한(일)"
+
+# key: admissions.help.offer_response_days
+#: models.py
+msgid "Admitted applicants must accept within this many days after the release. Empty: no deadline."
+msgstr "합격자는 발표 후 이 기간 안에 등록 의사를 밝혀야 한다. 비우면 기한 없음."
+
+# key: admissions.resources.cycles.label
+#: models.py
+msgid "admission cycle"
+msgstr "모집 회차"
+
+# key: admissions.resources.cycles.plural_label
+#: models.py
+msgid "admission cycles"
+msgstr "모집 회차"
+
+#: models.py
+msgid "The closing time must be after the opening time."
+msgstr "접수 마감은 접수 시작 이후여야 합니다."
+
+#: models.py
+msgid "Enter a number between 1 and 365."
+msgstr "1에서 365 사이의 숫자를 입력하세요."
+
+# key: admissions.fields.capacity
+#: models.py
+msgctxt "admissions"
+msgid "Capacity"
+msgstr "모집 인원"
+
+# key: admissions.fields.document_type
+#: models.py
+msgid "Document"
+msgstr "서류"
+
+# key: admissions.fields.is_required
+#: models.py
+msgctxt "admissions"
+msgid "Required"
+msgstr "필수"
+
+# key: admissions.fields.application_number
+#: models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgid "Application number"
+msgstr "수험 번호"
+
+# key: people.sections.person
+# key: people.fields.person
+#: models.py
+msgid "Person"
+msgstr "인물"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: models.py
+msgid "Org unit"
+msgstr "조직 단위"
+
+# key: admissions.fields.previous_school_name
+#: models.py templates/admission/portal/application_detail.html
+msgid "Previous school"
+msgstr "출신 학교"
+
+# key: admissions.fields.previous_graduation_date
+#: models.py templates/admission/portal/application_detail.html
+msgid "Graduation date (previous school)"
+msgstr "출신 학교 졸업(예정)일"
+
+# key: admissions.fields.personal_statement
+#: models.py templates/admission/portal/application_detail.html
+msgid "Personal statement"
+msgstr "자기소개서"
+
+# key: admissions.fields.submitted_at
+#: models.py templates/admission/portal/application_detail.html
+msgctxt "admissions.fields"
+msgid "Submitted"
+msgstr "제출 일시"
+
+# key: admissions.fields.decided_at
+#: models.py
+msgctxt "admissions"
+msgid "Decided"
+msgstr "결정 일시"
+
+# key: admissions.fields.offer_expires_at
+#: models.py
+msgid "Offer deadline"
+msgstr "응답 기한"
+
+# key: people.sections.record
+#: models.py
+msgid "Student record"
+msgstr "학적"
+
+# key: admissions.resources.applications.label
+#: models.py
+msgid "application"
+msgstr "지원서"
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "안녕하세요."
+
+# key: admissions.mail.submitted_intro
+#: notifications.py
+#, python-format
+msgid "We received your application %(number)s for %(program)s (%(cycle)s)."
+msgstr "%(cycle)s %(program)s 지원서(%(number)s)를 접수했습니다."
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"감사합니다.\n"
+"%(app)s"
+
+# key: admissions.mail.submitted_subject
+#: notifications.py
+#, python-format
+msgid "Application %(number)s received"
+msgstr "지원서 %(number)s 접수 확인"
+
+# key: admissions.mail.decision_intro
+#: notifications.py
+#, python-format
+msgid "A decision on your application for %(program)s (%(cycle)s) is available. Sign in to see it."
+msgstr "%(cycle)s %(program)s 지원 결과가 나왔습니다. 로그인해서 확인하세요."
+
+# key: admissions.mail.respond_by
+#: notifications.py
+#, python-format
+msgid "If you are admitted, please answer by %(date)s."
+msgstr "합격한 경우 %(date)s까지 등록 의사를 알려 주세요."
+
+# key: admissions.mail.decision_subject
+#: notifications.py
+#, python-format
+msgid "Decision on application %(number)s"
+msgstr "지원서 %(number)s 결과 안내"
+
+# key: admin.settings.admissions.applicant_registration_enabled
+#: settings_pages.py
+msgid "Applicants can create an account"
+msgstr "지원자 계정 만들기 허용"
+
+# key: admin.settings.admissions.applicant_registration_enabled_help
+#: settings_pages.py
+msgid "Shows \"Create an account\" on the sign-in and admissions pages. Turn off when you do not take online applications."
+msgstr "로그인 화면과 모집 안내 화면에 \"계정 만들기\"를 보여 줍니다. 온라인 접수를 하지 않으면 끄세요."
+
+# key: admin.settings.admissions.draft_expiry_days
+#: settings_pages.py
+msgid "Expire untouched drafts after (days)"
+msgstr "작성 중 지원서 만료(일)"
+
+# key: admin.settings.admissions.draft_expiry_days_help
+#: settings_pages.py
+msgid "Drafts in closed cycles expire regardless."
+msgstr "마감된 회차의 작성 중 지원서는 기간과 관계없이 만료됩니다."
+
+# key: admin.settings.admissions.max_document_size_mb
+#: settings_pages.py
+msgid "Largest document (MB)"
+msgstr "서류 최대 크기(MB)"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: settings_pages.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "입학"
+
+#: templates/admission/admin/matriculate.html
+#, python-format
+msgid "%(counter)s application selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgid_plural "%(counter)s applications selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgstr[0] "지원서 %(counter)s건을 골랐습니다. 등록 확정이 아니거나 이미 학적이 있거나 권한 범위 밖의 지원서는 건너뜁니다."
+
+# key: assessment.portal.cancel
+#: templates/admission/admin/matriculate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "취소"
+
+# key: admissions.portal.title
+#: templates/admission/portal/application_detail.html templates/admission/portal/applications.html views/portal.py
+msgid "My applications"
+msgstr "내 지원서"
+
+# key: admissions.portal.matriculated
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "You are now a student. Your student number is %(number)s."
+msgstr "학생이 되었습니다. 학번은 %(number)s입니다."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My records"
+msgstr "내 학적"
+
+# key: admissions.portal.admitted
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "Congratulations! You are admitted to %(program)s."
+msgstr "축하합니다. %(program)s에 합격했습니다."
+
+# key: admissions.portal.respond_by
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "Please answer by %(date)s."
+msgstr "%(date)s까지 등록 의사를 알려 주세요."
+
+# key: admissions.portal.accept_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Accept the offer?"
+msgstr "등록을 확정할까요?"
+
+# key: admissions.portal.decline_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Decline the offer? This cannot be undone."
+msgstr "등록을 포기할까요? 되돌릴 수 없습니다."
+
+# key: admissions.portal.confirmed
+#: templates/admission/portal/application_detail.html
+msgid "You accepted the offer. Your student record will be created before the term starts."
+msgstr "등록을 확정했습니다. 학기 시작 전에 학적이 만들어집니다."
+
+# key: admissions.portal.rejected
+#: templates/admission/portal/application_detail.html
+msgid "We are sorry, we cannot offer you admission in this cycle."
+msgstr "아쉽지만 이번 모집에서는 합격하지 못했습니다."
+
+# key: admissions.portal.waiting
+#: templates/admission/portal/application_detail.html
+msgid "Your application is being reviewed. You will get an email when the decision is available."
+msgstr "검토 중입니다. 결과가 나오면 이메일로 알려 드립니다."
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: templates/admission/portal/application_detail.html
+msgid "Personal details"
+msgstr "인적 사항"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: templates/admission/portal/application_detail.html
+msgid "Gender"
+msgstr "성별"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: templates/admission/portal/application_detail.html
+msgid "Nationality"
+msgstr "국적"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: templates/admission/portal/application_detail.html
+msgid "Address"
+msgstr "주소"
+
+# key: admissions.portal.identity_locked
+#: templates/admission/portal/application_detail.html
+msgid "Your name and birth date are kept by the registrar's office. You can update contact details under"
+msgstr "이름과 생년월일은 학적 담당 부서에서 관리합니다. 연락처는 다음 화면에서 고칠 수 있습니다:"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My details"
+msgstr "내 정보"
+
+# key: admissions.portal.save_draft
+#: templates/admission/portal/application_detail.html
+msgctxt "admissions"
+msgid "Save draft"
+msgstr "임시 저장"
+
+# key: admissions.portal.submit_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Submit the application? You cannot change it afterwards."
+msgstr "제출할까요? 제출 후에는 고칠 수 없습니다."
+
+# key: admissions.portal.submit
+#: templates/admission/portal/application_detail.html
+msgid "Submit application"
+msgstr "제출"
+
+# key: admissions.portal.withdraw
+#: templates/admission/portal/application_detail.html
+msgid "Withdraw application"
+msgstr "지원 포기"
+
+# key: admissions.portal.withdraw_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Withdraw this application?"
+msgstr "이 지원을 포기할까요?"
+
+# key: admissions.portal.no_applications
+#: templates/admission/portal/applications.html
+msgid "You have no applications yet."
+msgstr "아직 지원서가 없습니다."
+
+# key: admissions.portal.new_application
+#: templates/admission/portal/applications.html
+msgid "Start an application"
+msgstr "새 지원서 작성"
+
+# key: admissions.public.none
+#: templates/admission/portal/applications.html templates/admission/public/index.html
+msgid "No cycle is taking applications right now."
+msgstr "현재 접수 중인 모집이 없습니다."
+
+# key: admissions.portal.start
+#: templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Start"
+msgstr "작성 시작"
+
+# key: admissions.public.title
+#: templates/admission/public/index.html views/public.py
+msgctxt "admissions"
+msgid "Admissions"
+msgstr "입학 지원"
+
+# key: admissions.public.instructions
+#: templates/admission/public/index.html
+msgid "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate."
+msgstr "현재 접수 중인 모집입니다. 개인 이메일로 계정을 만들어 지원하세요. 학생, 졸업생이 되어도 같은 계정을 씁니다."
+
+# key: admissions.public.rolling
+#: templates/admission/public/index.html
+msgid "Applications accepted at any time."
+msgstr "상시 접수"
+
+# key: admissions.public.closes
+#: templates/admission/public/index.html
+#, python-format
+msgid "Applications close %(date)s."
+msgstr "%(date)s 마감"
+
+# key: admissions.public.go_to_applications
+#: templates/admission/public/index.html
+msgid "Go to my applications"
+msgstr "내 지원서로 가기"
+
+# key: admissions.public.register
+#: templates/admission/public/index.html
+msgid "Create an account to apply"
+msgstr "계정 만들고 지원하기"
+
+# key: admissions.public.sign_in
+# key: authentication.login.title
+# key: authentication.login.submit
+#: templates/admission/public/index.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "로그인"
+
+# key: admissions.verify_email.title
+#: templates/admission/public/verify_email.html views/public.py
+msgid "Verify your email"
+msgstr "이메일 확인"
+
+# key: admissions.verify_email.instructions
+#: templates/admission/public/verify_email.html
+#, python-format
+msgid "We sent a link to %(email)s. Open it to verify your address before applying."
+msgstr "%(email)s로 확인 링크를 보냈습니다. 지원하기 전에 링크를 열어 주소를 확인하세요."
+
+# key: admissions.verify_email.resend
+#: templates/admission/public/verify_email.html
+msgid "Send the link again"
+msgstr "링크 다시 보내기"
+
+# key: authentication.logout
+#: templates/admission/public/verify_email.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "로그아웃"
+
+#: views/portal.py
+msgid "This field is required."
+msgstr "이 항목은 필수입니다."
+
+# key: admissions.portal.offer_accepted
+#: views/portal.py
+msgid "You accepted the offer. The registrar's office will create your student record."
+msgstr "등록을 확정했습니다. 학적 담당 부서에서 학적을 만듭니다."
+
+# key: admissions.portal.offer_declined
+#: views/portal.py
+msgid "You declined the offer."
+msgstr "등록을 포기했습니다."
+
+# key: admissions.portal.withdrawn
+#: views/portal.py
+msgid "The application was withdrawn."
+msgstr "지원을 포기했습니다."
+
+# key: admissions.portal.saved
+#: views/portal.py
+msgid "Draft saved."
+msgstr "임시 저장했습니다."
+
+# key: admissions.portal.submitted
+#: views/portal.py
+msgid "Your application was submitted. We sent a confirmation to your email."
+msgstr "제출했습니다. 접수 확인 메일을 보냈습니다."
+
+# key: portal.navigation.applications
+#: views/portal.py
+msgctxt "portal"
+msgid "Admissions"
+msgstr "입학 지원"
+
+# key: admissions.verify_email.sent
+#: views/public.py
+msgid "A new link was sent."
+msgstr "새 링크를 보냈습니다."

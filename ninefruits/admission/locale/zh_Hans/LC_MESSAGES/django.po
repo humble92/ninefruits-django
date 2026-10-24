@@ -1,0 +1,910 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 18:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: zh-hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admissions.errors.no_person
+#: actions/applications.py
+msgid "This account is not linked to a person."
+msgstr "该账户未关联人员。"
+
+# key: admissions.errors.cycle_closed
+#: actions/applications.py
+msgid "This cycle is not taking applications."
+msgstr "该批次不在受理期间。"
+
+# key: admissions.errors.already_applied
+#: actions/applications.py
+msgid "You already have an open application in this cycle."
+msgstr "您在该批次已有进行中的申请。"
+
+# key: admissions.errors.program_not_offered
+#: actions/applications.py
+msgid "This program is not offered in the cycle."
+msgstr "该批次不招收此专业。"
+
+# key: admissions.errors.not_draft
+#: actions/applications.py
+msgid "Only applications that have not been submitted can be changed."
+msgstr "只能修改尚未提交的申请。"
+
+#: actions/applications.py
+msgid "Select a valid choice."
+msgstr "请选择有效的选项。"
+
+#: actions/applications.py
+msgid "The birth date must be a date before today."
+msgstr "出生日期必须早于今天。"
+
+# key: admissions.errors.identity_locked
+#: actions/applications.py
+msgid "Your name and birth date are kept by the registrar's office."
+msgstr "姓名和出生日期由学籍管理部门维护。"
+
+# key: admissions.errors.document_type_not_requested
+#: actions/applications.py
+msgid "This cycle does not ask for this document."
+msgstr "该批次不要求此材料。"
+
+# key: admissions.errors.document_too_large
+#: actions/applications.py
+#, python-format
+msgid "The file is larger than %(mb)s MB."
+msgstr "文件超过 %(mb)s MB。"
+
+# key: admissions.errors.document_type_invalid
+#: actions/applications.py
+msgid "Upload a PDF, JPEG or PNG file."
+msgstr "请上传 PDF、JPEG 或 PNG 文件。"
+
+# key: admissions.errors.required_field
+#: actions/applications.py
+msgid "This field is required to submit."
+msgstr "提交前必须填写。"
+
+# key: admissions.errors.documents_missing
+#: actions/applications.py
+#, python-format
+msgid "Upload the required documents: %(documents)s."
+msgstr "请上传必需材料：%(documents)s"
+
+# key: admissions.errors.invalid_transition
+#: actions/applications.py actions/decisions.py
+msgid "This is not possible in the application's current status."
+msgstr "申请的当前状态不允许此操作。"
+
+# key: admissions.errors.reason_required
+#: actions/decisions.py
+msgid "Give the reason when recording a response for the applicant."
+msgstr "代申请人登记答复时须填写原因。"
+
+# key: admissions.errors.no_open_offer
+#: actions/decisions.py
+msgid "There is no offer to answer."
+msgstr "没有需要答复的录取通知。"
+
+# key: admissions.errors.offer_expired
+#: actions/decisions.py
+msgid "The deadline to accept this offer has passed. Contact the admissions office."
+msgstr "确认入学的期限已过，请联系招生办公室。"
+
+# key: admissions.errors.not_ready_to_matriculate
+#: actions/matriculation.py
+msgid "Only accepted offers without a student record can be matriculated."
+msgstr "只能为已确认入学且尚无学籍的申请创建学籍。"
+
+# key: admissions.errors.registration_closed
+#: actions/registration.py forms.py
+msgid "Creating an account is not available. Contact the admissions office."
+msgstr "暂不能创建账户，请联系招生办公室。"
+
+#: actions/registration.py
+msgid "The email has already been taken."
+msgstr "该电子邮件已被使用。"
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: admin/applications.py
+msgid "Admission term"
+msgstr "入学学期"
+
+# key: admissions.help.admission_term
+#: admin/applications.py
+msgid "The term the new students start in. Their admission date is the term's first day."
+msgstr "新生开始的学期。入学日期为该学期第一天。"
+
+# key: admissions.fields.decision_note
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Decision note"
+msgstr "决定意见"
+
+# key: admissions.fields.response
+#: admin/applications.py
+msgid "Response"
+msgstr "答复"
+
+# key: admissions.portal.accept
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Accept the offer"
+msgstr "接受录取"
+
+# key: admissions.portal.decline
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Decline"
+msgstr "放弃"
+
+# key: common.reason
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: admissions.sections.application
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Application"
+msgstr "申请内容"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: admin/applications.py
+msgid "Applicant"
+msgstr "申请人"
+
+# key: admissions.sections.decision
+#: admin/applications.py
+msgid "Decision"
+msgstr "录取决定"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/applications.py
+msgctxt "people"
+msgid "Name"
+msgstr "姓名"
+
+# key: security.scope_types.program
+#: admin/applications.py models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgctxt "security"
+msgid "Program"
+msgstr "专业项目"
+
+# key: admissions.fields.cycle
+#: admin/applications.py models.py templates/admission/portal/applications.html
+msgid "Admission cycle"
+msgstr "招生批次"
+
+# key: admissions.fields.status
+#: admin/applications.py models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Status"
+msgstr "状态"
+
+# key: admissions.fields.decision_released
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Released"
+msgstr "已公布"
+
+# key: people.fields.admission_type
+#: admin/applications.py models.py
+msgid "Admission type"
+msgstr "入学类别"
+
+# key: admissions.fields.previous_school_country
+#: admin/applications.py models.py templates/admission/portal/application_detail.html
+msgid "Country of previous school"
+msgstr "毕业学校所在国家"
+
+# key: people.fields.birth_date
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Birth date"
+msgstr "出生日期"
+
+# key: people.fields.contact_email
+#: admin/applications.py
+msgid "Contact email"
+msgstr "联系邮箱"
+
+# key: people.fields.phone
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Phone"
+msgstr "电话"
+
+# key: admissions.fields.earlier_records
+#: admin/applications.py
+msgid "Earlier student records"
+msgstr "以往学籍"
+
+# key: common.none
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "None"
+msgstr "无"
+
+# key: admissions.sections.documents
+#: admin/applications.py admin/cycles.py models.py templates/admission/portal/application_detail.html
+msgid "Documents"
+msgstr "提交材料"
+
+# key: admissions.fields.decided_by
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Decided by"
+msgstr "决定人"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/applications.py
+msgid "Student number"
+msgstr "学号"
+
+# key: admissions.actions.start_review
+#: admin/applications.py
+msgid "Start review"
+msgstr "开始审核"
+
+# key: admissions.actions.admit
+#: admin/applications.py
+msgid "Admit"
+msgstr "录取"
+
+# key: admissions.notifications.decided
+#: admin/applications.py
+msgid "Decision saved. The applicant sees it once it is released."
+msgstr "已保存决定。公布后申请人可见。"
+
+# key: admissions.actions.reject
+#: admin/applications.py
+msgctxt "admissions"
+msgid "Reject"
+msgstr "不录取"
+
+# key: admissions.actions.release_decision
+#: admin/applications.py
+msgid "Release decision"
+msgstr "公布结果"
+
+# key: admissions.actions.matriculate
+#: admin/applications.py
+msgid "Create student record"
+msgstr "创建学籍"
+
+# key: admissions.notifications.matriculated
+#: admin/applications.py
+#, python-format
+msgid "Student record %(number)s created."
+msgstr "已创建学籍 %(number)s。"
+
+# key: admissions.actions.record_response
+#: admin/applications.py
+msgid "Record offer response"
+msgstr "代为登记答复"
+
+# key: admissions.actions.release_decisions
+#: admin/applications.py admin/cycles.py
+msgid "Release decisions"
+msgstr "公布结果"
+
+# key: admissions.notifications.matriculated_bulk
+#: admin/applications.py
+#, python-format
+msgid "%(count)s student record(s) created, %(skipped)s skipped."
+msgstr "已创建 %(count)s 个学籍，跳过 %(skipped)s 个。"
+
+# key: admissions.help.release_decisions
+#: admin/cycles.py
+msgid "Applicants see their decision and get an email. A released decision can no longer be changed."
+msgstr "申请人可查看结果并收到邮件。已公布的决定不能再更改。"
+
+# key: admissions.fields.description
+#: admin/cycles.py models.py
+msgctxt "admissions"
+msgid "Description"
+msgstr "说明"
+
+#: admin/cycles.py
+msgid "Use only letters, numbers, dashes and underscores."
+msgstr "只能使用字母、数字、连字符和下划线。"
+
+#: admin/cycles.py models.py
+msgid "program offered"
+msgstr "招生专业"
+
+# key: admissions.sections.programs
+#: admin/cycles.py models.py
+msgid "Programs offered"
+msgstr "招生专业"
+
+# key: admissions.resources.applications.plural_label
+#: admin/cycles.py models.py
+msgid "applications"
+msgstr "申请"
+
+#: admin/cycles.py models.py
+msgid "document"
+msgstr "申请材料"
+
+# key: admissions.sections.cycle
+#: admin/cycles.py
+msgid "Cycle"
+msgstr "批次"
+
+# key: admissions.fields.closes_at
+#: admin/cycles.py models.py
+msgctxt "admissions"
+msgid "Closes"
+msgstr "截止受理"
+
+# key: admissions.fields.rolling
+#: admin/cycles.py
+msgid "Rolling (no deadline)"
+msgstr "常年受理（无截止）"
+
+#: admin/cycles.py
+msgid "No decisions to release."
+msgstr "没有可发布的结果。"
+
+# key: admissions.notifications.released
+#: admin/cycles.py
+#, python-format
+msgid "One decision released."
+msgid_plural "%(count)s decisions released."
+msgstr[0] "已公布 %(count)s 项决定。"
+
+# key: admissions.application_statuses.draft
+#: enums.py
+msgctxt "admissions"
+msgid "Draft"
+msgstr "填写中"
+
+# key: admissions.application_statuses.submitted
+#: enums.py
+msgctxt "admissions.application_statuses"
+msgid "Submitted"
+msgstr "已提交"
+
+# key: admissions.application_statuses.under_review
+#: enums.py
+msgid "Under review"
+msgstr "审核中"
+
+# key: admissions.application_statuses.admitted
+#: enums.py
+msgctxt "admissions"
+msgid "Admitted"
+msgstr "已录取"
+
+# key: admissions.application_statuses.rejected
+#: enums.py
+msgid "Not admitted"
+msgstr "未录取"
+
+# key: admissions.application_statuses.confirmed
+#: enums.py
+msgid "Enrollment confirmed"
+msgstr "已确认入学"
+
+# key: admissions.application_statuses.withdrawn
+#: enums.py
+msgctxt "admissions"
+msgid "Withdrawn"
+msgstr "已放弃"
+
+# key: admissions.application_statuses.expired
+#: enums.py
+msgctxt "admissions"
+msgid "Expired"
+msgstr "已过期"
+
+# key: people.fields.family_name
+#: forms.py templates/admission/portal/application_detail.html
+msgid "Family name"
+msgstr "姓（拉丁字母）"
+
+# key: people.fields.given_name
+#: forms.py templates/admission/portal/application_detail.html
+msgid "Given name"
+msgstr "名（拉丁字母）"
+
+# key: admissions.register.email_help
+#: forms.py
+msgid "Your personal email. It stays your sign-in name after you graduate."
+msgstr "个人邮箱。毕业后仍作为登录名使用。"
+
+# key: reference.fields.code
+#: models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: admissions.help.cycle_code
+#: models.py
+msgid "Short identifier used in application numbers, e.g. 2027-SPRING."
+msgstr "用于报名号的简短标识，例如 2027-SPRING。"
+
+# key: reference.fields.name
+#: models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: admissions.fields.opens_at
+#: models.py
+msgctxt "admissions"
+msgid "Opens"
+msgstr "开始受理"
+
+# key: admissions.help.closes_at
+#: models.py
+msgid "Leave empty for rolling admission without a deadline."
+msgstr "留空表示无截止的常年受理。"
+
+# key: admissions.fields.is_published
+#: models.py
+msgctxt "admissions.fields"
+msgid "Published"
+msgstr "已公开"
+
+# key: admissions.help.is_published
+#: models.py
+msgid "Applicants can see and apply to published cycles between the opening and closing times."
+msgstr "已公开的批次在受理期间对申请人可见并可申请。"
+
+# key: admissions.fields.should_release_decisions_immediately
+#: models.py
+msgid "Release decisions immediately"
+msgstr "决定后立即公布"
+
+# key: admissions.help.should_release_decisions_immediately
+#: models.py
+msgid "Tell each applicant as soon as they are decided. Otherwise decisions are released together with the release action."
+msgstr "作出决定后立即通知申请人。关闭时通过公布结果功能统一公布。"
+
+# key: admissions.fields.offer_response_days
+#: models.py
+msgid "Days to accept an offer"
+msgstr "录取答复期限（天）"
+
+# key: admissions.help.offer_response_days
+#: models.py
+msgid "Admitted applicants must accept within this many days after the release. Empty: no deadline."
+msgstr "被录取者须在公布后此天数内确认入学。留空表示无期限。"
+
+# key: admissions.resources.cycles.label
+#: models.py
+msgid "admission cycle"
+msgstr "招生批次"
+
+# key: admissions.resources.cycles.plural_label
+#: models.py
+msgid "admission cycles"
+msgstr "招生批次"
+
+#: models.py
+msgid "The closing time must be after the opening time."
+msgstr "截止时间必须晚于开始时间。"
+
+#: models.py
+msgid "Enter a number between 1 and 365."
+msgstr "请输入 1 到 365 之间的数字。"
+
+# key: admissions.fields.capacity
+#: models.py
+msgctxt "admissions"
+msgid "Capacity"
+msgstr "招生人数"
+
+# key: admissions.fields.document_type
+#: models.py
+msgid "Document"
+msgstr "材料"
+
+# key: admissions.fields.is_required
+#: models.py
+msgctxt "admissions"
+msgid "Required"
+msgstr "必需"
+
+# key: admissions.fields.application_number
+#: models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgid "Application number"
+msgstr "报名号"
+
+# key: people.sections.person
+# key: people.fields.person
+#: models.py
+msgid "Person"
+msgstr "人员"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: models.py
+msgid "Org unit"
+msgstr "组织单位"
+
+# key: admissions.fields.previous_school_name
+#: models.py templates/admission/portal/application_detail.html
+msgid "Previous school"
+msgstr "毕业学校"
+
+# key: admissions.fields.previous_graduation_date
+#: models.py templates/admission/portal/application_detail.html
+msgid "Graduation date (previous school)"
+msgstr "毕业（预计毕业）日期"
+
+# key: admissions.fields.personal_statement
+#: models.py templates/admission/portal/application_detail.html
+msgid "Personal statement"
+msgstr "个人陈述"
+
+# key: admissions.fields.submitted_at
+#: models.py templates/admission/portal/application_detail.html
+msgctxt "admissions.fields"
+msgid "Submitted"
+msgstr "提交时间"
+
+# key: admissions.fields.decided_at
+#: models.py
+msgctxt "admissions"
+msgid "Decided"
+msgstr "决定时间"
+
+# key: admissions.fields.offer_expires_at
+#: models.py
+msgid "Offer deadline"
+msgstr "答复期限"
+
+# key: people.sections.record
+#: models.py
+msgid "Student record"
+msgstr "学籍"
+
+# key: admissions.resources.applications.label
+#: models.py
+msgid "application"
+msgstr "申请"
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "您好，"
+
+# key: admissions.mail.submitted_intro
+#: notifications.py
+#, python-format
+msgid "We received your application %(number)s for %(program)s (%(cycle)s)."
+msgstr "我们已收到您对 %(cycle)s %(program)s 的申请（%(number)s）。"
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"此致\n"
+"%(app)s"
+
+# key: admissions.mail.submitted_subject
+#: notifications.py
+#, python-format
+msgid "Application %(number)s received"
+msgstr "申请 %(number)s 已受理"
+
+# key: admissions.mail.decision_intro
+#: notifications.py
+#, python-format
+msgid "A decision on your application for %(program)s (%(cycle)s) is available. Sign in to see it."
+msgstr "您对 %(cycle)s %(program)s 的申请结果已公布，请登录查看。"
+
+# key: admissions.mail.respond_by
+#: notifications.py
+#, python-format
+msgid "If you are admitted, please answer by %(date)s."
+msgstr "如被录取，请在 %(date)s 前答复。"
+
+# key: admissions.mail.decision_subject
+#: notifications.py
+#, python-format
+msgid "Decision on application %(number)s"
+msgstr "申请 %(number)s 结果通知"
+
+# key: admin.settings.admissions.applicant_registration_enabled
+#: settings_pages.py
+msgid "Applicants can create an account"
+msgstr "允许申请人创建账户"
+
+# key: admin.settings.admissions.applicant_registration_enabled_help
+#: settings_pages.py
+msgid "Shows \"Create an account\" on the sign-in and admissions pages. Turn off when you do not take online applications."
+msgstr "在登录页和招生页显示\"创建账户\"。不受理网上申请时请关闭。"
+
+# key: admin.settings.admissions.draft_expiry_days
+#: settings_pages.py
+msgid "Expire untouched drafts after (days)"
+msgstr "草稿过期天数"
+
+# key: admin.settings.admissions.draft_expiry_days_help
+#: settings_pages.py
+msgid "Drafts in closed cycles expire regardless."
+msgstr "已截止批次中的草稿无论天数都会过期。"
+
+# key: admin.settings.admissions.max_document_size_mb
+#: settings_pages.py
+msgid "Largest document (MB)"
+msgstr "材料最大大小（MB）"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: settings_pages.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "招生"
+
+#: templates/admission/admin/matriculate.html
+#, python-format
+msgid "%(counter)s application selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgid_plural "%(counter)s applications selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgstr[0] "已选择 %(counter)s 份申请。未确认入学、已有学籍或不在您权限范围内的申请将被跳过。"
+
+# key: assessment.portal.cancel
+#: templates/admission/admin/matriculate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "取消"
+
+# key: admissions.portal.title
+#: templates/admission/portal/application_detail.html templates/admission/portal/applications.html views/portal.py
+msgid "My applications"
+msgstr "我的申请"
+
+# key: admissions.portal.matriculated
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "You are now a student. Your student number is %(number)s."
+msgstr "您已成为学生，学号为 %(number)s。"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My records"
+msgstr "我的学籍"
+
+# key: admissions.portal.admitted
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "Congratulations! You are admitted to %(program)s."
+msgstr "恭喜！您已被 %(program)s 录取。"
+
+# key: admissions.portal.respond_by
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "Please answer by %(date)s."
+msgstr "请在 %(date)s 前答复。"
+
+# key: admissions.portal.accept_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Accept the offer?"
+msgstr "确认接受录取？"
+
+# key: admissions.portal.decline_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Decline the offer? This cannot be undone."
+msgstr "放弃录取？此操作不可撤销。"
+
+# key: admissions.portal.confirmed
+#: templates/admission/portal/application_detail.html
+msgid "You accepted the offer. Your student record will be created before the term starts."
+msgstr "您已接受录取，学期开始前将为您创建学籍。"
+
+# key: admissions.portal.rejected
+#: templates/admission/portal/application_detail.html
+msgid "We are sorry, we cannot offer you admission in this cycle."
+msgstr "很遗憾，本批次未能录取您。"
+
+# key: admissions.portal.waiting
+#: templates/admission/portal/application_detail.html
+msgid "Your application is being reviewed. You will get an email when the decision is available."
+msgstr "申请正在审核中。结果公布后我们会发邮件通知您。"
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: templates/admission/portal/application_detail.html
+msgid "Personal details"
+msgstr "个人信息"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: templates/admission/portal/application_detail.html
+msgid "Gender"
+msgstr "性别"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: templates/admission/portal/application_detail.html
+msgid "Nationality"
+msgstr "国籍"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: templates/admission/portal/application_detail.html
+msgid "Address"
+msgstr "地址"
+
+# key: admissions.portal.identity_locked
+#: templates/admission/portal/application_detail.html
+msgid "Your name and birth date are kept by the registrar's office. You can update contact details under"
+msgstr "姓名和出生日期由学籍管理部门维护。联系方式可在此修改："
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My details"
+msgstr "我的信息"
+
+# key: admissions.portal.save_draft
+#: templates/admission/portal/application_detail.html
+msgctxt "admissions"
+msgid "Save draft"
+msgstr "保存草稿"
+
+# key: admissions.portal.submit_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Submit the application? You cannot change it afterwards."
+msgstr "提交申请？提交后不能修改。"
+
+# key: admissions.portal.submit
+#: templates/admission/portal/application_detail.html
+msgid "Submit application"
+msgstr "提交申请"
+
+# key: admissions.portal.withdraw
+#: templates/admission/portal/application_detail.html
+msgid "Withdraw application"
+msgstr "放弃申请"
+
+# key: admissions.portal.withdraw_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Withdraw this application?"
+msgstr "放弃此申请？"
+
+# key: admissions.portal.no_applications
+#: templates/admission/portal/applications.html
+msgid "You have no applications yet."
+msgstr "您还没有申请。"
+
+# key: admissions.portal.new_application
+#: templates/admission/portal/applications.html
+msgid "Start an application"
+msgstr "新建申请"
+
+# key: admissions.public.none
+#: templates/admission/portal/applications.html templates/admission/public/index.html
+msgid "No cycle is taking applications right now."
+msgstr "目前没有正在受理的招生。"
+
+# key: admissions.portal.start
+#: templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Start"
+msgstr "开始填写"
+
+# key: admissions.public.title
+#: templates/admission/public/index.html views/public.py
+msgctxt "admissions"
+msgid "Admissions"
+msgstr "入学申请"
+
+# key: admissions.public.instructions
+#: templates/admission/public/index.html
+msgid "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate."
+msgstr "以下为正在受理的招生。请用个人邮箱创建账户后申请；成为学生和校友后仍使用同一账户。"
+
+# key: admissions.public.rolling
+#: templates/admission/public/index.html
+msgid "Applications accepted at any time."
+msgstr "常年受理"
+
+# key: admissions.public.closes
+#: templates/admission/public/index.html
+#, python-format
+msgid "Applications close %(date)s."
+msgstr "%(date)s 截止"
+
+# key: admissions.public.go_to_applications
+#: templates/admission/public/index.html
+msgid "Go to my applications"
+msgstr "前往我的申请"
+
+# key: admissions.public.register
+#: templates/admission/public/index.html
+msgid "Create an account to apply"
+msgstr "创建账户并申请"
+
+# key: admissions.public.sign_in
+# key: authentication.login.title
+# key: authentication.login.submit
+#: templates/admission/public/index.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "登录"
+
+# key: admissions.verify_email.title
+#: templates/admission/public/verify_email.html views/public.py
+msgid "Verify your email"
+msgstr "验证邮箱"
+
+# key: admissions.verify_email.instructions
+#: templates/admission/public/verify_email.html
+#, python-format
+msgid "We sent a link to %(email)s. Open it to verify your address before applying."
+msgstr "我们已向 %(email)s 发送链接。申请前请打开链接验证邮箱。"
+
+# key: admissions.verify_email.resend
+#: templates/admission/public/verify_email.html
+msgid "Send the link again"
+msgstr "重新发送链接"
+
+# key: authentication.logout
+#: templates/admission/public/verify_email.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "退出登录"
+
+#: views/portal.py
+msgid "This field is required."
+msgstr "此字段为必填项。"
+
+# key: admissions.portal.offer_accepted
+#: views/portal.py
+msgid "You accepted the offer. The registrar's office will create your student record."
+msgstr "您已接受录取，学籍管理部门将为您创建学籍。"
+
+# key: admissions.portal.offer_declined
+#: views/portal.py
+msgid "You declined the offer."
+msgstr "您已放弃录取。"
+
+# key: admissions.portal.withdrawn
+#: views/portal.py
+msgid "The application was withdrawn."
+msgstr "已放弃申请。"
+
+# key: admissions.portal.saved
+#: views/portal.py
+msgid "Draft saved."
+msgstr "已保存草稿。"
+
+# key: admissions.portal.submitted
+#: views/portal.py
+msgid "Your application was submitted. We sent a confirmation to your email."
+msgstr "申请已提交，确认邮件已发送。"
+
+# key: portal.navigation.applications
+#: views/portal.py
+msgctxt "portal"
+msgid "Admissions"
+msgstr "入学申请"
+
+# key: admissions.verify_email.sent
+#: views/public.py
+msgid "A new link was sent."
+msgstr "已发送新链接。"

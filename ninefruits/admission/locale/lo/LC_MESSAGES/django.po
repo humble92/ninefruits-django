@@ -1,0 +1,912 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 18:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admissions.errors.no_person
+#: actions/applications.py
+msgid "This account is not linked to a person."
+msgstr "ບັນຊີນີ້ບໍ່ໄດ້ເຊື່ອມໂຍງກັບບຸກຄົນ."
+
+# key: admissions.errors.cycle_closed
+#: actions/applications.py
+msgid "This cycle is not taking applications."
+msgstr "ຮອບນີ້ບໍ່ໄດ້ຮັບໃບສະໝັກ."
+
+# key: admissions.errors.already_applied
+#: actions/applications.py
+msgid "You already have an open application in this cycle."
+msgstr "ທ່ານມີໃບສະໝັກທີ່ຍັງເປີດຢູ່ໃນຮອບນີ້ແລ້ວ."
+
+# key: admissions.errors.program_not_offered
+#: actions/applications.py
+msgid "This program is not offered in the cycle."
+msgstr "ຫຼັກສູດນີ້ບໍ່ໄດ້ເປີດຮັບໃນຮອບນີ້."
+
+# key: admissions.errors.not_draft
+#: actions/applications.py
+msgid "Only applications that have not been submitted can be changed."
+msgstr "ແກ້ໄຂໄດ້ສະເພາະໃບສະໝັກທີ່ຍັງບໍ່ໄດ້ສົ່ງ."
+
+#: actions/applications.py
+msgid "Select a valid choice."
+msgstr "ກະລຸນາເລືອກຕົວເລືອກທີ່ຖືກຕ້ອງ."
+
+#: actions/applications.py
+msgid "The birth date must be a date before today."
+msgstr "ວັນເດືອນປີເກີດຕ້ອງເປັນວັນທີກ່ອນມື້ນີ້."
+
+# key: admissions.errors.identity_locked
+#: actions/applications.py
+msgid "Your name and birth date are kept by the registrar's office."
+msgstr "ຊື່ ແລະ ວັນເດືອນປີເກີດຂອງທ່ານຖືກຮັກສາໂດຍຫ້ອງການທະບຽນ."
+
+# key: admissions.errors.document_type_not_requested
+#: actions/applications.py
+msgid "This cycle does not ask for this document."
+msgstr "ຮອບນີ້ບໍ່ຕ້ອງການເອກະສານນີ້."
+
+# key: admissions.errors.document_too_large
+#: actions/applications.py
+#, python-format
+msgid "The file is larger than %(mb)s MB."
+msgstr "ໄຟລ໌ໃຫຍ່ກວ່າ %(mb)s MB."
+
+# key: admissions.errors.document_type_invalid
+#: actions/applications.py
+msgid "Upload a PDF, JPEG or PNG file."
+msgstr "ກະລຸນາອັບໂຫຼດໄຟລ໌ PDF, JPEG ຫຼື PNG."
+
+# key: admissions.errors.required_field
+#: actions/applications.py
+msgid "This field is required to submit."
+msgstr "ຕ້ອງຕື່ມຊ່ອງນີ້ເພື່ອສົ່ງ."
+
+# key: admissions.errors.documents_missing
+#: actions/applications.py
+#, python-format
+msgid "Upload the required documents: %(documents)s."
+msgstr "ກະລຸນາອັບໂຫຼດເອກະສານທີ່ຈຳເປັນ: %(documents)s."
+
+# key: admissions.errors.invalid_transition
+#: actions/applications.py actions/decisions.py
+msgid "This is not possible in the application's current status."
+msgstr "ບໍ່ສາມາດເຮັດໄດ້ໃນສະຖານະປັດຈຸບັນຂອງໃບສະໝັກ."
+
+# key: admissions.errors.reason_required
+#: actions/decisions.py
+msgid "Give the reason when recording a response for the applicant."
+msgstr "ກະລຸນາລະບຸເຫດຜົນເມື່ອບັນທຶກຄຳຕອບແທນຜູ້ສະໝັກ."
+
+# key: admissions.errors.no_open_offer
+#: actions/decisions.py
+msgid "There is no offer to answer."
+msgstr "ບໍ່ມີການຕອບຮັບໃຫ້ຕອບ."
+
+# key: admissions.errors.offer_expired
+#: actions/decisions.py
+msgid "The deadline to accept this offer has passed. Contact the admissions office."
+msgstr "ກຳນົດຕອບຮັບໄດ້ຜ່ານໄປແລ້ວ. ກະລຸນາຕິດຕໍ່ຫ້ອງການຮັບເຂົ້າຮຽນ."
+
+# key: admissions.errors.not_ready_to_matriculate
+#: actions/matriculation.py
+msgid "Only accepted offers without a student record can be matriculated."
+msgstr "ສ້າງບັນທຶກນັກສຶກສາໄດ້ສະເພາະຜູ້ທີ່ຕອບຮັບແລ້ວ ແລະ ຍັງບໍ່ມີບັນທຶກນັກສຶກສາ."
+
+# key: admissions.errors.registration_closed
+#: actions/registration.py forms.py
+msgid "Creating an account is not available. Contact the admissions office."
+msgstr "ບໍ່ສາມາດສ້າງບັນຊີໄດ້ໃນຂະນະນີ້. ກະລຸນາຕິດຕໍ່ຫ້ອງການຮັບເຂົ້າຮຽນ."
+
+#: actions/registration.py
+msgid "The email has already been taken."
+msgstr "ອີເມວນີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: admin/applications.py
+msgid "Admission term"
+msgstr "ພາກຮຽນທີ່ຮັບເຂົ້າ"
+
+# key: admissions.help.admission_term
+#: admin/applications.py
+msgid "The term the new students start in. Their admission date is the term's first day."
+msgstr "ພາກຮຽນທີ່ນັກສຶກສາໃໝ່ເລີ່ມຮຽນ. ວັນທີຮັບເຂົ້າຄືມື້ທຳອິດຂອງພາກຮຽນນັ້ນ."
+
+# key: admissions.fields.decision_note
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Decision note"
+msgstr "ໝາຍເຫດຜົນການພິຈາລະນາ"
+
+# key: admissions.fields.response
+#: admin/applications.py
+msgid "Response"
+msgstr "ຄຳຕອບ"
+
+# key: admissions.portal.accept
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Accept the offer"
+msgstr "ຕອບຮັບ"
+
+# key: admissions.portal.decline
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Decline"
+msgstr "ປະຕິເສດ"
+
+# key: common.reason
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: admissions.sections.application
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Application"
+msgstr "ໃບສະໝັກ"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: admin/applications.py
+msgid "Applicant"
+msgstr "ຜູ້ສະໝັກ"
+
+# key: admissions.sections.decision
+#: admin/applications.py
+msgid "Decision"
+msgstr "ຜົນການພິຈາລະນາ"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/applications.py
+msgctxt "people"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: security.scope_types.program
+#: admin/applications.py models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgctxt "security"
+msgid "Program"
+msgstr "ຫຼັກສູດ"
+
+# key: admissions.fields.cycle
+#: admin/applications.py models.py templates/admission/portal/applications.html
+msgid "Admission cycle"
+msgstr "ຮອບຮັບເຂົ້າຮຽນ"
+
+# key: admissions.fields.status
+#: admin/applications.py models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: admissions.fields.decision_released
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Released"
+msgstr "ປະກາດແລ້ວ"
+
+# key: people.fields.admission_type
+#: admin/applications.py models.py
+msgid "Admission type"
+msgstr "ປະເພດການຮັບເຂົ້າຮຽນ"
+
+# key: admissions.fields.previous_school_country
+#: admin/applications.py models.py templates/admission/portal/application_detail.html
+msgid "Country of previous school"
+msgstr "ປະເທດຂອງສະຖານສຶກສາເດີມ"
+
+# key: people.fields.birth_date
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Birth date"
+msgstr "ວັນເດືອນປີເກີດ"
+
+# key: people.fields.contact_email
+#: admin/applications.py
+msgid "Contact email"
+msgstr "ອີເມວຕິດຕໍ່"
+
+# key: people.fields.phone
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgid "Phone"
+msgstr "ໂທລະສັບ"
+
+# key: admissions.fields.earlier_records
+#: admin/applications.py
+msgid "Earlier student records"
+msgstr "ບັນທຶກນັກສຶກສາກ່ອນໜ້າ"
+
+# key: common.none
+#: admin/applications.py templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+# key: admissions.sections.documents
+#: admin/applications.py admin/cycles.py models.py templates/admission/portal/application_detail.html
+msgid "Documents"
+msgstr "ເອກະສານ"
+
+# key: admissions.fields.decided_by
+#: admin/applications.py models.py
+msgctxt "admissions"
+msgid "Decided by"
+msgstr "ພິຈາລະນາໂດຍ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/applications.py
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: admissions.actions.start_review
+#: admin/applications.py
+msgid "Start review"
+msgstr "ເລີ່ມພິຈາລະນາ"
+
+# key: admissions.actions.admit
+#: admin/applications.py
+msgid "Admit"
+msgstr "ຮັບເຂົ້າ"
+
+# key: admissions.notifications.decided
+#: admin/applications.py
+msgid "Decision saved. The applicant sees it once it is released."
+msgstr "ບັນທຶກຜົນການພິຈາລະນາແລ້ວ. ຜູ້ສະໝັກຈະເຫັນເມື່ອປະກາດຜົນ."
+
+# key: admissions.actions.reject
+#: admin/applications.py
+msgctxt "admissions"
+msgid "Reject"
+msgstr "ບໍ່ຮັບ"
+
+# key: admissions.actions.release_decision
+#: admin/applications.py
+msgid "Release decision"
+msgstr "ປະກາດຜົນ"
+
+# key: admissions.actions.matriculate
+#: admin/applications.py
+msgid "Create student record"
+msgstr "ສ້າງບັນທຶກນັກສຶກສາ"
+
+# key: admissions.notifications.matriculated
+#: admin/applications.py
+#, python-format
+msgid "Student record %(number)s created."
+msgstr "ສ້າງບັນທຶກນັກສຶກສາ %(number)s ແລ້ວ."
+
+# key: admissions.actions.record_response
+#: admin/applications.py
+msgid "Record offer response"
+msgstr "ບັນທຶກຄຳຕອບຮັບ"
+
+# key: admissions.actions.release_decisions
+#: admin/applications.py admin/cycles.py
+msgid "Release decisions"
+msgstr "ປະກາດຜົນທັງໝົດ"
+
+# key: admissions.notifications.matriculated_bulk
+#: admin/applications.py
+#, python-format
+msgid "%(count)s student record(s) created, %(skipped)s skipped."
+msgstr "ສ້າງບັນທຶກນັກສຶກສາ %(count)s ລາຍການ, ຂ້າມ %(skipped)s ລາຍການ."
+
+# key: admissions.help.release_decisions
+#: admin/cycles.py
+msgid "Applicants see their decision and get an email. A released decision can no longer be changed."
+msgstr "ຜູ້ສະໝັກເຫັນຜົນການພິຈາລະນາ ແລະ ໄດ້ຮັບອີເມວ. ຜົນທີ່ປະກາດແລ້ວບໍ່ສາມາດປ່ຽນໄດ້ອີກ."
+
+# key: admissions.fields.description
+#: admin/cycles.py models.py
+msgctxt "admissions"
+msgid "Description"
+msgstr "ຄຳອະທິບາຍ"
+
+#: admin/cycles.py
+msgid "Use only letters, numbers, dashes and underscores."
+msgstr "ໃຊ້ໄດ້ສະເພາະຕົວອັກສອນ, ຕົວເລກ, ຂີດຕໍ່ ແລະ ຂີດກ້ອງເທົ່ານັ້ນ."
+
+#: admin/cycles.py models.py
+msgid "program offered"
+msgstr "ຫຼັກສູດທີ່ເປີດຮັບ"
+
+# key: admissions.sections.programs
+#: admin/cycles.py models.py
+msgid "Programs offered"
+msgstr "ຫຼັກສູດທີ່ເປີດຮັບ"
+
+# key: admissions.resources.applications.plural_label
+#: admin/cycles.py models.py
+msgid "applications"
+msgstr "ໃບສະໝັກ"
+
+#: admin/cycles.py models.py
+msgid "document"
+msgstr "ເອກະສານ"
+
+# key: admissions.sections.cycle
+#: admin/cycles.py
+msgid "Cycle"
+msgstr "ຮອບ"
+
+# key: admissions.fields.closes_at
+#: admin/cycles.py models.py
+msgctxt "admissions"
+msgid "Closes"
+msgstr "ປິດ"
+
+# key: admissions.fields.rolling
+#: admin/cycles.py
+msgid "Rolling (no deadline)"
+msgstr "ຮັບຕະຫຼອດ (ບໍ່ມີກຳນົດປິດ)"
+
+#: admin/cycles.py
+msgid "No decisions to release."
+msgstr "ບໍ່ມີຜົນການຕັດສິນທີ່ຈະປະກາດ."
+
+# key: admissions.notifications.released
+#: admin/cycles.py
+#, python-format
+msgid "One decision released."
+msgid_plural "%(count)s decisions released."
+msgstr[0] "ປະກາດຜົນແລ້ວ %(count)s ລາຍການ."
+msgstr[1] "ປະກາດຜົນແລ້ວ %(count)s ລາຍການ."
+
+# key: admissions.application_statuses.draft
+#: enums.py
+msgctxt "admissions"
+msgid "Draft"
+msgstr "ຮ່າງ"
+
+# key: admissions.application_statuses.submitted
+#: enums.py
+msgctxt "admissions.application_statuses"
+msgid "Submitted"
+msgstr "ສົ່ງແລ້ວ"
+
+# key: admissions.application_statuses.under_review
+#: enums.py
+msgid "Under review"
+msgstr "ກຳລັງພິຈາລະນາ"
+
+# key: admissions.application_statuses.admitted
+#: enums.py
+msgctxt "admissions"
+msgid "Admitted"
+msgstr "ຮັບເຂົ້າ"
+
+# key: admissions.application_statuses.rejected
+#: enums.py
+msgid "Not admitted"
+msgstr "ບໍ່ຮັບເຂົ້າ"
+
+# key: admissions.application_statuses.confirmed
+#: enums.py
+msgid "Enrollment confirmed"
+msgstr "ຢືນຢັນເຂົ້າຮຽນແລ້ວ"
+
+# key: admissions.application_statuses.withdrawn
+#: enums.py
+msgctxt "admissions"
+msgid "Withdrawn"
+msgstr "ຖອນແລ້ວ"
+
+# key: admissions.application_statuses.expired
+#: enums.py
+msgctxt "admissions"
+msgid "Expired"
+msgstr "ໝົດອາຍຸ"
+
+# key: people.fields.family_name
+#: forms.py templates/admission/portal/application_detail.html
+msgid "Family name"
+msgstr "ນາມສະກຸນ"
+
+# key: people.fields.given_name
+#: forms.py templates/admission/portal/application_detail.html
+msgid "Given name"
+msgstr "ຊື່"
+
+# key: admissions.register.email_help
+#: forms.py
+msgid "Your personal email. It stays your sign-in name after you graduate."
+msgstr "ອີເມວສ່ວນຕົວຂອງທ່ານ. ມັນຈະເປັນຊື່ເຂົ້າລະບົບຂອງທ່ານຕໍ່ໄປຫຼັງຈົບການສຶກສາ."
+
+# key: reference.fields.code
+#: models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: admissions.help.cycle_code
+#: models.py
+msgid "Short identifier used in application numbers, e.g. 2027-SPRING."
+msgstr "ລະຫັດສັ້ນທີ່ໃຊ້ໃນເລກທີໃບສະໝັກ, ເຊັ່ນ 2027-SPRING."
+
+# key: reference.fields.name
+#: models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: admissions.fields.opens_at
+#: models.py
+msgctxt "admissions"
+msgid "Opens"
+msgstr "ເປີດ"
+
+# key: admissions.help.closes_at
+#: models.py
+msgid "Leave empty for rolling admission without a deadline."
+msgstr "ປະຫວ່າງໄວ້ສຳລັບການຮັບຕະຫຼອດໂດຍບໍ່ມີກຳນົດປິດ."
+
+# key: admissions.fields.is_published
+#: models.py
+msgctxt "admissions.fields"
+msgid "Published"
+msgstr "ເຜີຍແຜ່ແລ້ວ"
+
+# key: admissions.help.is_published
+#: models.py
+msgid "Applicants can see and apply to published cycles between the opening and closing times."
+msgstr "ຜູ້ສະໝັກສາມາດເຫັນ ແລະ ສະໝັກຮອບທີ່ເຜີຍແຜ່ແລ້ວໄດ້ລະຫວ່າງເວລາເປີດ ແລະ ປິດ."
+
+# key: admissions.fields.should_release_decisions_immediately
+#: models.py
+msgid "Release decisions immediately"
+msgstr "ປະກາດຜົນທັນທີ"
+
+# key: admissions.help.should_release_decisions_immediately
+#: models.py
+msgid "Tell each applicant as soon as they are decided. Otherwise decisions are released together with the release action."
+msgstr "ແຈ້ງຜູ້ສະໝັກແຕ່ລະຄົນທັນທີທີ່ພິຈາລະນາແລ້ວ. ຖ້າບໍ່ດັ່ງນັ້ນ ຜົນຈະຖືກປະກາດພ້ອມກັນຜ່ານການດຳເນີນການປະກາດຜົນ."
+
+# key: admissions.fields.offer_response_days
+#: models.py
+msgid "Days to accept an offer"
+msgstr "ຈຳນວນວັນສຳລັບຕອບຮັບ"
+
+# key: admissions.help.offer_response_days
+#: models.py
+msgid "Admitted applicants must accept within this many days after the release. Empty: no deadline."
+msgstr "ຜູ້ທີ່ຖືກຮັບຕ້ອງຕອບຮັບພາຍໃນຈຳນວນວັນນີ້ຫຼັງຈາກປະກາດຜົນ. ຫວ່າງ: ບໍ່ມີກຳນົດ."
+
+# key: admissions.resources.cycles.label
+#: models.py
+msgid "admission cycle"
+msgstr "ຮອບຮັບເຂົ້າຮຽນ"
+
+# key: admissions.resources.cycles.plural_label
+#: models.py
+msgid "admission cycles"
+msgstr "ຮອບຮັບເຂົ້າຮຽນ"
+
+#: models.py
+msgid "The closing time must be after the opening time."
+msgstr "ເວລາປິດຮັບຕ້ອງຢູ່ຫຼັງເວລາເປີດຮັບ."
+
+#: models.py
+msgid "Enter a number between 1 and 365."
+msgstr "ກະລຸນາໃສ່ຕົວເລກລະຫວ່າງ 1 ຫາ 365."
+
+# key: admissions.fields.capacity
+#: models.py
+msgctxt "admissions"
+msgid "Capacity"
+msgstr "ຈຳນວນຮັບ"
+
+# key: admissions.fields.document_type
+#: models.py
+msgid "Document"
+msgstr "ເອກະສານ"
+
+# key: admissions.fields.is_required
+#: models.py
+msgctxt "admissions"
+msgid "Required"
+msgstr "ຈຳເປັນ"
+
+# key: admissions.fields.application_number
+#: models.py templates/admission/portal/application_detail.html templates/admission/portal/applications.html
+msgid "Application number"
+msgstr "ເລກທີໃບສະໝັກ"
+
+# key: people.sections.person
+# key: people.fields.person
+#: models.py
+msgid "Person"
+msgstr "ບຸກຄົນ"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: models.py
+msgid "Org unit"
+msgstr "ໜ່ວຍງານ"
+
+# key: admissions.fields.previous_school_name
+#: models.py templates/admission/portal/application_detail.html
+msgid "Previous school"
+msgstr "ສະຖານສຶກສາເດີມ"
+
+# key: admissions.fields.previous_graduation_date
+#: models.py templates/admission/portal/application_detail.html
+msgid "Graduation date (previous school)"
+msgstr "ວັນທີຈົບ (ສະຖານສຶກສາເດີມ)"
+
+# key: admissions.fields.personal_statement
+#: models.py templates/admission/portal/application_detail.html
+msgid "Personal statement"
+msgstr "ຈົດໝາຍແນະນຳຕົນເອງ"
+
+# key: admissions.fields.submitted_at
+#: models.py templates/admission/portal/application_detail.html
+msgctxt "admissions.fields"
+msgid "Submitted"
+msgstr "ສົ່ງແລ້ວ"
+
+# key: admissions.fields.decided_at
+#: models.py
+msgctxt "admissions"
+msgid "Decided"
+msgstr "ພິຈາລະນາເມື່ອ"
+
+# key: admissions.fields.offer_expires_at
+#: models.py
+msgid "Offer deadline"
+msgstr "ກຳນົດຕອບຮັບ"
+
+# key: people.sections.record
+#: models.py
+msgid "Student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: admissions.resources.applications.label
+#: models.py
+msgid "application"
+msgstr "ໃບສະໝັກ"
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "ສະບາຍດີ,"
+
+# key: admissions.mail.submitted_intro
+#: notifications.py
+#, python-format
+msgid "We received your application %(number)s for %(program)s (%(cycle)s)."
+msgstr "ພວກເຮົາໄດ້ຮັບໃບສະໝັກ %(number)s ຂອງທ່ານສຳລັບຫຼັກສູດ %(program)s (%(cycle)s)."
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ຂອບໃຈ,\n"
+"%(app)s"
+
+# key: admissions.mail.submitted_subject
+#: notifications.py
+#, python-format
+msgid "Application %(number)s received"
+msgstr "ໄດ້ຮັບໃບສະໝັກ %(number)s ແລ້ວ"
+
+# key: admissions.mail.decision_intro
+#: notifications.py
+#, python-format
+msgid "A decision on your application for %(program)s (%(cycle)s) is available. Sign in to see it."
+msgstr "ຜົນການພິຈາລະນາໃບສະໝັກຂອງທ່ານສຳລັບຫຼັກສູດ %(program)s (%(cycle)s) ອອກແລ້ວ. ກະລຸນາເຂົ້າລະບົບເພື່ອເບິ່ງ."
+
+# key: admissions.mail.respond_by
+#: notifications.py
+#, python-format
+msgid "If you are admitted, please answer by %(date)s."
+msgstr "ຖ້າທ່ານຖືກຮັບເຂົ້າ, ກະລຸນາຕອບພາຍໃນ %(date)s."
+
+# key: admissions.mail.decision_subject
+#: notifications.py
+#, python-format
+msgid "Decision on application %(number)s"
+msgstr "ຜົນການພິຈາລະນາໃບສະໝັກ %(number)s"
+
+# key: admin.settings.admissions.applicant_registration_enabled
+#: settings_pages.py
+msgid "Applicants can create an account"
+msgstr "ຜູ້ສະໝັກສາມາດສ້າງບັນຊີໄດ້"
+
+# key: admin.settings.admissions.applicant_registration_enabled_help
+#: settings_pages.py
+msgid "Shows \"Create an account\" on the sign-in and admissions pages. Turn off when you do not take online applications."
+msgstr "ສະແດງ \"ສ້າງບັນຊີ\" ໃນໜ້າເຂົ້າລະບົບ ແລະ ໜ້າການຮັບເຂົ້າຮຽນ. ປິດເມື່ອບໍ່ຮັບໃບສະໝັກອອນລາຍ."
+
+# key: admin.settings.admissions.draft_expiry_days
+#: settings_pages.py
+msgid "Expire untouched drafts after (days)"
+msgstr "ຮ່າງທີ່ບໍ່ໄດ້ແກ້ໄຂໝົດອາຍຸຫຼັງຈາກ (ວັນ)"
+
+# key: admin.settings.admissions.draft_expiry_days_help
+#: settings_pages.py
+msgid "Drafts in closed cycles expire regardless."
+msgstr "ຮ່າງໃນຮອບທີ່ປິດແລ້ວຈະໝົດອາຍຸບໍ່ວ່າກໍລະນີໃດ."
+
+# key: admin.settings.admissions.max_document_size_mb
+#: settings_pages.py
+msgid "Largest document (MB)"
+msgstr "ຂະໜາດເອກະສານສູງສຸດ (MB)"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: settings_pages.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "ການຮັບເຂົ້າຮຽນ"
+
+#: templates/admission/admin/matriculate.html
+#, python-format
+msgid "%(counter)s application selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgid_plural "%(counter)s applications selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgstr[0] "ເລືອກໃບສະໝັກ %(counter)s ໃບ. ໃບສະໝັກທີ່ຍັງບໍ່ຢືນຢັນ, ມີທະບຽນນັກສຶກສາແລ້ວ ຫຼື ຢູ່ນອກຂອບເຂດສິດຂອງທ່ານຈະຖືກຂ້າມ."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: templates/admission/admin/matriculate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+# key: admissions.portal.title
+#: templates/admission/portal/application_detail.html templates/admission/portal/applications.html views/portal.py
+msgid "My applications"
+msgstr "ໃບສະໝັກຂອງຂ້ອຍ"
+
+# key: admissions.portal.matriculated
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "You are now a student. Your student number is %(number)s."
+msgstr "ຕອນນີ້ທ່ານເປັນນັກສຶກສາແລ້ວ. ລະຫັດນັກສຶກສາຂອງທ່ານຄື %(number)s."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My records"
+msgstr "ບັນທຶກຂອງຂ້ອຍ"
+
+# key: admissions.portal.admitted
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "Congratulations! You are admitted to %(program)s."
+msgstr "ຂໍສະແດງຄວາມຍິນດີ! ທ່ານຖືກຮັບເຂົ້າຮຽນຫຼັກສູດ %(program)s."
+
+# key: admissions.portal.respond_by
+#: templates/admission/portal/application_detail.html
+#, python-format
+msgid "Please answer by %(date)s."
+msgstr "ກະລຸນາຕອບພາຍໃນ %(date)s."
+
+# key: admissions.portal.accept_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Accept the offer?"
+msgstr "ຕອບຮັບການຮັບເຂົ້າບໍ?"
+
+# key: admissions.portal.decline_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Decline the offer? This cannot be undone."
+msgstr "ປະຕິເສດການຮັບເຂົ້າບໍ? ບໍ່ສາມາດຍົກເລີກໄດ້."
+
+# key: admissions.portal.confirmed
+#: templates/admission/portal/application_detail.html
+msgid "You accepted the offer. Your student record will be created before the term starts."
+msgstr "ທ່ານຕອບຮັບແລ້ວ. ບັນທຶກນັກສຶກສາຂອງທ່ານຈະຖືກສ້າງກ່ອນພາກຮຽນເລີ່ມ."
+
+# key: admissions.portal.rejected
+#: templates/admission/portal/application_detail.html
+msgid "We are sorry, we cannot offer you admission in this cycle."
+msgstr "ຂໍອະໄພ, ພວກເຮົາບໍ່ສາມາດຮັບທ່ານເຂົ້າຮຽນໃນຮອບນີ້ໄດ້."
+
+# key: admissions.portal.waiting
+#: templates/admission/portal/application_detail.html
+msgid "Your application is being reviewed. You will get an email when the decision is available."
+msgstr "ໃບສະໝັກຂອງທ່ານກຳລັງຖືກພິຈາລະນາ. ທ່ານຈະໄດ້ຮັບອີເມວເມື່ອມີຜົນ."
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: templates/admission/portal/application_detail.html
+msgid "Personal details"
+msgstr "ຂໍ້ມູນສ່ວນຕົວ"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: templates/admission/portal/application_detail.html
+msgid "Gender"
+msgstr "ເພດ"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: templates/admission/portal/application_detail.html
+msgid "Nationality"
+msgstr "ສັນຊາດ"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: templates/admission/portal/application_detail.html
+msgid "Address"
+msgstr "ທີ່ຢູ່"
+
+# key: admissions.portal.identity_locked
+#: templates/admission/portal/application_detail.html
+msgid "Your name and birth date are kept by the registrar's office. You can update contact details under"
+msgstr "ຊື່ ແລະ ວັນເດືອນປີເກີດຂອງທ່ານຖືກຮັກສາໂດຍຫ້ອງການທະບຽນ. ທ່ານສາມາດອັບເດດຂໍ້ມູນຕິດຕໍ່ໄດ້ທີ່"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My details"
+msgstr "ຂໍ້ມູນຂອງຂ້ອຍ"
+
+# key: admissions.portal.save_draft
+#: templates/admission/portal/application_detail.html
+msgctxt "admissions"
+msgid "Save draft"
+msgstr "ບັນທຶກຮ່າງ"
+
+# key: admissions.portal.submit_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Submit the application? You cannot change it afterwards."
+msgstr "ສົ່ງໃບສະໝັກບໍ? ຫຼັງຈາກນັ້ນຈະບໍ່ສາມາດແກ້ໄຂໄດ້."
+
+# key: admissions.portal.submit
+#: templates/admission/portal/application_detail.html
+msgid "Submit application"
+msgstr "ສົ່ງໃບສະໝັກ"
+
+# key: admissions.portal.withdraw
+#: templates/admission/portal/application_detail.html
+msgid "Withdraw application"
+msgstr "ຖອນໃບສະໝັກ"
+
+# key: admissions.portal.withdraw_confirm
+#: templates/admission/portal/application_detail.html
+msgid "Withdraw this application?"
+msgstr "ຖອນໃບສະໝັກນີ້ບໍ?"
+
+# key: admissions.portal.no_applications
+#: templates/admission/portal/applications.html
+msgid "You have no applications yet."
+msgstr "ທ່ານຍັງບໍ່ມີໃບສະໝັກ."
+
+# key: admissions.portal.new_application
+#: templates/admission/portal/applications.html
+msgid "Start an application"
+msgstr "ເລີ່ມໃບສະໝັກ"
+
+# key: admissions.public.none
+#: templates/admission/portal/applications.html templates/admission/public/index.html
+msgid "No cycle is taking applications right now."
+msgstr "ຂະນະນີ້ບໍ່ມີຮອບທີ່ຮັບໃບສະໝັກ."
+
+# key: admissions.portal.start
+#: templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Start"
+msgstr "ເລີ່ມ"
+
+# key: admissions.public.title
+#: templates/admission/public/index.html views/public.py
+msgctxt "admissions"
+msgid "Admissions"
+msgstr "ການຮັບເຂົ້າຮຽນ"
+
+# key: admissions.public.instructions
+#: templates/admission/public/index.html
+msgid "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate."
+msgstr "ຮອບທີ່ກຳລັງຮັບໃບສະໝັກ. ສ້າງບັນຊີດ້ວຍອີເມວສ່ວນຕົວຂອງທ່ານເພື່ອສະໝັກ; ທ່ານຈະໃຊ້ບັນຊີດຽວກັນນີ້ຕໍ່ໄປໃນຖານະນັກສຶກສາ ແລະ ຜູ້ຈົບການສຶກສາ."
+
+# key: admissions.public.rolling
+#: templates/admission/public/index.html
+msgid "Applications accepted at any time."
+msgstr "ຮັບໃບສະໝັກຕະຫຼອດເວລາ."
+
+# key: admissions.public.closes
+#: templates/admission/public/index.html
+#, python-format
+msgid "Applications close %(date)s."
+msgstr "ປິດຮັບໃບສະໝັກ %(date)s."
+
+# key: admissions.public.go_to_applications
+#: templates/admission/public/index.html
+msgid "Go to my applications"
+msgstr "ໄປທີ່ໃບສະໝັກຂອງຂ້ອຍ"
+
+# key: admissions.public.register
+#: templates/admission/public/index.html
+msgid "Create an account to apply"
+msgstr "ສ້າງບັນຊີເພື່ອສະໝັກ"
+
+# key: admissions.public.sign_in
+# key: authentication.login.title
+# key: authentication.login.submit
+#: templates/admission/public/index.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "ເຂົ້າລະບົບ"
+
+# key: admissions.verify_email.title
+#: templates/admission/public/verify_email.html views/public.py
+msgid "Verify your email"
+msgstr "ຢືນຢັນອີເມວຂອງທ່ານ"
+
+# key: admissions.verify_email.instructions
+#: templates/admission/public/verify_email.html
+#, python-format
+msgid "We sent a link to %(email)s. Open it to verify your address before applying."
+msgstr "ພວກເຮົາໄດ້ສົ່ງລິ້ງໄປທີ່ %(email)s. ກະລຸນາເປີດລິ້ງເພື່ອຢືນຢັນທີ່ຢູ່ອີເມວກ່ອນສະໝັກ."
+
+# key: admissions.verify_email.resend
+#: templates/admission/public/verify_email.html
+msgid "Send the link again"
+msgstr "ສົ່ງລິ້ງອີກຄັ້ງ"
+
+# key: authentication.logout
+#: templates/admission/public/verify_email.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "ອອກຈາກລະບົບ"
+
+#: views/portal.py
+msgid "This field is required."
+msgstr "ຊ່ອງນີ້ຈຳເປັນຕ້ອງໃສ່."
+
+# key: admissions.portal.offer_accepted
+#: views/portal.py
+msgid "You accepted the offer. The registrar's office will create your student record."
+msgstr "ທ່ານຕອບຮັບແລ້ວ. ຫ້ອງການທະບຽນຈະສ້າງບັນທຶກນັກສຶກສາຂອງທ່ານ."
+
+# key: admissions.portal.offer_declined
+#: views/portal.py
+msgid "You declined the offer."
+msgstr "ທ່ານປະຕິເສດການຮັບເຂົ້າແລ້ວ."
+
+# key: admissions.portal.withdrawn
+#: views/portal.py
+msgid "The application was withdrawn."
+msgstr "ຖອນໃບສະໝັກແລ້ວ."
+
+# key: admissions.portal.saved
+#: views/portal.py
+msgid "Draft saved."
+msgstr "ບັນທຶກຮ່າງແລ້ວ."
+
+# key: admissions.portal.submitted
+#: views/portal.py
+msgid "Your application was submitted. We sent a confirmation to your email."
+msgstr "ສົ່ງໃບສະໝັກຂອງທ່ານແລ້ວ. ພວກເຮົາໄດ້ສົ່ງການຢືນຢັນໄປທີ່ອີເມວຂອງທ່ານ."
+
+# key: portal.navigation.applications
+#: views/portal.py
+msgctxt "portal"
+msgid "Admissions"
+msgstr "ການຮັບເຂົ້າຮຽນ"
+
+# key: admissions.verify_email.sent
+#: views/public.py
+msgid "A new link was sent."
+msgstr "ສົ່ງລິ້ງໃໝ່ແລ້ວ."

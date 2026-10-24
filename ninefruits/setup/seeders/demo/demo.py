@@ -17,13 +17,16 @@ class DemoSeeder(Seeder):
         "ninefruits.setup.seeders.demo.accounts.DemoAccountSeeder",
         "ninefruits.setup.seeders.demo.reference.DemoReferenceSeeder",
         "ninefruits.setup.seeders.demo.people.DemoPeopleSeeder",
+        "ninefruits.setup.seeders.demo.admission.DemoAdmissionSeeder",
         "ninefruits.setup.seeders.demo.curriculum.DemoCurriculumSeeder",
+        "ninefruits.setup.seeders.demo.registration.DemoRegistrationSeeder",
     ]
 
     #: Functions returning the fixed demo account emails printed by ``setup_demo``.
     ACCOUNT_LISTS: list[str] = [
         "ninefruits.setup.seeders.demo.accounts.demo_account_emails",
         "ninefruits.setup.seeders.demo.people.demo_people_emails",
+        "ninefruits.setup.seeders.demo.admission.demo_admission_emails",
     ]
 
     #: Functions yielding ``(email, password)`` of student accounts for ``--student-accounts``

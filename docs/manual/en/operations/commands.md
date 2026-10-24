@@ -102,7 +102,7 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 ### `reference_import`
 
 - Purpose: imports reference data from CSV, with the same rules as **Import CSV** in the administration panel (rows are found by code and updated, empty translation cells keep existing values, failed rows are kept separately).
-- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students` (student records, Phase 2), `instructors` (Phase 2), `courses` (course versions, Phase 4; registration holds are added in Phase 5) / `file` UTF-8 CSV with a header row.
+- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students` (student records, Phase 2), `instructors` (Phase 2), `courses` (course versions, Phase 4), `registration_holds` (registration holds, Phase 5) / `file` UTF-8 CSV with a header row.
 - Options: `--actor=` (required; the import is recorded under this account and its result appears on that account's **CSV imports** screen), `--chunk=100` (rows per Celery task), `--dry-run` (header check and row count only).
 - Audit: recorded (type, file name, rows, import number, failed rows)
 - Column format: [administrator manual chapter 9](../admin/09-csv-import.md).
@@ -164,6 +164,23 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ## Admissions (Phase 3)
 
+### `admission_matriculate`
+
+- Purpose: creates student records (new student numbers) for the confirmed applicants of an admission cycle. Same as the bulk **Create student record** on **Admissions > Applications** in the administration panel (`MatriculateApplicant`). Each applicant is processed on its own, so one failure does not stop the rest.
+- Arguments/options: `cycle` admission cycle code, `--term=` (required; admission term code, e.g. `2027-SP`; the admission date is the term's first day), `--actor=` (required; an account with `Create student records for admitted applicants`; only applicants in that account's scope are processed), `--dry-run` (list only).
+- Audit: recorded (cycle, term, candidates, created, failed application numbers). Each applicant also gets a business audit entry (`application.matriculated`).
+- Exit codes: 1 when the cycle or term code is unknown or `--actor` is missing, 2 when an applicant failed.
+- Example: `uv run manage.py admission_matriculate DEMO-2027-REG --term=2027-SP --actor=admissions@example.ac.kr --dry-run`
+- On failure: `Only accepted offers without a student record ...` means the applicant already has a record or has not confirmed; `The program is not in effect on the admission date.` means the program is not valid on the admission date (check the program's validity under Reference data > Programs); `not in your scope` means the application is outside the `--actor` account's scope.
+
+### `admission_expire_drafts`
+
+- Purpose: marks as **Expired** the draft applications of closed cycles and the drafts not changed for the configured period (**Settings > Admissions > Expire untouched drafts after (days)**, default 90). Expired applications no longer block a new application to the same cycle.
+- When: scheduled daily at 03:10 (the Celery beat task `admission.expire_drafts` runs this command).
+- Options: `--dry-run` (count only).
+- Audit: recorded (number expired)
+- Example: `uv run manage.py admission_expire_drafts --dry-run`
+
 ## Course sections (Phase 4)
 
 ### `section_copy`
@@ -184,6 +201,39 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 - Example: `uv run manage.py schedule_check_conflicts 2027-SP`
 
 ## Registration (Phase 5)
+
+### `registration_preflight`
+
+- Purpose: checks a term before opening registration. Shows the registration and add/drop windows, the rule set, the number of published sections, sections with capacity 0, seat allocations above capacity, course versions not in effect at the session start date, the number of active students not covered by a credit limit, and the number of students with a registration hold.
+- Arguments: `term` term code (for example `2027-SP`).
+- Audit: not recorded (read only)
+- Exit codes: 2 when problems exist. A missing rule set is shown for information, not as a problem (rule defaults apply).
+- Example: `uv run manage.py registration_preflight 2027-SP`
+
+### `registration_simulate`
+
+- Purpose: shows, rule by rule, what would happen if the student registered for the section now (or at a given time). Nothing is saved and no attempt is recorded. Use it for "why can I not register?" questions.
+- Arguments: `student-number` student number, `section` `course code-section code` (for example `CSE2010-01`).
+- Options: `--term=` (term code. Default is the most recent term that has that section), `--at=` (time of evaluation. For example `"2027-02-10 10:00 Asia/Seoul"`).
+- Audit: not recorded (read only)
+- Reading the output: per rule, pass/fail, block/warn and the message. A rule covered by an override shows as failed but does not block. Capacity is shown separately below the rule table.
+- Exit codes: 2 when the registration would be refused.
+- Example: `uv run manage.py registration_simulate 202612345 CSE2010-01 --at="2027-02-10 10:00 Asia/Seoul"`
+
+### `waitlist_promote`
+
+- Purpose: registers waitlisted students in order for sections that have free seats. Every rule is checked again at promotion; waitlist entries that fail a rule are removed from the waitlist (with the reason recorded). Waitlists of sections whose registration and add/drop windows are both closed expire. Students receive the result by email.
+- Arguments/options: `term?` term code (default: every term with waitlist entries), `--actor=`.
+- Audit: recorded (sections, promoted, removed, expired counts)
+- When: on a drop, a withdrawal or a seat allocation release, the affected section is processed immediately by a queue job. This command is the hourly scheduled safety net that handles anything that was missed.
+- Example: `uv run manage.py waitlist_promote 2027-SP --actor=registrar@example.ac.kr`
+
+### `registration_release_reserved_seats`
+
+- Purpose: marks seat allocations whose release time has passed (for example seats reserved for majors) as processed and queues the waitlist promotion job for those sections. Reserved seats become general seats in the calculation as soon as the release time passes, so this command only hands the seats over to the waitlist.
+- Audit: not recorded (runs every 5 minutes. Promotion results are in the registration records)
+- When: scheduled (every 5 minutes, Celery beat task `registration.release_reserved_seats`). The promotion task is `registration.promote_waitlist` per section (one at a time per section through a Redis lock).
+- Example: `uv run manage.py registration_release_reserved_seats`
 
 ## Grades (Phase 6)
 

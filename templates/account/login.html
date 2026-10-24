@@ -1,5 +1,5 @@
 {% extends "account/base_entrance.html" %}
-{% load i18n sso %}
+{% load i18n sso admission %}
 {% comment %}Shared sign-in for the portal and the admin panel (original auth/login).{% endcomment %}
 {% block head_title %}{% translate "Sign in" context "authentication" %}{% endblock head_title %}
 {% block content %}
@@ -50,5 +50,13 @@
                 </a>
             {% endfor %}
         </div>
+    {% endif %}
+
+    {% applicant_registration_enabled as registration_enabled %}
+    {% if registration_enabled %}
+        <p class="mt-6 text-sm text-zinc-600">
+            {% translate "Want to apply?" %}
+            <a href="{% url 'admission:index' %}" class="underline">{% translate "See open admissions" %}</a>
+        </p>
     {% endif %}
 {% endblock content %}

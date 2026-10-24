@@ -920,6 +920,7 @@ msgid "Are you sure you want to sign out?"
 msgstr "您确定要登出吗？"
 
 # vendor: Django/allauth/unfold
+# key: authentication.fields.email
 #: ninefruits/i18n/vendor_strings.py
 msgid "Email"
 msgstr "电子邮件"
@@ -1195,3 +1196,35 @@ msgstr "立即设置"
 #, python-format
 msgid "Sign in with %(provider)s"
 msgstr "使用 %(provider)s 登录"
+
+# key: admissions.register.title
+msgid "Create an account"
+msgstr "创建账户"
+
+# key: admissions.register.instructions
+msgid "For applicants. Staff and current students already have an account."
+msgstr "供申请人使用。教职工和在读学生已有账户。"
+
+# key: people.help.romanized
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "与护照一致的拉丁字母法定姓名。其他语言的姓名在下方各语言姓名中填写。"
+
+# key: authentication.fields.password_confirmation
+msgid "Confirm password"
+msgstr "确认密码"
+
+# key: admissions.register.submit
+msgid "Create account"
+msgstr "创建账户"
+
+# key: admissions.register.have_account
+msgid "Already have an account?"
+msgstr "已有账户？"
+
+# key: admissions.register.prompt
+msgid "Want to apply?"
+msgstr "想要申请入学？"
+
+# key: admissions.register.see_cycles
+msgid "See open admissions"
+msgstr "查看招生信息"

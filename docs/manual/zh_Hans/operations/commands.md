@@ -102,7 +102,7 @@
 ### `reference_import`
 
 - 用途：导入基础数据 CSV。使用与管理界面 **导入 CSV** 相同的规则（按代码查找已有行并更新，空的翻译单元格保留原值，失败行单独记录）。
-- 参数：`type` `org_units`、`programs`、`buildings`、`rooms`、`lookup_values`、`students`（学籍，Phase 2）、`instructors`（教师，Phase 2）、`courses`（课程版本，Phase 4；选课限制在 Phase 5 中添加）/ `file` 带表头行的 UTF-8 CSV。
+- 参数：`type` `org_units`、`programs`、`buildings`、`rooms`、`lookup_values`、`students`（学籍，Phase 2）、`instructors`（教师，Phase 2）、`courses`（课程版本，Phase 4）、`registration_holds`（选课限制，Phase 5）/ `file` 带表头行的 UTF-8 CSV。
 - 选项：`--actor=`（必填；导入记录归属该账户，结果显示在该账户的 **CSV 导入** 界面）、`--chunk=100`（每个 Celery 任务的行数）、`--dry-run`（只检查表头和行数）。
 - 审计：记录（类型、文件名、行数、导入编号、失败行数）
 - 列格式：[管理员手册第 9 章](../admin/09-csv-import.md)。
@@ -164,6 +164,23 @@
 
 ## 招生（Phase 3）
 
+### `admission_matriculate`
+
+- 用途：为招生批次中已确认入学的申请人创建学籍（新学号）。与管理界面 **招生 > 申请** 中的批量 **创建学籍** 相同（`MatriculateApplicant`）。每位申请人单独处理，一人失败不影响其他人。
+- 参数/选项：`cycle` 招生批次代码，`--term=`（必填。入学学期代码，例如 `2027-SP`。入学日期为学期第一天），`--actor=`（必填。具有"为录取的申请人创建学籍"权限的账户。仅处理该账户权限范围内的申请人），`--dry-run`（仅列出对象）。
+- 审计：记录（批次、学期、对象数、创建数、失败的申请编号）。每位申请人还会留下业务审计（`application.matriculated`）。
+- 退出码：批次或学期代码不存在或缺少 `--actor` 时为 1，有申请人失败时为 2。
+- 示例：`uv run manage.py admission_matriculate DEMO-2027-REG --term=2027-SP --actor=admissions@example.ac.kr --dry-run`
+- 失败时：`Only accepted offers without a student record ...` 表示已有学籍或尚未确认入学；`The program is not in effect on the admission date.` 表示专业在入学日期无效（请在基础数据 > 专业中检查有效期）；`not in your scope` 表示申请不在 `--actor` 账户的权限范围内。
+
+### `admission_expire_drafts`
+
+- 用途：将已截止批次中的草稿申请，以及在设定期间（**设置 > 招生 > 未修改草稿的过期天数**，默认 90 天）内未修改的草稿申请改为 **已过期**。过期的申请不再妨碍对同一批次的新申请。
+- 执行时间：计划任务（每天 03:10，由 Celery beat 任务 `admission.expire_drafts` 执行此命令）。
+- 选项：`--dry-run`（仅统计数量）。
+- 审计：记录（过期数量）
+- 示例：`uv run manage.py admission_expire_drafts --dry-run`
+
 ## 开课（Phase 4）
 
 ### `section_copy`
@@ -184,6 +201,39 @@
 - 示例：`uv run manage.py schedule_check_conflicts 2027-SP`
 
 ## 选课（Phase 5）
+
+### `registration_preflight`
+
+- 用途：在开放选课前检查学期。显示选课和加退选期间、规则集、已公开的课程班数、名额为 0 的课程班、超过名额的预留名额、在时段开始日不生效的课程版本、未应用学分上限的在校学生数、被选课限制的学生数。
+- 参数：`term` 学期代码（例如 `2027-SP`）。
+- 审计：不记录（仅查询）
+- 退出码：有问题时为 2。没有规则集不算问题，只作为参考显示（应用规则默认值）。
+- 示例：`uv run manage.py registration_preflight 2027-SP`
+
+### `registration_simulate`
+
+- 用途：按规则逐条显示学生现在（或在指定时刻）选某个课程班会得到什么结果。不保存，也不留下尝试记录。用于处理"为什么选不上？"的咨询。
+- 参数：`student-number` 学号、`section` `课程代码-班号`（例如 `CSE2010-01`）。
+- 选项：`--term=`（学期代码。默认为该班号所在的最近学期）、`--at=`（判断时刻。例如 `"2027-02-10 10:00 Asia/Seoul"`）。
+- 审计：不记录（仅查询）
+- 输出解读：每条规则显示通过/失败、阻止/警告、消息。应用了例外（override）的规则显示为失败但不阻止。名额在规则表下方单独显示。
+- 退出码：选课会被拒绝时为 2。
+- 示例：`uv run manage.py registration_simulate 202612345 CSE2010-01 --at="2027-02-10 10:00 Asia/Seoul"`
+
+### `waitlist_promote`
+
+- 用途：对有空位的课程班按顺序为候补者办理选课。递补时重新检查所有规则，未通过规则的候补者从候补中移除（记录事由）。选课和加退选期间都已关闭的课程班，其候补会被设为过期。向学生发送结果邮件。
+- 参数/选项：`term?` 学期代码（默认：所有有候补者的学期）、`--actor=`。
+- 审计：记录（课程班数、递补、移除、过期数）
+- 执行时机：退选、撤销选课和释放预留名额时，相关课程班会通过队列任务立即处理。此命令是每小时定时执行、处理遗漏情况的安全网。
+- 示例：`uv run manage.py waitlist_promote 2027-SP --actor=registrar@example.ac.kr`
+
+### `registration_release_reserved_seats`
+
+- 用途：把已过转换时刻的预留名额（例如本专业学生保留名额）标记为已处理，并把该课程班的候补递补任务放入队列。预留名额在转换时刻之后在计算上立即变为普通名额，因此此命令只负责把空位让给候补者。
+- 审计：不记录（每 5 分钟执行。递补结果留在选课记录中）
+- 执行时机：定时任务（每 5 分钟，Celery beat 任务 `registration.release_reserved_seats`）。递补任务为按课程班的 `registration.promote_waitlist`（通过 Redis 锁，同一课程班一次只运行一个）。
+- 示例：`uv run manage.py registration_release_reserved_seats`
 
 ## 成绩（Phase 6）
 

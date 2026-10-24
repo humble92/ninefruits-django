@@ -1,0 +1,30 @@
+{% load i18n %}
+{% comment %}Waitlist tab of the section page (original WaitlistRelationManager).{% endcomment %}
+<div class="overflow-x-auto" data-waitlist>
+    <table class="w-full text-sm">
+        <thead>
+            <tr class="text-left text-base-500">
+                <th class="px-2 py-1">{% translate "Requested" context "registration" %}</th>
+                <th class="px-2 py-1">{% translate "Student number" %}</th>
+                <th class="px-2 py-1">{% translate "Name" context "people" %}</th>
+                <th class="px-2 py-1">{% translate "Status" context "registration" %}</th>
+                <th class="px-2 py-1">{% translate "Note" context "registration" %}</th>
+                <th class="px-2 py-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr class="border-t border-base-200">
+                    <td class="px-2 py-1">{{ row.requested_at|date:"Y-m-d H:i:s" }}</td>
+                    <td class="px-2 py-1">{{ row.student_number }}</td>
+                    <td class="px-2 py-1">{{ row.name }}</td>
+                    <td class="px-2 py-1">{{ row.status }}</td>
+                    <td class="px-2 py-1">{{ row.outcome_note|default:"-" }}</td>
+                    <td class="px-2 py-1">{% if row.remove_url %}<a class="text-red-600 underline" href="{{ row.remove_url }}">{% translate "Remove" context "registration" %}</a>{% endif %}</td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="6" class="px-2 py-2 text-base-500">{% translate "None" context "common" %}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

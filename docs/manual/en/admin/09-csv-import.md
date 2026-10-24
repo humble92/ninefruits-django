@@ -55,3 +55,21 @@ student_number,program,admission_date,year_level,status,family_name,given_name,n
 ```
 
 The course import (Phase 4) is added together with that feature.
+
+## Registration holds
+
+**Import CSV** at the top of the **Registration > Holds** list (`Place and release holds, grant rule overrides` permission) or `uv run manage.py reference_import registration_holds`. Used to load legacy `SRDENY` data or the finance office's list of unpaid students.
+
+| Required columns | Optional columns |
+|---|---|
+| `student_number`, `hold_type` (`unregistered`, `financial`, `academic`, `administrative`, `other`), `reason` | `starts_at` (default: time of import), `ends_at`, `blocks_registration` (default 1), `blocks_grades`, `blocks_certificates` |
+
+- Every row creates a new hold (source `import`). Importing the same file twice creates the holds twice, so check the list before importing again.
+- Times are written `2027-03-15` or `2027-03-15 09:00` (without a time zone the server's, UTC). `ends_at` must be after `starts_at`.
+- Rows with an unknown student number fail. Holds are released on screen with a reason ([chapter 20](20-registration.md)).
+
+```csv
+student_number,hold_type,reason,ends_at
+202312345,financial,Tuition unpaid 2027-1,
+202254321,academic,Probation meeting needed,2027-03-15
+```

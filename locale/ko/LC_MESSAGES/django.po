@@ -920,6 +920,7 @@ msgid "Are you sure you want to sign out?"
 msgstr "정말로 로그아웃 하시겠습니까?"
 
 # vendor: Django/allauth/unfold
+# key: authentication.fields.email
 #: ninefruits/i18n/vendor_strings.py
 msgid "Email"
 msgstr "이메일"
@@ -1195,3 +1196,35 @@ msgstr "지금 설정"
 #, python-format
 msgid "Sign in with %(provider)s"
 msgstr "%(provider)s로 로그인"
+
+# key: admissions.register.title
+msgid "Create an account"
+msgstr "계정 만들기"
+
+# key: admissions.register.instructions
+msgid "For applicants. Staff and current students already have an account."
+msgstr "지원자용입니다. 교직원과 재학생은 이미 계정이 있습니다."
+
+# key: people.help.romanized
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "여권과 같은 로마자 법적 이름. 한글 등 다른 언어 이름은 아래 언어별 이름에 입력한다."
+
+# key: authentication.fields.password_confirmation
+msgid "Confirm password"
+msgstr "비밀번호 확인"
+
+# key: admissions.register.submit
+msgid "Create account"
+msgstr "계정 만들기"
+
+# key: admissions.register.have_account
+msgid "Already have an account?"
+msgstr "이미 계정이 있나요?"
+
+# key: admissions.register.prompt
+msgid "Want to apply?"
+msgstr "입학 지원을 하시나요?"
+
+# key: admissions.register.see_cycles
+msgid "See open admissions"
+msgstr "모집 안내 보기"

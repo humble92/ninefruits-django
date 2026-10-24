@@ -10,6 +10,7 @@ urlpatterns = [
     path("i18n/", include("ninefruits.i18n.urls")),
     path("portal/", include("ninefruits.portal.urls")),
     path("", include("ninefruits.person.urls")),
+    path("", include("ninefruits.admission.urls")),
     path("", include("ninefruits.core.urls")),
 ]
 

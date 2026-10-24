@@ -6,8 +6,8 @@
 - Two-factor step: ``TwoFactorChallengeStage`` replaces allauth's MFA authenticate and trust
   stages (email codes, remembered devices bound to the enrollment).
 - Self sign-up is for applicants only and only while ``admissions.applicant_registration_enabled``
-  is on; the admission settings group and ``RegisterApplicant`` arrive in Phase 3, so sign-up is
-  closed until then.
+  is on (``ninefruits.admission.forms.ApplicantSignupForm`` runs ``RegisterApplicant``). When it
+  is off the sign-up page is a 404, like the original registration route.
 - SSO never creates accounts (accounts belong to people); the OIDC sign-in flow and linking rules
   are ``ninefruits.security.views_sso`` (links in ``user_identities``, not allauth's
   ``socialaccount`` tables)."""
@@ -17,11 +17,13 @@ from __future__ import annotations
 from typing import Any
 
 from allauth.account.adapter import DefaultAccountAdapter
+from allauth.core.exceptions import ImmediateHttpResponse
 from allauth.mfa.adapter import DefaultMFAAdapter
 from allauth.socialaccount.adapter import DefaultSocialAccountAdapter
 from django.conf import settings
-from django.http import HttpRequest
+from django.http import Http404, HttpRequest
 from django.utils.translation import gettext_lazy as _
+from django.views.defaults import page_not_found
 
 from ninefruits.security.crypto import decrypt_string, encrypt_string
 
@@ -52,7 +54,10 @@ class AccountAdapter(DefaultAccountAdapter):
     }
 
     def is_open_for_signup(self, request: HttpRequest) -> bool:
-        return applicant_registration_enabled()
+        if applicant_registration_enabled():
+            return True
+        # allauth renders its "sign-up closed" page; the original answered 404.
+        raise ImmediateHttpResponse(page_not_found(request, Http404()))
 
     def get_login_stages(self) -> list[str]:
         stages = [

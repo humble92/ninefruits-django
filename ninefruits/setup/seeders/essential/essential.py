@@ -16,6 +16,7 @@ class EssentialSeeder(Seeder):
         "ninefruits.setup.seeders.essential.lookup_type.LookupTypeSeeder",
         "ninefruits.setup.seeders.essential.org_unit_type.OrgUnitTypeSeeder",
         "ninefruits.setup.seeders.essential.status_change_type.StatusChangeTypeSeeder",
+        "ninefruits.setup.seeders.essential.registration_rules.RegistrationRuleCatalogSeeder",
     ]
 
     def run(self) -> None:

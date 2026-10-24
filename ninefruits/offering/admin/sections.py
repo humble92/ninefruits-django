@@ -55,6 +55,7 @@ from ninefruits.offering.models import Section, SectionInstructor, SectionMeetin
 from ninefruits.offering.services import summary
 from ninefruits.offering.services.timetable import weekday_choices
 from ninefruits.organization.models import OrgUnit
+from ninefruits.registration.admin.roster import SectionRegistrationMixin
 from ninefruits.security.enums import Permission
 from ninefruits.term.models import Term, TermSession, TimeSlot
 
@@ -581,7 +582,7 @@ class CopySectionsForm(forms.Form):
 
 # -- admin ----------------------------------------------------------------------------------------
 @admin.register(Section)
-class SectionAdmin(CatalogAdmin):
+class SectionAdmin(SectionRegistrationMixin, CatalogAdmin):
     """Sections (legacy SFOPOBJECT) with instructors, meetings and rooms, eligibility and seat
     groups."""
 
@@ -607,7 +608,15 @@ class SectionAdmin(CatalogAdmin):
     ordering = ("course__code", "section_code")
     list_per_page = 50
     actions_list = ("copy_sections",)
-    actions_detail = ("open_syllabus", "publish", "unpublish", "cancel_section", "reopen")
+    actions_detail = (
+        "open_syllabus",
+        "publish",
+        "unpublish",
+        "cancel_section",
+        "reopen",
+        # Roster and waitlist (Phase 5, SectionRegistrationMixin).
+        *SectionRegistrationMixin.registration_actions_detail,
+    )
 
     # -- access ----------------------------------------------------------------------------------
     def get_queryset(self, request: HttpRequest) -> Any:
@@ -729,7 +738,12 @@ class SectionAdmin(CatalogAdmin):
                     },
                 ),
             )
+        return (
+            *self._section_fieldsets(),
+            *self.registration_fieldsets(request, obj),
+        )
 
+    def _section_fieldsets(self) -> tuple[Any, ...]:
         def criteria(prefix: str) -> tuple[Any, ...]:
             return tuple(
                 tuple(f"{prefix}__{p}" for p in part) if isinstance(part, tuple) else f"{prefix}__{part}"
@@ -773,7 +787,9 @@ class SectionAdmin(CatalogAdmin):
         )
 
     def get_readonly_fields(self, request: HttpRequest, obj: Any = None) -> Any:
-        return ("course_display", "status_display") if obj is not None else ()
+        if obj is None:
+            return ()
+        return ("course_display", "status_display", *self.registration_readonly_fields)
 
     def get_inlines(self, request: HttpRequest, obj: Any) -> Any:
         return self.inlines if obj is not None else ()

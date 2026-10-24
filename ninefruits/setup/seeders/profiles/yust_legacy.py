@@ -30,7 +30,10 @@ class YustLegacyProfileSeeder(SetupProfile):
     NURSING_UNIT_CODES: tuple[str, ...] = ("NURS",)
 
     #: Dotted paths of functions ``(seeder) -> None`` added by later phases.
-    LATER_PHASE_STEPS: list[str] = []
+    LATER_PHASE_STEPS: list[str] = [
+        # Phase 5: credit limits and credit bank courses.
+        "ninefruits.setup.seeders.profiles.yust_legacy_registration.seed_registration_rules",
+    ]
 
     def run(self) -> None:
         # Before the Korean data, so the 4.3 scale is the one fixed as the institution's.

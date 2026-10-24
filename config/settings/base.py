@@ -198,7 +198,11 @@ ACCOUNT_LOGIN_ON_PASSWORD_RESET = False
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = False
 # Original "login" limiter: 5 per minute per account (or sign-in name) and IP address.
 ACCOUNT_RATE_LIMITS = {"login_failed": "5/m/key"}
-ACCOUNT_FORMS = {"login": "ninefruits.security.forms.LoginForm"}
+ACCOUNT_FORMS = {
+    "login": "ninefruits.security.forms.LoginForm",
+    # Applicant self registration (RegisterApplicant, Phase 3).
+    "signup": "ninefruits.admission.forms.ApplicantSignupForm",
+}
 # Original auth.password_timeout: a password confirmation lasts three hours.
 ACCOUNT_REAUTHENTICATION_TIMEOUT = env.int("AUTH_PASSWORD_TIMEOUT", default=10800)
 MFA_ADAPTER = "ninefruits.security.adapters.MfaAdapter"
