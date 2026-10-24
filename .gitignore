@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Django
+*.log
+/staticfiles/
+/media/
+/locale/**/*.mo
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+/static/dist/
+
+# OS / editors
+.DS_Store
+.idea/
+.vscode/
