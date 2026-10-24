@@ -1,5 +1,5 @@
 from .base import *  # noqa: F403
-from .base import DATABASES, env
+from .base import DATABASES, DJANGO_VITE, env
 
 DJANGO_ENV = "testing"
 DEBUG = False
@@ -15,3 +15,6 @@ PII_ENCRYPTION_KEY = env.str("PII_ENCRYPTION_KEY", default="base64:dGVzdC1waWktZ
 PII_HASH_KEY = env.str("PII_HASH_KEY", default="base64:dGVzdC1waWktaGFzaC1rZXktMzItYnl0ZXMtbG9uZyE=")
 RATELIMIT_ENABLE = True
 ACCOUNT_RATE_LIMITS = False
+# Templates render without a Vite build (no static/dist/manifest.json needed): dev mode only
+# emits <script src="http://localhost:5173/...">.
+DJANGO_VITE = {"default": {**DJANGO_VITE["default"], "dev_mode": True}}

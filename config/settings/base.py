@@ -53,12 +53,15 @@ NINEFRUITS_APPS = [
 ]
 
 INSTALLED_APPS = [
-    # unfold must come before django.contrib.admin
-    "unfold",
+    # unfold must come before the admin. BasicAppConfig: unfold must not replace the default
+    # admin site; NinefruitsAdminConfig sets it to ninefruits.adminpanel.sites.NinefruitsAdminSite.
+    "unfold.apps.BasicAppConfig",
     "unfold.contrib.filters",
     "unfold.contrib.forms",
     "unfold.contrib.import_export",
-    "django.contrib.admin",
+    "ninefruits.adminpanel.apps.NinefruitsAdminConfig",
+    # Before django.contrib.auth so its createsuperuser (disabled) replaces auth's.
+    "ninefruits.adminpanel",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
@@ -77,7 +80,7 @@ INSTALLED_APPS = [
     "django_celery_beat",
     "import_export",
     "django_vite",
-    *NINEFRUITS_APPS,
+    *(app for app in NINEFRUITS_APPS if app != "ninefruits.adminpanel"),
 ]
 
 MIDDLEWARE = [
@@ -89,11 +92,12 @@ MIDDLEWARE = [
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
+    # Before the security middleware: they add flash messages (deactivated account, MFA).
+    "django.contrib.messages.middleware.MessageMiddleware",
     "ninefruits.i18n.middleware.SetLocaleMiddleware",
     "ninefruits.core.middleware.SetDatabaseSessionContextMiddleware",
     "ninefruits.security.middleware.EnsureUserIsActiveMiddleware",
     "ninefruits.security.middleware.EnforceMfaPolicyMiddleware",
-    "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.csp.ContentSecurityPolicyMiddleware",
     "allauth.account.middleware.AccountMiddleware",
@@ -115,6 +119,7 @@ TEMPLATES = [
                 "django.template.context_processors.csp",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "ninefruits.portal.context_processors.site",
             ],
         },
     },
@@ -158,14 +163,15 @@ DATABASES = {
 # Superuser credentials are only needed to create databases (tests, setup scripts).
 DB_SUPERUSER_USERNAME = env.str("DB_SUPERUSER_USERNAME", default="postgres")
 DB_SUPERUSER_PASSWORD = env.str("DB_SUPERUSER_PASSWORD", default="")
-DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+# Ninefruits apps set BigAutoField in their AppConfig; third-party apps keep their own default.
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # --- Authentication (porting-plan 7) ---------------------------------------------------------
 AUTH_USER_MODEL = "security.User"
 AUTHENTICATION_BACKENDS = [
     "ninefruits.security.backends.CatalogPermissionBackend",
-    "allauth.account.auth_backends.AuthenticationBackend",
-    "ninefruits.security.backends.StudentNumberBackend",
+    # Email or student number + password (lockout, same failure for every reason).
+    "ninefruits.security.backends.LoginIdentifierBackend",
 ]
 PASSWORD_HASHERS = [
     "django.contrib.auth.hashers.Argon2PasswordHasher",
@@ -182,16 +188,23 @@ LOGIN_REDIRECT_URL = "portal:dashboard"
 ACCOUNT_LOGIN_METHODS = {"email"}
 ACCOUNT_SIGNUP_FIELDS = ["email*", "password1*", "password2*"]
 ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+# Signing in does not need a verified address (only applying does, Phase 3), as in the original.
+ACCOUNT_EMAIL_VERIFICATION = "optional"
 ACCOUNT_UNIQUE_EMAIL = True
 ACCOUNT_ADAPTER = "ninefruits.security.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "ninefruits.security.adapters.SocialAccountAdapter"
 ACCOUNT_LOGIN_ON_PASSWORD_RESET = False
 ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = False
-ACCOUNT_RATE_LIMITS = {"login_failed": "10/m/ip,5/5m/key"}
+# Original "login" limiter: 5 per minute per account (or sign-in name) and IP address.
+ACCOUNT_RATE_LIMITS = {"login_failed": "5/m/key"}
+ACCOUNT_FORMS = {"login": "ninefruits.security.forms.LoginForm"}
+# Original auth.password_timeout: a password confirmation lasts three hours.
+ACCOUNT_REAUTHENTICATION_TIMEOUT = env.int("AUTH_PASSWORD_TIMEOUT", default=10800)
 MFA_ADAPTER = "ninefruits.security.adapters.MfaAdapter"
 MFA_SUPPORTED_TYPES = ["totp", "recovery_codes"]
-MFA_TRUST_ENABLED = True
+# "Remember this device" is ninefruits.security.services.trusted_devices (duration from the
+# security settings, bound to the enrollment), not allauth's trust stage.
+MFA_TRUST_ENABLED = False
 
 # --- Internationalization (porting-plan 6) ---------------------------------------------------
 LANGUAGE_CODE = "en"
@@ -206,6 +219,10 @@ LOCALE_PATHS = [BASE_DIR / "locale"]
 USE_I18N = True
 USE_TZ = True
 TIME_ZONE = env.str("APP_TIMEZONE", default="UTC")
+# Initial value of the institution settings time zone (settings migration only).
+INSTITUTION_TIMEZONE = env.str("INSTITUTION_TIMEZONE", default="UTC")
+# Date/number formats for languages Django does not ship (lo).
+FORMAT_MODULE_PATH = ["ninefruits.i18n.formats"]
 
 # --- Static files and assets ------------------------------------------------------------------
 STATIC_URL = "static/"
@@ -259,6 +276,7 @@ PII_HASH_KEY = env.str("PII_HASH_KEY", default="")
 
 # --- PDF -------------------------------------------------------------------------------------
 GOTENBERG_URL = env.str("GOTENBERG_URL", default="http://127.0.0.1:3000")
+GOTENBERG_TIMEOUT = env.int("GOTENBERG_TIMEOUT", default=60)
 
 # --- REST framework (porting-plan 12) --------------------------------------------------------
 REST_FRAMEWORK = {
@@ -299,9 +317,28 @@ LOGGING = {
     "root": {"handlers": ["console"], "level": env.str("LOG_LEVEL", default="INFO")},
 }
 
+# Admin panel (porting-plan 5.1, original AdminPanelProvider). Callables live in
+# ninefruits.adminpanel.config; the sidebar is built per request from the registered admins.
 UNFOLD = {
-    "SITE_TITLE": APP_NAME,
-    "SITE_HEADER": APP_NAME,
+    "SITE_TITLE": "ninefruits.adminpanel.config.site_title",
+    "SITE_HEADER": "ninefruits.adminpanel.config.site_title",
     "SITE_URL": "/portal/",
+    "SITE_SYMBOL": "school",
+    "SHOW_HISTORY": True,
+    "SHOW_VIEW_ON_SITE": False,
     "SHOW_LANGUAGES": True,
+    # Language menu: the institution's supported locales, posted to the locale switcher.
+    "LANGUAGES": {
+        "navigation": "ninefruits.i18n.admin_languages.language_navigation",
+        "action": "ninefruits.i18n.admin_languages.language_action",
+    },
+    "ENVIRONMENT": "ninefruits.adminpanel.config.environment",
+    "DASHBOARD_CALLBACK": "ninefruits.adminpanel.config.dashboard",
+    "COLORS": {"primary": "ninefruits.adminpanel.config.primary_colors"},
+    "ACCOUNT": {"navigation": "ninefruits.adminpanel.config.account_links"},
+    "SIDEBAR": {
+        "show_search": True,
+        "show_all_applications": False,
+        "navigation": "ninefruits.adminpanel.navigation.sidebar_navigation",
+    },
 }

@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import '@fontsource/instrument-sans/400.css';
+@import '@fontsource/instrument-sans/500.css';
+@import '@fontsource/instrument-sans/600.css';
+
+/* Classes used in Django templates and in the Python code that renders HTML. */
+@source '../../templates/**/*.html';
+@source '../../ninefruits/**/templates/**/*.html';
+@source '../../ninefruits/**/*.py';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* Alpine: hide elements until Alpine has initialised them. */
+[x-cloak] {
+    display: none !important;
+}
+
+/* HTMX request indicator. */
+.htmx-indicator {
+    opacity: 0;
+    transition: opacity 150ms ease-in;
+}
+.htmx-request .htmx-indicator,
+.htmx-request.htmx-indicator {
+    opacity: 1;
+}

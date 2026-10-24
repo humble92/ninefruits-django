@@ -1,1 +1,20 @@
-{% load i18n %}<!doctype html><title>{% translate "Dashboard" %}</title><h1>{% translate "Dashboard" %}</h1>
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">{% blocktranslate with name=display_name context "portal" %}Welcome, {{ name }}{% endblocktranslate %}</h1>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-6">
+        <h2 class="mb-3 font-medium">{% translate "Your access" context "portal" %}</h2>
+        <dl class="grid gap-2 text-sm sm:grid-cols-[12rem_1fr]">
+            <dt class="text-zinc-500">{% translate "Roles" context "portal" %}</dt>
+            <dd data-roles>{% if roles %}{{ roles|join:", " }}{% else %}{% translate "None" context "common" %}{% endif %}</dd>
+            <dt class="text-zinc-500">{% translate "Personas" context "portal" %}</dt>
+            <dd data-personas>{% if personas %}{{ personas|join:", " }}{% else %}{% translate "None" context "common" %}{% endif %}</dd>
+        </dl>
+        {% if can_access_admin %}
+            <a href="{% url 'admin:index' %}" class="mt-4 inline-block text-sm font-medium underline">{% translate "Administration" context "portal" %}</a>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

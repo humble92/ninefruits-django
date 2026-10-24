@@ -1,9 +1,18 @@
-"""Authorization entry points (porting-plan 7.2). Filled in by the security work of Phase 0."""
+"""Authorization entry points used outside the security app (porting-plan 7.2)."""
 
 from __future__ import annotations
 
 from typing import Any
 
+from ninefruits.security.enums import Permission
+
 
 def can_access_admin(user: Any) -> bool:
-    return False
+    """Whether the user may open the admin panel (original ``canAccessPanel``): an active
+    account holding ``admin_panel.access``."""
+    return bool(
+        user is not None
+        and getattr(user, "is_authenticated", False)
+        and user.is_active
+        and user.has_perm(Permission.ADMIN_PANEL_ACCESS)
+    )

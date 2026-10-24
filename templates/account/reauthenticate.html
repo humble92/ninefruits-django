@@ -1,0 +1,20 @@
+{% extends "account/base_entrance.html" %}
+{% load i18n %}
+{% comment %}Password confirmation before changing two-factor settings (original auth/confirm-password).{% endcomment %}
+{% block head_title %}{% translate "Confirm your password" %}{% endblock head_title %}
+{% block content %}
+    <h1 class="mb-2 text-xl font-semibold">{% translate "Confirm your password" %}</h1>
+    <p class="mb-6 text-sm text-zinc-600">{% translate "For your security, please confirm your password to continue." %}</p>
+
+    <form method="post" action="{% url 'account_reauthenticate' %}" class="space-y-4">
+        {% csrf_token %}
+        {{ redirect_field }}
+        <div>
+            <label for="{{ form.password.id_for_label }}" class="block text-sm font-medium">{% translate "Password" context "authentication" %}</label>
+            <input id="{{ form.password.id_for_label }}" name="{{ form.password.html_name }}" type="password" required autofocus autocomplete="current-password"
+                   class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+            {% for error in form.password.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+        </div>
+        <button type="submit" class="w-full rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Confirm" context "security" %}</button>
+    </form>
+{% endblock content %}

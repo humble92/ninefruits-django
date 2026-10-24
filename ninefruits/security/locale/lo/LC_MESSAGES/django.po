@@ -1,0 +1,1424 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:58+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: security.errors.cannot_deactivate_self
+#: actions/accounts.py
+msgid "You cannot deactivate your own account."
+msgstr "ທ່ານບໍ່ສາມາດປິດໃຊ້ບັນຊີຂອງຕົນເອງໄດ້."
+
+# key: security.errors.target_more_privileged
+#: actions/accounts.py
+#, python-format
+msgid ""
+"This account holds permissions you do not have (%(permissions)s); only an "
+"administrator with those permissions can change it."
+msgstr "ບັນຊີນີ້ມີສິດທີ່ທ່ານບໍ່ມີ (%(permissions)s); ສະເພາະຜູ້ບໍລິຫານທີ່ມີສິດເຫຼົ່ານັ້ນເທົ່ານັ້ນຈຶ່ງປ່ຽນແປງໄດ້."
+
+# key: json.The provided password does not match your current password.
+#: actions/accounts.py
+msgid "The provided password does not match your current password."
+msgstr "ລະຫັດຜ່ານທີ່ປ້ອນບໍ່ກົງກັບລະຫັດຜ່ານປັດຈຸບັນຂອງທ່ານ."
+
+#: actions/accounts.py
+msgid "The password field confirmation does not match."
+msgstr "ການຢືນຢັນລະຫັດຜ່ານບໍ່ກົງກັນ."
+
+#: actions/accounts.py admin.py
+msgid "The email has already been taken."
+msgstr "ອີເມວນີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: security.errors.persona_role_not_assignable
+#: actions/assign_role.py
+msgid "Persona roles are granted automatically and cannot be assigned."
+msgstr "ບົດບາດຕາມສະຖານະຜູ້ໃຊ້ຖືກມອບໂດຍອັດຕະໂນມັດ ແລະ ບໍ່ສາມາດມອບດ້ວຍຕົນເອງໄດ້."
+
+# key: security.errors.scope_id_mismatch
+#: actions/assign_role.py admin.py
+msgid ""
+"Choose a scope target for scoped assignments, and none for global "
+"assignments."
+msgstr "ກະລຸນາເລືອກເປົ້າໝາຍຂອບເຂດສຳລັບການມອບແບບມີຂອບເຂດ, ແລະ ບໍ່ເລືອກສຳລັບການມອບແບບທົ່ວໄປ."
+
+# key: offering.errors.meeting_time_order
+#: actions/assign_role.py admin.py
+msgid "The end must be after the start."
+msgstr "ເວລາສິ້ນສຸດຕ້ອງຢູ່ຫຼັງເວລາເລີ່ມ."
+
+# key: security.errors.self_assignment
+#: actions/assign_role.py
+msgid "You cannot assign a role to yourself."
+msgstr "ທ່ານບໍ່ສາມາດມອບບົດບາດໃຫ້ຕົນເອງໄດ້."
+
+# key: security.errors.role_exceeds_actor
+#: actions/assign_role.py
+#, python-format
+msgid "This role carries permissions you do not hold (%(permissions)s)."
+msgstr "ບົດບາດນີ້ມີສິດທີ່ທ່ານບໍ່ມີ (%(permissions)s)."
+
+# key: security.errors.scope_exceeds_actor
+#: actions/assign_role.py
+msgid "This scope is wider than the one you manage role assignments for."
+msgstr "ຂອບເຂດນີ້ກວ້າງກວ່າຂອບເຂດທີ່ທ່ານຈັດການການມອບບົດບາດ."
+
+# key: security.sso.linked_to_another_account
+#: actions/identities.py
+msgid "This school account is linked to another user."
+msgstr "ບັນຊີຂອງສະຖາບັນນີ້ເຊື່ອມຕໍ່ກັບຜູ້ໃຊ້ອື່ນຢູ່ແລ້ວ."
+
+# key: security.sso.already_linked
+#: actions/identities.py
+msgid "Your account is already linked to another account of this provider."
+msgstr "ບັນຊີຂອງທ່ານເຊື່ອມຕໍ່ກັບບັນຊີອື່ນຂອງຜູ້ໃຫ້ບໍລິການນີ້ຢູ່ແລ້ວ."
+
+# key: json.The provided two factor authentication code was invalid.
+#: actions/mfa.py
+msgid "The provided two factor authentication code was invalid."
+msgstr "ລະຫັດຢືນຢັນສອງຂັ້ນຕອນທີ່ປ້ອນບໍ່ຖືກຕ້ອງ."
+
+#: actions/mfa.py
+msgid "Recovery codes need an authenticator app. Set one up first."
+msgstr "ລະຫັດກູ້ຄືນຕ້ອງມີແອັບຢືນຢັນຕົວຕົນ. ກະລຸນາຕັ້ງຄ່າກ່ອນ."
+
+# key: security.email_code.not_allowed
+#: actions/mfa.py
+msgid "Email codes are not available at this institution."
+msgstr "ລະຫັດທາງອີເມວບໍ່ມີໃຫ້ໃຊ້ໃນສະຖາບັນນີ້."
+
+# key: security.email_code.invalid
+#: actions/mfa.py views.py
+msgid "The code is invalid or has expired."
+msgstr "ລະຫັດບໍ່ຖືກຕ້ອງ ຫຼື ໝົດອາຍຸແລ້ວ."
+
+# key: security.mfa.cannot_disable_required
+#: actions/mfa.py
+msgid ""
+"Two-factor authentication is required for your account and cannot be "
+"disabled."
+msgstr "ບັນຊີຂອງທ່ານຈຳເປັນຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ ແລະ ບໍ່ສາມາດປິດໃຊ້ໄດ້."
+
+# key: auth.failed
+#: adapters.py
+msgid "These credentials do not match our records."
+msgstr "ຂໍ້ມູນເຂົ້າລະບົບບໍ່ກົງກັບບັນທຶກຂອງພວກເຮົາ."
+
+#: adapters.py
+msgid "Too many login attempts. Please try again later."
+msgstr "ພະຍາຍາມເຂົ້າສູ່ລະບົບຫຼາຍເກີນໄປ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ."
+
+# key: common.reason
+#: admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: admin.users.fields.locale
+# key: assessment.categories.language
+# key: common.language
+# key: offering.syllabus.language
+#: admin.py
+msgid "Language"
+msgstr "ພາສາ"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.sections.name
+# key: people.fields.name
+# key: reference.fields.name
+#: admin.py
+msgid "Name"
+msgstr "ຊື່"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: admin.py forms.py
+msgctxt "authentication"
+msgid "Email"
+msgstr "ອີເມວ"
+
+# key: admin.role_assignments.fields.active
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: admin.py templates/security/widgets/sso_providers.html
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: admin.users.help.name
+#: admin.py
+msgid ""
+"Used only for accounts without a person (e.g. service accounts). Linked "
+"accounts show the person's name."
+msgstr "ໃຊ້ສະເພາະບັນຊີທີ່ບໍ່ມີບຸກຄົນ (ເຊັ່ນ ບັນຊີບໍລິການ). ບັນຊີທີ່ເຊື່ອມໂຍງແລ້ວຈະສະແດງຊື່ຂອງບຸກຄົນ."
+
+# key: admin.role_assignments.fields.role
+# key: graduation.report_columns.program_role
+# key: offering.fields.instructor_role
+#: admin.py
+msgid "Role"
+msgstr "ບົດບາດ"
+
+# key: admin.role_assignments.fields.scope
+#: admin.py
+msgid "Scope"
+msgstr "ຂອບເຂດ"
+
+# key: admin.role_assignments.fields.scope_target
+#: admin.py
+msgid "Scope target"
+msgstr "ເປົ້າໝາຍຂອບເຂດ"
+
+#: admin.py
+msgid "Org unit or program id. An org unit also covers every unit below it."
+msgstr "ID ຂອງຫົວໜ່ວຍ ຫຼື ຫຼັກສູດ. ຫົວໜ່ວຍລວມເອົາທຸກຫົວໜ່ວຍຂ້າງລຸ່ມ."
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: admin.py
+msgid "Starts"
+msgstr "ເລີ່ມ"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: admin.py
+msgid "Ends"
+msgstr "ສິ້ນສຸດ"
+
+#: admin.py
+msgid "Role assignment"
+msgstr "ການມອບໝາຍບົດບາດ"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: admin.py
+msgid "Role assignments"
+msgstr "ການມອບບົດບາດ"
+
+# key: admin.role_assignments.actions.revoke
+#: admin.py
+msgid "End assignment"
+msgstr "ສິ້ນສຸດການມອບບົດບາດ"
+
+# key: permissions.resources.users
+#: admin.py
+msgctxt "admin"
+msgid "Users"
+msgstr "ຜູ້ໃຊ້"
+
+# key: admin.users.fields.mfa_enrolled
+#: admin.py
+msgid "Two-factor"
+msgstr "ສອງຂັ້ນຕອນ"
+
+# key: admin.users.fields.linked_person
+#: admin.py
+msgid "Linked person"
+msgstr "ບຸກຄົນທີ່ເຊື່ອມໂຍງ"
+
+# key: common.yes
+#: admin.py
+msgid "Yes"
+msgstr "ແມ່ນ"
+
+# key: common.none
+#: admin.py
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+# key: admin.users.actions.reset_mfa
+#: admin.py
+msgid "Reset two-factor authentication"
+msgstr "ຣີເຊັດການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: admin.users.notifications.mfa_reset
+#: admin.py
+msgid "Two-factor authentication was reset."
+msgstr "ຣີເຊັດການຢືນຢັນສອງຂັ້ນຕອນແລ້ວ."
+
+# key: admin.users.actions.unlock
+#: admin.py
+msgid "Unlock sign-in"
+msgstr "ປົດລັອກການເຂົ້າລະບົບ"
+
+# key: admin.users.notifications.unlocked
+#: admin.py
+msgid "Sign-in unlocked."
+msgstr "ປົດລັອກການເຂົ້າລະບົບແລ້ວ."
+
+# key: admin.role_assignments.actions.assign
+#: admin.py
+msgid "Assign role"
+msgstr "ມອບບົດບາດ"
+
+# key: admin.role_assignments.notifications.assigned
+#: admin.py
+msgid "Role assigned."
+msgstr "ມອບບົດບາດແລ້ວ."
+
+# key: admin.role_assignments.notifications.revoked
+#: admin.py
+msgid "Assignment ended."
+msgstr "ສິ້ນສຸດການມອບບົດບາດແລ້ວ."
+
+# key: admin.roles.fields.name
+#: admin.py
+msgid "Internal name"
+msgstr "ຊື່ພາຍໃນ"
+
+# key: admin.roles.fields.display_name
+#: admin.py
+msgid "Display name"
+msgstr "ຊື່ສະແດງ"
+
+# key: admin.roles.fields.description
+# key: admissions.fields.description
+# key: curriculum.fields.description
+# key: evaluation.fields.description
+# key: reference.fields.description
+#: admin.py
+msgid "Description"
+msgstr "ຄຳອະທິບາຍ"
+
+# key: admin.roles.fields.name_help
+#: admin.py
+msgid "Lowercase letters, digits and underscores, e.g. registrar."
+msgstr "ຕົວອັກສອນລາຕິນຕົວນ້ອຍ, ຕົວເລກ ແລະ ຂີດກ້ອງ, ເຊັ່ນ registrar."
+
+#: admin.py
+msgid "The name has already been taken."
+msgstr "ຊື່ນີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: admin.py
+msgctxt "admin"
+msgid "Roles"
+msgstr "ບົດບາດ"
+
+# key: admin.roles.system_role_permissions
+#: admin.py
+msgid "System roles always have every permission."
+msgstr "ບົດບາດລະບົບມີທຸກສິດສະເໝີ."
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: admin.py
+msgid "General"
+msgstr "ທົ່ວໄປ"
+
+# key: admin.roles.fields.permissions_count
+# key: admin.roles.sections.permissions
+#: admin.py
+msgid "Permissions"
+msgstr "ສິດ"
+
+# key: admin.roles.fields.persona
+#: admin.py
+msgid "Persona"
+msgstr "ປະເພດຜູ້ໃຊ້"
+
+# key: admin.roles.fields.active_assignments_count
+#: admin.py
+msgid "Active assignments"
+msgstr "ການມອບບົດບາດທີ່ເປີດໃຊ້"
+
+# key: permissions.resources.people
+#: enums.py
+msgctxt "permissions"
+msgid "People"
+msgstr "ບຸກຄົນ"
+
+# key: permissions.resources.accounts
+#: enums.py
+msgctxt "permissions"
+msgid "Accounts"
+msgstr "ບັນຊີ"
+
+# key: permissions.resources.student_records
+#: enums.py
+msgctxt "permissions"
+msgid "Student records"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: enums.py
+msgctxt "permissions"
+msgid "Status changes"
+msgstr "ການປ່ຽນສະຖານະ"
+
+# key: permissions.resources.instructors
+#: enums.py
+msgctxt "permissions"
+msgid "Instructors"
+msgstr "ອາຈານ"
+
+# key: permissions.resources.advisors
+#: enums.py
+msgctxt "permissions"
+msgid "Advisors"
+msgstr "ອາຈານທີ່ປຶກສາ"
+
+# key: permissions.resources.authentication_settings
+#: enums.py
+msgctxt "permissions"
+msgid "Sign-in settings"
+msgstr "ການຕັ້ງຄ່າການເຂົ້າສູ່ລະບົບ"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: enums.py
+msgctxt "permissions"
+msgid "Reference data"
+msgstr "ຂໍ້ມູນອ້າງອີງ"
+
+# key: permissions.resources.lookup_values
+#: enums.py
+msgctxt "permissions"
+msgid "Code data"
+msgstr "ຂໍ້ມູນລະຫັດ"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: enums.py
+msgctxt "permissions"
+msgid "Org units"
+msgstr "ໜ່ວຍງານ"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: enums.py
+msgctxt "permissions"
+msgid "Programs"
+msgstr "ຫຼັກສູດ"
+
+# key: permissions.resources.facilities
+#: enums.py
+msgctxt "permissions"
+msgid "Buildings and rooms"
+msgstr "ອາຄານ ແລະ ຫ້ອງ"
+
+# key: permissions.resources.terms
+#: enums.py
+msgctxt "permissions"
+msgid "Academic years and terms"
+msgstr "ສົກຮຽນ ແລະ ພາກຮຽນ"
+
+# key: permissions.resources.term_windows
+#: enums.py
+msgctxt "permissions"
+msgid "Term windows"
+msgstr "ໄລຍະເວລາດຳເນີນງານ"
+
+# key: permissions.resources.course_categories
+#: enums.py
+msgctxt "permissions"
+msgid "Course categories"
+msgstr "ປະເພດວິຊາ"
+
+# key: permissions.resources.grade_scales
+#: enums.py
+msgctxt "permissions"
+msgid "Grade scales"
+msgstr "ມາດຕາເກຣດ"
+
+# key: permissions.resources.admin_panel
+#: enums.py
+msgctxt "permissions"
+msgid "Administration panel"
+msgstr "ໜ້າບໍລິຫານ"
+
+# key: permissions.resources.users
+#: enums.py
+msgctxt "permissions"
+msgid "Users"
+msgstr "ຜູ້ໃຊ້"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: enums.py
+msgctxt "permissions"
+msgid "Roles"
+msgstr "ບົດບາດ"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: enums.py
+msgctxt "permissions"
+msgid "Role assignments"
+msgstr "ການມອບບົດບາດ"
+
+# key: permissions.resources.audit_records
+#: enums.py
+msgctxt "permissions"
+msgid "Audit records"
+msgstr "ບັນທຶກການກວດສອບ"
+
+# key: permissions.resources.security_events
+#: enums.py
+msgctxt "permissions"
+msgid "Security events"
+msgstr "ເຫດການຄວາມປອດໄພ"
+
+# key: permissions.resources.security_settings
+#: enums.py
+msgctxt "permissions"
+msgid "Security settings"
+msgstr "ການຕັ້ງຄ່າຄວາມປອດໄພ"
+
+#: enums.py
+msgctxt "permissions"
+msgid "Queue monitor (Flower)"
+msgstr "ຕົວຕິດຕາມຄິວ (Flower)"
+
+# key: permissions.resources.institution_settings
+#: enums.py
+msgctxt "permissions"
+msgid "Institution settings"
+msgstr "ການຕັ້ງຄ່າສະຖາບັນ"
+
+# key: permissions.resources.admission_cycles
+#: enums.py
+msgctxt "permissions"
+msgid "Admission cycles"
+msgstr "ຮອບຮັບເຂົ້າຮຽນ"
+
+# key: permissions.resources.applications
+#: enums.py
+msgctxt "permissions"
+msgid "Applications"
+msgstr "ໃບສະໝັກ"
+
+# key: permissions.resources.courses
+#: enums.py
+msgctxt "permissions"
+msgid "Courses"
+msgstr "ວິຊາ"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: enums.py
+msgctxt "permissions"
+msgid "Graduation requirements"
+msgstr "ເງື່ອນໄຂການຈົບການສຶກສາ"
+
+# key: permissions.resources.sections
+#: enums.py
+msgctxt "permissions"
+msgid "Sections"
+msgstr "ກຸ່ມຮຽນ"
+
+# key: permissions.resources.additional_programs
+#: enums.py
+msgctxt "permissions"
+msgid "Second majors and minors"
+msgstr "ວິຊາເອກທີສອງ ແລະ ວິຊາໂທ"
+
+# key: permissions.resources.enrollments
+#: enums.py
+msgctxt "permissions"
+msgid "Registrations"
+msgstr "ການລົງທະບຽນຮຽນ"
+
+# key: permissions.resources.registration
+#: enums.py
+msgctxt "permissions"
+msgid "Registration adjustments"
+msgstr "ການປັບປຸງການລົງທະບຽນຮຽນ"
+
+# key: permissions.resources.registration_rules
+#: enums.py
+msgctxt "permissions"
+msgid "Registration rules"
+msgstr "ກົດລະບຽບການລົງທະບຽນຮຽນ"
+
+# key: permissions.resources.registration_holds
+#: enums.py
+msgctxt "permissions"
+msgid "Registration holds and overrides"
+msgstr "ການລະງັບ ແລະ ການຍົກເວັ້ນກົດການລົງທະບຽນຮຽນ"
+
+# key: permissions.resources.grades
+#: enums.py
+msgctxt "permissions"
+msgid "Grades"
+msgstr "ເກຣດ"
+
+# key: permissions.resources.grade_changes
+#: enums.py
+msgctxt "permissions"
+msgid "Grade changes"
+msgstr "ການປ່ຽນເກຣດ"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: enums.py
+msgctxt "permissions"
+msgid "Grading policy"
+msgstr "ນະໂຍບາຍການໃຫ້ເກຣດ"
+
+# key: permissions.resources.grade_exceptions
+#: enums.py
+msgctxt "permissions"
+msgid "Grade exceptions"
+msgstr "ຂໍ້ຍົກເວັ້ນເກຣດ"
+
+# key: permissions.resources.evaluations
+#: enums.py
+msgctxt "permissions"
+msgid "Course evaluation"
+msgstr "ການປະເມີນການສອນ"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: enums.py
+msgctxt "permissions"
+msgid "Examinations"
+msgstr "ການສອບເສັງ"
+
+# key: admin.navigation.graduation
+# key: permissions.resources.graduation
+# key: portal.navigation.graduation
+#: enums.py
+msgctxt "permissions"
+msgid "Graduation"
+msgstr "ການຈົບການສຶກສາ"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: enums.py
+msgctxt "permissions"
+msgid "Reports"
+msgstr "ບົດລາຍງານ"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: enums.py
+msgctxt "permissions"
+msgid "LMS integration"
+msgstr "ການເຊື່ອມຕໍ່ LMS"
+
+# key: permissions.resources.certificates
+#: enums.py
+msgctxt "permissions"
+msgid "Certificates"
+msgstr "ໃບຢັ້ງຢືນ"
+
+# key: permissions.admin_panel.access
+#: enums.py
+msgctxt "permissions"
+msgid "Open the administration panel"
+msgstr "ເປີດໜ້າບໍລິຫານ"
+
+# key: permissions.users.view
+#: enums.py
+msgctxt "permissions"
+msgid "View users"
+msgstr "ເບິ່ງຜູ້ໃຊ້"
+
+# key: permissions.users.create
+#: enums.py
+msgctxt "permissions"
+msgid "Create users"
+msgstr "ສ້າງຜູ້ໃຊ້"
+
+# key: permissions.users.update
+#: enums.py
+msgctxt "permissions"
+msgid "Edit users"
+msgstr "ແກ້ໄຂຜູ້ໃຊ້"
+
+# key: permissions.users.reset_mfa
+#: enums.py
+msgctxt "permissions"
+msgid "Reset two-factor authentication"
+msgstr "ຕັ້ງຄ່າການຢືນຢັນສອງຂັ້ນຕອນໃໝ່"
+
+# key: permissions.roles.view
+#: enums.py
+msgctxt "permissions"
+msgid "View roles"
+msgstr "ເບິ່ງບົດບາດ"
+
+# key: permissions.roles.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Create and edit roles"
+msgstr "ສ້າງ ແລະ ແກ້ໄຂບົດບາດ"
+
+# key: permissions.role_assignments.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Assign and end roles"
+msgstr "ມອບ ແລະ ສິ້ນສຸດບົດບາດ"
+
+# key: permissions.audit_records.view
+#: enums.py
+msgctxt "permissions"
+msgid "View audit records"
+msgstr "ເບິ່ງບັນທຶກການກວດສອບ"
+
+# key: permissions.security_events.view
+#: enums.py
+msgctxt "permissions"
+msgid "View security events"
+msgstr "ເບິ່ງເຫດການຄວາມປອດໄພ"
+
+# key: permissions.security_settings.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage security settings"
+msgstr "ຈັດການການຕັ້ງຄ່າຄວາມປອດໄພ"
+
+# key: permissions.institution_settings.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage institution settings"
+msgstr "ຈັດການການຕັ້ງຄ່າສະຖາບັນ"
+
+# key: permissions.queue_monitor.view
+#: enums.py
+msgctxt "permissions"
+msgid "View the queue monitor"
+msgstr "ເບິ່ງການຕິດຕາມຄິວ"
+
+# key: permissions.reference_data.view
+#: enums.py
+msgctxt "permissions"
+msgid "View reference data"
+msgstr "ເບິ່ງຂໍ້ມູນອ້າງອີງ"
+
+# key: permissions.reference_data.import
+#: enums.py
+msgctxt "permissions"
+msgid "Import reference data from CSV"
+msgstr "ນຳເຂົ້າຂໍ້ມູນອ້າງອີງຈາກ CSV"
+
+# key: permissions.lookup_values.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage code data, countries and languages"
+msgstr "ຈັດການຂໍ້ມູນລະຫັດ, ປະເທດ ແລະ ພາສາ"
+
+# key: permissions.org_units.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage org units and reorganizations"
+msgstr "ຈັດການໜ່ວຍງານ ແລະ ການປັບໂຄງສ້າງ"
+
+# key: permissions.programs.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage programs"
+msgstr "ຈັດການຫຼັກສູດ"
+
+# key: permissions.facilities.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage buildings and rooms"
+msgstr "ຈັດການອາຄານ ແລະ ຫ້ອງ"
+
+# key: permissions.terms.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage academic years, terms, term types and time slots"
+msgstr "ຈັດການສົກຮຽນ, ພາກຮຽນ, ປະເພດພາກຮຽນ ແລະ ຊົ່ວໂມງຮຽນ"
+
+# key: permissions.term_windows.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage term windows"
+msgstr "ຈັດການໄລຍະເວລາດຳເນີນງານ"
+
+# key: permissions.course_categories.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage course categories"
+msgstr "ຈັດການປະເພດວິຊາ"
+
+# key: permissions.grade_scales.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage grade scales"
+msgstr "ຈັດການມາດຕາເກຣດ"
+
+# key: permissions.people.view
+#: enums.py
+msgctxt "permissions"
+msgid "View all people"
+msgstr "ເບິ່ງບຸກຄົນທັງໝົດ"
+
+# key: permissions.people.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Create and edit people"
+msgstr "ສ້າງ ແລະ ແກ້ໄຂບຸກຄົນ"
+
+# key: permissions.people.view_sensitive
+#: enums.py
+msgctxt "permissions"
+msgid "Reveal national ID and passport numbers"
+msgstr "ເປີດເຜີຍເລກບັດປະຈຳຕົວ ແລະ ເລກໜັງສືຜ່ານແດນ"
+
+# key: permissions.people.merge
+#: enums.py
+msgctxt "permissions"
+msgid "Merge duplicate people"
+msgstr "ລວມບຸກຄົນທີ່ຊ້ຳກັນ"
+
+# key: permissions.accounts.invite
+#: enums.py
+msgctxt "permissions"
+msgid "Invite people to create an account"
+msgstr "ເຊີນບຸກຄົນສ້າງບັນຊີ"
+
+# key: permissions.student_records.view
+#: enums.py
+msgctxt "permissions"
+msgid "View student records"
+msgstr "ເບິ່ງບັນທຶກນັກສຶກສາ"
+
+# key: permissions.student_records.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Create and edit student records"
+msgstr "ສ້າງ ແລະ ແກ້ໄຂບັນທຶກນັກສຶກສາ"
+
+# key: permissions.student_status_changes.approve
+#: enums.py
+msgctxt "permissions"
+msgid "Approve and record status changes"
+msgstr "ອະນຸມັດ ແລະ ບັນທຶກການປ່ຽນສະຖານະ"
+
+# key: permissions.instructors.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage instructors"
+msgstr "ຈັດການອາຈານ"
+
+# key: permissions.advisors.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Assign advisors"
+msgstr "ມອບໝາຍອາຈານທີ່ປຶກສາ"
+
+# key: permissions.authentication_settings.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage sign-in methods and SSO"
+msgstr "ຈັດການວິທີເຂົ້າສູ່ລະບົບ ແລະ SSO"
+
+# key: permissions.admission_cycles.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage admission cycles and admission settings"
+msgstr "ຈັດການຮອບຮັບເຂົ້າຮຽນ ແລະ ການຕັ້ງຄ່າການຮັບເຂົ້າຮຽນ"
+
+# key: permissions.applications.view
+#: enums.py
+msgctxt "permissions"
+msgid "View applications"
+msgstr "ເບິ່ງໃບສະໝັກ"
+
+# key: permissions.applications.review
+#: enums.py
+msgctxt "permissions"
+msgid "Review and decide applications"
+msgstr "ພິຈາລະນາ ແລະ ຕັດສິນໃບສະໝັກ"
+
+# key: permissions.applications.matriculate
+#: enums.py
+msgctxt "permissions"
+msgid "Create student records for admitted applicants"
+msgstr "ສ້າງບັນທຶກນັກສຶກສາສຳລັບຜູ້ສະໝັກທີ່ຖືກຮັບ"
+
+# key: permissions.courses.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage courses, versions and requisites"
+msgstr "ຈັດການວິຊາ, ສະບັບວິຊາ ແລະ ວິຊາບັງຄັບກ່ອນ"
+
+# key: permissions.curriculum.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage graduation requirements"
+msgstr "ຈັດການເງື່ອນໄຂການຈົບການສຶກສາ"
+
+# key: permissions.sections.view
+#: enums.py
+msgctxt "permissions"
+msgid "View sections"
+msgstr "ເບິ່ງກຸ່ມຮຽນ"
+
+# key: permissions.sections.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Plan sections (instructors, times, rooms)"
+msgstr "ວາງແຜນກຸ່ມຮຽນ (ອາຈານ, ເວລາ, ຫ້ອງ)"
+
+# key: permissions.additional_programs.approve
+#: enums.py
+msgctxt "permissions"
+msgid "Decide second major and minor applications"
+msgstr "ຕັດສິນໃບສະໝັກວິຊາເອກທີສອງ ແລະ ວິຊາໂທ"
+
+# key: permissions.enrollments.view
+#: enums.py
+msgctxt "permissions"
+msgid "View registrations and rosters"
+msgstr "ເບິ່ງການລົງທະບຽນຮຽນ ແລະ ລາຍຊື່ຜູ້ຮຽນ"
+
+# key: permissions.registration.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Register, drop and withdraw students for them (with a reason)"
+msgstr "ລົງທະບຽນ, ຖອນວິຊາ ແລະ ຖອນຕົວແທນນັກສຶກສາ (ພ້ອມເຫດຜົນ)"
+
+# key: permissions.registration_rules.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage registration rule sets and credit limits"
+msgstr "ຈັດການຊຸດກົດລະບຽບການລົງທະບຽນຮຽນ ແລະ ຂີດຈຳກັດໜ່ວຍກິດ"
+
+# key: permissions.registration_holds.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Place and release holds, grant rule overrides"
+msgstr "ລະງັບ ແລະ ປົດລະງັບ, ອະນຸຍາດການຍົກເວັ້ນກົດ"
+
+# key: permissions.grades.view
+#: enums.py
+msgctxt "permissions"
+msgid "View grades, grade progress and term records"
+msgstr "ເບິ່ງເກຣດ, ຄວາມຄືບໜ້າການໃຫ້ເກຣດ ແລະ ບັນທຶກພາກຮຽນ"
+
+# key: permissions.grades.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Finalize and return grades, enter grades for instructors, close terms"
+msgstr "ສະຫຼຸບ ແລະ ສົ່ງຄືນເກຣດ, ປ້ອນເກຣດແທນອາຈານ, ປິດພາກຮຽນ"
+
+# key: permissions.grade_changes.request
+#: enums.py
+msgctxt "permissions"
+msgid "Request a change to a finalized grade"
+msgstr "ຂໍປ່ຽນເກຣດທີ່ສະຫຼຸບແລ້ວ"
+
+# key: permissions.grade_changes.approve
+#: enums.py
+msgctxt "permissions"
+msgid "Approve or reject grade changes (not your own requests)"
+msgstr "ອະນຸມັດ ຫຼື ປະຕິເສດການປ່ຽນເກຣດ (ບໍ່ແມ່ນຄຳຮ້ອງຂອງຕົນເອງ)"
+
+# key: permissions.grading_policies.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage GPA, retake, academic standing and honors policy"
+msgstr "ຈັດການນະໂຍບາຍ GPA, ການຮຽນຊ້ຳ, ສະຖານະພາບການຮຽນ ແລະ ກຽດນິຍົມ"
+
+# key: permissions.grade_exceptions.review
+#: enums.py
+msgctxt "permissions"
+msgid ""
+"Be told when staff submit grades outside the grade caps (department heads, "
+"academic office)"
+msgstr "ໄດ້ຮັບແຈ້ງເມື່ອພະນັກງານສົ່ງເກຣດເກີນຂີດຈຳກັດ (ຫົວໜ້າພາກວິຊາ, ຫ້ອງການວິຊາການ)"
+
+# key: permissions.evaluations.view
+#: enums.py
+msgctxt "permissions"
+msgid "View course evaluation response rates and results"
+msgstr "ເບິ່ງອັດຕາການຕອບ ແລະ ຜົນການປະເມີນການສອນ"
+
+# key: permissions.evaluations.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage evaluation forms, term evaluations and publication"
+msgstr "ຈັດການແບບຟອມປະເມີນ, ການປະເມີນປະຈຳພາກຮຽນ ແລະ ການເຜີຍແຜ່"
+
+# key: permissions.certificates.issue
+#: enums.py
+msgctxt "permissions"
+msgid "Issue, re-render and revoke certificates"
+msgstr "ອອກ, ສ້າງໃໝ່ ແລະ ຖອນໃບຢັ້ງຢືນ"
+
+# key: permissions.certificates.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage certificate kinds, templates and settings"
+msgstr "ຈັດການປະເພດ, ແມ່ແບບ ແລະ ການຕັ້ງຄ່າໃບຢັ້ງຢືນ"
+
+# key: permissions.assessments.record
+#: enums.py
+msgctxt "permissions"
+msgid "Register students, enter and publish results, record external results"
+msgstr "ລົງທະບຽນນັກສຶກສາ, ປ້ອນ ແລະ ເຜີຍແຜ່ຜົນ, ບັນທຶກຜົນຈາກພາຍນອກ"
+
+# key: permissions.assessments.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage examination kinds, areas and sessions"
+msgstr "ຈັດການປະເພດ, ຂົງເຂດ ແລະ ຮອບການສອບເສັງ"
+
+# key: permissions.graduation.audit
+#: enums.py
+msgctxt "permissions"
+msgid "Run and view degree audits"
+msgstr "ດຳເນີນ ແລະ ເບິ່ງການກວດສອບເງື່ອນໄຂຈົບການສຶກສາ"
+
+# key: permissions.graduation.process
+#: enums.py
+msgctxt "permissions"
+msgid "Process graduations, grant requirement waivers"
+msgstr "ດຳເນີນການຈົບການສຶກສາ, ອະນຸມັດການຍົກເວັ້ນເງື່ອນໄຂ"
+
+# key: permissions.reports.view
+#: enums.py
+msgctxt "permissions"
+msgid "View standard reports and download them"
+msgstr "ເບິ່ງ ແລະ ດາວໂຫຼດບົດລາຍງານມາດຕະຖານ"
+
+# key: permissions.lms.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage LMS platforms, links and synchronization"
+msgstr "ຈັດການແພລດຟອມ LMS, ການເຊື່ອມຕໍ່ ແລະ ການຊິງຄ໌"
+
+# key: security.mfa_enforcement.disabled
+#: enums.py
+msgid "Not used"
+msgstr "ບໍ່ໃຊ້"
+
+# key: security.mfa_enforcement.recommended
+#: enums.py
+msgid "Recommended (optional)"
+msgstr "ແນະນຳ (ບໍ່ບັງຄັບ)"
+
+# key: security.mfa_enforcement.required_for_roles
+#: enums.py
+msgid "Required for selected roles"
+msgstr "ບັງຄັບສຳລັບບົດບາດທີ່ເລືອກ"
+
+# key: security.mfa_enforcement.required_for_all
+#: enums.py
+msgid "Required for everyone"
+msgstr "ບັງຄັບສຳລັບທຸກຄົນ"
+
+# key: security.mfa_methods.authenticator_app
+#: enums.py
+msgid "Authenticator app"
+msgstr "ແອັບຢືນຢັນຕົວຕົນ"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: enums.py
+msgid "Email code"
+msgstr "ລະຫັດທາງອີເມວ"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: enums.py
+msgctxt "security"
+msgid "Applicant"
+msgstr "ຜູ້ສະໝັກ"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: enums.py
+msgctxt "security"
+msgid "Student"
+msgstr "ນັກສຶກສາ"
+
+# key: security.personas.alumni
+#: enums.py
+msgctxt "security"
+msgid "Alumni"
+msgstr "ສິດເກົ່າ"
+
+# key: security.personas.instructor
+#: enums.py
+msgctxt "security"
+msgid "Instructor"
+msgstr "ອາຈານ"
+
+# key: security.personas.advisor
+#: enums.py
+msgctxt "security"
+msgid "Advisor"
+msgstr "ອາຈານທີ່ປຶກສາ"
+
+# key: security.scope_types.global
+#: enums.py
+msgctxt "security"
+msgid "All"
+msgstr "ທັງໝົດ"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: enums.py
+msgctxt "security"
+msgid "Org unit"
+msgstr "ໜ່ວຍງານ"
+
+# key: security.scope_types.program
+#: enums.py
+msgctxt "security"
+msgid "Program"
+msgstr "ຫຼັກສູດ"
+
+# key: security.sso_link_modes.manual
+#: enums.py
+msgid "Users link their own accounts"
+msgstr "ຜູ້ໃຊ້ເຊື່ອມຕໍ່ບັນຊີດ້ວຍຕົນເອງ"
+
+# key: security.sso_link_modes.institutional_email
+#: enums.py
+msgid "Link automatically by verified school email"
+msgstr "ເຊື່ອມຕໍ່ອັດຕະໂນມັດດ້ວຍອີເມວສະຖາບັນທີ່ຢືນຢັນແລ້ວ"
+
+# key: security.student_number_login.disabled
+#: enums.py
+msgid "Not allowed"
+msgstr "ບໍ່ອະນຸຍາດ"
+
+# key: security.student_number_login.active_records
+#: enums.py
+msgid "Current students only"
+msgstr "ສະເພາະນັກສຶກສາປັດຈຸບັນ"
+
+# key: security.student_number_login.all_records
+#: enums.py
+msgid "Current students and graduates"
+msgstr "ນັກສຶກສາປັດຈຸບັນ ແລະ ຜູ້ຈົບການສຶກສາ"
+
+# key: authentication.fields.email_or_student_number
+#: forms.py
+msgid "Email or student number"
+msgstr "ອີເມວ ຫຼື ລະຫັດນັກສຶກສາ"
+
+# key: authentication.fields.password
+#: forms.py
+msgctxt "authentication"
+msgid "Password"
+msgstr "ລະຫັດຜ່ານ"
+
+# key: authentication.login.remember_me
+#: forms.py
+msgid "Keep me signed in"
+msgstr "ຈື່ການເຂົ້າລະບົບໄວ້"
+
+# key: auth.inactive
+#: middleware.py
+msgid "This account has been deactivated. Contact the administrator."
+msgstr "ບັນຊີນີ້ຖືກປິດໃຊ້ງານແລ້ວ. ກະລຸນາຕິດຕໍ່ຜູ້ບໍລິຫານລະບົບ."
+
+# key: security.mfa.enrollment_required
+#: middleware.py
+msgid ""
+"Two-factor authentication is required for your account. Please set it up to "
+"continue."
+msgstr "ບັນຊີຂອງທ່ານຈຳເປັນຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ. ກະລຸນາຕັ້ງຄ່າເພື່ອດຳເນີນການຕໍ່."
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "ສະບາຍດີ,"
+
+# key: security.email_code.mail_intro
+#: notifications.py
+msgid "Use this code to finish signing in:"
+msgstr "ໃຊ້ລະຫັດນີ້ເພື່ອເຂົ້າສູ່ລະບົບໃຫ້ສຳເລັດ:"
+
+# key: security.email_code.mail_expiry
+#: notifications.py
+#, python-format
+msgid "The code expires in %(minutes)s minutes and can be used once."
+msgstr "ລະຫັດຈະໝົດອາຍຸໃນ %(minutes)s ນາທີ ແລະ ໃຊ້ໄດ້ຄັ້ງດຽວ."
+
+# key: security.email_code.mail_ignore
+#: notifications.py
+msgid "If you did not try to sign in, change your password."
+msgstr "ຖ້າທ່ານບໍ່ໄດ້ພະຍາຍາມເຂົ້າສູ່ລະບົບ, ກະລຸນາປ່ຽນລະຫັດຜ່ານຂອງທ່ານ."
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ຂອບໃຈ,\n"
+"%(app)sຂອບໃຈ,\n"
+"%(app)s"
+
+# key: security.email_code.mail_subject
+#: notifications.py
+msgid "Your sign-in code"
+msgstr "ລະຫັດເຂົ້າສູ່ລະບົບຂອງທ່ານ"
+
+# key: admin.settings.security.mfa_enforcement
+#: settings_pages.py
+msgid "Policy"
+msgstr "ນະໂຍບາຍ"
+
+# key: admin.users.actions.reset_mfa
+# key: admin.settings.security.mfa_required_roles
+#: settings_pages.py
+msgid "Roles that must use two-factor authentication"
+msgstr "ບົດບາດທີ່ຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: security.mfa_enforcement.required_for_roles
+#: settings_pages.py
+msgid "Used when the policy is Required for selected roles."
+msgstr "ໃຊ້ເມື່ອນະໂຍບາຍແມ່ນ 'ຈຳເປັນສຳລັບບົດບາດທີ່ເລືອກ'."
+
+# key: admin.settings.security.mfa_grace_period_days
+#: settings_pages.py
+msgid "Grace period (days)"
+msgstr "ໄລຍະຜ່ອນຜັນ (ວັນ)"
+
+# key: admin.settings.security.mfa_grace_period_help
+#: settings_pages.py
+msgid ""
+"Days a user can keep working after the requirement first applies to them. 0 "
+"means immediately."
+msgstr "ຈຳນວນວັນທີ່ຜູ້ໃຊ້ຍັງເຮັດວຽກຕໍ່ໄດ້ຫຼັງຈາກຂໍ້ກຳນົດເລີ່ມມີຜົນກັບຕົນ. 0 ໝາຍເຖິງທັນທີ."
+
+# key: admin.settings.security.mfa_remember_device_days
+#: settings_pages.py
+msgid "Remember devices for (days)"
+msgstr "ຈື່ອຸປະກອນເປັນເວລາ (ວັນ)"
+
+# key: admin.settings.security.mfa_remember_device_help
+#: settings_pages.py
+msgid ""
+"Users can skip the code on a trusted device for this many days. 0 turns this "
+"off."
+msgstr "ຜູ້ໃຊ້ສາມາດຂ້າມລະຫັດໃນອຸປະກອນທີ່ເຊື່ອຖືໄດ້ເປັນຈຳນວນວັນນີ້. 0 ປິດການໃຊ້ງານ."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+# key: admin.settings.security.mfa_email_code_enabled
+#: settings_pages.py
+msgid "Allow email codes"
+msgstr "ອະນຸຍາດລະຫັດທາງອີເມວ"
+
+# key: admin.settings.security.mfa_email_code_help
+#: settings_pages.py
+msgid ""
+"Users can choose one-time codes by email instead of an authenticator app. "
+"Turning this off stops email codes from counting as two-factor "
+"authentication."
+msgstr ""
+"ຜູ້ໃຊ້ສາມາດເລືອກຮັບລະຫັດໃຊ້ຄັ້ງດຽວທາງອີເມວແທນແອັບຢືນຢັນຕົວຕົນ. ຖ້າປິດ "
+"ລະຫັດທາງອີເມວຈະບໍ່ນັບເປັນການຢືນຢັນສອງຂັ້ນຕອນ."
+
+#: settings_pages.py
+msgid "Choose at least one role."
+msgstr "ກະລຸນາເລືອກຢ່າງໜ້ອຍໜຶ່ງບົດບາດ."
+
+# key: permissions.resources.security_events
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: settings_pages.py
+msgid "Security"
+msgstr "ຄວາມປອດໄພ"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: settings_pages.py views.py
+msgid "Two-factor authentication"
+msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: admin.settings.security.mfa_description
+#: settings_pages.py
+msgid "Changes apply to every user immediately."
+msgstr "ການປ່ຽນແປງມີຜົນກັບຜູ້ໃຊ້ທຸກຄົນທັນທີ."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
+msgstr "%(key)s: ຄີໃຊ້ໄດ້ສະເພາະຕົວພິມນ້ອຍ, ຕົວເລກ ແລະ ເຄື່ອງໝາຍຂີດ."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: each provider needs its own key."
+msgstr "%(key)s: ຜູ້ໃຫ້ບໍລິການແຕ່ລະອັນຕ້ອງມີຄີຂອງຕົນເອງ."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the button label is required (64 characters at most)."
+msgstr "%(key)s: ຕ້ອງມີຊື່ປຸ່ມ (ບໍ່ເກີນ 64 ຕົວອັກສອນ)."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the issuer must be a URL."
+msgstr "%(key)s: ຜູ້ອອກຕ້ອງເປັນ URL."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the client ID is required."
+msgstr "%(key)s: ຕ້ອງມີ Client ID."
+
+# key: authentication.fields.email_or_student_number
+# key: admin.settings.authentication.student_number_login
+#: settings_pages.py
+msgid "Sign in with student number"
+msgstr "ເຂົ້າລະບົບດ້ວຍລະຫັດນັກສຶກສາ"
+
+# key: admin.settings.authentication.password_login_for_sso_users
+#: settings_pages.py
+msgid "Allow passwords for users with school sign-in"
+msgstr "ອະນຸຍາດລະຫັດຜ່ານສຳລັບຜູ້ໃຊ້ທີ່ມີບັນຊີເຂົ້າລະບົບຂອງສະຖາບັນ"
+
+# key: admin.settings.authentication.password_login_for_sso_users_help
+#: settings_pages.py
+msgid ""
+"When off, users who have linked a school account must use it to sign in."
+msgstr "ຖ້າປິດ ຜູ້ໃຊ້ທີ່ເຊື່ອມໂຍງບັນຊີຂອງສະຖາບັນແລ້ວຕ້ອງໃຊ້ບັນຊີນັ້ນເຂົ້າລະບົບ."
+
+# key: admin.settings.authentication.lockout_threshold
+#: settings_pages.py
+msgid "Lock after failed attempts"
+msgstr "ລັອກຫຼັງຈາກພະຍາຍາມລົ້ມເຫຼວ"
+
+# key: admin.settings.authentication.lockout_threshold_help
+#: settings_pages.py
+msgid ""
+"Failed passwords in a row before the account is locked. 0 turns locking off."
+msgstr "ຈຳນວນຄັ້ງທີ່ໃສ່ລະຫັດຜ່ານຜິດຕິດຕໍ່ກັນກ່ອນບັນຊີຖືກລັອກ. 0 ປິດການລັອກ."
+
+# key: admin.settings.authentication.lockout_minutes
+#: settings_pages.py
+msgid "Lock duration (minutes)"
+msgstr "ໄລຍະເວລາລັອກ (ນາທີ)"
+
+# key: permissions.resources.accounts
+# key: admin.settings.authentication.sso_link_mode
+#: settings_pages.py
+msgid "Account linking"
+msgstr "ການເຊື່ອມໂຍງບັນຊີ"
+
+# key: admin.settings.authentication.sso_providers
+#: settings_pages.py
+msgid "Providers"
+msgstr "ຜູ້ໃຫ້ບໍລິການ"
+
+# key: permissions.resources.authentication_settings
+# key: admin.settings.authentication.title
+#: settings_pages.py
+msgid "Sign-in methods"
+msgstr "ວິທີເຂົ້າລະບົບ"
+
+# key: authentication.fields.password
+# key: admin.settings.authentication.password_section
+#: settings_pages.py
+msgid "Passwords"
+msgstr "ລະຫັດຜ່ານ"
+
+# key: admin.settings.authentication.sso_section
+#: settings_pages.py
+msgid "School sign-in (SSO)"
+msgstr "ການເຂົ້າລະບົບຂອງສະຖາບັນ (SSO)"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: templates/security/admin/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+# key: admin.settings.authentication.provider_key
+# key: lms.fields.credential_key
+#: templates/security/widgets/sso_providers.html
+msgctxt "security"
+msgid "Key"
+msgstr "ຄີ"
+
+# key: admin.settings.authentication.provider_label
+#: templates/security/widgets/sso_providers.html
+msgid "Button label"
+msgstr "ຂໍ້ຄວາມປຸ່ມ"
+
+# key: admin.settings.authentication.issuer
+#: templates/security/widgets/sso_providers.html
+msgid "Issuer URL"
+msgstr "URL ຜູ້ອອກ"
+
+# key: admin.settings.authentication.client_id
+#: templates/security/widgets/sso_providers.html
+msgid "Client ID"
+msgstr "Client ID"
+
+# key: admin.settings.authentication.client_secret
+#: templates/security/widgets/sso_providers.html
+msgid "Client secret"
+msgstr "Client secret"
+
+# key: admin.settings.authentication.client_secret_help
+#: templates/security/widgets/sso_providers.html
+msgid "Stored encrypted. Leave empty to keep the stored value."
+msgstr "ເກັບແບບເຂົ້າລະຫັດ. ປະຫວ່າງໄວ້ເພື່ອຮັກສາຄ່າທີ່ເກັບໄວ້."
+
+# key: admin.role_assignments.fields.scope
+# key: admin.settings.authentication.scopes
+#: templates/security/widgets/sso_providers.html
+msgid "Scopes"
+msgstr "ຂອບເຂດ (scopes)"
+
+# key: admin.users.actions.reset_mfa
+# key: admin.settings.authentication.trusts_mfa
+#: templates/security/widgets/sso_providers.html
+msgid "Counts as two-factor authentication"
+msgstr "ນັບເປັນການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: admin.settings.authentication.trusts_mfa_help
+#: templates/security/widgets/sso_providers.html
+msgid ""
+"Turn on only if the school's sign-in itself requires two-factor "
+"authentication."
+msgstr "ເປີດສະເພາະເມື່ອການເຂົ້າລະບົບຂອງສະຖາບັນເອງຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ."
+
+#: templates/security/widgets/sso_providers.html
+msgid "Remove this provider"
+msgstr "ລຶບຜູ້ໃຫ້ບໍລິການນີ້"
+
+# key: admin.settings.authentication.redirect_uri
+#: templates/security/widgets/sso_providers.html
+msgid "Redirect URI to register with the provider"
+msgstr "Redirect URI ທີ່ຕ້ອງລົງທະບຽນກັບຜູ້ໃຫ້ບໍລິການ"
+
+#: views.py
+msgid "The email code must be 6 digits."
+msgstr "ລະຫັດອີເມວຕ້ອງມີ 6 ຕົວເລກ."
+
+# key: security.email_code.sent
+#: views.py
+msgid "A new code has been sent to your email."
+msgstr "ສົ່ງລະຫັດໃໝ່ໄປທາງອີເມວຂອງທ່ານແລ້ວ."
+
+# key: security.email_code.wait
+#: views.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "ກະລຸນາລໍຖ້າ %(seconds)s ວິນາທີກ່ອນຂໍລະຫັດໃໝ່."

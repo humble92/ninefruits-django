@@ -1,0 +1,15 @@
+{% load i18n %}
+<form method="post" action="{% url 'i18n:locale-update' %}" class="text-sm">
+    {% csrf_token %}
+    <input type="hidden" name="next" value="{{ next }}">
+    <label for="locale-switcher" class="sr-only">{% translate "Language" context "common" %}</label>
+    <select id="locale-switcher" name="locale" class="rounded border border-zinc-300 bg-white px-2 py-1">
+        {% for code, label in locales %}
+            <option value="{{ code }}" lang="{{ code }}"{% if code == current %} selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+    </select>
+    <noscript><button type="submit">{% translate "Apply" context "common" %}</button></noscript>
+</form>
+<script nonce="{{ csp_nonce }}">
+    document.getElementById("locale-switcher").addEventListener("change", (event) => event.target.form.submit());
+</script>

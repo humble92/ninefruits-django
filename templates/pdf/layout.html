@@ -1,0 +1,24 @@
+{% load i18n %}{% get_current_language as LANGUAGE_CODE %}<!DOCTYPE html>
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}{{ title|default:"" }}{% endblock %}</title>
+    <style>
+        /* Fonts are installed in the Gotenberg image (Noto Sans CJK, Noto Sans Lao). Korean first
+           for Hangul, Simplified Chinese for Han characters, Lao script falls through to Noto Sans
+           Lao, Latin to Noto Sans. Mark Chinese text with lang="zh-Hans" (Han glyph shapes differ)
+           and Lao text with lang="lo". */
+        body { font-family: "Noto Sans CJK KR", "Noto Sans CJK SC", "Noto Sans Lao", "Noto Sans", sans-serif; font-size: 11pt; color: #111; }
+        :lang(zh) { font-family: "Noto Sans CJK SC", "Noto Sans CJK KR", "Noto Sans Lao", "Noto Sans", sans-serif; }
+        :lang(lo) { font-family: "Noto Sans Lao", "Noto Sans", "Noto Sans CJK KR", sans-serif; }
+        h1 { font-size: 18pt; margin: 0 0 12pt; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #999; padding: 4pt 6pt; text-align: left; }
+        @page { size: A4; }
+        {% block style %}{% endblock %}
+    </style>
+</head>
+<body>
+{% block content %}{% endblock %}
+</body>
+</html>

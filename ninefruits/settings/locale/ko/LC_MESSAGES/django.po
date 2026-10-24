@@ -1,0 +1,78 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: common.saved
+#: ninefruits/settings/admin_views.py
+msgid "Saved"
+msgstr "저장되었습니다"
+
+# key: admin.navigation.settings
+#: ninefruits/settings/admin_views.py
+#: ninefruits/settings/templates/settings/page.html
+msgid "Settings"
+msgstr "설정"
+
+# key: admin.settings.institution.name
+#: ninefruits/settings/pages/institution.py
+msgid "Institution name"
+msgstr "기관 이름"
+
+# key: admin.settings.institution.timezone
+#: ninefruits/settings/pages/institution.py
+msgid "Time zone"
+msgstr "시간대"
+
+# key: admin.settings.institution.supported_locales
+#: ninefruits/settings/pages/institution.py
+msgid "Offered languages"
+msgstr "제공 언어"
+
+# key: admin.settings.institution.default_locale
+#: ninefruits/settings/pages/institution.py
+msgid "Default language"
+msgstr "기본 언어"
+
+# key: admin.settings.institution.title
+#: ninefruits/settings/pages/institution.py
+msgid "Institution"
+msgstr "기관"
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/settings/pages/institution.py
+msgctxt "admin"
+msgid "General"
+msgstr "기본 정보"
+
+# key: admin.settings.institution.languages
+#: ninefruits/settings/pages/institution.py
+msgid "Languages"
+msgstr "언어"
+
+# key: admin.settings.institution.languages_help
+#: ninefruits/settings/pages/institution.py
+msgid ""
+"Languages offered to users. A language appears here when its translation "
+"folder exists."
+msgstr "사용자에게 제공할 언어입니다. 번역 폴더가 있는 언어만 표시됩니다."
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/settings/templates/settings/index.html
+#: ninefruits/settings/templates/settings/page.html
+msgid "Home"
+msgstr "홈"
+
+# key: common.save
+#: ninefruits/settings/templates/settings/page.html
+msgid "Save"
+msgstr "저장"

@@ -67,6 +67,11 @@ mirroring the original `database/settings/*.php` (locale values mapped `zh_CN` -
 - Permissions: catalog names `resource.action` (`ninefruits.security.enums.Permission`),
   checked with `user.has_perm("people.view")` / `has_perm(perm, obj)`. Do not use Django's
   `auth.Permission` or `Group`.
+- Admin: subclass `ninefruits.adminpanel.mixins.CatalogAdmin` (`permissions` mapping) and set
+  `navigation_group = NavigationGroup.X` (`ninefruits.adminpanel.navigation`; default: the app's
+  group); custom pages via `admin.site.register_view(route, view, name=, permission=,
+  navigation_group=, label=)`. Portal pages extend `portal/base.html` (block `content`) and add
+  menu items with `ninefruits.portal.menu.register(key, label, url_name, personas=/permission=)`.
 - DB session context: `ninefruits.core.db.session_context()`; tasks inherit
   `ninefruits.core.tasks.SystemTask`; commands that change data inherit
   `ninefruits.core.commands.AuditedCommand`.
@@ -77,7 +82,15 @@ mirroring the original `database/settings/*.php` (locale values mapped `zh_CN` -
   same English needs different translations. Per-app catalogs:
   `ninefruits/<app>/locale/{ko,zh_Hans,lo}/LC_MESSAGES/django.po` (global templates use
   `locale/`). Convert the original `lang/*` values with `tools/convert_translations.py`.
-  `uv run manage.py i18n_missing --strict` must pass. Language codes: `en`, `ko`, `zh-hans`,
+  `uv run manage.py i18n_missing --strict` must pass. Never run plain `makemessages` from an
+  app directory without its own `locale/` (it rewrites the global catalog): create
+  `ninefruits/<app>/locale/{ko,zh_Hans,lo}/LC_MESSAGES` first, or use
+  `uv run manage.py i18n_makemessages` from the repo root. Fill from the original with
+  `uv run python tools/convert_translations.py --fill --app <app>` (or `--group <g> --app <app>`).
+  The tool writes a `msgctxt` (= original group) when an English text has different translations
+  in the original; use the same context in code (`pgettext("common", "Language")`). `# key:`
+  comments name the original keys. Translatable DB values: `ninefruits.i18n.fields`
+  (`TranslatableJSONField`, `I18n`, `I18nSearchText`); guide: `docs/development/adding-a-language.md`. Language codes: `en`, `ko`, `zh-hans`,
   `lo`; translatable jsonb keys use the same codes.
 - SQL: ORM and bound parameters only. Raw SQL must be a constant string with placeholders
   (`tools/checks/raw_sql.py` enforces this). Never `.extra()`.

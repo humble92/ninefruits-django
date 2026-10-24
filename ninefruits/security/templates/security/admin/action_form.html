@@ -1,0 +1,27 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}Form of a user admin action (assign role, end assignment).{% endcomment %}
+{% block content %}
+<div class="max-w-2xl">
+    <h1 class="mb-1 text-lg font-semibold">{{ title }}</h1>
+    <p class="mb-6 text-sm text-base-500">{{ subtitle }}{% if assignment %} · {{ assignment }}{% endif %}</p>
+    <form method="post" class="flex flex-col gap-4">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+            <div class="rounded bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">{% for error in form.non_field_errors %}<p>{{ error }}</p>{% endfor %}</div>
+        {% endif %}
+        {% for field in form %}
+            <div>
+                <label for="{{ field.id_for_label }}" class="mb-1 block text-sm font-medium">{{ field.label }}</label>
+                {{ field }}
+                {% if field.help_text %}<p class="mt-1 text-xs text-base-500">{{ field.help_text }}</p>{% endif %}
+                {% for error in field.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+            </div>
+        {% endfor %}
+        <div class="flex gap-3">
+            <button type="submit" class="rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white">{{ title }}</button>
+            <a href="{{ back_url }}" class="px-4 py-2 text-sm">{% translate "Cancel" context "common" %}</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

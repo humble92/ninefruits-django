@@ -1,0 +1,263 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.audit.fields.log
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Log"
+msgstr "ບັນທຶກ"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Table"
+msgstr "ຕາຕະລາງ"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Time"
+msgstr "ເວລາ"
+
+# key: admin.audit.fields.subject
+#: ninefruits/audit/admin.py
+msgid "Record"
+msgstr "ລາຍການ"
+
+# key: admin.audit.fields.actor
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "User"
+msgstr "ຜູ້ໃຊ້"
+
+# key: common.reason
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: admin.audit.fields.properties
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Details"
+msgstr "ລາຍລະອຽດ"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Operation"
+msgstr "ການດຳເນີນການ"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Changed columns"
+msgstr "ຖັນທີ່ປ່ຽນແປງ"
+
+#: ninefruits/audit/admin.py
+msgid "Changes"
+msgstr "ການປ່ຽນແປງ"
+
+#: ninefruits/audit/admin.py
+msgid "Column"
+msgstr "ຖັນ"
+
+# key: admin.record_changes.fields.old_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Before"
+msgstr "ກ່ອນ"
+
+# key: admin.record_changes.fields.new_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "After"
+msgstr "ຫຼັງ"
+
+# key: admin.audit.fields.event
+# key: admin.security_events.fields.type
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Event"
+msgstr "ເຫດການ"
+
+# key: admin.audit.fields.request_id
+#: ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Request ID"
+msgstr "ລະຫັດຄຳຮ້ອງຂໍ"
+
+# key: admin.audit.fields.ip_address
+#: ninefruits/audit/models.py
+msgid "IP address"
+msgstr "ທີ່ຢູ່ IP"
+
+# key: admin.activities.label
+#: ninefruits/audit/models.py
+msgid "activity"
+msgstr "ກິດຈະກຳ"
+
+# key: admin.activities.plural_label
+#: ninefruits/audit/models.py
+msgid "activity log"
+msgstr "ບັນທຶກກິດຈະກຳ"
+
+# key: admin.record_changes.fields.transaction_id
+#: ninefruits/audit/models.py
+msgid "Transaction"
+msgstr "ທຸລະກຳ"
+
+# key: admin.record_changes.fields.record_id
+#: ninefruits/audit/models.py
+msgid "Record ID"
+msgstr "ລະຫັດລາຍການ"
+
+# key: admin.record_changes.fields.database_user
+#: ninefruits/audit/models.py
+msgid "Database user"
+msgstr "ຜູ້ໃຊ້ຖານຂໍ້ມູນ"
+
+# key: admin.record_changes.label
+#: ninefruits/audit/models.py
+msgid "data change"
+msgstr "ການປ່ຽນແປງຂໍ້ມູນ"
+
+# key: admin.record_changes.plural_label
+#: ninefruits/audit/models.py
+msgid "data changes"
+msgstr "ການປ່ຽນແປງຂໍ້ມູນ"
+
+# key: admin.security_events.fields.identifier
+#: ninefruits/audit/models.py
+msgid "Sign-in name"
+msgstr "ຊື່ເຂົ້າລະບົບ"
+
+# key: admin.security_events.label
+#: ninefruits/audit/models.py
+msgid "security event"
+msgstr "ເຫດການຄວາມປອດໄພ"
+
+# key: admin.security_events.plural_label
+#: ninefruits/audit/models.py
+msgid "security events"
+msgstr "ເຫດການຄວາມປອດໄພ"
+
+# key: security.event_types.login_succeeded
+#: ninefruits/audit/security_events.py
+msgid "Signed in"
+msgstr "ເຂົ້າສູ່ລະບົບແລ້ວ"
+
+# key: security.event_types.login_failed
+#: ninefruits/audit/security_events.py
+msgid "Sign-in failed"
+msgstr "ເຂົ້າສູ່ລະບົບລົ້ມເຫຼວ"
+
+# key: security.event_types.login_locked_out
+#: ninefruits/audit/security_events.py
+msgid "Sign-in locked"
+msgstr "ການເຂົ້າສູ່ລະບົບຖືກລັອກ"
+
+# key: security.event_types.account_unlocked
+#: ninefruits/audit/security_events.py
+msgid "Account unlocked"
+msgstr "ປົດລັອກບັນຊີ"
+
+# key: security.event_types.logout
+#: ninefruits/audit/security_events.py
+msgid "Signed out"
+msgstr "ອອກຈາກລະບົບແລ້ວ"
+
+# key: security.event_types.password_reset
+#: ninefruits/audit/security_events.py
+msgid "Password reset"
+msgstr "ຕັ້ງລະຫັດຜ່ານໃໝ່"
+
+# key: security.event_types.mfa_enabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor enabled"
+msgstr "ເປີດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: security.event_types.mfa_confirmed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor confirmed"
+msgstr "ຢືນຢັນການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: security.event_types.mfa_disabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor disabled"
+msgstr "ປິດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: security.event_types.mfa_challenge_failed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor code rejected"
+msgstr "ລະຫັດຢືນຢັນສອງຂັ້ນຕອນຖືກປະຕິເສດ"
+
+# key: security.event_types.mfa_recovery_code_used
+#: ninefruits/audit/security_events.py
+msgid "Recovery code used"
+msgstr "ໃຊ້ລະຫັດກູ້ຄືນ"
+
+# key: security.event_types.mfa_recovery_codes_regenerated
+#: ninefruits/audit/security_events.py
+msgid "Recovery codes regenerated"
+msgstr "ສ້າງລະຫັດກູ້ຄືນໃໝ່"
+
+# key: security.event_types.mfa_reset
+#: ninefruits/audit/security_events.py
+msgid "Two-factor reset by administrator"
+msgstr "ຜູ້ບໍລິຫານຕັ້ງການຢືນຢັນສອງຂັ້ນຕອນໃໝ່"
+
+# key: security.event_types.mfa_email_code_sent
+#: ninefruits/audit/security_events.py
+msgid "Email code sent"
+msgstr "ສົ່ງລະຫັດທາງອີເມວ"
+
+# key: security.event_types.mfa_email_enabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned on"
+msgstr "ເປີດໃຊ້ລະຫັດທາງອີເມວ"
+
+# key: security.event_types.mfa_email_disabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned off"
+msgstr "ປິດໃຊ້ລະຫັດທາງອີເມວ"
+
+# key: security.event_types.role_assigned
+#: ninefruits/audit/security_events.py
+msgid "Role assigned"
+msgstr "ມອບບົດບາດ"
+
+# key: security.event_types.role_assignment_revoked
+#: ninefruits/audit/security_events.py
+msgid "Role assignment ended"
+msgstr "ສິ້ນສຸດການມອບບົດບາດ"
+
+# key: security.event_types.role_permissions_changed
+#: ninefruits/audit/security_events.py
+msgid "Role permissions changed"
+msgstr "ປ່ຽນສິດຂອງບົດບາດ"
+
+# key: security.event_types.sensitive_data_revealed
+#: ninefruits/audit/security_events.py
+msgid "Sensitive data revealed"
+msgstr "ເປີດເຜີຍຂໍ້ມູນລະອຽດອ່ອນ"
+
+# key: security.event_types.data_exported
+#: ninefruits/audit/security_events.py
+msgid "Data exported"
+msgstr "ສົ່ງອອກຂໍ້ມູນ"
+
+# key: security.event_types.audit_pruned
+#: ninefruits/audit/security_events.py
+msgid "Audit records pruned"
+msgstr "ລຶບບັນທຶກການກວດສອບເກົ່າ"
+
+# key: security.event_types.password_changed
+#: ninefruits/audit/security_events.py
+msgid "Password changed"
+msgstr "ປ່ຽນລະຫັດຜ່ານ"
+
+# key: security.event_types.email_changed
+#: ninefruits/audit/security_events.py
+msgid "Email changed"
+msgstr "ປ່ຽນອີເມວ"

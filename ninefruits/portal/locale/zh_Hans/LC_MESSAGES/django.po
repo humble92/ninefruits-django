@@ -1,0 +1,289 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/portal/menu.py ninefruits/portal/views/dashboard.py
+msgctxt "portal"
+msgid "Home"
+msgstr "首页"
+
+#: ninefruits/portal/menu.py
+msgctxt "portal"
+msgid "Security"
+msgstr "安全"
+
+#: ninefruits/portal/menu.py ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Administration"
+msgstr "管理"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+#, python-format
+msgctxt "portal"
+msgid "Welcome, %(name)s"
+msgstr "欢迎，%(name)s"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Your access"
+msgstr "我的权限"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Roles"
+msgstr "角色"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "common"
+msgid "None"
+msgstr "无"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Personas"
+msgstr "身份"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/portal/templates/portal/security.html ninefruits/portal/views/security.py
+msgid "Two-factor authentication"
+msgstr "双重身份验证"
+
+# key: security.mfa.description
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication protects your account with a code from an authenticator app in addition to your password."
+msgstr "双重身份验证在密码之外还会验证身份验证器应用中的验证码，以保护您的账户。"
+
+# key: security.mfa.enrollment_required
+#: ninefruits/portal/templates/portal/security.html
+#| msgctxt "security"
+#| msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "您的账户需要双重身份验证，请完成设置后继续。"
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/portal/templates/portal/security.html
+msgid "Authenticator app"
+msgstr "身份验证器应用"
+
+# key: security.mfa.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is enabled."
+msgstr "已启用双重身份验证。"
+
+# key: security.mfa.regenerate_recovery_codes
+#: ninefruits/portal/templates/portal/security.html
+msgid "Generate new recovery codes"
+msgstr "生成新的恢复码"
+
+# key: security.mfa.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Disable two-factor authentication?"
+msgstr "确定停用双重身份验证吗？"
+
+# key: security.mfa.disable
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Disable"
+msgstr "停用"
+
+# key: security.mfa.scan_qr_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Scan this QR code with your authenticator app, then enter the code it shows."
+msgstr "请用身份验证器应用扫描二维码，然后输入显示的验证码。"
+
+# key: security.mfa.setup_key
+#: ninefruits/portal/templates/portal/security.html
+msgid "Setup key"
+msgstr "设置密钥"
+
+# key: authentication.two_factor.code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "验证码"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "确认"
+
+# key: security.mfa.enable
+#: ninefruits/portal/templates/portal/security.html
+#| msgctxt "security"
+#| msgid "We recommend enabling two-factor authentication for your account."
+msgid "Enable two-factor authentication"
+msgstr "启用双重身份验证"
+
+# key: security.mfa.recovery_codes_instructions
+#: ninefruits/portal/templates/portal/security.html
+msgid "Store these recovery codes in a safe place. Each can be used once if you lose your device."
+msgstr "请将恢复码保存在安全的地方。设备丢失时，每个恢复码可使用一次。"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email code"
+msgstr "邮件验证码"
+
+# key: security.email_code.description
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid "Receive a one-time code at %(email)s each time you sign in. Less secure than an authenticator app; use it if you cannot install one."
+msgstr "每次登录时向 %(email)s 发送一次性验证码。安全性低于身份验证器应用，请在无法安装应用时使用。"
+
+# key: security.email_code.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email codes are turned on."
+msgstr "已启用邮件验证码。"
+
+# key: security.email_code.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Turn off email codes?"
+msgstr "确定停用邮件验证码吗？"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "邮件验证码"
+
+# key: authentication.two_factor.resend_email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a new code"
+msgstr "重新发送验证码"
+
+# key: security.email_code.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a code to set up"
+msgstr "发送设置验证码"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Remembered devices"
+msgstr "记住的设备"
+
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s day."
+msgid_plural "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s days."
+msgstr[0] "登录时勾选\"记住此设备\"后，此浏览器在 %(days)s 天内无需输入代码。"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Changing your two-factor setup forgets every remembered device."
+msgstr "更改两步验证设置会忘记所有记住的设备。"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Forget this device"
+msgstr "忘记此设备"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "This device is not remembered."
+msgstr "此设备未被记住。"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Change password"
+msgstr "更改密码"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Your password was changed. Other sessions were signed out."
+msgstr "密码已更改。其他会话已退出登录。"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Current password"
+msgstr "当前密码"
+
+# key: authentication.fields.new_password
+#: ninefruits/portal/templates/portal/security.html
+msgid "New password"
+msgstr "新密码"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/portal/templates/portal/security.html
+msgid "Confirm password"
+msgstr "确认密码"
+
+# key: security.sso.title
+#: ninefruits/portal/templates/portal/security.html
+msgid "School sign-in"
+msgstr "学校统一登录"
+
+# key: security.sso.help
+#: ninefruits/portal/templates/portal/security.html
+msgid "Link your school account to sign in with it."
+msgstr "关联学校账户后即可用其登录。"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/portal/templates/portal/security.html
+msgid "Linked"
+msgstr "已关联"
+
+# key: security.sso.unlink_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink this school account? You will need your password to sign in."
+msgstr "取消关联学校账户？之后需使用密码登录。"
+
+# key: security.sso.unlink
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink"
+msgstr "取消关联"
+
+# key: security.sso.link
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Link"
+msgstr "关联"
+
+#: ninefruits/portal/templatetags/portal.py
+#, python-format
+msgctxt "security"
+msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
+msgstr "您的账户需要双重身份验证，请在 %(date)s 之前完成设置。"
+
+#: ninefruits/portal/templatetags/portal.py
+msgctxt "security"
+msgid "We recommend enabling two-factor authentication for your account."
+msgstr "建议为您的账户启用双重身份验证。"
+
+#: ninefruits/portal/views/security.py
+msgid "Start the setup again."
+msgstr "请重新开始设置。"
+
+#: ninefruits/portal/views/security.py
+msgid "The code must be 6 digits."
+msgstr "代码必须是 6 位数字。"
+
+# key: security.email_code.not_allowed
+#: ninefruits/portal/views/security.py
+msgid "Email codes are not available at this institution."
+msgstr "本机构不提供邮件验证码。"
+
+# key: security.email_code.wait
+#: ninefruits/portal/views/security.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "请在 %(seconds)s 秒后再次请求。"
+
+#: ninefruits/portal/views/security.py
+msgid "The email code must be 6 digits."
+msgstr "电子邮件代码必须是 6 位数字。"

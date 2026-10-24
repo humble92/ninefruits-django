@@ -1,0 +1,120 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/adminpanel/config.py
+msgctxt "security"
+msgid "Two-factor authentication"
+msgstr "2단계 인증"
+
+#: ninefruits/adminpanel/config.py ninefruits/adminpanel/templates/adminpanel/dashboard.html
+msgctxt "admin"
+msgid "Portal"
+msgstr "포털"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Students and staff"
+msgstr "학생과 교직원"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "입학"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Curriculum and sections"
+msgstr "교육과정과 개설"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Registration"
+msgstr "수강신청"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Grades"
+msgstr "성적"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Course evaluation"
+msgstr "강의평가"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Examinations"
+msgstr "어학/종합시험"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Certificates"
+msgstr "증명서"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Graduation"
+msgstr "졸업"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Reports"
+msgstr "보고서"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "LMS integration"
+msgstr "LMS 연동"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Reference data"
+msgstr "기준정보"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Users and access"
+msgstr "사용자와 권한"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Audit"
+msgstr "감사"
+
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Settings"
+msgstr "설정"
+
+#: ninefruits/adminpanel/navigation.py ninefruits/adminpanel/sites.py
+msgctxt "admin"
+msgid "Dashboard"
+msgstr "대시보드"
+
+#: ninefruits/adminpanel/templates/adminpanel/dashboard.html
+#, python-format
+msgctxt "admin"
+msgid "Welcome, %(name)s"
+msgstr "%(name)s 님, 환영합니다"
+
+#: ninefruits/adminpanel/templates/adminpanel/dashboard.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "로그아웃"

@@ -1,0 +1,263 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.audit.fields.log
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Log"
+msgstr "로그"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Table"
+msgstr "테이블"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Time"
+msgstr "시각"
+
+# key: admin.audit.fields.subject
+#: ninefruits/audit/admin.py
+msgid "Record"
+msgstr "대상"
+
+# key: admin.audit.fields.actor
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "User"
+msgstr "사용자"
+
+# key: common.reason
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Reason"
+msgstr "사유"
+
+# key: admin.audit.fields.properties
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Details"
+msgstr "상세"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Operation"
+msgstr "작업"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Changed columns"
+msgstr "변경 컬럼"
+
+#: ninefruits/audit/admin.py
+msgid "Changes"
+msgstr "변경 내용"
+
+#: ninefruits/audit/admin.py
+msgid "Column"
+msgstr "컬럼"
+
+# key: admin.record_changes.fields.old_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Before"
+msgstr "변경 전"
+
+# key: admin.record_changes.fields.new_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "After"
+msgstr "변경 후"
+
+# key: admin.audit.fields.event
+# key: admin.security_events.fields.type
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Event"
+msgstr "이벤트"
+
+# key: admin.audit.fields.request_id
+#: ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Request ID"
+msgstr "요청 ID"
+
+# key: admin.audit.fields.ip_address
+#: ninefruits/audit/models.py
+msgid "IP address"
+msgstr "IP 주소"
+
+# key: admin.activities.label
+#: ninefruits/audit/models.py
+msgid "activity"
+msgstr "업무 감사"
+
+# key: admin.activities.plural_label
+#: ninefruits/audit/models.py
+msgid "activity log"
+msgstr "업무 감사 기록"
+
+# key: admin.record_changes.fields.transaction_id
+#: ninefruits/audit/models.py
+msgid "Transaction"
+msgstr "트랜잭션"
+
+# key: admin.record_changes.fields.record_id
+#: ninefruits/audit/models.py
+msgid "Record ID"
+msgstr "레코드 ID"
+
+# key: admin.record_changes.fields.database_user
+#: ninefruits/audit/models.py
+msgid "Database user"
+msgstr "DB 사용자"
+
+# key: admin.record_changes.label
+#: ninefruits/audit/models.py
+msgid "data change"
+msgstr "데이터 변경"
+
+# key: admin.record_changes.plural_label
+#: ninefruits/audit/models.py
+msgid "data changes"
+msgstr "데이터 변경 기록"
+
+# key: admin.security_events.fields.identifier
+#: ninefruits/audit/models.py
+msgid "Sign-in name"
+msgstr "로그인 이름"
+
+# key: admin.security_events.label
+#: ninefruits/audit/models.py
+msgid "security event"
+msgstr "보안 이벤트"
+
+# key: admin.security_events.plural_label
+#: ninefruits/audit/models.py
+msgid "security events"
+msgstr "보안 이벤트"
+
+# key: security.event_types.login_succeeded
+#: ninefruits/audit/security_events.py
+msgid "Signed in"
+msgstr "로그인"
+
+# key: security.event_types.login_failed
+#: ninefruits/audit/security_events.py
+msgid "Sign-in failed"
+msgstr "로그인 실패"
+
+# key: security.event_types.login_locked_out
+#: ninefruits/audit/security_events.py
+msgid "Sign-in locked"
+msgstr "로그인 잠금"
+
+# key: security.event_types.account_unlocked
+#: ninefruits/audit/security_events.py
+msgid "Account unlocked"
+msgstr "계정 잠금 해제"
+
+# key: security.event_types.logout
+#: ninefruits/audit/security_events.py
+msgid "Signed out"
+msgstr "로그아웃"
+
+# key: security.event_types.password_reset
+#: ninefruits/audit/security_events.py
+msgid "Password reset"
+msgstr "비밀번호 재설정"
+
+# key: security.event_types.mfa_enabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor enabled"
+msgstr "2단계 인증 시작"
+
+# key: security.event_types.mfa_confirmed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor confirmed"
+msgstr "2단계 인증 등록 완료"
+
+# key: security.event_types.mfa_disabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor disabled"
+msgstr "2단계 인증 해제"
+
+# key: security.event_types.mfa_challenge_failed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor code rejected"
+msgstr "2단계 인증 코드 오류"
+
+# key: security.event_types.mfa_recovery_code_used
+#: ninefruits/audit/security_events.py
+msgid "Recovery code used"
+msgstr "복구 코드 사용"
+
+# key: security.event_types.mfa_recovery_codes_regenerated
+#: ninefruits/audit/security_events.py
+msgid "Recovery codes regenerated"
+msgstr "복구 코드 재발급"
+
+# key: security.event_types.mfa_reset
+#: ninefruits/audit/security_events.py
+msgid "Two-factor reset by administrator"
+msgstr "관리자의 2단계 인증 초기화"
+
+# key: security.event_types.mfa_email_code_sent
+#: ninefruits/audit/security_events.py
+msgid "Email code sent"
+msgstr "이메일 코드 발송"
+
+# key: security.event_types.mfa_email_enabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned on"
+msgstr "이메일 코드 사용 시작"
+
+# key: security.event_types.mfa_email_disabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned off"
+msgstr "이메일 코드 사용 중지"
+
+# key: security.event_types.role_assigned
+#: ninefruits/audit/security_events.py
+msgid "Role assigned"
+msgstr "역할 할당"
+
+# key: security.event_types.role_assignment_revoked
+#: ninefruits/audit/security_events.py
+msgid "Role assignment ended"
+msgstr "역할 할당 종료"
+
+# key: security.event_types.role_permissions_changed
+#: ninefruits/audit/security_events.py
+msgid "Role permissions changed"
+msgstr "역할 권한 변경"
+
+# key: security.event_types.sensitive_data_revealed
+#: ninefruits/audit/security_events.py
+msgid "Sensitive data revealed"
+msgstr "민감 정보 표시"
+
+# key: security.event_types.data_exported
+#: ninefruits/audit/security_events.py
+msgid "Data exported"
+msgstr "데이터 내보내기"
+
+# key: security.event_types.audit_pruned
+#: ninefruits/audit/security_events.py
+msgid "Audit records pruned"
+msgstr "감사 기록 정리"
+
+# key: security.event_types.password_changed
+#: ninefruits/audit/security_events.py
+msgid "Password changed"
+msgstr "비밀번호 변경"
+
+# key: security.event_types.email_changed
+#: ninefruits/audit/security_events.py
+msgid "Email changed"
+msgstr "이메일 변경"

@@ -20,6 +20,13 @@ from ninefruits.core.db import session_context
 DB_FIXTURES = ("db", "transactional_db", "django_db_reset_sequences", "django_db_serialized_rollback")
 
 
+def pytest_configure(config: pytest.Config) -> None:
+    # Compiled gettext catalogs (.mo) are not in git: compile the stale ones once per run.
+    from ninefruits.i18n.pytest_plugin import pytest_configure as compile_catalogs
+
+    compile_catalogs(config)
+
+
 def _test_database_name() -> str:
     name = settings.DATABASES["default"]["TEST"]["NAME"]
     worker = os.environ.get("PYTEST_XDIST_WORKER")
@@ -74,6 +81,16 @@ def _system_test_actor(request: pytest.FixtureRequest) -> Iterator[None]:
     context.baseline = {}
     context.state = {}
     context.stack.clear()
+
+
+@pytest.fixture(autouse=True)
+def _clear_request_context() -> Iterator[None]:
+    """Login listeners bind the user to the request context; never leak it into the next test."""
+    from ninefruits.core import context as request_context
+
+    request_context.clear()
+    yield
+    request_context.clear()
 
 
 @pytest.fixture

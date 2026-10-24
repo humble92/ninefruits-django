@@ -62,6 +62,34 @@ class User(AbstractBaseUser):
         # Never include secrets or personal data (original Phase 13 H1).
         return f"<User {self.pk}>"
 
+    # -- account state (original App\\Models\\User) --------------------------------------------
+    @property
+    def last_login_at(self) -> Any:
+        return self.last_login
+
+    def display_name(self) -> str:
+        """The person's name when linked (Phase 2), otherwise the account's own name."""
+        if self.person_id is not None:
+            person = getattr(self, "person", None)
+            if person is not None and hasattr(person, "display_name"):
+                return str(person.display_name())
+        return self.name or self.email
+
+    def is_locked(self) -> bool:
+        return self.locked_until is not None and self.locked_until > timezone.now()
+
+    def has_verified_email(self) -> bool:
+        return self.email_verified_at is not None
+
+    def get_full_name(self) -> str:
+        return self.display_name()
+
+    def get_short_name(self) -> str:
+        return self.display_name()
+
+    def preferred_locale(self) -> str | None:
+        return self.locale
+
     # -- authorization (CatalogPermissionBackend answers; no PermissionsMixin) ------------------
     def has_perm(self, perm: str, obj: object | None = None) -> bool:
         if not self.is_active:

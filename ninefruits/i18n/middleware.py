@@ -1,18 +1,40 @@
-"""Locale order: user preference, session choice, browser language, institution default."""
+"""Locale order: user preference, session choice, browser language, institution default
+(original ``App\\Http\\Middleware\\SetLocale``).
+
+Runs after ``AuthenticationMiddleware`` and before ``SetDatabaseSessionContextMiddleware``,
+which passes ``request.LANGUAGE_CODE`` to PostgreSQL (``app.locale``, read by ``util.i18n``).
+Date and number formatting follow the active language (Django ``formats`` and
+``ninefruits.i18n.formatting``, the original Carbon/Number locale).
+"""
 
 from __future__ import annotations
 
 from collections.abc import Callable
 
-from django.conf import settings
 from django.http import HttpRequest, HttpResponse
 from django.utils import translation
+from django.utils.cache import patch_vary_headers
+
+from ninefruits.institution.services.supported_locales import SupportedLocales
 
 SESSION_KEY = "locale"
 
 
 def supported_locales() -> list[str]:
-    return [code for code, _ in settings.LANGUAGES]
+    return SupportedLocales().all()
+
+
+def resolve_locale(request: HttpRequest, locales: SupportedLocales | None = None) -> str:
+    locales = locales or SupportedLocales()
+    supported = locales.all()
+    user = getattr(request, "user", None)
+    session = getattr(request, "session", None)
+    candidates = [
+        getattr(user, "locale", None) if user is not None and user.is_authenticated else None,
+        session.get(SESSION_KEY) if session is not None else None,
+        locales.negotiate(request),
+    ]
+    return next((c for c in candidates if c is not None and c in supported), None) or locales.default()
 
 
 class SetLocaleMiddleware:
@@ -20,16 +42,10 @@ class SetLocaleMiddleware:
         self.get_response = get_response
 
     def __call__(self, request: HttpRequest) -> HttpResponse:
-        supported = supported_locales()
-        user = getattr(request, "user", None)
-        candidates = [
-            getattr(user, "locale", None) if user is not None and user.is_authenticated else None,
-            request.session.get(SESSION_KEY) if hasattr(request, "session") else None,
-            translation.get_language_from_request(request),
-        ]
-        locale = next((c for c in candidates if c in supported), settings.LANGUAGE_CODE)
+        locale = resolve_locale(request)
         translation.activate(locale)
-        request.LANGUAGE_CODE = locale  # type: ignore[attr-defined]
+        request.LANGUAGE_CODE = locale
         response = self.get_response(request)
         response.headers.setdefault("Content-Language", locale)
+        patch_vary_headers(response, ("Accept-Language",))
         return response

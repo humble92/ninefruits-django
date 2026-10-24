@@ -1,0 +1,42 @@
+# pre-commit install  (then the hooks run on every commit; `pre-commit run --all-files` for all)
+# The project tools run from the uv environment so their versions follow uv.lock.
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-merge-conflict
+      - id: check-yaml
+      - id: check-toml
+      - id: end-of-file-fixer
+        exclude: ^(db/sql/|porting/reference/)
+      - id: trailing-whitespace
+        exclude: ^(db/sql/|porting/reference/|.*\.po$)
+      - id: check-added-large-files
+        args: ["--maxkb=1024"]
+      - id: detect-private-key
+
+  - repo: local
+    hooks:
+      - id: ruff-format
+        name: ruff format
+        entry: uv run ruff format
+        language: system
+        types: [python]
+      - id: ruff-check
+        name: ruff check
+        entry: uv run ruff check --fix
+        language: system
+        types: [python]
+      - id: raw-sql
+        name: raw SQL check
+        entry: uv run tools/checks/raw_sql.py
+        language: system
+        types: [python]
+        pass_filenames: false
+      - id: mypy
+        name: mypy
+        entry: uv run mypy ninefruits config
+        language: system
+        types: [python]
+        pass_filenames: false
+        stages: [pre-push]

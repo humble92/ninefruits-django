@@ -1,0 +1,263 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"Language: zh-hans\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.audit.fields.log
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Log"
+msgstr "日志"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Table"
+msgstr "表"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Time"
+msgstr "时间"
+
+# key: admin.audit.fields.subject
+#: ninefruits/audit/admin.py
+msgid "Record"
+msgstr "对象"
+
+# key: admin.audit.fields.actor
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "User"
+msgstr "用户"
+
+# key: common.reason
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Reason"
+msgstr "原因"
+
+# key: admin.audit.fields.properties
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Details"
+msgstr "详情"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Operation"
+msgstr "操作"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Changed columns"
+msgstr "变更字段"
+
+#: ninefruits/audit/admin.py
+msgid "Changes"
+msgstr "变更内容"
+
+#: ninefruits/audit/admin.py
+msgid "Column"
+msgstr "字段"
+
+# key: admin.record_changes.fields.old_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Before"
+msgstr "变更前"
+
+# key: admin.record_changes.fields.new_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "After"
+msgstr "变更后"
+
+# key: admin.audit.fields.event
+# key: admin.security_events.fields.type
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Event"
+msgstr "事件"
+
+# key: admin.audit.fields.request_id
+#: ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Request ID"
+msgstr "请求 ID"
+
+# key: admin.audit.fields.ip_address
+#: ninefruits/audit/models.py
+msgid "IP address"
+msgstr "IP 地址"
+
+# key: admin.activities.label
+#: ninefruits/audit/models.py
+msgid "activity"
+msgstr "业务审计"
+
+# key: admin.activities.plural_label
+#: ninefruits/audit/models.py
+msgid "activity log"
+msgstr "业务审计记录"
+
+# key: admin.record_changes.fields.transaction_id
+#: ninefruits/audit/models.py
+msgid "Transaction"
+msgstr "事务"
+
+# key: admin.record_changes.fields.record_id
+#: ninefruits/audit/models.py
+msgid "Record ID"
+msgstr "记录 ID"
+
+# key: admin.record_changes.fields.database_user
+#: ninefruits/audit/models.py
+msgid "Database user"
+msgstr "数据库用户"
+
+# key: admin.record_changes.label
+#: ninefruits/audit/models.py
+msgid "data change"
+msgstr "数据变更"
+
+# key: admin.record_changes.plural_label
+#: ninefruits/audit/models.py
+msgid "data changes"
+msgstr "数据变更记录"
+
+# key: admin.security_events.fields.identifier
+#: ninefruits/audit/models.py
+msgid "Sign-in name"
+msgstr "登录名"
+
+# key: admin.security_events.label
+#: ninefruits/audit/models.py
+msgid "security event"
+msgstr "安全事件"
+
+# key: admin.security_events.plural_label
+#: ninefruits/audit/models.py
+msgid "security events"
+msgstr "安全事件"
+
+# key: security.event_types.login_succeeded
+#: ninefruits/audit/security_events.py
+msgid "Signed in"
+msgstr "登录"
+
+# key: security.event_types.login_failed
+#: ninefruits/audit/security_events.py
+msgid "Sign-in failed"
+msgstr "登录失败"
+
+# key: security.event_types.login_locked_out
+#: ninefruits/audit/security_events.py
+msgid "Sign-in locked"
+msgstr "登录已锁定"
+
+# key: security.event_types.account_unlocked
+#: ninefruits/audit/security_events.py
+msgid "Account unlocked"
+msgstr "账户解锁"
+
+# key: security.event_types.logout
+#: ninefruits/audit/security_events.py
+msgid "Signed out"
+msgstr "退出登录"
+
+# key: security.event_types.password_reset
+#: ninefruits/audit/security_events.py
+msgid "Password reset"
+msgstr "密码重置"
+
+# key: security.event_types.mfa_enabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor enabled"
+msgstr "开始启用双重验证"
+
+# key: security.event_types.mfa_confirmed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor confirmed"
+msgstr "双重验证已确认"
+
+# key: security.event_types.mfa_disabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor disabled"
+msgstr "双重验证已停用"
+
+# key: security.event_types.mfa_challenge_failed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor code rejected"
+msgstr "双重验证码错误"
+
+# key: security.event_types.mfa_recovery_code_used
+#: ninefruits/audit/security_events.py
+msgid "Recovery code used"
+msgstr "使用恢复码"
+
+# key: security.event_types.mfa_recovery_codes_regenerated
+#: ninefruits/audit/security_events.py
+msgid "Recovery codes regenerated"
+msgstr "重新生成恢复码"
+
+# key: security.event_types.mfa_reset
+#: ninefruits/audit/security_events.py
+msgid "Two-factor reset by administrator"
+msgstr "管理员重置双重验证"
+
+# key: security.event_types.mfa_email_code_sent
+#: ninefruits/audit/security_events.py
+msgid "Email code sent"
+msgstr "已发送邮件验证码"
+
+# key: security.event_types.mfa_email_enabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned on"
+msgstr "启用邮件验证码"
+
+# key: security.event_types.mfa_email_disabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned off"
+msgstr "停用邮件验证码"
+
+# key: security.event_types.role_assigned
+#: ninefruits/audit/security_events.py
+msgid "Role assigned"
+msgstr "分配角色"
+
+# key: security.event_types.role_assignment_revoked
+#: ninefruits/audit/security_events.py
+msgid "Role assignment ended"
+msgstr "结束角色分配"
+
+# key: security.event_types.role_permissions_changed
+#: ninefruits/audit/security_events.py
+msgid "Role permissions changed"
+msgstr "角色权限变更"
+
+# key: security.event_types.sensitive_data_revealed
+#: ninefruits/audit/security_events.py
+msgid "Sensitive data revealed"
+msgstr "显示敏感信息"
+
+# key: security.event_types.data_exported
+#: ninefruits/audit/security_events.py
+msgid "Data exported"
+msgstr "导出数据"
+
+# key: security.event_types.audit_pruned
+#: ninefruits/audit/security_events.py
+msgid "Audit records pruned"
+msgstr "审计记录清理"
+
+# key: security.event_types.password_changed
+#: ninefruits/audit/security_events.py
+msgid "Password changed"
+msgstr "密码已更改"
+
+# key: security.event_types.email_changed
+#: ninefruits/audit/security_events.py
+msgid "Email changed"
+msgstr "邮箱已更改"

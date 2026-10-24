@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load i18n nf_i18n portal %}
+{% comment %}Portal layout (original components/layouts/portal). Pages fill "content"
+(and optionally the "title" context variable or block, "extra_head", "extra_scripts").{% endcomment %}
+{% block body %}
+<header class="border-b border-zinc-200 bg-white">
+    <nav class="mx-auto flex max-w-5xl flex-wrap items-center gap-4 px-4 py-3" aria-label="{% translate 'Main menu' context 'portal' %}">
+        <a href="{% url 'portal:dashboard' %}" class="font-semibold">{{ site_name|default:"Ninefruits" }}</a>
+        {% portal_navigation %}
+        <div class="ms-auto flex items-center gap-3">
+            {% locale_switcher %}
+            <form method="post" action="{% url 'account_logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="text-sm text-zinc-600 hover:text-zinc-900">{% translate "Sign out" context "authentication" %}</button>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<main class="mx-auto max-w-5xl px-4 py-8">
+    {% mfa_reminder %}
+    {% include "partials/messages.html" %}
+    {% block content %}{% endblock %}
+</main>
+{% endblock %}

@@ -1,0 +1,1192 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "번역 값은 언어 코드와 문자열로 된 객체여야 합니다."
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "각 번역은 %(limit_value)d자 이하여야 합니다."
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "%(language)s 값은 필수입니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "필수 항목입니다."
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "언어"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "적용"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "레코드 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "작업 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "실행할 작업 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "저장"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "모두"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr " %(filter_title)s 기준 "
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py ninefruits/security/admin.py
+msgid "Yes"
+msgstr "예"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "아니오"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "시작"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "끝"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "시작일"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "종료일"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "시각"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "날짜"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "선택한 작업 실행"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "실행"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "모든 페이지의 항목을 선택하려면 여기를 클릭하세요"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "모든 %(total_count)s개의 %(module_name)s 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "선택 해제"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "이 페이지의 모든 항목 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "작업을 수행하려면 항목을 먼저 선택해야 합니다. 변경된 항목이 없습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "%(name)s 애플리케이션의 모델"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "독자는 뷰 및 수정 권한이 없습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "비밀번호 변경"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "이력"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "사이트에서 보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "%(object_name)s '%(escaped_object)s'을(를) 삭제하면 관련 객체도 삭제되지만, 이 계정에는 다음 유형의 객체를 삭제할 권한이 없습니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "%(object_name)s '%(escaped_object)s'을(를) 삭제하려면 다음 보호된 관련 객체를 먼저 삭제해야 합니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "정말로 %(object_name)s \"%(escaped_object)s\"을(를) 삭제하시겠습니까? 다음 관련 항목이 모두 삭제됩니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "선택한 %(objects_name)s을(를) 삭제하면 관련 객체도 삭제되어야 하지만, 현재 계정에 다음 유형의 객체를 삭제할 권한이 없습니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "선택한 %(objects_name)s을(를) 삭제하려면 다음 보호된 관련 객체도 삭제해야 합니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "선택한 %(objects_name)s을(를) 삭제하시겠습니까? 다음 객체와 관련 항목이 모두 삭제됩니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "객체"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "요약"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "다시 오신 것을 환영합니다:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "%(username)s(으)로 인증되었지만, 이 페이지에 대한 접근 권한이 없습니다. 다른 계정으로 로그인하시겠습니까?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "로그인"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "비밀번호 또는 사용자 이름을 잊으셨나요?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "모두 표시"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "검색어 입력"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "저장 후 편집 계속"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "저장 후 보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "저장 후 추가"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "새로 저장"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "관리 화면에서 로그아웃했습니다"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "오늘 저희 웹사이트를 방문해 주셔서 감사합니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "다시 로그인"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "비밀번호가 변경되었습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "독자의 과거 비밀번호를 입력한 후, 보안을 위해 새로운 비밀번호을 두 번 입력하여 옳은 입력인 지 확인할 수 있도록 하십시오."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "데이터 없음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "사이트 보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "로그아웃"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "%(name)s 추가"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "모든 애플리케이션"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "변경"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "추가"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "삭제"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "알 수 없음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "예"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "아니요"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "필터 적용"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "개수 숨기기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "개수 표시"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "모든 필터 해제"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "필터"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "정렬 전환"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "정렬에서 제거"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "정렬 우선순위: %(priority_number)s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "이동"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "비우기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "최근 검색"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "검색 결과가 없습니다"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "아니오, 돌아가기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "네, 확신합니다. "
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "취소"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "제출"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "닫기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "편집"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "레코드 사진"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "이 항목은 삭제됩니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "클릭하여 취소"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "결과가 없습니다"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "이 페이지에 표시할 결과가 없습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "필터 초기화"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "이미지 미리보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "클릭하여 내려받기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "업로드할 파일 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "뒤로"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "최근 작업"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "알 수 없는 콘텐츠"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "이전"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "다음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "앱과 모델 검색..."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "사용 가능한 단축키"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "전체 단축키"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "명령 도구 열기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "단축키 목록 열기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "사이드바 전환"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "다크/라이트 모드 전환"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "목록 단축키"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "필터 전환"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "새 레코드 만들기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "명령 도구 단축키"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "선택 항목 열기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "선택 항목을 새 탭에서 열기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "Django 관리"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "Django 사이트 관리"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "홈"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "라이트"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "다크"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "시스템"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "사이트로 돌아가기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s개 결과"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "총 %(full_result_count)s건"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "비밀번호 표시 전환"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "선택한 %(model)s 변경"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "%(model)s 추가"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "선택한 %(model)s 보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "선택한 %(model)s 삭제"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "행 추가"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "아래 오류를 수정하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "사이트 관리"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "변경할 %s 선택"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "%s 보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "%s 추가"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "%s 변경"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "%s 보기"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "선택된 %(verbose_name_plural)s 삭제"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "%(count)d개의 %(items)s을(를) 삭제했습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "{name} \"{obj}\"가 성공적으로 추가되었습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "{name} \"{obj}\"가 성공적으로 변경되었습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "%(name)s \"%(obj)s\"이/가 성공적으로 삭제되었습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "선택된 작업이 없습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "액션:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "검색"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "언제나"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "오늘"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "지난 7일"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "이번 달"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "올해"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "날짜 없음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "날짜 있음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "비어 있음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "비어 있지 않음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "사용 가능한 항목 없음"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "내 작업"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "관리자 계정의 %(username)s와 비밀번호를 입력하세요. 두 필드 모두 대소문자를 구분할 수 있습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "비밀번호"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "올바른 값을 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "올바른 이메일 주소를 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "정수를 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "숫자를 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "올바른 날짜를 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "올바른 시각을 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "올바른 날짜/시각을 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "올바른 URL을 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "값의 목록을 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "올바르게 선택해 주세요. %(value)s은(는) 선택 가능한 항목에 없습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "값이 %(limit_value)s 이하이어야 합니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "값이 %(limit_value)s 이상이어야 합니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "값이 최대 %(limit_value)d자 이하여야 합니다 (현재 %(show_value)d자)."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "값이 최소 %(limit_value)d자 이상이어야 합니다 (현재 %(show_value)d자)."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "라오어"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "로그인"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "로그아웃"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "정말로 로그아웃 하시겠습니까?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Email"
+msgstr "이메일"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "아이디 저장"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "비밀번호를 잊으셨나요?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "이메일 또는 비밀번호가 올바르지 않습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "너무 많은 로그인 실패가 감지되었습니다. 잠시 후에 다시 시도하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "해당 계정은 현재 비활성화 상태입니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "비밀번호 초기화"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "비밀번호를 잊으셨나요? 아래에 당신의 이메일을 입력하시면, 비밀번호 초기화 이메일을 전송해 드리겠습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "비밀번호 초기화"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "비밀번호 초기화에 문제가 있으시면 저희에게 연락주세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "메일을 전송하였습니다. 메일을 받지 못했다면 스팸 폴더를 확인해주세요.몇 분 후에도 메일을 받지 못하시면 저희에게 연락주세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "올비르지 않은 토큰"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "비밀번호 초기화 링크가 올바르지 않습니다. 다시 <a href=\"%(passwd_reset_url)s\">비밀번호 초기화</a> 하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "비밀번호가 변경되었습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "비밀번호 변경"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "현재 비밀번호"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "새 비밀번호"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "새 비밀번호 (확인)"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "동일한 비밀번호를 입력해야 합니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "현재 비밀번호를 입력하세요."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "올바르지 않은 비밀번호."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "올비르지 않거나 만료된 키."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "비밀번호 초기화 토큰이 올바르지 않습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "잠시만 기다려 주세요. 요청을 너무 많이 보내고 있습니다."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "2단계 인증"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "귀하의 계정은 2단계 인증으로 보호되고 있습니다. 인증 코드 입력해 주세요:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "인증 코드"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "코드"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "올바르지 않은 코드."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "대체 옵션"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "인증 앱 또는 코드를 사용하세요"
+
+# key: authentication.fields.password
+#: ninefruits/security/forms.py templates/account/login.html templates/account/reauthenticate.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "비밀번호"
+
+# key: authentication.login.remember_me
+#: ninefruits/security/forms.py templates/account/login.html
+msgid "Keep me signed in"
+msgstr "로그인 상태 유지"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/security/views.py templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "2단계 인증"
+
+# key: admissions.public.sign_in
+# key: authentication.login.title
+# key: authentication.login.submit
+#: templates/account/login.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "로그인"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "비밀번호 확인"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "보안을 위해 계속하려면 비밀번호를 다시 입력하세요."
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "확인"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "인증 앱에 표시된 6자리 코드를 입력하세요."
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "코드"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "복구 코드 사용"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "복구 코드"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "이 기기 기억하기"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "확인"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "이메일로 보낸 6자리 코드를 입력하세요."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "이메일 코드"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "이메일로 코드 받기"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "코드 다시 보내기"
+
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "닫기"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "주 메뉴"
+
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "로그아웃"
+
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "지금 설정"

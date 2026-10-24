@@ -1,0 +1,78 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 07:48+0000\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: common.saved
+#: ninefruits/settings/admin_views.py
+msgid "Saved"
+msgstr "ບັນທຶກແລ້ວ"
+
+# key: admin.navigation.settings
+#: ninefruits/settings/admin_views.py
+#: ninefruits/settings/templates/settings/page.html
+msgid "Settings"
+msgstr "ການຕັ້ງຄ່າ"
+
+# key: admin.settings.institution.name
+#: ninefruits/settings/pages/institution.py
+msgid "Institution name"
+msgstr "ຊື່ສະຖາບັນ"
+
+# key: admin.settings.institution.timezone
+#: ninefruits/settings/pages/institution.py
+msgid "Time zone"
+msgstr "ເຂດເວລາ"
+
+# key: admin.settings.institution.supported_locales
+#: ninefruits/settings/pages/institution.py
+msgid "Offered languages"
+msgstr "ພາສາທີ່ໃຫ້ເລືອກ"
+
+# key: admin.settings.institution.default_locale
+#: ninefruits/settings/pages/institution.py
+msgid "Default language"
+msgstr "ພາສາເລີ່ມຕົ້ນ"
+
+# key: admin.settings.institution.title
+#: ninefruits/settings/pages/institution.py
+msgid "Institution"
+msgstr "ສະຖາບັນ"
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/settings/pages/institution.py
+msgctxt "admin"
+msgid "General"
+msgstr "ທົ່ວໄປ"
+
+# key: admin.settings.institution.languages
+#: ninefruits/settings/pages/institution.py
+msgid "Languages"
+msgstr "ພາສາ"
+
+# key: admin.settings.institution.languages_help
+#: ninefruits/settings/pages/institution.py
+msgid ""
+"Languages offered to users. A language appears here when its translation "
+"folder exists."
+msgstr "ພາສາທີ່ໃຫ້ຜູ້ໃຊ້ເລືອກ. ພາສາຈະປາກົດຢູ່ນີ້ເມື່ອມີໂຟນເດີການແປຂອງມັນ."
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/settings/templates/settings/index.html
+#: ninefruits/settings/templates/settings/page.html
+msgid "Home"
+msgstr "ໜ້າຫຼັກ"
+
+# key: common.save
+#: ninefruits/settings/templates/settings/page.html
+msgid "Save"
+msgstr "ບັນທຶກ"

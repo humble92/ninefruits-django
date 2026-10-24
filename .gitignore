@@ -13,7 +13,7 @@ htmlcov/
 *.log
 /staticfiles/
 /media/
-/locale/**/*.mo
+*.mo
 
 # Environment
 .env

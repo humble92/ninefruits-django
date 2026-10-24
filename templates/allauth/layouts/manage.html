@@ -1,0 +1,4 @@
+{% extends "portal/base.html" %}
+{% comment %}Signed-in allauth pages (email, password change) use the portal layout.{% endcomment %}
+{% block title %}{% block head_title %}{% endblock head_title %} · {{ site_name|default:"Ninefruits" }}{% endblock title %}
+{% block extra_scripts %}{% block extra_body %}{% endblock extra_body %}{% endblock extra_scripts %}

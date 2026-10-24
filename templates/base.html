@@ -1,0 +1,18 @@
+{% load i18n static django_vite %}<!DOCTYPE html>
+{% get_current_language as LANGUAGE_CODE %}
+<html lang="{{ LANGUAGE_CODE }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="icon" href="{% static 'images/favicon.svg' %}" type="image/svg+xml">
+    <title>{% block title %}{% if title %}{{ title }} · {% endif %}{{ site_name|default:"Ninefruits" }}{% endblock %}</title>
+    {% vite_hmr_client nonce=csp_nonce %}
+    {% vite_asset "js/app.js" nonce=csp_nonce %}
+    {% block extra_head %}{% endblock %}
+</head>
+<body class="{% block body_class %}min-h-screen bg-zinc-50 text-zinc-900 antialiased{% endblock %}" hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+    {% block body %}{% endblock %}
+    {% block extra_scripts %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,258 @@
+# 管理命令参考
+
+- 对象：IT 运维人员
+- 范围：本仓库 Ninefruits 应用（`ninefruits/*/management/commands/`）注册的全部命令，以及运维中使用的 Django 内置命令。新增命令时必须同时在本文档（4 种语言）中添加 `### \`命令\`` 条目，否则 CI 不通过（`tests/tooling/test_command_documentation.py`）。
+
+## 通用说明
+
+所有命令通过 `uv run manage.py {命令}` 执行。Docker 开发环境中为 `docker compose exec app uv run manage.py {命令}`。
+
+| 项目 | 规则 |
+|---|---|
+| 名称 | 原系统的 `{context}:{action}` 改为 `{context}_{action}`（Django 命令名不能包含 `:`）。例：`term:close` → `term_close` |
+| 审计记录 | 修改数据的命令（下文标注"审计：记录"）每次执行都会在业务审计（日志 `command`）中留下命令、参数、选项、OS 用户、退出码和结果。在管理界面 **审计 > 业务审计记录** 中查看 |
+| 执行 ID | 每次执行都会在请求 ID 的位置附加一个以 `cmd-` 开头的 ID。业务审计、该次执行修改的数据变更记录、该次执行放入的 Celery 任务都带有同一个 ID，因此可以用 ID 查找"这条变更来自哪个命令"。`--actor` 是执行者填写的值，不会写入数据变更记录的用户栏（实际执行者是 OS 用户） |
+| `--actor=<邮箱>` | 带审计记录的命令都有此选项。记录负责的管理员账户。邮箱不存在时不执行 |
+| `--dry-run` | 不做修改，只输出结果。难以撤销的操作都有此选项 |
+| `--force` | 不询问确认直接执行（用于定时任务、部署脚本） |
+| `--reason=` | 需要事由的命令有此选项 |
+| 退出码 | 0 成功，1 失败或取消，2 检查命令发现了问题 |
+| 数据库上下文 | 执行期间数据库会话的执行者被设为 `system:command:{命令}`，并记录到数据变更记录（触发器）中 |
+
+## Django 内置命令
+
+### `migrate`
+
+- 用途：应用数据库迁移。这是包装 Django 默认命令的 Ninefruits 命令，未指定 `--database` 时使用架构所有者连接（`migrator`，角色 `app_migrator`）。应用连接（`app_runtime`）没有 DDL 权限。`showmigrations`、`sqlmigrate` 也同样默认使用 `migrator` 连接。
+- 执行时机：首次安装以及每次部署时（后续阶段由 `setup_install` 一并执行）。
+- 选项：与 Django `migrate` 相同（`app_label`、`migration_name`、`--plan`、`--check`、`--database`）。
+- 审计：不记录（架构变更保留在迁移历史 `django_migrations` 中）
+- 示例
+
+  ```bash
+  uv run manage.py migrate
+  uv run manage.py migrate --plan
+  ```
+
+- 失败时：如为权限错误，请检查[安装手册](installation.md)中的数据库角色准备（`db/sql/roles/`）。
+
+### `collectstatic`
+
+- 用途：将 Vite 构建结果（`static/dist/`）以及 Django、unfold 的静态文件收集到 `STATIC_ROOT`（`staticfiles/`）。Web 服务器（Nginx）提供该目录。
+- 执行时机：每次部署时，在 `npm ci && npm run build` 之后。
+- 选项：`--noinput`（不询问），`--clear`（先删除已有文件再收集）。
+- 审计：不记录
+- 示例
+
+  ```bash
+  npm ci && npm run build
+  uv run manage.py collectstatic --noinput
+  ```
+
+### `compilemessages`
+
+- 用途：将翻译文件（`.po`）编译为运行时使用的 `.mo`。`.mo` 不放入仓库，因此每次安装和部署时都要执行。系统中需要安装 `gettext`。
+- 执行时机：每次部署时，以及修改翻译文件之后。
+- 选项：`--locale=`（例：`ko`、`zh_Hans`、`lo`），`--ignore=.venv`。
+- 审计：不记录
+- 示例
+
+  ```bash
+  uv run manage.py compilemessages --ignore=.venv
+  ```
+
+### `createsuperuser`
+
+- 用途：**不使用。** Django 默认超级用户会绕过角色与权限目录以及审计，因此执行此命令会以错误（退出码 1）结束，并提示使用 `security_create_administrator`。
+- 替代：首个管理员用 `security_create_administrator` 创建（包括系统管理员角色分配和审计记录）。
+- 审计：不适用
+
+## 安装与演示（Phase 1）
+
+## 基础数据与学期（Phase 1）
+
+## 安全（Phase 0、2）
+
+### `security_create_administrator`
+
+- 用途：创建拥有系统管理员角色的账户。通常由 `setup_install` 调用。
+- 选项：`--email=`、`--name=`、`--password-stdin`（从标准输入读取密码。非交互执行时必填）。
+- 审计：记录（创建的用户 ID）
+- 示例：`uv run manage.py security_create_administrator --email=admin@example.ac.kr --name="管理员"`
+- 示例（非交互）：`printf '%s\n' "$ADMIN_PASSWORD" | uv run manage.py security_create_administrator --email=admin@example.ac.kr --name="管理员" --password-stdin`
+- 失败时：`system_administrator role is missing` 表示需要先执行 `setup_install`。密码至少 12 个字符。
+
+### `security_sync_permissions`
+
+- 用途：使代码中的权限目录与数据库权限列表一致。创建新权限，删除目录中已不存在的权限（会从所有角色中移除）。系统角色始终获得全部权限。
+- 执行时机：部署后（`setup_install` 在必要数据步骤中一并处理）。
+- 选项：`--dry-run`（只输出创建/删除列表）、`--force`（跳过删除确认）。
+- 审计：记录（创建/删除的权限）
+- 输出解读：`create`、`delete` 行。有删除时会出现确认提问。
+- 失败时：在确认提问中选择"否"时以退出码 1 结束，不做任何修改。
+
+### `security_reset_mfa`
+
+- 用途：重置用户的双重身份验证（身份验证器应用、邮件验证码、恢复码、已记住的设备）。下次登录时重新注册。用于没有管理员能登录管理界面的情况（例如唯一的管理员丢失了手机）。其他情况使用管理界面 **用户 > 重置双重身份验证**。
+- 参数/选项：`{user}` 用户邮箱、`--reason=`（必填）、`--actor=`（必填。决定重置的管理员）。
+- 审计：记录（业务审计和安全日志都记录，含事由）
+- 示例：`uv run manage.py security_reset_mfa admin@example.ac.kr --reason="휴대폰 분실, 본인 확인 완료(전화)" --actor=it-lead@example.ac.kr`
+
+### `security_unlock_user`
+
+- 用途：在锁定时间结束前解锁因连续输错密码而被锁定的账户。与管理界面 **用户 > 解除登录锁定** 相同。
+- 参数/选项：`{user}` 用户邮箱、`--reason=`（必填）。
+- 审计：记录（安全日志中也会留下记录）
+- 输出解读：`The account is not locked.` 表示没有做任何修改。
+- 参考：锁定标准（失败次数、锁定时间）在管理界面 **设置 > 登录方式** 中设置。
+
+## 人员与学籍（Phase 2）
+
+## 招生（Phase 3）
+
+## 开课（Phase 4）
+
+## 选课（Phase 5）
+
+## 成绩（Phase 6）
+
+## 课程评价（Phase 7）
+
+## 证明（Phase 8）
+
+## 语言/综合考试（Phase 9）
+
+## 考勤（Phase 10）
+
+## 毕业（Phase 11）
+
+## LMS 对接（Phase 12）
+
+## 运维检查与清理（Phase 13）
+
+### `audit_seal`
+
+- 用途：把审计表（`audit.record_changes`、`audit.activity_log`、`audit.security_events`）的新行接入哈希链（[审计完整性](audit-and-maintenance.md)）。以模式所有者连接（`migrator`）执行。
+- 选项：`--table=`（从 record_changes、activity_log、security_events 中选择，可多次指定）、`--actor=`。
+- 审计：记录（各表的封存数）
+- 执行时机：每天 03:30 定时执行。
+- 示例
+
+  ```bash
+  uv run manage.py audit_seal
+  uv run manage.py audit_seal --table=activity_log
+  ```
+
+### `audit_verify_chain`
+
+- 用途：重新计算审计行的内容哈希和链，查找篡改、删除、顺序变动。按表输出检查数、封存数、不一致数以及第一个不一致的 id。
+- 选项：`--table=`。
+- 审计：无（查询）
+- 退出码：有不一致时为 2。
+- 执行时机：备份前、安全检查时、清理后。
+
+### `audit_prune`
+
+- 用途：删除超过保留期限的**已封存**审计行。以模式所有者连接，在开启 `app.audit_maintenance = on` 的事务中执行。未封存的行会保留（先执行 `audit_seal`）。每次删除都会记录安全事件 `audit.pruned`（表、基准日期、删除数、id 范围、边界行的 `chain_hash`）。
+- 选项：`--before=YYYY-MM-DD`（必填，该日 0 时之前）、`--table=`、`--dry-run`（只统计数量）、`--actor=`。
+- 审计：记录（基准日期、各表删除数与 id 范围）
+- 执行时机：按保留政策，在备份之后。
+- 示例
+
+  ```bash
+  uv run manage.py audit_prune --before=2023-03-01 --dry-run
+  uv run manage.py audit_prune --before=2023-03-01 --table=record_changes --actor=ops@example.edu.cn
+  ```
+
+### `media_prune_orphans`
+
+- 用途：从私有存储中删除所有者已不存在的媒体行以及没有对应行的目录（`<media id>/`）（人员照片、申请材料、证明 PDF、考试凭证）。
+- 选项：`--dry-run`（只列出）、`--actor=`。
+- 审计：记录（行数、目录数）
+- 执行时机：每月一次，或大批量删除之后。
+
+## 个人信息加密密钥（Phase 0）
+
+### `pii_generate_key`
+
+- 用途：输出用于 `PII_ENCRYPTION_KEY`、`PII_HASH_KEY` 的新密钥（32 字节，`base64:...`）。不保存任何内容。
+- 审计：不记录
+- 注意：更换 `PII_HASH_KEY` 会使所有搜索哈希（`*_hash`）失效。只更换加密密钥：把旧密钥移到 `PII_PREVIOUS_KEYS`，然后执行 `pii_reencrypt`。
+- 示例
+
+  ```bash
+  uv run manage.py pii_generate_key
+  ```
+
+### `pii_reencrypt`
+
+- 用途：更换密钥后，把用旧密钥加密的个人信息用当前密钥重新加密。按记录分块，以 Celery 任务组执行。已使用当前密钥的记录不受影响。
+- 参数：带有加密个人信息字段的模型（`app_label.Model`，例如 `person.Person`）。
+- 选项：`--chunk=500`（每个任务的记录数）、`--dry-run`（只统计使用旧密钥的记录数）、`--force`（不确认）、`--actor=`。
+- 审计：记录（批次 ID、任务数 / 预览数量）
+- 确认：在 Flower 中查看任务进度。结束后 `--dry-run` 结果为 0 时，从 `PII_PREVIOUS_KEYS` 中移除旧密钥。
+- 示例
+
+  ```bash
+  uv run manage.py pii_reencrypt person.Person --dry-run
+  uv run manage.py pii_reencrypt person.Person --force --actor=ops@example.edu.cn
+  ```
+
+## 多语言（Phase 0）
+
+### `i18n_missing`
+
+- 用途：按 `makemessages` 的方式从源代码提取待翻译字符串（不写文件），与所有目录（全局 `locale/` 和各应用的 `locale/`）比较，按语言列出缺失项（目录中没有、`msgstr` 为空、fuzzy、占位符不一致）和不再使用的条目（obsolete）。
+- 参数/选项：`[locale]`（只检查一种语言，例如 `ko`、`zh-hans`、`lo`），`--strict`（有缺失时退出码为 2，CI 使用），`--no-extract`（只检查目录，不扫描源代码）。
+- 审计：不记录
+- 依赖：GNU gettext（`xgettext`、`msguniq`）。
+- 示例
+
+  ```bash
+  uv run manage.py i18n_missing --strict
+  uv run manage.py i18n_missing lo
+  ```
+
+### `i18n_export`
+
+- 用途：生成交给译者的表格（`.xlsx` 或 `.csv`，按扩展名决定）。列：`catalog`（目录位置）、`context`、`source`（英文 msgid）、`source_plural`、`translation`、`note`（原始键）。
+- 参数/选项：`{locale} {path}`，`--missing`（只导出没有翻译的字符串）。
+- 审计：不记录
+- 示例：`uv run manage.py i18n_export ko storage/ko.xlsx --missing`
+
+### `i18n_import`
+
+- 用途：把译者填写的表格写回目录（`.po`）并编译（`.mo`）。只导入目录中已有的字符串（目录、上下文和英文一致），空翻译会被跳过。
+- 参数/选项：`{locale} {path}`，`--dry-run`（只列出将写入的字符串），`--actor=`。
+- 审计：记录（语言、翻译数）
+- 注意：目录文件在代码仓库中管理。导入后请提交 `.po` 的变更。
+
+### `i18n_makemessages`
+
+- 用途：在仓库根目录运行 `makemessages`，使所有目录与源代码一致（ko、zh_Hans、lo）。应用有自己的 `locale/` 时写入该应用的目录，否则写入全局 `locale/`。跳过 `.venv`、`tests`、`docs` 等目录。
+- 选项：与 Django `makemessages` 相同（`-l`、`--no-obsolete` 等）。
+- 审计：不记录
+- 示例：`uv run manage.py i18n_makemessages`
+
+## 检查（Phase 0）
+
+### `pdf_sample`
+
+- 用途：把混合韩语、中文、老挝语和英语的表格渲染为 PDF，检查字体以及与 PDF 服务（Gotenberg）的连接。
+- 参数：`[path]`（默认 `pdf-sample.pdf`，相对于私有文件存储 `PRIVATE_MEDIA_ROOT`）。
+- 审计：不记录
+- 失败时：退出码 1。连接错误时检查 `GOTENBERG_URL`、`GOTENBERG_TIMEOUT` 和 Gotenberg 容器状态。
+- 示例：`uv run manage.py pdf_sample`
+
+### `naming_check`
+
+- 用途：按照[命名规则](../../../development/naming.md)检查数据库架构和源代码。检查对象为实际数据库目录中的表名和列名（`public`、`audit`、`reporting` 架构）、Ninefruits 应用的迁移文件名、管理命令名（`context_action`）以及翻译目录（`.po`）的 msgid 和 msgctxt。
+- 规则：snake_case、禁止的后缀（`_old`、`_new`、`_backup`、`_tmp`、日期、数字）、包含语言代码的名称、不带时区的时间列（`timestamp without time zone`）、布尔列名（`is_`、`has_`、`can_` 或动词形式）、日期列名（`_date`）、语义键形式的 msgid（`registration.errors.x`）。Django 和软件包规定的表（`django_*`、allauth、Celery beat、`settings`、`cache`、`jobs`、`media` 等）除外。
+- 选项：`--database=`（要检查的数据库连接，默认 `default`），`--skip-database`（不连接数据库，只检查文件）。
+- 审计：不记录
+- 退出码：发现问题时为 2。
+- 示例
+
+  ```bash
+  uv run manage.py naming_check
+  ```

@@ -1,0 +1,118 @@
+# Development environment (porting-plan 5.4). `docker compose up -d`, then
+# `docker compose exec app uv run manage.py migrate` (see README.md).
+# The optional Vite dev server: `docker compose --profile vite up -d vite` with VITE_DEV_MODE=true.
+
+x-app: &app
+  build:
+    context: .
+    target: development
+  image: ninefruits-dev
+  env_file:
+    - path: .env
+      required: false
+  environment:
+    DJANGO_SETTINGS_MODULE: config.settings.local
+    DB_HOST: pgsql
+    DB_PORT: "5432"
+    DB_DATABASE: ${DB_DATABASE:-ninefruits}
+    DB_USERNAME: app_runtime
+    DB_PASSWORD: ${DB_PASSWORD:-secret}
+    DB_MIGRATOR_USERNAME: app_migrator
+    DB_MIGRATOR_PASSWORD: ${DB_MIGRATOR_PASSWORD:-secret}
+    DB_SUPERUSER_USERNAME: postgres
+    DB_SUPERUSER_PASSWORD: ${DB_SUPERUSER_PASSWORD:-postgres}
+    REDIS_URL: redis://redis:6379/0
+    MAIL_HOST: mailpit
+    MAIL_PORT: "1025"
+    GOTENBERG_URL: http://gotenberg:3000
+  volumes:
+    - .:/app
+    - venv:/opt/venv
+  depends_on:
+    pgsql:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  app:
+    <<: *app
+    command: ["sh", "-c", "uv sync --frozen && uv run manage.py runserver 0.0.0.0:8000"]
+    ports:
+      - "${APP_PORT:-8000}:8000"
+
+  worker:
+    <<: *app
+    command: ["uv", "run", "celery", "-A", "config", "worker", "--loglevel=INFO"]
+
+  beat:
+    <<: *app
+    command: ["uv", "run", "celery", "-A", "config", "beat", "--loglevel=INFO"]
+
+  flower:
+    <<: *app
+    command: ["uv", "run", "celery", "-A", "config", "flower", "--port=5555"]
+    ports:
+      - "${FLOWER_PORT:-5555}:5555"
+
+  pgsql:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_DB: ${DB_DATABASE:-ninefruits}
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_SUPERUSER_PASSWORD:-postgres}
+      APP_DB_MIGRATOR_PASSWORD: ${DB_MIGRATOR_PASSWORD:-secret}
+      APP_DB_RUNTIME_PASSWORD: ${DB_PASSWORD:-secret}
+      APP_DB_REPORTING_PASSWORD: ${DB_REPORTING_PASSWORD:-secret}
+      APP_DB_TEST_DATABASE: ${DB_TEST_DATABASE:-test_ninefruits}
+    volumes:
+      - pgsql:/var/lib/postgresql
+      - ./docker/pgsql/20-create-app-roles.sh:/docker-entrypoint-initdb.d/20-create-app-roles.sh:ro
+      - ./db/sql:/opt/app-sql:ro
+    ports:
+      - "${FORWARD_DB_PORT:-5432}:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  redis:
+    image: redis:8-alpine
+    volumes:
+      - redis:/data
+    ports:
+      - "${FORWARD_REDIS_PORT:-6379}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  mailpit:
+    image: axllent/mailpit:v1
+    ports:
+      - "${FORWARD_MAILPIT_PORT:-1025}:1025"
+      - "${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025"
+
+  gotenberg:
+    image: gotenberg/gotenberg:8
+    ports:
+      - "${FORWARD_GOTENBERG_PORT:-3000}:3000"
+
+  vite:
+    image: node:22-alpine
+    profiles: ["vite"]
+    working_dir: /app
+    command: ["sh", "-c", "npm ci && npm run dev"]
+    volumes:
+      - .:/app
+      - node_modules:/app/node_modules
+    ports:
+      - "${VITE_PORT:-5173}:5173"
+
+volumes:
+  pgsql:
+  redis:
+  venv:
+  node_modules:

@@ -1,0 +1,23 @@
+{% extends "admin/index.html" %}
+{% load i18n portal %}
+{% comment %}Admin dashboard (original Filament Dashboard + AccountWidget).{% endcomment %}
+{% block messages %}
+    <div class="px-4"><div class="container mx-auto">{% mfa_reminder %}</div></div>
+    {{ block.super }}
+{% endblock %}
+{% block content %}
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-4 rounded-default border border-base-200 bg-white p-4 shadow-xs dark:border-base-800 dark:bg-base-900" data-account-widget>
+        <div>
+            <p class="font-semibold text-font-important-light dark:text-font-important-dark">{% blocktranslate with name=account_name context "admin" %}Welcome, {{ name }}{% endblocktranslate %}</p>
+            <p class="text-font-subtle-light dark:text-font-subtle-dark">{{ account_email }}</p>
+        </div>
+        <div class="flex items-center gap-3">
+            <a href="{{ portal_url }}" class="text-primary-600 hover:underline dark:text-primary-500">{% translate "Portal" context "admin" %}</a>
+            <form method="post" action="{% url 'admin:logout' %}">
+                {% csrf_token %}
+                <button type="submit" class="rounded-default border border-base-200 px-3 py-1.5 hover:bg-base-50 dark:border-base-700 dark:hover:bg-base-800">{% translate "Sign out" context "authentication" %}</button>
+            </form>
+        </div>
+    </div>
+    {{ block.super }}
+{% endblock %}

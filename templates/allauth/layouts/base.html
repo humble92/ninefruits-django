@@ -1,0 +1,4 @@
+{% extends "layouts/guest.html" %}
+{% comment %}allauth pages use the shared guest layout (original components/layouts/guest).{% endcomment %}
+{% block title %}{% block head_title %}{% endblock head_title %} · {{ site_name|default:"Ninefruits" }}{% endblock title %}
+{% block extra_scripts %}{% block extra_body %}{% endblock extra_body %}{% endblock extra_scripts %}
