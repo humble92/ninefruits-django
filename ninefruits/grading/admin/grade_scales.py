@@ -1,6 +1,6 @@
 """Grade scales in the admin panel (original Filament ``Resources/Reference/GradeScales`` with
 ``ItemsRelationManager``). Saving goes through ``SaveGradeScale``: the default scale is the
-institution's scale, fixed at installation. The grade workflow screens arrive with Phase 6."""
+institution's scale, fixed at installation."""
 
 from __future__ import annotations
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 19:09+0000\n"
+"POT-Creation-Date: 2026-10-24 20:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -62,13 +62,15 @@ msgstr "%(attribute)s은(는) %(date)s 이후 날짜여야 합니다."
 
 # key: admin.role_assignments.fields.ends_at
 # key: registration.fields.ends_at
-#: actions/manage_holds.py:49 admin/common.py:185 admin/common.py:195 models/holds.py:56
+#: actions/manage_holds.py:49 admin/common.py:185 admin/common.py:195
+#: models/holds.py:56
 msgid "Ends"
 msgstr "종료"
 
 # key: admin.role_assignments.fields.starts_at
 # key: registration.fields.starts_at
-#: actions/manage_holds.py:49 admin/common.py:184 admin/common.py:195 models/holds.py:55
+#: actions/manage_holds.py:49 admin/common.py:184 admin/common.py:195
+#: models/holds.py:55
 msgid "Starts"
 msgstr "시작"
 
@@ -111,12 +113,15 @@ msgstr "시각"
 # key: certificate.facts.student_number
 # key: graduation.report_columns.student_number
 # key: people.fields.student_number
-#: admin/attempts.py:74 admin/common.py:93 admin/enrollments.py:139 admin/holds.py:69 templates/registration/admin/roster.html:8 templates/registration/admin/waitlist.html:9
+#: admin/attempts.py:74 admin/common.py:93 admin/enrollments.py:139
+#: admin/holds.py:69 templates/registration/admin/roster.html:8
+#: templates/registration/admin/waitlist.html:9
 msgid "Student number"
 msgstr "학번"
 
 # key: offering.fields.section
-#: admin/attempts.py:78 admin/common.py:129 admin/common.py:205 admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
+#: admin/attempts.py:78 admin/common.py:129 admin/common.py:205
+#: admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
 msgctxt "offering"
 msgid "Section"
 msgstr "강좌"
@@ -174,12 +179,15 @@ msgid "Blocks certificates"
 msgstr "증명서 발급 제한"
 
 # key: reference.resources.terms.label
-#: admin/common.py:202 admin/common.py:250 admin/holds.py:200 admin/rules.py:54 admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22 templates/registration/portal/registration.html:17
+#: admin/common.py:202 admin/common.py:250 admin/holds.py:200 admin/rules.py:54
+#: admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22
+#: templates/registration/portal/registration.html:17
 msgid "term"
 msgstr "학기"
 
 # key: registration.fields.rule
-#: admin/common.py:203 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96 admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
+#: admin/common.py:203 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96
+#: admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
 msgid "Rule"
 msgstr "규칙"
 
@@ -223,7 +231,9 @@ msgid "No"
 msgstr "아니오"
 
 # key: registration.fields.status
-#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115 models/enrollment.py:231 templates/registration/admin/roster.html:11 templates/registration/admin/waitlist.html:11
+#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115
+#: models/enrollment.py:231 templates/registration/admin/roster.html:11
+#: templates/registration/admin/waitlist.html:11
 msgctxt "registration"
 msgid "Status"
 msgstr "상태"
@@ -245,20 +255,24 @@ msgid "Withdrawn."
 msgstr "철회했습니다."
 
 # key: registration.actions.drop
-#: admin/enrollments.py:79 admin/enrollments.py:199 templates/registration/admin/roster.html:29
+#: admin/enrollments.py:79 admin/enrollments.py:199
+#: templates/registration/admin/roster.html:29
 msgctxt "registration.actions"
 msgid "Drop"
 msgstr "수강 취소"
 
 # key: registration.actions.withdraw
-#: admin/enrollments.py:79 admin/enrollments.py:209 templates/registration/admin/roster.html:30
+#: admin/enrollments.py:79 admin/enrollments.py:209
+#: templates/registration/admin/roster.html:30
 msgctxt "registration.actions"
 msgid "Withdraw"
 msgstr "수강 철회"
 
 # key: people.sections.name
 # key: people.fields.name
-#: admin/enrollments.py:143 admin/holds.py:73 templates/registration/admin/roster.html:9 templates/registration/admin/waitlist.html:10
+#: admin/enrollments.py:143 admin/holds.py:73
+#: templates/registration/admin/roster.html:9
+#: templates/registration/admin/waitlist.html:10
 msgctxt "people"
 msgid "Name"
 msgstr "이름"
@@ -270,7 +284,8 @@ msgid "Title"
 msgstr "교과목명"
 
 # key: registration.fields.source
-#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59 templates/registration/admin/roster.html:13
+#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59
+#: templates/registration/admin/roster.html:13
 msgctxt "registration"
 msgid "Source"
 msgstr "경로"
@@ -470,297 +485,276 @@ msgstr "학기 종류"
 # key: portal.navigation.registration
 # key: reference.term_window_types.registration
 # key: registration.portal.title
-#: apps.py:21 templates/registration/portal/registration.html:12 views/portal.py:123
+#: apps.py:21 templates/registration/portal/registration.html:12
+#: views/portal.py:123
 msgid "Registration"
 msgstr "수강신청"
 
 # key: registration.attempt_actions.enroll
 # key: registration.portal.register
-#: enums.py:12 templates/registration/portal/partials/action.html:20
+#: enums.py:14 templates/registration/portal/partials/action.html:20
 msgctxt "registration"
 msgid "Register"
 msgstr "신청"
 
 # key: registration.attempt_actions.drop
-#: enums.py:13
+#: enums.py:15
 msgctxt "registration.attempt_actions"
 msgid "Drop"
 msgstr "취소"
 
 # key: registration.attempt_actions.withdraw
-#: enums.py:14
+#: enums.py:16
 msgctxt "registration.attempt_actions"
 msgid "Withdraw"
 msgstr "철회"
 
 # key: registration.attempt_actions.waitlist
-#: enums.py:15
+#: enums.py:17
 msgctxt "registration.attempt_actions"
 msgid "Waitlist"
 msgstr "대기 신청"
 
 # key: registration.attempt_actions.promote
-#: enums.py:16
+#: enums.py:18
 msgid "Waitlist promotion"
 msgstr "대기자 승격"
 
 # key: registration.attempt_actions.cart
 # key: registration.portal.cart
-#: enums.py:17 models/enrollment.py:293 models/enrollment.py:294 templates/registration/portal/registration.html:88
+#: enums.py:19 models/enrollment.py:293 models/enrollment.py:294
+#: templates/registration/portal/registration.html:88
 msgid "Cart"
 msgstr "장바구니"
 
 # key: lms.sync_statuses.succeeded
 # key: registration.attempt_outcomes.succeeded
-#: enums.py:21
+#: enums.py:23
 msgid "Succeeded"
 msgstr "성공"
 
 # key: registration.attempt_outcomes.waitlisted
-#: enums.py:22
+#: enums.py:24
 msgid "Waitlisted"
 msgstr "대기 등록"
 
 # key: registration.attempt_outcomes.refused
-#: enums.py:23
+#: enums.py:25
 msgid "Refused"
 msgstr "거절"
 
 # key: registration.enrollment_sources.student
 # key: security.personas.student
-#: enums.py:27
+#: enums.py:29
 msgid "Student"
 msgstr "학생"
 
 # key: registration.enrollment_sources.staff
-#: enums.py:28
+#: enums.py:30
 msgid "Staff"
 msgstr "직원"
 
 # key: registration.enrollment_sources.waitlist
-#: enums.py:29
+#: enums.py:31
 msgctxt "registration.enrollment_sources"
 msgid "Waitlist"
 msgstr "대기자 승격"
 
 # key: registration.enrollment_sources.import
-#: enums.py:30
+#: enums.py:32
 msgid "Import"
 msgstr "가져오기"
 
 # key: registration.enrollment_statuses.enrolled
-#: enums.py:37
+#: enums.py:39
 msgctxt "registration.enrollment_statuses"
 msgid "Registered"
 msgstr "신청"
 
 # key: registration.enrollment_statuses.dropped
-#: enums.py:38
+#: enums.py:40
 msgid "Dropped"
 msgstr "취소"
 
 # key: registration.enrollment_statuses.withdrawn
-#: enums.py:39
+#: enums.py:41
 msgctxt "registration"
 msgid "Withdrawn"
 msgstr "철회"
 
 # key: registration.enrollment_statuses.completed
-#: enums.py:40
+#: enums.py:42
 msgid "Completed"
 msgstr "이수"
 
-# key: registration.grade_statuses.none
-#: enums.py:47
-msgid "No grade"
-msgstr "성적 없음"
-
-# key: registration.grade_statuses.draft
-#: enums.py:48
-msgctxt "registration"
-msgid "Draft"
-msgstr "입력 중"
-
-# key: registration.grade_statuses.submitted
-#: enums.py:49
-msgctxt "registration.grade_statuses"
-msgid "Submitted"
-msgstr "제출"
-
-# key: registration.grade_statuses.finalized
-#: enums.py:50
-msgctxt "registration"
-msgid "Final"
-msgstr "확정"
-
 # key: registration.hold_types.unregistered
-#: enums.py:57
+#: enums.py:54
 msgid "Not registered for the term"
 msgstr "미등록"
 
 # key: registration.hold_types.financial
-#: enums.py:58
+#: enums.py:55
 msgid "Financial"
 msgstr "재정"
 
 # key: registration.hold_types.academic
-#: enums.py:59
+#: enums.py:56
 msgctxt "registration"
 msgid "Academic"
 msgstr "학사"
 
 # key: registration.hold_types.administrative
-#: enums.py:60
+#: enums.py:57
 msgid "Administrative"
 msgstr "행정"
 
 # key: people.genders.other
 # key: people.guardian_relationships.other
 # key: registration.hold_types.other
-#: enums.py:61
+#: enums.py:58
 msgid "Other"
 msgstr "기타"
 
 # key: registration.rules.window.label
-#: enums.py:77
+#: enums.py:74
 msgctxt "registration.rules.window"
 msgid "Registration period"
 msgstr "신청 기간"
 
 # key: registration.rules.section_open.label
-#: enums.py:79
+#: enums.py:76
 msgid "Section open"
 msgstr "개설 상태"
 
 # key: registration.rules.hold.label
-#: enums.py:80
+#: enums.py:77
 msgid "Holds"
 msgstr "수강신청 제한"
 
 # key: registration.rules.student_status.label
-#: enums.py:81
+#: enums.py:78
 msgid "Student status"
 msgstr "학적 상태"
 
 # key: registration.rules.eligibility.label
-#: enums.py:82
+#: enums.py:79
 msgid "Section eligibility"
 msgstr "수강 대상"
 
 # key: registration.rules.duplicate_course.label
-#: enums.py:83
+#: enums.py:80
 msgid "Same course twice"
 msgstr "같은 과목 중복"
 
 # key: registration.rules.time_conflict.label
-#: enums.py:84
+#: enums.py:81
 msgid "Time conflict"
 msgstr "시간 중복"
 
 # key: registration.rules.credit_limit.label
-#: enums.py:85
+#: enums.py:82
 msgid "Credit limit"
 msgstr "학점 상한"
 
 # key: registration.rules.requisites.label
-#: enums.py:86
+#: enums.py:83
 msgid "Prerequisites"
 msgstr "선수과목"
 
 # key: registration.rules.repeat_course.label
-#: enums.py:87
+#: enums.py:84
 msgid "Retakes"
 msgstr "재수강"
 
 # key: registration.rules.capacity.label
-#: enums.py:89
+#: enums.py:86
 msgid "Seats"
 msgstr "정원"
 
 # key: registration.rules.window.description
-#: enums.py:106
+#: enums.py:103
 msgid "A registration, add/drop or withdrawal period must be open for the student."
 msgstr "학생에게 수강신청, 수강 정정 또는 수강 철회 기간이 열려 있어야 한다."
 
 # key: registration.rules.section_open.description
-#: enums.py:107
+#: enums.py:104
 msgid "The section must be published."
 msgstr "분반이 공개 상태여야 한다."
 
 # key: registration.rules.hold.description
-#: enums.py:108
+#: enums.py:105
 msgid "Students with a hold that blocks registration cannot register."
 msgstr "수강신청 제한이 있는 학생은 신청할 수 없다."
 
 # key: registration.rules.student_status.description
-#: enums.py:109
+#: enums.py:106
 msgid "Only students with the chosen statuses may register."
 msgstr "선택한 학적 상태의 학생만 신청할 수 있다."
 
 # key: registration.rules.eligibility.description
-#: enums.py:110
+#: enums.py:107
 msgid "The student must match the section's eligibility and not its exclusions."
 msgstr "분반의 수강 대상 조건을 만족하고 제외 조건에 해당하지 않아야 한다."
 
 # key: registration.rules.duplicate_course.description
-#: enums.py:111
+#: enums.py:108
 msgid "A course can be registered only once per term."
 msgstr "한 학기에 같은 과목은 한 번만 신청할 수 있다."
 
 # key: registration.rules.time_conflict.description
-#: enums.py:112
+#: enums.py:109
 msgid "Meeting times must not overlap with other registered sections."
 msgstr "신청한 다른 분반과 수업 시간이 겹치면 안 된다."
 
 # key: registration.rules.credit_limit.description
-#: enums.py:113
+#: enums.py:110
 msgid "Total credits must not exceed the credit limit that applies to the student."
 msgstr "신청 학점 합계가 학생에게 적용되는 학점 상한을 넘으면 안 된다."
 
 # key: registration.rules.requisites.description
-#: enums.py:115
+#: enums.py:112
 msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
 msgstr "선수과목을 이수해야 한다(동일 과목 인정). 동시수강 과목은 같은 학기에 들어도 된다."
 
 # key: registration.rules.repeat_course.description
-#: enums.py:117
+#: enums.py:114
 msgid "Whether and how often a passed course may be taken again."
 msgstr "이수한 과목을 다시 들을 수 있는지, 몇 번까지인지 정한다."
 
 # key: registration.rules.capacity.description
-#: enums.py:118
+#: enums.py:115
 msgid "A seat must be free (reserved seats count only for their students until released)."
 msgstr "빈자리가 있어야 한다(유보석은 풀리기 전까지 해당 학생만 쓴다)."
 
 # key: registration.rule_severities.block
-#: enums.py:123
+#: enums.py:120
 msgid "Block"
 msgstr "차단"
 
 # key: registration.rule_severities.warn
-#: enums.py:124
+#: enums.py:121
 msgid "Warn only"
 msgstr "경고만"
 
 # key: registration.waitlist_statuses.waiting
-#: enums.py:128
+#: enums.py:125
 msgctxt "registration"
 msgid "Waiting"
 msgstr "대기 중"
 
 # key: registration.waitlist_statuses.promoted
-#: enums.py:129
+#: enums.py:126
 msgctxt "registration.waitlist_statuses"
 msgid "Registered"
 msgstr "신청됨"
 
 # key: registration.waitlist_statuses.removed
-#: enums.py:130
+#: enums.py:127
 msgid "Removed"
 msgstr "제외"
 
 # key: registration.waitlist_statuses.expired
-#: enums.py:131
+#: enums.py:128
 msgctxt "registration"
 msgid "Expired"
 msgstr "만료"
@@ -789,7 +783,8 @@ msgstr "신청 학점"
 
 # key: registration.fields.is_retake
 # key: registration.portal.retake
-#: models/enrollment.py:123 templates/registration/admin/roster.html:12 templates/registration/portal/registration.html:65
+#: models/enrollment.py:123 templates/registration/admin/roster.html:12
+#: templates/registration/portal/registration.html:65
 msgid "Retake"
 msgstr "재수강"
 
@@ -1073,7 +1068,9 @@ msgid "Program"
 msgstr "프로그램"
 
 # key: common.none
-#: templates/registration/admin/roster.html:34 templates/registration/admin/waitlist.html:27 templates/registration/portal/registration.html:76
+#: templates/registration/admin/roster.html:34
+#: templates/registration/admin/waitlist.html:27
+#: templates/registration/portal/registration.html:76
 msgctxt "common"
 msgid "None"
 msgstr "없음"
@@ -1194,7 +1191,8 @@ msgid "The cart is empty."
 msgstr "장바구니가 비어 있습니다."
 
 # key: offering.catalog.search
-#: templates/registration/portal/registration.html:106 templates/registration/portal/registration.html:108
+#: templates/registration/portal/registration.html:106
+#: templates/registration/portal/registration.html:108
 msgid "Search"
 msgstr "검색"
 

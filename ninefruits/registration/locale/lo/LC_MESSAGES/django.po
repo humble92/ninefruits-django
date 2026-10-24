@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 19:09+0000\n"
+"POT-Creation-Date: 2026-10-24 20:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,13 +61,15 @@ msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼ
 
 # key: admin.role_assignments.fields.ends_at
 # key: registration.fields.ends_at
-#: actions/manage_holds.py:49 admin/common.py:185 admin/common.py:195 models/holds.py:56
+#: actions/manage_holds.py:49 admin/common.py:185 admin/common.py:195
+#: models/holds.py:56
 msgid "Ends"
 msgstr "ສິ້ນສຸດ"
 
 # key: admin.role_assignments.fields.starts_at
 # key: registration.fields.starts_at
-#: actions/manage_holds.py:49 admin/common.py:184 admin/common.py:195 models/holds.py:55
+#: actions/manage_holds.py:49 admin/common.py:184 admin/common.py:195
+#: models/holds.py:55
 msgid "Starts"
 msgstr "ເລີ່ມ"
 
@@ -110,12 +112,15 @@ msgstr "ເວລາ"
 # key: certificate.facts.student_number
 # key: graduation.report_columns.student_number
 # key: people.fields.student_number
-#: admin/attempts.py:74 admin/common.py:93 admin/enrollments.py:139 admin/holds.py:69 templates/registration/admin/roster.html:8 templates/registration/admin/waitlist.html:9
+#: admin/attempts.py:74 admin/common.py:93 admin/enrollments.py:139
+#: admin/holds.py:69 templates/registration/admin/roster.html:8
+#: templates/registration/admin/waitlist.html:9
 msgid "Student number"
 msgstr "ລະຫັດນັກສຶກສາ"
 
 # key: offering.fields.section
-#: admin/attempts.py:78 admin/common.py:129 admin/common.py:205 admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
+#: admin/attempts.py:78 admin/common.py:129 admin/common.py:205
+#: admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
 msgctxt "offering"
 msgid "Section"
 msgstr "ກຸ່ມຮຽນ"
@@ -173,12 +178,15 @@ msgid "Blocks certificates"
 msgstr "ລະງັບໃບຢັ້ງຢືນ"
 
 # key: reference.resources.terms.label
-#: admin/common.py:202 admin/common.py:250 admin/holds.py:200 admin/rules.py:54 admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22 templates/registration/portal/registration.html:17
+#: admin/common.py:202 admin/common.py:250 admin/holds.py:200 admin/rules.py:54
+#: admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22
+#: templates/registration/portal/registration.html:17
 msgid "term"
 msgstr "ພາກຮຽນ"
 
 # key: registration.fields.rule
-#: admin/common.py:203 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96 admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
+#: admin/common.py:203 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96
+#: admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
 msgid "Rule"
 msgstr "ກົດລະບຽບ"
 
@@ -222,7 +230,9 @@ msgid "No"
 msgstr "ບໍ່"
 
 # key: registration.fields.status
-#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115 models/enrollment.py:231 templates/registration/admin/roster.html:11 templates/registration/admin/waitlist.html:11
+#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115
+#: models/enrollment.py:231 templates/registration/admin/roster.html:11
+#: templates/registration/admin/waitlist.html:11
 msgctxt "registration"
 msgid "Status"
 msgstr "ສະຖານະ"
@@ -244,20 +254,24 @@ msgid "Withdrawn."
 msgstr "ຖອນຕົວແລ້ວ."
 
 # key: registration.actions.drop
-#: admin/enrollments.py:79 admin/enrollments.py:199 templates/registration/admin/roster.html:29
+#: admin/enrollments.py:79 admin/enrollments.py:199
+#: templates/registration/admin/roster.html:29
 msgctxt "registration.actions"
 msgid "Drop"
 msgstr "ຖອນວິຊາ"
 
 # key: registration.actions.withdraw
-#: admin/enrollments.py:79 admin/enrollments.py:209 templates/registration/admin/roster.html:30
+#: admin/enrollments.py:79 admin/enrollments.py:209
+#: templates/registration/admin/roster.html:30
 msgctxt "registration.actions"
 msgid "Withdraw"
 msgstr "ຖອນຕົວ"
 
 # key: people.sections.name
 # key: people.fields.name
-#: admin/enrollments.py:143 admin/holds.py:73 templates/registration/admin/roster.html:9 templates/registration/admin/waitlist.html:10
+#: admin/enrollments.py:143 admin/holds.py:73
+#: templates/registration/admin/roster.html:9
+#: templates/registration/admin/waitlist.html:10
 msgctxt "people"
 msgid "Name"
 msgstr "ຊື່"
@@ -269,7 +283,8 @@ msgid "Title"
 msgstr "ຊື່ວິຊາ"
 
 # key: registration.fields.source
-#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59 templates/registration/admin/roster.html:13
+#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59
+#: templates/registration/admin/roster.html:13
 msgctxt "registration"
 msgid "Source"
 msgstr "ແຫຼ່ງທີ່ມາ"
@@ -468,297 +483,276 @@ msgstr "ປະເພດພາກຮຽນ"
 # key: portal.navigation.registration
 # key: reference.term_window_types.registration
 # key: registration.portal.title
-#: apps.py:21 templates/registration/portal/registration.html:12 views/portal.py:123
+#: apps.py:21 templates/registration/portal/registration.html:12
+#: views/portal.py:123
 msgid "Registration"
 msgstr "ການລົງທະບຽນຮຽນ"
 
 # key: registration.attempt_actions.enroll
 # key: registration.portal.register
-#: enums.py:12 templates/registration/portal/partials/action.html:20
+#: enums.py:14 templates/registration/portal/partials/action.html:20
 msgctxt "registration"
 msgid "Register"
 msgstr "ລົງທະບຽນ"
 
 # key: registration.attempt_actions.drop
-#: enums.py:13
+#: enums.py:15
 msgctxt "registration.attempt_actions"
 msgid "Drop"
 msgstr "ຖອນວິຊາ"
 
 # key: registration.attempt_actions.withdraw
-#: enums.py:14
+#: enums.py:16
 msgctxt "registration.attempt_actions"
 msgid "Withdraw"
 msgstr "ຖອນຕົວ"
 
 # key: registration.attempt_actions.waitlist
-#: enums.py:15
+#: enums.py:17
 msgctxt "registration.attempt_actions"
 msgid "Waitlist"
 msgstr "ລາຍຊື່ລໍຖ້າ"
 
 # key: registration.attempt_actions.promote
-#: enums.py:16
+#: enums.py:18
 msgid "Waitlist promotion"
 msgstr "ເລື່ອນຈາກລາຍຊື່ລໍຖ້າ"
 
 # key: registration.attempt_actions.cart
 # key: registration.portal.cart
-#: enums.py:17 models/enrollment.py:293 models/enrollment.py:294 templates/registration/portal/registration.html:88
+#: enums.py:19 models/enrollment.py:293 models/enrollment.py:294
+#: templates/registration/portal/registration.html:88
 msgid "Cart"
 msgstr "ກະຕ່າ"
 
 # key: lms.sync_statuses.succeeded
 # key: registration.attempt_outcomes.succeeded
-#: enums.py:21
+#: enums.py:23
 msgid "Succeeded"
 msgstr "ສຳເລັດ"
 
 # key: registration.attempt_outcomes.waitlisted
-#: enums.py:22
+#: enums.py:24
 msgid "Waitlisted"
 msgstr "ຢູ່ໃນລາຍຊື່ລໍຖ້າ"
 
 # key: registration.attempt_outcomes.refused
-#: enums.py:23
+#: enums.py:25
 msgid "Refused"
 msgstr "ຖືກປະຕິເສດ"
 
 # key: registration.enrollment_sources.student
 # key: security.personas.student
-#: enums.py:27
+#: enums.py:29
 msgid "Student"
 msgstr "ນັກສຶກສາ"
 
 # key: registration.enrollment_sources.staff
-#: enums.py:28
+#: enums.py:30
 msgid "Staff"
 msgstr "ພະນັກງານ"
 
 # key: registration.enrollment_sources.waitlist
-#: enums.py:29
+#: enums.py:31
 msgctxt "registration.enrollment_sources"
 msgid "Waitlist"
 msgstr "ລາຍຊື່ລໍຖ້າ"
 
 # key: registration.enrollment_sources.import
-#: enums.py:30
+#: enums.py:32
 msgid "Import"
 msgstr "ນຳເຂົ້າ"
 
 # key: registration.enrollment_statuses.enrolled
-#: enums.py:37
+#: enums.py:39
 msgctxt "registration.enrollment_statuses"
 msgid "Registered"
 msgstr "ລົງທະບຽນແລ້ວ"
 
 # key: registration.enrollment_statuses.dropped
-#: enums.py:38
+#: enums.py:40
 msgid "Dropped"
 msgstr "ຖອນວິຊາແລ້ວ"
 
 # key: registration.enrollment_statuses.withdrawn
-#: enums.py:39
+#: enums.py:41
 msgctxt "registration"
 msgid "Withdrawn"
 msgstr "ຖອນຕົວແລ້ວ"
 
 # key: registration.enrollment_statuses.completed
-#: enums.py:40
+#: enums.py:42
 msgid "Completed"
 msgstr "ສຳເລັດແລ້ວ"
 
-# key: registration.grade_statuses.none
-#: enums.py:47
-msgid "No grade"
-msgstr "ບໍ່ມີເກຣດ"
-
-# key: registration.grade_statuses.draft
-#: enums.py:48
-msgctxt "registration"
-msgid "Draft"
-msgstr "ສະບັບຮ່າງ"
-
-# key: registration.grade_statuses.submitted
-#: enums.py:49
-msgctxt "registration.grade_statuses"
-msgid "Submitted"
-msgstr "ສົ່ງແລ້ວ"
-
-# key: registration.grade_statuses.finalized
-#: enums.py:50
-msgctxt "registration"
-msgid "Final"
-msgstr "ສະຫຼຸບແລ້ວ"
-
 # key: registration.hold_types.unregistered
-#: enums.py:57
+#: enums.py:54
 msgid "Not registered for the term"
 msgstr "ບໍ່ໄດ້ລົງທະບຽນໃນພາກຮຽນ"
 
 # key: registration.hold_types.financial
-#: enums.py:58
+#: enums.py:55
 msgid "Financial"
 msgstr "ການເງິນ"
 
 # key: registration.hold_types.academic
-#: enums.py:59
+#: enums.py:56
 msgctxt "registration"
 msgid "Academic"
 msgstr "ວິຊາການ"
 
 # key: registration.hold_types.administrative
-#: enums.py:60
+#: enums.py:57
 msgid "Administrative"
 msgstr "ບໍລິຫານ"
 
 # key: people.genders.other
 # key: people.guardian_relationships.other
 # key: registration.hold_types.other
-#: enums.py:61
+#: enums.py:58
 msgid "Other"
 msgstr "ອື່ນໆ"
 
 # key: registration.rules.window.label
-#: enums.py:77
+#: enums.py:74
 msgctxt "registration.rules.window"
 msgid "Registration period"
 msgstr "ໄລຍະເວລາລົງທະບຽນ"
 
 # key: registration.rules.section_open.label
-#: enums.py:79
+#: enums.py:76
 msgid "Section open"
 msgstr "ກຸ່ມຮຽນເປີດ"
 
 # key: registration.rules.hold.label
-#: enums.py:80
+#: enums.py:77
 msgid "Holds"
 msgstr "ການລະງັບ"
 
 # key: registration.rules.student_status.label
-#: enums.py:81
+#: enums.py:78
 msgid "Student status"
 msgstr "ສະຖານະນັກສຶກສາ"
 
 # key: registration.rules.eligibility.label
-#: enums.py:82
+#: enums.py:79
 msgid "Section eligibility"
 msgstr "ເງື່ອນໄຂຂອງກຸ່ມຮຽນ"
 
 # key: registration.rules.duplicate_course.label
-#: enums.py:83
+#: enums.py:80
 msgid "Same course twice"
 msgstr "ວິຊາດຽວກັນສອງຄັ້ງ"
 
 # key: registration.rules.time_conflict.label
-#: enums.py:84
+#: enums.py:81
 msgid "Time conflict"
 msgstr "ເວລາຊ້ອນກັນ"
 
 # key: registration.rules.credit_limit.label
-#: enums.py:85
+#: enums.py:82
 msgid "Credit limit"
 msgstr "ຂີດຈຳກັດໜ່ວຍກິດ"
 
 # key: registration.rules.requisites.label
-#: enums.py:86
+#: enums.py:83
 msgid "Prerequisites"
 msgstr "ວິຊາບັງຄັບກ່ອນ"
 
 # key: registration.rules.repeat_course.label
-#: enums.py:87
+#: enums.py:84
 msgid "Retakes"
 msgstr "ການຮຽນຊ້ຳ"
 
 # key: registration.rules.capacity.label
-#: enums.py:89
+#: enums.py:86
 msgid "Seats"
 msgstr "ບ່ອນນັ່ງ"
 
 # key: registration.rules.window.description
-#: enums.py:106
+#: enums.py:103
 msgid "A registration, add/drop or withdrawal period must be open for the student."
 msgstr "ຕ້ອງມີໄລຍະເວລາລົງທະບຽນ, ເພີ່ມ/ຖອນວິຊາ ຫຼື ຖອນຕົວທີ່ເປີດຢູ່ສຳລັບນັກສຶກສາ."
 
 # key: registration.rules.section_open.description
-#: enums.py:107
+#: enums.py:104
 msgid "The section must be published."
 msgstr "ກຸ່ມຮຽນຕ້ອງຖືກເຜີຍແຜ່ແລ້ວ."
 
 # key: registration.rules.hold.description
-#: enums.py:108
+#: enums.py:105
 msgid "Students with a hold that blocks registration cannot register."
 msgstr "ນັກສຶກສາທີ່ມີການລະງັບທີ່ຂັດຂວາງການລົງທະບຽນບໍ່ສາມາດລົງທະບຽນໄດ້."
 
 # key: registration.rules.student_status.description
-#: enums.py:109
+#: enums.py:106
 msgid "Only students with the chosen statuses may register."
 msgstr "ສະເພາະນັກສຶກສາທີ່ມີສະຖານະທີ່ເລືອກເທົ່ານັ້ນຈຶ່ງລົງທະບຽນໄດ້."
 
 # key: registration.rules.eligibility.description
-#: enums.py:110
+#: enums.py:107
 msgid "The student must match the section's eligibility and not its exclusions."
 msgstr "ນັກສຶກສາຕ້ອງກົງກັບເງື່ອນໄຂຂອງກຸ່ມຮຽນ ແລະ ບໍ່ຢູ່ໃນຂໍ້ຍົກເວັ້ນ."
 
 # key: registration.rules.duplicate_course.description
-#: enums.py:111
+#: enums.py:108
 msgid "A course can be registered only once per term."
 msgstr "ວິຊາໜຶ່ງສາມາດລົງທະບຽນໄດ້ພຽງຄັ້ງດຽວຕໍ່ພາກຮຽນ."
 
 # key: registration.rules.time_conflict.description
-#: enums.py:112
+#: enums.py:109
 msgid "Meeting times must not overlap with other registered sections."
 msgstr "ເວລາຄາບຮຽນຕ້ອງບໍ່ຊ້ອນກັບກຸ່ມຮຽນອື່ນທີ່ລົງທະບຽນແລ້ວ."
 
 # key: registration.rules.credit_limit.description
-#: enums.py:113
+#: enums.py:110
 msgid "Total credits must not exceed the credit limit that applies to the student."
 msgstr "ໜ່ວຍກິດລວມຕ້ອງບໍ່ເກີນຂີດຈຳກັດໜ່ວຍກິດທີ່ນຳໃຊ້ກັບນັກສຶກສາ."
 
 # key: registration.rules.requisites.description
-#: enums.py:115
+#: enums.py:112
 msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
 msgstr "ຕ້ອງຜ່ານວິຊາບັງຄັບກ່ອນ (ນັບວິຊາທຽບເທົ່າ); ວິຊາບັງຄັບຮ່ວມສາມາດຮຽນໃນພາກຮຽນດຽວກັນໄດ້."
 
 # key: registration.rules.repeat_course.description
-#: enums.py:117
+#: enums.py:114
 msgid "Whether and how often a passed course may be taken again."
 msgstr "ວິຊາທີ່ຜ່ານແລ້ວສາມາດຮຽນຊ້ຳໄດ້ຫຼືບໍ່ ແລະ ຈັກຄັ້ງ."
 
 # key: registration.rules.capacity.description
-#: enums.py:118
+#: enums.py:115
 msgid "A seat must be free (reserved seats count only for their students until released)."
 msgstr "ຕ້ອງມີບ່ອນນັ່ງວ່າງ (ບ່ອນນັ່ງສະຫງວນນັບສະເພາະນັກສຶກສາທີ່ສະຫງວນໃຫ້ຈົນກວ່າຈະປ່ອຍ)."
 
 # key: registration.rule_severities.block
-#: enums.py:123
+#: enums.py:120
 msgid "Block"
 msgstr "ລະງັບ"
 
 # key: registration.rule_severities.warn
-#: enums.py:124
+#: enums.py:121
 msgid "Warn only"
 msgstr "ເຕືອນເທົ່ານັ້ນ"
 
 # key: registration.waitlist_statuses.waiting
-#: enums.py:128
+#: enums.py:125
 msgctxt "registration"
 msgid "Waiting"
 msgstr "ລໍຖ້າ"
 
 # key: registration.waitlist_statuses.promoted
-#: enums.py:129
+#: enums.py:126
 msgctxt "registration.waitlist_statuses"
 msgid "Registered"
 msgstr "ລົງທະບຽນແລ້ວ"
 
 # key: registration.waitlist_statuses.removed
-#: enums.py:130
+#: enums.py:127
 msgid "Removed"
 msgstr "ລຶບອອກແລ້ວ"
 
 # key: registration.waitlist_statuses.expired
-#: enums.py:131
+#: enums.py:128
 msgctxt "registration"
 msgid "Expired"
 msgstr "ໝົດອາຍຸ"
@@ -787,7 +781,8 @@ msgstr "ໜ່ວຍກິດ"
 
 # key: registration.fields.is_retake
 # key: registration.portal.retake
-#: models/enrollment.py:123 templates/registration/admin/roster.html:12 templates/registration/portal/registration.html:65
+#: models/enrollment.py:123 templates/registration/admin/roster.html:12
+#: templates/registration/portal/registration.html:65
 msgid "Retake"
 msgstr "ຮຽນຊ້ຳ"
 
@@ -1071,7 +1066,9 @@ msgid "Program"
 msgstr "ຫຼັກສູດ"
 
 # key: common.none
-#: templates/registration/admin/roster.html:34 templates/registration/admin/waitlist.html:27 templates/registration/portal/registration.html:76
+#: templates/registration/admin/roster.html:34
+#: templates/registration/admin/waitlist.html:27
+#: templates/registration/portal/registration.html:76
 msgctxt "common"
 msgid "None"
 msgstr "ບໍ່ມີ"
@@ -1192,7 +1189,8 @@ msgid "The cart is empty."
 msgstr "ກະຕ່າຫວ່າງເປົ່າ."
 
 # key: offering.catalog.search
-#: templates/registration/portal/registration.html:106 templates/registration/portal/registration.html:108
+#: templates/registration/portal/registration.html:106
+#: templates/registration/portal/registration.html:108
 msgid "Search"
 msgstr "ຄົ້ນຫາ"
 

@@ -159,17 +159,18 @@ def _model_items(site: AdminSite, request: HttpRequest) -> list[tuple[Navigation
         except NoReverseMatch:
             continue
         label = getattr(model_admin, "navigation_label", None) or opts.verbose_name_plural
-        items.append(
-            (
-                group,
-                int(getattr(model_admin, "navigation_order", 100)),
-                {
-                    "title": str(label)[:1].upper() + str(label)[1:],
-                    "icon": getattr(model_admin, "navigation_icon", "table_rows"),
-                    "link": link,
-                },
-            )
-        )
+        item = {
+            "title": str(label)[:1].upper() + str(label)[1:],
+            "icon": getattr(model_admin, "navigation_icon", "table_rows"),
+            "link": link,
+        }
+        # ``navigation_badge(request) -> str | None``: e.g. the number of pending requests.
+        badge = getattr(model_admin, "navigation_badge", None)
+        if callable(badge):
+            value = badge(request)
+            if value:
+                item["badge"] = str(value)
+        items.append((group, int(getattr(model_admin, "navigation_order", 100)), item))
     return items
 
 

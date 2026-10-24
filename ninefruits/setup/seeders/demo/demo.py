@@ -19,7 +19,9 @@ class DemoSeeder(Seeder):
         "ninefruits.setup.seeders.demo.people.DemoPeopleSeeder",
         "ninefruits.setup.seeders.demo.admission.DemoAdmissionSeeder",
         "ninefruits.setup.seeders.demo.curriculum.DemoCurriculumSeeder",
+        "ninefruits.setup.seeders.demo.grading.DemoGradeHistorySeeder",
         "ninefruits.setup.seeders.demo.registration.DemoRegistrationSeeder",
+        "ninefruits.setup.seeders.demo.grading.DemoGradingSeeder",
     ]
 
     #: Functions returning the fixed demo account emails printed by ``setup_demo``.

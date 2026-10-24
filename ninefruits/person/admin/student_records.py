@@ -332,7 +332,7 @@ class StudentRecordAdmin(ReferenceAdmin):
     ordering = ("-student_number",)
     show_full_result_count = False
     inlines = (StatusChangeInline, AdvisorAssignmentInline, AdditionalProgramInline)
-    actions_detail = ("record_status_change", "assign_advisor")
+    actions_detail = ("record_status_change", "assign_advisor", "grade_report")
     change_form_after_template = "person/admin/history.html"
     import_type = "students"
     translated_search_fields = ()
@@ -503,6 +503,15 @@ class StudentRecordAdmin(ReferenceAdmin):
                 messages.success(request, _("Status change recorded."))
                 return HttpResponseRedirect(admin_change_url(record))
         return form_page(self, request, form, _("Record status change"), admin_change_url(record), subtitle=str(record))
+
+    def has_grade_report_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
+        return object_id is not None and bool(request.user.has_perm(Permission.GRADES_VIEW))
+
+    @action(description=_("Grade report"), url_path="grade-report", permissions=["grade_report"], icon="description")
+    def grade_report(self, request: HttpRequest, object_id: Any) -> HttpResponse:
+        """The student's grade report (Phase 6, original ``ViewStudentRecord`` transcript action)."""
+        record = self._record(request, object_id)
+        return HttpResponseRedirect(reverse("grading:transcript", args=[record.pk]))
 
     @action(
         description=_("Assign advisor"), url_path="assign-advisor", permissions=["assign_advisor"], icon="person_add"

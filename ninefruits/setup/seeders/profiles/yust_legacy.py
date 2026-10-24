@@ -16,8 +16,8 @@ class YustLegacyProfileSeeder(SetupProfile):
 
     The original profile also sets credit limit policies by admission year and nursing
     (Phase 5), keeps credit bank courses (codes 009*, 900*) outside the limit (Phase 4) and
-    sets the grading policy (Phase 6); those phases add their steps to ``LATER_PHASE_STEPS``.
-    Idempotent."""
+    sets the grading policy (Phase 6, ``yust_legacy_grading``); those phases add their steps to
+    ``LATER_PHASE_STEPS``. Idempotent."""
 
     key = "yust-legacy"
     label = "YUST legacy rules"
@@ -33,6 +33,8 @@ class YustLegacyProfileSeeder(SetupProfile):
     LATER_PHASE_STEPS: list[str] = [
         # Phase 5: credit limits and credit bank courses.
         "ninefruits.setup.seeders.profiles.yust_legacy_registration.seed_registration_rules",
+        # Phase 6: the legacy grading policy.
+        "ninefruits.setup.seeders.profiles.yust_legacy_grading.seed_grading_policy",
     ]
 
     def run(self) -> None:

@@ -11,8 +11,8 @@
 | `Database/Foundation/DatabaseRolesTest.php` | `tests/db/test_database_roles.py` | 완료 |
 | `Database/Foundation/DatabaseSessionContextTest.php` | `tests/db/test_database_session_context.py` | 완료 |
 | `Database/Foundation/TimeZoneTest.php` | `tests/db/test_time_zone.py` (raw SQL + 모델 기반 사례: 업무 기간 시각, 조직 단위 날짜) | 완료 |
-| `Database/Grading/FinalizedGradeGuardTest.php` |  |  |
-| `Database/Grading/GradeAccessTest.php` |  |  |
+| `Database/Grading/FinalizedGradeGuardTest.php` | `tests/grading/test_finalized_grade_guard.py` | 완료 |
+| `Database/Grading/GradeAccessTest.php` | `tests/grading/test_grade_access.py` (+ 학기 기록·성적 정정 요청의 `visible_to`와 RLS 결과 비교, 9가지 사용자) | 완료 |
 | `Database/I18n/I18nFunctionTest.php` | `tests/i18n/test_i18n_function.py` (+ `zh-hans` keys, Python 일치) | 완료 |
 | `Database/Offering/ScheduleConflictTest.php` | `tests/offering/test_schedule_conflict.py` | 완료 |
 | `Database/Organization/OrgUnitHierarchyTest.php` | `tests/db/test_org_unit_hierarchy.py` | 완료 |
@@ -21,11 +21,11 @@
 | `Database/Security/AuditTriggerTest.php` | `tests/audit/test_audit_triggers.py`, `tests/audit/test_audit_models.py` (비관리 모델 기법) | 완료 |
 | `Database/Security/RowLevelSecurityTest.php` | `tests/audit/test_row_level_security.py` (원본과 같은 PoC 테이블) | 완료 |
 | `Database/Term/TermConstraintsTest.php` | `tests/db/test_term_constraints.py` | 완료 |
-| `Feature/Admin/AdminPagesTest.php` | `tests/admin/test_admin_panel.py` (대시보드, 한국어·중국어 화면), `tests/portal/test_portal_layout.py` (`/portal`), `tests/admin/test_reference_admin.py` (기준정보 화면 전체, 한국어·중국어), `tests/offering/test_curriculum_admin.py` (교육과정·개설강좌 화면), `tests/person/test_people_admin.py` (인물·학적·교원·학적 변동·복수전공 신청·학적/로그인 설정 화면, 한국어·중국어), `tests/registration/test_registration_admin.py` (수강신청 화면 전체, 개설강좌 수강생·대기자 탭, 포털 수강신청, 한국어), `tests/admission/test_admission_admin.py` (입학 화면·입학 설정, 한국어·중국어) | 부분(사용자·역할·감사·설정 화면 데이터셋은 각 리소스 테스트, `/portal/security`는 security 테스트) |
+| `Feature/Admin/AdminPagesTest.php` | `tests/admin/test_admin_panel.py` (대시보드, 한국어·중국어 화면), `tests/portal/test_portal_layout.py` (`/portal`), `tests/admin/test_reference_admin.py` (기준정보 화면 전체, 한국어·중국어), `tests/offering/test_curriculum_admin.py` (교육과정·개설강좌 화면), `tests/person/test_people_admin.py` (인물·학적·교원·학적 변동·복수전공 신청·학적/로그인 설정 화면, 한국어·중국어), `tests/registration/test_registration_admin.py` (수강신청 화면 전체, 개설강좌 수강생·대기자 탭, 포털 수강신청, 한국어), `tests/admission/test_admission_admin.py` (입학 화면·입학 설정, 한국어·중국어), `tests/grading/test_grading_admin.py` (성적 화면 전체·성적 처리 정책·포털 성적 입력·성적표, 한국어), `tests/grading/test_grading_settings.py` (성적 처리 정책 저장) | 부분(사용자·역할·감사·설정 화면 데이터셋은 각 리소스 테스트, `/portal/security`는 security 테스트) |
 | `Feature/Admin/AdminPanelTest.php` | `tests/admin/test_admin_panel.py` (화면 틀), `tests/security/test_security_admin.py`, `tests/security/test_settings_pages.py` (보안·로그인 수단 설정 화면) | 부분(다른 리소스 사례는 해당 Phase) |
 | `Feature/Admin/AdmissionAdminTest.php` | `tests/admission/test_admission_admin.py` (+ 지원서 화면의 검토·결정·발표·대리 응답·학적 생성 버튼, 일괄 학적 생성, 회차 목록 결과 발표, 서류 내려받기 권한, 한국어·중국어 화면) | 완료 |
 | `Feature/Admin/CurriculumAdminTest.php` | `tests/offering/test_curriculum_admin.py` (화면, 강의실 충돌 안내, 시간표, 포털 개설강좌·담당 강좌·강의계획서), `tests/offering/test_section_admin.py` (권한 범위, 좌석 할당 합계, 담당 교원 탭, 다른 학기에서 복사) | 부분(복수전공·부전공 승인·신청 2개 사례는 Phase 2 인물 테스트) |
-| `Feature/Admin/GradingAdminTest.php` |  |  |
+| `Feature/Admin/GradingAdminTest.php` | `tests/grading/test_grading_admin.py` (tiny 데모, 화면 전체, 확정·정정 승인, 학기 마감 미리 보기, 포털 성적 입력·성적 조회, 성적 조회 제한, 한국어 화면) | 완료 |
 | `Feature/Admin/PeopleAdminTest.php` | `tests/person/test_people_admin.py` (+ 학적 등록, 인물 수정 시 신분번호 유지, 주민등록번호 보기 화면과 보안 로그) | 완료 |
 | `Feature/Admin/ReferenceAdminTest.php` | `tests/admin/test_reference_admin.py` (+ 이름 다국어 검색, 세션 업무 기간 복사, CSV 가져오기 화면, 기본 성적 척도 고정, 정책) | 완료 |
 | `Feature/Admin/RegistrationAdminTest.php` | `tests/registration/test_registration_admin.py` (+ 한국어 화면, 규칙 예외 취소, 지금 승격) | 완료 |
@@ -37,11 +37,11 @@
 | `Feature/Curriculum/CourseTest.php` | `tests/curriculum/test_course.py` (+ `tests/curriculum/test_curriculum_admin.py`: 교과목 생성·개정·겹침 안내·졸업 요건 화면·CSV 화면) | 완료 |
 | `Feature/Evaluation/EvaluationAdminTest.php` |  |  |
 | `Feature/Evaluation/EvaluationTest.php` |  |  |
-| `Feature/Grading/GpaCalculatorTest.php` |  |  |
-| `Feature/Grading/GradeWorkflowTest.php` |  |  |
-| `Feature/Grading/GradingCommandsTest.php` |  |  |
-| `Feature/Grading/RelativeEvaluationTest.php` |  |  |
-| `Feature/Grading/TermCloseTest.php` |  |  |
+| `Feature/Grading/GpaCalculatorTest.php` | `tests/grading/test_gpa_calculator.py` | 완료 |
+| `Feature/Grading/GradeWorkflowTest.php` | `tests/grading/test_grade_workflow.py` (Action을 사용자 DB 컨텍스트로 실행, + 제출 성적 직원 수정 감사) | 완료 |
+| `Feature/Grading/GradingCommandsTest.php` | `tests/grading/test_grading_commands.py` | 완료 |
+| `Feature/Grading/RelativeEvaluationTest.php` | `tests/grading/test_relative_evaluation.py` (Livewire 화면 사례는 포털 POST) | 완료 |
+| `Feature/Grading/TermCloseTest.php` | `tests/grading/test_term_close.py` (+ chord 묶음·진행률·완료 메일, 실패 묶음) | 완료 |
 | `Feature/Graduation/GraduationTest.php` |  |  |
 | `Feature/I18n/LocaleTest.php` | `tests/i18n/test_locale.py`, `tests/i18n/test_translatable_field.py`, `tests/i18n/test_formatting.py`, `tests/settings/test_institution_settings.py` | 완료 (로그인 화면 대신 테스트 뷰로 협상 확인) |
 | `Feature/I18n/TranslationCommandsTest.php` | `tests/i18n/test_translation_commands.py`, `tests/i18n/test_convert_translations.py` | 완료 (gettext/xlsx로 전환) |

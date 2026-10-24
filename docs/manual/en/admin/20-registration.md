@@ -52,7 +52,7 @@ The rule set page lists its rules; **Edit** on a row opens the page of that rule
 - **Overrides allowed**: must be on for rule overrides and the "Waive rules" field of staff registration to take effect. It is off by default for holds and same course twice.
 - Parameters appear only for their rule (student status: allowed statuses; time conflict: allowed overlap in minutes; retakes: retakes allowed, maximum attempts, below grade). An empty optional value means "no limit".
 
-Retakes are detected automatically and the registration is marked **Retake**. Grade handling for retakes is Phase 6.
+Retakes are detected automatically and the registration is marked **Retake**. How a retake counts in the GPA is described in [chapter 21](21-grades.md).
 
 When a new release adds a rule to the catalog, installing it (`setup_install`) adds that rule with its defaults to the existing rule sets. Settings changed by administrators are kept.
 
@@ -89,7 +89,7 @@ There is no way to reorder the waitlist. To place a particular student first, us
 In the portal under **Registration** (`/portal/registration/`) the student chooses the term, searches by course code or title and registers, adds to the cart or joins the waitlist. The screen shows the state of the registration period (open, cart only, opening time), registered credits against the credit limit and the timetable. On phones the timetable is a list per weekday.
 
 - **Cart**: during the cart window students collect courses and, once registration opens, **Register all**. Adding to the cart runs the rules in advance and reports problems, but only the window, section open and same course twice checks prevent adding. The rules are checked again on registration.
-- The drop and withdraw buttons change with the term windows. A withdrawn course stays in the history as **Withdrawn** (the W grade is Phase 6).
+- The drop and withdraw buttons change with the term windows. A withdrawn course stays in the history as **Withdrawn** (shown as W on the grades screen, [chapter 21](21-grades.md)).
 - Register, join waitlist, add to cart and register all are limited to 30 requests per minute per person.
 
 ## Registrations and staff adjustments

@@ -1,0 +1,66 @@
+{% extends "pdf/layout.html" %}
+{% load i18n %}
+{% comment %}The grade report (unofficial transcript; original grading/transcript.blade.php). The
+same template is the printable page and, with ?format=pdf, the PDF rendered by Gotenberg.{% endcomment %}
+{% block title %}{% translate "Grade report" %} {{ record.student_number }}{% endblock %}
+{% block style %}
+    body { font-size: 9.5pt; margin: {% if pdf %}0{% else %}24px{% endif %}; }
+    h1 { font-size: 15pt; margin: 0 0 4pt; }
+    h2 { font-size: 11pt; margin: 10pt 0 3pt; }
+    table { margin-bottom: 8pt; }
+    th, td { border: 0; border-bottom: 1px solid #ddd; padding: 2pt 5pt; }
+    th { background: #f4f4f5; }
+    .term { break-inside: avoid; }
+    .muted { color: #555; }
+    .note { font-size: 8.5pt; color: #555; }
+    @media print { .no-print { display: none; } body { margin: 0; } }
+{% endblock %}
+{% block content %}
+    {% if not pdf %}<p class="no-print"><a href="?format=pdf">PDF</a></p>{% endif %}
+    <h1>{{ institution }} · {% translate "Grade report" %}</h1>
+    <p class="muted">{% translate "Unofficial grade report. Request an official transcript from the registrar." %}</p>
+    <table>
+        <tr>
+            <th>{% translate "Student number" %}</th><td>{{ record.student_number }}</td>
+            <th>{% translate "Name" context "people" %}</th><td>{{ record.person.display_name }}</td>
+        </tr>
+        <tr>
+            <th>{% translate "program" as program_label %}{{ program_label|capfirst }}</th><td>{{ record.program.name }}</td>
+            <th>{% translate "Cumulative GPA" context "grading" %}</th>
+            <td>{{ latest.cumulative_gpa|default_if_none:"-" }} ({% translate "Earned credits" context "grading" %} {% if latest %}{{ latest.cumulative_earned_credits|floatformat:"-1" }}{% else %}0{% endif %})</td>
+        </tr>
+    </table>
+
+    {% for entry in terms %}
+        <div class="term">
+            <h2>{{ entry.term.name }}</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>{% translate "Code" context "curriculum" %}</th>
+                        <th>{% translate "Title" context "curriculum" %}</th>
+                        <th>{% translate "Credits" context "curriculum" %}</th>
+                        <th>{% translate "Grade" context "grading" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for enrollment in entry.enrollments %}
+                        <tr>
+                            <td>{{ enrollment.course.code }}</td>
+                            <td>{{ enrollment.version.title }}{% if enrollment.is_retake %} ({% translate "Retake" %}){% endif %}{% if enrollment.pk in superseded %} *{% endif %}</td>
+                            <td>{{ enrollment.credits|floatformat:"-1" }}</td>
+                            <td>{{ enrollment.display_grade|default:"" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {% if entry.record %}
+                <p class="muted">{% blocktranslate with gpa=entry.record.term_gpa|default_if_none:"-" earned=entry.record.earned_credits|floatformat:"-1" attempted=entry.record.attempted_credits|floatformat:"-1" %}GPA {{ gpa }} · {{ earned }} of {{ attempted }} credits earned{% endblocktranslate %}
+                    · {% translate "Cumulative GPA" context "grading" %} {{ entry.record.cumulative_gpa|default_if_none:"-" }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <p class="note">* {% translate "replaced by a retake in the cumulative GPA" %}</p>
+    <p class="note">{% blocktranslate with date=printed_at context "grading" %}Printed {{ date }}{% endblocktranslate %}</p>
+{% endblock %}

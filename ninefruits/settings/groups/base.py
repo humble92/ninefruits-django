@@ -31,6 +31,13 @@ class MissingSettings(LookupError):
     pass
 
 
+def json_payload(value: Any) -> Any:
+    """``None`` is stored as JSON ``null`` (the column is ``NOT NULL``), like the original."""
+    from django.db.models import JSONNull
+
+    return JSONNull() if value is None else value
+
+
 class SettingsGroup(BaseModel):
     model_config = ConfigDict(validate_assignment=True, use_enum_values=False)
 
@@ -64,7 +71,9 @@ class SettingsGroup(BaseModel):
         values = self.model_dump(mode="json")
         with transaction.atomic():
             for name, payload in values.items():
-                SettingValue.objects.update_or_create(group=self.group, name=name, defaults={"payload": payload})
+                SettingValue.objects.update_or_create(
+                    group=self.group, name=name, defaults={"payload": json_payload(payload)}
+                )
         type(self).invalidate()
 
     @classmethod
@@ -77,7 +86,9 @@ def add_settings(apps: Any, group: str, values: dict[str, Any]) -> None:
     kept, so installations keep their changes."""
     SettingValue = apps.get_model("appsettings", "SettingValue")
     for name, payload in values.items():
-        SettingValue.objects.get_or_create(group=group, name=name, defaults={"payload": payload, "locked": False})
+        SettingValue.objects.get_or_create(
+            group=group, name=name, defaults={"payload": json_payload(payload), "locked": False}
+        )
 
 
 def update_setting(apps: Any, group: str, name: str, update: Any) -> None:

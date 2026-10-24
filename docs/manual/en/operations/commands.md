@@ -237,6 +237,31 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ## Grades (Phase 6)
 
+### `term_close`
+
+- Purpose: closes a term. Every grade in the term must be finalized. For each chunk of students (100) it calculates the term record (credits, term and cumulative GPA) and determines the academic standing (good standing, academic warning, dismissal review) and honors eligibility (the `grading.close_term_records` tasks of a Celery chord); the finishing task `grading.finish_term_close` then ranks honors per program, closes the term records as official records and sets the term to **Grades closed**. Progress is kept in `job_batches` and shown above the **Grades > Term records** list. When it finishes, the staff member who started it gets an email. Same as **Grades > Term records > Close term** in the administration panel.
+- Arguments/options: `term` term code, `--dry-run` (only checks whether the term can be closed), `--reason=` (reason kept in the record), `--actor=`.
+- Audit: recorded (number of students, number of sections with unfinalized grades, batch id). When the close finishes, the `term.closed` audit record holds the counts of academic warnings, dismissal reviews and honors.
+- Exit codes: 2 when some sections have unfinalized grades (the unfinalized count per section is printed). 1 when the term is not in published status.
+- When: after grade entry and finalization are complete. Follow the batch in Flower and on the term records screen. Without a Celery worker the term status does not change. A chunk that fails with a database error is retried up to 3 times; if it still fails, the batch stays failed and the term does not change (fix the cause and run it again; running again gives the same result).
+- Examples: `uv run manage.py term_close 2026-FA --dry-run`, `uv run manage.py term_close 2026-FA --reason="Fall 2026 grades closed" --actor=registrar@example.ac.kr`
+
+### `grades_recalculate`
+
+- Purpose: recalculates term records (credits, term and cumulative GPA) from finalized grades. Use it to apply a changed grading policy (GPA decimal places, retake handling) to past terms. Academic standing and honors keep the values decided at term close. An approved grade change recalculates that student automatically, so this command is not needed for it.
+- Options: `--term=` (students with grades in that term, from that term onwards), `--student-number=` (one student), `--reason=` (required), `--actor=`.
+- Audit: recorded (number of students, reason)
+- Exit codes: 1 without a reason, or for an unknown term code or student number.
+- Example: `uv run manage.py grades_recalculate --term=2026-SP --reason="GPA changed to three decimal places"`
+
+### `grades_remind_missing`
+
+- Purpose: emails the instructors of sections whose grades have not been submitted yet (not entered or saved as draft). Sections are grouped per instructor into one message each.
+- Arguments/options: `term` term code, `--dry-run` (prints the targets without sending), `--actor=`.
+- Audit: recorded (sections, instructors, messages sent)
+- When: a few days before the grade entry window closes. Add it to the schedule if needed.
+- Example: `uv run manage.py grades_remind_missing 2026-FA --dry-run`
+
 ## Course evaluation (Phase 7)
 
 ## Certificates (Phase 8)

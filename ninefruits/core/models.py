@@ -49,3 +49,10 @@ class EffectivePeriodMixin(models.Model):
     def is_effective_on(self, on: date | None = None) -> bool:
         on = on or timezone.localdate()
         return self.effective_start_date <= on and (self.effective_end_date is None or self.effective_end_date >= on)
+
+
+# Concrete models of the core app (their migration state is in core/migrations, written by hand
+# because core migrations are not state-only).
+from .batches import JobBatch  # noqa: E402
+
+__all__ = ["EffectivePeriodMixin", "EffectiveQuerySet", "JobBatch", "TimeStampedModel", "VisibleQuerySet"]

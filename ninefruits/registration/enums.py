@@ -1,11 +1,13 @@
-"""Registration enums (original ``App\\Domain\\Registration\\Enums`` and
-``App\\Domain\\Grading\\Enums\\GradeStatus``, whose labels live in the registration group)."""
+"""Registration enums (original ``App\\Domain\\Registration\\Enums``). ``GradeStatus`` is the
+grading enum (``ninefruits.grading.enums``), re-exported for the registration code."""
 
 from __future__ import annotations
 
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
+
+from ninefruits.grading.enums import GradeStatus as _GradeStatus
 
 
 class AttemptAction(models.TextChoices):
@@ -40,14 +42,9 @@ class EnrollmentStatus(models.TextChoices):
     COMPLETED = "completed", _("Completed")
 
 
-class GradeStatus(models.TextChoices):
-    """Grade of an enrollment (original ``App\\Domain\\Grading\\Enums\\GradeStatus``): entered,
-    submitted, finalized (Phase 6)."""
-
-    NONE = "none", _("No grade")
-    DRAFT = "draft", pgettext_lazy("registration", "Draft")
-    SUBMITTED = "submitted", pgettext_lazy("registration.grade_statuses", "Submitted")
-    FINALIZED = "finalized", pgettext_lazy("registration", "Final")
+#: Moved to ``ninefruits.grading.enums`` in Phase 6 (the original Grading enum); kept here as an
+#: alias for the registration code that reads the enrollment's grade column.
+GradeStatus = _GradeStatus
 
 
 class HoldType(models.TextChoices):

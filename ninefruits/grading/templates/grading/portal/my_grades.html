@@ -1,0 +1,81 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}A student's grades (original livewire/portal/my-grades).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <div class="flex flex-wrap items-end justify-between gap-3">
+        <div>
+            <h1 class="text-2xl font-semibold">{% translate "Grades" context "grading" %}</h1>
+            <p class="text-sm text-zinc-600">{{ record.student_number }} · {{ record.program.name }}</p>
+        </div>
+        {% if hold is None %}
+            <div class="flex gap-2 text-sm">
+                <a href="{% url 'portal:grades_transcript' %}" target="_blank" rel="noopener" class="rounded border border-zinc-300 px-3 py-2">{% translate "Print" %}</a>
+                <a href="{% url 'portal:grades_transcript' %}?format=pdf" target="_blank" rel="noopener" class="rounded border border-zinc-300 px-3 py-2">PDF</a>
+            </div>
+        {% endif %}
+    </div>
+
+    {% if hold is not None %}
+        <p role="status" class="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm" data-blocked>
+            {% blocktranslate with type=hold.get_hold_type_display %}Your grades are not available: you have a hold ({{ type }}). Contact the office that placed it.{% endblocktranslate %}
+        </p>
+    {% else %}
+        {% for hidden_term in hidden %}
+            <p role="status" class="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm" data-hidden-term>
+                {{ hidden_term.notice }}
+                {% if hidden_term.link %}<a href="{% url hidden_term.link.0 %}" class="font-medium underline">{{ hidden_term.link.1 }}</a>{% endif %}
+            </p>
+        {% endfor %}
+        {% if latest %}
+            <section class="grid gap-3 rounded-lg border border-zinc-200 bg-white p-4 text-sm sm:grid-cols-4" data-summary>
+                <p><span class="text-zinc-500">{% translate "Cumulative GPA" context "grading" %}</span><br><span class="text-lg font-semibold">{{ latest.cumulative_gpa|default_if_none:"-" }}</span></p>
+                <p><span class="text-zinc-500">{% translate "Earned credits" context "grading" %}</span><br>{{ latest.cumulative_earned_credits|floatformat:"-1" }}</p>
+                <p><span class="text-zinc-500">{% translate "Attempted credits" %}</span><br>{{ latest.cumulative_attempted_credits|floatformat:"-1" }}</p>
+                <p><span class="text-zinc-500">{% translate "Academic standing" %}</span><br>{{ latest.get_academic_standing_display|default:"-" }}</p>
+            </section>
+        {% endif %}
+
+        {% for entry in terms %}
+            <section class="overflow-x-auto rounded-lg border border-zinc-200 bg-white" data-term="{{ entry.term.pk }}">
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 px-4 py-3">
+                    <h2 class="font-medium">{{ entry.term.name }}</h2>
+                    {% if entry.record %}
+                        <p class="text-sm text-zinc-600">
+                            {% blocktranslate with gpa=entry.record.term_gpa|default_if_none:"-" earned=entry.record.earned_credits|floatformat:"-1" attempted=entry.record.attempted_credits|floatformat:"-1" %}GPA {{ gpa }} · {{ earned }} of {{ attempted }} credits earned{% endblocktranslate %}
+                            {% if entry.record.academic_standing and entry.record.academic_standing != "good" %}· <span class="text-red-700">{{ entry.record.get_academic_standing_display }}</span>{% endif %}
+                            {% if entry.record.is_honors %}· <span class="text-emerald-700">{% translate "Honors" context "grading" %}</span>{% endif %}
+                        </p>
+                    {% endif %}
+                </div>
+                <table class="w-full text-sm">
+                    <thead class="text-left text-zinc-500">
+                        <tr>
+                            <th class="px-4 py-2">{% translate "Code" context "curriculum" %}</th>
+                            <th class="px-4 py-2">{% translate "Title" context "curriculum" %}</th>
+                            <th class="px-4 py-2">{% translate "Credits" context "curriculum" %}</th>
+                            <th class="px-4 py-2">{% translate "Grade" context "grading" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for enrollment in entry.enrollments %}
+                            <tr class="border-t border-zinc-100">
+                                <td class="px-4 py-2">{{ enrollment.course.code }}</td>
+                                <td class="px-4 py-2">
+                                    {{ enrollment.version.title }}
+                                    {% if enrollment.is_retake %}<span class="rounded bg-zinc-100 px-1 text-xs">{% translate "Retake" %}</span>{% endif %}
+                                    {% if enrollment.pk in superseded %}<span class="rounded bg-zinc-100 px-1 text-xs">{% translate "replaced by a retake in the cumulative GPA" %}</span>{% endif %}
+                                </td>
+                                <td class="px-4 py-2">{{ enrollment.credits|floatformat:"-1" }}</td>
+                                <td class="px-4 py-2 font-medium">{{ enrollment.display_grade|default:"" }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        {% empty %}
+            <p class="text-sm text-zinc-600">{% translate "No final grades yet." %}</p>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

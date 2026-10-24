@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 18:08+0000\n"
+"POT-Creation-Date: 2026-10-24 20:15+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,8 +31,7 @@ msgstr "이미 이수 중인 프로그램입니다."
 # key: people.errors.additional_program_limit
 #: actions/additional_programs.py
 #, python-format
-msgid ""
-"You can have at most %(count)s at a time (including pending applications)."
+msgid "You can have at most %(count)s at a time (including pending applications)."
 msgstr "동시에 %(count)s개까지 가능합니다(처리 중인 신청 포함)."
 
 # key: people.errors.not_own_record
@@ -87,9 +86,7 @@ msgstr "다른 계정이 사용 중인 이메일입니다."
 
 # key: people.invitations.invalid
 #: actions/invitations.py templates/person/accept_invitation.html
-msgid ""
-"This invitation link is invalid or has expired. Ask the school office for a "
-"new one."
+msgid "This invitation link is invalid or has expired. Ask the school office for a new one."
 msgstr "잘못되었거나 만료된 링크입니다. 학교에 새 안내를 요청하세요."
 
 # key: people.errors.merge_invalid
@@ -99,15 +96,12 @@ msgstr "병합되지 않은 다른 인물을 선택하세요."
 
 # key: people.errors.merge_two_instructors
 #: actions/merge.py
-msgid ""
-"Both people have instructor records. Merge the instructor records first."
+msgid "Both people have instructor records. Merge the instructor records first."
 msgstr "두 인물 모두 교원 정보가 있습니다. 교원 정보를 먼저 정리하세요."
 
 # key: people.errors.merge_two_open_applications
 #: actions/merge.py
-msgid ""
-"Both people have an open application in the same admission cycle. Withdraw "
-"one first."
+msgid "Both people have an open application in the same admission cycle. Withdraw one first."
 msgstr "두 인물 모두 같은 모집 회차에 진행 중인 지원서가 있습니다. 하나를 먼저 포기 처리하세요."
 
 # key: people.errors.type_not_applicable
@@ -128,9 +122,7 @@ msgstr "이 학적에 처리 중인 신청이 이미 있습니다."
 
 # key: people.errors.status_changed_meanwhile
 #: actions/status_changes.py
-msgid ""
-"The student's status changed after the request was made. Reject it and ask "
-"for a new request."
+msgid "The student's status changed after the request was made. Reject it and ask for a new request."
 msgstr "신청 후 학적 상태가 바뀌었습니다. 반려하고 다시 신청하도록 안내하세요."
 
 # key: people.errors.person_merged
@@ -161,7 +153,6 @@ msgstr "사유"
 # key: admissions.fields.decision_note
 # key: people.fields.decision_note
 #: admin/common.py models/additional_program.py models/status_change.py
-#| msgid "Decision note"
 msgctxt "people"
 msgid "Decision note"
 msgstr "처리 의견"
@@ -173,8 +164,7 @@ msgstr "교직원 번호"
 
 # key: reference.fields.org_unit
 # key: security.scope_types.org_unit
-#: admin/instructors.py models/instructor.py models/student_record.py
-#: templates/person/portal/records.html
+#: admin/instructors.py models/instructor.py models/student_record.py templates/person/portal/records.html
 msgid "Org unit"
 msgstr "조직 단위"
 
@@ -195,8 +185,7 @@ msgstr "임용일"
 
 # key: people.fields.end_date
 # key: reference.fields.end_date
-#: admin/instructors.py admin/student_records.py models/advisor.py
-#: models/instructor.py models/student_record.py
+#: admin/instructors.py admin/student_records.py models/advisor.py models/instructor.py models/student_record.py
 msgid "End date"
 msgstr "종료일"
 
@@ -212,8 +201,7 @@ msgstr "이미 사용 중인 교번입니다."
 
 # key: people.sections.person
 # key: people.fields.person
-#: admin/instructors.py admin/student_records.py models/instructor.py
-#: models/student_record.py
+#: admin/instructors.py admin/student_records.py models/instructor.py models/student_record.py
 msgid "Person"
 msgstr "인물"
 
@@ -249,10 +237,7 @@ msgstr "아니요"
 # key: people.sections.name
 # key: people.fields.name
 # key: reference.fields.name
-#: admin/instructors.py admin/people.py admin/requests.py
-#: admin/student_records.py models/person.py models/status_change.py
-#: templates/person/portal/advisees.html templates/person/portal/profile.html
-#| msgid "Name"
+#: admin/instructors.py admin/people.py admin/requests.py admin/student_records.py models/person.py models/status_change.py templates/person/portal/advisees.html templates/person/portal/profile.html
 msgctxt "people"
 msgid "Name"
 msgstr "이름"
@@ -274,7 +259,6 @@ msgstr "변동 가능한 현재 상태"
 # key: validation.regex
 #: admin/instructors.py
 #, python-format
-#| msgid "The %(attribute)s field format is invalid."
 msgctxt "validation.regex"
 msgid "The %(attribute)s field format is invalid."
 msgstr "%(attribute)s 형식이 올바르지 않습니다."
@@ -282,7 +266,6 @@ msgstr "%(attribute)s 형식이 올바르지 않습니다."
 # key: authentication.two_factor.code
 # key: reference.fields.code
 #: admin/instructors.py models/status_change.py
-#| msgid "Code"
 msgctxt "reference"
 msgid "Code"
 msgstr "코드"
@@ -299,9 +282,7 @@ msgstr "성(로마자)"
 
 # key: people.help.romanized
 #: admin/people.py
-msgid ""
-"Legal name in Latin letters, as in the passport. Add the name as written in "
-"other languages below."
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
 msgstr "여권과 같은 로마자 법적 이름. 한글 등 다른 언어 이름은 아래 언어별 이름에 입력한다."
 
 # key: people.fields.given_name
@@ -357,8 +338,7 @@ msgid "Contact email"
 msgstr "연락용 이메일"
 
 # key: people.fields.phone
-#: admin/people.py models/person.py templates/person/portal/profile.html
-#: views/portal.py
+#: admin/people.py models/person.py templates/person/portal/profile.html views/portal.py
 msgid "Phone"
 msgstr "전화번호"
 
@@ -417,10 +397,7 @@ msgstr "학적"
 # key: reference.fields.status
 # key: registration.fields.status
 # key: people.fields.status
-#: admin/people.py admin/student_records.py models/status_change.py
-#: models/student_record.py templates/person/portal/advisees.html
-#: templates/person/portal/records.html
-#| msgid "Status"
+#: admin/people.py admin/student_records.py models/status_change.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
 msgctxt "people"
 msgid "Status"
 msgstr "학적 상태"
@@ -442,7 +419,6 @@ msgstr "남길 인물"
 
 # key: people.filters.merged
 #: admin/people.py
-#| msgid "Merged"
 msgctxt "people"
 msgid "Merged"
 msgstr "병합됨"
@@ -497,8 +473,7 @@ msgstr "주민등록번호 보기"
 
 # key: people.help.reveal
 #: admin/people.py templates/person/admin/revealed.html
-msgid ""
-"The full value is shown once and the reveal is recorded in the security log."
+msgid "The full value is shown once and the reveal is recorded in the security log."
 msgstr "전체 값을 한 번 보여 주며, 보안 로그에 기록된다."
 
 # key: people.actions.reveal_passport_number
@@ -528,19 +503,13 @@ msgstr "인물을 병합했습니다."
 
 # key: people.help.merge
 #: admin/people.py
-msgid ""
-"The other person's student records, instructor record, guardians and account"
-" move to the person you keep. The other person is marked as merged and "
-"cannot be used again. This cannot be undone."
-msgstr ""
-"다른 인물의 학적, 교원 정보, 보호자, 계정을 남길 인물로 옮긴다. 다른 인물은 병합됨으로 표시되어 더 이상 쓸 수 없다. 되돌릴 수 "
-"없다."
+msgid "The other person's student records, instructor record, guardians and account move to the person you keep. The other person is marked as merged and cannot be used again. This cannot be undone."
+msgstr "다른 인물의 학적, 교원 정보, 보호자, 계정을 남길 인물로 옮긴다. 다른 인물은 병합됨으로 표시되어 더 이상 쓸 수 없다. 되돌릴 수 없다."
 
 # key: certificate.facts.student_number
 # key: graduation.report_columns.student_number
 # key: people.fields.student_number
-#: admin/requests.py admin/student_records.py models/student_record.py
-#: templates/person/portal/advisees.html templates/person/portal/records.html
+#: admin/requests.py admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
 msgid "Student number"
 msgstr "학번"
 
@@ -557,7 +526,6 @@ msgstr "사유"
 # key: grading.fields.requested_by
 # key: people.fields.requested_by
 #: admin/requests.py models/additional_program.py models/status_change.py
-#| msgid "Requested by"
 msgctxt "people"
 msgid "Requested by"
 msgstr "신청자"
@@ -565,7 +533,6 @@ msgstr "신청자"
 # key: grading.fields.decided_by
 # key: people.fields.decided_by
 #: admin/requests.py models/additional_program.py models/status_change.py
-#| msgid "Decided by"
 msgctxt "people"
 msgid "Decided by"
 msgstr "처리자"
@@ -584,7 +551,6 @@ msgstr "신청을 승인했습니다."
 # key: grading.actions.reject
 # key: people.actions.reject
 #: admin/requests.py
-#| msgid "Reject"
 msgctxt "people"
 msgid "Reject"
 msgstr "반려"
@@ -597,7 +563,6 @@ msgstr "신청을 반려했습니다."
 # key: curriculum.program_roles.primary
 # key: people.fields.primary_program
 #: admin/requests.py
-#| msgid "Primary program"
 msgctxt "people"
 msgid "Primary program"
 msgstr "주전공"
@@ -605,16 +570,13 @@ msgstr "주전공"
 # key: assessment.fields.type
 # key: certificate.fields.type
 # key: people.fields.program_role
-#: admin/requests.py models/additional_program.py models/student_record.py
-#: templates/person/portal/records.html
-#| msgid "Kind"
+#: admin/requests.py models/additional_program.py models/student_record.py templates/person/portal/records.html
 msgctxt "people"
 msgid "Kind"
 msgstr "구분"
 
 # key: people.fields.statement
-#: admin/requests.py models/additional_program.py
-#: templates/person/portal/records.html
+#: admin/requests.py models/additional_program.py templates/person/portal/records.html
 msgid "Statement"
 msgstr "신청 사유"
 
@@ -625,17 +587,13 @@ msgstr "교육과정 적용 연도"
 
 # key: people.help.catalog_year
 #: admin/student_records.py
-msgid ""
-"Year of the curriculum that applies to this student, usually the admission "
-"year."
+msgid "Year of the curriculum that applies to this student, usually the admission year."
 msgstr "이 학생에게 적용할 교육과정 연도. 보통 입학 연도."
 
 # key: certificate.facts.year_level
 # key: graduation.report_columns.year_level
 # key: people.fields.year_level
-#: admin/student_records.py models/student_record.py
-#: templates/person/portal/advisees.html templates/person/portal/records.html
-#| msgid "Year"
+#: admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
 msgctxt "people"
 msgid "Year"
 msgstr "학년"
@@ -658,9 +616,7 @@ msgstr "학교 이메일"
 
 # key: people.help.institutional_email
 #: admin/student_records.py
-msgid ""
-"School email address. Used to link school sign-in (SSO) accounts "
-"automatically when enabled."
+msgid "School email address. Used to link school sign-in (SSO) accounts automatically when enabled."
 msgstr "학교 이메일 주소. 설정에 따라 학교 통합 로그인(SSO) 계정 자동 연결에 쓰인다."
 
 # key: people.fields.tags
@@ -676,16 +632,13 @@ msgstr "장학 프로그램 등 묶음을 위한 자유 라벨."
 # key: certificate.facts.program
 # key: graduation.report_columns.program_name
 # key: security.scope_types.program
-#: admin/student_records.py models/student_record.py
-#: templates/person/portal/advisees.html templates/person/portal/records.html
-#| msgid "Program"
+#: admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
 msgctxt "security"
 msgid "Program"
 msgstr "프로그램"
 
 # key: people.fields.admission_date
-#: admin/student_records.py models/student_record.py
-#: templates/person/portal/records.html
+#: admin/student_records.py models/student_record.py templates/person/portal/records.html
 msgid "Admission date"
 msgstr "입학일"
 
@@ -700,8 +653,7 @@ msgid "status change"
 msgstr "학적 변동"
 
 # key: people.resources.status_changes.plural_label
-#: admin/student_records.py models/status_change.py
-#: templates/person/portal/records.html
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
 msgid "status changes"
 msgstr "학적 변동"
 
@@ -721,8 +673,7 @@ msgid "second major or minor"
 msgstr "복수전공·부전공"
 
 # key: people.resources.additional_programs.plural_label
-#: admin/student_records.py models/student_record.py
-#: templates/person/portal/records.html
+#: admin/student_records.py models/student_record.py templates/person/portal/records.html
 msgid "second majors and minors"
 msgstr "복수전공·부전공"
 
@@ -735,24 +686,19 @@ msgid "End"
 msgstr "종료"
 
 # key: people.fields.status_change_type
-#: admin/student_records.py models/status_change.py
-#: templates/person/portal/records.html
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
 msgid "Change type"
 msgstr "변동 유형"
 
 # key: people.fields.effective_date
-#: admin/student_records.py models/status_change.py
-#: templates/person/portal/records.html
-#| msgid "Effective date"
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
 msgctxt "people"
 msgid "Effective date"
 msgstr "변동일"
 
 # key: people.fields.advisor
 # key: security.personas.advisor
-#: admin/student_records.py models/advisor.py
-#: templates/person/portal/records.html
-#| msgid "Advisor"
+#: admin/student_records.py models/advisor.py templates/person/portal/records.html
 msgctxt "people"
 msgid "Advisor"
 msgstr "지도교수"
@@ -768,8 +714,7 @@ msgid "Start date"
 msgstr "시작일"
 
 # key: people.sections.record
-#: admin/student_records.py models/additional_program.py
-#: models/status_change.py
+#: admin/student_records.py models/additional_program.py models/status_change.py
 msgid "Student record"
 msgstr "학적"
 
@@ -797,6 +742,11 @@ msgstr "학적 변동 처리"
 msgid "Status change recorded."
 msgstr "학적 변동을 처리했습니다."
 
+# key: grading.transcript.title
+#: admin/student_records.py
+msgid "Grade report"
+msgstr "성적표"
+
 # key: people.actions.assign_advisor
 #: admin/student_records.py
 msgid "Assign advisor"
@@ -815,7 +765,6 @@ msgstr "종료했습니다."
 # key: graduation.report_columns.enrolled
 # key: people.student_statuses.enrolled
 #: enums.py
-#| msgid "Enrolled"
 msgctxt "people"
 msgid "Enrolled"
 msgstr "재학"
@@ -828,7 +777,6 @@ msgstr "휴학"
 # key: admissions.application_statuses.withdrawn
 # key: people.student_statuses.withdrawn
 #: enums.py
-#| msgid "Withdrawn"
 msgctxt "people"
 msgid "Withdrawn"
 msgstr "자퇴"
@@ -842,7 +790,6 @@ msgstr "제적"
 # key: graduation.report_columns.graduation_date
 # key: people.student_statuses.graduated
 #: enums.py
-#| msgid "Graduated"
 msgctxt "people"
 msgid "Graduated"
 msgstr "졸업"
@@ -850,7 +797,6 @@ msgstr "졸업"
 # key: grading.fields.requested_at
 # key: people.status_change_statuses.requested
 #: enums.py
-#| msgid "Requested"
 msgctxt "people"
 msgid "Requested"
 msgstr "신청"
@@ -879,7 +825,6 @@ msgstr "반려"
 # key: people.status_change_statuses.cancelled
 # key: people.additional_program_request_statuses.cancelled
 #: enums.py
-#| msgid "Cancelled"
 msgctxt "people"
 msgid "Cancelled"
 msgstr "취소"
@@ -890,7 +835,6 @@ msgstr "취소"
 # key: lms.link_statuses.pending
 # key: people.additional_program_request_statuses.requested
 #: enums.py
-#| msgid "Pending"
 msgctxt "people"
 msgid "Pending"
 msgstr "처리 중"
@@ -1074,7 +1018,6 @@ msgstr "학생 신청 가능"
 # key: reference.fields.is_active
 # key: registration.fields.is_active
 #: models/status_change.py
-#| msgid "Active"
 msgctxt "reference.fields"
 msgid "Active"
 msgstr "사용"
@@ -1144,11 +1087,8 @@ msgstr "학번 형식"
 # key: admin.settings.student_records.student_number_pattern_help
 #: settings_pages.py
 #, python-brace-format
-msgid ""
-"{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n "
-"digits. Example: {YYYY}{SEQ:5} gives 202600001."
-msgstr ""
-"{YYYY} 입학 연도, {YY} 연도 끝 두 자리, {SEQ:n} n자리 일련번호. 예: {YYYY}{SEQ:5} → 202600001"
+msgid "{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n digits. Example: {YYYY}{SEQ:5} gives 202600001."
+msgstr "{YYYY} 입학 연도, {YY} 연도 끝 두 자리, {SEQ:n} n자리 일련번호. 예: {YYYY}{SEQ:5} → 202600001"
 
 # key: admin.settings.student_records.invitation_valid_days
 #: settings_pages.py
@@ -1243,9 +1183,7 @@ msgstr "내 정보"
 
 # key: portal.profile.registrar_fields
 #: templates/person/portal/profile.html
-msgid ""
-"Contact the registrar's office to change your name, birth date or identity "
-"numbers."
+msgid "Contact the registrar's office to change your name, birth date or identity numbers."
 msgstr "이름, 생년월일, 신분 번호 변경은 학적 담당 부서에 요청하세요."
 
 # key: common.save
@@ -1300,7 +1238,6 @@ msgstr "이 신청을 취소할까요?"
 # key: grading.actions.cancel_request
 # key: portal.records.cancel
 #: templates/person/portal/records.html
-#| msgid "Cancel request"
 msgctxt "portal"
 msgid "Cancel request"
 msgstr "신청 취소"
