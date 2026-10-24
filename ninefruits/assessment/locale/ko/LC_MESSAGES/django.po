@@ -1,0 +1,785 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: actions/_support.py:25
+msgid "Enter a reason."
+msgstr "사유를 입력하세요."
+
+# key: assessment.errors.pass_score_published
+#: actions/change_session_pass_score.py:39
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "결과가 공개된 회차라 합격 점수를 바꿀 수 없습니다. 정정 요청으로 처리하세요."
+
+# key: assessment.errors.not_locked
+#: actions/correct_assessment_result.py:44 actions/correct_assessment_result.py:77
+msgid "This result is not published; enter it directly."
+msgstr "공개되지 않은 결과입니다. 직접 입력하세요."
+
+# key: assessment.errors.correction_pending
+#: actions/correct_assessment_result.py:47
+msgid "A correction request is already pending for this result."
+msgstr "이 결과에 대기 중인 정정 요청이 이미 있습니다."
+
+# key: grading.errors.request_decided
+#: actions/correct_assessment_result.py:140
+msgid "The request is already decided."
+msgstr "이미 처리된 요청입니다."
+
+# key: assessment.errors.own_correction
+#: actions/correct_assessment_result.py:142
+msgid "You cannot decide your own correction request."
+msgstr "자신이 요청한 정정은 결정할 수 없습니다."
+
+# key: assessment.errors.not_registered
+#: actions/record_assessment_result.py:55 actions/register_for_assessment.py:138
+msgid "The student is not registered for this session."
+msgstr "이 회차에 접수하지 않은 학생입니다."
+
+# key: assessment.errors.published_locked
+#: actions/record_assessment_result.py:60 actions/record_assessment_result.py:174
+msgid "The results of this session are published: request a correction instead."
+msgstr "결과가 공개된 회차입니다. 정정 요청으로 처리하세요."
+
+# key: assessment.errors.no_external
+#: actions/record_assessment_result.py:127
+msgid "This kind does not take external results."
+msgstr "이 종류는 외부 성적을 받지 않습니다."
+
+# key: assessment.errors.future_date
+#: actions/record_assessment_result.py:129 admin/forms.py:296
+msgid "The date cannot be in the future."
+msgstr "응시일은 미래일 수 없습니다."
+
+# key: assessment.errors.already_published
+#: actions/record_assessment_result.py:201
+msgid "The results of this session are already published."
+msgstr "이미 결과를 공개한 회차입니다."
+
+# key: assessment.errors.score_missing
+#: actions/record_assessment_result.py:221
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "%(component)s 점수가 없습니다."
+
+# key: assessment.errors.score_range
+#: actions/record_assessment_result.py:226
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "%(component)s 점수는 0에서 %(max)s 사이여야 합니다."
+
+# key: assessment.errors.total_range
+#: actions/record_assessment_result.py:236
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "총점은 0에서 %(max)s 사이여야 합니다."
+
+# key: assessment.errors.decision_required
+#: actions/record_assessment_result.py:251
+msgid "Choose passed or not passed."
+msgstr "합격 여부를 선택하세요."
+
+# key: assessment.errors.no_pass_score
+#: actions/record_assessment_result.py:255
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "합격 점수가 없는 종류입니다. 합격 여부를 선택하세요."
+
+# key: assessment.errors.type_inactive
+#: actions/register_for_assessment.py:46
+msgid "This kind of examination is no longer held."
+msgstr "더 이상 시행하지 않는 시험입니다."
+
+# key: assessment.errors.record_inactive
+#: actions/register_for_assessment.py:48
+msgid "Only current students can register."
+msgstr "재학 중인 학생만 접수할 수 있습니다."
+
+# key: assessment.errors.registration_closed
+#: actions/register_for_assessment.py:50 actions/register_for_assessment.py:113
+msgid "Registration for this session is closed."
+msgstr "이 회차는 접수 기간이 아닙니다."
+
+# key: assessment.errors.session_past
+#: actions/register_for_assessment.py:53
+msgid "This session has already been held."
+msgstr "이미 시행한 회차입니다."
+
+# key: assessment.errors.already_registered
+#: actions/register_for_assessment.py:55
+msgid "Already registered for this session."
+msgstr "이미 접수한 회차입니다."
+
+# key: assessment.errors.full
+#: actions/register_for_assessment.py:66
+msgid "This session is full."
+msgstr "정원이 찼습니다."
+
+# key: assessment.errors.already_cancelled
+#: actions/register_for_assessment.py:111
+msgid "This registration is already cancelled."
+msgstr "이미 취소된 접수입니다."
+
+# key: assessment.errors.has_result
+#: actions/register_for_assessment.py:119
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "결과가 입력되어 접수를 취소할 수 없습니다."
+
+# key: assessment.fields.type
+#: admin/common.py:17 admin/corrections.py:118 admin/forms.py:274 admin/results.py:136 admin/sessions.py:191 models/results.py:79 models/sessions.py:43 models/types.py:92 templates/assessment/portal/my_assessments.html:79
+msgctxt "assessment"
+msgid "Kind"
+msgstr "종류"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: admin/corrections.py:44 admin/forms.py:48 admin/forms.py:228 admin/forms.py:279 admin/results.py:50 admin/results.py:158 models/results.py:103 templates/assessment/admin/registrants.html:17 templates/assessment/admin/registrants.html:29 templates/assessment/portal/my_assessments.html:25 templates/assessment/portal/my_assessments.html:82 templates/assessment/portal/my_assessments.html:95
+msgid "Passed"
+msgstr "합격"
+
+# key: assessment.passed.no
+#: admin/corrections.py:44 admin/forms.py:48 templates/assessment/admin/registrants.html:29 templates/assessment/portal/my_assessments.html:95
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "불합격"
+
+# key: registration.fields.status
+#: admin/corrections.py:49 admin/corrections.py:145 models/results.py:226 models/sessions.py:141 templates/assessment/admin/registrants.html:15
+msgctxt "registration"
+msgid "Status"
+msgstr "상태"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/corrections.py:124 admin/forms.py:185 admin/forms.py:272 admin/results.py:140 templates/assessment/admin/registrants.html:13
+msgid "Student number"
+msgstr "학번"
+
+# key: assessment.fields.previous
+#: admin/corrections.py:129 models/results.py:223
+msgid "Current values"
+msgstr "현재 값"
+
+# key: assessment.fields.proposed
+#: admin/corrections.py:133 models/results.py:222
+msgid "Proposed values"
+msgstr "정정 값"
+
+# key: common.reason
+#: admin/corrections.py:137 admin/forms.py:190 models/results.py:224 models/sessions.py:152
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: grading.fields.requested_by
+#: admin/corrections.py:141
+msgctxt "grading"
+msgid "Requested by"
+msgstr "요청자"
+
+# key: grading.fields.decision_note
+#: admin/corrections.py:149 models/results.py:237
+msgctxt "grading"
+msgid "Note"
+msgstr "처리 의견"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/corrections.py:178 admin/corrections.py:191
+msgid "Approve"
+msgstr "승인"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: admin/corrections.py:188 enums.py:40
+msgid "Approved"
+msgstr "승인"
+
+# key: grading.actions.reject
+#: admin/corrections.py:194 admin/corrections.py:210
+msgctxt "grading"
+msgid "Reject"
+msgstr "반려"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: admin/corrections.py:204 enums.py:41
+msgid "Rejected"
+msgstr "반려"
+
+# key: grading.actions.cancel_request
+#: admin/corrections.py:217 admin/corrections.py:232
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "요청 취소"
+
+# key: validation.alpha_dash
+#: admin/forms.py:42
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s은(는) 문자, 숫자, 대쉬(-), 밑줄(_)만 포함할 수 있습니다."
+
+# key: assessment.fields.note
+#: admin/forms.py:59 models/results.py:105
+msgctxt "assessment"
+msgid "Note"
+msgstr "비고"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: admin/forms.py:101 admin/forms.py:117 admin/forms.py:132
+msgid "Code"
+msgstr "코드"
+
+# key: validation.unique
+#: admin/forms.py:132
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s은(는) 이미 사용 중입니다."
+
+# key: assessment.fields.pass_score_reason
+#: admin/forms.py:139
+msgid "Reason for changing the pass score"
+msgstr "합격 점수 변경 사유"
+
+# key: assessment.help.pass_score_reason
+#: admin/forms.py:142
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "감사 기록에 판정이 바뀐 학생과 함께 남는다."
+
+# key: validation.after
+#: admin/forms.py:176
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s은(는) %(date)s 이후 날짜여야 합니다."
+
+# key: assessment.fields.registration_closes_at
+#: admin/forms.py:177 admin/sessions.py:199 models/sessions.py:48
+msgid "Registration closes"
+msgstr "접수 마감"
+
+# key: assessment.fields.registration_opens_at
+#: admin/forms.py:177 models/sessions.py:47
+msgid "Registration opens"
+msgstr "접수 시작"
+
+# key: assessment.fields.file
+#: admin/forms.py:198
+msgid "CSV file"
+msgstr "CSV 파일"
+
+#: admin/forms.py:203 admin/forms.py:302
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "파일이 너무 큽니다(%(size)s바이트, 최대 %(limit)s)."
+
+# key: assessment.fields.total_score
+#: admin/forms.py:224 admin/forms.py:277 admin/results.py:148 models/results.py:100 templates/assessment/admin/registrants.html:16 templates/assessment/portal/my_assessments.html:80
+msgid "Total"
+msgstr "총점"
+
+# key: assessment.help.decision_automatic
+#: admin/forms.py:233
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "점수로 판정한다: 총점 %(score)s 이상이고 모든 영역이 최저점 이상."
+
+# key: assessment.fields.taken_date
+#: admin/forms.py:276 models/results.py:99 templates/assessment/portal/my_assessments.html:78
+msgid "Taken on"
+msgstr "응시일"
+
+# key: assessment.fields.level
+#: admin/forms.py:278 admin/results.py:154 models/results.py:102 templates/assessment/portal/my_assessments.html:81
+msgid "Level"
+msgstr "등급"
+
+# key: assessment.fields.certificate_number
+#: admin/forms.py:281 admin/results.py:162 models/results.py:104
+msgid "Certificate number"
+msgstr "증서 번호"
+
+# key: assessment.fields.evidence
+#: admin/forms.py:283 admin/results.py:166 admin/results.py:173 templates/assessment/portal/my_assessments.html:96
+msgid "Evidence"
+msgstr "증빙"
+
+# key: assessment.fields.source
+#: admin/results.py:39 models/results.py:98
+msgctxt "assessment"
+msgid "Source"
+msgstr "출처"
+
+# key: common.yes
+#: admin/results.py:54 admin/sessions.py:141
+msgid "Yes"
+msgstr "예"
+
+#: admin/results.py:54 admin/sessions.py:141
+msgid "No"
+msgstr "아니요"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/results.py:144 templates/assessment/admin/registrants.html:14
+msgctxt "people"
+msgid "Name"
+msgstr "이름"
+
+# key: assessment.actions.record_external
+#: admin/results.py:184 admin/results.py:203 admin/results.py:205
+msgid "Record an external result"
+msgstr "외부 성적 등록"
+
+# key: assessment.actions.remove
+#: admin/results.py:207 admin/results.py:218 admin/results.py:224
+msgctxt "assessment"
+msgid "Remove"
+msgstr "삭제"
+
+# key: assessment.fields.published_at
+#: admin/sessions.py:137 admin/sessions.py:214 models/sessions.py:63
+msgctxt "assessment"
+msgid "Results published"
+msgstr "결과 공개"
+
+# key: assessment.fields.venue
+#: admin/sessions.py:195 models/sessions.py:46
+msgid "Venue"
+msgstr "장소"
+
+# key: assessment.fields.registrants
+#: admin/sessions.py:205 admin/sessions.py:233 models/sessions.py:159 models/sessions.py:160
+msgid "Registrants"
+msgstr "응시자"
+
+# key: assessment.fields.results
+#: admin/sessions.py:210
+msgctxt "assessment"
+msgid "Results"
+msgstr "결과"
+
+# key: assessment.notifications.rejudged
+#: admin/sessions.py:263
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "결과 %(count)s건 재판정: 합격으로 %(passed)s건, 불합격으로 %(failed)s건 바뀜."
+
+# key: security.scope_types.global
+#: admin/sessions.py:279
+msgid "All"
+msgstr "전체"
+
+# key: assessment.actions.publish
+#: admin/sessions.py:323 admin/sessions.py:329 admin/sessions.py:379 admin/sessions.py:394
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "결과 공개"
+
+# key: assessment.help.publish
+#: admin/sessions.py:333
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "지금부터 학생이 결과를 본다. 나중에 입력한 결과는 바로 보인다."
+
+#: admin/sessions.py:347
+msgid "The file is not UTF-8 text."
+msgstr "UTF-8 텍스트 파일이 아닙니다."
+
+# key: assessment.notifications.imported
+#: admin/sessions.py:348
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "입력 %(recorded)s건, 결시 %(absent)s건, 오류 %(errors)s건."
+
+# key: assessment.actions.import
+#: admin/sessions.py:364 admin/sessions.py:388 admin/sessions.py:402
+msgid "Import results (CSV)"
+msgstr "결과 가져오기(CSV)"
+
+# key: assessment.help.import
+#: admin/sessions.py:369
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "머리글 행이 있는 CSV: student_number, 영역 코드별 열(또는 total), 선택으로 passed(Y/N), absent(Y), note. 접수하지 않은 학생 행은 건너뛴다."
+
+# key: assessment.actions.register_student
+#: admin/sessions.py:407 admin/sessions.py:426
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "학생 접수"
+
+# key: assessment.registration_statuses.registered
+#: admin/sessions.py:420 enums.py:28
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "접수"
+
+# key: assessment.actions.enter_result
+#: admin/sessions.py:475 admin/sessions.py:481 templates/assessment/admin/registrants.html:32
+msgid "Enter result"
+msgstr "결과 입력"
+
+# key: assessment.actions.request_correction
+#: admin/sessions.py:496 admin/sessions.py:502 templates/assessment/admin/registrants.html:33
+msgid "Request a correction"
+msgstr "정정 요청"
+
+# key: assessment.help.correction
+#: admin/sessions.py:507
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "이 회차는 결과가 공개되어 잠겨 있습니다. 새 값과 사유를 적어 요청하면 관리 권한이 있는 다른 담당자가 승인하고, 승인과 함께 반영됩니다."
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: admin/sessions.py:517 admin/sessions.py:523 enums.py:30 templates/assessment/admin/registrants.html:34
+msgctxt "assessment"
+msgid "Absent"
+msgstr "결시"
+
+# key: assessment.actions.cancel
+#: admin/sessions.py:534 admin/sessions.py:540 templates/assessment/admin/registrants.html:35
+msgid "Cancel registration"
+msgstr "접수 취소"
+
+# key: assessment.fields.components
+#: admin/types.py:44 admin/types.py:45 admin/types.py:110 models/types.py:116 models/types.py:117
+msgid "Areas"
+msgstr "영역"
+
+# key: reference.fields.name
+#: admin/types.py:91 models/types.py:23 models/types.py:99
+msgctxt "reference"
+msgid "Name"
+msgstr "이름"
+
+# key: assessment.fields.category
+#: admin/types.py:95 models/types.py:25
+msgid "Category"
+msgstr "구분"
+
+# key: assessment.fields.scoring
+#: admin/types.py:99 models/types.py:28
+msgid "Scoring"
+msgstr "판정 방식"
+
+# key: assessment.fields.pass_score
+#: admin/types.py:103 models/sessions.py:52 models/types.py:46
+msgid "Pass score"
+msgstr "합격 점수"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: apps.py:20
+msgctxt "portal"
+msgid "Examinations"
+msgstr "어학/종합시험"
+
+# key: assessment.categories.language
+#: enums.py:13
+msgctxt "assessment"
+msgid "Language"
+msgstr "어학"
+
+# key: assessment.categories.comprehensive
+#: enums.py:14
+msgid "Comprehensive"
+msgstr "종합시험"
+
+# key: assessment.categories.thesis
+#: enums.py:15
+msgid "Thesis"
+msgstr "졸업논문"
+
+# key: assessment.categories.external
+#: enums.py:16
+msgid "External test"
+msgstr "외부 공인시험"
+
+# key: assessment.scoring_methods.score
+#: enums.py:23 models/results.py:181 models/results.py:188 models/results.py:189
+msgid "Score"
+msgstr "점수"
+
+# key: assessment.scoring_methods.pass_fail
+#: enums.py:24
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "합격/불합격"
+
+# key: assessment.registration_statuses.cancelled
+# key: assessment.correction_statuses.cancelled
+#: enums.py:29 enums.py:42
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "취소"
+
+# key: assessment.correction_statuses.pending
+#: enums.py:39
+msgctxt "assessment"
+msgid "Pending"
+msgstr "대기"
+
+# key: assessment.sources.session
+#: enums.py:48
+msgctxt "assessment"
+msgid "Session"
+msgstr "교내 회차"
+
+# key: assessment.sources.external
+#: enums.py:49
+msgid "External"
+msgstr "외부"
+
+# key: people.resources.student_records.label
+#: models/results.py:73 models/sessions.py:138
+msgid "student record"
+msgstr "학적"
+
+# key: assessment.resources.sessions.label
+#: models/results.py:88 models/sessions.py:71 models/sessions.py:132
+msgid "Examination session"
+msgstr "시험 회차"
+
+# key: assessment.resources.results.label
+#: models/results.py:116
+msgid "Examination result"
+msgstr "시험 결과"
+
+# key: assessment.resources.results.plural_label
+#: models/results.py:117
+msgid "Examination results"
+msgstr "시험 결과"
+
+# key: grading.fields.requested_at
+#: models/results.py:232
+msgctxt "grading"
+msgid "Requested"
+msgstr "요청 시각"
+
+# key: assessment.resources.corrections.label
+#: models/results.py:244
+msgid "Result correction"
+msgstr "결과 정정 요청"
+
+# key: assessment.resources.corrections.plural_label
+#: models/results.py:245
+msgid "Result corrections"
+msgstr "결과 정정 요청"
+
+# key: assessment.fields.held_date
+#: models/sessions.py:45
+msgctxt "assessment"
+msgid "Date"
+msgstr "시험일"
+
+# key: assessment.fields.capacity
+#: models/sessions.py:49
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "정원"
+
+# key: assessment.help.session_pass_score
+#: models/sessions.py:58
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "비우면 종류의 합격 점수를 쓴다. 공개 전에 바꾸면 입력된 결과를 모두 다시 판정한다. 공개 뒤에는 바꿀 수 없다."
+
+# key: assessment.resources.sessions.plural_label
+#: models/sessions.py:72
+msgid "Examination sessions"
+msgstr "시험 회차"
+
+# key: assessment.fields.registered_at
+#: models/sessions.py:146 templates/assessment/admin/registrants.html:18
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "접수일시"
+
+# key: reference.fields.code
+#: models/types.py:22 models/types.py:95
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: assessment.help.scoring
+#: models/types.py:33
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "점수: 영역 점수(또는 총점)를 합격 점수와 비교하고, 영역마다 최저점 이상이어야 한다. 합격/불합격: 담당자가 학생마다 판정한다."
+
+# key: assessment.fields.max_score
+#: models/types.py:38 models/types.py:100
+msgid "Maximum score"
+msgstr "만점"
+
+# key: assessment.help.max_score
+#: models/types.py:43
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "영역이 없는 종류에 쓴다. 영역이 있으면 영역 만점의 합이 만점이다."
+
+# key: assessment.help.pass_score
+#: models/types.py:51
+msgid "Total needed to pass. A session can override it."
+msgstr "합격에 필요한 총점. 회차에서 바꿀 수 있다."
+
+# key: assessment.fields.allows_external
+#: models/types.py:54
+msgid "External results"
+msgstr "외부 성적"
+
+# key: assessment.help.allows_external
+#: models/types.py:56
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "외부 기관 시험(TOPIK, HSK 등) 결과를 증빙 파일과 함께 등록할 수 있다."
+
+# key: reference.fields.is_active
+#: models/types.py:58
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: reference.fields.sort_order
+#: models/types.py:59 models/types.py:109
+msgid "Order"
+msgstr "순서"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: models/types.py:66
+msgid "Examination kind"
+msgstr "시험 종류"
+
+# key: assessment.resources.types.plural_label
+#: models/types.py:67
+msgid "Examination kinds"
+msgstr "시험 종류"
+
+# key: assessment.help.component_code
+#: models/types.py:97
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "결과 CSV의 열 이름. 예: LISTENING"
+
+# key: assessment.fields.min_score
+#: models/types.py:102
+msgid "Minimum to pass"
+msgstr "영역 최저점"
+
+# key: assessment.help.min_score
+#: models/types.py:107
+msgid "Below this the student fails whatever the total."
+msgstr "이 점수 미만이면 총점과 관계없이 불합격."
+
+# key: common.none
+#: templates/assessment/admin/registrants.html:39
+msgctxt "common"
+msgid "None"
+msgstr "없음"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: templates/assessment/portal/my_assessments.html:9 views/portal.py:93
+msgid "Examinations"
+msgstr "어학/종합시험"
+
+# key: assessment.portal.intro
+#: templates/assessment/portal/my_assessments.html:10
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "시험 회차에 접수하고, 공개된 결과를 확인합니다."
+
+# key: assessment.portal.required
+#: templates/assessment/portal/my_assessments.html:21
+msgid "Required by your curriculum"
+msgstr "교육과정 졸업 요건"
+
+# key: assessment.portal.not_yet
+#: templates/assessment/portal/my_assessments.html:25
+msgid "Not yet"
+msgstr "미합격"
+
+# key: assessment.portal.open_sessions
+#: templates/assessment/portal/my_assessments.html:34
+msgid "Open for registration"
+msgstr "접수 중인 회차"
+
+# key: assessment.portal.closes
+#: templates/assessment/portal/my_assessments.html:40
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "접수 마감 %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: templates/assessment/portal/my_assessments.html:43
+msgid "Cancel this registration?"
+msgstr "접수를 취소할까요?"
+
+# key: assessment.portal.cancel
+#: templates/assessment/portal/my_assessments.html:48
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "취소"
+
+# key: assessment.portal.register
+#: templates/assessment/portal/my_assessments.html:52
+msgctxt "assessment"
+msgid "Register"
+msgstr "접수"
+
+# key: assessment.portal.no_open_sessions
+#: templates/assessment/portal/my_assessments.html:57
+msgid "No session is open for registration."
+msgstr "접수 중인 회차가 없습니다."
+
+# key: assessment.portal.my_registrations
+#: templates/assessment/portal/my_assessments.html:62
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "내 접수"
+
+# key: assessment.portal.no_registrations
+#: templates/assessment/portal/my_assessments.html:69
+msgid "No registrations."
+msgstr "접수한 회차가 없습니다."
+
+# key: assessment.portal.my_results
+#: templates/assessment/portal/my_assessments.html:74
+msgid "My results"
+msgstr "내 결과"
+
+# key: assessment.portal.no_results
+#: templates/assessment/portal/my_assessments.html:99
+msgid "No results yet."
+msgstr "아직 결과가 없습니다."
+
+# key: assessment.portal.registered
+#: views/portal.py:122
+msgid "You are registered."
+msgstr "접수했습니다."
+
+# key: assessment.portal.cancelled
+#: views/portal.py:130
+msgid "Your registration is cancelled."
+msgstr "접수를 취소했습니다."

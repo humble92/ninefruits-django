@@ -1,0 +1,61 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}A section's course evaluation results (original livewire/portal/section-evaluation).
+Comments are escaped (the legacy printed them as HTML).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <div>
+        <a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>
+        <h1 class="text-2xl font-semibold">{% translate "Course evaluation results" %}: {{ section.label }} {{ section.version.title }}</h1>
+        <p class="text-sm text-zinc-600" data-counts>
+            {{ section.term.name }} ·
+            {% blocktranslate with responses=result.responses expected=result.expected rate=result.rate_percent %}{{ responses }} of {{ expected }} responded ({{ rate }}%){% endblocktranslate %}
+            {% if result.overall_mean is not None %}
+                · {% blocktranslate with mean=result.overall_mean|floatformat:2 %}overall {{ mean }}{% endblocktranslate %}
+            {% endif %}
+        </p>
+    </div>
+
+    {% if not result.shown %}
+        <p role="status" class="rounded-lg border border-zinc-200 bg-white p-3 text-sm" data-not-shown>
+            {% if not published %}
+                {% translate "The results are not published yet." %}
+            {% else %}
+                {% blocktranslate with minimum=result.term_evaluation.minimum_responses percent=result.term_evaluation.minimum_response_percent %}Too few responses to show results (at least {{ minimum }} and {{ percent }}% are needed).{% endblocktranslate %}
+            {% endif %}
+        </p>
+    {% else %}
+        <section class="overflow-x-auto rounded-lg border border-zinc-200 bg-white" data-results>
+            <table class="w-full text-sm">
+                <thead class="bg-zinc-50 text-left">
+                    <tr>
+                        <th class="px-3 py-2">{% translate "Question" %}</th>
+                        <th class="px-3 py-2">{% translate "Mean" %}</th>
+                        {% for point in points %}<th class="px-3 py-2 text-center">{{ point }}</th>{% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                        <tr class="border-t border-zinc-100" data-question="{{ row.question.pk }}">
+                            <td class="px-3 py-2">{{ row.number }}. {{ row.question.text }}{% if row.question.is_reversed %} <span class="text-xs text-zinc-500">({% translate "reversed" %})</span>{% endif %}</td>
+                            <td class="px-3 py-2 font-medium">{% if row.result.mean is None %}-{% else %}{{ row.result.mean|floatformat:2 }}{% endif %}</td>
+                            {% for point, count in row.result.distribution.items %}<td class="px-3 py-2 text-center text-zinc-600">{{ count }}</td>{% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        {% for block in comment_sections %}
+            <section class="rounded-lg border border-zinc-200 bg-white" data-comments="{{ block.question.pk }}">
+                <h2 class="border-b border-zinc-100 px-4 py-3 font-medium">{{ block.question.text }}</h2>
+                {% for comment in block.comments %}
+                    <p class="whitespace-pre-line border-b border-zinc-100 px-4 py-2 text-sm last:border-0">{{ comment }}</p>
+                {% empty %}
+                    <p class="px-4 py-3 text-sm text-zinc-500">{% translate "None" context "common" %}</p>
+                {% endfor %}
+            </section>
+        {% endfor %}
+    {% endif %}
+</div>
+{% endblock %}

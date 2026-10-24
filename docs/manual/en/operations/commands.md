@@ -264,11 +264,72 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ## Course evaluation (Phase 7)
 
+### `evaluation_remind`
+
+- Purpose: emails students who still have unevaluated courses while the course evaluation window is open. The remaining courses are grouped per student into one message (in the recipient's language).
+- Arguments/options: `term` term code, `--dry-run` (number of target students only, nothing sent), `--actor=`.
+- Audit: recorded (target students, messages sent)
+- Exit codes: 1 for an unknown term code.
+- When: once or twice during the evaluation window. Add it to the schedule if needed.
+- Example: `uv run manage.py evaluation_remind 2026-FA --dry-run`
+
+### `evaluation_publish_results`
+
+- Purpose: publishes the term's course evaluation results to instructors. Same as **Course evaluation > Term evaluations > Publish results** in the administration panel. Even after publication, results are visible only for sections that reached the minimum number of responses and the response rate.
+- Arguments/options: `term` term code, `--actor=` (an account with `Manage evaluation forms, term evaluations and publication`; recorded as the publisher).
+- Audit: recorded (number of responses, whether already published). Business audit `evaluation.published`.
+- Exit codes: 1 for an unknown term code or a term without a course evaluation.
+- When: after the evaluation window and grade processing are complete. A term already published is not changed.
+- Example: `uv run manage.py evaluation_publish_results 2026-FA --actor=academic-affairs@example.ac.kr`
+
 ## Certificates (Phase 8)
+
+### `certificate_verify`
+
+- Purpose: checks a certificate verification code with the same criteria as the public verification page. Prints the kind, serial number, issue date and the masked holder.
+- Arguments/options: `code` verification code (case does not matter).
+- Audit: none (read only)
+- Exit codes: 0 when valid, 2 for an unknown code, a revoked certificate or an expired validity period.
+- Example: `uv run manage.py certificate_verify 7Q2M9XK4TB0RWZ5C1HNA`
+
+### `certificate_render`
+
+- Purpose: renders the PDF of an issued certificate again with the current data and template, replacing the stored file. Same as **Certificates > Issued certificates > Render again** in the administration panel. The serial number and verification code stay the same; the checksum changes. The PDF is made by Gotenberg.
+- Arguments/options: `issue` serial number, `--reason=` (required), `--actor=` (an account with `Issue, re-render and revoke certificates`).
+- Audit: recorded (serial number, new checksum); business audit `certificate.rerendered`.
+- Exit codes: 1 without a reason, for an unknown serial number, or when the PDF cannot be made.
+- When: to regenerate a specific certificate after fixing a template, a name spelling or `APP_URL`.
+- Example: `uv run manage.py certificate_render ENR-2026-000001 --reason="Name spelling corrected"`
 
 ## Examinations (Phase 9)
 
+### `assessment_import_results`
+
+- Purpose: enters the results of an examination session from CSV. Same rules as **Examination sessions > Import results (CSV)** in the administration panel (registered students only, pass decided from the scores, entering again before publication replaces the result, after publication the rows are reported as errors).
+- Arguments/options: `type` examination kind code / `held_date` examination date `YYYY-MM-DD` / `file` a UTF-8 CSV with a header row, `--actor=` (required, recorded as the person who entered the results), `--dry-run` (row validation only, nothing recorded).
+- Column format: [Administrator manual chapter 24](../admin/24-assessments.md).
+- Audit: recorded (session, file name, row count, entered/absent/error counts). Each result also gets the business audit entry `assessment.result_recorded`.
+- Exit codes: 1 when the session is not found, the file cannot be read or `--actor` is missing; 2 when there are error rows (the other rows are recorded).
+- Example: `uv run manage.py assessment_import_results ENG_COMP 2026-05-15 storage/eng.csv --actor=registrar@example.ac.kr --dry-run`
+
+### `assessment_publish_results`
+
+- Purpose: publishes a session's results to students. Same as **Examination sessions > Publish results** in the administration panel. After publication results change only through correction requests.
+- Arguments/options: `type` examination kind code / `held_date` examination date, `--actor=` (required, with the permission to register students, enter and publish results).
+- Audit: recorded (session, number of results) and the business audit entry `assessment.results_published`
+- Exit codes: 1 when the session is not found, is already published, `--actor` is missing or lacks the permission.
+- When: after result entry is complete.
+- Example: `uv run manage.py assessment_publish_results ENG_COMP 2026-05-15 --actor=registrar@example.ac.kr`
+
 ## Attendance (Phase 10)
+
+### `attendance_generate_sessions`
+
+- Purpose: creates class meetings for every section of a term from its meeting times (weekday, time, period). Same as **Generate from meeting times** in the instructor portal and **Generate meetings** on the **Class meetings** tab of the administration panel. Existing meetings and their attendance are kept (safe to run again). Cancelled sections are skipped.
+- Arguments/options: `term` term code, `--section=` (course code-section code, for example `CSE2010-01`, one only), `--dry-run` (number of target sections only), `--actor=`.
+- Audit: recorded (term, sections, meetings created)
+- When: before the term starts, after meeting times are confirmed. Run again when meeting times change.
+- Example: `uv run manage.py attendance_generate_sessions 2026-FA --dry-run`
 
 ## Graduation (Phase 11)
 

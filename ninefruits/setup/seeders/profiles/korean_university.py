@@ -40,7 +40,13 @@ class KoreanUniversityProfileSeeder(SetupProfile):
     )
 
     #: Dotted paths of functions ``(seeder) -> None`` added by later phases.
-    LATER_PHASE_STEPS: list[str] = []
+    LATER_PHASE_STEPS: list[str] = [
+        "ninefruits.setup.seeders.profiles.korean_university_evaluation.seed_evaluation_form",
+        # Phase 8: certificate kinds and their templates in four languages.
+        "ninefruits.setup.seeders.profiles.korean_university_certificates.seed_certificate_types",
+        # Phase 9: examination kinds and the English exam's areas.
+        "ninefruits.setup.seeders.profiles.korean_university_assessments.seed_assessment_types",
+    ]
 
     def run(self) -> None:
         self.call(LookupTypeSeeder)

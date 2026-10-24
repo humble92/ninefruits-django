@@ -1,0 +1,35 @@
+{% load i18n %}
+{% comment %}Class meetings tab of the section page (original ClassMeetingsRelationManager).{% endcomment %}
+<div class="overflow-x-auto" data-class-meetings>
+    <table class="w-full text-sm">
+        <thead>
+            <tr class="text-left text-base-500">
+                <th class="px-2 py-1">{% translate "Date" context "attendance" %}</th>
+                <th class="px-2 py-1">{% translate "Time" context "attendance" %}</th>
+                <th class="px-2 py-1">{% translate "room" as room_label %}{{ room_label|capfirst }}</th>
+                <th class="px-2 py-1">{% translate "Status" context "registration" %}</th>
+                <th class="px-2 py-1">{% translate "Recorded" %}</th>
+                <th class="px-2 py-1">{% translate "Reason" context "common" %}</th>
+                <th class="px-2 py-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr class="border-t border-base-200" data-meeting="{{ row.meeting.pk }}">
+                    <td class="px-2 py-1">{{ row.date|date:"Y-m-d" }}</td>
+                    <td class="px-2 py-1">{{ row.time }}</td>
+                    <td class="px-2 py-1">{{ row.room }}</td>
+                    <td class="px-2 py-1"><span class="rounded px-1.5 py-0.5 text-xs {% if row.is_cancelled %}bg-base-100 text-base-600{% else %}bg-green-100 text-green-700{% endif %}">{{ row.status }}</span></td>
+                    <td class="px-2 py-1">{{ row.recorded }}</td>
+                    <td class="px-2 py-1">{{ row.reason|truncatechars:40 }}</td>
+                    <td class="px-2 py-1 whitespace-nowrap">
+                        {% if row.cancel_url %}<a class="text-red-600 underline" href="{{ row.cancel_url }}">{% translate "Cancel" context "attendance" %}</a>{% endif %}
+                        {% if row.restore_url %}<a class="underline" href="{{ row.restore_url }}">{% translate "Restore" %}</a>{% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="7" class="px-2 py-2 text-base-500">{% translate "No class meetings yet. Generate them from the weekly meeting times." %}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

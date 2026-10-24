@@ -34,6 +34,7 @@ from unfold.widgets import (
 
 from ninefruits.adminpanel.mixins import CatalogAdmin, CatalogPermissionMixin
 from ninefruits.adminpanel.navigation import NavigationGroup
+from ninefruits.attendance.admin import SectionClassMeetingsMixin
 from ninefruits.core.targeting import TargetCriteria
 from ninefruits.curriculum.models import Course
 from ninefruits.facility.models import Room
@@ -283,7 +284,8 @@ class SectionForm(CriteriaFormMixin):
             (session.pk, str(session)) for session in TermSession.objects.filter(term_id=self.instance.term_id)
         ]
         self.initial.setdefault("term_session_id", self.instance.session_id)
-        self.fields["org_unit"].queryset = OrgUnit.objects.order_by("code")  # type: ignore[attr-defined]
+        if "org_unit" in self.fields:  # read only (view permission only): not on the form
+            self.fields["org_unit"].queryset = OrgUnit.objects.order_by("code")  # type: ignore[attr-defined]
 
     def clean_section_code(self) -> str:
         return _alpha_dash(self.cleaned_data["section_code"], _("Section number"))
@@ -582,7 +584,7 @@ class CopySectionsForm(forms.Form):
 
 # -- admin ----------------------------------------------------------------------------------------
 @admin.register(Section)
-class SectionAdmin(SectionRegistrationMixin, CatalogAdmin):
+class SectionAdmin(SectionRegistrationMixin, SectionClassMeetingsMixin, CatalogAdmin):
     """Sections (legacy SFOPOBJECT) with instructors, meetings and rooms, eligibility and seat
     groups."""
 
@@ -616,6 +618,8 @@ class SectionAdmin(SectionRegistrationMixin, CatalogAdmin):
         "reopen",
         # Roster and waitlist (Phase 5, SectionRegistrationMixin).
         *SectionRegistrationMixin.registration_actions_detail,
+        # Class meetings (Phase 10, SectionClassMeetingsMixin).
+        *SectionClassMeetingsMixin.class_meetings_actions_detail,
     )
 
     # -- access ----------------------------------------------------------------------------------
@@ -741,6 +745,7 @@ class SectionAdmin(SectionRegistrationMixin, CatalogAdmin):
         return (
             *self._section_fieldsets(),
             *self.registration_fieldsets(request, obj),
+            *self.class_meetings_fieldsets(request, obj),
         )
 
     def _section_fieldsets(self) -> tuple[Any, ...]:
@@ -789,7 +794,12 @@ class SectionAdmin(SectionRegistrationMixin, CatalogAdmin):
     def get_readonly_fields(self, request: HttpRequest, obj: Any = None) -> Any:
         if obj is None:
             return ()
-        return ("course_display", "status_display", *self.registration_readonly_fields)
+        return (
+            "course_display",
+            "status_display",
+            *self.registration_readonly_fields,
+            *self.class_meetings_readonly_fields,
+        )
 
     def get_inlines(self, request: HttpRequest, obj: Any) -> Any:
         return self.inlines if obj is not None else ()

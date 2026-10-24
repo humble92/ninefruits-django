@@ -22,6 +22,14 @@ urlpatterns: list[URLPattern | URLResolver] = [
     path("", include("ninefruits.registration.portal_urls")),
     # Grade entry, my grades and the grade report (Phase 6).
     path("", include("ninefruits.grading.portal_urls")),
+    # Course evaluation and section results (Phase 7).
+    path("", include("ninefruits.evaluation.portal_urls")),
+    # My certificates (Phase 8).
+    path("", include("ninefruits.certificate.portal_urls")),
+    # Examinations: registration and results (Phase 9).
+    path("", include("ninefruits.assessment.portal_urls")),
+    # Roster and attendance, my attendance (Phase 10).
+    path("", include("ninefruits.attendance.portal_urls")),
 ]
 
 # Security settings page (two-factor, sign-in methods), built by the security work.

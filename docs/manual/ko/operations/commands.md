@@ -264,11 +264,72 @@
 
 ## 강의평가 (Phase 7)
 
+### `evaluation_remind`
+
+- 용도: 강의평가 기간이 열려 있는데 아직 평가하지 않은 과목이 있는 학생에게 안내 메일을 보낸다. 학생마다 남은 과목을 묶어 한 통을 보낸다(받는 사람의 언어로).
+- 인수/옵션: `term` 학기 코드, `--dry-run`(보내지 않고 대상 학생 수만), `--actor=`.
+- 감사: 기록 (대상 학생 수, 보낸 수)
+- 종료 코드: 학기 코드를 찾지 못하면 1.
+- 실행 시점: 평가 기간 중 한두 번. 필요하면 스케줄에 등록한다.
+- 예시: `uv run manage.py evaluation_remind 2026-FA --dry-run`
+
+### `evaluation_publish_results`
+
+- 용도: 학기 강의평가 결과를 교원에게 공개한다. 관리 화면 **강의평가 > 학기 강의평가 > 결과 공개**와 같다. 공개 후에도 최소 응답 수와 응답률을 채운 강좌만 결과가 보인다.
+- 인수/옵션: `term` 학기 코드, `--actor=`(`강의평가 양식, 학기 강의평가, 결과 공개 관리` 권한이 있는 계정. 공개한 사람으로 남는다).
+- 감사: 기록 (응답 수, 이미 공개되었는지). 업무 감사 `evaluation.published`.
+- 종료 코드: 학기 코드를 찾지 못하거나 학기 강의평가가 없으면 1.
+- 실행 시점: 평가 기간과 성적 처리가 끝난 뒤. 이미 공개된 학기는 바꾸지 않는다.
+- 예시: `uv run manage.py evaluation_publish_results 2026-FA --actor=academic-affairs@example.ac.kr`
+
 ## 증명서 (Phase 8)
+
+### `certificate_verify`
+
+- 용도: 증명서 확인 코드를 공개 진위 확인 페이지와 같은 기준으로 검사한다. 종류, 발급번호, 발급일, 가려진 명의자를 출력한다.
+- 인수/옵션: `code` 확인 코드(대소문자 구분 없음).
+- 감사: 없음 (조회)
+- 종료 코드: 유효하면 0, 없는 코드·취소·기간 만료면 2.
+- 예시: `uv run manage.py certificate_verify 7Q2M9XK4TB0RWZ5C1HNA`
+
+### `certificate_render`
+
+- 용도: 발급한 증명서의 PDF를 현재 데이터와 서식으로 다시 만들어 보관 파일을 바꾼다. 관리 화면 **증명서 > 발급 대장 > 다시 만들기**와 같다. 발급번호와 확인 코드는 그대로이고 체크섬이 바뀐다. PDF는 Gotenberg로 만든다.
+- 인수/옵션: `issue` 발급번호, `--reason=`(필수), `--actor=`(`증명서 발급, 재생성, 취소` 권한이 있는 계정).
+- 감사: 기록 (발급번호, 새 체크섬). 업무 감사 `certificate.rerendered`.
+- 종료 코드: 사유가 없거나 발급번호를 찾지 못하거나 PDF를 만들지 못하면 1.
+- 실행 시점: 서식이나 이름 표기, `APP_URL`을 고친 뒤 특정 증명서를 다시 만들 때.
+- 예시: `uv run manage.py certificate_render ENR-2026-000001 --reason="성명 표기 수정"`
 
 ## 어학/종합시험 (Phase 9)
 
+### `assessment_import_results`
+
+- 용도: 시험 회차의 결과를 CSV로 입력한다. 관리 화면 **시험 회차 > 결과 가져오기(CSV)**와 같은 규칙이다(접수한 학생만, 점수로 합격 판정, 공개 전에는 다시 입력하면 교체, 공개 뒤에는 오류 행으로 보고).
+- 인수/옵션: `type` 시험 종류 코드 / `held_date` 시험일 `YYYY-MM-DD` / `file` 머리글 행이 있는 UTF-8 CSV, `--actor=`(필수, 결과를 입력한 사람으로 기록), `--dry-run`(기록하지 않고 행 검사만).
+- 열 형식: [관리자 매뉴얼 24장](../admin/24-assessments.md).
+- 감사: 기록 (회차, 파일 이름, 행 수, 입력·결시·오류 수). 결과마다 업무 감사 `assessment.result_recorded`도 남는다.
+- 종료 코드: 회차를 찾지 못하거나 파일을 읽을 수 없거나 `--actor`가 없으면 1, 오류 행이 있으면 2(나머지 행은 기록됨).
+- 예시: `uv run manage.py assessment_import_results ENG_COMP 2026-05-15 storage/eng.csv --actor=registrar@example.ac.kr --dry-run`
+
+### `assessment_publish_results`
+
+- 용도: 회차의 결과를 학생에게 공개한다. 관리 화면 **시험 회차 > 결과 공개**와 같다. 공개 뒤에는 결과를 직접 고칠 수 없고 정정 요청으로만 바꾼다.
+- 인수/옵션: `type` 시험 종류 코드 / `held_date` 시험일, `--actor=`(필수, `응시 등록, 결과 입력·공개, 외부 성적 등록` 권한).
+- 감사: 기록 (회차, 결과 수)와 업무 감사 `assessment.results_published`
+- 종료 코드: 회차를 찾지 못하거나 이미 공개했거나 `--actor`가 없거나 권한이 없으면 1.
+- 실행 시점: 결과 입력이 끝난 뒤.
+- 예시: `uv run manage.py assessment_publish_results ENG_COMP 2026-05-15 --actor=registrar@example.ac.kr`
+
 ## 출석 (Phase 10)
+
+### `attendance_generate_sessions`
+
+- 용도: 학기의 개설강좌마다 강의 시간(요일·시간·기간)으로 수업 회차를 만든다. 교원 포털의 **강의 시간으로 회차 생성**, 관리 화면 **수업 회차**의 **회차 생성**과 같다. 이미 있는 회차와 출석은 그대로 둔다(다시 실행해도 안전). 폐강된 개설강좌는 건너뛴다.
+- 인수/옵션: `term` 학기 코드, `--section=`(과목코드-분반, 예: `CSE2010-01`, 하나만), `--dry-run`(대상 강좌 수만), `--actor=`.
+- 감사: 기록 (학기, 강좌 수, 생성 회차 수)
+- 실행 시점: 학기 시작 전 강의 시간 확정 뒤. 강의 시간이 바뀌면 다시 실행한다.
+- 예시: `uv run manage.py attendance_generate_sessions 2026-FA --dry-run`
 
 ## 졸업 (Phase 11)
 

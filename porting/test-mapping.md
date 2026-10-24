@@ -7,7 +7,7 @@
 | 원본 | Django | 상태 |
 |---|---|---|
 | `Database/Admission/ApplicationAccessTest.php` | `tests/admission/test_application_access.py` (+ 지원자 인물의 애플리케이션 범위 `Person.visible_to` 비교) | 완료 |
-| `Database/Evaluation/EvaluationAccessTest.php` |  |  |
+| `Database/Evaluation/EvaluationAccessTest.php` | `tests/evaluation/test_evaluation_access.py` (+ 6가지 사용자에서 `EvaluationResponse.visible_to`와 RLS 비교) | 완료 |
 | `Database/Foundation/DatabaseRolesTest.php` | `tests/db/test_database_roles.py` | 완료 |
 | `Database/Foundation/DatabaseSessionContextTest.php` | `tests/db/test_database_session_context.py` | 완료 |
 | `Database/Foundation/TimeZoneTest.php` | `tests/db/test_time_zone.py` (raw SQL + 모델 기반 사례: 업무 기간 시각, 조직 단위 날짜) | 완료 |
@@ -21,7 +21,7 @@
 | `Database/Security/AuditTriggerTest.php` | `tests/audit/test_audit_triggers.py`, `tests/audit/test_audit_models.py` (비관리 모델 기법) | 완료 |
 | `Database/Security/RowLevelSecurityTest.php` | `tests/audit/test_row_level_security.py` (원본과 같은 PoC 테이블) | 완료 |
 | `Database/Term/TermConstraintsTest.php` | `tests/db/test_term_constraints.py` | 완료 |
-| `Feature/Admin/AdminPagesTest.php` | `tests/admin/test_admin_panel.py` (대시보드, 한국어·중국어 화면), `tests/portal/test_portal_layout.py` (`/portal`), `tests/admin/test_reference_admin.py` (기준정보 화면 전체, 한국어·중국어), `tests/offering/test_curriculum_admin.py` (교육과정·개설강좌 화면), `tests/person/test_people_admin.py` (인물·학적·교원·학적 변동·복수전공 신청·학적/로그인 설정 화면, 한국어·중국어), `tests/registration/test_registration_admin.py` (수강신청 화면 전체, 개설강좌 수강생·대기자 탭, 포털 수강신청, 한국어), `tests/admission/test_admission_admin.py` (입학 화면·입학 설정, 한국어·중국어), `tests/grading/test_grading_admin.py` (성적 화면 전체·성적 처리 정책·포털 성적 입력·성적표, 한국어), `tests/grading/test_grading_settings.py` (성적 처리 정책 저장) | 부분(사용자·역할·감사·설정 화면 데이터셋은 각 리소스 테스트, `/portal/security`는 security 테스트) |
+| `Feature/Admin/AdminPagesTest.php` | `tests/admin/test_admin_panel.py` (대시보드, 한국어·중국어 화면), `tests/portal/test_portal_layout.py` (`/portal`), `tests/admin/test_reference_admin.py` (기준정보 화면 전체, 한국어·중국어), `tests/offering/test_curriculum_admin.py` (교육과정·개설강좌 화면), `tests/person/test_people_admin.py` (인물·학적·교원·학적 변동·복수전공 신청·학적/로그인 설정 화면, 한국어·중국어), `tests/registration/test_registration_admin.py` (수강신청 화면 전체, 개설강좌 수강생·대기자 탭, 포털 수강신청, 한국어), `tests/admission/test_admission_admin.py` (입학 화면·입학 설정, 한국어·중국어), `tests/grading/test_grading_admin.py` (성적 화면 전체·성적 처리 정책·포털 성적 입력·성적표, 한국어), `tests/grading/test_grading_settings.py` (성적 처리 정책 저장), `tests/attendance/test_attendance_demo.py` (포털 수강생과 출석·출석, 개설강좌 수업 회차 탭, 영어·한국어), `tests/certificate/test_certificate_admin.py` (증명서 화면 전체·증명서 설정·학적 화면 증명서 발급·포털 증명서, 한국어), `tests/evaluation/test_evaluation_demo.py`·`tests/evaluation/test_evaluation_admin.py` (강의평가 화면 전체·강의평가 설정·포털 강의평가·결과·담당 강좌 결과 열, 한국어), `tests/assessment/test_assessment_admin.py` (시험 회차·결과·정정 요청·종류 화면 전체, 회차 버튼 화면, 졸업 요건 화면, 포털 어학/종합시험, 한국어) | 부분(사용자·역할·감사·설정 화면 데이터셋은 각 리소스 테스트, `/portal/security`는 security 테스트) |
 | `Feature/Admin/AdminPanelTest.php` | `tests/admin/test_admin_panel.py` (화면 틀), `tests/security/test_security_admin.py`, `tests/security/test_settings_pages.py` (보안·로그인 수단 설정 화면) | 부분(다른 리소스 사례는 해당 Phase) |
 | `Feature/Admin/AdmissionAdminTest.php` | `tests/admission/test_admission_admin.py` (+ 지원서 화면의 검토·결정·발표·대리 응답·학적 생성 버튼, 일괄 학적 생성, 회차 목록 결과 발표, 서류 내려받기 권한, 한국어·중국어 화면) | 완료 |
 | `Feature/Admin/CurriculumAdminTest.php` | `tests/offering/test_curriculum_admin.py` (화면, 강의실 충돌 안내, 시간표, 포털 개설강좌·담당 강좌·강의계획서), `tests/offering/test_section_admin.py` (권한 범위, 좌석 할당 합계, 담당 교원 탭, 다른 학기에서 복사) | 부분(복수전공·부전공 승인·신청 2개 사례는 Phase 2 인물 테스트) |
@@ -31,12 +31,12 @@
 | `Feature/Admin/RegistrationAdminTest.php` | `tests/registration/test_registration_admin.py` (+ 한국어 화면, 규칙 예외 취소, 지금 승격) | 완료 |
 | `Feature/Admission/AdmissionJourneyTest.php` | `tests/admission/test_admission_journey.py` | 완료 |
 | `Feature/Admission/AdmissionRulesTest.php` | `tests/admission/test_admission_rules.py` (+ beat 작업 `admission.expire_drafts`) | 완료 |
-| `Feature/Assessment/AssessmentTest.php` |  |  |
-| `Feature/Attendance/AttendanceTest.php` |  |  |
-| `Feature/Certificate/CertificateTest.php` |  |  |
+| `Feature/Assessment/AssessmentTest.php` | `tests/assessment/test_assessment.py` (원본 9개 사례 + 학생 접수 정원은 RLS와 관계없이 전체 접수로 계산, 회차 삭제 제한), `tests/assessment/test_assessment_access.py` (RLS와 `visible_to` 일치 8가지 사용자 × 4개 표, 학생 쓰기 차단, 결과 쓰기는 `assessments.record`만), `tests/assessment/test_assessment_admin.py` (tiny 데모의 시험 화면 전체·한국어, 목록 결과 공개, 회차 CSV 가져오기, 회차 화면 합격 점수 변경과 재판정, 외부 성적·증빙·삭제, 정정 요청과 다른 사람의 승인, 졸업 요건 화면, 포털 HTMX 접수·취소), `tests/assessment/test_assessment_seeders.py` (프로파일 멱등·관리자 수정 보존, 데모 1회·판정 규칙) | 완료 |
+| `Feature/Attendance/AttendanceTest.php` | `tests/attendance/test_attendance.py` (원본 5개 사례 + 휴강 사유, 출석률 반올림, 학생 화면 집계, 명단 CSV 수식 방지, 관리 화면 수업 회차 탭), `tests/attendance/test_attendance_demo.py` (데모 시더 1회 실행, 교원·학생·관리 화면, 영어·한국어) | 완료 |
+| `Feature/Certificate/CertificateTest.php` | `tests/certificate/test_certificates.py` (원본 6개 사례 + 발급번호 형식, PDF 서비스 장애, 취소 사유·권한, 진위 확인 JSON, 마스킹, 치환 항목·언어, 사진, 다시 만들기 화면, 발급 화면 오류, 실제 Gotenberg `-m gotenberg`), `tests/certificate/test_certificate_access.py` (RLS와 `visible_to` 일치 8가지 사용자, 쓰기 정책, 정책), `tests/certificate/test_certificate_admin.py` (관리·포털 화면, 설정 저장, 서식 편집, 분당 30회 제한), `tests/certificate/test_certificate_seeders.py` (프로파일 4개 언어 서식·멱등, 데모) | 완료 |
 | `Feature/Curriculum/CourseTest.php` | `tests/curriculum/test_course.py` (+ `tests/curriculum/test_curriculum_admin.py`: 교과목 생성·개정·겹침 안내·졸업 요건 화면·CSV 화면) | 완료 |
-| `Feature/Evaluation/EvaluationAdminTest.php` |  |  |
-| `Feature/Evaluation/EvaluationTest.php` |  |  |
+| `Feature/Evaluation/EvaluationAdminTest.php` | `tests/evaluation/test_evaluation_admin.py` (Filament 동작은 관리 화면 POST, + 응답이 있는 학기의 양식 변경 거부, 강의평가 설정 저장, 표준 양식 시더 멱등, 한국어 화면) | 완료 |
+| `Feature/Evaluation/EvaluationTest.php` | `tests/evaluation/test_evaluation.py` (Livewire 화면 사례는 포털 GET/POST, + 공개 전 직원 화면·의견 이스케이프, 담당 강좌 결과 열, 성적표 가림) | 완료 |
 | `Feature/Grading/GpaCalculatorTest.php` | `tests/grading/test_gpa_calculator.py` | 완료 |
 | `Feature/Grading/GradeWorkflowTest.php` | `tests/grading/test_grade_workflow.py` (Action을 사용자 DB 컨텍스트로 실행, + 제출 성적 직원 수정 감사) | 완료 |
 | `Feature/Grading/GradingCommandsTest.php` | `tests/grading/test_grading_commands.py` | 완료 |
@@ -61,7 +61,7 @@
 | `Feature/Security/AuthenticationTest.php` | `tests/security/test_authentication.py` | 완료 |
 | `Feature/Security/AuthorizationTest.php` | `tests/security/test_authorization.py`, `tests/security/test_security_admin.py` (사용자·역할·할당 관리 화면) | 완료 |
 | `Feature/Security/EmailCodeTwoFactorTest.php` | `tests/security/test_email_code_two_factor.py`, `tests/security/test_security_page.py` (포털 보안 화면 TOTP·복구 코드) | 완료 |
-| `Feature/Security/HardeningTest.php` | `tests/security/test_hardening.py` | 부분(인증·권한 사례 완료. 암호화 식별자 제외는 `tests/person/test_person_pii.py`. CSV 수식 사례는 Phase 11) |
+| `Feature/Security/HardeningTest.php` | `tests/security/test_hardening.py` | 부분(인증·권한 사례 완료. 암호화 식별자 제외는 `tests/person/test_person_pii.py`. CSV 수식 사례는 Phase 11. 같은 규칙의 명단 CSV용 `spreadsheet_cell`은 `tests/attendance/test_attendance.py`) |
 | `Feature/Security/MfaPolicyTest.php` | `tests/security/test_mfa_policy.py` | 완료 |
 | `Feature/Security/PersonalDataEncryptionTest.php` | `tests/pii/test_personal_data_encryption.py` (테스트 전용 모델 + 임시 테이블, 원본 암호문·해시 형식 고정), `tests/person/test_person_pii.py` (Person 암호화·검색·마스킹·재암호화), `tests/person/test_people_admin.py` (표시 해제 화면) | 완료 |
 | `Feature/Security/SecurityCommandsTest.php` | `tests/security/test_security_commands.py` (+ `security_create_administrator`, `security_sync_permissions`, 역할 템플릿), `tests/person/test_person_commands.py` (`people_find_duplicates`) | 완료 |

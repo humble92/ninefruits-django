@@ -1,0 +1,189 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}Roster and attendance of a section (original livewire/portal/section-attendance).
+The forms post an action; with HTMX the block #attendance is swapped.{% endcomment %}
+{% block content %}
+{% url 'portal:attendance_section' section.pk as page_url %}
+<div id="attendance" class="space-y-6">
+    <div class="flex flex-wrap items-start justify-between gap-2">
+        <div>
+            <a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>
+            <h1 class="text-2xl font-semibold">{{ section.label }} {{ section.version.title }}</h1>
+            <p class="text-sm text-zinc-600" data-intro>
+                {% blocktranslate with held=summary.held students=enrollments|length %}{{ held }} meeting(s) held, {{ students }} student(s).{% endblocktranslate %}
+            </p>
+        </div>
+        <div class="flex flex-wrap gap-2 text-sm">
+            <a href="{% url 'attendance:roster_csv' section.pk %}" class="rounded border border-zinc-300 bg-white px-3 py-1">{% translate "Roster (CSV)" %}</a>
+            <a href="{% url 'attendance:sheet' section.pk %}" target="_blank" rel="noopener" class="rounded border border-zinc-300 bg-white px-3 py-1">{% translate "Attendance sheet (PDF)" %}</a>
+        </div>
+    </div>
+
+    {% if flash.message %}
+        <div role="status" data-tone="{{ flash.tone }}" class="rounded-lg border p-3 text-sm {% if flash.tone == 'error' %}border-red-300 bg-red-50{% else %}border-emerald-300 bg-emerald-50{% endif %}">{{ flash.message }}</div>
+    {% endif %}
+
+    {% if meeting %}
+        <form method="post" action="{{ page_url }}?meeting={{ meeting.pk }}" hx-post="{{ page_url }}?meeting={{ meeting.pk }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML" class="space-y-3 rounded-lg border border-zinc-200 bg-white p-4" data-entry>
+            {% csrf_token %}
+            <input type="hidden" name="meeting" value="{{ meeting.pk }}">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <h2 class="font-medium">{% blocktranslate with date=meeting.meeting_date|date:"DATE_FORMAT" time=meeting.time_label %}Attendance on {{ date }} {{ time }}{% endblocktranslate %}</h2>
+                <div class="flex flex-wrap items-center gap-2 text-sm">
+                    {% if can_edit %}
+                        <button type="submit" name="action" value="mark_all:present" formnovalidate class="rounded border border-zinc-300 px-2 py-1">{% translate "All present" %}</button>
+                    {% endif %}
+                    <a href="{{ page_url }}" class="underline" hx-get="{{ page_url }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML" hx-push-url="true">{% translate "Back" %}</a>
+                </div>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-zinc-50 text-left">
+                        <tr>
+                            <th class="px-3 py-2">{% translate "Student number" %}</th>
+                            <th class="px-3 py-2">{% translate "Name" context "people" %}</th>
+                            <th class="px-3 py-2">{% translate "Attendance" context "attendance.fields" %}</th>
+                            <th class="px-3 py-2">{% translate "Note" context "attendance" %}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in entry_rows %}
+                            <tr class="border-t border-zinc-100" data-enrollment="{{ row.enrollment.pk }}">
+                                <td class="px-3 py-2">{{ row.record.student_number }}</td>
+                                <td class="px-3 py-2">{{ row.record.person.display_name }}</td>
+                                <td class="px-3 py-2">
+                                    <div class="flex flex-wrap gap-2">
+                                        {% for option in status_options %}
+                                            <label class="flex items-center gap-1"><input type="radio" name="status-{{ row.enrollment.pk }}" value="{{ option.value }}"{% if option.value == row.status %} checked{% endif %}{% if not can_edit %} disabled{% endif %}> {{ option.label }}</label>
+                                        {% endfor %}
+                                    </div>
+                                </td>
+                                <td class="px-3 py-2">
+                                    <input type="text" name="note-{{ row.enrollment.pk }}" value="{{ row.note }}" maxlength="200" aria-label="{% translate 'Note' context 'attendance' %} {{ row.record.student_number }}" class="w-full rounded border border-zinc-300 px-2 py-1"{% if not can_edit %} disabled{% endif %}>
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr><td colspan="4" class="px-4 py-6 text-center text-zinc-500">{% translate "No students are enrolled." %}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if can_edit %}
+                <button type="submit" name="action" value="save" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Save attendance" %}</button>
+            {% endif %}
+        </form>
+    {% else %}
+        <section class="overflow-x-auto rounded-lg border border-zinc-200 bg-white" data-roster>
+            <h2 class="px-4 pt-4 font-medium">{% translate "Roster" %}</h2>
+            <table class="mt-2 w-full text-sm">
+                <thead class="bg-zinc-50 text-left">
+                    <tr>
+                        <th class="px-3 py-2"><span class="sr-only">{% translate "Photo" %}</span></th>
+                        <th class="px-3 py-2">{% translate "Student number" %}</th>
+                        <th class="px-3 py-2">{% translate "Name" context "people" %}</th>
+                        <th class="px-3 py-2">{% translate "program" as program_label %}{{ program_label|capfirst }}</th>
+                        <th class="px-3 py-2">{% translate "Year" context "people" %}</th>
+                        <th class="px-3 py-2">{% translate "Present" %}</th>
+                        <th class="px-3 py-2">{% translate "Late" %}</th>
+                        <th class="px-3 py-2">{% translate "Absent" context "attendance" %}</th>
+                        <th class="px-3 py-2">{% translate "Excused" %}</th>
+                        <th class="px-3 py-2">{% translate "Attendance rate" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in roster_rows %}
+                        <tr class="border-t border-zinc-100" data-enrollment="{{ row.enrollment.pk }}">
+                            <td class="px-3 py-1">
+                                {% if row.has_photo %}<img src="{% url 'person:photo' row.record.person_id %}" alt="" class="h-10 w-8 rounded object-cover">{% endif %}
+                            </td>
+                            <td class="px-3 py-2">{{ row.record.student_number }}</td>
+                            <td class="px-3 py-2">{{ row.record.person.display_name }}</td>
+                            <td class="px-3 py-2">{{ row.record.program.name }}</td>
+                            <td class="px-3 py-2">{{ row.record.year_level }}</td>
+                            <td class="px-3 py-2">{{ row.counts.present }}</td>
+                            <td class="px-3 py-2">{{ row.counts.late }}</td>
+                            <td class="px-3 py-2">{{ row.counts.absent }}</td>
+                            <td class="px-3 py-2">{{ row.counts.excused }}</td>
+                            <td class="px-3 py-2">{% if row.counts.rate is None %}-{% else %}{{ row.counts.rate }}%{% endif %}</td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="10" class="px-4 py-6 text-center text-zinc-500">{% translate "No students are enrolled." %}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        <section class="rounded-lg border border-zinc-200 bg-white p-4" data-meetings>
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <h2 class="font-medium">{% translate "Class meetings" %}</h2>
+                {% if can_edit %}
+                    <form method="post" action="{{ page_url }}" hx-post="{{ page_url }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML">
+                        {% csrf_token %}
+                        <button type="submit" name="action" value="generate" class="rounded border border-zinc-300 px-3 py-1 text-sm">{% translate "Generate from meeting times" %}</button>
+                    </form>
+                {% endif %}
+            </div>
+            <div class="overflow-x-auto">
+                <table class="mt-2 w-full text-sm">
+                    <thead class="bg-zinc-50 text-left">
+                        <tr>
+                            <th class="px-3 py-2">#</th>
+                            <th class="px-3 py-2">{% translate "Date" context "attendance" %}</th>
+                            <th class="px-3 py-2">{% translate "Time" context "attendance" %}</th>
+                            <th class="px-3 py-2">{% translate "room" as room_label %}{{ room_label|capfirst }}</th>
+                            <th class="px-3 py-2">{% translate "Recorded" %}</th>
+                            <th class="px-3 py-2"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for item in meetings %}
+                            <tr class="border-t border-zinc-100 align-top {% if item.is_cancelled %}text-zinc-400{% endif %}" data-meeting="{{ item.pk }}">
+                                <td class="px-3 py-2">{{ forloop.counter }}</td>
+                                <td class="px-3 py-2 {% if item.is_cancelled %}line-through{% endif %}">{{ item.meeting_date|date:"DATE_FORMAT" }} ({{ item.meeting_date|date:"D" }})</td>
+                                <td class="px-3 py-2 {% if item.is_cancelled %}line-through{% endif %}">{{ item.time_label }}</td>
+                                <td class="px-3 py-2">{{ item.room_label|default:"-" }}</td>
+                                <td class="px-3 py-2">{% if item.is_cancelled %}{{ item.cancel_reason }}{% else %}{{ item.records_count }} / {{ enrollments|length }}{% endif %}</td>
+                                <td class="px-3 py-2 text-right">
+                                    {% if item.is_cancelled %}
+                                        {% if can_edit %}
+                                            <form method="post" action="{{ page_url }}" hx-post="{{ page_url }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML" class="inline">
+                                                {% csrf_token %}
+                                                <button type="submit" name="action" value="restore_meeting:{{ item.pk }}" class="underline">{% translate "Restore" %}</button>
+                                            </form>
+                                        {% endif %}
+                                    {% else %}
+                                        <a href="{{ page_url }}?meeting={{ item.pk }}" class="underline" hx-get="{{ page_url }}?meeting={{ item.pk }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML" hx-push-url="true">{% translate "Attendance" context "attendance.portal" %}</a>
+                                        {% if can_edit %}
+                                            <details class="mt-1 inline-block text-left">
+                                                <summary class="cursor-pointer underline">{% translate "Cancel" context "attendance" %}</summary>
+                                                <form method="post" action="{{ page_url }}" hx-post="{{ page_url }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML" class="mt-1 flex flex-wrap items-end gap-2">
+                                                    {% csrf_token %}
+                                                    <label class="text-xs">{% translate "Why is this meeting cancelled? (holiday, instructor absence, ...)" %}
+                                                        <input type="text" name="reason-{{ item.pk }}" maxlength="{{ reason_max }}" required class="mt-1 w-56 rounded border border-zinc-300 px-2 py-1 text-sm">
+                                                    </label>
+                                                    <button type="submit" name="action" value="cancel_meeting:{{ item.pk }}" class="rounded border border-red-300 px-2 py-1 text-red-700">{% translate "Cancel" context "attendance" %}</button>
+                                                </form>
+                                            </details>
+                                        {% endif %}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% empty %}
+                            <tr><td colspan="6" class="px-4 py-6 text-center text-zinc-500">{% translate "No class meetings yet. Generate them from the weekly meeting times." %}</td></tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% if can_edit %}
+                <form method="post" action="{{ page_url }}" hx-post="{{ page_url }}" hx-target="#attendance" hx-select="#attendance" hx-swap="outerHTML" class="mt-3 flex flex-wrap items-end gap-2 text-sm" data-add-meeting>
+                    {% csrf_token %}
+                    <label>{% translate "Date" context "attendance" %} <input type="date" name="meeting_date" value="{{ new_meeting.date }}" required class="rounded border border-zinc-300 px-2 py-1"></label>
+                    <label>{% translate "Start" context "attendance" %} <input type="time" name="start_time" value="{{ new_meeting.start }}" required class="rounded border border-zinc-300 px-2 py-1"></label>
+                    <label>{% translate "End" %} <input type="time" name="end_time" value="{{ new_meeting.end }}" required class="rounded border border-zinc-300 px-2 py-1"></label>
+                    <button type="submit" name="action" value="add_meeting" class="rounded border border-zinc-300 px-3 py-1">{% translate "Add a meeting" %}</button>
+                </form>
+            {% endif %}
+        </section>
+    {% endif %}
+</div>
+{% endblock %}

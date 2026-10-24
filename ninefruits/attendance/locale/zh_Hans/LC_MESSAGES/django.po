@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: attendance.errors.forbidden
+#: actions/manage_class_meetings.py:42 views/portal.py:192
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "仅任课教师和负责开课的职员可以操作。"
+
+# key: attendance.errors.time_order
+#: actions/manage_class_meetings.py:57
+msgid "The end time must be after the start time."
+msgstr "结束时间必须晚于开始时间。"
+
+# key: attendance.errors.outside_session
+#: actions/manage_class_meetings.py:60 views/portal.py:262
+msgid "The date is outside the session."
+msgstr "日期不在学期时段内。"
+
+# key: attendance.errors.duplicate_meeting
+#: actions/manage_class_meetings.py:75
+msgid "A meeting at that date and time already exists."
+msgstr "该日期和时间已有课次。"
+
+# key: attendance.errors.already_cancelled
+#: actions/manage_class_meetings.py:88
+msgid "This meeting is already cancelled."
+msgstr "此课次已停课。"
+
+# key: registration.errors.reason_required
+#: actions/manage_class_meetings.py:91
+msgid "Enter a reason."
+msgstr "请输入理由。"
+
+# key: attendance.errors.meeting_cancelled
+#: actions/record_attendance.py:51
+msgid "This meeting is cancelled."
+msgstr "此课次已停课。"
+
+# key: attendance.errors.meeting_future
+#: actions/record_attendance.py:53
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "考勤从上课当天起可以录入。"
+
+# key: attendance.errors.not_enrolled
+#: actions/record_attendance.py:70
+msgid "A student is not enrolled in this section."
+msgstr "有学生未选修此课程。"
+
+# key: attendance.errors.invalid_status
+#: actions/record_attendance.py:78
+msgid "Unknown attendance status."
+msgstr "未知的考勤状态。"
+
+# key: common.reason
+#: admin/__init__.py:37 models.py:73 templates/attendance/admin/class_meetings.html:13
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: admin/__init__.py:97 models.py:81 templates/attendance/portal/section_attendance.html:119
+msgid "Class meetings"
+msgstr "课次"
+
+# key: attendance.actions.generate
+#: admin/__init__.py:124 admin/__init__.py:143
+msgid "Generate meetings"
+msgstr "生成课次"
+
+# key: attendance.portal.generated
+#: admin/__init__.py:137 views/portal.py:253
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "已生成 %(count)s 个课次。"
+
+# key: attendance.help.generate
+#: admin/__init__.py:148
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "按每周上课时间在其日期范围内逐次生成课次。已有课次及其考勤保留。"
+
+# key: attendance.portal.meeting_cancelled
+#: admin/__init__.py:166 views/portal.py:275
+msgid "Meeting cancelled."
+msgstr "已停课。"
+
+# key: attendance.portal.cancel
+#: admin/__init__.py:172 templates/attendance/admin/class_meetings.html:27 templates/attendance/portal/section_attendance.html:159 templates/attendance/portal/section_attendance.html:165
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "停课"
+
+# key: attendance.portal.meeting_restored
+#: admin/__init__.py:186 views/portal.py:281
+msgid "Meeting restored."
+msgstr "已恢复课次。"
+
+# key: attendance.portal.restore
+#: admin/__init__.py:192 templates/attendance/admin/class_meetings.html:28 templates/attendance/portal/section_attendance.html:152
+msgid "Restore"
+msgstr "恢复"
+
+# key: portal.navigation.attendance
+#: apps.py:22
+msgctxt "portal"
+msgid "Attendance"
+msgstr "考勤"
+
+# key: attendance.statuses.present
+#: enums.py:14 templates/attendance/portal/my_attendance.html:28 templates/attendance/portal/section_attendance.html:87
+msgid "Present"
+msgstr "出勤"
+
+# key: attendance.statuses.late
+#: enums.py:15 templates/attendance/portal/my_attendance.html:28 templates/attendance/portal/section_attendance.html:88
+msgid "Late"
+msgstr "迟到"
+
+# key: attendance.statuses.absent
+#: enums.py:16 templates/attendance/portal/my_attendance.html:29 templates/attendance/portal/section_attendance.html:89
+msgctxt "attendance"
+msgid "Absent"
+msgstr "缺勤"
+
+# key: attendance.statuses.excused
+#: enums.py:17 templates/attendance/portal/my_attendance.html:29 templates/attendance/portal/section_attendance.html:90
+msgid "Excused"
+msgstr "请假"
+
+# key: attendance.meeting_statuses.scheduled
+#: enums.py:24
+msgid "Scheduled"
+msgstr "已安排"
+
+# key: attendance.meeting_statuses.cancelled
+#: enums.py:25
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "停课"
+
+# key: offering.fields.section
+#: models.py:49
+msgctxt "offering"
+msgid "Section"
+msgstr "课程班"
+
+# key: attendance.fields.meeting_date
+#: models.py:55 templates/attendance/admin/class_meetings.html:8 templates/attendance/portal/section_attendance.html:132 templates/attendance/portal/section_attendance.html:181
+msgctxt "attendance"
+msgid "Date"
+msgstr "日期"
+
+# key: attendance.fields.start_time
+#: models.py:56 templates/attendance/portal/section_attendance.html:182
+msgctxt "attendance"
+msgid "Start"
+msgstr "开始"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: models.py:57 templates/attendance/portal/section_attendance.html:183
+msgid "End"
+msgstr "结束"
+
+# key: offering.fields.room
+#: models.py:64
+msgid "Room"
+msgstr "教室"
+
+# key: registration.fields.status
+#: models.py:67 services/roster.py:77 templates/attendance/admin/class_meetings.html:11
+msgctxt "registration"
+msgid "Status"
+msgstr "状态"
+
+#: models.py:80
+msgid "class meeting"
+msgstr "上课课次"
+
+# key: attendance.fields.status
+#: models.py:121 templates/attendance/portal/section_attendance.html:46
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "考勤"
+
+# key: attendance.fields.note
+#: models.py:123 templates/attendance/portal/section_attendance.html:47 templates/attendance/portal/section_attendance.html:63
+msgctxt "attendance"
+msgid "Note"
+msgstr "备注"
+
+#: models.py:134
+msgid "attendance record"
+msgstr "考勤记录"
+
+#: models.py:135
+msgid "attendance records"
+msgstr "考勤记录"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: services/roster.py:72 templates/attendance/pdf/attendance_sheet.html:29 templates/attendance/portal/section_attendance.html:44 templates/attendance/portal/section_attendance.html:83
+msgid "Student number"
+msgstr "学号"
+
+# key: people.sections.name
+# key: people.fields.name
+#: services/roster.py:73 templates/attendance/pdf/attendance_sheet.html:30 templates/attendance/portal/section_attendance.html:45 templates/attendance/portal/section_attendance.html:84
+msgctxt "people"
+msgid "Name"
+msgstr "姓名"
+
+# key: reference.resources.programs.label
+#: services/roster.py:74 templates/attendance/portal/section_attendance.html:85
+msgid "program"
+msgstr "专业项目"
+
+# key: people.fields.year_level
+#: services/roster.py:75 templates/attendance/portal/section_attendance.html:86
+msgctxt "people"
+msgid "Year"
+msgstr "年级"
+
+# key: people.fields.contact_email
+#: services/roster.py:76
+msgid "Contact email"
+msgstr "联系邮箱"
+
+# key: attendance.fields.time
+#: templates/attendance/admin/class_meetings.html:9 templates/attendance/portal/section_attendance.html:133
+msgctxt "attendance"
+msgid "Time"
+msgstr "时间"
+
+# key: reference.resources.rooms.label
+#: templates/attendance/admin/class_meetings.html:10 templates/attendance/portal/section_attendance.html:134
+msgid "room"
+msgstr "教室"
+
+# key: attendance.fields.recorded
+#: templates/attendance/admin/class_meetings.html:12 templates/attendance/portal/section_attendance.html:135
+msgid "Recorded"
+msgstr "已录入"
+
+# key: attendance.portal.no_meetings
+#: templates/attendance/admin/class_meetings.html:32 templates/attendance/portal/my_attendance.html:42 templates/attendance/portal/section_attendance.html:173
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "尚无课次。请按每周上课时间生成。"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: templates/attendance/pdf/attendance_sheet.html:21
+msgid "Instructors"
+msgstr "任课教师"
+
+# key: attendance.sheet.printed
+#: templates/attendance/pdf/attendance_sheet.html:23
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "打印日期 %(date)s"
+
+# key: attendance.sheet.present
+#: templates/attendance/pdf/attendance_sheet.html:32
+msgid "P"
+msgstr "出勤"
+
+# key: attendance.sheet.late
+#: templates/attendance/pdf/attendance_sheet.html:33
+msgid "L"
+msgstr "迟到"
+
+# key: attendance.sheet.absent
+#: templates/attendance/pdf/attendance_sheet.html:34
+msgid "A"
+msgstr "缺勤"
+
+# key: attendance.sheet.excused
+#: templates/attendance/pdf/attendance_sheet.html:35
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "请假"
+
+# key: attendance.sheet.legend
+#: templates/attendance/pdf/attendance_sheet.html:53
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "O 出勤 · △ 迟到 · X 缺勤 · 假 请假 · 空白 未录入"
+
+# key: attendance.portal.my_intro
+#: templates/attendance/portal/my_attendance.html:10
+msgid "Attendance recorded by your instructors, per course."
+msgstr "任课教师录入的各课程考勤。"
+
+# key: reference.resources.terms.label
+#: templates/attendance/portal/my_attendance.html:14
+msgid "term"
+msgstr "学期"
+
+# key: offering.timetable.mode
+#: templates/attendance/portal/my_attendance.html:18
+msgid "Show"
+msgstr "查看"
+
+# key: attendance.fields.rate
+#: templates/attendance/portal/my_attendance.html:30 templates/attendance/portal/section_attendance.html:91
+msgid "Attendance rate"
+msgstr "出勤率"
+
+# key: attendance.portal.not_recorded
+#: templates/attendance/portal/my_attendance.html:38
+msgid "Not recorded"
+msgstr "未录入"
+
+# key: attendance.portal.no_courses
+#: templates/attendance/portal/my_attendance.html:48
+msgid "No courses in this term."
+msgstr "本学期没有选修课程。"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: templates/attendance/portal/section_attendance.html:11
+msgid "My teaching"
+msgstr "我的授课"
+
+# key: attendance.portal.intro
+#: templates/attendance/portal/section_attendance.html:14
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "已上 %(held)s 次，学生 %(students)s 人。"
+
+# key: attendance.portal.roster_csv
+#: templates/attendance/portal/section_attendance.html:18
+msgid "Roster (CSV)"
+msgstr "名单（CSV）"
+
+# key: attendance.portal.sheet_pdf
+#: templates/attendance/portal/section_attendance.html:19
+msgid "Attendance sheet (PDF)"
+msgstr "考勤表（PDF）"
+
+# key: attendance.portal.entry_for
+#: templates/attendance/portal/section_attendance.html:32
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "%(date)s %(time)s 考勤"
+
+# key: attendance.portal.mark_all_present
+#: templates/attendance/portal/section_attendance.html:35
+msgid "All present"
+msgstr "全部出勤"
+
+# key: evaluation.portal.back
+#: templates/attendance/portal/section_attendance.html:37
+msgid "Back"
+msgstr "返回"
+
+# key: attendance.portal.no_students
+#: templates/attendance/portal/section_attendance.html:67 templates/attendance/portal/section_attendance.html:111
+msgid "No students are enrolled."
+msgstr "没有选课学生。"
+
+# key: attendance.portal.save
+#: templates/attendance/portal/section_attendance.html:73
+msgid "Save attendance"
+msgstr "保存考勤"
+
+# key: attendance.portal.roster
+#: templates/attendance/portal/section_attendance.html:78
+msgid "Roster"
+msgstr "学生名单"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: templates/attendance/portal/section_attendance.html:82
+msgid "Photo"
+msgstr "照片"
+
+# key: attendance.portal.generate
+#: templates/attendance/portal/section_attendance.html:123
+msgid "Generate from meeting times"
+msgstr "按上课时间生成"
+
+# key: attendance.portal.enter
+#: templates/attendance/portal/section_attendance.html:156
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "录入考勤"
+
+# key: attendance.portal.cancel_reason
+#: templates/attendance/portal/section_attendance.html:162
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "请输入停课原因（节假日、出差等）。"
+
+# key: attendance.portal.add_meeting
+#: templates/attendance/portal/section_attendance.html:184
+msgid "Add a meeting"
+msgstr "添加课次"
+
+# key: attendance.sheet.marks.present
+#: views/downloads.py:56
+msgid "O"
+msgstr "O"
+
+# key: attendance.sheet.marks.late
+#: views/downloads.py:57
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: views/downloads.py:58
+msgid "X"
+msgstr "X"
+
+# key: attendance.sheet.marks.excused
+#: views/downloads.py:59
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "假"
+
+# key: attendance.sheet.title
+#: views/downloads.py:94
+msgid "Attendance sheet"
+msgstr "考勤表"
+
+#: views/downloads.py:117
+msgid "The PDF could not be created. Try again later."
+msgstr "无法生成 PDF，请稍后再试。"
+
+# key: attendance.portal.open
+#: views/portal.py:57
+msgctxt "attendance"
+msgid "Open"
+msgstr "打开"
+
+# key: attendance.portal.title
+#: views/portal.py:60
+msgid "Roster and attendance"
+msgstr "名单与考勤"
+
+# key: attendance.portal.saved
+#: views/portal.py:246
+msgid "Attendance saved."
+msgstr "考勤已保存。"
+
+# key: attendance.portal.meeting_added
+#: views/portal.py:264
+msgid "Meeting added."
+msgstr "已添加课次。"
+
+# key: attendance.portal.my_title
+#: views/portal.py:339
+msgid "My attendance"
+msgstr "我的考勤"

@@ -12,6 +12,9 @@ urlpatterns = [
     path("", include("ninefruits.person.urls")),
     path("", include("ninefruits.admission.urls")),
     path("", include("ninefruits.grading.urls")),
+    path("", include("ninefruits.certificate.urls")),
+    path("", include("ninefruits.assessment.urls")),
+    path("", include("ninefruits.attendance.urls")),
     path("", include("ninefruits.core.urls")),
 ]
 

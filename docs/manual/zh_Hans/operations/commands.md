@@ -264,11 +264,72 @@
 
 ## 课程评价（Phase 7）
 
+### `evaluation_remind`
+
+- 用途：向课程评价期间开放中、但仍有课程未评价的学生发送提醒邮件。按学生汇总剩余课程，每人发送一封（使用收件人的语言）。
+- 参数/选项：`term` 学期代码、`--dry-run`（不发送，只统计对象学生数）、`--actor=`。
+- 审计：记录（对象学生数、发送数）
+- 退出码：找不到学期代码时为 1。
+- 执行时机：评价期间内执行一两次。需要时注册为定时任务。
+- 示例：`uv run manage.py evaluation_remind 2026-FA --dry-run`
+
+### `evaluation_publish_results`
+
+- 用途：向教师公布学期课程评价结果。与管理界面 **课程评价 > 学期课程评价 > 公布结果** 相同。公布后也只有达到最低回答数和回答率的课程班才能看到结果。
+- 参数/选项：`term` 学期代码、`--actor=`（拥有`管理评价表、学期课程评价和结果公布`权限的账户，记录为公布人）。
+- 审计：记录（回答数、是否已公布）。业务审计 `evaluation.published`。
+- 退出码：找不到学期代码或该学期没有课程评价时为 1。
+- 执行时机：评价期间和成绩处理结束之后。已公布的学期不会改变。
+- 示例：`uv run manage.py evaluation_publish_results 2026-FA --actor=academic-affairs@example.ac.kr`
+
 ## 证明（Phase 8）
+
+### `certificate_verify`
+
+- 用途：按与公开真伪验证页面相同的标准检查证明验证码。输出种类、编号、开具日期、已遮蔽的持有人。
+- 参数/选项：`code` 验证码（不区分大小写）。
+- 审计：无（查询）
+- 退出码：有效时为 0；验证码不存在、已作废或已过期时为 2。
+- 示例：`uv run manage.py certificate_verify 7Q2M9XK4TB0RWZ5C1HNA`
+
+### `certificate_render`
+
+- 用途：用当前数据和模板重新生成已开具证明的 PDF，并替换保存的文件。与管理界面 **证明 > 开具台账 > 重新生成** 相同。编号和验证码不变，校验和会改变。PDF 由 Gotenberg 生成。
+- 参数/选项：`issue` 编号、`--reason=`（必填）、`--actor=`（具有 `开具、重新生成和撤销证明书` 权限的账户）。
+- 审计：记录（编号、新校验和）；业务审计 `certificate.rerendered`。
+- 退出码：没有理由、编号不存在或无法生成 PDF 时为 1。
+- 执行时机：修正模板、姓名写法或 `APP_URL` 后，需要重新生成特定证明时。
+- 示例：`uv run manage.py certificate_render ENR-2026-000001 --reason="更正姓名写法"`
 
 ## 语言/综合考试（Phase 9）
 
+### `assessment_import_results`
+
+- 用途：通过 CSV 录入考试场次的成绩。规则与管理界面 **考试场次 > 导入成绩（CSV）** 相同（只限已报名的学生，按分数判定合格，公布前重新录入会覆盖，公布后这些行作为错误报告）。
+- 参数/选项：`type` 考试种类代码 / `held_date` 考试日期 `YYYY-MM-DD` / `file` 带标题行的 UTF-8 CSV，`--actor=`（必填，记录为录入人）、`--dry-run`（不写入，只检查行）。
+- 列格式：[管理员手册第 24 章](../admin/24-assessments.md)。
+- 审计：记录（场次、文件名、行数、录入、缺考、错误数）。每条成绩另有业务审计 `assessment.result_recorded`。
+- 退出码：找不到场次、无法读取文件或缺少 `--actor` 时为 1；有错误行时为 2（其余行已写入）。
+- 示例：`uv run manage.py assessment_import_results ENG_COMP 2026-05-15 storage/eng.csv --actor=registrar@example.ac.kr --dry-run`
+
+### `assessment_publish_results`
+
+- 用途：向学生公布场次的成绩。与管理界面 **考试场次 > 公布成绩** 相同。公布后成绩只能通过更正申请修改。
+- 参数/选项：`type` 考试种类代码 / `held_date` 考试日期，`--actor=`（必填，需有报名、录入和公布成绩的权限）。
+- 审计：记录（场次、成绩数）以及业务审计 `assessment.results_published`
+- 退出码：找不到场次、已公布、缺少 `--actor` 或没有权限时为 1。
+- 执行时机：成绩录入完成之后。
+- 示例：`uv run manage.py assessment_publish_results ENG_COMP 2026-05-15 --actor=registrar@example.ac.kr`
+
 ## 考勤（Phase 10）
+
+### `attendance_generate_sessions`
+
+- 用途：按上课时间（星期、时间、期间）为学期的每个开课生成课次。与教师门户的 **按上课时间生成**、管理界面**课次**标签页的 **生成课次** 相同。已有的课次和考勤保持不变（重复执行是安全的）。已停开的开课会被跳过。
+- 参数/选项：`term` 学期代码、`--section=`（课程代码-班号，例如 `CSE2010-01`，只能一个）、`--dry-run`（只统计对象课程班数）、`--actor=`。
+- 审计：记录（学期、课程班数、生成课次数）
+- 执行时机：学期开始前、上课时间确定之后。上课时间变更后重新执行。
+- 示例：`uv run manage.py attendance_generate_sessions 2026-FA --dry-run`
 
 ## 毕业（Phase 11）
 

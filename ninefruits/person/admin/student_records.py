@@ -34,6 +34,7 @@ from unfold.widgets import (
 
 from ninefruits.adminpanel.mixins import CatalogPermissionMixin
 from ninefruits.adminpanel.navigation import NavigationGroup
+from ninefruits.certificate.admin.student_record import IssueCertificateActionMixin
 from ninefruits.institution.admin_support import ReferenceAdmin
 from ninefruits.organization.models import Program
 from ninefruits.person.actions import AssignAdvisor, EndAdditionalProgram, RecordStatusChange, RegisterStudent
@@ -316,7 +317,7 @@ class EndProgramForm(forms.Form):
 
 
 @admin.register(StudentRecord)
-class StudentRecordAdmin(ReferenceAdmin):
+class StudentRecordAdmin(IssueCertificateActionMixin, ReferenceAdmin):
     permissions: ClassVar[dict[str, str]] = {
         "view": Permission.STUDENT_RECORDS_VIEW,
         "add": Permission.STUDENT_RECORDS_MANAGE,
@@ -332,7 +333,8 @@ class StudentRecordAdmin(ReferenceAdmin):
     ordering = ("-student_number",)
     show_full_result_count = False
     inlines = (StatusChangeInline, AdvisorAssignmentInline, AdditionalProgramInline)
-    actions_detail = ("record_status_change", "assign_advisor", "grade_report")
+    # issue_certificate: Phase 8 (IssueCertificateActionMixin).
+    actions_detail = ("record_status_change", "assign_advisor", "issue_certificate", "grade_report")
     change_form_after_template = "person/admin/history.html"
     import_type = "students"
     translated_search_fields = ()

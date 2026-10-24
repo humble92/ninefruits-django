@@ -1,0 +1,784 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: actions/_support.py:25
+msgid "Enter a reason."
+msgstr "请输入理由。"
+
+# key: assessment.errors.pass_score_published
+#: actions/change_session_pass_score.py:39
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "此场次成绩已公布，不能更改合格分数。请通过更正申请处理。"
+
+# key: assessment.errors.not_locked
+#: actions/correct_assessment_result.py:44 actions/correct_assessment_result.py:77
+msgid "This result is not published; enter it directly."
+msgstr "此成绩尚未公布，请直接录入。"
+
+# key: assessment.errors.correction_pending
+#: actions/correct_assessment_result.py:47
+msgid "A correction request is already pending for this result."
+msgstr "此成绩已有待处理的更正申请。"
+
+# key: grading.errors.request_decided
+#: actions/correct_assessment_result.py:140
+msgid "The request is already decided."
+msgstr "申请已处理。"
+
+# key: assessment.errors.own_correction
+#: actions/correct_assessment_result.py:142
+msgid "You cannot decide your own correction request."
+msgstr "不能审批自己提出的更正申请。"
+
+# key: assessment.errors.not_registered
+#: actions/record_assessment_result.py:55 actions/register_for_assessment.py:138
+msgid "The student is not registered for this session."
+msgstr "该学生未报名此场次。"
+
+# key: assessment.errors.published_locked
+#: actions/record_assessment_result.py:60 actions/record_assessment_result.py:174
+msgid "The results of this session are published: request a correction instead."
+msgstr "此场次成绩已公布，请通过更正申请处理。"
+
+# key: assessment.errors.no_external
+#: actions/record_assessment_result.py:127
+msgid "This kind does not take external results."
+msgstr "此种类不接受外部成绩。"
+
+# key: assessment.errors.future_date
+#: actions/record_assessment_result.py:129 admin/forms.py:296
+msgid "The date cannot be in the future."
+msgstr "考试日期不能是将来。"
+
+# key: assessment.errors.already_published
+#: actions/record_assessment_result.py:201
+msgid "The results of this session are already published."
+msgstr "此场次的成绩已公布。"
+
+# key: assessment.errors.score_missing
+#: actions/record_assessment_result.py:221
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "缺少 %(component)s 的分数。"
+
+# key: assessment.errors.score_range
+#: actions/record_assessment_result.py:226
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "%(component)s 的分数必须在 0 到 %(max)s 之间。"
+
+# key: assessment.errors.total_range
+#: actions/record_assessment_result.py:236
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "总分必须在 0 到 %(max)s 之间。"
+
+# key: assessment.errors.decision_required
+#: actions/record_assessment_result.py:251
+msgid "Choose passed or not passed."
+msgstr "请选择合格或不合格。"
+
+# key: assessment.errors.no_pass_score
+#: actions/record_assessment_result.py:255
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "此种类没有合格分数，请选择合格或不合格。"
+
+# key: assessment.errors.type_inactive
+#: actions/register_for_assessment.py:46
+msgid "This kind of examination is no longer held."
+msgstr "此考试已不再举办。"
+
+# key: assessment.errors.record_inactive
+#: actions/register_for_assessment.py:48
+msgid "Only current students can register."
+msgstr "仅在校生可以报名。"
+
+# key: assessment.errors.registration_closed
+#: actions/register_for_assessment.py:50 actions/register_for_assessment.py:113
+msgid "Registration for this session is closed."
+msgstr "此场次不在报名期间。"
+
+# key: assessment.errors.session_past
+#: actions/register_for_assessment.py:53
+msgid "This session has already been held."
+msgstr "此场次已经举行。"
+
+# key: assessment.errors.already_registered
+#: actions/register_for_assessment.py:55
+msgid "Already registered for this session."
+msgstr "已报名此场次。"
+
+# key: assessment.errors.full
+#: actions/register_for_assessment.py:66
+msgid "This session is full."
+msgstr "名额已满。"
+
+# key: assessment.errors.already_cancelled
+#: actions/register_for_assessment.py:111
+msgid "This registration is already cancelled."
+msgstr "此报名已取消。"
+
+# key: assessment.errors.has_result
+#: actions/register_for_assessment.py:119
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "已录入成绩，无法取消报名。"
+
+# key: assessment.fields.type
+#: admin/common.py:17 admin/corrections.py:118 admin/forms.py:274 admin/results.py:136 admin/sessions.py:191 models/results.py:79 models/sessions.py:43 models/types.py:92 templates/assessment/portal/my_assessments.html:79
+msgctxt "assessment"
+msgid "Kind"
+msgstr "种类"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: admin/corrections.py:44 admin/forms.py:48 admin/forms.py:228 admin/forms.py:279 admin/results.py:50 admin/results.py:158 models/results.py:103 templates/assessment/admin/registrants.html:17 templates/assessment/admin/registrants.html:29 templates/assessment/portal/my_assessments.html:25 templates/assessment/portal/my_assessments.html:82 templates/assessment/portal/my_assessments.html:95
+msgid "Passed"
+msgstr "合格"
+
+# key: assessment.passed.no
+#: admin/corrections.py:44 admin/forms.py:48 templates/assessment/admin/registrants.html:29 templates/assessment/portal/my_assessments.html:95
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "不合格"
+
+# key: registration.fields.status
+#: admin/corrections.py:49 admin/corrections.py:145 models/results.py:226 models/sessions.py:141 templates/assessment/admin/registrants.html:15
+msgctxt "registration"
+msgid "Status"
+msgstr "状态"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/corrections.py:124 admin/forms.py:185 admin/forms.py:272 admin/results.py:140 templates/assessment/admin/registrants.html:13
+msgid "Student number"
+msgstr "学号"
+
+# key: assessment.fields.previous
+#: admin/corrections.py:129 models/results.py:223
+msgid "Current values"
+msgstr "当前值"
+
+# key: assessment.fields.proposed
+#: admin/corrections.py:133 models/results.py:222
+msgid "Proposed values"
+msgstr "更正值"
+
+# key: common.reason
+#: admin/corrections.py:137 admin/forms.py:190 models/results.py:224 models/sessions.py:152
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: grading.fields.requested_by
+#: admin/corrections.py:141
+msgctxt "grading"
+msgid "Requested by"
+msgstr "申请人"
+
+# key: grading.fields.decision_note
+#: admin/corrections.py:149 models/results.py:237
+msgctxt "grading"
+msgid "Note"
+msgstr "处理意见"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/corrections.py:178 admin/corrections.py:191
+msgid "Approve"
+msgstr "批准"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: admin/corrections.py:188 enums.py:40
+msgid "Approved"
+msgstr "已批准"
+
+# key: grading.actions.reject
+#: admin/corrections.py:194 admin/corrections.py:210
+msgctxt "grading"
+msgid "Reject"
+msgstr "驳回"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: admin/corrections.py:204 enums.py:41
+msgid "Rejected"
+msgstr "已驳回"
+
+# key: grading.actions.cancel_request
+#: admin/corrections.py:217 admin/corrections.py:232
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "撤回申请"
+
+# key: validation.alpha_dash
+#: admin/forms.py:42
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s 只能由字母、数字、短划线(-)和下划线(_)组成。"
+
+# key: assessment.fields.note
+#: admin/forms.py:59 models/results.py:105
+msgctxt "assessment"
+msgid "Note"
+msgstr "备注"
+
+# key: authentication.two_factor.code
+#: admin/forms.py:101 admin/forms.py:117 admin/forms.py:132
+msgid "Code"
+msgstr "验证码"
+
+# key: validation.unique
+#: admin/forms.py:132
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s 已经存在。"
+
+# key: assessment.fields.pass_score_reason
+#: admin/forms.py:139
+msgid "Reason for changing the pass score"
+msgstr "更改合格分数的理由"
+
+# key: assessment.help.pass_score_reason
+#: admin/forms.py:142
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "与判定发生变化的学生一起记入审计日志。"
+
+# key: validation.after
+#: admin/forms.py:176
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s 必须要晚于 %(date)s。"
+
+# key: assessment.fields.registration_closes_at
+#: admin/forms.py:177 admin/sessions.py:199 models/sessions.py:48
+msgid "Registration closes"
+msgstr "报名截止"
+
+# key: assessment.fields.registration_opens_at
+#: admin/forms.py:177 models/sessions.py:47
+msgid "Registration opens"
+msgstr "报名开始"
+
+# key: assessment.fields.file
+#: admin/forms.py:198
+msgid "CSV file"
+msgstr "CSV 文件"
+
+#: admin/forms.py:203 admin/forms.py:302
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "文件过大（%(size)s 字节，最多 %(limit)s）。"
+
+# key: assessment.fields.total_score
+#: admin/forms.py:224 admin/forms.py:277 admin/results.py:148 models/results.py:100 templates/assessment/admin/registrants.html:16 templates/assessment/portal/my_assessments.html:80
+msgid "Total"
+msgstr "总分"
+
+# key: assessment.help.decision_automatic
+#: admin/forms.py:233
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "按分数判定：总分不低于 %(score)s 且各领域不低于最低分。"
+
+# key: assessment.fields.taken_date
+#: admin/forms.py:276 models/results.py:99 templates/assessment/portal/my_assessments.html:78
+msgid "Taken on"
+msgstr "考试日期"
+
+# key: assessment.fields.level
+#: admin/forms.py:278 admin/results.py:154 models/results.py:102 templates/assessment/portal/my_assessments.html:81
+msgid "Level"
+msgstr "等级"
+
+# key: assessment.fields.certificate_number
+#: admin/forms.py:281 admin/results.py:162 models/results.py:104
+msgid "Certificate number"
+msgstr "证书编号"
+
+# key: assessment.fields.evidence
+#: admin/forms.py:283 admin/results.py:166 admin/results.py:173 templates/assessment/portal/my_assessments.html:96
+msgid "Evidence"
+msgstr "证明材料"
+
+# key: assessment.fields.source
+#: admin/results.py:39 models/results.py:98
+msgctxt "assessment"
+msgid "Source"
+msgstr "来源"
+
+# key: common.yes
+#: admin/results.py:54 admin/sessions.py:141
+msgid "Yes"
+msgstr "是"
+
+#: admin/results.py:54 admin/sessions.py:141
+msgid "No"
+msgstr "否"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/results.py:144 templates/assessment/admin/registrants.html:14
+msgctxt "people"
+msgid "Name"
+msgstr "姓名"
+
+# key: assessment.actions.record_external
+#: admin/results.py:184 admin/results.py:203 admin/results.py:205
+msgid "Record an external result"
+msgstr "登记外部成绩"
+
+# key: assessment.actions.remove
+#: admin/results.py:207 admin/results.py:218 admin/results.py:224
+msgctxt "assessment"
+msgid "Remove"
+msgstr "删除"
+
+# key: assessment.fields.published_at
+#: admin/sessions.py:137 admin/sessions.py:214 models/sessions.py:63
+msgctxt "assessment"
+msgid "Results published"
+msgstr "成绩公布"
+
+# key: assessment.fields.venue
+#: admin/sessions.py:195 models/sessions.py:46
+msgid "Venue"
+msgstr "地点"
+
+# key: assessment.fields.registrants
+#: admin/sessions.py:205 admin/sessions.py:233 models/sessions.py:159 models/sessions.py:160
+msgid "Registrants"
+msgstr "考生"
+
+# key: assessment.fields.results
+#: admin/sessions.py:210
+msgctxt "assessment"
+msgid "Results"
+msgstr "成绩"
+
+# key: assessment.notifications.rejudged
+#: admin/sessions.py:263
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "重新判定 %(count)s 条成绩：%(passed)s 条变为合格，%(failed)s 条变为不合格。"
+
+# key: security.scope_types.global
+#: admin/sessions.py:279
+msgid "All"
+msgstr "全部"
+
+# key: assessment.actions.publish
+#: admin/sessions.py:323 admin/sessions.py:329 admin/sessions.py:379 admin/sessions.py:394
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "公布成绩"
+
+# key: assessment.help.publish
+#: admin/sessions.py:333
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "从现在起学生可以查看成绩。之后录入的成绩立即可见。"
+
+#: admin/sessions.py:347
+msgid "The file is not UTF-8 text."
+msgstr "该文件不是 UTF-8 文本。"
+
+# key: assessment.notifications.imported
+#: admin/sessions.py:348
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "录入 %(recorded)s 条，缺考 %(absent)s 条，错误 %(errors)s 条。"
+
+# key: assessment.actions.import
+#: admin/sessions.py:364 admin/sessions.py:388 admin/sessions.py:402
+msgid "Import results (CSV)"
+msgstr "导入成绩（CSV）"
+
+# key: assessment.help.import
+#: admin/sessions.py:369
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "带标题行的 CSV：student_number、每个领域代码一列（或 total），可选 passed（Y/N）、absent（Y）、note。未报名学生的行将被跳过。"
+
+# key: assessment.actions.register_student
+#: admin/sessions.py:407 admin/sessions.py:426
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "登记考生"
+
+# key: assessment.registration_statuses.registered
+#: admin/sessions.py:420 enums.py:28
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "已报名"
+
+# key: assessment.actions.enter_result
+#: admin/sessions.py:475 admin/sessions.py:481 templates/assessment/admin/registrants.html:32
+msgid "Enter result"
+msgstr "录入成绩"
+
+# key: assessment.actions.request_correction
+#: admin/sessions.py:496 admin/sessions.py:502 templates/assessment/admin/registrants.html:33
+msgid "Request a correction"
+msgstr "申请更正"
+
+# key: assessment.help.correction
+#: admin/sessions.py:507
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "此场次成绩已公布并锁定。填写新值和理由提出申请，由具有管理权限的其他经办人审批，审批通过即生效。"
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: admin/sessions.py:517 admin/sessions.py:523 enums.py:30 templates/assessment/admin/registrants.html:34
+msgctxt "assessment"
+msgid "Absent"
+msgstr "缺考"
+
+# key: assessment.actions.cancel
+#: admin/sessions.py:534 admin/sessions.py:540 templates/assessment/admin/registrants.html:35
+msgid "Cancel registration"
+msgstr "取消报名"
+
+# key: assessment.fields.components
+#: admin/types.py:44 admin/types.py:45 admin/types.py:110 models/types.py:116 models/types.py:117
+msgid "Areas"
+msgstr "领域"
+
+# key: reference.fields.name
+#: admin/types.py:91 models/types.py:23 models/types.py:99
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: assessment.fields.category
+#: admin/types.py:95 models/types.py:25
+msgid "Category"
+msgstr "类别"
+
+# key: assessment.fields.scoring
+#: admin/types.py:99 models/types.py:28
+msgid "Scoring"
+msgstr "判定方式"
+
+# key: assessment.fields.pass_score
+#: admin/types.py:103 models/sessions.py:52 models/types.py:46
+msgid "Pass score"
+msgstr "合格分数"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: apps.py:20
+msgctxt "portal"
+msgid "Examinations"
+msgstr "语言/综合考试"
+
+# key: assessment.categories.language
+#: enums.py:13
+msgctxt "assessment"
+msgid "Language"
+msgstr "语言"
+
+# key: assessment.categories.comprehensive
+#: enums.py:14
+msgid "Comprehensive"
+msgstr "综合考试"
+
+# key: assessment.categories.thesis
+#: enums.py:15
+msgid "Thesis"
+msgstr "毕业论文"
+
+# key: assessment.categories.external
+#: enums.py:16
+msgid "External test"
+msgstr "外部认证考试"
+
+# key: assessment.scoring_methods.score
+#: enums.py:23 models/results.py:181 models/results.py:188 models/results.py:189
+msgid "Score"
+msgstr "分数"
+
+# key: assessment.scoring_methods.pass_fail
+#: enums.py:24
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "合格/不合格"
+
+# key: assessment.registration_statuses.cancelled
+# key: assessment.correction_statuses.cancelled
+#: enums.py:29 enums.py:42
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "已取消"
+
+# key: assessment.correction_statuses.pending
+#: enums.py:39
+msgctxt "assessment"
+msgid "Pending"
+msgstr "待处理"
+
+# key: assessment.sources.session
+#: enums.py:48
+msgctxt "assessment"
+msgid "Session"
+msgstr "校内场次"
+
+# key: assessment.sources.external
+#: enums.py:49
+msgid "External"
+msgstr "外部"
+
+# key: people.resources.student_records.label
+#: models/results.py:73 models/sessions.py:138
+msgid "student record"
+msgstr "学籍"
+
+# key: assessment.resources.sessions.label
+#: models/results.py:88 models/sessions.py:71 models/sessions.py:132
+msgid "Examination session"
+msgstr "考试场次"
+
+# key: assessment.resources.results.label
+#: models/results.py:116
+msgid "Examination result"
+msgstr "考试成绩"
+
+# key: assessment.resources.results.plural_label
+#: models/results.py:117
+msgid "Examination results"
+msgstr "考试成绩"
+
+# key: grading.fields.requested_at
+#: models/results.py:232
+msgctxt "grading"
+msgid "Requested"
+msgstr "申请时间"
+
+# key: assessment.resources.corrections.label
+#: models/results.py:244
+msgid "Result correction"
+msgstr "成绩更正申请"
+
+# key: assessment.resources.corrections.plural_label
+#: models/results.py:245
+msgid "Result corrections"
+msgstr "成绩更正申请"
+
+# key: assessment.fields.held_date
+#: models/sessions.py:45
+msgctxt "assessment"
+msgid "Date"
+msgstr "考试日期"
+
+# key: assessment.fields.capacity
+#: models/sessions.py:49
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "名额"
+
+# key: assessment.help.session_pass_score
+#: models/sessions.py:58
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "留空则使用种类的合格分数。公布前更改会重新判定已录入的全部成绩；公布后不可更改。"
+
+# key: assessment.resources.sessions.plural_label
+#: models/sessions.py:72
+msgid "Examination sessions"
+msgstr "考试场次"
+
+# key: assessment.fields.registered_at
+#: models/sessions.py:146 templates/assessment/admin/registrants.html:18
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "报名时间"
+
+# key: reference.fields.code
+#: models/types.py:22 models/types.py:95
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: assessment.help.scoring
+#: models/types.py:33
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "分数：各领域分数（或总分）与合格分数比较，且每个领域不低于其最低分。合格/不合格：由经办人逐人判定。"
+
+# key: assessment.fields.max_score
+#: models/types.py:38 models/types.py:100
+msgid "Maximum score"
+msgstr "满分"
+
+# key: assessment.help.max_score
+#: models/types.py:43
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "用于没有领域的种类。有领域时满分为各领域满分之和。"
+
+# key: assessment.help.pass_score
+#: models/types.py:51
+msgid "Total needed to pass. A session can override it."
+msgstr "合格所需总分。场次可以覆盖。"
+
+# key: assessment.fields.allows_external
+#: models/types.py:54
+msgid "External results"
+msgstr "外部成绩"
+
+# key: assessment.help.allows_external
+#: models/types.py:56
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "可登记外部机构考试（TOPIK、HSK 等）的成绩并附证明文件。"
+
+# key: reference.fields.is_active
+#: models/types.py:58
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "启用"
+
+# key: reference.fields.sort_order
+#: models/types.py:59 models/types.py:109
+msgid "Order"
+msgstr "排序"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: models/types.py:66
+msgid "Examination kind"
+msgstr "考试种类"
+
+# key: assessment.resources.types.plural_label
+#: models/types.py:67
+msgid "Examination kinds"
+msgstr "考试种类"
+
+# key: assessment.help.component_code
+#: models/types.py:97
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "成绩 CSV 中的列名，例如 LISTENING。"
+
+# key: assessment.fields.min_score
+#: models/types.py:102
+msgid "Minimum to pass"
+msgstr "领域最低分"
+
+# key: assessment.help.min_score
+#: models/types.py:107
+msgid "Below this the student fails whatever the total."
+msgstr "低于此分数即不合格，与总分无关。"
+
+# key: common.none
+#: templates/assessment/admin/registrants.html:39
+msgctxt "common"
+msgid "None"
+msgstr "无"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: templates/assessment/portal/my_assessments.html:9 views/portal.py:93
+msgid "Examinations"
+msgstr "语言/综合考试"
+
+# key: assessment.portal.intro
+#: templates/assessment/portal/my_assessments.html:10
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "报名考试场次，并在成绩公布后查看。"
+
+# key: assessment.portal.required
+#: templates/assessment/portal/my_assessments.html:21
+msgid "Required by your curriculum"
+msgstr "培养方案毕业要求"
+
+# key: assessment.portal.not_yet
+#: templates/assessment/portal/my_assessments.html:25
+msgid "Not yet"
+msgstr "未合格"
+
+# key: assessment.portal.open_sessions
+#: templates/assessment/portal/my_assessments.html:34
+msgid "Open for registration"
+msgstr "报名中的场次"
+
+# key: assessment.portal.closes
+#: templates/assessment/portal/my_assessments.html:40
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "报名截止 %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: templates/assessment/portal/my_assessments.html:43
+msgid "Cancel this registration?"
+msgstr "取消此报名？"
+
+# key: assessment.portal.cancel
+#: templates/assessment/portal/my_assessments.html:48
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "取消"
+
+# key: assessment.portal.register
+#: templates/assessment/portal/my_assessments.html:52
+msgctxt "assessment"
+msgid "Register"
+msgstr "报名"
+
+# key: assessment.portal.no_open_sessions
+#: templates/assessment/portal/my_assessments.html:57
+msgid "No session is open for registration."
+msgstr "没有正在报名的场次。"
+
+# key: assessment.portal.my_registrations
+#: templates/assessment/portal/my_assessments.html:62
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "我的报名"
+
+# key: assessment.portal.no_registrations
+#: templates/assessment/portal/my_assessments.html:69
+msgid "No registrations."
+msgstr "没有报名记录。"
+
+# key: assessment.portal.my_results
+#: templates/assessment/portal/my_assessments.html:74
+msgid "My results"
+msgstr "我的成绩"
+
+# key: assessment.portal.no_results
+#: templates/assessment/portal/my_assessments.html:99
+msgid "No results yet."
+msgstr "暂无成绩。"
+
+# key: assessment.portal.registered
+#: views/portal.py:122
+msgid "You are registered."
+msgstr "已报名。"
+
+# key: assessment.portal.cancelled
+#: views/portal.py:130
+msgid "Your registration is cancelled."
+msgstr "已取消报名。"

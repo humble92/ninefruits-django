@@ -95,8 +95,15 @@ class CurriculumRequirement(TimeStampedModel):
         related_name="requirements",
         verbose_name=_("Course category"),
     )
-    #: ``assessment_types`` (Phase 9). A plain id until the assessment model exists.
-    assessment_type_id = models.BigIntegerField(_("Examination kind"), null=True, blank=True)
+    #: The kind to pass for ``assessment_pass`` requirements (Phase 9).
+    assessment_type = models.ForeignKey(
+        "assessment.AssessmentType",
+        on_delete=models.RESTRICT,
+        null=True,
+        blank=True,
+        related_name="requirements",
+        verbose_name=_("Examination kind"),
+    )
     min_credits = models.DecimalField(
         pgettext_lazy("curriculum", "Minimum credits"), max_digits=5, decimal_places=1, null=True, blank=True
     )

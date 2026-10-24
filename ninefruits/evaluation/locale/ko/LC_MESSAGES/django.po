@@ -1,0 +1,490 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: evaluation.errors.form_in_use
+#: actions/manage_term_evaluation.py:48
+msgid "The term already has responses with its form."
+msgstr "이 학기에는 이미 해당 양식으로 응답이 있습니다."
+
+# key: evaluation.errors.not_open
+#: actions/submit_evaluation.py:53
+msgid "The course evaluation is not open for this course."
+msgstr "이 과목의 강의평가 기간이 아닙니다."
+
+# key: evaluation.errors.already_done
+#: actions/submit_evaluation.py:54
+msgid "You have already evaluated this course."
+msgstr "이미 평가한 과목입니다."
+
+# key: evaluation.errors.invalid_answer
+#: actions/submit_evaluation.py:89
+msgid "An answer is not valid."
+msgstr "올바르지 않은 응답이 있습니다."
+
+# key: evaluation.errors.missing_answers
+#: actions/submit_evaluation.py:96
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "필수 문항에 모두 답해 주세요(%(count)s개 남음)."
+
+# key: evaluation.errors.uniform_answers
+#: actions/submit_evaluation.py:100
+msgid "Every answer is the same. Please answer each question."
+msgstr "모든 응답이 같습니다. 문항마다 답해 주세요."
+
+# key: validation.alpha_dash
+#: admin/forms.py:36
+#, python-format
+msgid ""
+"The %(attribute)s field must only contain letters, numbers, dashes, and "
+"underscores."
+msgstr "%(attribute)s은(는) 문자, 숫자, 대쉬(-), 밑줄(_)만 포함할 수 있습니다."
+
+# key: reference.fields.code
+#: admin/forms.py:37 admin/forms.py:59 admin/forms.py:68 models/forms.py:34
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: validation.unique
+#: admin/forms.py:68
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s은(는) 이미 사용 중입니다."
+
+# key: evaluation.fields.question
+#: admin/forms.py:81 models/forms.py:75 models/forms.py:91
+#: templates/evaluation/portal/section_evaluation.html:33
+msgid "Question"
+msgstr "문항"
+
+# key: evaluation.fields.questions
+#: admin/forms.py:82 admin/forms.py:133 models/forms.py:92
+msgid "Questions"
+msgstr "문항"
+
+# key: reference.fields.name
+#: admin/forms.py:129 models/forms.py:35
+msgctxt "reference"
+msgid "Name"
+msgstr "이름"
+
+# key: evaluation.actions.copy_form
+#: admin/forms.py:140 admin/forms.py:155
+msgid "Copy form"
+msgstr "양식 복사"
+
+# key: security.scope_types.global
+#: admin/sections.py:36
+msgid "All"
+msgstr "전체"
+
+# key: offering.fields.offering_unit
+#: admin/sections.py:50
+msgid "Offering unit"
+msgstr "개설 조직"
+
+# key: offering.fields.section
+#: admin/sections.py:119
+msgctxt "offering"
+msgid "Section"
+msgstr "강좌"
+
+# key: curriculum.fields.title
+#: admin/sections.py:123
+msgctxt "curriculum"
+msgid "Title"
+msgstr "교과목명"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: admin/sections.py:127
+msgid "Instructors"
+msgstr "담당 교원"
+
+# key: evaluation.fields.responses
+#: admin/sections.py:132 admin/terms.py:137
+msgid "Responses"
+msgstr "응답"
+
+# key: evaluation.fields.response_rate
+#: admin/sections.py:136
+msgid "Response rate"
+msgstr "응답률"
+
+# key: evaluation.results.open
+#: admin/sections.py:148 views/portal.py:67
+msgctxt "evaluation"
+msgid "Results"
+msgstr "결과"
+
+# key: reference.resources.terms.label
+#: admin/terms.py:46 admin/terms.py:125 models/term.py:19
+msgid "term"
+msgstr "학기"
+
+# key: evaluation.resources.forms.label
+#: admin/terms.py:48 admin/terms.py:129 models/forms.py:51 models/forms.py:71
+#: models/term.py:26
+msgid "evaluation form"
+msgstr "강의평가 양식"
+
+# key: evaluation.fields.minimum_responses
+#: admin/terms.py:51 admin/terms.py:133 models/term.py:29 settings_pages.py:33
+msgid "Minimum responses"
+msgstr "최소 응답 수"
+
+# key: evaluation.help.minimum_responses
+#: admin/terms.py:57 models/term.py:33
+msgid ""
+"A section's results show only with at least this many responses and this "
+"response rate, so few answers cannot point to a student."
+msgstr "응답 수와 응답률이 이 값 이상인 강좌만 결과를 보여 준다. 응답이 적으면 학생을 짐작할 수 있기 때문이다."
+
+# key: evaluation.fields.minimum_response_percent
+#: admin/terms.py:62 models/term.py:38 settings_pages.py:40
+msgid "Minimum response rate (%)"
+msgstr "최소 응답률(%)"
+
+# key: common.saved
+#: admin/terms.py:165
+msgid "Saved"
+msgstr "저장되었습니다"
+
+# key: evaluation.actions.prepare
+#: admin/terms.py:177 admin/terms.py:179
+msgid "Set up a term"
+msgstr "학기 강의평가 설정"
+
+# key: evaluation.actions.change
+#: admin/terms.py:182 admin/terms.py:186
+msgctxt "evaluation"
+msgid "Change"
+msgstr "변경"
+
+# key: evaluation.actions.publish
+#: admin/terms.py:192 admin/terms.py:214
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "결과 공개"
+
+# not in the original
+#: admin/terms.py:202
+msgid "Already published."
+msgstr "이미 공개했습니다."
+
+# key: evaluation.help.publish
+#: admin/terms.py:208 admin/terms.py:218
+msgid ""
+"Instructors see their sections' results from now on (sections with enough "
+"responses)."
+msgstr "지금부터 교원이 담당 강좌의 결과를 본다(응답이 충분한 강좌)."
+
+# key: evaluation.portal.title
+#: apps.py:24 templates/evaluation/portal/evaluations.html:9
+#: views/portal.py:92 views/portal.py:167
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "강의평가"
+
+# key: evaluation.question_types.scale
+#: enums.py:12
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "척도"
+
+# key: evaluation.question_types.text
+#: enums.py:13
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "주관식"
+
+# key: evaluation.fields.description
+#: models/forms.py:37
+msgctxt "evaluation"
+msgid "Description"
+msgstr "설명"
+
+# key: evaluation.fields.scale_points
+#: models/forms.py:40
+msgid "Scale points"
+msgstr "척도 점수"
+
+# key: evaluation.fields.scale_low_label
+#: models/forms.py:42
+msgid "Label of 1"
+msgstr "1점 설명"
+
+# key: evaluation.fields.scale_high_label
+#: models/forms.py:43
+msgid "Label of the highest point"
+msgstr "최고점 설명"
+
+# key: reference.fields.is_active
+#: models/forms.py:44
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: evaluation.resources.forms.plural_label
+#: models/forms.py:52
+msgid "evaluation forms"
+msgstr "강의평가 양식"
+
+# key: reference.fields.sort_order
+#: models/forms.py:73
+msgid "Order"
+msgstr "순서"
+
+# key: evaluation.fields.category
+#: models/forms.py:74
+msgid "Area"
+msgstr "영역"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: models/forms.py:77
+msgid "Type"
+msgstr "유형"
+
+# key: evaluation.fields.is_required
+#: models/forms.py:79
+msgctxt "evaluation"
+msgid "Required"
+msgstr "필수"
+
+# key: evaluation.fields.is_reversed
+#: models/forms.py:81
+msgid "Reversed"
+msgstr "역문항"
+
+# key: evaluation.help.is_reversed
+#: models/forms.py:83
+msgid ""
+"For negatively worded questions: the answer is reversed in averages (5 "
+"counts as 1)."
+msgstr "부정형 문항. 평균을 낼 때 응답을 뒤집는다(5점은 1점으로)."
+
+# key: evaluation.resources.sections.label
+#: models/section.py:32
+msgid "section response"
+msgstr "강좌별 응답"
+
+# key: evaluation.resources.sections.plural_label
+#: models/section.py:33
+msgid "responses by section"
+msgstr "강좌별 응답"
+
+# key: evaluation.fields.published_at
+#: models/term.py:41
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "결과 공개"
+
+# key: evaluation.resources.terms.label
+#: models/term.py:52
+msgid "term evaluation"
+msgstr "학기 강의평가"
+
+# key: evaluation.resources.terms.plural_label
+#: models/term.py:53
+msgid "term evaluations"
+msgstr "학기 강의평가"
+
+# key: security.email_code.mail_greeting
+#: notifications.py:32
+msgid "Hello,"
+msgstr "안녕하세요."
+
+# key: evaluation.mail.reminder_intro
+#: notifications.py:34
+msgid "Please evaluate these courses:"
+msgstr "아래 과목의 강의평가를 해 주세요."
+
+# key: evaluation.mail.reminder_anonymous
+#: notifications.py:37
+msgid "Your answers are anonymous."
+msgstr "응답은 익명으로 처리됩니다."
+
+# key: security.email_code.mail_salutation
+#: notifications.py:41
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"감사합니다.\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: notifications.py:43
+msgid "Course evaluation is open"
+msgstr "강의평가 기간 안내"
+
+# key: evaluation.settings.grades_require_evaluation
+#: settings_pages.py:21
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "강의평가를 마칠 때까지 그 학기 성적을 가림"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: settings_pages.py:24
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "평가 기간 동안만 가린다. 기간이 끝나면 성적이 보인다."
+
+# key: evaluation.settings.reject_uniform_answers
+#: settings_pages.py:27
+msgid "Refuse the same answer to every question"
+msgstr "모든 문항에 같은 답이면 거부"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: settings_pages.py:30
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "레거시는 모두 1점이나 모두 5점인 응답을 거부했다."
+
+# key: evaluation.settings.minimum_help
+#: settings_pages.py:37
+msgid "Defaults for a new term's evaluation."
+msgstr "새 학기 강의평가의 기본값."
+
+# key: evaluation.settings.title
+#: settings_pages.py:49
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "강의평가"
+
+# key: evaluation.portal.anonymous
+#: templates/evaluation/portal/evaluations.html:10
+msgid ""
+"Your answers are anonymous. Instructors see only totals, after the results "
+"are published."
+msgstr "응답은 익명입니다. 교원은 결과 공개 후 집계만 봅니다."
+
+# key: evaluation.portal.submit_confirm
+#: templates/evaluation/portal/evaluations.html:20
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "강의평가를 제출할까요? 제출 후에는 바꿀 수 없습니다."
+
+# key: evaluation.portal.back
+#: templates/evaluation/portal/evaluations.html:25
+msgid "Back"
+msgstr "목록으로"
+
+# key: evaluation.portal.optional
+#: templates/evaluation/portal/evaluations.html:37
+msgid "optional"
+msgstr "선택"
+
+# key: evaluation.portal.submit
+#: templates/evaluation/portal/evaluations.html:52
+msgid "Submit"
+msgstr "제출"
+
+# key: evaluation.portal.done
+#: templates/evaluation/portal/evaluations.html:60
+msgid "Done"
+msgstr "완료"
+
+# key: evaluation.portal.evaluate
+#: templates/evaluation/portal/evaluations.html:62
+msgid "Evaluate"
+msgstr "평가하기"
+
+# key: evaluation.portal.none_open
+#: templates/evaluation/portal/evaluations.html:66
+msgid "No course evaluation is open for you."
+msgstr "지금 할 수 있는 강의평가가 없습니다."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: templates/evaluation/portal/section_evaluation.html:9
+msgid "My teaching"
+msgstr "담당 강좌"
+
+# key: evaluation.results.title
+#: templates/evaluation/portal/section_evaluation.html:10 views/portal.py:71
+msgid "Course evaluation results"
+msgstr "강의평가 결과"
+
+# key: evaluation.results.responses
+#: templates/evaluation/portal/section_evaluation.html:13
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(expected)s명 중 %(responses)s명 응답(%(rate)s%%)"
+
+# key: evaluation.results.overall
+#: templates/evaluation/portal/section_evaluation.html:15
+#, python-format
+msgid "overall %(mean)s"
+msgstr "전체 평균 %(mean)s"
+
+# key: evaluation.results.not_published
+#: templates/evaluation/portal/section_evaluation.html:23
+msgid "The results are not published yet."
+msgstr "아직 결과가 공개되지 않았습니다."
+
+# key: evaluation.results.too_few
+#: templates/evaluation/portal/section_evaluation.html:25
+#, python-format
+msgid ""
+"Too few responses to show results (at least %(minimum)s and %(percent)s%% "
+"are needed)."
+msgstr "응답이 적어 결과를 보여 주지 않습니다(최소 %(minimum)s명, %(percent)s%% 필요)."
+
+# key: evaluation.results.mean
+#: templates/evaluation/portal/section_evaluation.html:34
+msgid "Mean"
+msgstr "평균"
+
+# key: evaluation.results.reversed
+#: templates/evaluation/portal/section_evaluation.html:41
+msgid "reversed"
+msgstr "역문항"
+
+# key: common.none
+#: templates/evaluation/portal/section_evaluation.html:56
+msgctxt "common"
+msgid "None"
+msgstr "없음"
+
+# key: evaluation.results.not_yet
+#: views/portal.py:69
+msgid "Not published"
+msgstr "미공개"
+
+# key: evaluation.grades_hidden
+#: views/portal.py:79
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "%(term)s 성적은 그 학기 강의평가를 마치면 볼 수 있습니다."
+
+# key: evaluation.portal.submitted
+#: views/portal.py:131
+msgid "Thank you. Your evaluation was submitted."
+msgstr "제출했습니다. 감사합니다."
+
+# key: reference.resources.lookup_values.label
+#~ msgid "code"
+#~ msgstr "코드 값"
+
+# key: admissions.fields.is_published
+# key: offering.section_statuses.published
+# key: reference.term_statuses.published
+#~ msgid "Published"
+#~ msgstr "공개"

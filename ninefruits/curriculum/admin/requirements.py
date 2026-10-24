@@ -6,7 +6,6 @@ from __future__ import annotations
 from typing import Any, ClassVar
 
 from django import forms
-from django.apps import apps
 from django.contrib import admin
 from django.db.models import Count
 from django.http import HttpRequest
@@ -18,6 +17,7 @@ from unfold.widgets import UnfoldAdminSelectMultipleWidget
 
 from ninefruits.adminpanel.mixins import CatalogPermissionMixin
 from ninefruits.adminpanel.navigation import NavigationGroup
+from ninefruits.assessment.models import AssessmentType
 from ninefruits.curriculum.enums import ProgramRole, RequirementKind
 from ninefruits.curriculum.models import Course, CourseCategory, CurriculumRequirement, CurriculumRequirementSet
 from ninefruits.institution.admin_support import ReferenceAdmin
@@ -75,15 +75,6 @@ class RequirementSetForm(forms.ModelForm):  # type: ignore[type-arg]
         return cleaned
 
 
-def _assessment_type_choices() -> list[tuple[Any, str]] | None:
-    """Examination kinds (Phase 9). ``None`` until the assessment app has them."""
-    try:
-        model = apps.get_model("assessment", "AssessmentType")
-    except LookupError:
-        return None
-    return [(row.pk, str(row)) for row in model._default_manager.filter(is_active=True).order_by("sort_order")]
-
-
 class RequirementForm(forms.ModelForm):  # type: ignore[type-arg]
     course_ids = forms.ModelMultipleChoiceField(
         label=pgettext_lazy("curriculum", "courses"),
@@ -94,7 +85,7 @@ class RequirementForm(forms.ModelForm):  # type: ignore[type-arg]
 
     class Meta:
         model = CurriculumRequirement
-        fields = ("kind", "category", "assessment_type_id", "min_credits", "min_courses", "name", "sort_order")
+        fields = ("kind", "category", "assessment_type", "min_credits", "min_courses", "name", "sort_order")
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
@@ -104,17 +95,11 @@ class RequirementForm(forms.ModelForm):  # type: ignore[type-arg]
         courses.label_from_instance = lambda course: course.code  # type: ignore[attr-defined]
         if self.instance.pk:
             self.initial["course_ids"] = list(self.instance.courses.values_list("pk", flat=True))
-        choices = _assessment_type_choices()
-        if choices is None:
-            self.fields["assessment_type_id"].widget = forms.HiddenInput()
-        else:
-            self.fields["assessment_type_id"] = forms.TypedChoiceField(
-                label=_("Examination kind"),
-                choices=[("", "-"), *choices],
-                coerce=int,
-                required=False,
-                empty_value=None,
-            )
+        # Active kinds (original ``AssessmentType::where('is_active', true)``), plus the current one.
+        kinds = AssessmentType.objects.filter(is_active=True)
+        if self.instance.assessment_type_id is not None:
+            kinds = kinds | AssessmentType.objects.filter(pk=self.instance.assessment_type_id)
+        self.fields["assessment_type"].queryset = kinds.order_by("sort_order", "code")  # type: ignore[attr-defined]
         if "min_courses" in self.fields:
             from django.core.validators import MinValueValidator
 
@@ -130,21 +115,21 @@ class RequirementForm(forms.ModelForm):  # type: ignore[type-arg]
                 self.add_error("category", required % {"attribute": _("Course category")})
             if cleaned.get("min_credits") is None:
                 self.add_error("min_credits", required % {"attribute": pgettext_lazy("curriculum", "Minimum credits")})
-            cleaned.update(assessment_type_id=None, min_courses=None, course_ids=[])
+            cleaned.update(assessment_type=None, min_courses=None, course_ids=[])
         elif kind == RequirementKind.REQUIRED_COURSES:
-            cleaned.update(category=None, assessment_type_id=None, min_credits=None, min_courses=None)
+            cleaned.update(category=None, assessment_type=None, min_credits=None, min_courses=None)
         elif kind == RequirementKind.COURSE_GROUP:
             if cleaned.get("min_credits") is None and cleaned.get("min_courses") is None:
                 self.add_error("min_credits", required % {"attribute": pgettext_lazy("curriculum", "Minimum credits")})
-            cleaned.update(category=None, assessment_type_id=None)
+            cleaned.update(category=None, assessment_type=None)
         elif kind == RequirementKind.ASSESSMENT_PASS:
-            if cleaned.get("assessment_type_id") is None:
-                self.add_error("assessment_type_id", required % {"attribute": _("Examination kind")})
+            if cleaned.get("assessment_type") is None:
+                self.add_error("assessment_type", required % {"attribute": _("Examination kind")})
             cleaned.update(category=None, min_credits=None, min_courses=None, course_ids=[])
         return cleaned
 
     def _post_clean(self) -> None:
-        for name in ("category", "assessment_type_id", "min_credits", "min_courses"):
+        for name in ("category", "assessment_type", "min_credits", "min_courses"):
             if name in self.cleaned_data:
                 setattr(self.instance, name, self.cleaned_data[name])
         super()._post_clean()
@@ -163,7 +148,7 @@ class RequirementInline(CatalogPermissionMixin, StackedInline):  # type: ignore[
     ordering = ("sort_order", "id")
     fields = (
         ("kind", "sort_order"),
-        ("category", "assessment_type_id"),
+        ("category", "assessment_type"),
         ("min_credits", "min_courses"),
         "course_ids",
         "name",

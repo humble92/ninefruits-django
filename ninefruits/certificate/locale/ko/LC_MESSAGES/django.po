@@ -1,0 +1,540 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: certificate.errors.type_inactive
+#: actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "더 이상 발급하지 않는 종류입니다."
+
+# key: certificate.errors.hold
+#: actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "증명서 발급 제한이 걸려 있습니다. 먼저 해제하세요."
+
+# key: certificate.errors.no_template
+#: actions/issue_certificate.py services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "이 종류에는 \"%(locale)s\" 언어 서식이 없습니다."
+
+# key: certificate.errors.already_revoked
+#: actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "이미 취소된 증명서입니다."
+
+# key: registration.errors.reason_required
+#: actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "사유를 입력하세요."
+
+# key: certificate.errors.audience
+#: actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "이 증명서는 %(audience)s 에게만 발급합니다."
+
+# key: certificate.fields.type
+#: admin/common.py admin/issues.py models.py
+#: templates/certificate/portal/my_certificates.html
+#: templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "종류"
+
+# key: common.language
+#: admin/common.py admin/types.py models.py
+msgctxt "common"
+msgid "Language"
+msgstr "언어"
+
+# key: certificate.fields.purpose
+#: admin/common.py admin/issues.py models.py
+msgid "Purpose"
+msgstr "용도"
+
+# key: certificate.fields.copies
+#: admin/common.py models.py
+msgid "Copies"
+msgstr "매수"
+
+# key: common.reason
+#: admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: registration.fields.status
+#: admin/issues.py models.py templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "상태"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/issues.py services/renderer.py
+msgid "Student number"
+msgstr "학번"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "이름"
+
+# key: certificate.fields.issued_by
+#: admin/issues.py models.py
+msgid "Issued by"
+msgstr "발급 담당자"
+
+# key: certificate.actions.download
+#: admin/issues.py admin/student_record.py
+#: templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: admin/issues.py
+msgid "Verification page"
+msgstr "진위 확인 페이지"
+
+# key: certificate.actions.rerender
+#: admin/issues.py
+msgid "Render again"
+msgstr "다시 만들기"
+
+#: admin/issues.py admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF를 만들지 못했습니다. 잠시 후 다시 시도하세요."
+
+# key: common.saved
+#: admin/issues.py
+msgid "Saved"
+msgstr "저장되었습니다"
+
+# key: certificate.help.rerender
+#: admin/issues.py
+msgid ""
+"Renders the PDF again from the current data and template. The serial number "
+"and verification code stay."
+msgstr "현재 데이터와 서식으로 PDF를 다시 만든다. 발급번호와 확인 코드는 그대로다."
+
+# key: certificate.actions.revoke
+#: admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "취소"
+
+# key: certificate.actions.issue
+#: admin/student_record.py
+msgid "Issue certificate"
+msgstr "증명서 발급"
+
+# key: certificate.notifications.issued
+#: admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "증명서 %(serial)s 을(를) 발급했습니다."
+
+# key: reference.fields.code
+#: admin/types.py models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: certificate.help.code
+#: admin/types.py models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "발급번호에 쓴다. 예: ENR, GRD, TRN"
+
+# key: certificate.help.body
+#: admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "빈 줄로 문단을 나눈다. 치환 항목: %(placeholders)s"
+
+# key: certificate.fields.templates
+#: admin/types.py models.py
+msgid "Templates"
+msgstr "서식"
+
+# key: reference.fields.name
+#: admin/types.py models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "이름"
+
+# key: certificate.fields.audience
+#: admin/types.py models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "대상"
+
+# key: portal.navigation.certificates
+#: apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "증명서"
+
+# key: certificate.audiences.any
+#: enums.py
+msgid "Any student record"
+msgstr "모든 학적"
+
+# key: certificate.audiences.enrolled
+#: enums.py
+msgid "Students (not graduated)"
+msgstr "재학생(졸업 전)"
+
+# key: certificate.audiences.graduated
+#: enums.py
+msgid "Graduates"
+msgstr "졸업생"
+
+# key: certificate.statuses.issued
+#: enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "발급"
+
+# key: certificate.statuses.revoked
+#: enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "취소"
+
+# key: certificate.verify.invalid_unknown
+#: enums.py
+msgid "No certificate matches this code."
+msgstr "이 코드에 해당하는 증명서가 없습니다."
+
+# key: certificate.verify.invalid_revoked
+#: enums.py
+msgid "This certificate has been revoked."
+msgstr "취소된 증명서입니다."
+
+# key: certificate.verify.invalid_expired
+#: enums.py
+msgid ""
+"The verification period for this certificate has ended. Ask the holder for a"
+" current one."
+msgstr "진위 확인 기간이 지났습니다. 새 증명서를 요청하세요."
+
+# key: certificate.fields.has_grades
+#: models.py
+msgid "Includes grades"
+msgstr "성적 포함"
+
+# key: certificate.help.has_grades
+#: models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "학기별 확정 성적 표를 붙인다(성적증명서)."
+
+# key: certificate.fields.has_photo
+#: models.py
+msgid "Includes photo"
+msgstr "사진 포함"
+
+# key: reference.fields.is_active
+#: models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: reference.fields.sort_order
+#: models.py
+msgid "Order"
+msgstr "순서"
+
+# key: certificate.resources.types.label
+#: models.py
+msgid "Certificate kind"
+msgstr "증명서 종류"
+
+# key: certificate.resources.types.plural_label
+#: models.py
+msgid "Certificate kinds"
+msgstr "증명서 종류"
+
+# key: certificate.fields.title
+#: models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "제목"
+
+# key: certificate.fields.body
+#: models.py
+msgid "Body"
+msgstr "본문"
+
+# key: certificate.fields.footer
+#: models.py
+msgid "Footer"
+msgstr "하단 문구"
+
+# key: certificate.fields.signer
+#: models.py
+msgid "Signer"
+msgstr "발급자"
+
+# key: certificate.help.signer
+#: models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "이 언어에서 증명서 설정의 발급자 대신 쓴다."
+
+# key: people.resources.student_records.label
+#: models.py
+msgid "student record"
+msgstr "학적"
+
+# key: certificate.fields.serial_number
+#: models.py templates/certificate/portal/my_certificates.html
+#: templates/certificate/verify.html
+msgid "Serial number"
+msgstr "발급번호"
+
+# key: certificate.verify.code
+#: models.py templates/certificate/verify.html
+msgid "Verification code"
+msgstr "확인 코드"
+
+# key: certificate.fields.issued_at
+#: models.py templates/certificate/portal/my_certificates.html
+#: templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "발급일"
+
+# key: certificate.resources.issues.label
+#: models.py
+msgid "Issued certificate"
+msgstr "발급 대장"
+
+# key: certificate.resources.issues.plural_label
+#: models.py
+msgid "Issued certificates"
+msgstr "발급 대장"
+
+# key: certificate.facts.student_name
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "성명"
+
+# key: certificate.facts.birth_date
+#: services/renderer.py
+msgid "Date of birth"
+msgstr "생년월일"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: services/renderer.py
+msgid "Gender"
+msgstr "성별"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: services/renderer.py
+msgid "Nationality"
+msgstr "국적"
+
+# key: certificate.facts.program
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "과정"
+
+# key: certificate.facts.admission_date
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "입학일"
+
+# key: certificate.facts.graduation_date
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "졸업일"
+
+# key: certificate.facts.status
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "학적 상태"
+
+# key: certificate.facts.year_level
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "학년"
+
+# key: certificate.settings.serial_pattern
+#: settings_pages.py
+msgid "Serial number pattern"
+msgstr "발급번호 형식"
+
+# key: certificate.settings.serial_pattern_help
+#: settings_pages.py
+#, python-brace-format
+msgid ""
+"Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 "
+"digits (required). The sequence restarts for each distinct prefix, so "
+"{TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr ""
+"항목: {TYPE} 종류 코드, {YYYY} 또는 {YY} 연도, {SEQ:6} 6자리 일련번호(필수). 일련번호는 접두어가 다를 때마다"
+" 새로 시작한다. {TYPE}-{YYYY}-{SEQ:6}이면 종류와 연도별로 센다."
+
+# key: certificate.settings.verification_valid_days
+#: settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "진위 확인 유효 기간(일)"
+
+# key: certificate.settings.verification_valid_days_help
+#: settings_pages.py
+msgid ""
+"0 = always. After this many days the verification page reports the "
+"certificate as expired."
+msgstr "0 = 항상. 이 기간이 지나면 진위 확인 페이지에 기간 만료로 나온다."
+
+# key: certificate.settings.signer
+#: settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "발급자(%(locale)s)"
+
+# key: certificate.settings.title
+#: settings_pages.py
+msgid "Certificate settings"
+msgstr "증명서 설정"
+
+# key: certificate.settings.signers
+#: settings_pages.py
+msgid "Signer by language"
+msgstr "언어별 발급자"
+
+# key: certificate.settings.signers_help
+#: settings_pages.py
+msgid ""
+"Printed above the seal, e.g. \"President, Ninefruits University\". A "
+"template can override it."
+msgstr "직인 위에 인쇄한다. 예: \"나인프루츠대학교 총장\". 서식에서 바꿀 수 있다."
+
+# key: certificate.pdf.serial
+#: templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "제"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "교과목 코드"
+
+# key: curriculum.fields.title
+#: templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "교과목명"
+
+# key: curriculum.fields.credits
+#: templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "학점"
+
+# key: grading.fields.grade
+#: templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "성적"
+
+# key: grading.grades.term_summary
+#: templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "평점 %(gpa)s · 신청 %(attempted)s학점 중 %(earned)s학점 취득"
+
+# key: grading.fields.cumulative_gpa
+#: templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "누적 평점"
+
+# key: grading.fields.earned_credits
+#: templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "취득 학점"
+
+# key: certificate.pdf.verify
+#: templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "이 증명서의 진위는 %(url)s 에서 확인할 수 있습니다."
+
+# key: certificate.portal.title
+#: templates/certificate/portal/my_certificates.html views/portal.py
+msgid "My certificates"
+msgstr "내 증명서"
+
+# key: certificate.portal.intro
+#: templates/certificate/portal/my_certificates.html
+msgid ""
+"Certificates issued to you by the registrar. Ask the registrar for a new "
+"one."
+msgstr "학사 담당 부서가 발급한 증명서입니다. 새 증명서는 담당 부서에 신청하세요."
+
+# key: certificate.portal.none
+#: templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "발급된 증명서가 없습니다."
+
+# key: certificate.verify.title
+#: templates/certificate/verify.html views/public.py
+msgid "Certificate verification"
+msgstr "증명서 진위 확인"
+
+# key: certificate.verify.intro
+#: templates/certificate/verify.html
+msgid ""
+"Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "증명서에 인쇄된 확인 코드를 입력하거나 QR 코드를 스캔하세요."
+
+# key: certificate.verify.check
+#: templates/certificate/verify.html
+msgid "Check"
+msgstr "확인"
+
+# key: certificate.verify.valid
+#: templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "본교가 발급한 유효한 증명서입니다."
+
+# key: certificate.verify.holder
+#: templates/certificate/verify.html
+msgid "Holder"
+msgstr "명의자"
+
+# key: registration.errors.too_many_requests
+#: views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "요청이 너무 많습니다. 1분 뒤에 다시 시도하세요."

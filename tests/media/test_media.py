@@ -216,3 +216,18 @@ def test_treats_unknown_owner_types_as_orphans() -> None:
     Media.objects.filter(pk=media.pk).update(model_type="App\\Models\\Person\\Person")
 
     assert services.prune_orphans(dry_run=True).rows == 1
+
+
+def test_replaces_an_orphaned_file_left_at_a_new_rows_path(private_storage: Path) -> None:
+    """A storage reused by a re-created database still holds files at ``<id>/<name>`` paths
+    that no row owns; storing a new file there replaces the orphan (spatie overwrote it)."""
+    owner = make_user()
+    first = add_media_from_bytes(owner, PDF_BYTES, "a.pdf", "documents")
+    orphan = private_storage / str(first.pk + 1) / "b.pdf"
+    orphan.parent.mkdir(parents=True)
+    orphan.write_bytes(b"stale file from an earlier database")
+
+    second = add_media_from_bytes(owner, PDF_BYTES, "b.pdf", "documents")
+
+    assert second.pk == first.pk + 1
+    assert (private_storage / str(second.pk) / "b.pdf").read_bytes() == PDF_BYTES

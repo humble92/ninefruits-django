@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import contextlib
 import hashlib
+import logging
 import os
 import re
 import unicodedata
@@ -52,6 +53,8 @@ SNIFF_BYTES = 8192
 PDF = ("application/pdf",)
 IMAGES = ("image/jpeg", "image/png", "image/webp")
 PDF_AND_IMAGES = ("application/pdf", "image/jpeg", "image/png")
+
+logger = logging.getLogger(__name__)
 
 
 class MediaError(ValidationError):
@@ -212,6 +215,12 @@ def add_media(
             responsive_images=[],
             order_column=order,
         )
+        if storage.exists(media.path):
+            # The row is new, so no media row of this database owns the file: it is an orphan
+            # left by an earlier database on the same storage (e.g. a re-created demo). Spatie
+            # overwrote such files; replace it the same way.
+            logger.warning("Replacing orphaned file at %s", media.path)
+            storage.delete(media.path)
         stored = storage.save(media.path, File(source, name=clean_name))
         if stored != media.path:  # the storage renamed it (should not happen in a fresh directory)
             storage.delete(stored)
