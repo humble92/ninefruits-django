@@ -1,0 +1,139 @@
+# CI (porting-plan 16): two jobs, quality and tests. The manual checks (command documentation,
+# relative links, same files in every language) run inside the test job (tests/tooling).
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  UV_FROZEN: "1"
+  PYTHONUNBUFFERED: "1"
+  DJANGO_SETTINGS_MODULE: config.settings.test
+  DJANGO_SECRET_KEY: ci-only-not-secret
+  DB_HOST: 127.0.0.1
+  DB_PORT: "5432"
+  DB_DATABASE: ninefruits
+  DB_TEST_DATABASE: test_ninefruits
+  DB_USERNAME: app_runtime
+  DB_PASSWORD: secret
+  DB_MIGRATOR_USERNAME: app_migrator
+  DB_MIGRATOR_PASSWORD: secret
+  DB_SUPERUSER_USERNAME: postgres
+  DB_SUPERUSER_PASSWORD: postgres
+  REDIS_URL: redis://127.0.0.1:6379/0
+  GOTENBERG_URL: http://127.0.0.1:3000
+
+jobs:
+  quality:
+    name: Quality
+    runs-on: ubuntu-24.04
+    services:
+      # naming_check reads the real database catalog.
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends gettext libmagic1 postgresql-client
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - name: Install Python dependencies
+        run: uv sync --frozen
+      - name: ruff format
+        run: uv run ruff format --check
+      - name: ruff check
+        run: uv run ruff check
+      - name: mypy
+        # Strict, blocking (Phase 13). Paths and local stubs (typings/) are in pyproject.toml.
+        run: uv run mypy
+      - name: bandit
+        run: uv run bandit -q -c pyproject.toml -r ninefruits --severity-level medium
+      - name: pip-audit
+        run: |
+          uv export --frozen --no-emit-project --format requirements-txt > /tmp/requirements.txt
+          uv run pip-audit --strict --disable-pip -r /tmp/requirements.txt
+      - name: Raw SQL check
+        run: uv run tools/checks/raw_sql.py
+      - name: Database roles and migrations
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -h 127.0.0.1 -U postgres -d postgres -v ON_ERROR_STOP=1 \
+               -v migrator_password=secret -v runtime_password=secret -v reporting_password=secret \
+               -f db/sql/roles/create_roles.sql
+          createdb -h 127.0.0.1 -U postgres ninefruits
+          psql -h 127.0.0.1 -U postgres -d ninefruits -v ON_ERROR_STOP=1 -f db/sql/roles/prepare_database.sql
+          uv run manage.py migrate --noinput
+      - name: Django checks
+        run: |
+          uv run manage.py check
+          uv run manage.py makemigrations --check --dry-run
+      - name: Naming check
+        run: uv run manage.py naming_check
+      - name: Missing translations
+        run: uv run manage.py i18n_missing --strict
+      - name: Frontend build
+        run: npm ci && npm run build
+
+  tests:
+    name: Tests
+    runs-on: ubuntu-24.04
+    services:
+      postgres:
+        image: postgres:18-alpine
+        env:
+          POSTGRES_PASSWORD: postgres
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 20
+      redis:
+        image: redis:8-alpine
+        ports: ["6379:6379"]
+        options: >-
+          --health-cmd "redis-cli ping" --health-interval 5s --health-timeout 5s --health-retries 20
+      gotenberg:
+        image: gotenberg/gotenberg:8
+        ports: ["3000:3000"]
+    steps:
+      - uses: actions/checkout@v4
+      - name: System packages
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends gettext libmagic1 postgresql-client
+      - uses: astral-sh/setup-uv@v6
+        with:
+          enable-cache: true
+      - name: Install Python dependencies
+        run: uv sync --frozen
+      - name: Database roles
+        # The test session creates its databases as the superuser and migrates as app_migrator
+        # (tests/conftest.py); the cluster roles must exist first.
+        env:
+          PGPASSWORD: postgres
+        run: |
+          psql -h 127.0.0.1 -U postgres -d postgres -v ON_ERROR_STOP=1 \
+               -v migrator_password=secret -v runtime_password=secret -v reporting_password=secret \
+               -f db/sql/roles/create_roles.sql
+      - name: Compile translations
+        run: uv run manage.py compilemessages --ignore=.venv --ignore=node_modules
+      - name: Tests
+        run: uv run pytest -n auto -m "not concurrency"
+      - name: Concurrency tests
+        run: uv run pytest -m concurrency

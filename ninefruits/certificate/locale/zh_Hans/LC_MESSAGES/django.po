@@ -1,0 +1,539 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:00+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: certificate.errors.type_inactive
+#: actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "此种类已停止开具。"
+
+# key: certificate.errors.hold
+#: actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "该学生有证明开具限制，请先解除。"
+
+# key: certificate.errors.no_template
+#: actions/issue_certificate.py services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "此种类没有“%(locale)s”语言的模板。"
+
+# key: certificate.errors.already_revoked
+#: actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "此证明已作废。"
+
+# key: registration.errors.reason_required
+#: actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "请输入理由。"
+
+# key: certificate.errors.audience
+#: actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "此证明仅面向：%(audience)s。"
+
+# key: certificate.fields.type
+#: admin/common.py admin/issues.py models.py
+#: templates/certificate/portal/my_certificates.html
+#: templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "种类"
+
+# key: common.language
+#: admin/common.py admin/types.py models.py
+msgctxt "common"
+msgid "Language"
+msgstr "语言"
+
+# key: certificate.fields.purpose
+#: admin/common.py admin/issues.py models.py
+msgid "Purpose"
+msgstr "用途"
+
+# key: certificate.fields.copies
+#: admin/common.py models.py
+msgid "Copies"
+msgstr "份数"
+
+# key: common.reason
+#: admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: registration.fields.status
+#: admin/issues.py models.py templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "状态"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/issues.py services/renderer.py
+msgid "Student number"
+msgstr "学号"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "姓名"
+
+# key: certificate.fields.issued_by
+#: admin/issues.py models.py
+msgid "Issued by"
+msgstr "经办人"
+
+# key: certificate.actions.download
+#: admin/issues.py admin/student_record.py
+#: templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: admin/issues.py
+msgid "Verification page"
+msgstr "验证页面"
+
+# key: certificate.actions.rerender
+#: admin/issues.py
+msgid "Render again"
+msgstr "重新生成"
+
+#: admin/issues.py admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "无法生成 PDF，请稍后再试。"
+
+# key: common.saved
+#: admin/issues.py
+msgid "Saved"
+msgstr "已保存"
+
+# key: certificate.help.rerender
+#: admin/issues.py
+msgid ""
+"Renders the PDF again from the current data and template. The serial number "
+"and verification code stay."
+msgstr "用当前数据和模板重新生成 PDF。编号和验证码不变。"
+
+# key: certificate.actions.revoke
+#: admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "作废"
+
+# key: certificate.actions.issue
+#: admin/student_record.py
+msgid "Issue certificate"
+msgstr "开具证明"
+
+# key: certificate.notifications.issued
+#: admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "已开具证明 %(serial)s。"
+
+# key: reference.fields.code
+#: admin/types.py models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: certificate.help.code
+#: admin/types.py models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "用于编号，例如 ENR、GRD、TRN。"
+
+# key: certificate.help.body
+#: admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "用空行分段。可替换项：%(placeholders)s"
+
+# key: certificate.fields.templates
+#: admin/types.py models.py
+msgid "Templates"
+msgstr "模板"
+
+# key: reference.fields.name
+#: admin/types.py models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: certificate.fields.audience
+#: admin/types.py models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "对象"
+
+# key: portal.navigation.certificates
+#: apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "证明"
+
+# key: certificate.audiences.any
+#: enums.py
+msgid "Any student record"
+msgstr "所有学籍"
+
+# key: certificate.audiences.enrolled
+#: enums.py
+msgid "Students (not graduated)"
+msgstr "在校生（未毕业）"
+
+# key: certificate.audiences.graduated
+#: enums.py
+msgid "Graduates"
+msgstr "毕业生"
+
+# key: certificate.statuses.issued
+#: enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "已开具"
+
+# key: certificate.statuses.revoked
+#: enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "已作废"
+
+# key: certificate.verify.invalid_unknown
+#: enums.py
+msgid "No certificate matches this code."
+msgstr "没有与此验证码对应的证明。"
+
+# key: certificate.verify.invalid_revoked
+#: enums.py
+msgid "This certificate has been revoked."
+msgstr "本证明已作废。"
+
+# key: certificate.verify.invalid_expired
+#: enums.py
+msgid ""
+"The verification period for this certificate has ended. Ask the holder for a"
+" current one."
+msgstr "本证明的验证期已过，请向持有人索取新的证明。"
+
+# key: certificate.fields.has_grades
+#: models.py
+msgid "Includes grades"
+msgstr "包含成绩"
+
+# key: certificate.help.has_grades
+#: models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "附上按学期的最终成绩表（成绩证明）。"
+
+# key: certificate.fields.has_photo
+#: models.py
+msgid "Includes photo"
+msgstr "包含照片"
+
+# key: reference.fields.is_active
+#: models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "启用"
+
+# key: reference.fields.sort_order
+#: models.py
+msgid "Order"
+msgstr "排序"
+
+# key: certificate.resources.types.label
+#: models.py
+msgid "Certificate kind"
+msgstr "证明种类"
+
+# key: certificate.resources.types.plural_label
+#: models.py
+msgid "Certificate kinds"
+msgstr "证明种类"
+
+# key: certificate.fields.title
+#: models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "标题"
+
+# key: certificate.fields.body
+#: models.py
+msgid "Body"
+msgstr "正文"
+
+# key: certificate.fields.footer
+#: models.py
+msgid "Footer"
+msgstr "页脚"
+
+# key: certificate.fields.signer
+#: models.py
+msgid "Signer"
+msgstr "签发人"
+
+# key: certificate.help.signer
+#: models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "在此语言中替代证明设置中的签发人。"
+
+# key: people.resources.student_records.label
+#: models.py
+msgid "student record"
+msgstr "学籍"
+
+# key: certificate.fields.serial_number
+#: models.py templates/certificate/portal/my_certificates.html
+#: templates/certificate/verify.html
+msgid "Serial number"
+msgstr "编号"
+
+# key: certificate.verify.code
+#: models.py templates/certificate/verify.html
+msgid "Verification code"
+msgstr "验证码"
+
+# key: certificate.fields.issued_at
+#: models.py templates/certificate/portal/my_certificates.html
+#: templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "开具日期"
+
+# key: certificate.resources.issues.label
+#: models.py
+msgid "Issued certificate"
+msgstr "开具台账"
+
+# key: certificate.resources.issues.plural_label
+#: models.py
+msgid "Issued certificates"
+msgstr "开具台账"
+
+# key: certificate.facts.student_name
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "姓名"
+
+# key: certificate.facts.birth_date
+#: services/renderer.py
+msgid "Date of birth"
+msgstr "出生日期"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: services/renderer.py
+msgid "Gender"
+msgstr "性别"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: services/renderer.py
+msgid "Nationality"
+msgstr "国籍"
+
+# key: certificate.facts.program
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "专业"
+
+# key: certificate.facts.admission_date
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "入学日期"
+
+# key: certificate.facts.graduation_date
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "毕业日期"
+
+# key: certificate.facts.status
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "学籍状态"
+
+# key: certificate.facts.year_level
+#: services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "年级"
+
+# key: certificate.settings.serial_pattern
+#: settings_pages.py
+msgid "Serial number pattern"
+msgstr "编号格式"
+
+# key: certificate.settings.serial_pattern_help
+#: settings_pages.py
+#, python-brace-format
+msgid ""
+"Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 "
+"digits (required). The sequence restarts for each distinct prefix, so "
+"{TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr ""
+"可用项：{TYPE} 种类代码，{YYYY} 或 {YY} 年份，{SEQ:6} 补足 6 "
+"位的流水号（必需）。前缀不同时流水号重新计数，{TYPE}-{YYYY}-{SEQ:6} 即按种类和年份计数。"
+
+# key: certificate.settings.verification_valid_days
+#: settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "验证有效期（天）"
+
+# key: certificate.settings.verification_valid_days_help
+#: settings_pages.py
+msgid ""
+"0 = always. After this many days the verification page reports the "
+"certificate as expired."
+msgstr "0 = 始终有效。超过此天数后验证页面显示为已过期。"
+
+# key: certificate.settings.signer
+#: settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "签发人（%(locale)s）"
+
+# key: certificate.settings.title
+#: settings_pages.py
+msgid "Certificate settings"
+msgstr "证明设置"
+
+# key: certificate.settings.signers
+#: settings_pages.py
+msgid "Signer by language"
+msgstr "各语言签发人"
+
+# key: certificate.settings.signers_help
+#: settings_pages.py
+msgid ""
+"Printed above the seal, e.g. \"President, Ninefruits University\". A "
+"template can override it."
+msgstr "印在印章上方，例如“九果大学校长”。模板可以覆盖。"
+
+# key: certificate.pdf.serial
+#: templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "编号"
+
+# key: authentication.two_factor.code
+#: templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "课程代码"
+
+# key: curriculum.fields.title
+#: templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "课程名称"
+
+# key: curriculum.fields.credits
+#: templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "学分"
+
+# key: grading.fields.grade
+#: templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "成绩"
+
+# key: grading.grades.term_summary
+#: templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "绩点 %(gpa)s · 修读 %(attempted)s 学分，获得 %(earned)s 学分"
+
+# key: grading.fields.cumulative_gpa
+#: templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "累计绩点"
+
+# key: grading.fields.earned_credits
+#: templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "获得学分"
+
+# key: certificate.pdf.verify
+#: templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "可在 %(url)s 验证本证明的真伪。"
+
+# key: certificate.portal.title
+#: templates/certificate/portal/my_certificates.html views/portal.py
+msgid "My certificates"
+msgstr "我的证明"
+
+# key: certificate.portal.intro
+#: templates/certificate/portal/my_certificates.html
+msgid ""
+"Certificates issued to you by the registrar. Ask the registrar for a new "
+"one."
+msgstr "教务部门为您开具的证明。如需新的证明，请向教务部门申请。"
+
+# key: certificate.portal.none
+#: templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "尚未开具任何证明。"
+
+# key: certificate.verify.title
+#: templates/certificate/verify.html views/public.py
+msgid "Certificate verification"
+msgstr "证明真伪验证"
+
+# key: certificate.verify.intro
+#: templates/certificate/verify.html
+msgid ""
+"Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "请输入证明上印制的验证码，或扫描二维码。"
+
+# key: certificate.verify.check
+#: templates/certificate/verify.html
+msgid "Check"
+msgstr "验证"
+
+# key: certificate.verify.valid
+#: templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "本证明由本校开具，真实有效。"
+
+# key: certificate.verify.holder
+#: templates/certificate/verify.html
+msgid "Holder"
+msgstr "持有人"
+
+# key: registration.errors.too_many_requests
+#: views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "请求过多，请一分钟后再试。"

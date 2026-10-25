@@ -1,0 +1,10 @@
+<div class="flex flex-col gap-2 max-w-2xl" data-translatable>
+    {% for language in widget.languages %}
+        <div class="flex flex-col gap-1">
+            <label for="{{ language.widget.attrs.id }}" class="text-xs font-medium text-font-subtle-light dark:text-font-subtle-dark">
+                {{ language.label }}{% if language.required %} <span class="text-red-600">*</span>{% endif %}
+            </label>
+            {% include language.widget.template_name with widget=language.widget %}
+        </div>
+    {% endfor %}
+</div>

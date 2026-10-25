@@ -1,0 +1,1357 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 20:14+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: registration.errors.reason_required
+#: actions/_support.py:22
+msgid "Enter a reason."
+msgstr "ກະລຸນາປ້ອນເຫດຜົນ."
+
+# key: grading.errors.term_not_published
+#: actions/close_term.py:79
+msgid "Only a published term closes."
+msgstr "ປິດໄດ້ສະເພາະພາກຮຽນທີ່ເຜີຍແຜ່ແລ້ວ."
+
+# key: grading.errors.term_not_ready
+#: actions/close_term.py:84
+#, python-format
+msgid "%(count)s section(s) have grades that are not final."
+msgstr "ກຸ່ມຮຽນ %(count)s ກຸ່ມມີເກຣດທີ່ຍັງບໍ່ສຸດທ້າຍ."
+
+# key: grading.errors.not_all_submitted
+#: actions/finalize_grades.py:50
+#, python-format
+msgid "Not all grades are submitted (%(count)s missing)."
+msgstr "ຍັງສົ່ງເກຣດບໍ່ຄົບ (ຂາດ %(count)s)."
+
+# key: grading.errors.nothing_submitted
+#: actions/finalize_grades.py:76
+msgid "There are no submitted grades."
+msgstr "ບໍ່ມີເກຣດທີ່ສົ່ງແລ້ວ."
+
+# key: grading.errors.not_finalized
+#: actions/manage_grade_changes.py:59
+msgid "Only a final grade needs a change request."
+msgstr "ມີແຕ່ເກຣດສຸດທ້າຍເທົ່ານັ້ນທີ່ຕ້ອງຂໍປ່ຽນແປງ."
+
+# key: grading.errors.new_grade_required
+#: actions/manage_grade_changes.py:63 views/portal.py:330
+msgid "Enter the new score or grade."
+msgstr "ກະລຸນາປ້ອນຄະແນນ ຫຼື ເກຣດໃໝ່."
+
+# key: grading.errors.same_grade
+#: actions/manage_grade_changes.py:65
+msgid "The new grade is the current grade."
+msgstr "ເກຣດໃໝ່ຄືເກຣດປັດຈຸບັນ."
+
+# key: grading.errors.request_pending
+#: actions/manage_grade_changes.py:66
+msgid "A change request for this grade is already open."
+msgstr "ມີຄຳຂໍປ່ຽນເກຣດນີ້ເປີດຢູ່ແລ້ວ."
+
+# key: grading.errors.request_decided
+#: actions/manage_grade_changes.py:177 actions/manage_method_requests.py:135
+msgid "The request is already decided."
+msgstr "ຄຳຂໍນີ້ຖືກພິຈາລະນາແລ້ວ."
+
+# key: grading.errors.own_request
+#: actions/manage_grade_changes.py:180
+msgid "You cannot decide your own request."
+msgstr "ທ່ານບໍ່ສາມາດພິຈາລະນາຄຳຂໍຂອງຕົນເອງໄດ້."
+
+# key: grading.errors.same_method
+#: actions/manage_method_requests.py:31
+msgid "The section already uses that evaluation method."
+msgstr "ກຸ່ມຮຽນນີ້ໃຊ້ວິທີປະເມີນຜົນນັ້ນຢູ່ແລ້ວ."
+
+# key: grading.errors.method_request_pending
+#: actions/manage_method_requests.py:34
+msgid "A change request for this section is already waiting."
+msgstr "ມີຄຳຂໍປ່ຽນແປງສຳລັບກຸ່ມຮຽນນີ້ລໍຖ້າຢູ່ແລ້ວ."
+
+# key: grading.errors.scale_fixed
+# key: grading.errors.method_has_grades
+#: actions/manage_method_requests.py:130
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "ມີການປ້ອນເກຣດແລ້ວ; ບໍ່ສາມາດປ່ຽນວິທີປະເມີນຜົນໄດ້."
+
+# key: grading.errors.scale_fixed
+#: actions/save_grade_scale.py:28
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "ມາດຕາເກຣດຖືກກຳນົດຕາຍຕົວຕອນຕິດຕັ້ງ ແລະ ບໍ່ສາມາດປ່ຽນໄດ້."
+
+# key: grading.errors.not_editable
+#: actions/save_grades.py:55
+msgid "Some grades can no longer be changed here."
+msgstr "ບາງເກຣດບໍ່ສາມາດແກ້ໄຂໄດ້ຢູ່ນີ້ອີກແລ້ວ."
+
+# key: grading.errors.over_caps
+#: actions/save_grades.py:101
+msgid "The grades are outside the institution's grade caps. Adjust them, or ask the office."
+msgstr "ເກຣດຢູ່ນອກເພດານເກຣດຂອງສະຖາບັນ. ກະລຸນາປັບ ຫຼື ຕິດຕໍ່ຫ້ອງການ."
+
+# key: grading.errors.exception_reason_required
+#: actions/save_grades.py:106
+msgid "Submitting outside the grade caps needs a reason."
+msgstr "ການສົ່ງນອກເພດານເກຣດຕ້ອງມີເຫດຜົນ."
+
+# key: grading.errors.missing_grades
+#: actions/save_grades.py:113
+#, python-format
+msgid "%(count)s student(s) have no grade yet."
+msgstr "ນັກສຶກສາ %(count)s ຄົນຍັງບໍ່ມີເກຣດ."
+
+# key: grading.errors.entry_closed
+#: actions/save_grades.py:165
+msgid "Grade entry is not open for this section."
+msgstr "ການປ້ອນເກຣດບໍ່ໄດ້ເປີດສຳລັບກຸ່ມຮຽນນີ້."
+
+# key: grading.fields.decision_note
+#: admin/common.py:45 models/requests.py:67 models/requests.py:130
+msgctxt "grading"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+# key: reference.resources.terms.label
+#: admin/common.py:61 admin/common.py:82 admin/term_records.py:169 models/term_record.py:43
+msgid "term"
+msgstr "ພາກຮຽນ"
+
+# key: offering.fields.dry_run
+#: admin/common.py:63
+msgid "Preview only"
+msgstr "ເບິ່ງຕົວຢ່າງເທົ່ານັ້ນ"
+
+# key: grading.help.close_dry_run
+#: admin/common.py:67
+msgid "Only check whether the term can close."
+msgstr "ກວດສອບເທົ່ານັ້ນວ່າພາກຮຽນສາມາດປິດໄດ້ຫຼືບໍ່."
+
+# key: common.reason
+#: admin/common.py:70 admin/grade_changes.py:127 admin/method_requests.py:100 models/requests.py:54 models/requests.py:120 templates/grading/portal/grade_entry.html:45 templates/grading/portal/grade_entry.html:56 templates/grading/portal/grade_entry.html:200
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: common.yes
+#: admin/common.py:94
+msgid "Yes"
+msgstr "ແມ່ນ"
+
+#: admin/common.py:94
+msgid "No"
+msgstr "ບໍ່"
+
+# key: registration.fields.status
+#: admin/grade_changes.py:39 admin/grade_changes.py:135 admin/method_requests.py:38 admin/method_requests.py:108 models/requests.py:56 models/requests.py:122 templates/grading/portal/grade_entry.html:77
+msgctxt "registration"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/grade_changes.py:110 admin/term_records.py:157 templates/grading/portal/grade_entry.html:72 templates/grading/transcript.html:25
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: reference.fields.name
+# key: people.sections.name
+# key: people.fields.name
+#: admin/grade_changes.py:114 admin/term_records.py:161 templates/grading/portal/grade_entry.html:73 templates/grading/transcript.html:26
+msgctxt "people"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: offering.fields.section
+#: admin/grade_changes.py:118 admin/method_requests.py:92 admin/section_grades.py:147 models/requests.py:117
+msgctxt "offering"
+msgid "Section"
+msgstr "ກຸ່ມຮຽນ"
+
+# key: grading.fields.change
+#: admin/grade_changes.py:122 admin/method_requests.py:96
+msgctxt "grading"
+msgid "Change"
+msgstr "ການປ່ຽນແປງ"
+
+# key: grading.fields.requested_by
+#: admin/grade_changes.py:131 admin/method_requests.py:104
+msgctxt "grading"
+msgid "Requested by"
+msgstr "ຂໍໂດຍ"
+
+# key: grading.fields.decided_by
+#: admin/grade_changes.py:139 admin/method_requests.py:112
+msgctxt "grading"
+msgid "Decided by"
+msgstr "ພິຈາລະນາໂດຍ"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/grade_changes.py:167 admin/grade_changes.py:183 admin/method_requests.py:132 admin/method_requests.py:148
+msgid "Approve"
+msgstr "ອະນຸມັດ"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: admin/grade_changes.py:177 enums.py:67 enums.py:77
+msgid "Approved"
+msgstr "ອະນຸມັດແລ້ວ"
+
+# key: grading.help.approve
+#: admin/grade_changes.py:188
+#, python-format
+msgid "The grade changes from %(from)s to %(to)s now, and the student's GPA is recalculated."
+msgstr "ເກຣດຈະປ່ຽນຈາກ %(from)s ເປັນ %(to)s ທັນທີ ແລະ GPA ຂອງນັກສຶກສາຈະຖືກຄິດໄລ່ໃໝ່."
+
+# key: grading.actions.reject
+#: admin/grade_changes.py:193 admin/grade_changes.py:206 admin/method_requests.py:158 admin/method_requests.py:171
+msgctxt "grading"
+msgid "Reject"
+msgstr "ປະຕິເສດ"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: admin/grade_changes.py:203 admin/method_requests.py:168 enums.py:68 enums.py:78
+msgid "Rejected"
+msgstr "ປະຕິເສດແລ້ວ"
+
+# key: grading.actions.cancel_request
+#: admin/grade_changes.py:211 admin/grade_changes.py:223 templates/grading/portal/grade_entry.html:35 templates/grading/portal/grade_entry.html:125
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "ຍົກເລີກຄຳຂໍ"
+
+# key: grading.help.scale_fixed
+#: admin/grade_scales.py:32
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "ມາດຕາເກຣດຖືກກຳນົດຕາຍຕົວຕອນຕິດຕັ້ງ: ເກຣດ ແລະ GPA ອີງຕາມມັນ. ບໍ່ສາມາດຍ້າຍໄປມາດຕາອື່ນໄດ້."
+
+# key: validation.required
+#: admin/grade_scales.py:64
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "ຈຳເປັນຕ້ອງປ້ອນຊ່ອງ %(attribute)s."
+
+# key: reference.fields.grade_points
+#: admin/grade_scales.py:64 admin/grade_scales.py:70 models/grade_scale.py:46
+msgid "Grade points"
+msgstr "ຄະແນນເກຣດ"
+
+# key: validation.max.numeric
+#: admin/grade_scales.py:69 settings_pages.py:44
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າບໍ່ເກີນ %(max)s."
+
+# key: validation.gte.numeric
+#: admin/grade_scales.py:76
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າຫຼາຍກວ່າ ຫຼື ເທົ່າກັບ %(value)s."
+
+# key: reference.fields.max_percentage
+#: admin/grade_scales.py:77 models/grade_scale.py:57
+msgid "To (%)"
+msgstr "ເຖິງ (%)"
+
+# key: reference.fields.min_percentage
+#: admin/grade_scales.py:77 models/grade_scale.py:49
+msgid "From (%)"
+msgstr "ຕັ້ງແຕ່ (%)"
+
+# key: reference.resources.grade_scale_items.label
+#: admin/grade_scales.py:87 models/grade_scale.py:82
+msgid "grade"
+msgstr "ເກຣດ"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: admin/grade_scales.py:88 models/grade_scale.py:83
+msgid "grades"
+msgstr "ເກຣດ"
+
+# key: reference.fields.name
+#: admin/grade_scales.py:124 models/grade_scale.py:20 models/grade_scale.py:44
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: reference.fields.items_count
+#: admin/grade_scales.py:128
+msgctxt "reference"
+msgid "Grades"
+msgstr "ເກຣດ"
+
+# key: grading.evaluation_methods.absolute
+# key: grading.fields.evaluation_method
+#: admin/method_requests.py:45 admin/section_grades.py:155 models/requests.py:119
+msgid "Evaluation"
+msgstr "ວິທີປະເມີນຜົນ"
+
+# key: grading.entry.saved
+# key: grading.notifications.method_approved
+#: admin/method_requests.py:142
+#, python-format
+#| msgid "%(count)s grade(s) saved."
+msgid "Approved. %(count)s draft grade(s) cleared."
+msgstr "ອະນຸມັດແລ້ວ. ລຶບເກຣດຮ່າງ %(count)s ລາຍການ."
+
+# key: grading.help.approve_method
+#: admin/method_requests.py:153
+msgid "The section's evaluation method changes now. Draft grades entered under the old method are cleared; the instructor is told by email."
+msgstr "ວິທີປະເມີນຜົນຂອງກຸ່ມຮຽນຈະປ່ຽນທັນທີ. ເກຣດຮ່າງທີ່ປ້ອນພາຍໃຕ້ວິທີເກົ່າຈະຖືກລຶບ; ອາຈານຈະໄດ້ຮັບແຈ້ງທາງອີເມວ."
+
+# key: offering.fields.offering_unit
+#: admin/section_grades.py:42
+msgid "Offering unit"
+msgstr "ໜ່ວຍງານທີ່ເປີດສອນ"
+
+# key: grading.fields.exception_submitted
+#: admin/section_grades.py:53 admin/section_grades.py:176 admin/section_grades.py:178
+msgid "Submitted as an exception"
+msgstr "ສົ່ງເປັນຂໍ້ຍົກເວັ້ນ"
+
+# key: grading.fields.ready_to_finalize
+#: admin/section_grades.py:74
+msgid "Ready to finalize"
+msgstr "ພ້ອມສະຫຼຸບ"
+
+# key: curriculum.fields.title
+#: admin/section_grades.py:151 templates/grading/portal/my_grades.html:56 templates/grading/transcript.html:42
+msgctxt "curriculum"
+msgid "Title"
+msgstr "ຊື່ວິຊາ"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: admin/section_grades.py:159
+msgid "Instructors"
+msgstr "ອາຈານ"
+
+# key: grading.fields.pending
+#: admin/section_grades.py:164
+msgid "Not submitted"
+msgstr "ຍັງບໍ່ໄດ້ສົ່ງ"
+
+# key: grading.fields.submitted
+#: admin/section_grades.py:168
+msgctxt "grading.fields"
+msgid "Submitted"
+msgstr "ສົ່ງແລ້ວ"
+
+# key: grading.fields.finalized
+#: admin/section_grades.py:172
+msgctxt "grading"
+msgid "Final"
+msgstr "ສຸດທ້າຍ"
+
+# key: grading.fields.exception
+#: admin/section_grades.py:176
+msgid "Exception"
+msgstr "ຂໍ້ຍົກເວັ້ນ"
+
+# key: reference.fields.items_count
+# key: grading.actions.open_entry
+# key: grading.grades.title
+#: admin/section_grades.py:192 apps.py:27 templates/grading/portal/my_grades.html:9
+msgctxt "grading"
+msgid "Grades"
+msgstr "ເກຣດ"
+
+# key: grading.actions.finalize
+#: admin/section_grades.py:200 admin/section_grades.py:215
+msgid "Finalize"
+msgstr "ສະຫຼຸບ"
+
+# key: grading.entry.saved
+# key: grading.notifications.finalized
+#: admin/section_grades.py:209 admin/section_grades.py:258
+#, python-format
+#| msgid "%(count)s grade(s) saved."
+msgid "%(count)s grade(s) finalized."
+msgstr "ສະຫຼຸບເກຣດແລ້ວ %(count)s ລາຍການ."
+
+# key: grading.help.finalize
+#: admin/section_grades.py:220
+msgid "Finalized grades are final: they change only through an approved grade change request. Students see them from now on."
+msgstr "ເກຣດທີ່ສະຫຼຸບແລ້ວຖືເປັນສຸດທ້າຍ: ປ່ຽນໄດ້ຜ່ານຄຳຂໍປ່ຽນເກຣດທີ່ອະນຸມັດແລ້ວເທົ່ານັ້ນ. ນັກສຶກສາຈະເຫັນເກຣດຕັ້ງແຕ່ນີ້ໄປ."
+
+# key: grading.actions.return
+#: admin/section_grades.py:225 admin/section_grades.py:240
+msgid "Return to instructor"
+msgstr "ສົ່ງຄືນໃຫ້ອາຈານ"
+
+# key: grading.entry.saved
+#: admin/section_grades.py:234
+#, python-format
+#| msgid "%(count)s grade(s) saved."
+msgid "%(count)s grade(s) returned."
+msgstr "ສົ່ງຄືນຄະແນນ %(count)s ລາຍການແລ້ວ."
+
+# key: grading.actions.finalize_selected
+#: admin/section_grades.py:249
+msgid "Finalize selected"
+msgstr "ສະຫຼຸບທີ່ເລືອກ"
+
+# key: grading.mail.returned_subject
+# key: grading.notifications.skipped
+#: admin/section_grades.py:260
+#, python-format
+#| msgid "Grades returned: %(section)s"
+msgid "Not finalized: %(sections)s"
+msgstr "ບໍ່ໄດ້ສະຫຼຸບ: %(sections)s"
+
+# key: grading.standings.warning
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: admin/term_records.py:57 admin/term_records.py:177 models/term_record.py:57 settings_pages.py:178 templates/grading/portal/my_grades.html:36
+msgid "Academic standing"
+msgstr "ສະຖານະພາບການຮຽນ"
+
+# key: grading.fields.honors
+# key: grading.settings.honors
+#: admin/term_records.py:63 models/term_record.py:60 settings_pages.py:187 templates/grading/portal/my_grades.html:48
+msgctxt "grading"
+msgid "Honors"
+msgstr "ກຽດນິຍົມ"
+
+# key: reference.resources.programs.label
+#: admin/term_records.py:74 admin/term_records.py:165 templates/grading/portal/grade_entry.html:74 templates/grading/transcript.html:29
+msgid "program"
+msgstr "ຫຼັກສູດ"
+
+# key: grading.fields.earned_credits
+#: admin/term_records.py:173 models/term_record.py:46 templates/grading/portal/my_grades.html:34 templates/grading/transcript.html:31
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "ໜ່ວຍກິດທີ່ໄດ້ຮັບ"
+
+# key: grading.fields.closed
+#: admin/term_records.py:181 models/term_record.py:63
+msgctxt "grading"
+msgid "Closed"
+msgstr "ປິດແລ້ວ"
+
+# key: reference.fields.grade_points
+# key: grading.transcript.title
+#: admin/term_records.py:192 templates/grading/transcript.html:6 templates/grading/transcript.html:21
+msgid "Grade report"
+msgstr "ລາຍງານຜົນການຮຽນ"
+
+# key: grading.actions.close_term
+#: admin/term_records.py:200 admin/term_records.py:228 admin/term_records.py:233 admin/term_records.py:238
+msgid "Close term"
+msgstr "ປິດພາກຮຽນ"
+
+# key: grading.help.close_term
+#: admin/term_records.py:204
+msgid "Every grade of the term must be final. Closing calculates term records, academic standing and honors, and moves the term to grades closed."
+msgstr "ທຸກເກຣດຂອງພາກຮຽນຕ້ອງເປັນສຸດທ້າຍ. ການປິດຈະຄິດໄລ່ບັນທຶກພາກຮຽນ, ສະຖານະພາບການຮຽນ ແລະ ກຽດນິຍົມ, ແລ້ວຍ້າຍພາກຮຽນໄປສະຖານະປິດເກຣດ."
+
+# key: grading.notifications.close_ready
+#: admin/term_records.py:214
+#, python-format
+msgid "Ready to close: %(students)s student(s)."
+msgstr "ພ້ອມປິດ: ນັກສຶກສາ %(students)s ຄົນ."
+
+# key: grading.errors.term_not_ready
+# key: grading.notifications.close_blocked
+#: admin/term_records.py:219
+#, python-format
+#| msgid "%(count)s section(s) have grades that are not final."
+msgid "Cannot close yet: %(sections)s section(s) have grades that are not final."
+msgstr "ຍັງປິດບໍ່ໄດ້: ກຸ່ມຮຽນ %(sections)s ກຸ່ມມີເກຣດທີ່ຍັງບໍ່ສຸດທ້າຍ."
+
+# key: grading.notifications.open_section
+#: admin/term_records.py:225
+#, python-format
+msgid "%(section)s: %(count)s not final"
+msgstr "%(section)s: ຍັງບໍ່ສຸດທ້າຍ %(count)s"
+
+# key: grading.notifications.close_started
+#: admin/term_records.py:235
+msgid "Term close started. The term moves to grades closed when it finishes."
+msgstr "ເລີ່ມປິດພາກຮຽນແລ້ວ. ພາກຮຽນຈະຍ້າຍໄປສະຖານະປິດເກຣດເມື່ອສຳເລັດ."
+
+# key: grading.actions.recalculate
+#: admin/term_records.py:243 admin/term_records.py:256
+msgid "Recalculate"
+msgstr "ຄິດໄລ່ໃໝ່"
+
+# key: grading.errors.missing_grades
+# key: grading.notifications.recalculated
+#: admin/term_records.py:250
+#, python-format
+#| msgid "%(count)s student(s) have no grade yet."
+msgid "%(count)s student(s) recalculated."
+msgstr "ຄິດໄລ່ໃໝ່ແລ້ວ ນັກສຶກສາ %(count)s ຄົນ."
+
+# key: grading.help.recalculate
+#: admin/term_records.py:260
+msgid "Recalculates credits and GPA from final grades, e.g. after a policy change. Standing and honors stay as decided at term close."
+msgstr "ຄິດໄລ່ໜ່ວຍກິດ ແລະ GPA ໃໝ່ຈາກເກຣດສຸດທ້າຍ, ເຊັ່ນ ຫຼັງຈາກປ່ຽນນະໂຍບາຍ. ສະຖານະພາບ ແລະ ກຽດນິຍົມຍັງຄົງຕາມທີ່ຕັດສິນຕອນປິດພາກຮຽນ."
+
+# key: grading.applies_to.graded
+#: enums.py:13
+msgid "Graded courses"
+msgstr "ວິຊາທີ່ໃຫ້ເກຣດ"
+
+# key: grading.applies_to.pass_fail
+#: enums.py:14
+msgid "Pass/fail courses"
+msgstr "ວິຊາຜ່ານ/ບໍ່ຜ່ານ"
+
+# key: grading.applies_to.both
+#: enums.py:15
+msgid "Both"
+msgstr "ທັງສອງ"
+
+# key: grading.evaluation_methods.absolute
+#: enums.py:22
+msgid "Absolute evaluation"
+msgstr "ການປະເມີນອິງເກນ"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: enums.py:23 settings_pages.py:174
+msgid "Relative evaluation"
+msgstr "ການປະເມີນອິງກຸ່ມ"
+
+# key: grading.standings.good
+#: enums.py:34
+msgid "Good standing"
+msgstr "ສະຖານະພາບປົກກະຕິ"
+
+# key: grading.standings.warning
+#: enums.py:35
+msgid "Academic warning"
+msgstr "ເຕືອນທາງວິຊາການ"
+
+# key: grading.standings.dismissal_review
+#: enums.py:36
+msgid "Dismissal review"
+msgstr "ພິຈາລະນາພົ້ນສະພາບ"
+
+# key: reference.resources.grade_scale_items.label
+# key: registration.grade_statuses.none
+#: enums.py:46
+msgid "No grade"
+msgstr "ບໍ່ມີເກຣດ"
+
+# key: registration.grade_statuses.draft
+#: enums.py:47
+msgctxt "registration"
+msgid "Draft"
+msgstr "ສະບັບຮ່າງ"
+
+# key: registration.grade_statuses.submitted
+#: enums.py:48
+msgctxt "registration.grade_statuses"
+msgid "Submitted"
+msgstr "ສົ່ງແລ້ວ"
+
+# key: registration.grade_statuses.finalized
+#: enums.py:49
+msgctxt "registration"
+msgid "Final"
+msgstr "ສະຫຼຸບແລ້ວ"
+
+# key: grading.gpa_roundings.round
+#: enums.py:53
+msgid "Round half up"
+msgstr "ປັດເສດຂຶ້ນທີ່ເຄິ່ງ"
+
+# key: grading.gpa_roundings.floor
+#: enums.py:54
+msgid "Cut off"
+msgstr "ຕັດທິ້ງ"
+
+# key: grading.retake_policies.latest
+#: enums.py:61
+msgid "Latest attempt"
+msgstr "ຄັ້ງລ່າສຸດ"
+
+# key: grading.retake_policies.best
+#: enums.py:62
+msgid "Best attempt"
+msgstr "ຄັ້ງທີ່ດີທີ່ສຸດ"
+
+# key: grading.change_statuses.pending
+#: enums.py:66 enums.py:76
+msgctxt "grading"
+msgid "Pending"
+msgstr "ລໍຖ້າພິຈາລະນາ"
+
+# key: grading.change_statuses.cancelled
+#: enums.py:69 enums.py:79
+msgctxt "grading"
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
+# key: reference.fields.code
+#: models/grade_scale.py:19
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: reference.fields.max_grade_points
+#: models/grade_scale.py:22
+msgid "Maximum grade points"
+msgstr "ຄະແນນເກຣດສູງສຸດ"
+
+# key: reference.fields.is_default
+#: models/grade_scale.py:27
+msgid "Default"
+msgstr "ຄ່າເລີ່ມຕົ້ນ"
+
+# key: reference.resources.grade_scales.label
+#: models/grade_scale.py:34
+msgid "grade scale"
+msgstr "ມາດຕາເກຣດ"
+
+# key: reference.resources.grade_scales.plural_label
+#: models/grade_scale.py:35
+msgid "grade scales"
+msgstr "ມາດຕາເກຣດ"
+
+# key: reference.fields.grade
+#: models/grade_scale.py:43
+msgctxt "reference"
+msgid "Grade"
+msgstr "ເກຣດ"
+
+# key: reference.fields.counts_in_gpa
+#: models/grade_scale.py:64
+msgid "Counts in GPA"
+msgstr "ນັບເຂົ້າ GPA"
+
+# key: reference.fields.is_passing
+#: models/grade_scale.py:65
+msgid "Passing"
+msgstr "ຜ່ານ"
+
+# key: certificate.fields.audience
+# key: grading.fields.applies_to
+#: models/grade_scale.py:67
+msgid "For"
+msgstr "ສຳລັບ"
+
+# key: grading.help.applies_to
+#: models/grade_scale.py:72
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "ເກຣດຕົວອັກສອນສຳລັບວິຊາທີ່ໃຫ້ເກຣດ, P/NP ສຳລັບວິຊາຜ່ານ/ບໍ່ຜ່ານ; \"ທັງສອງ\" ເຊັ່ນ ສຳລັບ I (ບໍ່ສົມບູນ)."
+
+# key: reference.fields.sort_order
+#: models/grade_scale.py:75
+msgid "Order"
+msgstr "ລຳດັບ"
+
+# key: reference.resources.grade_scale_items.label
+# key: grading.fields.new_grade
+#: models/requests.py:52 templates/grading/portal/grade_entry.html:195 templates/grading/portal/grade_entry.html:196
+msgctxt "grading"
+msgid "New grade"
+msgstr "ເກຣດໃໝ່"
+
+# key: grading.fields.new_score
+#: models/requests.py:53 templates/grading/portal/grade_entry.html:192
+msgid "New score"
+msgstr "ຄະແນນໃໝ່"
+
+# key: grading.fields.requested_at
+#: models/requests.py:62 models/requests.py:125
+msgctxt "grading"
+msgid "Requested"
+msgstr "ຂໍເມື່ອ"
+
+# key: reference.resources.grade_scales.label
+# key: grading.resources.grade_changes.label
+#: models/requests.py:75
+msgid "grade change"
+msgstr "ການປ່ຽນເກຣດ"
+
+# key: reference.resources.grade_scales.plural_label
+# key: grading.resources.grade_changes.plural_label
+#: models/requests.py:76
+msgid "grade changes"
+msgstr "ການປ່ຽນເກຣດ"
+
+# key: grading.resources.method_requests.label
+#: models/requests.py:137
+msgid "evaluation method request"
+msgstr "ຄຳຂໍປ່ຽນວິທີປະເມີນຜົນ"
+
+# key: grading.resources.method_requests.plural_label
+#: models/requests.py:138
+msgid "evaluation method requests"
+msgstr "ຄຳຂໍປ່ຽນວິທີປະເມີນຜົນ"
+
+# key: grading.applies_to.graded
+# key: grading.resources.section_grades.label
+# key: grading.resources.section_grades.plural_label
+#: models/section_grade.py:34 models/section_grade.py:35
+msgid "grade progress"
+msgstr "ຄວາມຄືບໜ້າການໃຫ້ເກຣດ"
+
+# key: people.resources.student_records.label
+#: models/term_record.py:41
+msgid "student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: grading.fields.attempted_credits
+#: models/term_record.py:44 templates/grading/portal/my_grades.html:35
+msgid "Attempted credits"
+msgstr "ໜ່ວຍກິດທີ່ລົງທະບຽນ"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: models/term_record.py:50
+msgid "Term GPA"
+msgstr "GPA ພາກຮຽນ"
+
+# key: grading.fields.cumulative_gpa
+#: models/term_record.py:55 templates/grading/portal/my_grades.html:33 templates/grading/transcript.html:30 templates/grading/transcript.html:60
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "GPA ສະສົມ"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: models/term_record.py:59
+msgid "Warnings"
+msgstr "ການເຕືອນ"
+
+# key: grading.fields.honors_rank
+#: models/term_record.py:61
+msgctxt "grading"
+msgid "Honors rank"
+msgstr "ລຳດັບກຽດນິຍົມ"
+
+# key: grading.resources.term_records.label
+#: models/term_record.py:70
+msgid "term record"
+msgstr "ບັນທຶກພາກຮຽນ"
+
+# key: grading.resources.term_records.plural_label
+#: models/term_record.py:71
+msgid "term records"
+msgstr "ບັນທຶກພາກຮຽນ"
+
+# key: security.email_code.mail_greeting
+#: notifications.py:32
+msgid "Hello,"
+msgstr "ສະບາຍດີ,"
+
+# key: security.email_code.mail_salutation
+#: notifications.py:38
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ຂອບໃຈ,\n"
+"%(app)s"
+
+# key: grading.mail.returned_subject
+#: notifications.py:56
+#, python-format
+msgid "Grades returned: %(section)s"
+msgstr "ສົ່ງເກຣດຄືນ: %(section)s"
+
+# key: grading.mail.returned_intro
+#: notifications.py:57
+#, python-format
+msgid "The grades of %(section)s were returned to you. Please check them and submit again."
+msgstr "ເກຣດຂອງ %(section)s ຖືກສົ່ງຄືນໃຫ້ທ່ານ. ກະລຸນາກວດສອບ ແລະ ສົ່ງອີກຄັ້ງ."
+
+# key: grading.mail.open_grade_entry
+#: notifications.py:58 notifications.py:107 notifications.py:126
+msgid "Open grade entry"
+msgstr "ເປີດການປ້ອນເກຣດ"
+
+# key: grading.mail.missing_subject
+#: notifications.py:70
+msgid "Grades not submitted yet"
+msgstr "ຍັງບໍ່ໄດ້ສົ່ງເກຣດ"
+
+# key: grading.mail.missing_intro
+#: notifications.py:72
+msgid "These sections still have grades that are not submitted:"
+msgstr "ກຸ່ມຮຽນເຫຼົ່ານີ້ຍັງມີເກຣດທີ່ບໍ່ໄດ້ສົ່ງ:"
+
+# key: grading.mail.open_teaching
+#: notifications.py:75
+msgid "Open my teaching"
+msgstr "ເປີດການສອນຂອງຂ້ອຍ"
+
+# key: grading.mail.method_approved_subject
+#: notifications.py:90
+#, python-format
+msgid "Evaluation method changed: %(section)s"
+msgstr "ປ່ຽນວິທີປະເມີນຜົນແລ້ວ: %(section)s"
+
+# key: grading.mail.method_approved_intro
+#: notifications.py:91
+#, python-format
+msgid "%(section)s is now evaluated by %(method)s."
+msgstr "ຕອນນີ້ %(section)s ປະເມີນຜົນແບບ %(method)s."
+
+# key: grading.mail.method_rejected_subject
+#: notifications.py:93
+#, python-format
+msgid "Evaluation method request rejected: %(section)s"
+msgstr "ປະຕິເສດຄຳຂໍປ່ຽນວິທີປະເມີນຜົນ: %(section)s"
+
+# key: grading.mail.method_rejected_intro
+#: notifications.py:95
+#, python-format
+msgid "The request to evaluate %(section)s by %(method)s was rejected."
+msgstr "ຄຳຂໍປະເມີນຜົນ %(section)s ແບບ %(method)s ຖືກປະຕິເສດ."
+
+# key: grading.mail.method_drafts_cleared
+#: notifications.py:103
+#, python-format
+msgid "%(count)s draft grade(s) entered under the old method were cleared; please enter them again."
+msgstr "ເກຣດຮ່າງ %(count)s ລາຍການທີ່ປ້ອນພາຍໃຕ້ວິທີເກົ່າຖືກລຶບແລ້ວ; ກະລຸນາປ້ອນໃໝ່."
+
+# key: grading.mail.exception_subject
+#: notifications.py:119
+#, python-format
+msgid "Grades submitted outside the caps: %(section)s"
+msgstr "ສົ່ງເກຣດນອກເພດານ: %(section)s"
+
+# key: grading.mail.exception_intro
+#: notifications.py:121
+#, python-format
+msgid "%(user)s submitted the grades of %(section)s outside the institution's grade caps."
+msgstr "%(user)s ສົ່ງເກຣດຂອງ %(section)s ນອກເພດານເກຣດຂອງສະຖາບັນ."
+
+#: notifications.py:138
+#, python-format
+msgid "Term closed: %(term)s"
+msgstr "ປິດພາກຮຽນແລ້ວ: %(term)s"
+
+#: notifications.py:140
+#, python-format
+msgid "The term close of %(term)s finished. The term is now grades closed."
+msgstr "ການປິດພາກຮຽນ %(term)s ສຳເລັດແລ້ວ. ພາກຮຽນນີ້ປິດຄະແນນແລ້ວ."
+
+#: notifications.py:142
+#, python-format
+msgid "%(records)s term record(s), %(warnings)s academic warning(s), %(dismissal_reviews)s dismissal review(s), %(honors)s honors student(s)."
+msgstr "ບັນທຶກພາກຮຽນ %(records)s ລາຍການ, ເຕືອນທາງການຮຽນ %(warnings)s ຄົນ, ກວດສອບການໃຫ້ອອກ %(dismissal_reviews)s ຄົນ, ນັກສຶກສາດີເດັ່ນ %(honors)s ຄົນ."
+
+#: notifications.py:147
+msgid "Open term records"
+msgstr "ເປີດບັນທຶກພາກຮຽນ"
+
+# key: grading.distribution.over
+#: services/distribution.py:64
+#, python-format
+msgid "%(group)s: %(percent)s%% of the students, cap %(cap)s%% (up to %(limit)s%% allowed)"
+msgstr "%(group)s: %(percent)s%% ຂອງນັກສຶກສາ, ເພດານ %(cap)s%% (ອະນຸຍາດສູງສຸດ %(limit)s%%)"
+
+# key: validation.required
+# key: validation.numeric
+#: services/options.py:35 services/options.py:37
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນຕົວເລກ."
+
+# key: reference.fields.max_percentage
+# key: grading.fields.score
+#: services/options.py:35 services/options.py:37
+msgid "Score (%)"
+msgstr "ຄະແນນ (%)"
+
+# key: grading.errors.no_default_scale
+#: services/options.py:59
+msgid "There is no default grade scale."
+msgstr "ບໍ່ມີມາດຕາເກຣດເລີ່ມຕົ້ນ."
+
+# key: grading.errors.no_score_here
+#: services/options.py:94
+msgid "This section takes grades only (relative evaluation or a pass/fail course): leave the score empty."
+msgstr "ກຸ່ມຮຽນນີ້ຮັບສະເພາະເກຣດ (ການປະເມີນອິງກຸ່ມ ຫຼື ວິຊາຜ່ານ/ບໍ່ຜ່ານ): ກະລຸນາປະຊ່ອງຄະແນນຫວ່າງໄວ້."
+
+# key: grading.errors.score_without_grade
+#: services/options.py:119
+#, python-format
+msgid "No grade covers the score %(score)s."
+msgstr "ບໍ່ມີເກຣດທີ່ກວມເອົາຄະແນນ %(score)s."
+
+# key: grading.errors.grade_not_allowed
+#: services/options.py:131
+#, python-format
+msgid "The grade %(grade)s is not allowed for this course."
+msgstr "ເກຣດ %(grade)s ບໍ່ອະນຸຍາດສຳລັບວິຊານີ້."
+
+# key: grading.errors.above_retake_cap
+#: services/options.py:135
+#, python-format
+msgid "A retake can receive at most %(grade)s."
+msgstr "ການຮຽນຊ້ຳໄດ້ຮັບເກຣດສູງສຸດ %(grade)s."
+
+#: settings_pages.py:40
+msgid "Write each cap as a letter and a percentage, e.g. A=30, B=40."
+msgstr "ຂຽນເພດານແຕ່ລະອັນເປັນຕົວອັກສອນ ແລະ ເປີເຊັນ, ເຊັ່ນ A=30, B=40."
+
+# key: grading.fields.cap
+#: settings_pages.py:45 templates/grading/portal/grade_entry.html:150
+msgid "Cap"
+msgstr "ເພດານ"
+
+# key: grading.settings.no_cap
+#: settings_pages.py:70
+msgid "No cap"
+msgstr "ບໍ່ຈຳກັດ"
+
+# key: grading.settings.gpa_decimals
+#: settings_pages.py:75
+msgid "Decimals"
+msgstr "ຈຳນວນທົດສະນິຍົມ"
+
+# key: grading.settings.gpa_rounding
+#: settings_pages.py:77
+msgid "Rounding"
+msgstr "ການປັດເສດ"
+
+# key: grading.settings.retake_policy
+#: settings_pages.py:79
+msgid "Retakes in the cumulative GPA"
+msgstr "ການຮຽນຊ້ຳໃນ GPA ສະສົມ"
+
+# key: grading.settings.retake_policy_help
+#: settings_pages.py:82
+msgid "Term GPAs always keep every grade of their term."
+msgstr "GPA ພາກຮຽນຈະຮັກສາທຸກເກຣດຂອງພາກຮຽນນັ້ນສະເໝີ."
+
+# key: grading.settings.retake_max_grade
+#: settings_pages.py:85
+msgid "Highest grade for a retake"
+msgstr "ເກຣດສູງສຸດສຳລັບການຮຽນຊ້ຳ"
+
+# key: grading.settings.retake_max_grade_help
+#: settings_pages.py:88
+msgid "Grades above it cannot be given to a retake."
+msgstr "ເກຣດທີ່ສູງກວ່ານີ້ບໍ່ສາມາດໃຫ້ກັບການຮຽນຊ້ຳໄດ້."
+
+# key: reference.fields.items_count
+# key: grading.settings.relative_grade_caps
+#: settings_pages.py:91
+msgid "Grade caps"
+msgstr "ເພດານເກຣດ"
+
+# key: grading.settings.relative_grade_caps_help
+#: settings_pages.py:96
+msgid "The most a grade group (the letter: A for A+, A0, A-) may take of a section's graded students. Groups without a cap are free."
+msgstr "ສັດສ່ວນສູງສຸດທີ່ກຸ່ມເກຣດ (ຕົວອັກສອນ: A ສຳລັບ A+, A0, A-) ສາມາດມີໄດ້ຈາກນັກສຶກສາທີ່ໄດ້ເກຣດໃນກຸ່ມຮຽນ. ກຸ່ມທີ່ບໍ່ມີເພດານບໍ່ຈຳກັດ."
+
+# key: grading.settings.relative_cap_tolerance_percent
+#: settings_pages.py:101
+msgid "Tolerance above the cap"
+msgstr "ຄ່າຜ່ອນຜັນເໜືອເພດານ"
+
+# key: grading.settings.relative_minimum_students
+#: settings_pages.py:104
+msgid "Check from this many graded students"
+msgstr "ກວດສອບຕັ້ງແຕ່ຈຳນວນນັກສຶກສາທີ່ໄດ້ເກຣດ"
+
+# key: grading.settings.relative_minimum_students_help
+#: settings_pages.py:108
+msgid "Smaller sections are not checked against the caps."
+msgstr "ກຸ່ມຮຽນທີ່ນ້ອຍກວ່ານີ້ບໍ່ຖືກກວດສອບກັບເພດານ."
+
+# key: grading.settings.warning_gpa_below
+#: settings_pages.py:111
+msgid "Warning when the term GPA is below"
+msgstr "ເຕືອນເມື່ອ GPA ພາກຮຽນຕ່ຳກວ່າ"
+
+# key: grading.settings.warning_gpa_below_help
+#: settings_pages.py:116
+msgid "A term with only pass/fail courses gives no warning."
+msgstr "ພາກຮຽນທີ່ມີແຕ່ວິຊາຜ່ານ/ບໍ່ຜ່ານຈະບໍ່ມີການເຕືອນ."
+
+# key: grading.settings.standing_regular_terms_only
+#: settings_pages.py:119
+msgid "Judge only regular terms (not summer or winter)"
+msgstr "ພິຈາລະນາສະເພາະພາກຮຽນປົກກະຕິ (ບໍ່ລວມພາກລະດູຮ້ອນ ຫຼື ລະດູໜາວ)"
+
+# key: grading.standings.dismissal_review
+# key: grading.settings.dismissal_warning_count
+#: settings_pages.py:122
+msgid "Warnings for dismissal review"
+msgstr "ຈຳນວນການເຕືອນເພື່ອພິຈາລະນາພົ້ນສະພາບ"
+
+# key: grading.settings.dismissal_warning_count_help
+#: settings_pages.py:126
+msgid "0 turns it off. The student is flagged for review; dismissal is a status change."
+msgstr "0 ປິດການໃຊ້ງານ. ນັກສຶກສາຈະຖືກໝາຍໄວ້ເພື່ອພິຈາລະນາ; ການພົ້ນສະພາບເປັນການປ່ຽນສະຖານະ."
+
+# key: grading.settings.dismissal_consecutive_only
+#: settings_pages.py:129
+msgid "Count only consecutive warnings"
+msgstr "ນັບສະເພາະການເຕືອນຕິດຕໍ່ກັນ"
+
+# key: grading.settings.honors_min_gpa
+#: settings_pages.py:132
+msgid "Minimum term GPA"
+msgstr "GPA ພາກຮຽນຕ່ຳສຸດ"
+
+# key: grading.settings.honors_min_credits
+#: settings_pages.py:139
+msgid "Minimum GPA credits in the term"
+msgstr "ໜ່ວຍກິດ GPA ຕ່ຳສຸດໃນພາກຮຽນ"
+
+# key: grading.settings.honors_exclude_failing
+#: settings_pages.py:146
+msgid "No honors with a failed course"
+msgstr "ບໍ່ໃຫ້ກຽດນິຍົມຖ້າມີວິຊາບໍ່ຜ່ານ"
+
+# key: reference.fields.grade_points
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: settings_pages.py:162
+msgid "Grading policy"
+msgstr "ນະໂຍບາຍການໃຫ້ເກຣດ"
+
+# key: reference.resources.grade_scales.label
+# key: grading.settings.scale
+#: settings_pages.py:170
+msgid "Grade scale"
+msgstr "ມາດຕາເກຣດ"
+
+# key: grading.errors.scale_fixed
+# key: grading.settings.scale_fixed
+#: settings_pages.py:170
+#, python-format
+#| msgid "The grade scale is fixed at installation and cannot change."
+msgid "Grade scale: %(scale)s (fixed at installation)."
+msgstr "ມາດຕາເກຣດ: %(scale)s (ກຳນົດຕາຍຕົວຕອນຕິດຕັ້ງ)."
+
+# key: grading.settings.gpa
+#: settings_pages.py:172
+msgid "GPA"
+msgstr "GPA"
+
+#: templates/grading/admin/term_close_progress.html:6
+#, python-format
+msgid "Term close %(term)s is running."
+msgstr "ກຳລັງປິດພາກຮຽນ %(term)s."
+
+#: templates/grading/admin/term_close_progress.html:8
+#, python-format
+msgid "%(processed)s of %(total)s student group(s) done (%(progress)s%%)."
+msgstr "ສຳເລັດ %(processed)s ຈາກ %(total)s ກຸ່ມນັກສຶກສາ (%(progress)s%%)."
+
+#: templates/grading/admin/term_close_progress.html:9
+msgid "A part failed: start the close again after fixing the cause."
+msgstr "ບາງສ່ວນລົ້ມເຫຼວ: ແກ້ໄຂສາເຫດແລ້ວເລີ່ມການປິດໃໝ່."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: templates/grading/portal/grade_entry.html:10
+msgid "My teaching"
+msgstr "ການສອນຂອງຂ້ອຍ"
+
+# key: reference.fields.grade_points
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: templates/grading/portal/grade_entry.html:11 views/portal.py:64
+msgid "Grade entry"
+msgstr "ການປ້ອນເກຣດ"
+
+# key: grading.entry.counts
+#: templates/grading/portal/grade_entry.html:14
+#, python-format
+msgid "%(none)s not entered, %(draft)s draft, %(submitted)s submitted, %(finalized)s final"
+msgstr "ຍັງບໍ່ປ້ອນ %(none)s, ຮ່າງ %(draft)s, ສົ່ງແລ້ວ %(submitted)s, ສຸດທ້າຍ %(finalized)s"
+
+# key: grading.entry.window_open
+#: templates/grading/portal/grade_entry.html:17
+msgid "Grade entry is open."
+msgstr "ການປ້ອນເກຣດເປີດຢູ່."
+
+# key: grading.entry.window_closed
+#: templates/grading/portal/grade_entry.html:17
+msgid "Grade entry is closed."
+msgstr "ການປ້ອນເກຣດປິດແລ້ວ."
+
+# key: grading.entry.absolute_help
+#: templates/grading/portal/grade_entry.html:24
+#, python-format
+msgid "Enter each student's score (0–100). The grade follows from the score on %(scale)s. Choose a grade directly only for one without a score (e.g. I)."
+msgstr "ປ້ອນຄະແນນຂອງນັກສຶກສາແຕ່ລະຄົນ (0–100). ເກຣດຈະຕາມຄະແນນຕາມມາດຕາ %(scale)s. ເລືອກເກຣດໂດຍກົງສະເພາະກໍລະນີທີ່ບໍ່ມີຄະແນນ (ເຊັ່ນ I)."
+
+# key: grading.entry.relative_help
+#: templates/grading/portal/grade_entry.html:25
+msgid "Do not enter scores: give each student a grade."
+msgstr "ບໍ່ຕ້ອງປ້ອນຄະແນນ: ໃຫ້ເກຣດນັກສຶກສາແຕ່ລະຄົນ."
+
+# key: grading.entry.method_pending
+#: templates/grading/portal/grade_entry.html:29
+#, python-format
+msgid "Change to %(method)s requested and waiting for the scheduling staff."
+msgstr "ຂໍປ່ຽນເປັນ %(method)s ແລ້ວ ແລະ ກຳລັງລໍຖ້າພະນັກງານຈັດຕາຕະລາງ."
+
+# key: grading.entry.method_request_help
+#: templates/grading/portal/grade_entry.html:44
+#, python-format
+msgid "To change to %(method)s, ask the scheduling staff with a reason (possible until grades are submitted)."
+msgstr "ເພື່ອປ່ຽນເປັນ %(method)s, ກະລຸນາຂໍຈາກພະນັກງານຈັດຕາຕະລາງພ້ອມເຫດຜົນ (ເຮັດໄດ້ຈົນກວ່າຈະສົ່ງເກຣດ)."
+
+# key: grading.actions.request_method
+#: templates/grading/portal/grade_entry.html:47
+#, python-format
+msgid "Request %(method)s"
+msgstr "ຂໍ %(method)s"
+
+# key: grading.entry.exception_title
+#: templates/grading/portal/grade_entry.html:54
+msgid "Submitted as an exception."
+msgstr "ສົ່ງເປັນຂໍ້ຍົກເວັ້ນ."
+
+# key: grading.entry.exception_detail
+#: templates/grading/portal/grade_entry.html:55
+#, python-format
+msgid "By %(user)s on %(date)s, outside the grade caps."
+msgstr "ໂດຍ %(user)s ເມື່ອ %(date)s, ນອກເພດານເກຣດ."
+
+#: templates/grading/portal/grade_entry.html:75 templates/grading/portal/grade_entry.html:95
+#, python-format
+msgid "Score (%%)"
+msgstr "ຄະແນນ (%%)"
+
+# key: reference.fields.grade
+# key: grading.fields.grade
+#: templates/grading/portal/grade_entry.html:76 templates/grading/portal/grade_entry.html:103 templates/grading/portal/grade_entry.html:109 templates/grading/portal/my_grades.html:58 templates/grading/transcript.html:44
+msgctxt "grading"
+msgid "Grade"
+msgstr "ເກຣດ"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: templates/grading/portal/grade_entry.html:86 templates/grading/portal/my_grades.html:67 templates/grading/transcript.html:51
+msgid "Retake"
+msgstr "ຮຽນຊ້ຳ"
+
+# key: grading.entry.by_score
+#: templates/grading/portal/grade_entry.html:104 templates/grading/portal/grade_entry.html:196
+msgid "By score"
+msgstr "ຕາມຄະແນນ"
+
+# key: grading.entry.change_pending
+#: templates/grading/portal/grade_entry.html:123
+#, python-format
+msgid "Change %(from)s → %(to)s requested"
+msgstr "ຂໍປ່ຽນ %(from)s → %(to)s ແລ້ວ"
+
+# key: grading.actions.request_change
+#: templates/grading/portal/grade_entry.html:130 templates/grading/portal/grade_entry.html:188 templates/grading/portal/grade_entry.html:202
+msgid "Request change"
+msgstr "ຂໍປ່ຽນແປງ"
+
+# key: grading.entry.no_students
+#: templates/grading/portal/grade_entry.html:135
+msgid "No students."
+msgstr "ບໍ່ມີນັກສຶກສາ."
+
+# key: grading.entry.distribution_title
+#: templates/grading/portal/grade_entry.html:143
+msgid "Grades against the caps"
+msgstr "ເກຣດທຽບກັບເພດານ"
+
+# key: grading.entry.distribution_checked
+#: templates/grading/portal/grade_entry.html:145
+#, python-format
+msgid "%(graded)s graded students: each grade group must stay within its cap."
+msgstr "ນັກສຶກສາທີ່ໄດ້ເກຣດ %(graded)s ຄົນ: ແຕ່ລະກຸ່ມເກຣດຕ້ອງຢູ່ພາຍໃນເພດານຂອງມັນ."
+
+# key: grading.entry.distribution_exempt
+#: templates/grading/portal/grade_entry.html:146
+#, python-format
+msgid "%(graded)s graded students: sections under %(minimum)s are not checked against the caps."
+msgstr "ນັກສຶກສາທີ່ໄດ້ເກຣດ %(graded)s ຄົນ: ກຸ່ມຮຽນທີ່ມີໜ້ອຍກວ່າ %(minimum)s ຄົນບໍ່ຖືກກວດສອບກັບເພດານ."
+
+# key: grading.applies_to.graded
+# key: grading.fields.grade_group
+#: templates/grading/portal/grade_entry.html:150
+msgid "Grade group"
+msgstr "ກຸ່ມເກຣດ"
+
+# key: grading.fields.count
+#: templates/grading/portal/grade_entry.html:150
+msgctxt "grading"
+msgid "Students"
+msgstr "ນັກສຶກສາ"
+
+# key: grading.entry.exception_reason_help
+#: templates/grading/portal/grade_entry.html:169
+msgid "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)."
+msgstr "ເກຣດຢູ່ນອກເພດານ. ພະນັກງານສາມາດສົ່ງໄດ້ໂດຍບັນທຶກເປັນຂໍ້ຍົກເວັ້ນ: ກະລຸນາລະບຸເຫດຜົນ (ຜູ້ກວດສອບຈະໄດ້ຮັບແຈ້ງ ແລະ ກຸ່ມຮຽນຈະສະແດງມັນ)."
+
+# key: grading.fields.exception_reason
+#: templates/grading/portal/grade_entry.html:170
+msgid "Reason for the exception"
+msgstr "ເຫດຜົນຂອງຂໍ້ຍົກເວັ້ນ"
+
+# key: grading.actions.save_draft
+#: templates/grading/portal/grade_entry.html:174
+msgctxt "grading"
+msgid "Save draft"
+msgstr "ບັນທຶກຮ່າງ"
+
+# key: reference.resources.grade_scales.plural_label
+# key: grading.actions.validate_distribution
+#: templates/grading/portal/grade_entry.html:176
+msgid "Check grade caps"
+msgstr "ກວດສອບເພດານເກຣດ"
+
+# key: grading.entry.submit_confirm
+#: templates/grading/portal/grade_entry.html:178
+msgid "Submit the grades? You cannot change them afterwards; ask the office if one is wrong."
+msgstr "ສົ່ງເກຣດບໍ? ຫຼັງຈາກນັ້ນຈະບໍ່ສາມາດແກ້ໄຂໄດ້; ຖ້າມີຂໍ້ຜິດພາດກະລຸນາຕິດຕໍ່ຫ້ອງການ."
+
+# key: reference.resources.grade_scale_items.plural_label
+# key: grading.actions.submit
+#: templates/grading/portal/grade_entry.html:178
+msgid "Submit grades"
+msgstr "ສົ່ງເກຣດ"
+
+# key: grading.entry.help
+#: templates/grading/portal/grade_entry.html:180
+msgid "Save drafts any time; submit once every student has a grade."
+msgstr "ບັນທຶກຮ່າງໄດ້ທຸກເວລາ; ສົ່ງເມື່ອນັກສຶກສາທຸກຄົນມີເກຣດແລ້ວ."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: templates/grading/portal/grade_entry.html:203
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+# key: grading.transcript.print
+#: templates/grading/portal/my_grades.html:14
+msgid "Print"
+msgstr "ພິມ"
+
+# key: grading.grades.blocked
+#: templates/grading/portal/my_grades.html:22
+#, python-format
+msgid "Your grades are not available: you have a hold (%(type)s). Contact the office that placed it."
+msgstr "ບໍ່ສາມາດເບິ່ງເກຣດຂອງທ່ານໄດ້: ທ່ານມີການລະງັບ (%(type)s). ກະລຸນາຕິດຕໍ່ຫ້ອງການທີ່ລະງັບ."
+
+# key: grading.grades.term_summary
+#: templates/grading/portal/my_grades.html:46 templates/grading/transcript.html:59
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "GPA %(gpa)s · ໄດ້ຮັບ %(earned)s ຈາກ %(attempted)s ໜ່ວຍກິດ"
+
+# key: reference.fields.code
+# key: authentication.two_factor.code
+#: templates/grading/portal/my_grades.html:55 templates/grading/transcript.html:41
+msgctxt "curriculum"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: curriculum.fields.credits
+#: templates/grading/portal/my_grades.html:57 templates/grading/transcript.html:43
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "ໜ່ວຍກິດ"
+
+# key: grading.grades.superseded
+#: templates/grading/portal/my_grades.html:68 templates/grading/transcript.html:65
+msgid "replaced by a retake in the cumulative GPA"
+msgstr "ຖືກແທນທີ່ດ້ວຍການຮຽນຊ້ຳໃນ GPA ສະສົມ"
+
+# key: grading.grades.none
+#: templates/grading/portal/my_grades.html:78
+msgid "No final grades yet."
+msgstr "ຍັງບໍ່ມີເກຣດສຸດທ້າຍ."
+
+# key: grading.transcript.unofficial
+#: templates/grading/transcript.html:22
+msgid "Unofficial grade report. Request an official transcript from the registrar."
+msgstr "ລາຍງານຜົນການຮຽນທີ່ບໍ່ເປັນທາງການ. ກະລຸນາຂໍໃບຄະແນນທາງການຈາກຫ້ອງການທະບຽນ."
+
+# key: grading.transcript.printed_at
+#: templates/grading/transcript.html:66
+#, python-format
+msgctxt "grading"
+msgid "Printed %(date)s"
+msgstr "ພິມເມື່ອ %(date)s"
+
+# key: reference.resources.grade_scale_items.plural_label
+# key: grading.entry.open
+#: views/portal.py:61
+msgid "Enter grades"
+msgstr "ປ້ອນເກຣດ"
+
+# key: grading.entry.saved
+#: views/portal.py:285
+#, python-format
+msgid "%(count)s grade(s) saved."
+msgstr "ບັນທຶກເກຣດແລ້ວ %(count)s ລາຍການ."
+
+# key: grading.entry.distribution_ok
+#: views/portal.py:293
+msgid "The grades are within the caps."
+msgstr "ເກຣດຢູ່ພາຍໃນເພດານ."
+
+# key: grading.entry.submitted
+#: views/portal.py:301
+#, python-format
+msgid "%(count)s grade(s) submitted."
+msgstr "ສົ່ງເກຣດແລ້ວ %(count)s ລາຍການ."
+
+#: views/portal.py:306 views/portal.py:332
+msgid "The reason is too long."
+msgstr "ເຫດຜົນຍາວເກີນໄປ."
+
+# key: grading.entry.method_requested
+#: views/portal.py:309
+#, python-format
+msgid "Change to %(method)s requested. You will be told by email."
+msgstr "ຂໍປ່ຽນເປັນ %(method)s ແລ້ວ. ທ່ານຈະໄດ້ຮັບແຈ້ງທາງອີເມວ."
+
+# key: grading.entry.change_requested
+#: views/portal.py:334
+msgid "Grade change requested."
+msgstr "ຂໍປ່ຽນເກຣດແລ້ວ."
+
+# key: reference.fields.items_count
+# key: admin.navigation.grading
+# key: grading.actions.open_entry
+# key: grading.grades.title
+# key: permissions.resources.grades
+# key: portal.navigation.grades
+#: views/portal.py:359
+msgid "Grades"
+msgstr "ເກຣດ"
+
+#: views/transcript.py:68
+msgid "The PDF could not be created. Try again later."
+msgstr "ບໍ່ສາມາດສ້າງ PDF ໄດ້. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ."

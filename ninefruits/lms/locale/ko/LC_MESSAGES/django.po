@@ -1,0 +1,364 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 22:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "각 점수는 0에서 100 사이의 숫자여야 합니다."
+
+#: actions/deliver.py
+msgid "Unknown operation."
+msgstr "알 수 없는 작업입니다."
+
+#: actions/deliver.py
+msgid "Unknown status."
+msgstr "알 수 없는 상태입니다."
+
+#: actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "알 수 없는 동기화 기록입니다."
+
+#: actions/deliver.py
+msgid "This step is already finished."
+msgstr "이미 끝난 단계입니다."
+
+#: actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "작업이 동기화 기록과 맞지 않습니다."
+
+#: actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "이 개설강좌는 이 플랫폼에 연결되어 있지 않습니다."
+
+#: actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "사용자 ID별 점수 객체를 보내세요."
+
+#: actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "이 강좌에 연결된 개설강좌가 없습니다."
+
+# key: lms.resources.platforms.label
+#: admin/course_links.py admin/sync_logs.py models.py
+msgid "LMS platform"
+msgstr "LMS 플랫폼"
+
+# key: registration.fields.status
+#: admin/course_links.py admin/sync_logs.py models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "상태"
+
+# key: reference.resources.terms.label
+#: admin/course_links.py
+msgid "term"
+msgstr "학기"
+
+# key: offering.fields.section
+#: admin/course_links.py admin/sync_logs.py models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "강좌"
+
+# key: lms.fields.external_course_id
+#: admin/course_links.py models.py
+msgid "Course id on the platform"
+msgstr "플랫폼 강좌 ID"
+
+# key: lms.fields.external_url
+#: admin/course_links.py models.py
+msgid "Course URL"
+msgstr "강좌 URL"
+
+# key: lms.fields.last_error
+#: admin/course_links.py models.py
+msgid "Last error"
+msgstr "마지막 오류"
+
+# key: lms.actions.resync
+#: admin/course_links.py
+msgid "Synchronize again"
+msgstr "다시 동기화"
+
+#: admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "동기화 실패: %(error)s"
+
+# key: lms.notifications.synced
+#: admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "동기화 완료: 구성원 %(members)s명."
+
+#: admin/course_links.py
+msgid ""
+"Pushes the course, its instructors and its enrolled students to the platform"
+" again."
+msgstr "강좌, 담당 교원, 수강 중인 학생을 플랫폼으로 다시 보냅니다."
+
+#: admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "%(number)s번째 줄: 키=값 형식으로 쓰세요."
+
+# key: reference.fields.code
+#: admin/platforms.py models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: lms.fields.driver
+#: admin/platforms.py models.py
+msgid "Driver"
+msgstr "드라이버"
+
+# key: lms.help.driver
+#: admin/platforms.py
+msgid ""
+"The connector that talks to the platform. \"null\" records what would be "
+"sent without calling anything; use it to prepare and test."
+msgstr "플랫폼과 통신하는 커넥터. \"없음\"은 호출 없이 보낼 내용만 기록한다(준비·시험용)."
+
+# key: lms.fields.base_url
+#: admin/platforms.py models.py
+msgid "Base URL"
+msgstr "기본 URL"
+
+# key: lms.fields.credentials
+#: admin/platforms.py models.py
+msgid "Credentials"
+msgstr "인증 정보"
+
+# key: lms.help.credentials
+#: admin/platforms.py
+msgid ""
+"Tokens and secrets the driver needs (see docs/lms-integration-guide.md). "
+"Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr ""
+"드라이버가 쓰는 토큰·비밀값(docs/lms-integration-guide.md 참조). 암호화해 저장하며, 수정 시 비워 두면 기존 "
+"값을 유지한다."
+
+#: admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "한 줄에 키=값 하나씩, 예: token=..."
+
+# key: lms.help.is_active
+#: admin/platforms.py
+msgid ""
+"Active platforms receive published sections and roster changes as they "
+"happen, and the nightly reconcile."
+msgstr "활성 플랫폼은 강좌 공개와 수강 변동을 즉시 받고, 야간 대조 대상이 된다."
+
+# key: lms.help.should_pull_grades
+#: admin/platforms.py
+msgid ""
+"Lets instructors load the platform's final scores into the grade entry "
+"screen as a draft."
+msgstr "교원이 성적 입력 화면에서 플랫폼의 최종 점수를 초안으로 불러올 수 있게 한다."
+
+#: admin/platforms.py
+msgid "This code is already used."
+msgstr "이미 사용 중인 코드입니다."
+
+# key: reference.fields.name
+#: admin/platforms.py models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "이름"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: admin/platforms.py models.py
+msgid "Course links"
+msgstr "강좌 연결"
+
+# key: admin.record_changes.fields.operation
+# key: lms.fields.operation
+#: admin/sync_logs.py models.py
+msgid "Operation"
+msgstr "작업"
+
+# key: admin.audit.fields.actor
+#: admin/sync_logs.py
+msgid "User"
+msgstr "사용자"
+
+# key: lms.fields.message
+#: admin/sync_logs.py models.py
+msgid "Message"
+msgstr "메시지"
+
+#: admin/sync_logs.py
+msgid "Payload"
+msgstr "내용"
+
+# key: lms.link_statuses.pending
+#: enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "대기"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: enums.py
+msgid "Linked"
+msgstr "연결됨"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "실패"
+
+# key: lms.drivers.null
+#: enums.py
+msgid "None (records only)"
+msgstr "없음(기록만)"
+
+# key: lms.operations.course.sync
+#: enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "강좌"
+
+# key: lms.operations.enrollment.add
+#: enums.py
+msgid "Add member"
+msgstr "구성원 추가"
+
+# key: lms.operations.enrollment.remove
+#: enums.py
+msgid "Remove member"
+msgstr "구성원 제거"
+
+# key: lms.operations.grades.pull
+#: enums.py
+msgid "Pull scores"
+msgstr "점수 가져오기"
+
+#: enums.py
+msgid "Scores delivered"
+msgstr "점수 전달"
+
+# key: lms.operations.reconcile
+#: enums.py
+msgid "Reconcile"
+msgstr "대조"
+
+# key: lms.sync_statuses.queued
+#: enums.py
+msgid "Queued"
+msgstr "대기"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: enums.py
+msgid "Succeeded"
+msgstr "성공"
+
+# key: lms.sync_statuses.skipped
+#: enums.py
+msgid "Skipped"
+msgstr "건너뜀"
+
+#: models.py
+msgid "Options"
+msgstr "옵션"
+
+# key: reference.fields.is_active
+#: models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: lms.fields.should_sync_enrollments
+#: models.py
+msgid "Synchronize rosters"
+msgstr "수강 명단 동기화"
+
+# key: lms.fields.should_pull_grades
+#: models.py
+msgid "Pull final scores"
+msgstr "최종 점수 가져오기"
+
+# key: lms.resources.platforms.plural_label
+#: models.py
+msgid "LMS platforms"
+msgstr "LMS 플랫폼"
+
+# key: lms.fields.last_synced_at
+#: models.py
+msgid "Last synced"
+msgstr "마지막 동기화"
+
+# key: lms.resources.course_links.label
+#: models.py
+msgid "Course link"
+msgstr "강좌 연결"
+
+#: models.py
+msgid "User id on the platform"
+msgstr "플랫폼 사용자 ID"
+
+#: models.py
+msgid "User link"
+msgstr "사용자 연결"
+
+#: models.py
+msgid "User links"
+msgstr "사용자 연결"
+
+# key: lms.fields.started_at
+#: models.py
+msgid "Started"
+msgstr "시작"
+
+#: models.py
+msgid "Finished"
+msgstr "종료"
+
+# key: lms.resources.sync_logs.label
+#: models.py
+msgid "Sync log"
+msgstr "동기화 기록"
+
+# key: lms.resources.sync_logs.plural_label
+#: models.py
+msgid "Sync logs"
+msgstr "동기화 기록"
+
+# key: grading.entry.import_lms
+#: services/grades.py
+msgid "Load scores from the LMS"
+msgstr "LMS 점수 불러오기"
+
+# key: grading.entry.lms_imported
+#: services/grades.py
+#, python-format
+msgid ""
+"%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "LMS 점수 %(count)s건을 초안으로 불러왔습니다. 확인 후 저장하세요."
+
+# key: lms.portal.open_course
+#: services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "%(platform)s 강좌 열기"

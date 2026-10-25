@@ -1,0 +1,489 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:12+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: evaluation.errors.form_in_use
+#: actions/manage_term_evaluation.py:48
+msgid "The term already has responses with its form."
+msgstr "该学期已有使用此评价表的回答。"
+
+# key: evaluation.errors.not_open
+#: actions/submit_evaluation.py:53
+msgid "The course evaluation is not open for this course."
+msgstr "这门课程不在课程评价时间内。"
+
+# key: evaluation.errors.already_done
+#: actions/submit_evaluation.py:54
+msgid "You have already evaluated this course."
+msgstr "你已经评价过这门课程。"
+
+# key: evaluation.errors.invalid_answer
+#: actions/submit_evaluation.py:89
+msgid "An answer is not valid."
+msgstr "有无效的回答。"
+
+# key: evaluation.errors.missing_answers
+#: actions/submit_evaluation.py:96
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "请回答所有必答题（还差 %(count)s 题）。"
+
+# key: evaluation.errors.uniform_answers
+#: actions/submit_evaluation.py:100
+msgid "Every answer is the same. Please answer each question."
+msgstr "所有回答都相同，请逐题作答。"
+
+# key: validation.alpha_dash
+#: admin/forms.py:36
+#, python-format
+msgid ""
+"The %(attribute)s field must only contain letters, numbers, dashes, and "
+"underscores."
+msgstr "%(attribute)s 只能由字母、数字、短划线(-)和下划线(_)组成。"
+
+# key: reference.fields.code
+#: admin/forms.py:37 admin/forms.py:59 admin/forms.py:68 models/forms.py:34
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: validation.unique
+#: admin/forms.py:68
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s 已经存在。"
+
+# key: evaluation.fields.question
+#: admin/forms.py:81 models/forms.py:75 models/forms.py:91
+#: templates/evaluation/portal/section_evaluation.html:33
+msgid "Question"
+msgstr "题目"
+
+# key: evaluation.fields.questions
+#: admin/forms.py:82 admin/forms.py:133 models/forms.py:92
+msgid "Questions"
+msgstr "题目"
+
+# key: reference.fields.name
+#: admin/forms.py:129 models/forms.py:35
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: evaluation.actions.copy_form
+#: admin/forms.py:140 admin/forms.py:155
+msgid "Copy form"
+msgstr "复制评价表"
+
+# key: security.scope_types.global
+#: admin/sections.py:36
+msgid "All"
+msgstr "全部"
+
+# key: offering.fields.offering_unit
+#: admin/sections.py:50
+msgid "Offering unit"
+msgstr "开课单位"
+
+# key: offering.fields.section
+#: admin/sections.py:119
+msgctxt "offering"
+msgid "Section"
+msgstr "课程班"
+
+# key: curriculum.fields.title
+#: admin/sections.py:123
+msgctxt "curriculum"
+msgid "Title"
+msgstr "课程名称"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: admin/sections.py:127
+msgid "Instructors"
+msgstr "任课教师"
+
+# key: evaluation.fields.responses
+#: admin/sections.py:132 admin/terms.py:137
+msgid "Responses"
+msgstr "回答"
+
+# key: evaluation.fields.response_rate
+#: admin/sections.py:136
+msgid "Response rate"
+msgstr "回答率"
+
+# key: evaluation.results.open
+#: admin/sections.py:148 views/portal.py:67
+msgctxt "evaluation"
+msgid "Results"
+msgstr "结果"
+
+# key: reference.resources.terms.label
+#: admin/terms.py:46 admin/terms.py:125 models/term.py:19
+msgid "term"
+msgstr "学期"
+
+# key: evaluation.resources.forms.label
+#: admin/terms.py:48 admin/terms.py:129 models/forms.py:51 models/forms.py:71
+#: models/term.py:26
+msgid "evaluation form"
+msgstr "评价表"
+
+# key: evaluation.fields.minimum_responses
+#: admin/terms.py:51 admin/terms.py:133 models/term.py:29 settings_pages.py:33
+msgid "Minimum responses"
+msgstr "最少回答数"
+
+# key: evaluation.help.minimum_responses
+#: admin/terms.py:57 models/term.py:33
+msgid ""
+"A section's results show only with at least this many responses and this "
+"response rate, so few answers cannot point to a student."
+msgstr "回答数和回答率达到此值的课程班才显示结果，以免回答太少时推测出学生。"
+
+# key: evaluation.fields.minimum_response_percent
+#: admin/terms.py:62 models/term.py:38 settings_pages.py:40
+msgid "Minimum response rate (%)"
+msgstr "最低回答率（%）"
+
+# key: common.saved
+#: admin/terms.py:165
+msgid "Saved"
+msgstr "已保存"
+
+# key: evaluation.actions.prepare
+#: admin/terms.py:177 admin/terms.py:179
+msgid "Set up a term"
+msgstr "设置学期课程评价"
+
+# key: evaluation.actions.change
+#: admin/terms.py:182 admin/terms.py:186
+msgctxt "evaluation"
+msgid "Change"
+msgstr "更改"
+
+# key: evaluation.actions.publish
+#: admin/terms.py:192 admin/terms.py:214
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "公布结果"
+
+# not in the original
+#: admin/terms.py:202
+msgid "Already published."
+msgstr "已经公布。"
+
+# key: evaluation.help.publish
+#: admin/terms.py:208 admin/terms.py:218
+msgid ""
+"Instructors see their sections' results from now on (sections with enough "
+"responses)."
+msgstr "从现在起教师可以看到其课程班的结果（回答足够的课程班）。"
+
+# key: evaluation.portal.title
+#: apps.py:24 templates/evaluation/portal/evaluations.html:9
+#: views/portal.py:92 views/portal.py:167
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "课程评价"
+
+# key: evaluation.question_types.scale
+#: enums.py:12
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "量表"
+
+# key: evaluation.question_types.text
+#: enums.py:13
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "主观题"
+
+# key: evaluation.fields.description
+#: models/forms.py:37
+msgctxt "evaluation"
+msgid "Description"
+msgstr "说明"
+
+# key: evaluation.fields.scale_points
+#: models/forms.py:40
+msgid "Scale points"
+msgstr "量表分数"
+
+# key: evaluation.fields.scale_low_label
+#: models/forms.py:42
+msgid "Label of 1"
+msgstr "1 分说明"
+
+# key: evaluation.fields.scale_high_label
+#: models/forms.py:43
+msgid "Label of the highest point"
+msgstr "最高分说明"
+
+# key: reference.fields.is_active
+#: models/forms.py:44
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "启用"
+
+# key: evaluation.resources.forms.plural_label
+#: models/forms.py:52
+msgid "evaluation forms"
+msgstr "评价表"
+
+# key: reference.fields.sort_order
+#: models/forms.py:73
+msgid "Order"
+msgstr "排序"
+
+# key: evaluation.fields.category
+#: models/forms.py:74
+msgid "Area"
+msgstr "领域"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: models/forms.py:77
+msgid "Type"
+msgstr "类型"
+
+# key: evaluation.fields.is_required
+#: models/forms.py:79
+msgctxt "evaluation"
+msgid "Required"
+msgstr "必答"
+
+# key: evaluation.fields.is_reversed
+#: models/forms.py:81
+msgid "Reversed"
+msgstr "反向题"
+
+# key: evaluation.help.is_reversed
+#: models/forms.py:83
+msgid ""
+"For negatively worded questions: the answer is reversed in averages (5 "
+"counts as 1)."
+msgstr "否定表述的题目：计算平均分时反转（5 分按 1 分计）。"
+
+# key: evaluation.resources.sections.label
+#: models/section.py:32
+msgid "section response"
+msgstr "课程班回答"
+
+# key: evaluation.resources.sections.plural_label
+#: models/section.py:33
+msgid "responses by section"
+msgstr "按课程班的回答"
+
+# key: evaluation.fields.published_at
+#: models/term.py:41
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "结果公布"
+
+# key: evaluation.resources.terms.label
+#: models/term.py:52
+msgid "term evaluation"
+msgstr "学期课程评价"
+
+# key: evaluation.resources.terms.plural_label
+#: models/term.py:53
+msgid "term evaluations"
+msgstr "学期课程评价"
+
+# key: security.email_code.mail_greeting
+#: notifications.py:32
+msgid "Hello,"
+msgstr "您好，"
+
+# key: evaluation.mail.reminder_intro
+#: notifications.py:34
+msgid "Please evaluate these courses:"
+msgstr "请评价以下课程："
+
+# key: evaluation.mail.reminder_anonymous
+#: notifications.py:37
+msgid "Your answers are anonymous."
+msgstr "回答为匿名。"
+
+# key: security.email_code.mail_salutation
+#: notifications.py:41
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"此致\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: notifications.py:43
+msgid "Course evaluation is open"
+msgstr "课程评价已开放"
+
+# key: evaluation.settings.grades_require_evaluation
+#: settings_pages.py:21
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "完成课程评价前隐藏该学期成绩"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: settings_pages.py:24
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "只在评价期间隐藏，评价结束后显示成绩。"
+
+# key: evaluation.settings.reject_uniform_answers
+#: settings_pages.py:27
+msgid "Refuse the same answer to every question"
+msgstr "所有题目答案相同时拒绝"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: settings_pages.py:30
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "旧系统拒绝全部 1 分或全部 5 分的回答。"
+
+# key: evaluation.settings.minimum_help
+#: settings_pages.py:37
+msgid "Defaults for a new term's evaluation."
+msgstr "新学期课程评价的默认值。"
+
+# key: evaluation.settings.title
+#: settings_pages.py:49
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "课程评价"
+
+# key: evaluation.portal.anonymous
+#: templates/evaluation/portal/evaluations.html:10
+msgid ""
+"Your answers are anonymous. Instructors see only totals, after the results "
+"are published."
+msgstr "回答为匿名。教师只能在结果公布后看到汇总。"
+
+# key: evaluation.portal.submit_confirm
+#: templates/evaluation/portal/evaluations.html:20
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "确定提交课程评价吗？提交后不能修改。"
+
+# key: evaluation.portal.back
+#: templates/evaluation/portal/evaluations.html:25
+msgid "Back"
+msgstr "返回"
+
+# key: evaluation.portal.optional
+#: templates/evaluation/portal/evaluations.html:37
+msgid "optional"
+msgstr "选填"
+
+# key: evaluation.portal.submit
+#: templates/evaluation/portal/evaluations.html:52
+msgid "Submit"
+msgstr "提交"
+
+# key: evaluation.portal.done
+#: templates/evaluation/portal/evaluations.html:60
+msgid "Done"
+msgstr "已完成"
+
+# key: evaluation.portal.evaluate
+#: templates/evaluation/portal/evaluations.html:62
+msgid "Evaluate"
+msgstr "评价"
+
+# key: evaluation.portal.none_open
+#: templates/evaluation/portal/evaluations.html:66
+msgid "No course evaluation is open for you."
+msgstr "现在没有可以进行的课程评价。"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: templates/evaluation/portal/section_evaluation.html:9
+msgid "My teaching"
+msgstr "我的授课"
+
+# key: evaluation.results.title
+#: templates/evaluation/portal/section_evaluation.html:10 views/portal.py:71
+msgid "Course evaluation results"
+msgstr "课程评价结果"
+
+# key: evaluation.results.responses
+#: templates/evaluation/portal/section_evaluation.html:13
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(expected)s 人中 %(responses)s 人回答（%(rate)s%%）"
+
+# key: evaluation.results.overall
+#: templates/evaluation/portal/section_evaluation.html:15
+#, python-format
+msgid "overall %(mean)s"
+msgstr "总平均 %(mean)s"
+
+# key: evaluation.results.not_published
+#: templates/evaluation/portal/section_evaluation.html:23
+msgid "The results are not published yet."
+msgstr "结果尚未公布。"
+
+# key: evaluation.results.too_few
+#: templates/evaluation/portal/section_evaluation.html:25
+#, python-format
+msgid ""
+"Too few responses to show results (at least %(minimum)s and %(percent)s%% "
+"are needed)."
+msgstr "回答太少，不显示结果（至少需要 %(minimum)s 人、%(percent)s%%）。"
+
+# key: evaluation.results.mean
+#: templates/evaluation/portal/section_evaluation.html:34
+msgid "Mean"
+msgstr "平均"
+
+# key: evaluation.results.reversed
+#: templates/evaluation/portal/section_evaluation.html:41
+msgid "reversed"
+msgstr "反向题"
+
+# key: common.none
+#: templates/evaluation/portal/section_evaluation.html:56
+msgctxt "common"
+msgid "None"
+msgstr "无"
+
+# key: evaluation.results.not_yet
+#: views/portal.py:69
+msgid "Not published"
+msgstr "未公布"
+
+# key: evaluation.grades_hidden
+#: views/portal.py:79
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "完成 %(term)s 的课程评价后可以查看该学期成绩。"
+
+# key: evaluation.portal.submitted
+#: views/portal.py:131
+msgid "Thank you. Your evaluation was submitted."
+msgstr "已提交，谢谢。"
+
+# key: reference.resources.lookup_values.label
+#~ msgid "code"
+#~ msgstr "代码值"
+
+# key: offering.section_statuses.published
+# key: offering.syllabus.published
+#~ msgid "Published"
+#~ msgstr "已发布"

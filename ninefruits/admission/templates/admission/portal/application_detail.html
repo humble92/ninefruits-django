@@ -1,0 +1,184 @@
+{% extends "portal/base.html" %}
+{% load i18n nf_i18n %}
+{% comment %}One application: the form while it is a draft, then its status, the released decision and the
+offer response (original livewire/portal/application-detail).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <div>
+        <a href="{% url 'portal:applications' %}" class="text-sm text-zinc-600 underline">{% translate "My applications" %}</a>
+        <h1 class="mt-1 text-2xl font-semibold">{{ application.admission_cycle.name }}</h1>
+        <p class="text-sm text-zinc-600">
+            {% translate "Status" context "admissions" %}: <strong>{{ status.label }}</strong>
+            {% if application.application_number %} · {% translate "Application number" %} {{ application.application_number }}{% endif %}
+        </p>
+    </div>
+
+    {% if application.student_record %}
+        <section class="rounded-lg border border-emerald-300 bg-emerald-50 p-4 text-sm">
+            {% blocktranslate with number=application.student_record.student_number %}You are now a student. Your student number is {{ number }}.{% endblocktranslate %}
+            <a href="{% url 'portal:records' %}" class="ms-2 underline">{% translate "My records" context "portal" %}</a>
+        </section>
+    {% elif status == statuses.ADMITTED %}
+        <section class="space-y-3 rounded-lg border border-emerald-300 bg-emerald-50 p-4 text-sm">
+            <p class="font-medium">{% blocktranslate with program=application.program.name %}Congratulations! You are admitted to {{ program }}.{% endblocktranslate %}</p>
+            {% if application.offer_expires_at %}
+                <p>{% blocktranslate with date=application.offer_expires_at|lll %}Please answer by {{ date }}.{% endblocktranslate %}</p>
+            {% endif %}
+            <div class="flex gap-3">
+                <form method="post" action="{% url 'portal:application' application.pk %}" hx-post="{% url 'portal:application' application.pk %}" hx-confirm="{% translate 'Accept the offer?' %}">
+                    {% csrf_token %}<input type="hidden" name="action" value="respond"><input type="hidden" name="accept" value="1">
+                    <button type="submit" class="rounded bg-zinc-900 px-4 py-2 font-medium text-white">{% translate "Accept the offer" %}</button>
+                </form>
+                <form method="post" action="{% url 'portal:application' application.pk %}" hx-post="{% url 'portal:application' application.pk %}" hx-confirm="{% translate 'Decline the offer? This cannot be undone.' %}">
+                    {% csrf_token %}<input type="hidden" name="action" value="respond"><input type="hidden" name="accept" value="0">
+                    <button type="submit" class="rounded border border-zinc-300 bg-white px-4 py-2">{% translate "Decline" %}</button>
+                </form>
+            </div>
+        </section>
+    {% elif status == statuses.CONFIRMED %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-4 text-sm">{% translate "You accepted the offer. Your student record will be created before the term starts." %}</section>
+    {% elif status == statuses.REJECTED %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-4 text-sm">{% translate "We are sorry, we cannot offer you admission in this cycle." %}</section>
+    {% elif status.is_awaiting_decision %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-4 text-sm">{% translate "Your application is being reviewed. You will get an email when the decision is available." %}</section>
+    {% endif %}
+
+    {% if editable %}
+        <form method="post" action="{% url 'portal:application' application.pk %}" enctype="multipart/form-data" hx-encoding="multipart/form-data" class="space-y-6">
+            {% csrf_token %}
+            {% for error in errors.status %}<p class="text-sm text-red-600" role="alert">{{ error }}</p>{% endfor %}
+            {% for error in errors.general %}<p class="text-sm text-red-600" role="alert">{{ error }}</p>{% endfor %}
+            <section class="rounded-lg border border-zinc-200 bg-white p-6">
+                <h2 class="mb-4 font-medium">{% translate "Personal details" %}</h2>
+                {% if identity_editable %}
+                    <div class="grid gap-4 sm:grid-cols-2">
+                        <div>
+                            <label for="family_name" class="block text-sm font-medium">{% translate "Family name" %}</label>
+                            <input id="family_name" name="family_name" type="text" value="{{ values.family_name|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            {% for error in errors.family_name %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                        </div>
+                        <div>
+                            <label for="given_name" class="block text-sm font-medium">{% translate "Given name" %}</label>
+                            <input id="given_name" name="given_name" type="text" value="{{ values.given_name|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            {% for error in errors.given_name %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                        </div>
+                        <div>
+                            <label for="birth_date" class="block text-sm font-medium">{% translate "Birth date" %}</label>
+                            <input id="birth_date" name="birth_date" type="date" value="{{ values.birth_date|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            {% for error in errors.birth_date %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                        </div>
+                        <div>
+                            <label for="gender" class="block text-sm font-medium">{% translate "Gender" %}</label>
+                            <select id="gender" name="gender" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                                <option value="">-</option>
+                                {% for value, label in genders %}<option value="{{ value }}" {% if value == values.gender %}selected{% endif %}>{{ label }}</option>{% endfor %}
+                            </select>
+                        </div>
+                        <div>
+                            <label for="nationality" class="block text-sm font-medium">{% translate "Nationality" %}</label>
+                            <select id="nationality" name="nationality_country_id" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                                <option value="">-</option>
+                                {% for country in countries %}<option value="{{ country.pk }}" {% if country.pk == values.nationality_country_id %}selected{% endif %}>{{ country.name }}</option>{% endfor %}
+                            </select>
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium">{% translate "Phone" %}</label>
+                            <input id="phone" name="phone" type="text" value="{{ values.phone|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            {% for error in errors.phone %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label for="address" class="block text-sm font-medium">{% translate "Address" %}</label>
+                            <textarea id="address" name="address" rows="2" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">{{ values.address|default_if_none:'' }}</textarea>
+                        </div>
+                    </div>
+                {% else %}
+                    <p class="text-sm">{{ application.person.display_name }} ({{ application.person.romanized_name }})</p>
+                    <p class="mt-1 text-sm text-zinc-600">{% translate "Your name and birth date are kept by the registrar's office. You can update contact details under" %} <a href="{% url 'portal:profile' %}" class="underline">{% translate "My details" context "portal" %}</a></p>
+                {% endif %}
+            </section>
+
+            <section class="rounded-lg border border-zinc-200 bg-white p-6">
+                <h2 class="mb-4 font-medium">{% translate "Application" %}</h2>
+                <div class="grid gap-4 sm:grid-cols-2">
+                    <div>
+                        <label for="program_id" class="block text-sm font-medium">{% translate "Program" context "security" %}</label>
+                        <select id="program_id" name="program_id" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            {% for offered in offered_programs %}<option value="{{ offered.program_id }}" {% if offered.program_id|stringformat:"s" == values.program_id|stringformat:"s" %}selected{% endif %}>{{ offered.program.name }}</option>{% endfor %}
+                        </select>
+                        {% for error in errors.program_id %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                    </div>
+                    <div>
+                        <label for="previous_school_name" class="block text-sm font-medium">{% translate "Previous school" %}</label>
+                        <input id="previous_school_name" name="previous_school_name" type="text" value="{{ values.previous_school_name|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                        {% for error in errors.previous_school_name %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                    </div>
+                    <div>
+                        <label for="previous_school_country_id" class="block text-sm font-medium">{% translate "Country of previous school" %}</label>
+                        <select id="previous_school_country_id" name="previous_school_country_id" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            <option value="">-</option>
+                            {% for country in countries %}<option value="{{ country.pk }}" {% if country.pk|stringformat:"s" == values.previous_school_country_id|stringformat:"s" %}selected{% endif %}>{{ country.name }}</option>{% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="previous_graduation_date" class="block text-sm font-medium">{% translate "Graduation date (previous school)" %}</label>
+                        <input id="previous_graduation_date" name="previous_graduation_date" type="date" value="{{ values.previous_graduation_date|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                        {% for error in errors.previous_graduation_date %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="personal_statement" class="block text-sm font-medium">{% translate "Personal statement" %}</label>
+                        <textarea id="personal_statement" name="personal_statement" rows="8" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">{{ values.personal_statement|default_if_none:'' }}</textarea>
+                        {% for error in errors.personal_statement %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                    </div>
+                </div>
+            </section>
+
+            <section class="rounded-lg border border-zinc-200 bg-white p-6">
+                <h2 class="mb-4 font-medium">{% translate "Documents" %}</h2>
+                {% for row in document_types %}
+                    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 py-3 text-sm last:border-0">
+                        <span>
+                            {{ row.type.document_type.name }}
+                            {% if row.type.is_required %}<span class="text-red-600">*</span>{% endif %}
+                            {% for media in row.files %}
+                                <a href="{% url 'admission:document' application.pk media.pk %}" class="ms-2 underline">{{ media.file_name }}</a>
+                            {% endfor %}
+                        </span>
+                        <input type="file" name="document_{{ row.type.document_type_id }}" accept=".pdf,.jpg,.jpeg,.png" aria-label="{{ row.type.document_type.name }}" class="text-sm">
+                        {% for error in row.errors %}<p class="w-full text-red-600">{{ error }}</p>{% endfor %}
+                    </div>
+                {% empty %}
+                    <p class="text-sm text-zinc-500">{% translate "None" context "common" %}</p>
+                {% endfor %}
+                {% for error in errors.documents %}<p class="mt-2 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                {% for error in errors.document %}<p class="mt-2 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                {% for error in errors.document_type_id %}<p class="mt-2 text-sm text-red-600">{{ error }}</p>{% endfor %}
+            </section>
+
+            <div class="flex flex-wrap gap-3">
+                <button type="submit" name="action" value="save" class="rounded border border-zinc-300 bg-white px-4 py-2 text-sm">{% translate "Save draft" context "admissions" %}</button>
+                <button type="submit" name="action" value="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white"
+                        hx-post="{% url 'portal:application' application.pk %}" hx-confirm="{% translate 'Submit the application? You cannot change it afterwards.' %}" hx-target="main" hx-select="main" hx-swap="outerHTML">{% translate "Submit application" %}</button>
+            </div>
+        </form>
+    {% else %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-6">
+            <dl class="grid gap-3 text-sm sm:grid-cols-[12rem_1fr]">
+                <dt class="text-zinc-500">{% translate "Program" context "security" %}</dt><dd>{{ application.program.name }}</dd>
+                <dt class="text-zinc-500">{% translate "Submitted" context "admissions.fields" %}</dt><dd>{{ application.submitted_at|lll|default:"-" }}</dd>
+                <dt class="text-zinc-500">{% translate "Previous school" %}</dt><dd>{{ application.previous_school_name|default:"-" }}</dd>
+            </dl>
+        </section>
+    {% endif %}
+
+    {% if can_withdraw %}
+        <details class="rounded-lg border border-zinc-200 bg-white p-4 text-sm">
+            <summary class="cursor-pointer">{% translate "Withdraw application" %}</summary>
+            <form method="post" action="{% url 'portal:application' application.pk %}" hx-post="{% url 'portal:application' application.pk %}" hx-confirm="{% translate 'Withdraw this application?' %}" class="mt-3 space-y-2">
+                {% csrf_token %}<input type="hidden" name="action" value="withdraw">
+                <textarea name="reason" rows="2" placeholder="{% translate 'Reason' context 'common' %}" aria-label="{% translate 'Reason' context 'common' %}" class="w-full rounded border border-zinc-300 px-3 py-2"></textarea>
+                <button type="submit" class="rounded border border-red-300 px-4 py-2 text-red-700">{% translate "Withdraw application" %}</button>
+            </form>
+        </details>
+    {% endif %}
+</div>
+{% endblock %}

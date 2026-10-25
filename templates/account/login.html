@@ -1,0 +1,62 @@
+{% extends "account/base_entrance.html" %}
+{% load i18n sso admission %}
+{% comment %}Shared sign-in for the portal and the admin panel (original auth/login).{% endcomment %}
+{% block head_title %}{% translate "Sign in" context "authentication" %}{% endblock head_title %}
+{% block content %}
+    <h1 class="mb-6 text-xl font-semibold">{% translate "Sign in" context "authentication" %}</h1>
+
+    <form method="post" action="{% url 'account_login' %}" class="space-y-4">
+        {% csrf_token %}
+        {{ redirect_field }}
+        {% if form.non_field_errors %}
+            <div class="rounded bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">
+                {% for error in form.non_field_errors %}<p>{{ error }}</p>{% endfor %}
+            </div>
+        {% endif %}
+
+        <div>
+            <label for="{{ form.login.id_for_label }}" class="block text-sm font-medium">{{ form.login.label }}</label>
+            <input id="{{ form.login.id_for_label }}" name="{{ form.login.html_name }}" type="{{ form.login.field.widget.attrs.type|default:'email' }}"
+                   value="{{ form.login.value|default_if_none:'' }}" required autofocus autocomplete="username"
+                   class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+            {% for error in form.login.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+        </div>
+
+        <div>
+            <label for="{{ form.password.id_for_label }}" class="block text-sm font-medium">{% translate "Password" context "authentication" %}</label>
+            <input id="{{ form.password.id_for_label }}" name="{{ form.password.html_name }}" type="password" required autocomplete="current-password"
+                   class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+            {% for error in form.password.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+        </div>
+
+        {% if form.remember %}
+            <label class="flex items-center gap-2 text-sm">
+                <input type="checkbox" name="{{ form.remember.html_name }}" value="on"> {% translate "Keep me signed in" %}
+            </label>
+        {% endif %}
+
+        <div class="flex items-center justify-between">
+            <a href="{% url 'account_reset_password' %}" class="text-sm text-zinc-600 underline">{% translate "Forgot your password?" %}</a>
+            <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Sign in" context "authentication" %}</button>
+        </div>
+    </form>
+
+    {% sso_providers as providers %}
+    {% if providers %}
+        <div class="mt-6 space-y-2 border-t border-zinc-200 pt-6">
+            {% for provider in providers %}
+                <a href="{% url 'sso_redirect' provider.key %}" class="block w-full rounded border border-zinc-300 px-4 py-2 text-center text-sm font-medium">
+                    {% blocktranslate with provider=provider.label %}Sign in with {{ provider }}{% endblocktranslate %}
+                </a>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% applicant_registration_enabled as registration_enabled %}
+    {% if registration_enabled %}
+        <p class="mt-6 text-sm text-zinc-600">
+            {% translate "Want to apply?" %}
+            <a href="{% url 'admission:index' %}" class="underline">{% translate "See open admissions" %}</a>
+        </p>
+    {% endif %}
+{% endblock content %}

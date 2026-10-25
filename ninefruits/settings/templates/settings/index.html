@@ -1,0 +1,30 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+    <div class="px-4 lg:px-8">
+        <div class="container mb-6 mx-auto -my-3 lg:mb-12">
+            <ul class="flex flex-wrap">
+                {% url 'admin:index' as index_link %}
+                {% include "unfold/helpers/breadcrumb_item.html" with link=index_link name=_("Home") %}
+                {% include "unfold/helpers/breadcrumb_item.html" with link="" name=title %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <ul class="grid gap-4 md:grid-cols-2 max-w-4xl">
+        {% for page, url in settings_pages %}
+            <li>
+                <a href="{{ url }}" class="flex gap-3 items-start border border-base-200 rounded-default p-4 hover:bg-base-50 dark:border-base-800 dark:hover:bg-base-900">
+                    <span class="material-symbols-outlined">{{ page.icon }}</span>
+                    <span class="flex flex-col">
+                        <span class="font-semibold text-font-important-light dark:text-font-important-dark">{{ page.title }}</span>
+                        {% if page.description %}<span class="text-sm text-font-subtle-light dark:text-font-subtle-dark">{{ page.description }}</span>{% endif %}
+                    </span>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

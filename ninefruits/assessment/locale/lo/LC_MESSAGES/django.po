@@ -1,0 +1,784 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:20+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: registration.errors.reason_required
+#: actions/_support.py:25
+msgid "Enter a reason."
+msgstr "ກະລຸນາປ້ອນເຫດຜົນ."
+
+# key: assessment.errors.pass_score_published
+#: actions/change_session_pass_score.py:39
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "ຜົນສອບປະກາດແລ້ວ: ບໍ່ສາມາດປ່ຽນຄະແນນຜ່ານໄດ້. ກະລຸນາໃຊ້ການຂໍແກ້ໄຂຜົນສອບ."
+
+# key: assessment.errors.not_locked
+#: actions/correct_assessment_result.py:44 actions/correct_assessment_result.py:77
+msgid "This result is not published; enter it directly."
+msgstr "ຜົນສອບນີ້ຍັງບໍ່ໄດ້ປະກາດ; ກະລຸນາປ້ອນໂດຍກົງ."
+
+# key: assessment.errors.correction_pending
+#: actions/correct_assessment_result.py:47
+msgid "A correction request is already pending for this result."
+msgstr "ມີການຂໍແກ້ໄຂຜົນສອບນີ້ລໍຖ້າພິຈາລະນາຢູ່ແລ້ວ."
+
+# key: grading.errors.request_decided
+#: actions/correct_assessment_result.py:140
+msgid "The request is already decided."
+msgstr "ຄຳຂໍນີ້ຖືກພິຈາລະນາແລ້ວ."
+
+# key: assessment.errors.own_correction
+#: actions/correct_assessment_result.py:142
+msgid "You cannot decide your own correction request."
+msgstr "ທ່ານບໍ່ສາມາດພິຈາລະນາການຂໍແກ້ໄຂຂອງຕົນເອງໄດ້."
+
+# key: assessment.errors.not_registered
+#: actions/record_assessment_result.py:55 actions/register_for_assessment.py:138
+msgid "The student is not registered for this session."
+msgstr "ນັກສຶກສາບໍ່ໄດ້ລົງທະບຽນຮອບສອບນີ້."
+
+# key: assessment.errors.published_locked
+#: actions/record_assessment_result.py:60 actions/record_assessment_result.py:174
+msgid "The results of this session are published: request a correction instead."
+msgstr "ຜົນສອບຂອງຮອບນີ້ປະກາດແລ້ວ: ກະລຸນາຂໍແກ້ໄຂຜົນສອບແທນ."
+
+# key: assessment.errors.no_external
+#: actions/record_assessment_result.py:127
+msgid "This kind does not take external results."
+msgstr "ປະເພດນີ້ບໍ່ຮັບຜົນສອບຈາກພາຍນອກ."
+
+# key: assessment.errors.future_date
+#: actions/record_assessment_result.py:129 admin/forms.py:296
+msgid "The date cannot be in the future."
+msgstr "ວັນທີຕ້ອງບໍ່ເປັນອະນາຄົດ."
+
+# key: assessment.errors.already_published
+#: actions/record_assessment_result.py:201
+msgid "The results of this session are already published."
+msgstr "ຜົນສອບຂອງຮອບນີ້ປະກາດແລ້ວ."
+
+# key: assessment.errors.score_missing
+#: actions/record_assessment_result.py:221
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "ຂາດຄະແນນຂອງ %(component)s."
+
+# key: assessment.errors.score_range
+#: actions/record_assessment_result.py:226
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "ຄະແນນຂອງ %(component)s ຕ້ອງຢູ່ລະຫວ່າງ 0 ຫາ %(max)s."
+
+# key: assessment.errors.total_range
+#: actions/record_assessment_result.py:236
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "ຄະແນນລວມຕ້ອງຢູ່ລະຫວ່າງ 0 ຫາ %(max)s."
+
+# key: assessment.errors.decision_required
+#: actions/record_assessment_result.py:251
+msgid "Choose passed or not passed."
+msgstr "ກະລຸນາເລືອກຜ່ານ ຫຼື ບໍ່ຜ່ານ."
+
+# key: assessment.errors.no_pass_score
+#: actions/record_assessment_result.py:255
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "ປະເພດນີ້ບໍ່ມີຄະແນນຜ່ານ: ກະລຸນາເລືອກຜ່ານ ຫຼື ບໍ່ຜ່ານ."
+
+# key: assessment.errors.type_inactive
+#: actions/register_for_assessment.py:46
+msgid "This kind of examination is no longer held."
+msgstr "ປະເພດການສອບເສັງນີ້ບໍ່ໄດ້ຈັດອີກແລ້ວ."
+
+# key: assessment.errors.record_inactive
+#: actions/register_for_assessment.py:48
+msgid "Only current students can register."
+msgstr "ລົງທະບຽນໄດ້ສະເພາະນັກສຶກສາປັດຈຸບັນ."
+
+# key: assessment.errors.registration_closed
+#: actions/register_for_assessment.py:50 actions/register_for_assessment.py:113
+msgid "Registration for this session is closed."
+msgstr "ການລົງທະບຽນສຳລັບຮອບສອບນີ້ປິດແລ້ວ."
+
+# key: assessment.errors.session_past
+#: actions/register_for_assessment.py:53
+msgid "This session has already been held."
+msgstr "ຮອບສອບນີ້ໄດ້ຈັດໄປແລ້ວ."
+
+# key: assessment.errors.already_registered
+#: actions/register_for_assessment.py:55
+msgid "Already registered for this session."
+msgstr "ລົງທະບຽນຮອບສອບນີ້ແລ້ວ."
+
+# key: assessment.errors.full
+#: actions/register_for_assessment.py:66
+msgid "This session is full."
+msgstr "ຮອບສອບນີ້ເຕັມແລ້ວ."
+
+# key: assessment.errors.already_cancelled
+#: actions/register_for_assessment.py:111
+msgid "This registration is already cancelled."
+msgstr "ການລົງທະບຽນນີ້ຖືກຍົກເລີກແລ້ວ."
+
+# key: assessment.errors.has_result
+#: actions/register_for_assessment.py:119
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "ມີການປ້ອນຜົນສອບແລ້ວ; ບໍ່ສາມາດຍົກເລີກການລົງທະບຽນໄດ້."
+
+# key: assessment.fields.type
+#: admin/common.py:17 admin/corrections.py:118 admin/forms.py:274 admin/results.py:136 admin/sessions.py:191 models/results.py:79 models/sessions.py:43 models/types.py:92 templates/assessment/portal/my_assessments.html:79
+msgctxt "assessment"
+msgid "Kind"
+msgstr "ປະເພດ"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: admin/corrections.py:44 admin/forms.py:48 admin/forms.py:228 admin/forms.py:279 admin/results.py:50 admin/results.py:158 models/results.py:103 templates/assessment/admin/registrants.html:17 templates/assessment/admin/registrants.html:29 templates/assessment/portal/my_assessments.html:25 templates/assessment/portal/my_assessments.html:82 templates/assessment/portal/my_assessments.html:95
+msgid "Passed"
+msgstr "ຜ່ານ"
+
+# key: assessment.passed.no
+#: admin/corrections.py:44 admin/forms.py:48 templates/assessment/admin/registrants.html:29 templates/assessment/portal/my_assessments.html:95
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "ບໍ່ຜ່ານ"
+
+# key: registration.fields.status
+#: admin/corrections.py:49 admin/corrections.py:145 models/results.py:226 models/sessions.py:141 templates/assessment/admin/registrants.html:15
+msgctxt "registration"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/corrections.py:124 admin/forms.py:185 admin/forms.py:272 admin/results.py:140 templates/assessment/admin/registrants.html:13
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: assessment.fields.previous
+#: admin/corrections.py:129 models/results.py:223
+msgid "Current values"
+msgstr "ຄ່າປັດຈຸບັນ"
+
+# key: assessment.fields.proposed
+#: admin/corrections.py:133 models/results.py:222
+msgid "Proposed values"
+msgstr "ຄ່າທີ່ສະເໜີ"
+
+# key: common.reason
+#: admin/corrections.py:137 admin/forms.py:190 models/results.py:224 models/sessions.py:152
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: grading.fields.requested_by
+#: admin/corrections.py:141
+msgctxt "grading"
+msgid "Requested by"
+msgstr "ຂໍໂດຍ"
+
+# key: grading.fields.decision_note
+#: admin/corrections.py:149 models/results.py:237
+msgctxt "grading"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/corrections.py:178 admin/corrections.py:191
+msgid "Approve"
+msgstr "ອະນຸມັດ"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: admin/corrections.py:188 enums.py:40
+msgid "Approved"
+msgstr "ອະນຸມັດແລ້ວ"
+
+# key: grading.actions.reject
+#: admin/corrections.py:194 admin/corrections.py:210
+msgctxt "grading"
+msgid "Reject"
+msgstr "ປະຕິເສດ"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: admin/corrections.py:204 enums.py:41
+msgid "Rejected"
+msgstr "ປະຕິເສດແລ້ວ"
+
+# key: grading.actions.cancel_request
+#: admin/corrections.py:217 admin/corrections.py:232
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "ຍົກເລີກຄຳຂໍ"
+
+# key: validation.alpha_dash
+#: admin/forms.py:42
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີແຕ່ຕົວອັກສອນ, ຕົວເລກ, ຂີດກາງ ແລະ ຂີດລຸ່ມເທົ່ານັ້ນ."
+
+# key: assessment.fields.note
+#: admin/forms.py:59 models/results.py:105
+msgctxt "assessment"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: admin/forms.py:101 admin/forms.py:117 admin/forms.py:132
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: validation.unique
+#: admin/forms.py:132
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s ນີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: assessment.fields.pass_score_reason
+#: admin/forms.py:139
+msgid "Reason for changing the pass score"
+msgstr "ເຫດຜົນການປ່ຽນຄະແນນຜ່ານ"
+
+# key: assessment.help.pass_score_reason
+#: admin/forms.py:142
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "ບັນທຶກໃນບັນທຶກການກວດສອບພ້ອມກັບນັກສຶກສາທີ່ຜົນສອບປ່ຽນແປງ."
+
+# key: validation.after
+#: admin/forms.py:176
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼັງຈາກ %(date)s."
+
+# key: assessment.fields.registration_closes_at
+#: admin/forms.py:177 admin/sessions.py:199 models/sessions.py:48
+msgid "Registration closes"
+msgstr "ປິດລົງທະບຽນ"
+
+# key: assessment.fields.registration_opens_at
+#: admin/forms.py:177 models/sessions.py:47
+msgid "Registration opens"
+msgstr "ເປີດລົງທະບຽນ"
+
+# key: assessment.fields.file
+#: admin/forms.py:198
+msgid "CSV file"
+msgstr "ໄຟລ໌ CSV"
+
+#: admin/forms.py:203 admin/forms.py:302
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "ໄຟລ໌ໃຫຍ່ເກີນໄປ (%(size)s ໄບຕ໌, ສູງສຸດ %(limit)s)."
+
+# key: assessment.fields.total_score
+#: admin/forms.py:224 admin/forms.py:277 admin/results.py:148 models/results.py:100 templates/assessment/admin/registrants.html:16 templates/assessment/portal/my_assessments.html:80
+msgid "Total"
+msgstr "ລວມ"
+
+# key: assessment.help.decision_automatic
+#: admin/forms.py:233
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "ຕັດສິນຈາກຄະແນນ: ຄະແນນລວມເທົ່າກັບ ຫຼື ສູງກວ່າ %(score)s ແລະ ທຸກສ່ວນເທົ່າກັບ ຫຼື ສູງກວ່າຄະແນນຕ່ຳສຸດຂອງມັນ."
+
+# key: assessment.fields.taken_date
+#: admin/forms.py:276 models/results.py:99 templates/assessment/portal/my_assessments.html:78
+msgid "Taken on"
+msgstr "ສອບເມື່ອ"
+
+# key: assessment.fields.level
+#: admin/forms.py:278 admin/results.py:154 models/results.py:102 templates/assessment/portal/my_assessments.html:81
+msgid "Level"
+msgstr "ລະດັບ"
+
+# key: assessment.fields.certificate_number
+#: admin/forms.py:281 admin/results.py:162 models/results.py:104
+msgid "Certificate number"
+msgstr "ເລກທີໃບຢັ້ງຢືນ"
+
+# key: assessment.fields.evidence
+#: admin/forms.py:283 admin/results.py:166 admin/results.py:173 templates/assessment/portal/my_assessments.html:96
+msgid "Evidence"
+msgstr "ຫຼັກຖານ"
+
+# key: assessment.fields.source
+#: admin/results.py:39 models/results.py:98
+msgctxt "assessment"
+msgid "Source"
+msgstr "ແຫຼ່ງທີ່ມາ"
+
+# key: common.yes
+#: admin/results.py:54 admin/sessions.py:141
+msgid "Yes"
+msgstr "ແມ່ນ"
+
+#: admin/results.py:54 admin/sessions.py:141
+msgid "No"
+msgstr "ບໍ່"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/results.py:144 templates/assessment/admin/registrants.html:14
+msgctxt "people"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: assessment.actions.record_external
+#: admin/results.py:184 admin/results.py:203 admin/results.py:205
+msgid "Record an external result"
+msgstr "ບັນທຶກຜົນສອບຈາກພາຍນອກ"
+
+# key: assessment.actions.remove
+#: admin/results.py:207 admin/results.py:218 admin/results.py:224
+msgctxt "assessment"
+msgid "Remove"
+msgstr "ລຶບອອກ"
+
+# key: assessment.fields.published_at
+#: admin/sessions.py:137 admin/sessions.py:214 models/sessions.py:63
+msgctxt "assessment"
+msgid "Results published"
+msgstr "ປະກາດຜົນແລ້ວ"
+
+# key: assessment.fields.venue
+#: admin/sessions.py:195 models/sessions.py:46
+msgid "Venue"
+msgstr "ສະຖານທີ່"
+
+# key: assessment.fields.registrants
+#: admin/sessions.py:205 admin/sessions.py:233 models/sessions.py:159 models/sessions.py:160
+msgid "Registrants"
+msgstr "ຜູ້ລົງທະບຽນ"
+
+# key: assessment.fields.results
+#: admin/sessions.py:210
+msgctxt "assessment"
+msgid "Results"
+msgstr "ຜົນສອບ"
+
+# key: assessment.notifications.rejudged
+#: admin/sessions.py:263
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "ຕັດສິນຜົນສອບໃໝ່ %(count)s ລາຍການ: ຜ່ານ %(passed)s, ບໍ່ຜ່ານ %(failed)s."
+
+# key: security.scope_types.global
+#: admin/sessions.py:279
+msgid "All"
+msgstr "ທັງໝົດ"
+
+# key: assessment.actions.publish
+#: admin/sessions.py:323 admin/sessions.py:329 admin/sessions.py:379 admin/sessions.py:394
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "ປະກາດຜົນສອບ"
+
+# key: assessment.help.publish
+#: admin/sessions.py:333
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "ນັກສຶກສາຈະເຫັນຜົນສອບຂອງຕົນຕັ້ງແຕ່ນີ້ໄປ. ຜົນສອບທີ່ປ້ອນພາຍຫຼັງຈະເຫັນໄດ້ທັນທີ."
+
+#: admin/sessions.py:347
+msgid "The file is not UTF-8 text."
+msgstr "ໄຟລ໌ນີ້ບໍ່ແມ່ນຂໍ້ຄວາມ UTF-8."
+
+# key: assessment.notifications.imported
+#: admin/sessions.py:348
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "ບັນທຶກ %(recorded)s, ຂາດສອບ %(absent)s, ຜິດພາດ %(errors)s."
+
+# key: assessment.actions.import
+#: admin/sessions.py:364 admin/sessions.py:388 admin/sessions.py:402
+msgid "Import results (CSV)"
+msgstr "ນຳເຂົ້າຜົນສອບ (CSV)"
+
+# key: assessment.help.import
+#: admin/sessions.py:369
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "ໄຟລ໌ CSV ທີ່ມີແຖວຫົວ: student_number, ຖັນໜຶ່ງຕໍ່ລະຫັດສ່ວນ (ຫຼື total), ແລະ ອາດມີ passed (Y/N), absent (Y) ແລະ note. ແຖວຂອງນັກສຶກສາທີ່ບໍ່ໄດ້ລົງທະບຽນຈະຖືກຂ້າມ."
+
+# key: assessment.actions.register_student
+#: admin/sessions.py:407 admin/sessions.py:426
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "ລົງທະບຽນນັກສຶກສາ"
+
+# key: assessment.registration_statuses.registered
+#: admin/sessions.py:420 enums.py:28
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "ລົງທະບຽນແລ້ວ"
+
+# key: assessment.actions.enter_result
+#: admin/sessions.py:475 admin/sessions.py:481 templates/assessment/admin/registrants.html:32
+msgid "Enter result"
+msgstr "ປ້ອນຜົນສອບ"
+
+# key: assessment.actions.request_correction
+#: admin/sessions.py:496 admin/sessions.py:502 templates/assessment/admin/registrants.html:33
+msgid "Request a correction"
+msgstr "ຂໍແກ້ໄຂຜົນສອບ"
+
+# key: assessment.help.correction
+#: admin/sessions.py:507
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "ຜົນສອບຂອງຮອບນີ້ປະກາດແລ້ວ. ກະລຸນາສະເໜີຄ່າໃໝ່ພ້ອມເຫດຜົນ; ຜູ້ອື່ນທີ່ມີສິດຈັດການຈະອະນຸມັດ ແລະ ການປ່ຽນແປງຈະມີຜົນ."
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: admin/sessions.py:517 admin/sessions.py:523 enums.py:30 templates/assessment/admin/registrants.html:34
+msgctxt "assessment"
+msgid "Absent"
+msgstr "ຂາດສອບ"
+
+# key: assessment.actions.cancel
+#: admin/sessions.py:534 admin/sessions.py:540 templates/assessment/admin/registrants.html:35
+msgid "Cancel registration"
+msgstr "ຍົກເລີກການລົງທະບຽນ"
+
+# key: assessment.fields.components
+#: admin/types.py:44 admin/types.py:45 admin/types.py:110 models/types.py:116 models/types.py:117
+msgid "Areas"
+msgstr "ສ່ວນ"
+
+# key: reference.fields.name
+#: admin/types.py:91 models/types.py:23 models/types.py:99
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: assessment.fields.category
+#: admin/types.py:95 models/types.py:25
+msgid "Category"
+msgstr "ໝວດ"
+
+# key: assessment.fields.scoring
+#: admin/types.py:99 models/types.py:28
+msgid "Scoring"
+msgstr "ວິທີໃຫ້ຄະແນນ"
+
+# key: assessment.fields.pass_score
+#: admin/types.py:103 models/sessions.py:52 models/types.py:46
+msgid "Pass score"
+msgstr "ຄະແນນຜ່ານ"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: apps.py:20
+msgctxt "portal"
+msgid "Examinations"
+msgstr "ການສອບເສັງ"
+
+# key: assessment.categories.language
+#: enums.py:13
+msgctxt "assessment"
+msgid "Language"
+msgstr "ພາສາ"
+
+# key: assessment.categories.comprehensive
+#: enums.py:14
+msgid "Comprehensive"
+msgstr "ສອບລວມ"
+
+# key: assessment.categories.thesis
+#: enums.py:15
+msgid "Thesis"
+msgstr "ບົດວິທະຍານິພົນ"
+
+# key: assessment.categories.external
+#: enums.py:16
+msgid "External test"
+msgstr "ການສອບພາຍນອກ"
+
+# key: assessment.scoring_methods.score
+#: enums.py:23 models/results.py:181 models/results.py:188 models/results.py:189
+msgid "Score"
+msgstr "ຄະແນນ"
+
+# key: assessment.scoring_methods.pass_fail
+#: enums.py:24
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "ຜ່ານ/ບໍ່ຜ່ານ"
+
+# key: assessment.registration_statuses.cancelled
+# key: assessment.correction_statuses.cancelled
+#: enums.py:29 enums.py:42
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
+# key: assessment.correction_statuses.pending
+#: enums.py:39
+msgctxt "assessment"
+msgid "Pending"
+msgstr "ລໍຖ້າພິຈາລະນາ"
+
+# key: assessment.sources.session
+#: enums.py:48
+msgctxt "assessment"
+msgid "Session"
+msgstr "ຮອບສອບ"
+
+# key: assessment.sources.external
+#: enums.py:49
+msgid "External"
+msgstr "ພາຍນອກ"
+
+# key: people.resources.student_records.label
+#: models/results.py:73 models/sessions.py:138
+msgid "student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: assessment.resources.sessions.label
+#: models/results.py:88 models/sessions.py:71 models/sessions.py:132
+msgid "Examination session"
+msgstr "ຮອບສອບເສັງ"
+
+# key: assessment.resources.results.label
+#: models/results.py:116
+msgid "Examination result"
+msgstr "ຜົນການສອບເສັງ"
+
+# key: assessment.resources.results.plural_label
+#: models/results.py:117
+msgid "Examination results"
+msgstr "ຜົນການສອບເສັງ"
+
+# key: grading.fields.requested_at
+#: models/results.py:232
+msgctxt "grading"
+msgid "Requested"
+msgstr "ຂໍເມື່ອ"
+
+# key: assessment.resources.corrections.label
+#: models/results.py:244
+msgid "Result correction"
+msgstr "ການແກ້ໄຂຜົນສອບ"
+
+# key: assessment.resources.corrections.plural_label
+#: models/results.py:245
+msgid "Result corrections"
+msgstr "ການແກ້ໄຂຜົນສອບ"
+
+# key: assessment.fields.held_date
+#: models/sessions.py:45
+msgctxt "assessment"
+msgid "Date"
+msgstr "ວັນທີ"
+
+# key: assessment.fields.capacity
+#: models/sessions.py:49
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "ຈຳນວນຮັບ"
+
+# key: assessment.help.session_pass_score
+#: models/sessions.py:58
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "ປະຫວ່າງໄວ້ເພື່ອໃຊ້ຄະແນນຜ່ານຂອງປະເພດ. ການປ່ຽນກ່ອນປະກາດຜົນຈະຕັດສິນຜົນສອບທີ່ປ້ອນແລ້ວທັງໝົດໃໝ່; ຫຼັງປະກາດຜົນແລ້ວຈະປ່ຽນບໍ່ໄດ້."
+
+# key: assessment.resources.sessions.plural_label
+#: models/sessions.py:72
+msgid "Examination sessions"
+msgstr "ຮອບສອບເສັງ"
+
+# key: assessment.fields.registered_at
+#: models/sessions.py:146 templates/assessment/admin/registrants.html:18
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "ລົງທະບຽນເມື່ອ"
+
+# key: reference.fields.code
+#: models/types.py:22 models/types.py:95
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: assessment.help.scoring
+#: models/types.py:33
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "ຄະແນນ: ສ່ວນຕ່າງໆ (ຫຼື ຄະແນນລວມດຽວ) ທຽບກັບຄະແນນຜ່ານ, ໂດຍແຕ່ລະສ່ວນຕ້ອງເທົ່າກັບ ຫຼື ສູງກວ່າຄະແນນຕ່ຳສຸດຂອງມັນ. ຜ່ານ/ບໍ່ຜ່ານ: ພະນັກງານຕັດສິນສຳລັບນັກສຶກສາແຕ່ລະຄົນ."
+
+# key: assessment.fields.max_score
+#: models/types.py:38 models/types.py:100
+msgid "Maximum score"
+msgstr "ຄະແນນສູງສຸດ"
+
+# key: assessment.help.max_score
+#: models/types.py:43
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "ສຳລັບປະເພດທີ່ບໍ່ມີສ່ວນ. ຖ້າມີສ່ວນ ຄະແນນສູງສຸດຄືຜົນລວມຂອງສ່ວນຕ່າງໆ."
+
+# key: assessment.help.pass_score
+#: models/types.py:51
+msgid "Total needed to pass. A session can override it."
+msgstr "ຄະແນນລວມທີ່ຕ້ອງການເພື່ອຜ່ານ. ຮອບສອບສາມາດກຳນົດຄ່າອື່ນແທນໄດ້."
+
+# key: assessment.fields.allows_external
+#: models/types.py:54
+msgid "External results"
+msgstr "ຜົນສອບຈາກພາຍນອກ"
+
+# key: assessment.help.allows_external
+#: models/types.py:56
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "ຜົນສອບຈາກອົງກອນພາຍນອກ (TOPIK, HSK, ...) ສາມາດບັນທຶກພ້ອມໄຟລ໌ຫຼັກຖານໄດ້."
+
+# key: reference.fields.is_active
+#: models/types.py:58
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: reference.fields.sort_order
+#: models/types.py:59 models/types.py:109
+msgid "Order"
+msgstr "ລຳດັບ"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: models/types.py:66
+msgid "Examination kind"
+msgstr "ປະເພດການສອບເສັງ"
+
+# key: assessment.resources.types.plural_label
+#: models/types.py:67
+msgid "Examination kinds"
+msgstr "ປະເພດການສອບເສັງ"
+
+# key: assessment.help.component_code
+#: models/types.py:97
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "ຊື່ຖັນໃນໄຟລ໌ CSV ຜົນສອບ, ເຊັ່ນ LISTENING."
+
+# key: assessment.fields.min_score
+#: models/types.py:102
+msgid "Minimum to pass"
+msgstr "ຄະແນນຕ່ຳສຸດເພື່ອຜ່ານ"
+
+# key: assessment.help.min_score
+#: models/types.py:107
+msgid "Below this the student fails whatever the total."
+msgstr "ຕ່ຳກວ່ານີ້ນັກສຶກສາບໍ່ຜ່ານບໍ່ວ່າຄະແນນລວມຈະເປັນເທົ່າໃດ."
+
+# key: common.none
+#: templates/assessment/admin/registrants.html:39
+msgctxt "common"
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: templates/assessment/portal/my_assessments.html:9 views/portal.py:93
+msgid "Examinations"
+msgstr "ການສອບເສັງ"
+
+# key: assessment.portal.intro
+#: templates/assessment/portal/my_assessments.html:10
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "ລົງທະບຽນຮອບສອບເສັງ ແລະ ເບິ່ງຜົນສອບຂອງທ່ານເມື່ອປະກາດແລ້ວ."
+
+# key: assessment.portal.required
+#: templates/assessment/portal/my_assessments.html:21
+msgid "Required by your curriculum"
+msgstr "ຫຼັກສູດຂອງທ່ານກຳນົດໃຫ້ຕ້ອງສອບ"
+
+# key: assessment.portal.not_yet
+#: templates/assessment/portal/my_assessments.html:25
+msgid "Not yet"
+msgstr "ຍັງບໍ່ທັນ"
+
+# key: assessment.portal.open_sessions
+#: templates/assessment/portal/my_assessments.html:34
+msgid "Open for registration"
+msgstr "ເປີດລົງທະບຽນ"
+
+# key: assessment.portal.closes
+#: templates/assessment/portal/my_assessments.html:40
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "ປິດລົງທະບຽນ %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: templates/assessment/portal/my_assessments.html:43
+msgid "Cancel this registration?"
+msgstr "ຍົກເລີກການລົງທະບຽນນີ້ບໍ?"
+
+# key: assessment.portal.cancel
+#: templates/assessment/portal/my_assessments.html:48
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+# key: assessment.portal.register
+#: templates/assessment/portal/my_assessments.html:52
+msgctxt "assessment"
+msgid "Register"
+msgstr "ລົງທະບຽນ"
+
+# key: assessment.portal.no_open_sessions
+#: templates/assessment/portal/my_assessments.html:57
+msgid "No session is open for registration."
+msgstr "ບໍ່ມີຮອບສອບທີ່ເປີດລົງທະບຽນ."
+
+# key: assessment.portal.my_registrations
+#: templates/assessment/portal/my_assessments.html:62
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "ການລົງທະບຽນຂອງຂ້ອຍ"
+
+# key: assessment.portal.no_registrations
+#: templates/assessment/portal/my_assessments.html:69
+msgid "No registrations."
+msgstr "ບໍ່ມີການລົງທະບຽນ."
+
+# key: assessment.portal.my_results
+#: templates/assessment/portal/my_assessments.html:74
+msgid "My results"
+msgstr "ຜົນສອບຂອງຂ້ອຍ"
+
+# key: assessment.portal.no_results
+#: templates/assessment/portal/my_assessments.html:99
+msgid "No results yet."
+msgstr "ຍັງບໍ່ມີຜົນສອບ."
+
+# key: assessment.portal.registered
+#: views/portal.py:122
+msgid "You are registered."
+msgstr "ທ່ານລົງທະບຽນແລ້ວ."
+
+# key: assessment.portal.cancelled
+#: views/portal.py:130
+msgid "Your registration is cancelled."
+msgstr "ການລົງທະບຽນຂອງທ່ານຖືກຍົກເລີກແລ້ວ."

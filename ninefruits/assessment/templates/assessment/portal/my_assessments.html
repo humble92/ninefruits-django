@@ -1,0 +1,104 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}A student's examinations (original livewire/portal/my-assessments). Buttons are forms that
+work without JavaScript; with HTMX the block #assessments is swapped.{% endcomment %}
+{% block content %}
+<div id="assessments" class="space-y-6">
+    <div>
+        <h1 class="text-2xl font-semibold">{% translate "Examinations" %}</h1>
+        <p class="text-sm text-zinc-600">{% translate "Register for examination sessions and see your results once they are published." %}</p>
+    </div>
+
+    {% if flash.messages %}
+        <div role="status" data-tone="{{ flash.tone }}" class="rounded-lg border p-3 text-sm {% if flash.tone == 'success' %}border-emerald-300 bg-emerald-50{% elif flash.tone == 'error' %}border-red-300 bg-red-50{% else %}border-zinc-200 bg-white{% endif %}">
+            {% for message in flash.messages %}<p>{{ message }}</p>{% endfor %}
+        </div>
+    {% endif %}
+
+    {% if required %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-4" data-required>
+            <h2 class="font-medium">{% translate "Required by your curriculum" %}</h2>
+            <ul class="mt-2 space-y-1 text-sm">
+                {% for row in required %}
+                    <li class="flex items-center gap-2">
+                        <span class="rounded px-2 py-0.5 text-xs {% if row.passed %}bg-emerald-100 text-emerald-800{% else %}bg-zinc-100 text-zinc-700{% endif %}">{% if row.passed %}{% translate "Passed" %}{% else %}{% translate "Not yet" %}{% endif %}</span>
+                        {{ row.type.name }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </section>
+    {% endif %}
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-4" data-open-sessions>
+        <h2 class="font-medium">{% translate "Open for registration" %}</h2>
+        {% for row in open %}
+            <div class="mt-2 flex flex-wrap items-center justify-between gap-2 border-t border-zinc-100 pt-2 text-sm">
+                <div>
+                    <span class="font-medium">{{ row.session.assessment_type.name }}</span> · {{ row.session.held_date|date:"DATE_FORMAT" }}
+                    {% if row.session.venue %} · {{ row.session.venue }}{% endif %}
+                    <div class="text-xs text-zinc-500">{% blocktranslate with time=row.session.registration_closes_at|date:"DATETIME_FORMAT" %}Registration closes {{ time }}{% endblocktranslate %}</div>
+                </div>
+                <form method="post" action="{% url 'portal:assessments' %}" class="inline"
+                      hx-post="{% url 'portal:assessments' %}" hx-target="#assessments" hx-select="#assessments" hx-swap="outerHTML"{% if row.registration %} hx-confirm="{% translate 'Cancel this registration?' %}"{% endif %}>
+                    {% csrf_token %}
+                    {% if row.registration %}
+                        <input type="hidden" name="action" value="cancel">
+                        <input type="hidden" name="registration_id" value="{{ row.registration.pk }}">
+                        <button type="submit" class="rounded border border-zinc-300 px-3 py-1 text-sm">{% translate "Cancel" context "assessment" %}</button>
+                    {% else %}
+                        <input type="hidden" name="action" value="register">
+                        <input type="hidden" name="session_id" value="{{ row.session.pk }}">
+                        <button type="submit" class="rounded bg-zinc-900 px-3 py-1 text-sm text-white">{% translate "Register" context "assessment" %}</button>
+                    {% endif %}
+                </form>
+            </div>
+        {% empty %}
+            <p class="mt-2 text-sm text-zinc-500">{% translate "No session is open for registration." %}</p>
+        {% endfor %}
+    </section>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-4" data-registrations>
+        <h2 class="font-medium">{% translate "My registrations" context "assessment" %}</h2>
+        {% for registration in registrations %}
+            <div class="mt-2 border-t border-zinc-100 pt-2 text-sm">
+                <span class="font-medium">{{ registration.session.assessment_type.name }}</span> · {{ registration.session.held_date|date:"DATE_FORMAT" }}
+                <span class="text-zinc-500">· {{ registration.get_status_display }}</span>
+            </div>
+        {% empty %}
+            <p class="mt-2 text-sm text-zinc-500">{% translate "No registrations." %}</p>
+        {% endfor %}
+    </section>
+
+    <section class="overflow-x-auto rounded-lg border border-zinc-200 bg-white" data-results>
+        <h2 class="px-4 pt-4 font-medium">{% translate "My results" %}</h2>
+        <table class="mt-2 w-full text-sm">
+            <thead class="bg-zinc-50 text-left">
+                <tr>
+                    <th class="px-4 py-2">{% translate "Taken on" %}</th>
+                    <th class="px-4 py-2">{% translate "Kind" context "assessment" %}</th>
+                    <th class="px-4 py-2">{% translate "Total" %}</th>
+                    <th class="px-4 py-2">{% translate "Level" %}</th>
+                    <th class="px-4 py-2">{% translate "Passed" %}</th>
+                    <th class="px-4 py-2"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in results %}
+                    <tr class="border-t border-zinc-100">
+                        <td class="px-4 py-2">{{ row.result.taken_date|date:"DATE_FORMAT" }}</td>
+                        <td class="px-4 py-2">{{ row.result.assessment_type.name }} <span class="text-zinc-500">({{ row.result.get_source_display }})</span></td>
+                        <td class="px-4 py-2">{{ row.result.total_score|default_if_none:"-" }}
+                            {% if row.scores %}<div class="text-xs text-zinc-500">{% for score in row.scores %}{{ score.component.name }} {{ score.score }}{% if not forloop.last %} · {% endif %}{% endfor %}</div>{% endif %}
+                        </td>
+                        <td class="px-4 py-2">{{ row.result.level|default:"-" }}</td>
+                        <td class="px-4 py-2">{% if row.result.is_passed %}{% translate "Passed" %}{% else %}{% translate "Not passed" context "assessment" %}{% endif %}</td>
+                        <td class="px-4 py-2">{% if row.has_evidence %}<a href="{% url 'assessment:evidence' row.result.pk %}" target="_blank" rel="noopener" class="underline">{% translate "Evidence" %}</a>{% endif %}</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="6" class="px-4 py-6 text-center text-zinc-500">{% translate "No results yet." %}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</div>
+{% endblock %}

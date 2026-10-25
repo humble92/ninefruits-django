@@ -1,0 +1,70 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}Course evaluation for students (original livewire/portal/evaluations). The questionnaire
+posts to this page; with HTMX the block #evaluations is swapped and hx-confirm asks first.{% endcomment %}
+{% block content %}
+<div id="evaluations" class="space-y-6">
+    <div>
+        <h1 class="text-2xl font-semibold">{% translate "Course evaluation" context "evaluation.portal" %}</h1>
+        <p class="text-sm text-zinc-600">{% translate "Your answers are anonymous. Instructors see only totals, after the results are published." %}</p>
+    </div>
+
+    {% if flash.messages %}
+        <div role="status" data-tone="{{ flash.tone }}" class="rounded-lg border p-3 text-sm {% if flash.tone == 'success' %}border-emerald-300 bg-emerald-50{% elif flash.tone == 'error' %}border-red-300 bg-red-50{% else %}border-zinc-200 bg-white{% endif %}">
+            {% for message in flash.messages %}<p>{{ message }}</p>{% endfor %}
+        </div>
+    {% endif %}
+
+    {% if selected and form %}
+        <form method="post" action="{% url 'portal:evaluations' %}" hx-post="{% url 'portal:evaluations' %}" hx-target="#evaluations" hx-select="#evaluations" hx-swap="outerHTML" hx-confirm="{% translate 'Submit the evaluation? You cannot change it afterwards.' %}" class="space-y-4 rounded-lg border border-zinc-200 bg-white p-4" data-questionnaire>
+            {% csrf_token %}
+            <input type="hidden" name="enrollment_id" value="{{ selected.pk }}">
+            <div class="flex flex-wrap items-center justify-between gap-2">
+                <h2 class="font-medium">{{ selected.section.label }} {{ selected.version.title }}</h2>
+                <a href="{% url 'portal:evaluations' %}" class="text-sm underline">{% translate "Back" %}</a>
+            </div>
+            {% if form.description %}
+                <p class="text-sm text-zinc-600">{{ form.description }}</p>
+            {% endif %}
+            <p class="text-xs text-zinc-500">1 = {{ form.scale_low_label|default:"" }} · {{ form.scale_points }} = {{ form.scale_high_label|default:"" }}</p>
+
+            {% for entry in questions %}
+                {% if entry.heading %}
+                    <h3 class="border-b border-zinc-100 pt-2 text-sm font-medium">{{ entry.heading }}</h3>
+                {% endif %}
+                <fieldset class="text-sm" data-question="{{ entry.question.pk }}">
+                    <legend class="mb-1">{{ entry.number }}. {{ entry.question.text }}{% if not entry.question.is_required %} <span class="text-zinc-500">({% translate "optional" %})</span>{% endif %}</legend>
+                    {% if entry.question.is_scale %}
+                        <div class="flex flex-wrap gap-3">
+                            {% for point in points %}
+                                <label class="flex items-center gap-1">
+                                    <input type="radio" name="{{ answer_prefix }}{{ entry.question.pk }}" value="{{ point }}"{% if entry.value == point|stringformat:"s" %} checked{% endif %}> {{ point }}
+                                </label>
+                            {% endfor %}
+                        </div>
+                    {% else %}
+                        <textarea name="{{ answer_prefix }}{{ entry.question.pk }}" rows="3" maxlength="2000" class="w-full rounded border border-zinc-300 px-2 py-1" aria-label="{{ entry.question.text }}">{{ entry.value }}</textarea>
+                    {% endif %}
+                </fieldset>
+            {% endfor %}
+
+            <button type="submit" class="rounded bg-zinc-900 px-4 py-2 font-medium text-white">{% translate "Submit" %}</button>
+        </form>
+    {% else %}
+        <section class="rounded-lg border border-zinc-200 bg-white" data-open-evaluations>
+            {% for row in rows %}
+                <div class="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 px-4 py-3 text-sm last:border-0">
+                    <span>{{ row.enrollment.section.label }} {{ row.enrollment.version.title }} <span class="text-zinc-500">· {{ row.enrollment.term.name }}</span></span>
+                    {% if row.done %}
+                        <span class="text-emerald-700" data-done>{% translate "Done" %}</span>
+                    {% else %}
+                        <a href="{% url 'portal:evaluations' %}?enrollment={{ row.enrollment.pk }}" class="rounded bg-zinc-900 px-3 py-1.5 text-white">{% translate "Evaluate" %}</a>
+                    {% endif %}
+                </div>
+            {% empty %}
+                <p class="px-4 py-3 text-sm text-zinc-500">{% translate "No course evaluation is open for you." %}</p>
+            {% endfor %}
+        </section>
+    {% endif %}
+</div>
+{% endblock %}

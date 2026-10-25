@@ -1,0 +1,53 @@
+{% extends "pdf/layout.html" %}
+{% load i18n %}
+{% comment %}The attendance sheet (original pdf/attendance-sheet, legacy prt_chuxi): students down,
+meetings across, the recorded marks and totals; empty cells for meetings still to come.{% endcomment %}
+{% block style %}
+@page { size: A4 landscape; margin: 12mm; }
+body { font-size: 8pt; }
+.head { display: flex; justify-content: space-between; margin-bottom: 6pt; }
+.head h1 { font-size: 14pt; margin: 0; }
+table.sheet th, table.sheet td { padding: 2pt 3pt; text-align: center; font-size: 7.5pt; }
+table.sheet th.name, table.sheet td.name { text-align: left; white-space: nowrap; }
+table.sheet th.date { writing-mode: vertical-rl; transform: rotate(180deg); height: 48pt; }
+.legend { margin-top: 6pt; color: #444; }
+{% endblock %}
+{% block content %}
+<div class="head">
+    <div>
+        <h1>{{ title }}</h1>
+        <div>{{ institution }} · {{ section.term.name }} · {{ section.label }} {{ section.version.title }}</div>
+        <div>{% translate "Instructors" %}: {{ instructors }}</div>
+    </div>
+    <div>{% blocktranslate context "attendance" with date=printed %}Printed {{ date }}{% endblocktranslate %}</div>
+</div>
+<table class="sheet">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th class="name">{% translate "Student number" %}</th>
+            <th class="name">{% translate "Name" context "people" %}</th>
+            {% for meeting in meetings %}<th class="date">{{ meeting.meeting_date|date:"m/d" }}</th>{% endfor %}
+            <th>{% translate "P" %}</th>
+            <th>{% translate "L" %}</th>
+            <th>{% translate "A" %}</th>
+            <th>{% translate "E" context "attendance.sheet" %}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+            <tr>
+                <td>{{ row.number }}</td>
+                <td class="name">{{ row.record.student_number }}</td>
+                <td class="name">{{ row.record.person.display_name }}</td>
+                {% for mark in row.marks %}<td>{{ mark }}</td>{% endfor %}
+                <td>{{ row.counts.present }}</td>
+                <td>{{ row.counts.late }}</td>
+                <td>{{ row.counts.absent }}</td>
+                <td>{{ row.counts.excused }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<div class="legend">{% translate "O present · △ late · X absent · E excused · blank not recorded" %}</div>
+{% endblock %}

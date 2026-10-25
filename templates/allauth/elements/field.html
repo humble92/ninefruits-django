@@ -1,0 +1,18 @@
+{% load allauth %}
+{% if attrs.errors %}<div class="text-sm text-red-600">{{ attrs.errors }}</div>{% endif %}
+<div class="text-sm">
+    {% if attrs.type == "checkbox" or attrs.type == "radio" %}
+        <label class="flex items-center gap-2">
+            <input type="{{ attrs.type }}" {% if attrs.name %}name="{{ attrs.name }}"{% endif %} {% if attrs.id %}id="{{ attrs.id }}"{% endif %} {% if attrs.value is not None %}value="{{ attrs.value }}"{% endif %} {% if attrs.checked %}checked{% endif %} {% if attrs.required %}required{% endif %} {% if attrs.disabled %}disabled{% endif %}>
+            {% slot label %}{% endslot %}
+        </label>
+    {% else %}
+        <label for="{{ attrs.id }}" class="block font-medium">{% slot label %}{% endslot %}</label>
+        {% if attrs.type == "textarea" %}
+            <textarea class="mt-1 w-full rounded border border-zinc-300 px-3 py-2" {% if attrs.name %}name="{{ attrs.name }}"{% endif %} {% if attrs.id %}id="{{ attrs.id }}"{% endif %} {% if attrs.rows %}rows="{{ attrs.rows }}"{% endif %} {% if attrs.required %}required{% endif %} {% if attrs.readonly %}readonly{% endif %} {% if attrs.disabled %}disabled{% endif %}>{% slot value %}{% endslot %}</textarea>
+        {% else %}
+            <input class="mt-1 w-full rounded border border-zinc-300 px-3 py-2" type="{{ attrs.type }}" {% if attrs.name %}name="{{ attrs.name }}"{% endif %} {% if attrs.id %}id="{{ attrs.id }}"{% endif %} {% if attrs.value is not None %}value="{{ attrs.value }}"{% endif %} {% if attrs.placeholder %}placeholder="{{ attrs.placeholder }}"{% endif %} {% if attrs.autocomplete %}autocomplete="{{ attrs.autocomplete }}"{% endif %} {% if attrs.required %}required{% endif %} {% if attrs.readonly %}readonly{% endif %} {% if attrs.disabled %}disabled{% endif %}>
+        {% endif %}
+    {% endif %}
+    {% if slots.help_text %}<span class="mt-1 block text-xs text-zinc-500">{% slot help_text %}{% endslot %}</span>{% endif %}
+</div>

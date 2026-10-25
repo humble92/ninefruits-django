@@ -1,0 +1,1226 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 23:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: registration.errors.not_enrolled
+#: actions/drop_enrollment.py:48
+msgid "This registration is not active."
+msgstr "ການລົງທະບຽນນີ້ບໍ່ໄດ້ເປີດໃຊ້ຢູ່."
+
+# key: registration.errors.reason_required
+#: actions/enroll_student.py:43
+msgid "Enter a reason."
+msgstr "ກະລຸນາປ້ອນເຫດຜົນ."
+
+# key: registration.capacity.full_waitlist_open
+#: actions/enroll_student.py:48
+msgid "The section is full. You can join the waitlist."
+msgstr "ກຸ່ມຮຽນເຕັມແລ້ວ. ທ່ານສາມາດເຂົ້າລາຍຊື່ລໍຖ້າໄດ້."
+
+# key: registration.capacity.full
+#: actions/enroll_student.py:49
+msgid "The section is full."
+msgstr "ກຸ່ມຮຽນເຕັມແລ້ວ."
+
+# key: registration.capacity.waitlisted
+#: actions/enroll_student.py:195
+#, python-format
+msgid "You are on the waitlist (position %(position)s)."
+msgstr "ທ່ານຢູ່ໃນລາຍຊື່ລໍຖ້າ (ລຳດັບທີ %(position)s)."
+
+# key: registration.errors.not_waiting
+#: actions/leave_waitlist.py:25
+msgid "This waitlist entry is no longer waiting."
+msgstr "ລາຍການລໍຖ້ານີ້ບໍ່ໄດ້ລໍຖ້າອີກຕໍ່ໄປ."
+
+# key: registration.waitlist.left
+#: actions/leave_waitlist.py:28
+msgid "You left the waitlist."
+msgstr "ທ່ານອອກຈາກລາຍຊື່ລໍຖ້າແລ້ວ."
+
+# key: validation.after
+#: actions/manage_holds.py:48 admin/common.py:197 importers.py:106
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼັງຈາກ %(date)s."
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: actions/manage_holds.py:49 admin/common.py:188 admin/common.py:198 models/holds.py:56
+msgid "Ends"
+msgstr "ສິ້ນສຸດ"
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: actions/manage_holds.py:49 admin/common.py:187 admin/common.py:198 models/holds.py:55
+msgid "Starts"
+msgstr "ເລີ່ມ"
+
+# key: registration.errors.hold_released
+#: actions/manage_holds.py:70
+msgid "This hold is already released."
+msgstr "ການລະງັບນີ້ຖືກປົດແລ້ວ."
+
+# key: registration.errors.rule_not_overridable
+#: actions/manage_holds.py:93
+msgid "This rule cannot be overridden."
+msgstr "ກົດລະບຽບນີ້ບໍ່ສາມາດຍົກເວັ້ນໄດ້."
+
+# key: registration.errors.rule_set_exists
+#: actions/prepare_rule_set.py:27
+msgid "The term already has a rule set."
+msgstr "ພາກຮຽນນີ້ມີຊຸດກົດລະບຽບຢູ່ແລ້ວ."
+
+# key: registration.waitlist.window_closed
+#: actions/promote_waitlist.py:55
+msgid "Registration closed before a seat became free."
+msgstr "ການລົງທະບຽນປິດກ່ອນມີບ່ອນນັ່ງວ່າງ."
+
+# key: registration.fields.outcome
+#: admin/attempts.py:27 admin/attempts.py:87 models/enrollment.py:323
+msgid "Outcome"
+msgstr "ຜົນ"
+
+# key: registration.fields.action
+#: admin/attempts.py:33 admin/attempts.py:82 models/enrollment.py:322
+msgid "Action"
+msgstr "ການດຳເນີນການ"
+
+# key: registration.fields.attempted_at
+#: admin/attempts.py:68 models/enrollment.py:330
+msgctxt "registration"
+msgid "Time"
+msgstr "ເວລາ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/attempts.py:74 admin/common.py:94 admin/enrollments.py:139 admin/holds.py:69 templates/registration/admin/roster.html:8 templates/registration/admin/waitlist.html:9
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: offering.fields.section
+#: admin/attempts.py:78 admin/common.py:132 admin/common.py:208 admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
+msgctxt "offering"
+msgid "Section"
+msgstr "ກຸ່ມຮຽນ"
+
+# key: registration.fields.failed_rules
+#: admin/attempts.py:97
+msgid "Rules not met"
+msgstr "ກົດທີ່ບໍ່ຜ່ານ"
+
+# key: registration.fields.actor
+#: admin/attempts.py:102
+msgid "By"
+msgstr "ໂດຍ"
+
+# key: common.reason
+#: admin/common.py:47 admin/holds.py:77 models/holds.py:57 models/holds.py:121
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: registration.import.unknown_student
+#: admin/common.py:71 importers.py:87
+#, python-format
+msgid "No student record with number %(number)s."
+msgstr "ບໍ່ມີບັນທຶກນັກສຶກສາທີ່ມີລະຫັດ %(number)s."
+
+#: admin/common.py:88
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "ບໍ່ພົບກຸ່ມຮຽນ %(section)s."
+
+# key: registration.fields.waive
+#: admin/common.py:135
+msgid "Waive rules"
+msgstr "ຍົກເວັ້ນກົດລະບຽບ"
+
+# key: registration.fields.waitlist_if_full
+#: admin/common.py:138
+msgid "Add to the waitlist if full"
+msgstr "ເພີ່ມເຂົ້າລາຍຊື່ລໍຖ້າຖ້າເຕັມ"
+
+# key: registration.fields.hold_type
+#: admin/common.py:177 admin/holds.py:83 admin/holds.py:116 models/holds.py:51
+msgid "Hold type"
+msgstr "ປະເພດການລະງັບ"
+
+# key: registration.fields.blocks_registration
+#: admin/common.py:179 models/holds.py:52
+msgid "Blocks registration"
+msgstr "ລະງັບການລົງທະບຽນຮຽນ"
+
+# key: registration.fields.blocks_grades
+#: admin/common.py:182 models/holds.py:53
+msgid "Blocks grade viewing"
+msgstr "ລະງັບການເບິ່ງເກຣດ"
+
+# key: registration.fields.blocks_certificates
+#: admin/common.py:185 models/holds.py:54
+msgid "Blocks certificates"
+msgstr "ລະງັບໃບຢັ້ງຢືນ"
+
+# key: reference.resources.terms.label
+#: admin/common.py:205 admin/common.py:253 admin/holds.py:200 admin/rules.py:54 admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22 templates/registration/portal/registration.html:17
+msgid "term"
+msgstr "ພາກຮຽນ"
+
+# key: registration.fields.rule
+#: admin/common.py:206 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96 admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
+msgid "Rule"
+msgstr "ກົດລະບຽບ"
+
+# key: registration.help.override_section
+#: admin/common.py:211
+msgid "Leave empty to apply to every section of the term."
+msgstr "ປ່ອຍຫວ່າງເພື່ອນຳໃຊ້ກັບທຸກກຸ່ມຮຽນຂອງພາກຮຽນ."
+
+# key: curriculum.resources.courses.label
+#: admin/common.py:215 models/holds.py:119
+msgid "course"
+msgstr "ວິຊາ"
+
+# key: registration.help.override_course
+#: admin/common.py:218
+msgid "Leave empty for any course. Ignored when a section is chosen."
+msgstr "ປ່ອຍຫວ່າງສຳລັບທຸກວິຊາ. ຈະບໍ່ໃຊ້ເມື່ອເລືອກກຸ່ມຮຽນແລ້ວ."
+
+# key: registration.fields.expires_at
+#: admin/common.py:221 models/holds.py:122
+msgid "Expires"
+msgstr "ໝົດອາຍຸ"
+
+#: admin/common.py:244
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "ບໍ່ພົບວິຊາ %(course)s."
+
+# key: security.scope_types.global
+#: admin/common.py:259 admin/common.py:295 admin/common.py:324
+msgid "All"
+msgstr "ທັງໝົດ"
+
+# key: registration.fields.in_force
+#: admin/common.py:320
+msgid "In force"
+msgstr "ມີຜົນຢູ່"
+
+# key: common.yes
+#: admin/common.py:324
+msgid "Yes"
+msgstr "ແມ່ນ"
+
+#: admin/common.py:324
+msgid "No"
+msgstr "ບໍ່"
+
+# key: registration.fields.status
+#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115 models/enrollment.py:231 templates/registration/admin/roster.html:11 templates/registration/admin/waitlist.html:11
+msgctxt "registration"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: registration.actions.staff_enroll
+#: admin/enrollments.py:58 admin/enrollments.py:182 admin/roster.py:169
+msgctxt "registration"
+msgid "Register a student"
+msgstr "ລົງທະບຽນໃຫ້ນັກສຶກສາ"
+
+# key: registration.portal.dropped
+#: admin/enrollments.py:75 views/portal.py:363
+msgid "Dropped."
+msgstr "ຖອນວິຊາແລ້ວ."
+
+# key: registration.portal.withdrawn
+#: admin/enrollments.py:77 views/portal.py:367
+msgid "Withdrawn."
+msgstr "ຖອນຕົວແລ້ວ."
+
+# key: registration.actions.drop
+#: admin/enrollments.py:79 admin/enrollments.py:200 templates/registration/admin/roster.html:29
+msgctxt "registration.actions"
+msgid "Drop"
+msgstr "ຖອນວິຊາ"
+
+# key: registration.actions.withdraw
+#: admin/enrollments.py:79 admin/enrollments.py:210 templates/registration/admin/roster.html:30
+msgctxt "registration.actions"
+msgid "Withdraw"
+msgstr "ຖອນຕົວ"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/enrollments.py:143 admin/holds.py:73 templates/registration/admin/roster.html:9 templates/registration/admin/waitlist.html:10
+msgctxt "people"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: curriculum.fields.title
+#: admin/enrollments.py:155
+msgctxt "curriculum"
+msgid "Title"
+msgstr "ຊື່ວິຊາ"
+
+# key: registration.fields.source
+#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59 templates/registration/admin/roster.html:13
+msgctxt "registration"
+msgid "Source"
+msgstr "ແຫຼ່ງທີ່ມາ"
+
+# key: registration.actions.place_hold
+#: admin/holds.py:123 admin/holds.py:140 admin/holds.py:142
+msgid "Place a hold"
+msgstr "ລະງັບ"
+
+# key: registration.actions.release_hold
+#: admin/holds.py:147 admin/holds.py:161
+msgid "Release"
+msgstr "ປົດລະງັບ"
+
+# key: registration.fields.override_limit
+#: admin/holds.py:208
+msgid "Applies to"
+msgstr "ນຳໃຊ້ກັບ"
+
+# key: registration.fields.whole_term
+#: admin/holds.py:214
+msgid "Whole term"
+msgstr "ທັງພາກຮຽນ"
+
+# key: registration.fields.granted_at
+#: admin/holds.py:216
+msgid "Granted"
+msgstr "ອະນຸຍາດເມື່ອ"
+
+# key: registration.actions.grant_override
+#: admin/holds.py:223 admin/holds.py:240 admin/holds.py:242
+msgid "Grant an override"
+msgstr "ອະນຸຍາດການຍົກເວັ້ນ"
+
+# key: registration.actions.revoke_override
+#: admin/holds.py:248 admin/holds.py:266
+msgctxt "registration"
+msgid "Revoke"
+msgstr "ຖອນ"
+
+# key: registration.resources.roster.title
+#: admin/roster.py:121
+#, python-format
+msgctxt "registration"
+msgid "Roster (%(count)s / %(capacity)s)"
+msgstr "ລາຍຊື່ຜູ້ຮຽນ (%(count)s / %(capacity)s)"
+
+# key: registration.resources.waitlist.plural_label
+#: admin/roster.py:129 models/enrollment.py:251 models/enrollment.py:252
+msgctxt "registration.resources.waitlist"
+msgid "Waitlist"
+msgstr "ລາຍຊື່ລໍຖ້າ"
+
+# key: registration.actions.promote_waitlist
+#: admin/roster.py:187 admin/roster.py:198
+msgid "Promote now"
+msgstr "ເລື່ອນຂຶ້ນດຽວນີ້"
+
+# key: registration.notifications.promoted
+#: admin/roster.py:195
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "ເລື່ອນຂຶ້ນ %(promoted)s, ລຶບອອກ %(removed)s, ໝົດອາຍຸ %(expired)s."
+
+# key: registration.actions.remove_from_waitlist
+#: admin/roster.py:217 templates/registration/admin/waitlist.html:24
+msgctxt "registration"
+msgid "Remove"
+msgstr "ລຶບອອກ"
+
+# key: registration.fields.copy_from
+#: admin/rules.py:56
+msgctxt "registration"
+msgid "Copy from"
+msgstr "ສຳເນົາຈາກ"
+
+# key: registration.resources.rules.plural_label
+#: admin/rules.py:85 models/rules.py:67
+msgid "Rules"
+msgstr "ກົດລະບຽບ"
+
+# key: registration.fields.severity
+#: admin/rules.py:101 models/rules.py:55
+msgid "When not met"
+msgstr "ເມື່ອບໍ່ຜ່ານເງື່ອນໄຂ"
+
+#: admin/rules.py:110
+msgid "Edit"
+msgstr "ແກ້ໄຂ"
+
+# key: reference.fields.code
+#: admin/rules.py:151
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: registration.fields.enabled_rules
+#: admin/rules.py:155
+msgid "Rules on"
+msgstr "ກົດທີ່ເປີດໃຊ້"
+
+# key: registration.fields.copied_from
+#: admin/rules.py:159 admin/rules.py:168 models/rules.py:30
+msgid "Copied from"
+msgstr "ສຳເນົາຈາກ"
+
+# key: registration.actions.prepare_rule_set
+#: admin/rules.py:175 admin/rules.py:197
+msgid "Prepare rules for a term"
+msgstr "ກຽມກົດລະບຽບສຳລັບພາກຮຽນ"
+
+# key: registration.help.prepare_rule_set
+#: admin/rules.py:200
+msgid "The rules are copied from the chosen term, or start from the defaults. Review them before registration opens."
+msgstr "ກົດລະບຽບຈະຖືກສຳເນົາຈາກພາກຮຽນທີ່ເລືອກ, ຫຼື ເລີ່ມຈາກຄ່າເລີ່ມຕົ້ນ. ກະລຸນາກວດກາກ່ອນເປີດລົງທະບຽນ."
+
+# key: registration.parameters.statuses
+#: admin/rules.py:211
+msgid "Student statuses that may register"
+msgstr "ສະຖານະນັກສຶກສາທີ່ລົງທະບຽນໄດ້"
+
+# key: registration.parameters.allowed_overlap_minutes
+#: admin/rules.py:217
+msgid "Allowed overlap (minutes)"
+msgstr "ເວລາຊ້ອນກັນທີ່ອະນຸຍາດ (ນາທີ)"
+
+# key: registration.parameters.repeat_allowed
+#: admin/rules.py:224
+msgid "Retakes allowed"
+msgstr "ອະນຸຍາດໃຫ້ຮຽນຊ້ຳ"
+
+# key: registration.parameters.max_attempts
+#: admin/rules.py:226
+msgid "Maximum attempts per course"
+msgstr "ຈຳນວນຄັ້ງສູງສຸດຕໍ່ວິຊາ"
+
+# key: registration.parameters.max_attempts_help
+#: admin/rules.py:230
+msgid "Including the first attempt. Empty means no limit."
+msgstr "ລວມທັງຄັ້ງທຳອິດ. ຫວ່າງໝາຍຄວາມວ່າບໍ່ຈຳກັດ."
+
+# key: registration.parameters.below_grade
+#: admin/rules.py:234
+msgid "Only below grade"
+msgstr "ສະເພາະເກຣດຕ່ຳກວ່າ"
+
+# key: registration.parameters.below_grade_help
+#: admin/rules.py:237
+msgid "Retake only when the earlier grade is below this grade (e.g. C+). Empty means any grade."
+msgstr "ຮຽນຊ້ຳໄດ້ສະເພາະເມື່ອເກຣດກ່ອນໜ້າຕ່ຳກວ່າເກຣດນີ້ (ເຊັ່ນ C+). ຫວ່າງໝາຍຄວາມວ່າທຸກເກຣດ."
+
+# key: registration.fields.all_term_types
+#: admin/rules.py:338 admin/rules.py:403
+msgid "All term types"
+msgstr "ທຸກປະເພດພາກຮຽນ"
+
+# key: validation.lte.numeric
+#: admin/rules.py:349
+#, python-format
+msgid "The %(attribute)s field must be less than or equal to %(value)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່ານ້ອຍກວ່າ ຫຼື ເທົ່າກັບ %(value)s."
+
+# key: curriculum.fields.min_credits
+#: admin/rules.py:350
+msgid "Minimum credits"
+msgstr "ໜ່ວຍກິດຕ່ຳສຸດ"
+
+# key: registration.fields.max_credits
+#: admin/rules.py:350 models/rules.py:109
+msgid "Maximum credits"
+msgstr "ໜ່ວຍກິດສູງສຸດ"
+
+# key: validation.between.numeric
+#: admin/rules.py:357
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າລະຫວ່າງ %(min)s ຫາ %(max)s."
+
+# key: registration.fields.applies_to
+#: admin/rules.py:376 admin/rules.py:405 models/rules.py:105
+msgctxt "registration"
+msgid "Students"
+msgstr "ນັກສຶກສາ"
+
+# key: registration.help.credit_policy_eligibility
+#: admin/rules.py:378
+msgid "Leave empty for every student."
+msgstr "ປ່ອຍຫວ່າງສຳລັບນັກສຶກສາທຸກຄົນ."
+
+# key: reference.fields.name
+#: admin/rules.py:397 models/rules.py:96
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: reference.resources.term_types.label
+#: admin/rules.py:401 models/rules.py:103
+msgid "term type"
+msgstr "ປະເພດພາກຮຽນ"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: apps.py:21 templates/registration/portal/registration.html:12 views/portal.py:123
+msgid "Registration"
+msgstr "ການລົງທະບຽນຮຽນ"
+
+# key: registration.attempt_actions.enroll
+# key: registration.portal.register
+#: enums.py:14 templates/registration/portal/partials/action.html:20
+msgctxt "registration"
+msgid "Register"
+msgstr "ລົງທະບຽນ"
+
+# key: registration.attempt_actions.drop
+#: enums.py:15
+msgctxt "registration.attempt_actions"
+msgid "Drop"
+msgstr "ຖອນວິຊາ"
+
+# key: registration.attempt_actions.withdraw
+#: enums.py:16
+msgctxt "registration.attempt_actions"
+msgid "Withdraw"
+msgstr "ຖອນຕົວ"
+
+# key: registration.attempt_actions.waitlist
+#: enums.py:17
+msgctxt "registration.attempt_actions"
+msgid "Waitlist"
+msgstr "ລາຍຊື່ລໍຖ້າ"
+
+# key: registration.attempt_actions.promote
+#: enums.py:18
+msgid "Waitlist promotion"
+msgstr "ເລື່ອນຈາກລາຍຊື່ລໍຖ້າ"
+
+# key: registration.attempt_actions.cart
+# key: registration.portal.cart
+#: enums.py:19 models/enrollment.py:293 models/enrollment.py:294 templates/registration/portal/registration.html:88
+msgid "Cart"
+msgstr "ກະຕ່າ"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: enums.py:23
+msgid "Succeeded"
+msgstr "ສຳເລັດ"
+
+# key: registration.attempt_outcomes.waitlisted
+#: enums.py:24
+msgid "Waitlisted"
+msgstr "ຢູ່ໃນລາຍຊື່ລໍຖ້າ"
+
+# key: registration.attempt_outcomes.refused
+#: enums.py:25
+msgid "Refused"
+msgstr "ຖືກປະຕິເສດ"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: enums.py:29
+msgid "Student"
+msgstr "ນັກສຶກສາ"
+
+# key: registration.enrollment_sources.staff
+#: enums.py:30
+msgid "Staff"
+msgstr "ພະນັກງານ"
+
+# key: registration.enrollment_sources.waitlist
+#: enums.py:31
+msgctxt "registration.enrollment_sources"
+msgid "Waitlist"
+msgstr "ລາຍຊື່ລໍຖ້າ"
+
+# key: registration.enrollment_sources.import
+#: enums.py:32
+msgid "Import"
+msgstr "ນຳເຂົ້າ"
+
+# key: registration.enrollment_statuses.enrolled
+#: enums.py:39
+msgctxt "registration.enrollment_statuses"
+msgid "Registered"
+msgstr "ລົງທະບຽນແລ້ວ"
+
+# key: registration.enrollment_statuses.dropped
+#: enums.py:40
+msgid "Dropped"
+msgstr "ຖອນວິຊາແລ້ວ"
+
+# key: registration.enrollment_statuses.withdrawn
+#: enums.py:41
+msgctxt "registration"
+msgid "Withdrawn"
+msgstr "ຖອນຕົວແລ້ວ"
+
+# key: registration.enrollment_statuses.completed
+#: enums.py:42
+msgid "Completed"
+msgstr "ສຳເລັດແລ້ວ"
+
+# key: registration.hold_types.unregistered
+#: enums.py:54
+msgid "Not registered for the term"
+msgstr "ບໍ່ໄດ້ລົງທະບຽນໃນພາກຮຽນ"
+
+# key: registration.hold_types.financial
+#: enums.py:55
+msgid "Financial"
+msgstr "ການເງິນ"
+
+# key: registration.hold_types.academic
+#: enums.py:56
+msgctxt "registration"
+msgid "Academic"
+msgstr "ວິຊາການ"
+
+# key: registration.hold_types.administrative
+#: enums.py:57
+msgid "Administrative"
+msgstr "ບໍລິຫານ"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: enums.py:58
+msgid "Other"
+msgstr "ອື່ນໆ"
+
+# key: registration.rules.window.label
+#: enums.py:74
+msgctxt "registration.rules.window"
+msgid "Registration period"
+msgstr "ໄລຍະເວລາລົງທະບຽນ"
+
+# key: registration.rules.section_open.label
+#: enums.py:76
+msgid "Section open"
+msgstr "ກຸ່ມຮຽນເປີດ"
+
+# key: registration.rules.hold.label
+#: enums.py:77
+msgid "Holds"
+msgstr "ການລະງັບ"
+
+# key: registration.rules.student_status.label
+#: enums.py:78
+msgid "Student status"
+msgstr "ສະຖານະນັກສຶກສາ"
+
+# key: registration.rules.eligibility.label
+#: enums.py:79
+msgid "Section eligibility"
+msgstr "ເງື່ອນໄຂຂອງກຸ່ມຮຽນ"
+
+# key: registration.rules.duplicate_course.label
+#: enums.py:80
+msgid "Same course twice"
+msgstr "ວິຊາດຽວກັນສອງຄັ້ງ"
+
+# key: registration.rules.time_conflict.label
+#: enums.py:81
+msgid "Time conflict"
+msgstr "ເວລາຊ້ອນກັນ"
+
+# key: registration.rules.credit_limit.label
+#: enums.py:82
+msgid "Credit limit"
+msgstr "ຂີດຈຳກັດໜ່ວຍກິດ"
+
+# key: registration.rules.requisites.label
+#: enums.py:83
+msgid "Prerequisites"
+msgstr "ວິຊາບັງຄັບກ່ອນ"
+
+# key: registration.rules.repeat_course.label
+#: enums.py:84
+msgid "Retakes"
+msgstr "ການຮຽນຊ້ຳ"
+
+# key: registration.rules.capacity.label
+#: enums.py:86
+msgid "Seats"
+msgstr "ບ່ອນນັ່ງ"
+
+# key: registration.rules.window.description
+#: enums.py:103
+msgid "A registration, add/drop or withdrawal period must be open for the student."
+msgstr "ຕ້ອງມີໄລຍະເວລາລົງທະບຽນ, ເພີ່ມ/ຖອນວິຊາ ຫຼື ຖອນຕົວທີ່ເປີດຢູ່ສຳລັບນັກສຶກສາ."
+
+# key: registration.rules.section_open.description
+#: enums.py:104
+msgid "The section must be published."
+msgstr "ກຸ່ມຮຽນຕ້ອງຖືກເຜີຍແຜ່ແລ້ວ."
+
+# key: registration.rules.hold.description
+#: enums.py:105
+msgid "Students with a hold that blocks registration cannot register."
+msgstr "ນັກສຶກສາທີ່ມີການລະງັບທີ່ຂັດຂວາງການລົງທະບຽນບໍ່ສາມາດລົງທະບຽນໄດ້."
+
+# key: registration.rules.student_status.description
+#: enums.py:106
+msgid "Only students with the chosen statuses may register."
+msgstr "ສະເພາະນັກສຶກສາທີ່ມີສະຖານະທີ່ເລືອກເທົ່ານັ້ນຈຶ່ງລົງທະບຽນໄດ້."
+
+# key: registration.rules.eligibility.description
+#: enums.py:107
+msgid "The student must match the section's eligibility and not its exclusions."
+msgstr "ນັກສຶກສາຕ້ອງກົງກັບເງື່ອນໄຂຂອງກຸ່ມຮຽນ ແລະ ບໍ່ຢູ່ໃນຂໍ້ຍົກເວັ້ນ."
+
+# key: registration.rules.duplicate_course.description
+#: enums.py:108
+msgid "A course can be registered only once per term."
+msgstr "ວິຊາໜຶ່ງສາມາດລົງທະບຽນໄດ້ພຽງຄັ້ງດຽວຕໍ່ພາກຮຽນ."
+
+# key: registration.rules.time_conflict.description
+#: enums.py:109
+msgid "Meeting times must not overlap with other registered sections."
+msgstr "ເວລາຄາບຮຽນຕ້ອງບໍ່ຊ້ອນກັບກຸ່ມຮຽນອື່ນທີ່ລົງທະບຽນແລ້ວ."
+
+# key: registration.rules.credit_limit.description
+#: enums.py:110
+msgid "Total credits must not exceed the credit limit that applies to the student."
+msgstr "ໜ່ວຍກິດລວມຕ້ອງບໍ່ເກີນຂີດຈຳກັດໜ່ວຍກິດທີ່ນຳໃຊ້ກັບນັກສຶກສາ."
+
+# key: registration.rules.requisites.description
+#: enums.py:112
+msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
+msgstr "ຕ້ອງຜ່ານວິຊາບັງຄັບກ່ອນ (ນັບວິຊາທຽບເທົ່າ); ວິຊາບັງຄັບຮ່ວມສາມາດຮຽນໃນພາກຮຽນດຽວກັນໄດ້."
+
+# key: registration.rules.repeat_course.description
+#: enums.py:114
+msgid "Whether and how often a passed course may be taken again."
+msgstr "ວິຊາທີ່ຜ່ານແລ້ວສາມາດຮຽນຊ້ຳໄດ້ຫຼືບໍ່ ແລະ ຈັກຄັ້ງ."
+
+# key: registration.rules.capacity.description
+#: enums.py:115
+msgid "A seat must be free (reserved seats count only for their students until released)."
+msgstr "ຕ້ອງມີບ່ອນນັ່ງວ່າງ (ບ່ອນນັ່ງສະຫງວນນັບສະເພາະນັກສຶກສາທີ່ສະຫງວນໃຫ້ຈົນກວ່າຈະປ່ອຍ)."
+
+# key: registration.rule_severities.block
+#: enums.py:120
+msgid "Block"
+msgstr "ລະງັບ"
+
+# key: registration.rule_severities.warn
+#: enums.py:121
+msgid "Warn only"
+msgstr "ເຕືອນເທົ່ານັ້ນ"
+
+# key: registration.waitlist_statuses.waiting
+#: enums.py:125
+msgctxt "registration"
+msgid "Waiting"
+msgstr "ລໍຖ້າ"
+
+# key: registration.waitlist_statuses.promoted
+#: enums.py:126
+msgctxt "registration.waitlist_statuses"
+msgid "Registered"
+msgstr "ລົງທະບຽນແລ້ວ"
+
+# key: registration.waitlist_statuses.removed
+#: enums.py:127
+msgid "Removed"
+msgstr "ລຶບອອກແລ້ວ"
+
+# key: registration.waitlist_statuses.expired
+#: enums.py:128
+msgctxt "registration"
+msgid "Expired"
+msgstr "ໝົດອາຍຸ"
+
+# key: validation.date
+#: importers.py:32
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີທີ່ຖືກຕ້ອງ."
+
+# key: registration.resources.holds.plural_label
+#: importers.py:63 models/holds.py:76
+msgid "holds"
+msgstr "ການລະງັບ"
+
+# key: people.resources.student_records.label
+#: models/enrollment.py:91 models/holds.py:49 models/holds.py:106
+msgid "student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: registration.portal.credits
+#: models/enrollment.py:104 templates/registration/portal/registration.html:45
+msgctxt "registration"
+msgid "Credits"
+msgstr "ໜ່ວຍກິດ"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: models/enrollment.py:123 templates/registration/admin/roster.html:12 templates/registration/portal/registration.html:65
+msgid "Retake"
+msgstr "ຮຽນຊ້ຳ"
+
+# key: registration.fields.enrolled_at
+#: models/enrollment.py:133 templates/registration/admin/roster.html:14
+msgid "Registered at"
+msgstr "ລົງທະບຽນເມື່ອ"
+
+# key: registration.resources.enrollments.label
+#: models/enrollment.py:166
+msgid "registration"
+msgstr "ການລົງທະບຽນຮຽນ"
+
+# key: registration.resources.enrollments.plural_label
+#: models/enrollment.py:167
+msgid "registrations"
+msgstr "ການລົງທະບຽນຮຽນ"
+
+# key: registration.fields.requested_at
+#: models/enrollment.py:236 templates/registration/admin/waitlist.html:8
+msgctxt "registration"
+msgid "Requested"
+msgstr "ຂໍເມື່ອ"
+
+# key: registration.fields.outcome_note
+#: models/enrollment.py:244 templates/registration/admin/waitlist.html:12
+msgctxt "registration"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+# key: registration.fields.request_id
+#: models/enrollment.py:329
+msgctxt "registration"
+msgid "Request ID"
+msgstr "ID ຄຳຮ້ອງ"
+
+# key: registration.resources.attempts.label
+#: models/enrollment.py:337
+msgid "registration attempt"
+msgstr "ຄວາມພະຍາຍາມລົງທະບຽນ"
+
+# key: registration.resources.attempts.plural_label
+#: models/enrollment.py:338
+msgid "registration attempts"
+msgstr "ຄວາມພະຍາຍາມລົງທະບຽນ"
+
+# key: registration.fields.released_at
+#: models/holds.py:64
+msgctxt "registration"
+msgid "Released"
+msgstr "ປົດລະງັບເມື່ອ"
+
+# key: registration.resources.holds.label
+#: models/holds.py:75
+msgid "hold"
+msgstr "ການລະງັບ"
+
+# key: registration.fields.revoked_at
+#: models/holds.py:126
+msgctxt "registration"
+msgid "Revoked"
+msgstr "ຖອນເມື່ອ"
+
+# key: registration.resources.overrides.label
+#: models/holds.py:136
+msgid "rule override"
+msgstr "ການຍົກເວັ້ນກົດ"
+
+# key: registration.resources.overrides.plural_label
+#: models/holds.py:137
+msgid "rule overrides"
+msgstr "ການຍົກເວັ້ນກົດ"
+
+# key: offering.fields.note
+#: models/rules.py:32
+msgctxt "offering"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+# key: registration.resources.rule_sets.label
+#: models/rules.py:39
+msgid "rule set"
+msgstr "ຊຸດກົດລະບຽບ"
+
+# key: registration.resources.rule_sets.plural_label
+#: models/rules.py:40
+msgid "registration rules"
+msgstr "ກົດລະບຽບການລົງທະບຽນຮຽນ"
+
+# key: registration.fields.is_enabled
+#: models/rules.py:53
+msgid "On"
+msgstr "ເປີດ"
+
+# key: registration.fields.allows_override
+#: models/rules.py:57
+msgid "Overrides allowed"
+msgstr "ອະນຸຍາດໃຫ້ຍົກເວັ້ນ"
+
+# key: registration.fields.min_credits
+#: models/rules.py:107
+msgctxt "registration"
+msgid "Minimum credits"
+msgstr "ໜ່ວຍກິດຂັ້ນຕ່ຳ"
+
+# key: registration.fields.priority
+#: models/rules.py:111
+msgid "Priority"
+msgstr "ລຳດັບຄວາມສຳຄັນ"
+
+# key: registration.help.priority
+#: models/rules.py:111
+msgid "When several limits match a student, the highest priority applies."
+msgstr "ເມື່ອມີຫຼາຍຂີດຈຳກັດກົງກັບນັກສຶກສາ, ຈະໃຊ້ອັນທີ່ມີລຳດັບຄວາມສຳຄັນສູງສຸດ."
+
+# key: registration.fields.is_active
+#: models/rules.py:113
+msgctxt "registration.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: registration.resources.credit_limit_policies.label
+#: models/rules.py:120
+msgid "credit limit"
+msgstr "ຂີດຈຳກັດໜ່ວຍກິດ"
+
+# key: registration.resources.credit_limit_policies.plural_label
+#: models/rules.py:121
+msgid "credit limits"
+msgstr "ຂີດຈຳກັດໜ່ວຍກິດ"
+
+# key: registration.mail.waitlist_promoted_subject
+#: notifications.py:32
+#, python-format
+msgid "You are registered in %(section)s"
+msgstr "ທ່ານໄດ້ລົງທະບຽນໃນ %(section)s ແລ້ວ"
+
+# key: registration.mail.waitlist_removed_subject
+#: notifications.py:33
+#, python-format
+msgid "Waitlist for %(section)s"
+msgstr "ລາຍຊື່ລໍຖ້າສຳລັບ %(section)s"
+
+# key: registration.mail.waitlist_expired_subject
+#: notifications.py:34
+#, python-format
+msgid "Waitlist for %(section)s closed"
+msgstr "ລາຍຊື່ລໍຖ້າສຳລັບ %(section)s ປິດແລ້ວ"
+
+# key: registration.mail.waitlist_promoted_intro
+#: notifications.py:38
+#, python-format
+msgid "A seat became free in %(section)s and you have been registered from the waitlist."
+msgstr "ມີບ່ອນນັ່ງວ່າງໃນ %(section)s ແລະ ທ່ານໄດ້ຖືກລົງທະບຽນຈາກລາຍຊື່ລໍຖ້າແລ້ວ."
+
+# key: registration.mail.waitlist_removed_intro
+#: notifications.py:40
+#, python-format
+msgid "You were removed from the waitlist for %(section)s."
+msgstr "ທ່ານຖືກລຶບອອກຈາກລາຍຊື່ລໍຖ້າສຳລັບ %(section)s ແລ້ວ."
+
+# key: registration.mail.waitlist_expired_intro
+#: notifications.py:41
+#, python-format
+msgid "Registration closed before a seat became free in %(section)s."
+msgstr "ການລົງທະບຽນປິດກ່ອນມີບ່ອນນັ່ງວ່າງໃນ %(section)s."
+
+# key: security.email_code.mail_greeting
+#: notifications.py:43
+msgid "Hello,"
+msgstr "ສະບາຍດີ,"
+
+# key: security.email_code.mail_salutation
+#: notifications.py:50
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ຂອບໃຈ,\n"
+"%(app)s"
+
+# key: registration.rules.credit_limit.failed
+#: rules/credit_limit.py:21
+#, python-format
+msgid "This would make %(total)s credits; your limit is %(limit)s."
+msgstr "ຈະເຮັດໃຫ້ມີ %(total)s ໜ່ວຍກິດ; ຂີດຈຳກັດຂອງທ່ານແມ່ນ %(limit)s."
+
+# key: registration.rules.duplicate_course.failed
+#: rules/duplicate_course.py:14
+#, python-format
+msgid "You are already registered in %(section)s."
+msgstr "ທ່ານລົງທະບຽນໃນ %(section)s ຢູ່ແລ້ວ."
+
+# key: registration.rules.eligibility.failed
+#: rules/eligibility.py:22
+msgid "This section is not open to you."
+msgstr "ກຸ່ມຮຽນນີ້ບໍ່ໄດ້ເປີດສຳລັບທ່ານ."
+
+# key: registration.rules.hold.failed
+#: rules/hold.py:34
+#, python-format
+msgid "You have a hold (%(type)s). Contact the office that placed it."
+msgstr "ທ່ານມີການລະງັບ (%(type)s). ກະລຸນາຕິດຕໍ່ຫ້ອງການທີ່ອອກການລະງັບ."
+
+# key: registration.rules.repeat_course.retake
+#: rules/repeat_course.py:16
+msgid "This registration is a retake."
+msgstr "ການລົງທະບຽນນີ້ແມ່ນການຮຽນຊ້ຳ."
+
+# key: registration.rules.repeat_course.not_allowed
+#: rules/repeat_course.py:44
+msgid "You have already taken this course and retakes are not allowed."
+msgstr "ທ່ານໄດ້ຮຽນວິຊານີ້ແລ້ວ ແລະ ບໍ່ອະນຸຍາດໃຫ້ຮຽນຊ້ຳ."
+
+# key: registration.rules.repeat_course.too_many
+#: rules/repeat_course.py:48
+#, python-format
+msgid "You have reached the maximum of %(max)s attempts for this course."
+msgstr "ທ່ານຮຽນວິຊານີ້ຄົບຈຳນວນສູງສຸດ %(max)s ຄັ້ງແລ້ວ."
+
+# key: registration.rules.repeat_course.grade_too_high
+#: rules/repeat_course.py:55
+#, python-format
+msgid "Retakes are allowed only for grades below %(grade)s."
+msgstr "ອະນຸຍາດໃຫ້ຮຽນຊ້ຳສະເພາະເກຣດຕ່ຳກວ່າ %(grade)s ເທົ່ານັ້ນ."
+
+# key: registration.rules.requisites.failed
+#: rules/requisites.py:18
+#, python-format
+msgid "Prerequisites not met: %(courses)s."
+msgstr "ບໍ່ຜ່ານວິຊາບັງຄັບກ່ອນ: %(courses)s."
+
+# key: registration.rules.section_open.failed
+#: rules/section_open.py:28
+msgid "This section is not open for registration."
+msgstr "ກຸ່ມຮຽນນີ້ບໍ່ໄດ້ເປີດໃຫ້ລົງທະບຽນ."
+
+# key: registration.rules.student_status.failed
+#: rules/student_status.py:30
+#, python-format
+msgid "Your status (%(status)s) does not allow registration."
+msgstr "ສະຖານະຂອງທ່ານ (%(status)s) ບໍ່ອະນຸຍາດໃຫ້ລົງທະບຽນ."
+
+# key: registration.rules.time_conflict.failed
+#: rules/time_conflict.py:28
+#, python-format
+msgid "The time overlaps with %(section)s."
+msgstr "ເວລາຊ້ອນກັບ %(section)s."
+
+# key: registration.rules.window.failed.enroll
+# key: registration.rules.window.failed.waitlist
+#: rules/window.py:17 rules/window.py:18
+msgid "Registration is not open for you now."
+msgstr "ການລົງທະບຽນຮຽນບໍ່ໄດ້ເປີດສຳລັບທ່ານໃນຂະນະນີ້."
+
+# key: registration.rules.window.failed.drop
+#: rules/window.py:19
+msgid "Dropping is not open for this course now."
+msgstr "ການຖອນວິຊາບໍ່ໄດ້ເປີດສຳລັບວິຊານີ້ໃນຂະນະນີ້."
+
+# key: registration.rules.window.failed.withdraw
+#: rules/window.py:20
+msgid "Withdrawal is not open for this course now."
+msgstr "ການຖອນຕົວບໍ່ໄດ້ເປີດສຳລັບວິຊານີ້ໃນຂະນະນີ້."
+
+# key: registration.rules.window.failed.promote
+#: rules/window.py:21
+msgid "Registration is not open for this course now."
+msgstr "ການລົງທະບຽນຮຽນບໍ່ໄດ້ເປີດສຳລັບວິຊານີ້ໃນຂະນະນີ້."
+
+# key: registration.rules.window.failed.cart
+#: rules/window.py:22
+msgid "The cart is not open for you now."
+msgstr "ກະຕ່າບໍ່ໄດ້ເປີດສຳລັບທ່ານໃນຂະນະນີ້."
+
+# key: security.scope_types.program
+#: templates/registration/admin/roster.html:10
+msgctxt "security"
+msgid "Program"
+msgstr "ຫຼັກສູດ"
+
+# key: common.none
+#: templates/registration/admin/roster.html:34 templates/registration/admin/waitlist.html:27 templates/registration/portal/registration.html:76
+msgctxt "common"
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+# key: registration.portal.drop
+#: templates/registration/portal/partials/action.html:14
+msgctxt "registration.portal"
+msgid "Drop"
+msgstr "ຖອນວິຊາ"
+
+# key: registration.portal.withdraw
+#: templates/registration/portal/partials/action.html:15
+msgctxt "registration.portal"
+msgid "Withdraw"
+msgstr "ຖອນຕົວ"
+
+# key: registration.portal.leave_waitlist
+#: templates/registration/portal/partials/action.html:16
+msgid "Leave waitlist"
+msgstr "ອອກຈາກລາຍຊື່ລໍຖ້າ"
+
+# key: registration.portal.submit_cart
+#: templates/registration/portal/partials/action.html:17
+msgid "Register all"
+msgstr "ລົງທະບຽນທັງໝົດ"
+
+# key: portal.profile.remove
+#: templates/registration/portal/partials/action.html:18
+msgctxt "portal"
+msgid "Remove"
+msgstr "ລຶບອອກ"
+
+# key: registration.portal.add_to_cart
+#: templates/registration/portal/partials/action.html:19
+msgid "Add to cart"
+msgstr "ເພີ່ມໃສ່ກະຕ່າ"
+
+# key: registration.portal.join_waitlist
+#: templates/registration/portal/partials/action.html:21
+msgid "Join waitlist"
+msgstr "ເຂົ້າລາຍຊື່ລໍຖ້າ"
+
+# key: offering.timetable.mode
+#: templates/registration/portal/registration.html:22
+msgid "Show"
+msgstr "ສະແດງ"
+
+# key: registration.portal.no_term
+#: templates/registration/portal/registration.html:34
+msgid "No term is open for registration."
+msgstr "ບໍ່ມີພາກຮຽນທີ່ເປີດໃຫ້ລົງທະບຽນ."
+
+# key: registration.portal.window
+#: templates/registration/portal/registration.html:38
+msgctxt "registration.portal"
+msgid "Registration period"
+msgstr "ໄລຍະເວລາລົງທະບຽນ"
+
+# key: registration.portal.registration_open
+#: templates/registration/portal/registration.html:39
+msgctxt "registration"
+msgid "Open"
+msgstr "ເປີດ"
+
+# key: registration.portal.cart_open
+#: templates/registration/portal/registration.html:40
+msgid "Cart only"
+msgstr "ສະເພາະກະຕ່າ"
+
+# key: registration.portal.opens_at
+#: templates/registration/portal/registration.html:41
+#, python-format
+msgid "Opens %(date)s"
+msgstr "ເປີດ %(date)s"
+
+# key: registration.portal.closed
+#: templates/registration/portal/registration.html:42
+msgctxt "registration"
+msgid "Closed"
+msgstr "ປິດ"
+
+# key: registration.portal.sections_count
+#: templates/registration/portal/registration.html:49
+msgctxt "registration"
+msgid "Courses"
+msgstr "ວິຊາ"
+
+# key: registration.portal.timetable
+#: templates/registration/portal/registration.html:55
+msgid "Timetable"
+msgstr "ຕາຕະລາງຮຽນ"
+
+# key: registration.portal.my_registrations
+#: templates/registration/portal/registration.html:60
+msgctxt "registration"
+msgid "My registrations"
+msgstr "ການລົງທະບຽນຂອງຂ້ອຍ"
+
+# key: registration.portal.drop_confirm
+#: templates/registration/portal/registration.html:70
+msgid "Drop this course?"
+msgstr "ຖອນວິຊານີ້ບໍ?"
+
+# key: registration.portal.withdraw_confirm
+#: templates/registration/portal/registration.html:72
+msgid "Withdraw from this course? A W is recorded."
+msgstr "ຖອນຕົວຈາກວິຊານີ້ບໍ? ຈະບັນທຶກເປັນ W."
+
+# key: registration.portal.waiting
+#: templates/registration/portal/registration.html:80
+#, python-format
+msgid "Waitlist position %(position)s"
+msgstr "ລຳດັບໃນລາຍຊື່ລໍຖ້າ %(position)s"
+
+# key: registration.portal.cart_empty
+#: templates/registration/portal/registration.html:99 views/portal.py:351
+msgid "The cart is empty."
+msgstr "ກະຕ່າຫວ່າງເປົ່າ."
+
+# key: offering.catalog.search
+#: templates/registration/portal/registration.html:106 templates/registration/portal/registration.html:108
+msgid "Search"
+msgstr "ຄົ້ນຫາ"
+
+# key: offering.catalog.search_placeholder
+#: templates/registration/portal/registration.html:107
+msgid "Course code or title"
+msgstr "ລະຫັດ ຫຼື ຊື່ວິຊາ"
+
+# key: offering.catalog.instructor_tba
+#: templates/registration/portal/registration.html:118
+msgid "Instructor to be announced"
+msgstr "ອາຈານຈະແຈ້ງພາຍຫຼັງ"
+
+# key: offering.catalog.time_tba
+#: templates/registration/portal/registration.html:119
+msgid "Time to be announced"
+msgstr "ເວລາຈະແຈ້ງພາຍຫຼັງ"
+
+# key: registration.portal.seats
+#: templates/registration/portal/registration.html:121
+#, python-format
+msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
+msgstr "ບ່ອນນັ່ງ: ເປີດ %(general)s, ສະຫງວນ %(reserved)s, ລວມ %(capacity)s"
+
+# key: registration.errors.too_many_requests
+#: views/portal.py:296
+msgid "Too many requests. Wait a minute and try again."
+msgstr "ມີຄຳຮ້ອງຂໍຫຼາຍເກີນໄປ. ກະລຸນາລໍຖ້າໜຶ່ງນາທີແລ້ວລອງໃໝ່."
+
+# key: registration.portal.registered
+#: views/portal.py:324 views/portal.py:349
+msgid "Registered."
+msgstr "ລົງທະບຽນແລ້ວ."
+
+# key: registration.portal.added_to_cart
+#: views/portal.py:334
+msgid "Added to the cart."
+msgstr "ເພີ່ມໃສ່ກະຕ່າແລ້ວ."

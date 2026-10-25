@@ -1,0 +1,54 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}A person's own contact details and guardians (original livewire/portal/my-profile).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">{% translate "My details" %}</h1>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-6">
+        <dl class="mb-6 grid gap-3 text-sm sm:grid-cols-[12rem_1fr]">
+            <dt class="text-zinc-500">{% translate "Name" context "people" %}</dt><dd>{{ person.display_name }} ({{ person.romanized_name }})</dd>
+            <dt class="text-zinc-500">{% translate "Birth date" %}</dt><dd>{{ person.birth_date|date:"Y-m-d"|default:"-" }}</dd>
+        </dl>
+        <p class="mb-4 text-sm text-zinc-600">{% translate "Contact the registrar's office to change your name, birth date or identity numbers." %}</p>
+
+        <form method="post" action="{% url 'portal:profile' %}" class="grid gap-4 sm:grid-cols-2">
+            {% csrf_token %}<input type="hidden" name="action" value="save_contact">
+            {% for name, label, value in contact_fields %}
+                <div>
+                    <label for="contact-{{ name }}" class="block text-sm font-medium">{{ label }}</label>
+                    <input id="contact-{{ name }}" name="{{ name }}" type="text" value="{{ value|default_if_none:'' }}" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                </div>
+            {% endfor %}
+            <div class="sm:col-span-2">
+                <label for="contact-address" class="block text-sm font-medium">{% translate "Address" %}</label>
+                <textarea id="contact-address" name="address" rows="2" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">{{ person.address|default_if_none:"" }}</textarea>
+            </div>
+            <div><button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Save" context "common" %}</button></div>
+        </form>
+    </section>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-6">
+        <h2 class="mb-3 font-medium">{% translate "guardians"|capfirst %}</h2>
+        {% for guardian in guardians %}
+            <div class="flex items-center justify-between border-b border-zinc-100 py-2 text-sm">
+                <span>{{ guardian.get_relationship_display }} · {{ guardian.full_name }} · {{ guardian.phone|default:"-" }}</span>
+                <form method="post" action="{% url 'portal:profile' %}" hx-post="{% url 'portal:profile' %}" hx-confirm="{% translate 'Remove this guardian?' %}">
+                    {% csrf_token %}<input type="hidden" name="action" value="remove_guardian"><input type="hidden" name="guardian_id" value="{{ guardian.pk }}">
+                    <button type="submit" class="text-red-700 underline">{% translate "Remove" context "portal" %}</button>
+                </form>
+            </div>
+        {% endfor %}
+
+        <form method="post" action="{% url 'portal:profile' %}" class="mt-4 grid gap-3 sm:grid-cols-4">
+            {% csrf_token %}<input type="hidden" name="action" value="add_guardian">
+            <select name="relationship" aria-label="{% translate 'Relationship' %}" class="rounded border border-zinc-300 px-3 py-2">
+                {% for value, label in relationships %}<option value="{{ value }}" {% if value == "mother" %}selected{% endif %}>{{ label }}</option>{% endfor %}
+            </select>
+            <input type="text" name="full_name" required placeholder="{% translate 'Name' context 'people' %}" class="rounded border border-zinc-300 px-3 py-2">
+            <input type="text" name="phone" placeholder="{% translate 'Phone' %}" class="rounded border border-zinc-300 px-3 py-2">
+            <button type="submit" class="rounded border border-zinc-300 px-3 py-2 text-sm">{% translate "Add guardian" %}</button>
+        </form>
+    </section>
+</div>
+{% endblock %}

@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 21:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: attendance.errors.forbidden
+#: actions/manage_class_meetings.py:42 views/portal.py:192
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "ມີແຕ່ອາຈານຂອງກຸ່ມຮຽນ ແລະ ພະນັກງານທີ່ຈັດການກຸ່ມຮຽນເທົ່ານັ້ນທີ່ເຮັດໄດ້."
+
+# key: attendance.errors.time_order
+#: actions/manage_class_meetings.py:57
+msgid "The end time must be after the start time."
+msgstr "ເວລາສິ້ນສຸດຕ້ອງຢູ່ຫຼັງເວລາເລີ່ມ."
+
+# key: attendance.errors.outside_session
+#: actions/manage_class_meetings.py:60 views/portal.py:262
+msgid "The date is outside the session."
+msgstr "ວັນທີຢູ່ນອກຊ່ວງຂອງຮອບຮຽນ."
+
+# key: attendance.errors.duplicate_meeting
+#: actions/manage_class_meetings.py:75
+msgid "A meeting at that date and time already exists."
+msgstr "ມີຄາບຮຽນໃນວັນທີ ແລະ ເວລານັ້ນຢູ່ແລ້ວ."
+
+# key: attendance.errors.already_cancelled
+#: actions/manage_class_meetings.py:88
+msgid "This meeting is already cancelled."
+msgstr "ຄາບຮຽນນີ້ຖືກຍົກເລີກແລ້ວ."
+
+# key: registration.errors.reason_required
+#: actions/manage_class_meetings.py:91
+msgid "Enter a reason."
+msgstr "ກະລຸນາປ້ອນເຫດຜົນ."
+
+# key: attendance.errors.meeting_cancelled
+#: actions/record_attendance.py:51
+msgid "This meeting is cancelled."
+msgstr "ຄາບຮຽນນີ້ຖືກຍົກເລີກ."
+
+# key: attendance.errors.meeting_future
+#: actions/record_attendance.py:53
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "ສາມາດບັນທຶກການເຂົ້າຮຽນໄດ້ຕັ້ງແຕ່ມື້ທີ່ມີຄາບຮຽນ."
+
+# key: attendance.errors.not_enrolled
+#: actions/record_attendance.py:70
+msgid "A student is not enrolled in this section."
+msgstr "ມີນັກສຶກສາທີ່ບໍ່ໄດ້ລົງທະບຽນໃນກຸ່ມຮຽນນີ້."
+
+# key: attendance.errors.invalid_status
+#: actions/record_attendance.py:78
+msgid "Unknown attendance status."
+msgstr "ສະຖານະການເຂົ້າຮຽນບໍ່ຮູ້ຈັກ."
+
+# key: common.reason
+#: admin/__init__.py:37 models.py:73 templates/attendance/admin/class_meetings.html:13
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: admin/__init__.py:97 models.py:81 templates/attendance/portal/section_attendance.html:119
+msgid "Class meetings"
+msgstr "ຄາບຮຽນ"
+
+# key: attendance.actions.generate
+#: admin/__init__.py:124 admin/__init__.py:143
+msgid "Generate meetings"
+msgstr "ສ້າງຄາບຮຽນ"
+
+# key: attendance.portal.generated
+#: admin/__init__.py:137 views/portal.py:253
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "ສ້າງຄາບຮຽນແລ້ວ %(count)s ຄາບ."
+
+# key: attendance.help.generate
+#: admin/__init__.py:148
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "ສ້າງຄາບຮຽນໜຶ່ງຄາບຕໍ່ແຕ່ລະຄັ້ງຂອງເວລາຮຽນປະຈຳອາທິດພາຍໃນຊ່ວງວັນທີຂອງມັນ. ຄາບຮຽນທີ່ມີຢູ່ແລ້ວ ແລະ ການເຂົ້າຮຽນຂອງມັນຈະຖືກຮັກສາໄວ້."
+
+# key: attendance.portal.meeting_cancelled
+#: admin/__init__.py:166 views/portal.py:275
+msgid "Meeting cancelled."
+msgstr "ຍົກເລີກຄາບຮຽນແລ້ວ."
+
+# key: attendance.portal.cancel
+#: admin/__init__.py:172 templates/attendance/admin/class_meetings.html:27 templates/attendance/portal/section_attendance.html:159 templates/attendance/portal/section_attendance.html:165
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+# key: attendance.portal.meeting_restored
+#: admin/__init__.py:186 views/portal.py:281
+msgid "Meeting restored."
+msgstr "ກູ້ຄືນຄາບຮຽນແລ້ວ."
+
+# key: attendance.portal.restore
+#: admin/__init__.py:192 templates/attendance/admin/class_meetings.html:28 templates/attendance/portal/section_attendance.html:152
+msgid "Restore"
+msgstr "ກູ້ຄືນ"
+
+# key: portal.navigation.attendance
+#: apps.py:22
+msgctxt "portal"
+msgid "Attendance"
+msgstr "ການເຂົ້າຮຽນ"
+
+# key: attendance.statuses.present
+#: enums.py:14 templates/attendance/portal/my_attendance.html:28 templates/attendance/portal/section_attendance.html:87
+msgid "Present"
+msgstr "ມາຮຽນ"
+
+# key: attendance.statuses.late
+#: enums.py:15 templates/attendance/portal/my_attendance.html:28 templates/attendance/portal/section_attendance.html:88
+msgid "Late"
+msgstr "ມາຊ້າ"
+
+# key: attendance.statuses.absent
+#: enums.py:16 templates/attendance/portal/my_attendance.html:29 templates/attendance/portal/section_attendance.html:89
+msgctxt "attendance"
+msgid "Absent"
+msgstr "ຂາດຮຽນ"
+
+# key: attendance.statuses.excused
+#: enums.py:17 templates/attendance/portal/my_attendance.html:29 templates/attendance/portal/section_attendance.html:90
+msgid "Excused"
+msgstr "ລາ"
+
+# key: attendance.meeting_statuses.scheduled
+#: enums.py:24
+msgid "Scheduled"
+msgstr "ຕາມກຳນົດ"
+
+# key: attendance.meeting_statuses.cancelled
+#: enums.py:25
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
+# key: offering.fields.section
+#: models.py:49
+msgctxt "offering"
+msgid "Section"
+msgstr "ກຸ່ມຮຽນ"
+
+# key: attendance.fields.meeting_date
+#: models.py:55 templates/attendance/admin/class_meetings.html:8 templates/attendance/portal/section_attendance.html:132 templates/attendance/portal/section_attendance.html:181
+msgctxt "attendance"
+msgid "Date"
+msgstr "ວັນທີ"
+
+# key: attendance.fields.start_time
+#: models.py:56 templates/attendance/portal/section_attendance.html:182
+msgctxt "attendance"
+msgid "Start"
+msgstr "ເລີ່ມ"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: models.py:57 templates/attendance/portal/section_attendance.html:183
+msgid "End"
+msgstr "ສິ້ນສຸດ"
+
+# key: offering.fields.room
+#: models.py:64
+msgid "Room"
+msgstr "ຫ້ອງ"
+
+# key: registration.fields.status
+#: models.py:67 services/roster.py:77 templates/attendance/admin/class_meetings.html:11
+msgctxt "registration"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+#: models.py:80
+msgid "class meeting"
+msgstr "ຄາບຮຽນ"
+
+# key: attendance.fields.status
+#: models.py:121 templates/attendance/portal/section_attendance.html:46
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "ການເຂົ້າຮຽນ"
+
+# key: attendance.fields.note
+#: models.py:123 templates/attendance/portal/section_attendance.html:47 templates/attendance/portal/section_attendance.html:63
+msgctxt "attendance"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+#: models.py:134
+msgid "attendance record"
+msgstr "ບັນທຶກການເຂົ້າຮຽນ"
+
+#: models.py:135
+msgid "attendance records"
+msgstr "ບັນທຶກການເຂົ້າຮຽນ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: services/roster.py:72 templates/attendance/pdf/attendance_sheet.html:29 templates/attendance/portal/section_attendance.html:44 templates/attendance/portal/section_attendance.html:83
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: people.sections.name
+# key: people.fields.name
+#: services/roster.py:73 templates/attendance/pdf/attendance_sheet.html:30 templates/attendance/portal/section_attendance.html:45 templates/attendance/portal/section_attendance.html:84
+msgctxt "people"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: reference.resources.programs.label
+#: services/roster.py:74 templates/attendance/portal/section_attendance.html:85
+msgid "program"
+msgstr "ຫຼັກສູດ"
+
+# key: people.fields.year_level
+#: services/roster.py:75 templates/attendance/portal/section_attendance.html:86
+msgctxt "people"
+msgid "Year"
+msgstr "ປີຮຽນ"
+
+# key: people.fields.contact_email
+#: services/roster.py:76
+msgid "Contact email"
+msgstr "ອີເມວຕິດຕໍ່"
+
+# key: attendance.fields.time
+#: templates/attendance/admin/class_meetings.html:9 templates/attendance/portal/section_attendance.html:133
+msgctxt "attendance"
+msgid "Time"
+msgstr "ເວລາ"
+
+# key: reference.resources.rooms.label
+#: templates/attendance/admin/class_meetings.html:10 templates/attendance/portal/section_attendance.html:134
+msgid "room"
+msgstr "ຫ້ອງ"
+
+# key: attendance.fields.recorded
+#: templates/attendance/admin/class_meetings.html:12 templates/attendance/portal/section_attendance.html:135
+msgid "Recorded"
+msgstr "ບັນທຶກແລ້ວ"
+
+# key: attendance.portal.no_meetings
+#: templates/attendance/admin/class_meetings.html:32 templates/attendance/portal/my_attendance.html:42 templates/attendance/portal/section_attendance.html:173
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "ຍັງບໍ່ມີຄາບຮຽນ. ສ້າງຈາກເວລາຮຽນປະຈຳອາທິດ."
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: templates/attendance/pdf/attendance_sheet.html:21
+msgid "Instructors"
+msgstr "ອາຈານ"
+
+# key: attendance.sheet.printed
+#: templates/attendance/pdf/attendance_sheet.html:23
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "ພິມເມື່ອ %(date)s"
+
+# key: attendance.sheet.present
+#: templates/attendance/pdf/attendance_sheet.html:32
+msgid "P"
+msgstr "ມ"
+
+# key: attendance.sheet.late
+#: templates/attendance/pdf/attendance_sheet.html:33
+msgid "L"
+msgstr "ຊ"
+
+# key: attendance.sheet.absent
+#: templates/attendance/pdf/attendance_sheet.html:34
+msgid "A"
+msgstr "ຂ"
+
+# key: attendance.sheet.excused
+#: templates/attendance/pdf/attendance_sheet.html:35
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "ລ"
+
+# key: attendance.sheet.legend
+#: templates/attendance/pdf/attendance_sheet.html:53
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "O ມາຮຽນ · △ ມາຊ້າ · X ຂາດຮຽນ · E ລາ · ຫວ່າງ ຍັງບໍ່ໄດ້ບັນທຶກ"
+
+# key: attendance.portal.my_intro
+#: templates/attendance/portal/my_attendance.html:10
+msgid "Attendance recorded by your instructors, per course."
+msgstr "ການເຂົ້າຮຽນທີ່ອາຈານຂອງທ່ານບັນທຶກ, ແຍກຕາມວິຊາ."
+
+# key: reference.resources.terms.label
+#: templates/attendance/portal/my_attendance.html:14
+msgid "term"
+msgstr "ພາກຮຽນ"
+
+# key: offering.timetable.mode
+#: templates/attendance/portal/my_attendance.html:18
+msgid "Show"
+msgstr "ສະແດງ"
+
+# key: attendance.fields.rate
+#: templates/attendance/portal/my_attendance.html:30 templates/attendance/portal/section_attendance.html:91
+msgid "Attendance rate"
+msgstr "ອັດຕາການເຂົ້າຮຽນ"
+
+# key: attendance.portal.not_recorded
+#: templates/attendance/portal/my_attendance.html:38
+msgid "Not recorded"
+msgstr "ຍັງບໍ່ໄດ້ບັນທຶກ"
+
+# key: attendance.portal.no_courses
+#: templates/attendance/portal/my_attendance.html:48
+msgid "No courses in this term."
+msgstr "ບໍ່ມີວິຊາໃນພາກຮຽນນີ້."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: templates/attendance/portal/section_attendance.html:11
+msgid "My teaching"
+msgstr "ການສອນຂອງຂ້ອຍ"
+
+# key: attendance.portal.intro
+#: templates/attendance/portal/section_attendance.html:14
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "ຈັດຄາບຮຽນແລ້ວ %(held)s ຄາບ, ນັກສຶກສາ %(students)s ຄົນ."
+
+# key: attendance.portal.roster_csv
+#: templates/attendance/portal/section_attendance.html:18
+msgid "Roster (CSV)"
+msgstr "ລາຍຊື່ (CSV)"
+
+# key: attendance.portal.sheet_pdf
+#: templates/attendance/portal/section_attendance.html:19
+msgid "Attendance sheet (PDF)"
+msgstr "ໃບເຊັນຊື່ເຂົ້າຮຽນ (PDF)"
+
+# key: attendance.portal.entry_for
+#: templates/attendance/portal/section_attendance.html:32
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "ການເຂົ້າຮຽນວັນທີ %(date)s %(time)s"
+
+# key: attendance.portal.mark_all_present
+#: templates/attendance/portal/section_attendance.html:35
+msgid "All present"
+msgstr "ມາຮຽນທັງໝົດ"
+
+# key: evaluation.portal.back
+#: templates/attendance/portal/section_attendance.html:37
+msgid "Back"
+msgstr "ກັບຄືນ"
+
+# key: attendance.portal.no_students
+#: templates/attendance/portal/section_attendance.html:67 templates/attendance/portal/section_attendance.html:111
+msgid "No students are enrolled."
+msgstr "ບໍ່ມີນັກສຶກສາລົງທະບຽນ."
+
+# key: attendance.portal.save
+#: templates/attendance/portal/section_attendance.html:73
+msgid "Save attendance"
+msgstr "ບັນທຶກການເຂົ້າຮຽນ"
+
+# key: attendance.portal.roster
+#: templates/attendance/portal/section_attendance.html:78
+msgid "Roster"
+msgstr "ລາຍຊື່"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: templates/attendance/portal/section_attendance.html:82
+msgid "Photo"
+msgstr "ຮູບພາບ"
+
+# key: attendance.portal.generate
+#: templates/attendance/portal/section_attendance.html:123
+msgid "Generate from meeting times"
+msgstr "ສ້າງຈາກເວລາຮຽນ"
+
+# key: attendance.portal.enter
+#: templates/attendance/portal/section_attendance.html:156
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "ການເຂົ້າຮຽນ"
+
+# key: attendance.portal.cancel_reason
+#: templates/attendance/portal/section_attendance.html:162
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "ເປັນຫຍັງຄາບຮຽນນີ້ຈຶ່ງຖືກຍົກເລີກ? (ວັນພັກ, ອາຈານຕິດທຸລະ, ...)"
+
+# key: attendance.portal.add_meeting
+#: templates/attendance/portal/section_attendance.html:184
+msgid "Add a meeting"
+msgstr "ເພີ່ມຄາບຮຽນ"
+
+# key: attendance.sheet.marks.present
+#: views/downloads.py:56
+msgid "O"
+msgstr "O"
+
+# key: attendance.sheet.marks.late
+#: views/downloads.py:57
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: views/downloads.py:58
+msgid "X"
+msgstr "X"
+
+# key: attendance.sheet.marks.excused
+#: views/downloads.py:59
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "E"
+
+# key: attendance.sheet.title
+#: views/downloads.py:94
+msgid "Attendance sheet"
+msgstr "ໃບເຊັນຊື່ເຂົ້າຮຽນ"
+
+#: views/downloads.py:117
+msgid "The PDF could not be created. Try again later."
+msgstr "ບໍ່ສາມາດສ້າງ PDF ໄດ້. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ."
+
+# key: attendance.portal.open
+#: views/portal.py:57
+msgctxt "attendance"
+msgid "Open"
+msgstr "ເປີດ"
+
+# key: attendance.portal.title
+#: views/portal.py:60
+msgid "Roster and attendance"
+msgstr "ລາຍຊື່ ແລະ ການເຂົ້າຮຽນ"
+
+# key: attendance.portal.saved
+#: views/portal.py:246
+msgid "Attendance saved."
+msgstr "ບັນທຶກການເຂົ້າຮຽນແລ້ວ."
+
+# key: attendance.portal.meeting_added
+#: views/portal.py:264
+msgid "Meeting added."
+msgstr "ເພີ່ມຄາບຮຽນແລ້ວ."
+
+# key: attendance.portal.my_title
+#: views/portal.py:339
+msgid "My attendance"
+msgstr "ການເຂົ້າຮຽນຂອງຂ້ອຍ"

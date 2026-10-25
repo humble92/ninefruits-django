@@ -1,0 +1,37 @@
+{% load i18n %}
+{% comment %}Change history of a record (data audit, audit.record_changes), shown under the detail form.{% endcomment %}
+{% if change_history is not None %}
+<section class="mt-8" id="change-history">
+    <h2 class="mb-3 text-base font-semibold">{% translate "Change history" %}</h2>
+    {% if change_history %}
+        <div class="overflow-x-auto rounded border border-base-200 dark:border-base-800">
+            <table class="w-full text-sm">
+                <thead class="bg-base-50 text-left dark:bg-base-900">
+                    <tr>
+                        <th class="px-3 py-2">{% translate "Time" context "admin" %}</th>
+                        <th class="px-3 py-2">{% translate "Table" %}</th>
+                        <th class="px-3 py-2">{% translate "Operation" context "admin" %}</th>
+                        <th class="px-3 py-2">{% translate "Changed columns" %}</th>
+                        <th class="px-3 py-2">{% translate "User" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for change in change_history %}
+                        <tr class="border-t border-base-200 dark:border-base-800">
+                            <td class="px-3 py-2 whitespace-nowrap">
+                                {% if can_view_audit %}<a class="underline" href="{% url 'admin:audit_recordchange_change' change.pk %}">{{ change.occurred_at }}</a>{% else %}{{ change.occurred_at }}{% endif %}
+                            </td>
+                            <td class="px-3 py-2">{{ change.table_name }}</td>
+                            <td class="px-3 py-2">{{ change.operation }}</td>
+                            <td class="px-3 py-2">{{ change.changed_columns|join:", "|default:"-" }}</td>
+                            <td class="px-3 py-2">{{ change.actor|default:"-" }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-sm text-base-500">{% translate "No changes recorded yet." %}</p>
+    {% endif %}
+</section>
+{% endif %}

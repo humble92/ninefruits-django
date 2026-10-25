@@ -1,0 +1,44 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+    <div class="px-4 lg:px-8">
+        <div class="container mb-6 mx-auto -my-3 lg:mb-12">
+            <ul class="flex flex-wrap">
+                {% url 'admin:index' as index_link %}
+                {% include "unfold/helpers/breadcrumb_item.html" with link=index_link name=_("Home") %}
+                {% include "unfold/helpers/breadcrumb_item.html" with link=index_url name=_("Settings") %}
+                {% include "unfold/helpers/breadcrumb_item.html" with link="" name=title %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <form method="post" novalidate class="flex flex-col gap-8 max-w-4xl" data-settings-group="{{ group }}">
+        {% csrf_token %}
+        {% if form.non_field_errors %}
+            <div class="bg-red-100 border border-red-200 rounded-default px-3 py-2 text-red-700 dark:bg-red-500/20 dark:border-red-500/30 dark:text-red-400">
+                {% for error in form.non_field_errors %}<p>{{ error }}</p>{% endfor %}
+            </div>
+        {% endif %}
+        {% for section in sections %}
+            <fieldset class="border border-base-200 rounded-default p-6 shadow-xs dark:border-base-800">
+                {% if section.title %}
+                    <h2 class="font-semibold mb-1 text-font-important-light dark:text-font-important-dark">{{ section.title }}</h2>
+                {% endif %}
+                {% if section.description %}
+                    <p class="mb-4 text-sm text-font-subtle-light dark:text-font-subtle-dark">{{ section.description }}</p>
+                {% endif %}
+                {% for field in section.fields %}
+                    {% include "unfold/helpers/field.html" with field=field %}
+                {% endfor %}
+            </fieldset>
+        {% endfor %}
+        <div>
+            <button type="submit" class="bg-primary-600 border border-transparent font-medium px-3 py-2 rounded-default text-sm text-white">
+                {% translate "Save" %}
+            </button>
+        </div>
+    </form>
+{% endblock %}

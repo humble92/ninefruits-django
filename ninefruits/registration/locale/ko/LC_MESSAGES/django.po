@@ -1,0 +1,1228 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 23:13+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.not_enrolled
+#: actions/drop_enrollment.py:48
+msgid "This registration is not active."
+msgstr "유효한 수강 내역이 아닙니다."
+
+# key: registration.errors.reason_required
+#: actions/enroll_student.py:43
+msgid "Enter a reason."
+msgstr "사유를 입력하세요."
+
+# key: registration.capacity.full_waitlist_open
+#: actions/enroll_student.py:48
+msgid "The section is full. You can join the waitlist."
+msgstr "정원이 찼습니다. 대기자로 신청할 수 있습니다."
+
+# key: registration.capacity.full
+#: actions/enroll_student.py:49
+msgid "The section is full."
+msgstr "정원이 찼습니다."
+
+# key: registration.capacity.waitlisted
+#: actions/enroll_student.py:195
+#, python-format
+msgid "You are on the waitlist (position %(position)s)."
+msgstr "대기자로 등록되었습니다(%(position)s번째)."
+
+# key: registration.errors.not_waiting
+#: actions/leave_waitlist.py:25
+msgid "This waitlist entry is no longer waiting."
+msgstr "이미 대기 중이 아닙니다."
+
+# key: registration.waitlist.left
+#: actions/leave_waitlist.py:28
+msgid "You left the waitlist."
+msgstr "대기를 취소했습니다."
+
+# key: validation.after
+#: actions/manage_holds.py:48 admin/common.py:197 importers.py:106
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s은(는) %(date)s 이후 날짜여야 합니다."
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: actions/manage_holds.py:49 admin/common.py:188 admin/common.py:198 models/holds.py:56
+msgid "Ends"
+msgstr "종료"
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: actions/manage_holds.py:49 admin/common.py:187 admin/common.py:198 models/holds.py:55
+msgid "Starts"
+msgstr "시작"
+
+# key: registration.errors.hold_released
+#: actions/manage_holds.py:70
+msgid "This hold is already released."
+msgstr "이미 해제된 제한입니다."
+
+# key: registration.errors.rule_not_overridable
+#: actions/manage_holds.py:93
+msgid "This rule cannot be overridden."
+msgstr "이 규칙은 예외를 허용할 수 없습니다."
+
+# key: registration.errors.rule_set_exists
+#: actions/prepare_rule_set.py:27
+msgid "The term already has a rule set."
+msgstr "이 학기에는 이미 규칙 세트가 있습니다."
+
+# key: registration.waitlist.window_closed
+#: actions/promote_waitlist.py:55
+msgid "Registration closed before a seat became free."
+msgstr "빈자리가 생기기 전에 수강신청 기간이 끝났습니다."
+
+# key: registration.fields.outcome
+#: admin/attempts.py:27 admin/attempts.py:87 models/enrollment.py:323
+msgid "Outcome"
+msgstr "결과"
+
+# key: registration.fields.action
+#: admin/attempts.py:33 admin/attempts.py:82 models/enrollment.py:322
+msgid "Action"
+msgstr "작업"
+
+# key: registration.fields.attempted_at
+#: admin/attempts.py:68 models/enrollment.py:330
+msgctxt "registration"
+msgid "Time"
+msgstr "시각"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/attempts.py:74 admin/common.py:94 admin/enrollments.py:139 admin/holds.py:69 templates/registration/admin/roster.html:8 templates/registration/admin/waitlist.html:9
+msgid "Student number"
+msgstr "학번"
+
+# key: offering.fields.section
+#: admin/attempts.py:78 admin/common.py:132 admin/common.py:208 admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
+msgctxt "offering"
+msgid "Section"
+msgstr "강좌"
+
+# key: registration.fields.failed_rules
+#: admin/attempts.py:97
+msgid "Rules not met"
+msgstr "충족하지 못한 규칙"
+
+# key: registration.fields.actor
+#: admin/attempts.py:102
+msgid "By"
+msgstr "처리자"
+
+# key: common.reason
+#: admin/common.py:47 admin/holds.py:77 models/holds.py:57 models/holds.py:121
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: registration.import.unknown_student
+#: admin/common.py:71 importers.py:87
+#, python-format
+msgid "No student record with number %(number)s."
+msgstr "학번 %(number)s인 학적이 없습니다."
+
+#: admin/common.py:88
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "알 수 없는 강좌입니다: %(section)s."
+
+# key: registration.fields.waive
+#: admin/common.py:135
+msgid "Waive rules"
+msgstr "적용하지 않을 규칙"
+
+# key: registration.fields.waitlist_if_full
+#: admin/common.py:138
+msgid "Add to the waitlist if full"
+msgstr "정원이 차면 대기자로 등록"
+
+# key: registration.fields.hold_type
+#: admin/common.py:177 admin/holds.py:83 admin/holds.py:116 models/holds.py:51
+msgid "Hold type"
+msgstr "제한 종류"
+
+# key: registration.fields.blocks_registration
+#: admin/common.py:179 models/holds.py:52
+msgid "Blocks registration"
+msgstr "수강신청 제한"
+
+# key: registration.fields.blocks_grades
+#: admin/common.py:182 models/holds.py:53
+msgid "Blocks grade viewing"
+msgstr "성적 조회 제한"
+
+# key: registration.fields.blocks_certificates
+#: admin/common.py:185 models/holds.py:54
+msgid "Blocks certificates"
+msgstr "증명서 발급 제한"
+
+# key: reference.resources.terms.label
+#: admin/common.py:205 admin/common.py:253 admin/holds.py:200 admin/rules.py:54 admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22 templates/registration/portal/registration.html:17
+msgid "term"
+msgstr "학기"
+
+# key: registration.fields.rule
+#: admin/common.py:206 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96 admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
+msgid "Rule"
+msgstr "규칙"
+
+# key: registration.help.override_section
+#: admin/common.py:211
+msgid "Leave empty to apply to every section of the term."
+msgstr "비우면 그 학기의 모든 분반에 적용한다."
+
+# key: curriculum.resources.courses.label
+#: admin/common.py:215 models/holds.py:119
+msgid "course"
+msgstr "교과목"
+
+# key: registration.help.override_course
+#: admin/common.py:218
+msgid "Leave empty for any course. Ignored when a section is chosen."
+msgstr "비우면 모든 과목에 적용한다. 분반을 고르면 무시한다."
+
+# key: registration.fields.expires_at
+#: admin/common.py:221 models/holds.py:122
+msgid "Expires"
+msgstr "만료"
+
+#: admin/common.py:244
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "알 수 없는 교과목입니다: %(course)s."
+
+# key: security.scope_types.global
+#: admin/common.py:259 admin/common.py:295 admin/common.py:324
+msgid "All"
+msgstr "전체"
+
+# key: registration.fields.in_force
+#: admin/common.py:320
+msgid "In force"
+msgstr "적용 중"
+
+# key: common.yes
+#: admin/common.py:324
+msgid "Yes"
+msgstr "예"
+
+#: admin/common.py:324
+msgid "No"
+msgstr "아니오"
+
+# key: registration.fields.status
+#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115 models/enrollment.py:231 templates/registration/admin/roster.html:11 templates/registration/admin/waitlist.html:11
+msgctxt "registration"
+msgid "Status"
+msgstr "상태"
+
+# key: registration.actions.staff_enroll
+#: admin/enrollments.py:58 admin/enrollments.py:182 admin/roster.py:169
+msgctxt "registration"
+msgid "Register a student"
+msgstr "학생 수강신청"
+
+# key: registration.portal.dropped
+#: admin/enrollments.py:75 views/portal.py:363
+msgid "Dropped."
+msgstr "취소했습니다."
+
+# key: registration.portal.withdrawn
+#: admin/enrollments.py:77 views/portal.py:367
+msgid "Withdrawn."
+msgstr "철회했습니다."
+
+# key: registration.actions.drop
+#: admin/enrollments.py:79 admin/enrollments.py:200 templates/registration/admin/roster.html:29
+msgctxt "registration.actions"
+msgid "Drop"
+msgstr "수강 취소"
+
+# key: registration.actions.withdraw
+#: admin/enrollments.py:79 admin/enrollments.py:210 templates/registration/admin/roster.html:30
+msgctxt "registration.actions"
+msgid "Withdraw"
+msgstr "수강 철회"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/enrollments.py:143 admin/holds.py:73 templates/registration/admin/roster.html:9 templates/registration/admin/waitlist.html:10
+msgctxt "people"
+msgid "Name"
+msgstr "이름"
+
+# key: curriculum.fields.title
+#: admin/enrollments.py:155
+msgctxt "curriculum"
+msgid "Title"
+msgstr "교과목명"
+
+# key: registration.fields.source
+#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59 templates/registration/admin/roster.html:13
+msgctxt "registration"
+msgid "Source"
+msgstr "경로"
+
+# key: registration.actions.place_hold
+#: admin/holds.py:123 admin/holds.py:140 admin/holds.py:142
+msgid "Place a hold"
+msgstr "제한 설정"
+
+# key: registration.actions.release_hold
+#: admin/holds.py:147 admin/holds.py:161
+msgid "Release"
+msgstr "해제"
+
+# key: registration.fields.override_limit
+#: admin/holds.py:208
+msgid "Applies to"
+msgstr "적용 범위"
+
+# key: registration.fields.whole_term
+#: admin/holds.py:214
+msgid "Whole term"
+msgstr "학기 전체"
+
+# key: registration.fields.granted_at
+#: admin/holds.py:216
+msgid "Granted"
+msgstr "허용 시각"
+
+# key: registration.actions.grant_override
+#: admin/holds.py:223 admin/holds.py:240 admin/holds.py:242
+msgid "Grant an override"
+msgstr "예외 허용"
+
+# key: registration.actions.revoke_override
+#: admin/holds.py:248 admin/holds.py:266
+msgctxt "registration"
+msgid "Revoke"
+msgstr "취소"
+
+# key: registration.resources.roster.title
+#: admin/roster.py:121
+#, python-format
+msgctxt "registration"
+msgid "Roster (%(count)s / %(capacity)s)"
+msgstr "수강생 (%(count)s / %(capacity)s)"
+
+# key: registration.resources.waitlist.plural_label
+#: admin/roster.py:129 models/enrollment.py:251 models/enrollment.py:252
+msgctxt "registration.resources.waitlist"
+msgid "Waitlist"
+msgstr "대기자"
+
+# key: registration.actions.promote_waitlist
+#: admin/roster.py:187 admin/roster.py:198
+msgid "Promote now"
+msgstr "지금 승격"
+
+# key: registration.notifications.promoted
+#: admin/roster.py:195
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "승격 %(promoted)s명, 제외 %(removed)s명, 만료 %(expired)s명."
+
+# key: registration.actions.remove_from_waitlist
+#: admin/roster.py:217 templates/registration/admin/waitlist.html:24
+msgctxt "registration"
+msgid "Remove"
+msgstr "대기 제외"
+
+# key: registration.fields.copy_from
+#: admin/rules.py:56
+msgctxt "registration"
+msgid "Copy from"
+msgstr "복사할 학기"
+
+# key: registration.resources.rules.plural_label
+#: admin/rules.py:85 models/rules.py:67
+msgid "Rules"
+msgstr "규칙"
+
+# key: registration.fields.severity
+#: admin/rules.py:101 models/rules.py:55
+msgid "When not met"
+msgstr "불충족 시"
+
+#: admin/rules.py:110
+msgid "Edit"
+msgstr "편집"
+
+# key: reference.fields.code
+#: admin/rules.py:151
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: registration.fields.enabled_rules
+#: admin/rules.py:155
+msgid "Rules on"
+msgstr "적용 규칙 수"
+
+# key: registration.fields.copied_from
+#: admin/rules.py:159 admin/rules.py:168 models/rules.py:30
+msgid "Copied from"
+msgstr "복사 원본"
+
+# key: registration.actions.prepare_rule_set
+#: admin/rules.py:175 admin/rules.py:197
+msgid "Prepare rules for a term"
+msgstr "학기 규칙 준비"
+
+# key: registration.help.prepare_rule_set
+#: admin/rules.py:200
+msgid "The rules are copied from the chosen term, or start from the defaults. Review them before registration opens."
+msgstr "선택한 학기의 규칙을 복사하거나 기본값으로 시작한다. 수강신청이 열리기 전에 확인한다."
+
+# key: registration.parameters.statuses
+#: admin/rules.py:211
+msgid "Student statuses that may register"
+msgstr "신청할 수 있는 학적 상태"
+
+# key: registration.parameters.allowed_overlap_minutes
+#: admin/rules.py:217
+msgid "Allowed overlap (minutes)"
+msgstr "허용하는 겹침(분)"
+
+# key: registration.parameters.repeat_allowed
+#: admin/rules.py:224
+msgid "Retakes allowed"
+msgstr "재수강 허용"
+
+# key: registration.parameters.max_attempts
+#: admin/rules.py:226
+msgid "Maximum attempts per course"
+msgstr "과목당 최대 수강 횟수"
+
+# key: registration.parameters.max_attempts_help
+#: admin/rules.py:230
+msgid "Including the first attempt. Empty means no limit."
+msgstr "처음 수강을 포함한다. 비우면 제한 없음."
+
+# key: registration.parameters.below_grade
+#: admin/rules.py:234
+msgid "Only below grade"
+msgstr "이 성적 미만만"
+
+# key: registration.parameters.below_grade_help
+#: admin/rules.py:237
+msgid "Retake only when the earlier grade is below this grade (e.g. C+). Empty means any grade."
+msgstr "이전 성적이 이 등급(예: C+) 미만일 때만 재수강할 수 있다. 비우면 성적과 관계없음."
+
+# key: registration.fields.all_term_types
+#: admin/rules.py:338 admin/rules.py:403
+msgid "All term types"
+msgstr "모든 학기 종류"
+
+# key: validation.lte.numeric
+#: admin/rules.py:349
+#, python-format
+msgid "The %(attribute)s field must be less than or equal to %(value)s."
+msgstr "%(attribute)s의 값은 %(value)s보다 같거나 작아야 합니다."
+
+# key: curriculum.fields.min_credits
+# key: registration.fields.min_credits
+#: admin/rules.py:350
+msgid "Minimum credits"
+msgstr "최소 학점"
+
+# key: registration.fields.max_credits
+#: admin/rules.py:350 models/rules.py:109
+msgid "Maximum credits"
+msgstr "최대 학점"
+
+# key: validation.between.numeric
+#: admin/rules.py:357
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s의 값은 %(min)s에서 %(max)s 사이여야 합니다."
+
+# key: registration.fields.applies_to
+#: admin/rules.py:376 admin/rules.py:405 models/rules.py:105
+msgctxt "registration"
+msgid "Students"
+msgstr "대상 학생"
+
+# key: registration.help.credit_policy_eligibility
+#: admin/rules.py:378
+msgid "Leave empty for every student."
+msgstr "비우면 모든 학생."
+
+# key: reference.fields.name
+#: admin/rules.py:397 models/rules.py:96
+msgctxt "reference"
+msgid "Name"
+msgstr "이름"
+
+# key: reference.resources.term_types.label
+#: admin/rules.py:401 models/rules.py:103
+msgid "term type"
+msgstr "학기 종류"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: apps.py:21 templates/registration/portal/registration.html:12 views/portal.py:123
+msgid "Registration"
+msgstr "수강신청"
+
+# key: registration.attempt_actions.enroll
+# key: registration.portal.register
+#: enums.py:14 templates/registration/portal/partials/action.html:20
+msgctxt "registration"
+msgid "Register"
+msgstr "신청"
+
+# key: registration.attempt_actions.drop
+#: enums.py:15
+msgctxt "registration.attempt_actions"
+msgid "Drop"
+msgstr "취소"
+
+# key: registration.attempt_actions.withdraw
+#: enums.py:16
+msgctxt "registration.attempt_actions"
+msgid "Withdraw"
+msgstr "철회"
+
+# key: registration.attempt_actions.waitlist
+#: enums.py:17
+msgctxt "registration.attempt_actions"
+msgid "Waitlist"
+msgstr "대기 신청"
+
+# key: registration.attempt_actions.promote
+#: enums.py:18
+msgid "Waitlist promotion"
+msgstr "대기자 승격"
+
+# key: registration.attempt_actions.cart
+# key: registration.portal.cart
+#: enums.py:19 models/enrollment.py:293 models/enrollment.py:294 templates/registration/portal/registration.html:88
+msgid "Cart"
+msgstr "장바구니"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: enums.py:23
+msgid "Succeeded"
+msgstr "성공"
+
+# key: registration.attempt_outcomes.waitlisted
+#: enums.py:24
+msgid "Waitlisted"
+msgstr "대기 등록"
+
+# key: registration.attempt_outcomes.refused
+#: enums.py:25
+msgid "Refused"
+msgstr "거절"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: enums.py:29
+msgid "Student"
+msgstr "학생"
+
+# key: registration.enrollment_sources.staff
+#: enums.py:30
+msgid "Staff"
+msgstr "직원"
+
+# key: registration.enrollment_sources.waitlist
+#: enums.py:31
+msgctxt "registration.enrollment_sources"
+msgid "Waitlist"
+msgstr "대기자 승격"
+
+# key: registration.enrollment_sources.import
+#: enums.py:32
+msgid "Import"
+msgstr "가져오기"
+
+# key: registration.enrollment_statuses.enrolled
+#: enums.py:39
+msgctxt "registration.enrollment_statuses"
+msgid "Registered"
+msgstr "신청"
+
+# key: registration.enrollment_statuses.dropped
+#: enums.py:40
+msgid "Dropped"
+msgstr "취소"
+
+# key: registration.enrollment_statuses.withdrawn
+#: enums.py:41
+msgctxt "registration"
+msgid "Withdrawn"
+msgstr "철회"
+
+# key: registration.enrollment_statuses.completed
+#: enums.py:42
+msgid "Completed"
+msgstr "이수"
+
+# key: registration.hold_types.unregistered
+#: enums.py:54
+msgid "Not registered for the term"
+msgstr "미등록"
+
+# key: registration.hold_types.financial
+#: enums.py:55
+msgid "Financial"
+msgstr "재정"
+
+# key: registration.hold_types.academic
+#: enums.py:56
+msgctxt "registration"
+msgid "Academic"
+msgstr "학사"
+
+# key: registration.hold_types.administrative
+#: enums.py:57
+msgid "Administrative"
+msgstr "행정"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: enums.py:58
+msgid "Other"
+msgstr "기타"
+
+# key: registration.rules.window.label
+#: enums.py:74
+msgctxt "registration.rules.window"
+msgid "Registration period"
+msgstr "신청 기간"
+
+# key: registration.rules.section_open.label
+#: enums.py:76
+msgid "Section open"
+msgstr "개설 상태"
+
+# key: registration.rules.hold.label
+#: enums.py:77
+msgid "Holds"
+msgstr "수강신청 제한"
+
+# key: registration.rules.student_status.label
+#: enums.py:78
+msgid "Student status"
+msgstr "학적 상태"
+
+# key: registration.rules.eligibility.label
+#: enums.py:79
+msgid "Section eligibility"
+msgstr "수강 대상"
+
+# key: registration.rules.duplicate_course.label
+#: enums.py:80
+msgid "Same course twice"
+msgstr "같은 과목 중복"
+
+# key: registration.rules.time_conflict.label
+#: enums.py:81
+msgid "Time conflict"
+msgstr "시간 중복"
+
+# key: registration.rules.credit_limit.label
+#: enums.py:82
+msgid "Credit limit"
+msgstr "학점 상한"
+
+# key: registration.rules.requisites.label
+#: enums.py:83
+msgid "Prerequisites"
+msgstr "선수과목"
+
+# key: registration.rules.repeat_course.label
+#: enums.py:84
+msgid "Retakes"
+msgstr "재수강"
+
+# key: registration.rules.capacity.label
+#: enums.py:86
+msgid "Seats"
+msgstr "정원"
+
+# key: registration.rules.window.description
+#: enums.py:103
+msgid "A registration, add/drop or withdrawal period must be open for the student."
+msgstr "학생에게 수강신청, 수강 정정 또는 수강 철회 기간이 열려 있어야 한다."
+
+# key: registration.rules.section_open.description
+#: enums.py:104
+msgid "The section must be published."
+msgstr "분반이 공개 상태여야 한다."
+
+# key: registration.rules.hold.description
+#: enums.py:105
+msgid "Students with a hold that blocks registration cannot register."
+msgstr "수강신청 제한이 있는 학생은 신청할 수 없다."
+
+# key: registration.rules.student_status.description
+#: enums.py:106
+msgid "Only students with the chosen statuses may register."
+msgstr "선택한 학적 상태의 학생만 신청할 수 있다."
+
+# key: registration.rules.eligibility.description
+#: enums.py:107
+msgid "The student must match the section's eligibility and not its exclusions."
+msgstr "분반의 수강 대상 조건을 만족하고 제외 조건에 해당하지 않아야 한다."
+
+# key: registration.rules.duplicate_course.description
+#: enums.py:108
+msgid "A course can be registered only once per term."
+msgstr "한 학기에 같은 과목은 한 번만 신청할 수 있다."
+
+# key: registration.rules.time_conflict.description
+#: enums.py:109
+msgid "Meeting times must not overlap with other registered sections."
+msgstr "신청한 다른 분반과 수업 시간이 겹치면 안 된다."
+
+# key: registration.rules.credit_limit.description
+#: enums.py:110
+msgid "Total credits must not exceed the credit limit that applies to the student."
+msgstr "신청 학점 합계가 학생에게 적용되는 학점 상한을 넘으면 안 된다."
+
+# key: registration.rules.requisites.description
+#: enums.py:112
+msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
+msgstr "선수과목을 이수해야 한다(동일 과목 인정). 동시수강 과목은 같은 학기에 들어도 된다."
+
+# key: registration.rules.repeat_course.description
+#: enums.py:114
+msgid "Whether and how often a passed course may be taken again."
+msgstr "이수한 과목을 다시 들을 수 있는지, 몇 번까지인지 정한다."
+
+# key: registration.rules.capacity.description
+#: enums.py:115
+msgid "A seat must be free (reserved seats count only for their students until released)."
+msgstr "빈자리가 있어야 한다(유보석은 풀리기 전까지 해당 학생만 쓴다)."
+
+# key: registration.rule_severities.block
+#: enums.py:120
+msgid "Block"
+msgstr "차단"
+
+# key: registration.rule_severities.warn
+#: enums.py:121
+msgid "Warn only"
+msgstr "경고만"
+
+# key: registration.waitlist_statuses.waiting
+#: enums.py:125
+msgctxt "registration"
+msgid "Waiting"
+msgstr "대기 중"
+
+# key: registration.waitlist_statuses.promoted
+#: enums.py:126
+msgctxt "registration.waitlist_statuses"
+msgid "Registered"
+msgstr "신청됨"
+
+# key: registration.waitlist_statuses.removed
+#: enums.py:127
+msgid "Removed"
+msgstr "제외"
+
+# key: registration.waitlist_statuses.expired
+#: enums.py:128
+msgctxt "registration"
+msgid "Expired"
+msgstr "만료"
+
+# key: validation.date
+#: importers.py:32
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s은(는) 유효한 날짜가 아닙니다."
+
+# key: registration.resources.holds.plural_label
+#: importers.py:63 models/holds.py:76
+msgid "holds"
+msgstr "수강신청 제한"
+
+# key: people.resources.student_records.label
+#: models/enrollment.py:91 models/holds.py:49 models/holds.py:106
+msgid "student record"
+msgstr "학적"
+
+# key: registration.portal.credits
+#: models/enrollment.py:104 templates/registration/portal/registration.html:45
+msgctxt "registration"
+msgid "Credits"
+msgstr "신청 학점"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: models/enrollment.py:123 templates/registration/admin/roster.html:12 templates/registration/portal/registration.html:65
+msgid "Retake"
+msgstr "재수강"
+
+# key: registration.fields.enrolled_at
+#: models/enrollment.py:133 templates/registration/admin/roster.html:14
+msgid "Registered at"
+msgstr "신청 시각"
+
+# key: registration.resources.enrollments.label
+#: models/enrollment.py:166
+msgid "registration"
+msgstr "수강 내역"
+
+# key: registration.resources.enrollments.plural_label
+#: models/enrollment.py:167
+msgid "registrations"
+msgstr "수강 현황"
+
+# key: registration.fields.requested_at
+#: models/enrollment.py:236 templates/registration/admin/waitlist.html:8
+msgctxt "registration"
+msgid "Requested"
+msgstr "신청 시각"
+
+# key: registration.fields.outcome_note
+#: models/enrollment.py:244 templates/registration/admin/waitlist.html:12
+msgctxt "registration"
+msgid "Note"
+msgstr "비고"
+
+# key: registration.fields.request_id
+#: models/enrollment.py:329
+msgctxt "registration"
+msgid "Request ID"
+msgstr "요청 ID"
+
+# key: registration.resources.attempts.label
+#: models/enrollment.py:337
+msgid "registration attempt"
+msgstr "수강신청 기록"
+
+# key: registration.resources.attempts.plural_label
+#: models/enrollment.py:338
+msgid "registration attempts"
+msgstr "수강신청 기록"
+
+# key: registration.fields.released_at
+#: models/holds.py:64
+msgctxt "registration"
+msgid "Released"
+msgstr "해제"
+
+# key: registration.resources.holds.label
+#: models/holds.py:75
+msgid "hold"
+msgstr "수강신청 제한"
+
+# key: registration.fields.revoked_at
+#: models/holds.py:126
+msgctxt "registration"
+msgid "Revoked"
+msgstr "취소"
+
+# key: registration.resources.overrides.label
+#: models/holds.py:136
+msgid "rule override"
+msgstr "규칙 예외"
+
+# key: registration.resources.overrides.plural_label
+#: models/holds.py:137
+msgid "rule overrides"
+msgstr "규칙 예외"
+
+# key: offering.fields.note
+#: models/rules.py:32
+msgctxt "offering"
+msgid "Note"
+msgstr "비고"
+
+# key: registration.resources.rule_sets.label
+#: models/rules.py:39
+msgid "rule set"
+msgstr "규칙 세트"
+
+# key: registration.resources.rule_sets.plural_label
+#: models/rules.py:40
+msgid "registration rules"
+msgstr "수강신청 규칙"
+
+# key: registration.fields.is_enabled
+#: models/rules.py:53
+msgid "On"
+msgstr "적용"
+
+# key: registration.fields.allows_override
+#: models/rules.py:57
+msgid "Overrides allowed"
+msgstr "예외 허용"
+
+# key: registration.fields.min_credits
+#: models/rules.py:107
+msgctxt "registration"
+msgid "Minimum credits"
+msgstr "최소 학점"
+
+# key: registration.fields.priority
+#: models/rules.py:111
+msgid "Priority"
+msgstr "우선순위"
+
+# key: registration.help.priority
+#: models/rules.py:111
+msgid "When several limits match a student, the highest priority applies."
+msgstr "학생에게 맞는 학점 상한이 여러 개면 우선순위가 가장 높은 것을 쓴다."
+
+# key: registration.fields.is_active
+#: models/rules.py:113
+msgctxt "registration.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: registration.resources.credit_limit_policies.label
+#: models/rules.py:120
+msgid "credit limit"
+msgstr "학점 상한"
+
+# key: registration.resources.credit_limit_policies.plural_label
+#: models/rules.py:121
+msgid "credit limits"
+msgstr "학점 상한"
+
+# key: registration.mail.waitlist_promoted_subject
+#: notifications.py:32
+#, python-format
+msgid "You are registered in %(section)s"
+msgstr "%(section)s 수강신청 완료"
+
+# key: registration.mail.waitlist_removed_subject
+#: notifications.py:33
+#, python-format
+msgid "Waitlist for %(section)s"
+msgstr "%(section)s 대기 안내"
+
+# key: registration.mail.waitlist_expired_subject
+#: notifications.py:34
+#, python-format
+msgid "Waitlist for %(section)s closed"
+msgstr "%(section)s 대기 종료"
+
+# key: registration.mail.waitlist_promoted_intro
+#: notifications.py:38
+#, python-format
+msgid "A seat became free in %(section)s and you have been registered from the waitlist."
+msgstr "%(section)s에 빈자리가 생겨 대기자에서 수강신청되었습니다."
+
+# key: registration.mail.waitlist_removed_intro
+#: notifications.py:40
+#, python-format
+msgid "You were removed from the waitlist for %(section)s."
+msgstr "%(section)s 대기자 명단에서 제외되었습니다."
+
+# key: registration.mail.waitlist_expired_intro
+#: notifications.py:41
+#, python-format
+msgid "Registration closed before a seat became free in %(section)s."
+msgstr "%(section)s에 빈자리가 생기기 전에 수강신청 기간이 끝났습니다."
+
+# key: security.email_code.mail_greeting
+#: notifications.py:43
+msgid "Hello,"
+msgstr "안녕하세요."
+
+# key: security.email_code.mail_salutation
+#: notifications.py:50
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"감사합니다.\n"
+"%(app)s"
+
+# key: registration.rules.credit_limit.failed
+#: rules/credit_limit.py:21
+#, python-format
+msgid "This would make %(total)s credits; your limit is %(limit)s."
+msgstr "신청하면 %(total)s학점이 되어 상한 %(limit)s학점을 넘습니다."
+
+# key: registration.rules.duplicate_course.failed
+#: rules/duplicate_course.py:14
+#, python-format
+msgid "You are already registered in %(section)s."
+msgstr "이미 %(section)s을(를) 신청했습니다."
+
+# key: registration.rules.eligibility.failed
+#: rules/eligibility.py:22
+msgid "This section is not open to you."
+msgstr "이 분반의 수강 대상이 아닙니다."
+
+# key: registration.rules.hold.failed
+#: rules/hold.py:34
+#, python-format
+msgid "You have a hold (%(type)s). Contact the office that placed it."
+msgstr "수강신청 제한(%(type)s)이 있습니다. 제한한 부서에 문의하세요."
+
+# key: registration.rules.repeat_course.retake
+#: rules/repeat_course.py:16
+msgid "This registration is a retake."
+msgstr "재수강으로 신청됩니다."
+
+# key: registration.rules.repeat_course.not_allowed
+#: rules/repeat_course.py:44
+msgid "You have already taken this course and retakes are not allowed."
+msgstr "이미 수강한 과목이며 재수강은 허용되지 않습니다."
+
+# key: registration.rules.repeat_course.too_many
+#: rules/repeat_course.py:48
+#, python-format
+msgid "You have reached the maximum of %(max)s attempts for this course."
+msgstr "이 과목의 최대 수강 횟수(%(max)s회)에 도달했습니다."
+
+# key: registration.rules.repeat_course.grade_too_high
+#: rules/repeat_course.py:55
+#, python-format
+msgid "Retakes are allowed only for grades below %(grade)s."
+msgstr "%(grade)s 미만 성적만 재수강할 수 있습니다."
+
+# key: registration.rules.requisites.failed
+#: rules/requisites.py:18
+#, python-format
+msgid "Prerequisites not met: %(courses)s."
+msgstr "선수과목을 충족하지 않았습니다: %(courses)s."
+
+# key: registration.rules.section_open.failed
+#: rules/section_open.py:28
+msgid "This section is not open for registration."
+msgstr "이 분반은 수강신청을 받지 않습니다."
+
+# key: registration.rules.student_status.failed
+#: rules/student_status.py:30
+#, python-format
+msgid "Your status (%(status)s) does not allow registration."
+msgstr "현재 학적 상태(%(status)s)로는 수강신청할 수 없습니다."
+
+# key: registration.rules.time_conflict.failed
+#: rules/time_conflict.py:28
+#, python-format
+msgid "The time overlaps with %(section)s."
+msgstr "%(section)s과(와) 수업 시간이 겹칩니다."
+
+# key: registration.rules.window.failed.enroll
+# key: registration.rules.window.failed.waitlist
+#: rules/window.py:17 rules/window.py:18
+msgid "Registration is not open for you now."
+msgstr "지금은 수강신청 기간이 아닙니다."
+
+# key: registration.rules.window.failed.drop
+#: rules/window.py:19
+msgid "Dropping is not open for this course now."
+msgstr "지금은 이 과목의 수강 취소 기간이 아닙니다."
+
+# key: registration.rules.window.failed.withdraw
+#: rules/window.py:20
+msgid "Withdrawal is not open for this course now."
+msgstr "지금은 이 과목의 수강 철회 기간이 아닙니다."
+
+# key: registration.rules.window.failed.promote
+#: rules/window.py:21
+msgid "Registration is not open for this course now."
+msgstr "지금은 이 과목의 수강신청 기간이 아닙니다."
+
+# key: registration.rules.window.failed.cart
+#: rules/window.py:22
+msgid "The cart is not open for you now."
+msgstr "지금은 장바구니 기간이 아닙니다."
+
+# key: security.scope_types.program
+#: templates/registration/admin/roster.html:10
+msgctxt "security"
+msgid "Program"
+msgstr "프로그램"
+
+# key: common.none
+#: templates/registration/admin/roster.html:34 templates/registration/admin/waitlist.html:27 templates/registration/portal/registration.html:76
+msgctxt "common"
+msgid "None"
+msgstr "없음"
+
+# key: registration.portal.drop
+#: templates/registration/portal/partials/action.html:14
+msgctxt "registration.portal"
+msgid "Drop"
+msgstr "취소"
+
+# key: registration.portal.withdraw
+#: templates/registration/portal/partials/action.html:15
+msgctxt "registration.portal"
+msgid "Withdraw"
+msgstr "철회"
+
+# key: registration.portal.leave_waitlist
+#: templates/registration/portal/partials/action.html:16
+msgid "Leave waitlist"
+msgstr "대기 취소"
+
+# key: registration.portal.submit_cart
+#: templates/registration/portal/partials/action.html:17
+msgid "Register all"
+msgstr "모두 신청"
+
+# key: portal.profile.remove
+#: templates/registration/portal/partials/action.html:18
+msgctxt "portal"
+msgid "Remove"
+msgstr "삭제"
+
+# key: registration.portal.add_to_cart
+#: templates/registration/portal/partials/action.html:19
+msgid "Add to cart"
+msgstr "장바구니 담기"
+
+# key: registration.portal.join_waitlist
+#: templates/registration/portal/partials/action.html:21
+msgid "Join waitlist"
+msgstr "대기 신청"
+
+# key: offering.timetable.mode
+#: templates/registration/portal/registration.html:22
+msgid "Show"
+msgstr "보기"
+
+# key: registration.portal.no_term
+#: templates/registration/portal/registration.html:34
+msgid "No term is open for registration."
+msgstr "수강신청할 수 있는 학기가 없습니다."
+
+# key: registration.portal.window
+#: templates/registration/portal/registration.html:38
+msgctxt "registration.portal"
+msgid "Registration period"
+msgstr "수강신청 기간"
+
+# key: registration.portal.registration_open
+#: templates/registration/portal/registration.html:39
+msgctxt "registration"
+msgid "Open"
+msgstr "신청 가능"
+
+# key: registration.portal.cart_open
+#: templates/registration/portal/registration.html:40
+msgid "Cart only"
+msgstr "장바구니만 가능"
+
+# key: registration.portal.opens_at
+#: templates/registration/portal/registration.html:41
+#, python-format
+msgid "Opens %(date)s"
+msgstr "%(date)s 시작"
+
+# key: registration.portal.closed
+#: templates/registration/portal/registration.html:42
+msgctxt "registration"
+msgid "Closed"
+msgstr "닫힘"
+
+# key: registration.portal.sections_count
+#: templates/registration/portal/registration.html:49
+msgctxt "registration"
+msgid "Courses"
+msgstr "신청 과목 수"
+
+# key: registration.portal.timetable
+#: templates/registration/portal/registration.html:55
+msgid "Timetable"
+msgstr "시간표"
+
+# key: registration.portal.my_registrations
+#: templates/registration/portal/registration.html:60
+msgctxt "registration"
+msgid "My registrations"
+msgstr "신청 내역"
+
+# key: registration.portal.drop_confirm
+#: templates/registration/portal/registration.html:70
+msgid "Drop this course?"
+msgstr "이 과목의 수강을 취소할까요?"
+
+# key: registration.portal.withdraw_confirm
+#: templates/registration/portal/registration.html:72
+msgid "Withdraw from this course? A W is recorded."
+msgstr "이 과목을 철회할까요? 성적에 W가 남습니다."
+
+# key: registration.portal.waiting
+#: templates/registration/portal/registration.html:80
+#, python-format
+msgid "Waitlist position %(position)s"
+msgstr "대기 %(position)s번째"
+
+# key: registration.portal.cart_empty
+#: templates/registration/portal/registration.html:99 views/portal.py:351
+msgid "The cart is empty."
+msgstr "장바구니가 비어 있습니다."
+
+# key: offering.catalog.search
+#: templates/registration/portal/registration.html:106 templates/registration/portal/registration.html:108
+msgid "Search"
+msgstr "검색"
+
+# key: offering.catalog.search_placeholder
+#: templates/registration/portal/registration.html:107
+msgid "Course code or title"
+msgstr "교과목 코드 또는 이름"
+
+# key: offering.catalog.instructor_tba
+#: templates/registration/portal/registration.html:118
+msgid "Instructor to be announced"
+msgstr "담당 교원 미정"
+
+# key: offering.catalog.time_tba
+#: templates/registration/portal/registration.html:119
+msgid "Time to be announced"
+msgstr "시간 미정"
+
+# key: registration.portal.seats
+#: templates/registration/portal/registration.html:121
+#, python-format
+msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
+msgstr "빈자리 %(general)s · 유보 %(reserved)s · 정원 %(capacity)s"
+
+# key: registration.errors.too_many_requests
+#: views/portal.py:296
+msgid "Too many requests. Wait a minute and try again."
+msgstr "요청이 너무 많습니다. 1분 뒤에 다시 시도하세요."
+
+# key: registration.portal.registered
+#: views/portal.py:324 views/portal.py:349
+msgid "Registered."
+msgstr "신청했습니다."
+
+# key: registration.portal.added_to_cart
+#: views/portal.py:334
+msgid "Added to the cart."
+msgstr "장바구니에 담았습니다."

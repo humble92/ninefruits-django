@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 22:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "每个成绩必须是 0 到 100 之间的数字。"
+
+#: actions/deliver.py
+msgid "Unknown operation."
+msgstr "未知的操作。"
+
+#: actions/deliver.py
+msgid "Unknown status."
+msgstr "未知的状态。"
+
+#: actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "未知的同步记录。"
+
+#: actions/deliver.py
+msgid "This step is already finished."
+msgstr "此步骤已结束。"
+
+#: actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "操作与同步记录不一致。"
+
+#: actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "该开课未关联到此平台。"
+
+#: actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "请发送 用户 ID 到成绩 的对象。"
+
+#: actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "没有与此课程关联的开课。"
+
+# key: lms.resources.platforms.label
+#: admin/course_links.py admin/sync_logs.py models.py
+msgid "LMS platform"
+msgstr "LMS 平台"
+
+# key: registration.fields.status
+#: admin/course_links.py admin/sync_logs.py models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "状态"
+
+# key: reference.resources.terms.label
+#: admin/course_links.py
+msgid "term"
+msgstr "学期"
+
+# key: offering.fields.section
+#: admin/course_links.py admin/sync_logs.py models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "课程班"
+
+# key: lms.fields.external_course_id
+#: admin/course_links.py models.py
+msgid "Course id on the platform"
+msgstr "平台课程 ID"
+
+# key: lms.fields.external_url
+#: admin/course_links.py models.py
+msgid "Course URL"
+msgstr "课程 URL"
+
+# key: lms.fields.last_error
+#: admin/course_links.py models.py
+msgid "Last error"
+msgstr "最近错误"
+
+# key: lms.actions.resync
+#: admin/course_links.py
+msgid "Synchronize again"
+msgstr "重新同步"
+
+#: admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "同步失败：%(error)s"
+
+# key: lms.notifications.synced
+#: admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "同步完成：%(members)s 名成员。"
+
+#: admin/course_links.py
+msgid ""
+"Pushes the course, its instructors and its enrolled students to the platform"
+" again."
+msgstr "将课程、任课教师和选课学生再次推送到平台。"
+
+#: admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "第 %(number)s 行：请按 键=值 的格式填写。"
+
+# key: reference.fields.code
+#: admin/platforms.py models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "代码"
+
+# key: lms.fields.driver
+#: admin/platforms.py models.py
+msgid "Driver"
+msgstr "驱动"
+
+# key: lms.help.driver
+#: admin/platforms.py
+msgid ""
+"The connector that talks to the platform. \"null\" records what would be "
+"sent without calling anything; use it to prepare and test."
+msgstr "与平台通信的连接器。“无”不调用任何接口，只记录将要发送的内容（用于准备和测试）。"
+
+# key: lms.fields.base_url
+#: admin/platforms.py models.py
+msgid "Base URL"
+msgstr "基础 URL"
+
+# key: lms.fields.credentials
+#: admin/platforms.py models.py
+msgid "Credentials"
+msgstr "凭据"
+
+# key: lms.help.credentials
+#: admin/platforms.py
+msgid ""
+"Tokens and secrets the driver needs (see docs/lms-integration-guide.md). "
+"Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr "驱动所需的令牌和密钥（见 docs/lms-integration-guide.md）。加密存储；编辑时留空则保留原值。"
+
+#: admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "每行一个 键=值，例如 token=..."
+
+# key: lms.help.is_active
+#: admin/platforms.py
+msgid ""
+"Active platforms receive published sections and roster changes as they "
+"happen, and the nightly reconcile."
+msgstr "启用的平台会即时收到课程发布和选课变动，并参与每夜核对。"
+
+# key: lms.help.should_pull_grades
+#: admin/platforms.py
+msgid ""
+"Lets instructors load the platform's final scores into the grade entry "
+"screen as a draft."
+msgstr "允许教师在成绩录入页面将平台的最终分数作为草稿导入。"
+
+#: admin/platforms.py
+msgid "This code is already used."
+msgstr "此代码已被使用。"
+
+# key: reference.fields.name
+#: admin/platforms.py models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: admin/platforms.py models.py
+msgid "Course links"
+msgstr "课程关联"
+
+# key: admin.record_changes.fields.operation
+# key: lms.fields.operation
+#: admin/sync_logs.py models.py
+msgid "Operation"
+msgstr "操作"
+
+# key: admin.audit.fields.actor
+#: admin/sync_logs.py
+msgid "User"
+msgstr "用户"
+
+# key: lms.fields.message
+#: admin/sync_logs.py models.py
+msgid "Message"
+msgstr "消息"
+
+#: admin/sync_logs.py
+msgid "Payload"
+msgstr "内容"
+
+# key: lms.link_statuses.pending
+#: enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "待处理"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: enums.py
+msgid "Linked"
+msgstr "已关联"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "失败"
+
+# key: lms.drivers.null
+#: enums.py
+msgid "None (records only)"
+msgstr "无（仅记录）"
+
+# key: lms.operations.course.sync
+#: enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "课程"
+
+# key: lms.operations.enrollment.add
+#: enums.py
+msgid "Add member"
+msgstr "添加成员"
+
+# key: lms.operations.enrollment.remove
+#: enums.py
+msgid "Remove member"
+msgstr "移除成员"
+
+# key: lms.operations.grades.pull
+#: enums.py
+msgid "Pull scores"
+msgstr "拉取分数"
+
+#: enums.py
+msgid "Scores delivered"
+msgstr "成绩送达"
+
+# key: lms.operations.reconcile
+#: enums.py
+msgid "Reconcile"
+msgstr "核对"
+
+# key: lms.sync_statuses.queued
+#: enums.py
+msgid "Queued"
+msgstr "排队中"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: enums.py
+msgid "Succeeded"
+msgstr "成功"
+
+# key: lms.sync_statuses.skipped
+#: enums.py
+msgid "Skipped"
+msgstr "已跳过"
+
+#: models.py
+msgid "Options"
+msgstr "选项"
+
+# key: reference.fields.is_active
+#: models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "启用"
+
+# key: lms.fields.should_sync_enrollments
+#: models.py
+msgid "Synchronize rosters"
+msgstr "同步选课名单"
+
+# key: lms.fields.should_pull_grades
+#: models.py
+msgid "Pull final scores"
+msgstr "拉取最终分数"
+
+# key: lms.resources.platforms.plural_label
+#: models.py
+msgid "LMS platforms"
+msgstr "LMS 平台"
+
+# key: lms.fields.last_synced_at
+#: models.py
+msgid "Last synced"
+msgstr "最近同步"
+
+# key: lms.resources.course_links.label
+#: models.py
+msgid "Course link"
+msgstr "课程关联"
+
+#: models.py
+msgid "User id on the platform"
+msgstr "平台用户 ID"
+
+#: models.py
+msgid "User link"
+msgstr "用户关联"
+
+#: models.py
+msgid "User links"
+msgstr "用户关联"
+
+# key: lms.fields.started_at
+#: models.py
+msgid "Started"
+msgstr "开始"
+
+#: models.py
+msgid "Finished"
+msgstr "结束"
+
+# key: lms.resources.sync_logs.label
+#: models.py
+msgid "Sync log"
+msgstr "同步日志"
+
+# key: lms.resources.sync_logs.plural_label
+#: models.py
+msgid "Sync logs"
+msgstr "同步日志"
+
+# key: grading.entry.import_lms
+#: services/grades.py
+msgid "Load scores from the LMS"
+msgstr "从 LMS 导入分数"
+
+# key: grading.entry.lms_imported
+#: services/grades.py
+#, python-format
+msgid ""
+"%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "已从 LMS 导入 %(count)s 条分数作为草稿，请核对后保存。"
+
+# key: lms.portal.open_course
+#: services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "在 %(platform)s 上打开课程"

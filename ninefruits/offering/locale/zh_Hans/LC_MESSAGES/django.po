@@ -1,0 +1,862 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 18:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: offering.errors.instructor_not_current
+#: actions/assign_section_instructor.py:24
+msgid "This instructor is not employed when the session starts."
+msgstr "该教师在时段开始时不在职。"
+
+# key: offering.errors.instructor_already_assigned
+#: actions/assign_section_instructor.py:26
+msgid "This instructor is already assigned."
+msgstr "该教师已被指定。"
+
+# key: offering.errors.reason_required
+#: actions/change_section_status.py:31
+msgid "Give a reason."
+msgstr "请填写原因。"
+
+# key: offering.errors.copy_same_term
+#: actions/copy_sections.py:74 admin/sections.py:558
+msgid "Choose two different terms."
+msgstr "请选择两个不同的学期。"
+
+# key: offering.copy.exists
+#: actions/copy_sections.py:118
+msgid "already offered in that term"
+msgstr "目标学期已开设"
+
+# key: offering.copy.no_version
+#: actions/copy_sections.py:122
+msgid "no course version in effect at the session start"
+msgstr "时段开始时没有生效的课程版本"
+
+# key: offering.copy.instructor_left
+#: actions/copy_sections.py:147
+#, python-format
+msgid "instructor %(instructor)s is no longer employed"
+msgstr "教师 %(instructor)s 已离职"
+
+# key: offering.copy.room_taken
+#: actions/copy_sections.py:199
+#, python-format
+msgid "room taken at %(time)s, copied without a room"
+msgstr "%(time)s 教室已被占用，已不含教室复制"
+
+# key: offering.errors.no_course_version
+#: actions/create_section.py:38
+#, python-format
+msgid "Course %(course)s has no version in effect on %(date)s."
+msgstr "课程 %(course)s 在 %(date)s 没有生效的版本。"
+
+# key: offering.errors.section_code_taken
+#: actions/create_section.py:46
+msgid "This section number is already used for the course in this term."
+msgstr "本学期该课程已有相同班号。"
+
+# key: offering.errors.meeting_outside_session
+#: actions/save_section_meeting.py:46
+msgid "Meeting dates must be within the session."
+msgstr "上课日期须在时段内。"
+
+# key: offering.errors.meeting_time_order
+#: actions/save_section_meeting.py:50 admin/sections.py:329
+msgctxt "offering"
+msgid "The end must be after the start."
+msgstr "结束时间须晚于开始时间。"
+
+#: actions/update_section.py:46
+msgid "Choose a session of the section's term."
+msgstr "请选择该课程所在学期的阶段。"
+
+# key: grading.errors.method_has_grades
+#: actions/update_section.py:59
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "已录入成绩，不能更改评价方式。"
+
+# key: registration.errors.capacity_below_enrolled
+#: actions/update_section.py:69
+#, python-format
+msgid "Capacity cannot be below the %(count)s students already registered."
+msgstr "容量不能少于已选的 %(count)s 名学生。"
+
+# key: validation.required
+#: actions/update_syllabus.py:17 admin/sections.py:323
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s 不能为空。"
+
+# key: validation.max.string
+#: actions/update_syllabus.py:27 actions/update_syllabus.py:40
+#: actions/update_syllabus.py:60 actions/update_syllabus.py:104
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s 不能大于 %(max)s 个字符。"
+
+# key: validation.string
+#: actions/update_syllabus.py:38
+#, python-format
+msgid "The %(attribute)s field must be a string."
+msgstr "%(attribute)s 必须是一个字符串。"
+
+# key: validation.max.array
+#: actions/update_syllabus.py:48 actions/update_syllabus.py:79
+#, python-format
+msgid "The %(attribute)s field must not have more than %(max)s items."
+msgstr "%(attribute)s 最多只有 %(max)s 个单元。"
+
+# key: validation.between.numeric
+#: actions/update_syllabus.py:71 actions/update_syllabus.py:95
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s 必须介于 %(min)s - %(max)s 之间。"
+
+# key: validation.integer
+#: actions/update_syllabus.py:91
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s 必须是整数。"
+
+# key: offering.timetable.title
+#: admin/__init__.py:17 admin/timetables.py:88
+msgid "Timetables"
+msgstr "课表"
+
+# key: offering.notifications.copy_preview
+#: admin/sections.py:140
+#, python-format
+msgctxt "offering"
+msgid ""
+"Preview: %(created)s section(s) would be copied, %(skipped)s skipped, "
+"%(with_notes)s with notes."
+msgstr "预览：将复制 %(created)s 个，跳过 %(skipped)s 个，%(with_notes)s 个需确认。"
+
+# key: offering.notifications.copied
+#: admin/sections.py:142
+#, python-format
+msgctxt "offering"
+msgid ""
+"%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with "
+"notes."
+msgstr "已复制 %(created)s 个，跳过 %(skipped)s 个，%(with_notes)s 个需确认。"
+
+# key: validation.gte.numeric
+#: admin/sections.py:178
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s 必须大于或等于 %(value)s。"
+
+# key: reference.fields.admission_year_to
+#: admin/sections.py:179
+msgid "Admitted until (year)"
+msgstr "入学年份止"
+
+# key: reference.fields.admission_year_from
+#: admin/sections.py:179
+msgid "Admitted from (year)"
+msgstr "入学年份起"
+
+# key: offering.fields.session
+#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660
+#: models/section.py:98
+msgctxt "offering"
+msgid "Session"
+msgstr "时段"
+
+# key: curriculum.resources.courses.label
+#: admin/sections.py:200 admin/sections.py:761 models/section.py:104
+msgid "course"
+msgstr "课程"
+
+# key: offering.help.offering_unit
+#: admin/sections.py:214 models/section.py:120
+msgid "Unit whose staff manage the section; the course's unit by default."
+msgstr "管理该课程班的单位，默认为课程的管理单位。"
+
+# key: grading.help.evaluation_method
+#: admin/sections.py:216
+msgid ""
+"Absolute (default): instructors enter scores and the grades follow. Relative:"
+" instructors give grades within the institution's grade caps. Instructors ask"
+" for a change from the grade entry screen; it cannot change once grades are "
+"submitted."
+msgstr "绝对评价（默认）：教师录入分数，成绩自动计算。相对评价：教师在学校的等级比例内给出成绩。更改由教师在成绩录入页面申请，提交成绩后不能更改。"
+
+# key: offering.fields.section_code
+#: admin/sections.py:226 admin/sections.py:271 models/section.py:114
+msgid "Section number"
+msgstr "班号"
+
+# key: validation.alpha_dash
+#: admin/sections.py:236
+#, python-format
+msgid ""
+"The %(attribute)s field must only contain letters, numbers, dashes, and "
+"underscores."
+msgstr "%(attribute)s 只能由字母、数字、短划线(-)和下划线(_)组成。"
+
+# key: offering.help.change_session
+#: admin/sections.py:247 models/section.py:100
+msgid ""
+"Moving to another session takes its dates and the course version in effect "
+"when it starts."
+msgstr "移到其他时段时使用该时段的日期，以及该时段开始时生效的课程版本。"
+
+# key: offering.fields.time_slot
+#: admin/sections.py:292
+msgid "Period"
+msgstr "节次"
+
+# key: offering.help.time_slot
+#: admin/sections.py:295
+msgid "Fills start and end from a period."
+msgstr "选择节次即可填入开始和结束时间。"
+
+# key: offering.fields.weekday
+#: admin/sections.py:305 models/section.py:270
+msgid "Day"
+msgstr "星期"
+
+# key: offering.help.meeting_dates
+#: admin/sections.py:314
+msgid "Empty: the session's dates."
+msgstr "留空表示时段日期。"
+
+# key: offering.fields.start_time
+#: admin/sections.py:324 models/section.py:271
+msgctxt "offering"
+msgid "Start"
+msgstr "开始"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: admin/sections.py:324 models/section.py:272
+msgid "End"
+msgstr "结束"
+
+# key: validation.min.numeric
+#: admin/sections.py:378
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s 必须大于等于 %(min)s。"
+
+# key: offering.fields.capacity
+#: admin/sections.py:379 admin/sections.py:673 models/section.py:122
+#: models/section.py:317 templates/offering/portal/section_detail.html:23
+msgctxt "offering"
+msgid "Capacity"
+msgstr "容量"
+
+# key: offering.errors.seat_groups_exceed_capacity
+#: admin/sections.py:397
+#, python-format
+msgid "Reserved seats together exceed the section capacity (%(capacity)s)."
+msgstr "预留名额合计超过课程班容量（%(capacity)s）。"
+
+# key: offering.resources.meetings.label
+#: admin/sections.py:431 models/section.py:290
+msgid "meeting"
+msgstr "上课时间"
+
+# key: offering.resources.meetings.plural_label
+#: admin/sections.py:432 models/section.py:291
+msgid "meeting times"
+msgstr "上课时间"
+
+# key: offering.fields.instructors
+#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664
+#: models/section.py:246 models/section.py:247
+#: templates/offering/portal/section_detail.html:19
+msgctxt "offering"
+msgid "Instructors"
+msgstr "任课教师"
+
+# key: offering.resources.seat_groups.label
+#: admin/sections.py:456 models/section.py:334
+msgid "seat group"
+msgstr "名额组"
+
+# key: offering.resources.seat_groups.plural_label
+#: admin/sections.py:457 models/section.py:335
+msgid "reserved seats"
+msgstr "预留名额"
+
+# key: offering.fields.seat_group_eligibility
+#: admin/sections.py:461 models/section.py:318
+msgid "Students the seats are for"
+msgstr "名额对象学生"
+
+# key: reference.resources.terms.label
+#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90
+#: templates/offering/portal/catalog.html:14
+#: templates/offering/portal/teaching.html:11
+msgid "term"
+msgstr "学期"
+
+# key: security.scope_types.global
+#: admin/sections.py:481
+msgid "All"
+msgstr "全部"
+
+# key: offering.fields.offering_unit
+#: admin/sections.py:507 models/section.py:119
+#: templates/offering/portal/catalog.html:22
+msgid "Offering unit"
+msgstr "开课单位"
+
+# key: offering.fields.status
+#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765
+#: models/section.py:124
+msgctxt "offering"
+msgid "Status"
+msgstr "状态"
+
+# key: common.reason
+#: admin/sections.py:531
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: offering.fields.from_term
+#: admin/sections.py:537
+msgctxt "offering"
+msgid "Copy from"
+msgstr "复制来源学期"
+
+# key: offering.fields.to_term
+#: admin/sections.py:539
+msgid "Copy into"
+msgstr "目标学期"
+
+# key: offering.fields.dry_run
+#: admin/sections.py:541
+msgid "Preview only"
+msgstr "仅预览"
+
+# key: offering.help.dry_run
+#: admin/sections.py:544
+msgid "Shows the result without saving."
+msgstr "只显示结果，不保存。"
+
+# key: offering.fields.section
+#: admin/sections.py:648 templates/offering/portal/teaching.html:28
+msgctxt "offering"
+msgid "Section"
+msgstr "课程班"
+
+# key: curriculum.fields.title
+#: admin/sections.py:652 templates/offering/portal/teaching.html:29
+msgctxt "curriculum"
+msgid "Title"
+msgstr "课程名称"
+
+# key: curriculum.fields.credits
+#: admin/sections.py:656 templates/offering/portal/section_detail.html:15
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "学分"
+
+# key: offering.fields.schedule
+#: admin/sections.py:668 templates/offering/portal/section_detail.html:21
+#: templates/offering/portal/teaching.html:30
+msgid "Schedule"
+msgstr "上课时间"
+
+# key: offering.fields.eligibility
+#: admin/sections.py:736 models/section.py:127
+msgid "Who may register"
+msgstr "选课对象"
+
+# key: offering.help.eligibility
+#: admin/sections.py:739 models/section.py:127
+msgid "Empty: everyone. Registration (Phase 5) checks it."
+msgstr "留空表示所有人。选课（第5阶段）时检查。"
+
+# key: offering.fields.exclusion
+#: admin/sections.py:744 models/section.py:130
+msgid "Who may not register"
+msgstr "排除对象"
+
+# key: offering.help.exclusion
+#: admin/sections.py:748 models/section.py:133
+msgid ""
+"Students matching this cannot register, e.g. the course's own majors for a "
+"general course."
+msgstr "符合条件的学生不能选课，例如通识课排除本专业学生。"
+
+# key: offering.notifications.status_changed
+#: admin/sections.py:881
+#, python-format
+msgctxt "offering"
+msgid "Section is now %(status)s."
+msgstr "课程班已变为%(status)s。"
+
+# key: offering.actions.publish
+#: admin/sections.py:885
+msgid "Publish"
+msgstr "发布"
+
+# key: offering.actions.unpublish
+#: admin/sections.py:889
+msgid "Back to draft"
+msgstr "改回草稿"
+
+# key: offering.actions.cancel
+#: admin/sections.py:894 admin/sections.py:898
+msgid "Cancel section"
+msgstr "停开"
+
+# key: offering.actions.reopen
+#: admin/sections.py:903
+msgid "Reopen"
+msgstr "重新开放"
+
+# key: offering.actions.syllabus
+# key: offering.syllabus.title
+#: admin/sections.py:911 models/section.py:370 models/section.py:371
+#: templates/offering/portal/section_detail.html:39
+#: templates/offering/portal/teaching.html:31
+msgid "Syllabus"
+msgstr "教学大纲"
+
+# key: offering.actions.copy_sections
+#: admin/sections.py:920 admin/sections.py:943
+msgid "Copy from another term"
+msgstr "从其他学期复制"
+
+# key: offering.help.copy_sections
+#: admin/sections.py:946
+msgid ""
+"Copies sections that were not cancelled, in your scope, as drafts: "
+"instructors still employed, meetings with rooms (left out if the room is now "
+"taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr ""
+"将未停开且在您权限范围内的课程班复制为草稿：在职任课教师、含教室的上课时间（教室已被占用则不含教室）、预留名额和教学大纲草稿。时段按代码匹配。"
+
+# key: offering.timetable.mode
+#: admin/timetables.py:33 templates/offering/admin/timetables.html:15
+#: templates/offering/portal/teaching.html:15
+msgid "Show"
+msgstr "查看"
+
+# key: offering.fields.room
+#: admin/timetables.py:34 admin/timetables.py:39 models/section.py:279
+msgid "Room"
+msgstr "教室"
+
+# key: people.resources.instructors.label
+#: admin/timetables.py:39 models/section.py:235
+msgid "instructor"
+msgstr "教师"
+
+# key: portal.navigation.catalog
+#: apps.py:22
+msgctxt "portal"
+msgid "Course catalog"
+msgstr "开课查询"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: apps.py:27 views/portal.py:334
+msgid "My teaching"
+msgstr "我的授课"
+
+# key: offering.section_statuses.draft
+# key: offering.syllabus.draft
+#: enums.py:14 views/portal.py:320
+msgctxt "offering"
+msgid "Draft"
+msgstr "草稿"
+
+# key: offering.section_statuses.published
+#: enums.py:15
+msgctxt "offering.section_statuses"
+msgid "Published"
+msgstr "已发布"
+
+# key: offering.section_statuses.cancelled
+#: enums.py:16
+msgctxt "offering"
+msgid "Cancelled"
+msgstr "已停开"
+
+# key: offering.instructor_roles.primary
+#: enums.py:20
+msgctxt "offering"
+msgid "Instructor"
+msgstr "任课教师"
+
+# key: offering.instructor_roles.co_instructor
+#: enums.py:21
+msgid "Co-instructor"
+msgstr "合作教师"
+
+# key: offering.instructor_roles.assistant
+#: enums.py:22
+msgid "Teaching assistant"
+msgstr "助教"
+
+# key: offering.fields.instruction_language
+#: models/section.py:136 templates/offering/portal/section_detail.html:25
+msgid "Language of instruction"
+msgstr "授课语言"
+
+# key: offering.help.instruction_language
+#: models/section.py:136
+msgid "e.g. ko, en"
+msgstr "例如 ko、en"
+
+# key: offering.fields.note
+#: models/section.py:138
+msgctxt "offering"
+msgid "Note"
+msgstr "备注"
+
+# key: registration.fields.waitlist_capacity
+#: models/section.py:144
+msgid "Waitlist size"
+msgstr "候补人数"
+
+# key: registration.help.waitlist_capacity
+#: models/section.py:147
+msgid ""
+"0 means no waitlist. Freed seats go to waiting students in order, after all "
+"rules are checked again."
+msgstr "0 表示不设候补。有空位时，重新检查所有规则后按顺序选入。"
+
+# key: grading.fields.evaluation_method
+#: models/section.py:151
+msgid "Evaluation"
+msgstr "评价方式"
+
+# key: offering.resources.sections.label
+#: models/section.py:167
+msgid "section"
+msgstr "开课"
+
+# key: offering.resources.sections.plural_label
+#: models/section.py:168
+msgid "sections"
+msgstr "开课"
+
+# key: offering.fields.instructor_role
+#: models/section.py:238
+msgctxt "offering"
+msgid "Role"
+msgstr "角色"
+
+# key: reference.fields.start_date
+#: models/section.py:281
+msgid "Start date"
+msgstr "开始日期"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: models/section.py:282
+msgid "End date"
+msgstr "结束日期"
+
+# key: reference.fields.name
+#: models/section.py:316
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: offering.fields.releases_at
+#: models/section.py:320
+msgid "Opens to everyone at"
+msgstr "转为普通名额时间"
+
+# key: offering.help.releases_at
+#: models/section.py:323
+msgid "Unused reserved seats become open seats at this time."
+msgstr "到此时间后，未使用的预留名额转为普通名额。"
+
+# key: reference.fields.sort_order
+#: models/section.py:325
+msgid "Order"
+msgstr "排序"
+
+# key: offering.syllabus.language
+#: models/section.py:359 templates/offering/portal/syllabus_editor.html:18
+msgctxt "offering"
+msgid "Language"
+msgstr "撰写语言"
+
+# key: offering.errors.instructor_conflict
+#: services/schedule_conflicts.py:61
+#, python-format
+msgid "%(instructor)s already teaches %(section)s at this time."
+msgstr "%(instructor)s 在该时间任教 %(section)s。"
+
+# key: offering.errors.room_conflict
+#: services/schedule_conflicts.py:66
+#, python-format
+msgid "The room is already booked at this time by %(section)s."
+msgstr "该时间教室已被 %(section)s 使用。"
+
+# key: offering.errors.meetings_overlap
+#: services/schedule_conflicts.py:70
+msgid "This section already meets at an overlapping time."
+msgstr "与本课程班的其他上课时间重叠。"
+
+# key: offering.weekdays.1
+#: services/timetable.py:21
+msgid "Mon"
+msgstr "周一"
+
+# key: offering.weekdays.2
+#: services/timetable.py:21
+msgid "Tue"
+msgstr "周二"
+
+# key: offering.weekdays.3
+#: services/timetable.py:21
+msgid "Wed"
+msgstr "周三"
+
+# key: offering.weekdays.4
+#: services/timetable.py:21
+msgid "Thu"
+msgstr "周四"
+
+# key: offering.weekdays.5
+#: services/timetable.py:21
+msgid "Fri"
+msgstr "周五"
+
+# key: offering.weekdays.6
+#: services/timetable.py:21
+msgid "Sat"
+msgstr "周六"
+
+# key: offering.weekdays.7
+#: services/timetable.py:21
+msgid "Sun"
+msgstr "周日"
+
+# key: offering.timetable.choose
+#: templates/offering/admin/timetables.html:19
+msgid "Choose a term and a room or instructor."
+msgstr "请选择学期以及教室或教师。"
+
+# key: offering.timetable.empty
+#: templates/offering/partials/timetable.html:23
+msgid "Nothing scheduled."
+msgstr "没有安排。"
+
+# key: offering.catalog.all_units
+#: templates/offering/portal/catalog.html:24
+msgid "All units"
+msgstr "全部单位"
+
+# key: offering.catalog.search
+#: templates/offering/portal/catalog.html:31
+#: templates/offering/portal/catalog.html:34
+msgid "Search"
+msgstr "搜索"
+
+# key: offering.catalog.search_placeholder
+#: templates/offering/portal/catalog.html:32
+msgid "Course code or title"
+msgstr "课程代码或名称"
+
+# key: offering.catalog.credits
+#: templates/offering/portal/catalog.html:43
+#, python-format
+msgid "%(credits)s credits"
+msgstr "%(credits)s学分"
+
+# key: offering.catalog.instructor_tba
+#: templates/offering/portal/catalog.html:46
+#: templates/offering/portal/section_detail.html:20
+msgid "Instructor to be announced"
+msgstr "任课教师待定"
+
+# key: offering.catalog.time_tba
+#: templates/offering/portal/catalog.html:47
+#: templates/offering/portal/section_detail.html:22
+msgid "Time to be announced"
+msgstr "时间待定"
+
+# key: offering.syllabus.available
+#: templates/offering/portal/catalog.html:49
+msgid "Syllabus available"
+msgstr "有教学大纲"
+
+# key: offering.catalog.none
+#: templates/offering/portal/catalog.html:53
+msgid "No sections found."
+msgstr "没有找到课程班。"
+
+#: templates/offering/portal/catalog.html:56
+msgid "Pages"
+msgstr "分页"
+
+#: templates/offering/portal/catalog.html:57
+msgid "Previous"
+msgstr "上一页"
+
+#: templates/offering/portal/catalog.html:59
+msgid "Next"
+msgstr "下一页"
+
+# key: offering.catalog.title
+#: templates/offering/portal/section_detail.html:8 views/portal.py:94
+msgctxt "offering"
+msgid "Course catalog"
+msgstr "开课查询"
+
+# key: offering.syllabus.hours
+#: templates/offering/portal/section_detail.html:16
+#, python-format
+msgid "lecture %(lecture)s h, lab %(lab)s h"
+msgstr "理论%(lecture)s学时，实验%(lab)s学时"
+
+# key: curriculum.fields.category
+#: templates/offering/portal/section_detail.html:17
+msgid "Course category"
+msgstr "课程类别"
+
+# key: curriculum.fields.grading_basis
+#: templates/offering/portal/section_detail.html:18
+msgid "Grading"
+msgstr "成绩评定"
+
+# key: curriculum.fields.requisites
+#: templates/offering/portal/section_detail.html:28
+msgid "Requisites"
+msgstr "先修与同修课程"
+
+# key: curriculum.fields.description
+#: templates/offering/portal/section_detail.html:32
+msgctxt "curriculum"
+msgid "Description"
+msgstr "课程简介"
+
+# key: offering.syllabus.edit
+#: templates/offering/portal/section_detail.html:40
+#: templates/offering/portal/syllabus_editor.html:10
+msgid "Edit syllabus"
+msgstr "编写教学大纲"
+
+# key: offering.syllabus.none
+#: templates/offering/portal/section_detail.html:43
+msgid "No syllabus yet."
+msgstr "尚无教学大纲。"
+
+# key: offering.syllabus.draft_notice
+#: templates/offering/portal/section_detail.html:46
+msgid "Draft: students do not see it until it is published."
+msgstr "草稿：发布前学生看不到。"
+
+# key: offering.syllabus.assessment
+#: templates/offering/portal/section_detail.html:54
+#: templates/offering/portal/syllabus_editor.html:35
+msgid "Assessment"
+msgstr "考核方式"
+
+# key: offering.syllabus.weekly_plan
+#: templates/offering/portal/section_detail.html:62
+#: templates/offering/portal/syllabus_editor.html:48
+msgid "Weekly plan"
+msgstr "每周安排"
+
+# key: offering.syllabus.week
+#: templates/offering/portal/section_detail.html:65
+#: templates/offering/portal/syllabus_editor.html:52
+#: templates/offering/portal/syllabus_editor.html:53
+#, python-format
+msgid "Week %(week)s"
+msgstr "第%(week)s周"
+
+# key: offering.syllabus.publish
+#: templates/offering/portal/syllabus_editor.html:23
+msgid "Published (visible to students)"
+msgstr "发布（学生可见）"
+
+# key: offering.syllabus.assessment_item
+#: templates/offering/portal/syllabus_editor.html:38
+msgid "Item"
+msgstr "项目"
+
+# key: offering.syllabus.weight
+#: templates/offering/portal/syllabus_editor.html:39
+msgid "Weight"
+msgstr "比例"
+
+# key: portal.profile.remove
+#: templates/offering/portal/syllabus_editor.html:40
+msgctxt "portal"
+msgid "Remove"
+msgstr "删除"
+
+# key: offering.syllabus.add_assessment
+#: templates/offering/portal/syllabus_editor.html:44
+msgid "Add item"
+msgstr "添加项目"
+
+# key: common.save
+#: templates/offering/portal/syllabus_editor.html:59
+msgid "Save"
+msgstr "保存"
+
+# key: offering.teaching.none
+#: templates/offering/portal/teaching.html:45
+msgid "No sections in this term."
+msgstr "本学期没有授课。"
+
+# key: offering.syllabus.overview
+#: views/portal.py:173
+msgid "Overview"
+msgstr "课程概述"
+
+# key: offering.syllabus.objectives
+#: views/portal.py:174
+msgid "Learning objectives"
+msgstr "学习目标"
+
+# key: offering.syllabus.materials
+#: views/portal.py:175
+msgid "Textbooks and materials"
+msgstr "教材与资料"
+
+# key: offering.syllabus.policies
+#: views/portal.py:176
+msgid "Course policies"
+msgstr "课程规定"
+
+# key: offering.syllabus.saved
+#: views/portal.py:248
+msgid "Syllabus saved."
+msgstr "已保存教学大纲。"
+
+# key: offering.syllabus.published
+#: views/portal.py:318
+msgctxt "offering.syllabus"
+msgid "Published"
+msgstr "已发布"
+
+# key: offering.syllabus.write
+#: views/portal.py:322
+msgid "Write"
+msgstr "编写"

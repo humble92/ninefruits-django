@@ -1,0 +1,16 @@
+{% extends "pdf/layout.html" %}
+{% block title %}PDF rendering check{% endblock %}
+{% block content %}
+    <h1>PDF rendering check / PDF 출력 확인 / <span lang="zh-Hans">PDF 输出检查</span> / <span lang="lo">ກວດສອບການພິມ PDF</span></h1>
+    <table>
+        <thead>
+            <tr><th>Course</th><th>교과목</th><th lang="zh-Hans">课程</th><th lang="lo">ວິຊາ</th><th>Grade</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>Data Structures</td><td>자료구조</td><td lang="zh-Hans">数据结构</td><td lang="lo">ໂຄງສ້າງຂໍ້ມູນ</td><td>A+</td></tr>
+            <tr><td>Nursing Practice</td><td>간호학 실습</td><td lang="zh-Hans">护理学实习</td><td lang="lo">ການຝຶກປະຕິບັດພະຍາບານ</td><td>B0</td></tr>
+            <tr><td>Korean Language</td><td>한국어 (읽기·쓰기)</td><td lang="zh-Hans">韩国语（读写）</td><td lang="lo">ພາສາເກົາຫຼີ (ອ່ານ·ຂຽນ)</td><td>P</td></tr>
+        </tbody>
+    </table>
+    <p>Issued {{ issued_on|date:"Y-m-d" }} · 발급일 · <span lang="zh-Hans">签发日期</span> · <span lang="lo">ວັນທີອອກ</span></p>
+{% endblock %}

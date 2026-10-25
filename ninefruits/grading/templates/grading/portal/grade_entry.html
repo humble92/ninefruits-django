@@ -1,0 +1,211 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}Grade entry (original livewire/portal/grade-entry). One form: the buttons post an
+action; with HTMX the block #grade-entry is swapped. A score asks the server for the grade it
+gives (partial "preview").{% endcomment %}
+{% block content %}
+<div id="grade-entry" class="space-y-6">
+    <div>
+        <a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>
+        <h1 class="text-2xl font-semibold">{% translate "Grade entry" %}: {{ section.label }} {{ section.version.title }}</h1>
+        <p class="text-sm text-zinc-600">
+            {{ section.term.name }} ·
+            {% blocktranslate with none=counts.none draft=counts.draft submitted=counts.submitted finalized=counts.finalized %}{{ none }} not entered, {{ draft }} draft, {{ submitted }} submitted, {{ finalized }} final{% endblocktranslate %}
+        </p>
+        <p class="text-sm {% if window_open %}text-emerald-700{% else %}text-zinc-500{% endif %}" data-window>
+            {% if window_open %}{% translate "Grade entry is open." %}{% else %}{% translate "Grade entry is closed." %}{% endif %}
+        </p>
+    </div>
+
+    <div class="rounded-lg border border-sky-200 bg-sky-50 p-3 text-sm" data-method>
+        <p>
+            <span class="font-medium">{{ method_label }}</span> ·
+            {% if absolute %}{% blocktranslate with scale=scale.name %}Enter each student's score (0–100). The grade follows from the score on {{ scale }}. Choose a grade directly only for one without a score (e.g. I).{% endblocktranslate %}
+            {% else %}{% translate "Do not enter scores: give each student a grade." %}{% endif %}
+        </p>
+        {% if method_request %}
+            <p class="mt-2 text-amber-800">
+                {% blocktranslate with method=method_request_label %}Change to {{ method }} requested and waiting for the scheduling staff.{% endblocktranslate %}
+                {% if method_request.requested_by_id == request.user.pk %}
+                    <form method="post" class="inline" hx-post="{% url 'portal:grade_entry' section.pk %}" hx-target="#grade-entry" hx-select="#grade-entry" hx-swap="outerHTML">
+                        {% csrf_token %}
+                        <input type="hidden" name="action" value="cancel_method_request">
+                        <input type="hidden" name="request_id" value="{{ method_request.pk }}">
+                        <button type="submit" class="underline">{% translate "Cancel request" context "grading" %}</button>
+                    </form>
+                {% endif %}
+            </p>
+        {% elif can_request_method %}
+            <form method="post" class="mt-2 flex flex-wrap items-end gap-2" hx-post="{% url 'portal:grade_entry' section.pk %}" hx-target="#grade-entry" hx-select="#grade-entry" hx-swap="outerHTML">
+                {% csrf_token %}
+                <input type="hidden" name="action" value="request_method">
+                <label class="grow text-xs">
+                    {% blocktranslate with method=other_method_label %}To change to {{ method }}, ask the scheduling staff with a reason (possible until grades are submitted).{% endblocktranslate %}
+                    <input type="text" name="method_reason" maxlength="{{ reason_max }}" required placeholder="{% translate 'Reason' context 'common' %}" class="mt-1 w-full rounded border border-zinc-300 px-2 py-1 text-sm">
+                </label>
+                <button type="submit" class="rounded border border-zinc-300 bg-white px-3 py-1">{% blocktranslate with method=other_method_label %}Request {{ method }}{% endblocktranslate %}</button>
+            </form>
+        {% endif %}
+    </div>
+
+    {% if section.grade_exception_at %}
+        <p role="status" class="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm" data-exception>
+            <span class="font-medium">{% translate "Submitted as an exception." %}</span>
+            {% blocktranslate with user=exception_by|default:"-" date=section.grade_exception_at %}By {{ user }} on {{ date }}, outside the grade caps.{% endblocktranslate %}
+            · {% translate "Reason" context "common" %}: {{ section.grade_exception_reason }}
+        </p>
+    {% endif %}
+
+    {% if flash.messages %}
+        <div role="status" data-tone="{{ flash.tone }}" class="rounded-lg border p-3 text-sm {% if flash.tone == 'success' %}border-emerald-300 bg-emerald-50{% elif flash.tone == 'error' %}border-red-300 bg-red-50{% else %}border-zinc-200 bg-white{% endif %}">
+            {% for message in flash.messages %}<p>{{ message }}</p>{% endfor %}
+        </div>
+    {% endif %}
+
+    <form method="post" action="{% url 'portal:grade_entry' section.pk %}" hx-post="{% url 'portal:grade_entry' section.pk %}" hx-target="#grade-entry" hx-select="#grade-entry" hx-swap="outerHTML" class="space-y-4" data-grades>
+        {% csrf_token %}
+        <section class="overflow-x-auto rounded-lg border border-zinc-200 bg-white">
+            <table class="w-full text-sm">
+                <thead class="bg-zinc-50 text-left">
+                    <tr>
+                        <th class="px-3 py-2">{% translate "Student number" %}</th>
+                        <th class="px-3 py-2">{% translate "Name" context "people" %}</th>
+                        <th class="px-3 py-2">{% translate "program" as program_label %}{{ program_label|capfirst }}</th>
+                        {% if absolute %}<th class="px-3 py-2">{% translate "Score (%)" %}</th>{% endif %}
+                        <th class="px-3 py-2">{% translate "Grade" context "grading" %} ({{ scale.code }})</th>
+                        <th class="px-3 py-2">{% translate "Status" context "registration" %}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in rows %}
+                        <tr class="border-t border-zinc-100 align-top" data-enrollment="{{ row.enrollment.pk }}">
+                            <td class="px-3 py-2">{{ row.record.student_number }}</td>
+                            <td class="px-3 py-2">
+                                {{ row.record.person.display_name }}
+                                {% if row.enrollment.is_retake %}<span class="rounded bg-zinc-100 px-1 text-xs">{% translate "Retake" %}</span>{% endif %}
+                            </td>
+                            <td class="px-3 py-2">{{ row.record.program.name }}</td>
+                            {% if row.editable %}
+                                {% if absolute %}
+                                    <td class="px-3 py-2">
+                                        {% if row.takes_score %}
+                                            <input type="number" min="0" max="100" step="0.01" name="grade-{{ row.enrollment.pk }}-score" value="{{ row.score }}"
+                                                   hx-get="{% url 'portal:grade_entry' section.pk %}?preview={{ row.enrollment.pk }}" hx-trigger="input changed delay:500ms" hx-target="#preview-{{ row.enrollment.pk }}" hx-swap="outerHTML" hx-sync="this:replace"
+                                                   aria-label="{% translate 'Score (%)' %} {{ row.record.student_number }}" class="w-20 rounded border border-zinc-300 px-2 py-1">
+                                        {% endif %}
+                                    </td>
+                                {% endif %}
+                                <td class="px-3 py-2">
+                                    {% if row.takes_score %}
+                                        {% partialdef preview inline %}<span id="preview-{% if row.enrollment %}{{ row.enrollment.pk }}{% else %}{{ enrollment_id }}{% endif %}" class="font-medium" data-preview>{{ row.preview }}</span>{% endpartialdef %}
+                                        {% if row.codes %}
+                                            <select name="grade-{{ row.enrollment.pk }}-code" aria-label="{% translate 'Grade' context 'grading' %} {{ row.record.student_number }}" class="ms-1 rounded border border-zinc-300 px-1 py-0.5 text-xs">
+                                                <option value="">{% translate "By score" %}</option>
+                                                {% for code in row.codes %}<option value="{{ code }}"{% if code == row.code %} selected{% endif %}>{{ code }}</option>{% endfor %}
+                                            </select>
+                                        {% endif %}
+                                    {% else %}
+                                        <select name="grade-{{ row.enrollment.pk }}-code" aria-label="{% translate 'Grade' context 'grading' %} {{ row.record.student_number }}" class="rounded border border-zinc-300 px-2 py-1">
+                                            <option value=""></option>
+                                            {% for code in row.codes %}<option value="{{ code }}"{% if code == row.code %} selected{% endif %}>{{ code }}</option>{% endfor %}
+                                        </select>
+                                    {% endif %}
+                                </td>
+                            {% else %}
+                                {% if absolute %}<td class="px-3 py-2">{{ row.score_shown }}</td>{% endif %}
+                                <td class="px-3 py-2 font-medium">{{ row.grade }}</td>
+                            {% endif %}
+                            <td class="px-3 py-2">
+                                {{ row.status }}
+                                {% for change in row.pending_changes %}
+                                    <span class="block text-xs text-amber-700" data-change-pending>
+                                        {% blocktranslate with from=change.from_grade_code|default:"-" to=change.to_grade_code %}Change {{ from }} → {{ to }} requested{% endblocktranslate %}
+                                        {% if change.requested_by_id == request.user.pk %}
+                                            <button type="submit" name="action" value="cancel_change:{{ change.pk }}" formnovalidate class="underline">{% translate "Cancel request" context "grading" %}</button>
+                                        {% endif %}
+                                    </span>
+                                {% endfor %}
+                                {% if row.can_request_change and not row.change_open %}
+                                    <a href="?change={{ row.enrollment.pk }}" class="block text-xs underline" data-request-change>{% translate "Request change" %}</a>
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% empty %}
+                        <tr><td colspan="6" class="px-3 py-6 text-center text-zinc-500">{% translate "No students." %}</td></tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+
+        {% if relative and distribution %}
+            <section class="rounded-lg border border-zinc-200 bg-white p-4 text-sm" data-distribution>
+                <h2 class="mb-2 font-medium">{% translate "Grades against the caps" %}</h2>
+                <p class="mb-2 text-zinc-600">
+                    {% if distribution.checked %}{% blocktranslate with graded=distribution.graded %}{{ graded }} graded students: each grade group must stay within its cap.{% endblocktranslate %}
+                    {% else %}{% blocktranslate with graded=distribution.graded minimum=distribution.minimum_students %}{{ graded }} graded students: sections under {{ minimum }} are not checked against the caps.{% endblocktranslate %}{% endif %}
+                </p>
+                <table class="text-sm">
+                    <thead class="text-left text-zinc-500">
+                        <tr><th class="pe-4">{% translate "Grade group" %}</th><th class="pe-4">{% translate "Students" context "grading" %}</th><th class="pe-4">%</th><th class="pe-4">{% translate "Cap" %}</th></tr>
+                    </thead>
+                    <tbody>
+                        {% for group, share in distribution.groups.items %}
+                            <tr class="{% if share.over %}font-medium text-red-700{% endif %}">
+                                <td class="pe-4">{{ group }}</td>
+                                <td class="pe-4">{{ share.count }}</td>
+                                <td class="pe-4">{{ share.percent }}</td>
+                                <td class="pe-4">{% if share.cap is None %}-{% else %}{{ share.cap }}% (+{{ share.tolerance }}){% endif %}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </section>
+        {% endif %}
+
+        {% if can_enter %}
+            {% if show_exception_reason %}
+                <label class="block text-sm">
+                    {% translate "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)." %}
+                    <textarea name="exception_reason" rows="2" maxlength="{{ reason_max }}" class="mt-1 w-full rounded border border-zinc-300 px-2 py-1" aria-label="{% translate 'Reason for the exception' %}"></textarea>
+                </label>
+            {% endif %}
+            <div class="flex flex-wrap gap-2">
+                <button type="submit" name="action" value="save" class="rounded border border-zinc-300 px-4 py-2">{% translate "Save draft" context "grading" %}</button>
+                {% if relative %}
+                    <button type="submit" name="action" value="validate" class="rounded border border-zinc-300 px-4 py-2">{% translate "Check grade caps" %}</button>
+                {% endif %}
+                {% if lms_import %}
+                    <button type="submit" name="action" value="import_lms" formnovalidate class="rounded border border-zinc-300 bg-white px-4 py-2" data-lms-import>{{ lms_import.label }}</button>
+                {% endif %}
+                <button type="submit" name="action" value="submit" hx-post="{% url 'portal:grade_entry' section.pk %}" hx-vals='{"action": "submit"}' hx-confirm="{% translate 'Submit the grades? You cannot change them afterwards; ask the office if one is wrong.' %}" class="rounded bg-zinc-900 px-4 py-2 font-medium text-white">{% translate "Submit grades" %}</button>
+            </div>
+            <p class="text-sm text-zinc-600">{% translate "Save drafts any time; submit once every student has a grade." %}</p>
+        {% endif %}
+    </form>
+
+    {% for row in rows %}
+        {% if row.change_open and row.can_request_change %}
+            <form method="post" action="{% url 'portal:grade_entry' section.pk %}" hx-post="{% url 'portal:grade_entry' section.pk %}" hx-target="#grade-entry" hx-select="#grade-entry" hx-swap="outerHTML" class="space-y-2 rounded-lg border border-zinc-200 bg-white p-4 text-sm" data-change-form>
+                {% csrf_token %}
+                <h2 class="font-medium">{% translate "Request change" %}: {{ row.record.student_number }} · {{ row.grade }}</h2>
+                <input type="hidden" name="action" value="request_change">
+                <input type="hidden" name="enrollment_id" value="{{ row.enrollment.pk }}">
+                {% if row.takes_score %}
+                    <input type="number" min="0" max="100" step="0.01" name="change_score" value="{{ change_values.score }}" placeholder="{% translate 'New score' %}" aria-label="{% translate 'New score' %}" class="w-28 rounded border border-zinc-300 px-2 py-1">
+                {% endif %}
+                {% if row.codes %}
+                    <select name="change_grade" aria-label="{% translate 'New grade' context 'grading' %}" class="rounded border border-zinc-300 px-2 py-1">
+                        <option value="">{% if row.takes_score %}{% translate "By score" %}{% else %}{% translate "New grade" context "grading" %}{% endif %}</option>
+                        {% for code in row.codes %}<option value="{{ code }}"{% if code == change_values.grade %} selected{% endif %}>{{ code }}</option>{% endfor %}
+                    </select>
+                {% endif %}
+                <textarea name="change_reason" rows="2" required maxlength="{{ reason_max }}" placeholder="{% translate 'Reason' context 'common' %}" aria-label="{% translate 'Reason' context 'common' %}" class="block w-full rounded border border-zinc-300 px-2 py-1">{{ change_values.reason }}</textarea>
+                <div class="flex gap-3">
+                    <button type="submit" class="rounded bg-zinc-900 px-3 py-1 text-white">{% translate "Request change" %}</button>
+                    <a href="{% url 'portal:grade_entry' section.pk %}" class="self-center underline">{% translate "Cancel" %}</a>
+                </div>
+            </form>
+        {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

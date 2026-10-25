@@ -1,0 +1,176 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}Portal security page (original livewire/portal/security-settings). Each section is a
+partial: HTMX posts get the changed section back (hx-target the section, outerHTML).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">{% translate "Two-factor authentication" %}</h1>
+
+    <p class="text-sm text-zinc-600">{% translate "Two-factor authentication protects your account with a code from an authenticator app in addition to your password." %}</p>
+
+    {% if requirement_required and not enrolled %}
+        <p class="rounded bg-amber-50 px-3 py-2 text-sm text-amber-900" role="alert">{% translate "Two-factor authentication is required for your account. Please set it up to continue." %}</p>
+    {% endif %}
+
+    {% partialdef authenticator inline %}
+    <section id="section-authenticator" class="space-y-4 rounded-lg border border-zinc-200 bg-white p-6">
+        <h2 class="font-medium">{% translate "Authenticator app" %}</h2>
+
+        {% if section == "authenticator" %}{% for message in errors.disable %}<p class="rounded bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">{{ message }}</p>{% endfor %}{% endif %}
+        {% for message in errors.recovery_codes %}<p class="rounded bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">{{ message }}</p>{% endfor %}
+
+        {% if uses_app %}
+            <p class="text-sm text-emerald-700">{% translate "Two-factor authentication is enabled." %}</p>
+            <div class="flex flex-wrap gap-3">
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-authenticator" hx-swap="outerHTML">
+                    {% csrf_token %}<input type="hidden" name="action" value="regenerate_recovery_codes">
+                    <button type="submit" class="rounded border border-zinc-300 px-3 py-2 text-sm">{% translate "Generate new recovery codes" %}</button>
+                </form>
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-authenticator" hx-swap="outerHTML"
+                      hx-confirm="{% translate 'Disable two-factor authentication?' %}">
+                    {% csrf_token %}<input type="hidden" name="action" value="disable">
+                    <button type="submit" class="rounded border border-red-300 px-3 py-2 text-sm text-red-700">{% translate "Disable" context "security" %}</button>
+                </form>
+            </div>
+        {% elif pending %}
+            <p class="text-sm">{% translate "Scan this QR code with your authenticator app, then enter the code it shows." %}</p>
+            <div class="inline-block rounded bg-white p-2 [&_svg]:h-48 [&_svg]:w-48">{{ qr_code_svg|safe }}</div>
+            <p class="text-sm">{% translate "Setup key" %}: <code class="rounded bg-zinc-100 px-1">{{ setup_key }}</code></p>
+
+            <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-authenticator" hx-swap="outerHTML" class="flex flex-wrap items-end gap-3">
+                {% csrf_token %}<input type="hidden" name="action" value="confirm">
+                <div>
+                    <label for="code" class="block text-sm font-medium">{% translate "Code" context "authentication" %}</label>
+                    <input id="code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" class="mt-1 rounded border border-zinc-300 px-3 py-2">
+                </div>
+                <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Confirm" context "security" %}</button>
+            </form>
+            {% for message in errors.code %}<p class="text-sm text-red-600">{{ message }}</p>{% endfor %}
+        {% else %}
+            <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-authenticator" hx-swap="outerHTML">
+                {% csrf_token %}<input type="hidden" name="action" value="enable">
+                <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Enable two-factor authentication" %}</button>
+            </form>
+        {% endif %}
+
+        {% if recovery_codes %}
+            <div data-recovery-codes>
+                <p class="mb-2 text-sm">{% translate "Store these recovery codes in a safe place. Each can be used once if you lose your device." %}</p>
+                <ul class="grid max-w-md grid-cols-2 gap-1 rounded bg-zinc-100 p-3 font-mono text-sm">
+                    {% for recovery_code in recovery_codes %}<li>{{ recovery_code }}</li>{% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    </section>
+    {% endpartialdef %}
+
+    {% partialdef email inline %}
+    {% if email_codes_allowed or uses_email %}
+        <section id="section-email" class="space-y-4 rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="font-medium">{% translate "Email code" %}</h2>
+            <p class="text-sm text-zinc-600">{% blocktranslate with email=user.email %}Receive a one-time code at {{ email }} each time you sign in. Less secure than an authenticator app; use it if you cannot install one.{% endblocktranslate %}</p>
+
+            {% if section == "email" %}{% for message in errors.disable %}<p class="rounded bg-red-50 px-3 py-2 text-sm text-red-700" role="alert">{{ message }}</p>{% endfor %}{% endif %}
+
+            {% if uses_email %}
+                <p class="text-sm text-emerald-700">{% translate "Email codes are turned on." %}</p>
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-email" hx-swap="outerHTML"
+                      hx-confirm="{% translate 'Turn off email codes?' %}">
+                    {% csrf_token %}<input type="hidden" name="action" value="disable_email">
+                    <button type="submit" class="rounded border border-red-300 px-3 py-2 text-sm text-red-700">{% translate "Disable" context "security" %}</button>
+                </form>
+            {% elif email_code_sent %}
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-email" hx-swap="outerHTML" class="flex flex-wrap items-end gap-3">
+                    {% csrf_token %}<input type="hidden" name="action" value="confirm_email">
+                    <div>
+                        <label for="email_code" class="block text-sm font-medium">{% translate "Email code" context "authentication" %}</label>
+                        <input id="email_code" name="email_code" type="text" inputmode="numeric" autocomplete="one-time-code" class="mt-1 rounded border border-zinc-300 px-3 py-2">
+                    </div>
+                    <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Confirm" context "security" %}</button>
+                </form>
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-email" hx-swap="outerHTML">
+                    {% csrf_token %}<input type="hidden" name="action" value="send_email_code">
+                    <button type="submit" class="text-sm text-zinc-600 underline">{% translate "Send a new code" %}</button>
+                </form>
+            {% else %}
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-email" hx-swap="outerHTML">
+                    {% csrf_token %}<input type="hidden" name="action" value="send_email_code">
+                    <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Send a code to set up" %}</button>
+                </form>
+            {% endif %}
+
+            {% for message in errors.email_code %}<p class="text-sm text-red-600">{{ message }}</p>{% endfor %}
+        </section>
+    {% endif %}
+    {% endpartialdef %}
+
+    {% partialdef device inline %}
+    {% if remember_device_days %}
+        <section id="section-device" class="space-y-3 rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="font-medium">{% translate "Remembered devices" %}</h2>
+            <p class="text-sm text-zinc-600">{% blocktranslate count days=remember_device_days %}When you tick "Remember this device" at sign-in, this browser skips the code for {{ days }} day.{% plural %}When you tick "Remember this device" at sign-in, this browser skips the code for {{ days }} days.{% endblocktranslate %}
+                {% translate "Changing your two-factor setup forgets every remembered device." %}</p>
+            {% if device_trusted %}
+                <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-device" hx-swap="outerHTML">
+                    {% csrf_token %}<input type="hidden" name="action" value="forget_device">
+                    <button type="submit" class="rounded border border-zinc-300 px-3 py-2 text-sm">{% translate "Forget this device" %}</button>
+                </form>
+            {% else %}
+                <p class="text-sm text-zinc-500">{% translate "This device is not remembered." %}</p>
+            {% endif %}
+        </section>
+    {% endif %}
+    {% endpartialdef %}
+
+    {% partialdef password inline %}
+    <section id="section-password" class="space-y-4 rounded-lg border border-zinc-200 bg-white p-6">
+        <h2 class="font-medium">{% translate "Change password" %}</h2>
+        {% if password_changed %}<p class="text-sm text-emerald-700" role="status">{% translate "Your password was changed. Other sessions were signed out." %}</p>{% endif %}
+        <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-password" hx-swap="outerHTML" class="max-w-md space-y-3">
+            {% csrf_token %}<input type="hidden" name="action" value="change_password">
+            <div>
+                <label for="current_password" class="block text-sm font-medium">{% translate "Current password" %}</label>
+                <input id="current_password" name="current_password" type="password" autocomplete="current-password" required class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                {% for message in errors.current_password %}<p class="mt-1 text-sm text-red-600">{{ message }}</p>{% endfor %}
+            </div>
+            <div>
+                <label for="password" class="block text-sm font-medium">{% translate "New password" %}</label>
+                <input id="password" name="password" type="password" autocomplete="new-password" required class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                {% for message in errors.password %}<p class="mt-1 text-sm text-red-600">{{ message }}</p>{% endfor %}
+            </div>
+            <div>
+                <label for="password_confirmation" class="block text-sm font-medium">{% translate "Confirm password" %}</label>
+                <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" required class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+            </div>
+            <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Change password" %}</button>
+        </form>
+    </section>
+    {% endpartialdef %}
+
+    {% partialdef sso inline %}
+    {% if sso_providers %}
+        <section id="section-sso" class="space-y-3 rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="font-medium">{% translate "School sign-in" %}</h2>
+            <p class="text-sm text-zinc-600">{% translate "Link your school account to sign in with it." %}</p>
+            {% for entry in sso_providers %}
+                <div class="flex items-center justify-between border-t border-zinc-100 pt-3 text-sm">
+                    <span>
+                        {{ entry.provider.label }}
+                        {% if entry.identity %}<span class="text-zinc-500">· {{ entry.identity.email|default:_("Linked") }}</span>{% endif %}
+                    </span>
+                    {% if entry.identity %}
+                        <form method="post" hx-post="{% url 'portal:security' %}" hx-target="#section-sso" hx-swap="outerHTML"
+                              hx-confirm="{% translate 'Unlink this school account? You will need your password to sign in.' %}">
+                            {% csrf_token %}<input type="hidden" name="action" value="unlink_identity"><input type="hidden" name="identity_id" value="{{ entry.identity.pk }}">
+                            <button type="submit" class="text-red-700 underline">{% translate "Unlink" %}</button>
+                        </form>
+                    {% elif entry.link_url %}
+                        <a href="{{ entry.link_url }}" class="underline">{% translate "Link" context "security" %}</a>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </section>
+    {% endif %}
+    {% endpartialdef %}
+</div>
+{% endblock %}

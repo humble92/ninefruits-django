@@ -1,0 +1,12 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% comment %}A revealed personal data value (shown once; the reveal is in the security log).{% endcomment %}
+{% block content %}
+<div class="max-w-2xl">
+    <h1 class="mb-1 text-lg font-semibold">{{ title }}</h1>
+    <p class="mb-6 text-sm text-base-500">{{ subtitle }}</p>
+    <p class="mb-2 rounded border border-base-200 bg-base-50 px-4 py-3 font-mono text-lg dark:border-base-800 dark:bg-base-900">{{ value|default:"-" }}</p>
+    <p class="mb-6 text-xs text-base-500">{% translate "The full value is shown once and the reveal is recorded in the security log." %}</p>
+    <a href="{{ back_url }}" class="rounded bg-primary-600 px-4 py-2 text-sm font-medium text-white">{% translate "Back" %}</a>
+</div>
+{% endblock %}

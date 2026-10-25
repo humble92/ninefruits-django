@@ -1,0 +1,18 @@
+{% extends "layouts/guest.html" %}
+{% load i18n %}
+{% comment %}Email verification notice before applying (original auth/verify-email).{% endcomment %}
+{% block content %}
+    <h1 class="mb-2 text-xl font-semibold">{% translate "Verify your email" %}</h1>
+    <p class="mb-6 text-sm text-zinc-600">{% blocktranslate with email=user.email %}We sent a link to {{ email }}. Open it to verify your address before applying.{% endblocktranslate %}</p>
+
+    <div class="flex items-center justify-between">
+        <form method="post" action="{% url 'admission:verify_email' %}">
+            {% csrf_token %}
+            <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Send the link again" %}</button>
+        </form>
+        <form method="post" action="{% url 'account_logout' %}">
+            {% csrf_token %}
+            <button type="submit" class="text-sm text-zinc-600 underline">{% translate "Sign out" context "authentication" %}</button>
+        </form>
+    </div>
+{% endblock %}

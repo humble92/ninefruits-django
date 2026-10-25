@@ -13,7 +13,7 @@ htmlcov/
 *.log
 /staticfiles/
 /media/
-/locale/**/*.mo
+*.mo
 
 # Environment
 .env
@@ -28,3 +28,6 @@ node_modules/
 .DS_Store
 .idea/
 .vscode/
+
+# Private files
+/storage/

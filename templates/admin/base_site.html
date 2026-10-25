@@ -1,0 +1,16 @@
+{% extends "admin/base.html" %}
+{% load portal %}
+{% comment %}unfold admin/base_site.html plus the two-factor reminder banner (original panel
+shows it through EnforceMfaPolicy on every admin page).{% endcomment %}
+{% block title %}{% if subtitle %}{{ subtitle }} | {% endif %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+    {% include "unfold/helpers/site_branding.html" %}
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block messages %}
+    <div class="px-4"><div class="container mx-auto">{% mfa_reminder %}</div></div>
+    {{ block.super }}
+{% endblock %}

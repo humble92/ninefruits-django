@@ -1,0 +1,1230 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"Language: lo\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "ຄຳແປຕ້ອງເປັນອອບເຈັກຂອງລະຫັດພາສາ ແລະ ຂໍ້ຄວາມ."
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "ແຕ່ລະຄຳແປຕ້ອງມີບໍ່ເກີນ %(limit_value)d ຕົວອັກສອນ."
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "ຕ້ອງລະບຸຄ່າ %(language)s."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "ຕ້ອງລະບຸຂໍ້ມູນໃນຊ່ອງນີ້."
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "ພາສາ"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "ນຳໃຊ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "ເລືອກລາຍການ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "ເລືອກການດຳເນີນການ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "ເລືອກການດຳເນີນການທີ່ຈະເຮັດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "ບັນທຶກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "ທັງໝົດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr " ຕາມ %(filter_title)s "
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "ແມ່ນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "ບໍ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "ຈາກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "ເຖິງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "ຈາກວັນທີ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "ເຖິງວັນທີ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "ເວລາ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "ວັນທີ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "ດຳເນີນການທີ່ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "ດຳເນີນການ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "ຄລິກບ່ອນນີ້ເພື່ອເລືອກລາຍການໃນທຸກໜ້າ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "ເລືອກ %(module_name)s ທັງໝົດ %(total_count)s ລາຍການ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "ລ້າງການເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "ເລືອກລາຍການທັງໝົດໃນໜ້ານີ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "ຕ້ອງເລືອກລາຍການກ່ອນຈຶ່ງຈະດຳເນີນການໄດ້. ບໍ່ມີລາຍການໃດຖືກປ່ຽນແປງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "ຂໍ້ມູນໃນແອັບພລິເຄຊັນ %(name)s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "ທ່ານບໍ່ມີສິດເບິ່ງ ຫຼື ແກ້ໄຂຂໍ້ມູນໃດໆ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "ປ່ຽນລະຫັດຜ່ານ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "ປະຫວັດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "ເບິ່ງໃນເວັບໄຊ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "ການລຶບ %(object_name)s '%(escaped_object)s' ຈະລຶບຂໍ້ມູນທີ່ກ່ຽວຂ້ອງນຳ, ແຕ່ບັນຊີຂອງທ່ານບໍ່ມີສິດລຶບຂໍ້ມູນປະເພດຕໍ່ໄປນີ້:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "ການລຶບ %(object_name)s '%(escaped_object)s' ຈຳເປັນຕ້ອງລຶບຂໍ້ມູນທີ່ກ່ຽວຂ້ອງທີ່ຖືກປ້ອງກັນຕໍ່ໄປນີ້:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບ %(object_name)s \"%(escaped_object)s\"? ລາຍການທີ່ກ່ຽວຂ້ອງຕໍ່ໄປນີ້ຈະຖືກລຶບທັງໝົດ:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "ການລຶບ %(objects_name)s ທີ່ເລືອກຈະລຶບຂໍ້ມູນທີ່ກ່ຽວຂ້ອງນຳ, ແຕ່ບັນຊີຂອງທ່ານບໍ່ມີສິດລຶບຂໍ້ມູນປະເພດຕໍ່ໄປນີ້:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "ການລຶບ %(objects_name)s ທີ່ເລືອກຈຳເປັນຕ້ອງລຶບຂໍ້ມູນທີ່ກ່ຽວຂ້ອງທີ່ຖືກປ້ອງກັນຕໍ່ໄປນີ້:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການລຶບ %(objects_name)s ທີ່ເລືອກ? ຂໍ້ມູນຕໍ່ໄປນີ້ ແລະ ລາຍການທີ່ກ່ຽວຂ້ອງຈະຖືກລຶບທັງໝົດ:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "ຂໍ້ມູນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "ສະຫຼຸບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "ຍິນດີຕ້ອນຮັບກັບສູ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "ທ່ານເຂົ້າລະບົບເປັນ %(username)s, ແຕ່ບໍ່ມີສິດເຂົ້າເຖິງໜ້ານີ້. ທ່ານຕ້ອງການເຂົ້າລະບົບດ້ວຍບັນຊີອື່ນບໍ?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "ເຂົ້າລະບົບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "ລືມລະຫັດຜ່ານ ຫຼື ຊື່ຜູ້ໃຊ້ບໍ?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "ສະແດງທັງໝົດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "ພິມເພື່ອຄົ້ນຫາ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "ບັນທຶກ ແລະ ແກ້ໄຂຕໍ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "ບັນທຶກ ແລະ ເບິ່ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "ບັນທຶກ ແລະ ເພີ່ມອີກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "ບັນທຶກເປັນລາຍການໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "ທ່ານອອກຈາກລະບົບບໍລິຫານສຳເລັດແລ້ວ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "ຂອບໃຈທີ່ໃຊ້ເວລາກັບເວັບໄຊໃນມື້ນີ້."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "ເຂົ້າລະບົບອີກຄັ້ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "ລະຫັດຜ່ານຂອງທ່ານຖືກປ່ຽນແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "ເພື່ອຄວາມປອດໄພ, ກະລຸນາປ້ອນລະຫັດຜ່ານເກົ່າ, ແລ້ວປ້ອນລະຫັດຜ່ານໃໝ່ສອງຄັ້ງເພື່ອກວດສອບວ່າພິມຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "ບໍ່ມີຂໍ້ມູນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "ເບິ່ງເວັບໄຊ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "ອອກຈາກລະບົບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "ເພີ່ມ %(name)s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "ແອັບພລິເຄຊັນທັງໝົດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "ເບິ່ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "ແກ້ໄຂ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "ເພີ່ມ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "ລຶບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "ບໍ່ຮູ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "ຈິງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "ບໍ່ຈິງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "ນຳໃຊ້ຕົວກອງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "ເຊື່ອງຈຳນວນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "ສະແດງຈຳນວນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "ລ້າງຕົວກອງທັງໝົດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "ຕົວກອງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "ສະຫຼັບການຈັດລຽງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "ເອົາອອກຈາກການຈັດລຽງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "ລຳດັບການຈັດລຽງ: %(priority_number)s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "ນຳທາງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "ລ້າງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "ການຄົ້ນຫາຫຼ້າສຸດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "ບໍ່ພົບຜົນການຄົ້ນຫາ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "ບໍ່, ກັບຄືນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "ແມ່ນ, ຂ້ອຍແນ່ໃຈ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "ຍົກເລີກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "ສົ່ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "ປິດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "ແກ້ໄຂ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "ຮູບຂອງລາຍການ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "ລາຍການນີ້ຈະຖືກລຶບ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "ຄລິກເພື່ອຍົກເລີກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "ບໍ່ພົບຜົນລັບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "ໜ້ານີ້ບໍ່ມີຜົນລັບ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "ຕັ້ງຕົວກອງຄືນໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "ເບິ່ງຮູບຕົວຢ່າງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "ຄລິກເພື່ອດາວໂຫຼດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "ເລືອກໄຟລ໌ເພື່ອອັບໂຫຼດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "ກັບຄືນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "ການດຳເນີນການຫຼ້າສຸດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "ເນື້ອຫາທີ່ບໍ່ຮູ້ຈັກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "ກ່ອນໜ້າ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "ຖັດໄປ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "ຄົ້ນຫາແອັບ ແລະ ຂໍ້ມູນ..."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "ປຸ່ມລັດທີ່ໃຊ້ໄດ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "ປຸ່ມລັດທົ່ວໄປ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "ເປີດເຄື່ອງມືຄຳສັ່ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "ເປີດລາຍການປຸ່ມລັດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "ສະຫຼັບແຖບຂ້າງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "ສະຫຼັບໂໝດມືດ/ແຈ້ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "ປຸ່ມລັດຂອງລາຍການ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "ສະຫຼັບຕົວກອງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "ສ້າງລາຍການໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "ປຸ່ມລັດຂອງເຄື່ອງມືຄຳສັ່ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "ເປີດລາຍການທີ່ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "ເປີດລາຍການທີ່ເລືອກໃນແຖບໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "ລະບົບບໍລິຫານ Django"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "ຜູ້ບໍລິຫານເວັບໄຊ Django"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "ໜ້າຫຼັກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "ແຈ້ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "ມືດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "ລະບົບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "ກັບໄປທີ່ເວັບໄຊ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s ຜົນລັບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "ທັງໝົດ %(full_result_count)s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "ສະແດງ/ເຊື່ອງລະຫັດຜ່ານ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "ແກ້ໄຂ %(model)s ທີ່ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "ເພີ່ມ %(model)s ອີກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "ເບິ່ງ %(model)s ທີ່ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "ລຶບ %(model)s ທີ່ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "ເພີ່ມແຖວ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "ກະລຸນາແກ້ໄຂຂໍ້ຜິດພາດລຸ່ມນີ້."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "ການບໍລິຫານລະບົບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "ເລືອກ %s ເພື່ອແກ້ໄຂ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "ເລືອກ %s ເພື່ອເບິ່ງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "ເພີ່ມ %s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "ແກ້ໄຂ %s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "ເບິ່ງ %s"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "ລຶບ %(verbose_name_plural)s ທີ່ເລືອກ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "ລຶບ %(items)s %(count)d ລາຍການສຳເລັດແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "ເພີ່ມ {name} “{obj}” ສຳເລັດແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "ແກ້ໄຂ {name} “{obj}” ສຳເລັດແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "ລຶບ %(name)s “%(obj)s” ສຳເລັດແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "ບໍ່ໄດ້ເລືອກການດຳເນີນການ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "ການດຳເນີນການ:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "ຄົ້ນຫາ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "ວັນທີໃດກໍໄດ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "ມື້ນີ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "7 ມື້ຜ່ານມາ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "ເດືອນນີ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "ປີນີ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "ບໍ່ມີວັນທີ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "ມີວັນທີ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "ຫວ່າງເປົ່າ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "ບໍ່ຫວ່າງເປົ່າ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "ບໍ່ມີ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "ການດຳເນີນການຂອງຂ້ອຍ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "ກະລຸນາປ້ອນ %(username)s ແລະ ລະຫັດຜ່ານຂອງບັນຊີພະນັກງານໃຫ້ຖືກຕ້ອງ. ທັງສອງຊ່ອງອາດຈຳແນກຕົວພິມໃຫຍ່ ແລະ ນ້ອຍ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "ລະຫັດຜ່ານ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "ກະລຸນາປ້ອນຄ່າທີ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "ກະລຸນາປ້ອນທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "ກະລຸນາປ້ອນຈຳນວນເຕັມ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "ກະລຸນາປ້ອນຕົວເລກ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "ກະລຸນາປ້ອນວັນທີທີ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "ກະລຸນາປ້ອນເວລາທີ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "ກະລຸນາປ້ອນວັນທີ/ເວລາທີ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "ກະລຸນາປ້ອນ URL ທີ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "ກະລຸນາປ້ອນລາຍການຄ່າ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "ກະລຸນາເລືອກຕົວເລືອກທີ່ຖືກຕ້ອງ. %(value)s ບໍ່ແມ່ນໜຶ່ງໃນຕົວເລືອກທີ່ມີ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "ກະລຸນາໃຫ້ຄ່ານີ້ໜ້ອຍກວ່າ ຫຼື ເທົ່າກັບ %(limit_value)s."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "ກະລຸນາໃຫ້ຄ່ານີ້ຫຼາຍກວ່າ ຫຼື ເທົ່າກັບ %(limit_value)s."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "ກະລຸນາໃຫ້ຄ່ານີ້ມີບໍ່ເກີນ %(limit_value)d ຕົວອັກສອນ (ປັດຈຸບັນມີ %(show_value)d)."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "ກະລຸນາໃຫ້ຄ່ານີ້ມີຢ່າງໜ້ອຍ %(limit_value)d ຕົວອັກສອນ (ປັດຈຸບັນມີ %(show_value)d)."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "ລາວ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "ເຂົ້າລະບົບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "ອອກຈາກລະບົບ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "ທ່ານແນ່ໃຈບໍ່ວ່າຕ້ອງການອອກຈາກລະບົບ?"
+
+# vendor: Django/allauth/unfold
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py
+msgid "Email"
+msgstr "ອີເມວ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "ຈື່ຂ້ອຍໄວ້"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "ລືມລະຫັດຜ່ານບໍ?"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "ອີເມວ ຫຼື ລະຫັດຜ່ານທີ່ທ່ານປ້ອນບໍ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "ເຂົ້າລະບົບບໍ່ສຳເລັດຫຼາຍເທື່ອເກີນໄປ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "ບັນຊີນີ້ຖືກປິດການໃຊ້ງານຢູ່."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "ຕັ້ງລະຫັດຜ່ານໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "ລືມລະຫັດຜ່ານບໍ? ປ້ອນທີ່ຢູ່ອີເມວຂອງທ່ານລຸ່ມນີ້, ແລ້ວພວກເຮົາຈະສົ່ງອີເມວໃຫ້ທ່ານເພື່ອຕັ້ງລະຫັດຜ່ານໃໝ່."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "ຕັ້ງລະຫັດຜ່ານຂອງຂ້ອຍໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "ກະລຸນາຕິດຕໍ່ພວກເຮົາ ຖ້າທ່ານມີບັນຫາໃນການຕັ້ງລະຫັດຜ່ານໃໝ່."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "ພວກເຮົາໄດ້ສົ່ງອີເມວໃຫ້ທ່ານແລ້ວ. ຖ້າທ່ານບໍ່ໄດ້ຮັບ, ກະລຸນາກວດເບິ່ງໂຟນເດີສະແປມ. ຖ້າຍັງບໍ່ໄດ້ຮັບພາຍໃນສອງສາມນາທີ, ກະລຸນາຕິດຕໍ່ພວກເຮົາ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "ໂທເຄັນບໍ່ຖືກຕ້ອງ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "ລິ້ງຕັ້ງລະຫັດຜ່ານໃໝ່ບໍ່ຖືກຕ້ອງ, ອາດເປັນເພາະຖືກໃຊ້ໄປແລ້ວ. ກະລຸນາ<a href=\"%(passwd_reset_url)s\">ຂໍຕັ້ງລະຫັດຜ່ານໃໝ່</a>ອີກຄັ້ງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "ລະຫັດຜ່ານຂອງທ່ານຖືກປ່ຽນແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "ປ່ຽນລະຫັດຜ່ານ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "ລະຫັດຜ່ານປັດຈຸບັນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "ລະຫັດຜ່ານໃໝ່"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "ລະຫັດຜ່ານໃໝ່ (ອີກຄັ້ງ)"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "ທ່ານຕ້ອງພິມລະຫັດຜ່ານດຽວກັນທຸກຄັ້ງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "ກະລຸນາພິມລະຫັດຜ່ານປັດຈຸບັນ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "ລະຫັດຜ່ານບໍ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "ຄີບໍ່ຖືກຕ້ອງ ຫຼື ໝົດອາຍຸແລ້ວ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "ໂທເຄັນຕັ້ງລະຫັດຜ່ານໃໝ່ບໍ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "ກະລຸນາລໍຖ້າ, ທ່ານສົ່ງຄຳຮ້ອງຂໍຫຼາຍເກີນໄປ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "ບັນຊີຂອງທ່ານຖືກປ້ອງກັນດ້ວຍການຢືນຢັນສອງຂັ້ນຕອນ. ກະລຸນາປ້ອນລະຫັດຈາກແອັບຢືນຢັນ:"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "ລະຫັດຈາກແອັບຢືນຢັນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "ລະຫັດບໍ່ຖືກຕ້ອງ."
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "ທາງເລືອກອື່ນ"
+
+# vendor: Django/allauth/unfold
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "ໃຊ້ແອັບຢືນຢັນ ຫຼື ລະຫັດ"
+
+# key: admissions.public.sign_in
+# key: authentication.login.title
+# key: authentication.login.submit
+#: templates/account/login.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "ເຂົ້າລະບົບ"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "ລະຫັດຜ່ານ"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "ຈື່ການເຂົ້າລະບົບໄວ້"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "ຢືນຢັນລະຫັດຜ່ານຂອງທ່ານ"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "ເພື່ອຄວາມປອດໄພ, ກະລຸນາຢືນຢັນລະຫັດຜ່ານຂອງທ່ານເພື່ອດຳເນີນການຕໍ່."
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "ຢືນຢັນ"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "ກະລຸນາປ້ອນລະຫັດ 6 ຕົວເລກຈາກແອັບຢືນຢັນຕົວຕົນຂອງທ່ານ."
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "ໃຊ້ລະຫັດກູ້ຄືນແທນ"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "ລະຫັດກູ້ຄືນ"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "ຈື່ອຸປະກອນນີ້"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "ຢືນຢັນ"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "ກະລຸນາປ້ອນລະຫັດ 6 ຕົວເລກທີ່ພວກເຮົາສົ່ງໄປທີ່ອີເມວຂອງທ່ານ."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "ລະຫັດທາງອີເມວ"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "ສົ່ງລະຫັດທາງອີເມວແທນ"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "ສົ່ງລະຫັດໃໝ່"
+
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "ປິດ"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "ເມນູຫຼັກ"
+
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "ອອກຈາກລະບົບ"
+
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "ຕັ້ງຄ່າດຽວນີ້"
+
+# key: authentication.login.sso
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "ເຂົ້າລະບົບດ້ວຍ %(provider)s"
+
+# key: admissions.register.title
+msgid "Create an account"
+msgstr "ສ້າງບັນຊີ"
+
+# key: admissions.register.instructions
+msgid "For applicants. Staff and current students already have an account."
+msgstr "ສຳລັບຜູ້ສະໝັກ. ພະນັກງານ ແລະ ນັກສຶກສາປັດຈຸບັນມີບັນຊີຢູ່ແລ້ວ."
+
+# key: people.help.romanized
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "ຊື່ຕາມກົດໝາຍເປັນຕົວອັກສອນລາຕິນ ຕາມໜັງສືຜ່ານແດນ. ເພີ່ມຊື່ທີ່ຂຽນໃນພາສາອື່ນຢູ່ຂ້າງລຸ່ມ."
+
+# key: authentication.fields.password_confirmation
+msgid "Confirm password"
+msgstr "ຢືນຢັນລະຫັດຜ່ານ"
+
+# key: admissions.register.submit
+msgid "Create account"
+msgstr "ສ້າງບັນຊີ"
+
+# key: admissions.register.have_account
+msgid "Already have an account?"
+msgstr "ມີບັນຊີແລ້ວບໍ?"
+
+# key: admissions.register.prompt
+msgid "Want to apply?"
+msgstr "ຕ້ອງການສະໝັກບໍ?"
+
+# key: admissions.register.see_cycles
+msgid "See open admissions"
+msgstr "ເບິ່ງຮອບທີ່ເປີດຮັບ"

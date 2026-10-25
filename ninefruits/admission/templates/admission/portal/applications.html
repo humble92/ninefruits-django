@@ -1,0 +1,76 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}The applicant's applications and the cycles open for a new one (original livewire/portal/applications).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">{% translate "My applications" %}</h1>
+
+    <section class="rounded-lg border border-zinc-200 bg-white">
+        <table class="w-full text-sm">
+            <thead class="bg-zinc-50 text-left">
+                <tr>
+                    <th class="px-4 py-2">{% translate "Admission cycle" %}</th>
+                    <th class="px-4 py-2">{% translate "Program" context "security" %}</th>
+                    <th class="px-4 py-2">{% translate "Application number" %}</th>
+                    <th class="px-4 py-2">{% translate "Status" context "admissions" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in applications %}
+                    <tr class="border-t border-zinc-100">
+                        <td class="px-4 py-2"><a href="{% url 'portal:application' row.application.pk %}" class="underline">{{ row.application.admission_cycle.name }}</a></td>
+                        <td class="px-4 py-2">{{ row.application.program.name }}</td>
+                        <td class="px-4 py-2">{{ row.application.application_number|default:"-" }}</td>
+                        <td class="px-4 py-2">{{ row.status.label }}</td>
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="4" class="px-4 py-6 text-center text-zinc-500">{% translate "You have no applications yet." %}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-6">
+        <h2 class="mb-4 font-medium">{% translate "Start an application" %}</h2>
+        {% if not cycles %}
+            <p class="text-sm text-zinc-600">{% translate "No cycle is taking applications right now." %}</p>
+        {% else %}
+            <form method="post" action="{% url 'portal:applications' %}" class="grid gap-4 sm:grid-cols-3">
+                {% csrf_token %}
+                <div>
+                    <label for="cycle" class="block text-sm font-medium">{% translate "Admission cycle" %}</label>
+                    <select id="cycle" name="cycle" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2"
+                            hx-get="{% url 'portal:applications' %}" hx-trigger="change" hx-select="main" hx-target="main" hx-swap="outerHTML" hx-include="this">
+                        <option value="">-</option>
+                        {% for cycle in cycles %}
+                            <option value="{{ cycle.pk }}" {% if selected_cycle and cycle.pk == selected_cycle.pk %}selected{% endif %}>{{ cycle.name }}</option>
+                        {% endfor %}
+                    </select>
+                    {% for error in errors.admission_cycle_id %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                </div>
+                <div>
+                    <label for="program" class="block text-sm font-medium">{% translate "Program" context "security" %}</label>
+                    <select id="program" name="program" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                        <option value="">-</option>
+                        {% if selected_cycle %}
+                            {% for offered in programs %}
+                                <option value="{{ offered.program_id }}" {% if offered.program_id == selected_program %}selected{% endif %}>{{ offered.program.name }}</option>
+                            {% endfor %}
+                        {% else %}
+                            {% for cycle in cycles %}
+                                <optgroup label="{{ cycle.name }}">
+                                    {% for offered in cycle.programs.all %}<option value="{{ offered.program_id }}">{{ offered.program.name }}</option>{% endfor %}
+                                </optgroup>
+                            {% endfor %}
+                        {% endif %}
+                    </select>
+                    {% for error in errors.program_id %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                </div>
+                <div class="flex items-end">
+                    <button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Start" context "admissions" %}</button>
+                </div>
+            </form>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

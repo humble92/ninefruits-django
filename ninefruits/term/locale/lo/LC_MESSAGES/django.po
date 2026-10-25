@@ -1,0 +1,417 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.errors.term_status_transition
+#: ninefruits/term/actions/change_term_status.py
+#, python-format
+msgid "A term cannot move from %(from)s to %(to)s."
+msgstr "ພາກຮຽນບໍ່ສາມາດປ່ຽນຈາກ %(from)s ເປັນ %(to)s ໄດ້."
+
+# key: reference.errors.invalid_session_copy
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "Choose another session of the same term."
+msgstr "ກະລຸນາເລືອກຊ່ວງຮຽນອື່ນຂອງພາກຮຽນດຽວກັນ."
+
+# key: reference.errors.session_has_windows
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "This session already has windows."
+msgstr "ຊ່ວງຮຽນນີ້ມີໄລຍະເວລາຢູ່ແລ້ວ."
+
+# key: reference.fields.name
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: validation.after
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼັງຈາກ %(date)s."
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "End date"
+msgstr "ວັນທີສິ້ນສຸດ"
+
+# key: reference.fields.start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Start date"
+msgstr "ວັນທີເລີ່ມ"
+
+# key: validation.after_or_equal
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼັງຈາກ ຫຼື ເທົ່າກັບ %(date)s."
+
+# key: reference.fields.instruction_end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes end"
+msgstr "ສິ້ນສຸດການຮຽນການສອນ"
+
+# key: reference.fields.instruction_start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes start"
+msgstr "ເລີ່ມການຮຽນການສອນ"
+
+# key: reference.errors.sessions_outside_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Some sessions would fall outside the new dates. Change them first."
+msgstr "ບາງຊ່ວງຮຽນຈະຢູ່ນອກວັນທີໃໝ່. ກະລຸນາປ່ຽນຊ່ວງຮຽນເຫຼົ່ານັ້ນກ່ອນ."
+
+# key: validation.alpha_dash
+#: ninefruits/term/admin.py
+#, python-format
+msgid ""
+"The %(attribute)s field must only contain letters, numbers, dashes, and "
+"underscores."
+msgstr ""
+"ຊ່ອງ %(attribute)s ຕ້ອງມີແຕ່ຕົວອັກສອນ, ຕົວເລກ, ຂີດກາງ ແລະ ຂີດລຸ່ມເທົ່ານັ້ນ."
+
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The session must lie within its term (%(start)s - %(end)s)."
+msgstr "ຊ່ວງຕ້ອງຢູ່ພາຍໃນໄລຍະເວລາຂອງພາກຮຽນ (%(start)s - %(end)s)."
+
+#: ninefruits/term/admin.py
+msgid "The full-term session belongs to the term and cannot be deleted."
+msgstr "ຊ່ວງເຕັມພາກຮຽນເປັນຂອງພາກຮຽນ ຈຶ່ງລຶບບໍ່ໄດ້."
+
+# key: reference.resources.term_sessions.label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "session"
+msgstr "ຊ່ວງຮຽນ"
+
+# key: reference.resources.term_sessions.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "sessions"
+msgstr "ຊ່ວງຮຽນ"
+
+# key: reference.resources.term_windows.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term windows"
+msgstr "ໄລຍະເວລາດຳເນີນງານ"
+
+# key: reference.actions.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copy windows"
+msgstr "ສຳເນົາໄລຍະເວລາ"
+
+# key: reference.fields.is_full_term
+# key: reference.term_sessions.full_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Full term"
+msgstr "ເຕັມພາກຮຽນ"
+
+# key: reference.fields.closes_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Closes"
+msgstr "ປິດ"
+
+# key: reference.fields.opens_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Opens"
+msgstr "ເປີດ"
+
+# key: reference.resources.term_windows.label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term window"
+msgstr "ໄລຍະເວລາດຳເນີນງານ"
+
+# key: reference.fields.eligibility
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "Eligibility"
+msgstr "ເງື່ອນໄຂຜູ້ມີສິດ"
+
+# key: reference.help.eligibility
+#: ninefruits/term/admin.py
+msgid ""
+"Leave empty for everyone. Several windows of the same type with different "
+"conditions open in stages."
+msgstr ""
+"ປ່ອຍຫວ່າງສຳລັບທຸກຄົນ. "
+"ໄລຍະເວລາຫຼາຍອັນຂອງປະເພດດຽວກັນທີ່ມີເງື່ອນໄຂຕ່າງກັນຈະເປີດເປັນຂັ້ນຕອນ."
+
+# key: reference.eligibility.everyone
+#: ninefruits/term/admin.py
+msgid "Everyone"
+msgstr "ທຸກຄົນ"
+
+# key: reference.fields.status
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgctxt "reference"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: common.reason
+#: ninefruits/term/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: reference.fields.source_session
+#: ninefruits/term/admin.py
+msgid "Copy from session"
+msgstr "ສຳເນົາຈາກຊ່ວງຮຽນ"
+
+# key: reference.fields.academic_year
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Academic year"
+msgstr "ສົກຮຽນ"
+
+# key: reference.fields.term_type
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Term type"
+msgstr "ປະເພດພາກຮຽນ"
+
+# key: reference.fields.windows_count
+#: ninefruits/term/admin.py
+msgid "Windows"
+msgstr "ໄລຍະເວລາ"
+
+# key: reference.actions.change_status
+#: ninefruits/term/admin.py
+msgid "Change status"
+msgstr "ປ່ຽນສະຖານະ"
+
+# key: reference.notifications.term_status_changed
+#: ninefruits/term/admin.py
+msgid "Term status changed."
+msgstr "ປ່ຽນສະຖານະພາກຮຽນແລ້ວ."
+
+#: ninefruits/term/admin.py
+msgid "No windows to copy."
+msgstr "ບໍ່ມີໄລຍະເວລາດຳເນີນງານໃຫ້ສຳເນົາ."
+
+# key: reference.notifications.session_windows_copied
+#: ninefruits/term/admin.py
+#, python-format
+msgid "One window copied."
+msgid_plural "%(count)s windows copied."
+msgstr[0] "ສຳເນົາໄລຍະເວລາ %(count)s ອັນແລ້ວ."
+msgstr[1] "ສຳເນົາໄລຍະເວລາ %(count)s ອັນແລ້ວ."
+
+# key: reference.help.copy_session_windows
+#: ninefruits/term/admin.py
+msgid ""
+"Copies the course windows (add/drop, withdrawal, grading, evaluation) of "
+"another session, moved to this session's dates: early windows keep their "
+"distance from the start, late ones from the end. Adjust them after copying."
+msgstr ""
+"ສຳເນົາໄລຍະເວລາຂອງວິຊາ (ເພີ່ມ/ຖອນ, ຖອນຕົວ, ການໃຫ້ເກຣດ, ການປະເມີນ) "
+"ຈາກຊ່ວງຮຽນອື່ນ, ໂດຍປັບຕາມວັນທີຂອງຊ່ວງຮຽນນີ້: "
+"ໄລຍະເວລາຕົ້ນຮັກສາໄລຍະຫ່າງຈາກວັນເລີ່ມ, ໄລຍະເວລາທ້າຍຮັກສາໄລຍະຫ່າງຈາກວັນສິ້ນສຸດ."
+" ກະລຸນາປັບແກ້ຫຼັງຈາກສຳເນົາ."
+
+# key: reference.fields.weekdays
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "Days"
+msgstr "ວັນ"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "End"
+msgstr "ສິ້ນສຸດ"
+
+# key: reference.fields.start_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Start"
+msgstr "ເລີ່ມ"
+
+# key: reference.term_statuses.planned
+#: ninefruits/term/enums.py
+msgid "Planned"
+msgstr "ວາງແຜນ"
+
+# key: reference.term_statuses.published
+#: ninefruits/term/enums.py
+msgctxt "reference.term_statuses"
+msgid "Published"
+msgstr "ເຜີຍແຜ່ແລ້ວ"
+
+# key: reference.term_statuses.grades_closed
+#: ninefruits/term/enums.py
+msgid "Grades closed"
+msgstr "ປິດການໃຫ້ເກຣດ"
+
+# key: reference.term_statuses.archived
+#: ninefruits/term/enums.py
+msgid "Archived"
+msgstr "ເກັບຖາວອນ"
+
+# key: reference.term_window_types.registration_cart
+#: ninefruits/term/enums.py
+msgid "Registration cart"
+msgstr "ກະຕ່າລົງທະບຽນ"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/term/enums.py
+msgid "Registration"
+msgstr "ການລົງທະບຽນຮຽນ"
+
+# key: reference.term_window_types.add_drop
+#: ninefruits/term/enums.py
+msgid "Add/drop"
+msgstr "ເພີ່ມ/ຖອນວິຊາ"
+
+# key: reference.term_window_types.withdrawal
+#: ninefruits/term/enums.py
+msgid "Withdrawal"
+msgstr "ການຖອນຕົວ"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/term/enums.py
+msgid "Grade entry"
+msgstr "ການປ້ອນເກຣດ"
+
+# key: reference.term_window_types.grade_appeal
+#: ninefruits/term/enums.py
+msgid "Grade appeal"
+msgstr "ການອຸທອນເກຣດ"
+
+# key: reference.term_window_types.course_evaluation
+#: ninefruits/term/enums.py
+msgctxt "reference.term_window_types"
+msgid "Course evaluation"
+msgstr "ການປະເມີນການສອນ"
+
+# key: reference.term_window_types.graduation_application
+#: ninefruits/term/enums.py
+msgid "Graduation application"
+msgstr "ການຍື່ນຂໍຈົບການສຶກສາ"
+
+# key: reference.term_window_types.additional_program_application
+#: ninefruits/term/enums.py
+msgid "Second major and minor applications"
+msgstr "ການສະໝັກວິຊາເອກທີສອງ ແລະ ວິຊາໂທ"
+
+# key: reference.fields.code
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: reference.resources.academic_years.label
+#: ninefruits/term/models/term.py
+msgid "academic year"
+msgstr "ສົກຮຽນ"
+
+# key: reference.resources.academic_years.plural_label
+#: ninefruits/term/models/term.py
+msgid "academic years"
+msgstr "ສົກຮຽນ"
+
+# key: reference.fields.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular term"
+msgstr "ພາກຮຽນປົກກະຕິ"
+
+# key: reference.help.is_regular
+#: ninefruits/term/models/term.py
+msgid ""
+"Regular terms (e.g. spring, fall) and intensive sessions follow different "
+"rules later, such as credit limits."
+msgstr ""
+"ພາກຮຽນປົກກະຕິ (ເຊັ່ນ ພາກຮຽນຕົ້ນ, ພາກຮຽນປາຍ) ແລະ "
+"ພາກຮຽນເລັ່ງລັດຈະໃຊ້ກົດລະບຽບທີ່ແຕກຕ່າງກັນໃນພາຍຫຼັງ, ເຊັ່ນ ຂີດຈຳກັດໜ່ວຍກິດ."
+
+# key: reference.fields.sort_order
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgid "Order"
+msgstr "ລຳດັບ"
+
+# key: reference.resources.term_types.label
+#: ninefruits/term/models/term.py
+msgid "term type"
+msgstr "ປະເພດພາກຮຽນ"
+
+# key: reference.resources.term_types.plural_label
+#: ninefruits/term/models/term.py
+msgid "term types"
+msgstr "ປະເພດພາກຮຽນ"
+
+# key: reference.help.term_code
+#: ninefruits/term/models/term.py
+msgid "For display only, e.g. 2026-FA. The code carries no business meaning."
+msgstr "ສຳລັບສະແດງເທົ່ານັ້ນ, ເຊັ່ນ 2026-FA. ລະຫັດບໍ່ມີຄວາມໝາຍທາງທຸລະກິດ."
+
+# key: reference.resources.terms.label
+#: ninefruits/term/models/term.py
+msgid "term"
+msgstr "ພາກຮຽນ"
+
+# key: reference.resources.terms.plural_label
+#: ninefruits/term/models/term.py
+msgid "terms"
+msgstr "ພາກຮຽນ"
+
+# key: reference.fields.is_active
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: reference.resources.time_slots.label
+#: ninefruits/term/models/time_slot.py
+msgid "class period"
+msgstr "ຊົ່ວໂມງຮຽນ"
+
+# key: reference.resources.time_slots.plural_label
+#: ninefruits/term/models/time_slot.py
+msgid "class periods"
+msgstr "ຊົ່ວໂມງຮຽນ"
+
+# key: reference.fields.term_session
+#: ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Session"
+msgstr "ຊ່ວງຮຽນ"
+
+# key: reference.help.term_session
+#: ninefruits/term/models/window.py
+msgid ""
+"Course deadlines follow the session of the course: the full term unless the "
+"window is for a shorter session."
+msgstr ""
+"ກຳນົດເວລາຂອງວິຊາຈະຕາມຊ່ວງຮຽນຂອງວິຊານັ້ນ: ເຕັມພາກຮຽນ "
+"ເວັ້ນແຕ່ໄລຍະເວລານີ້ແມ່ນສຳລັບຊ່ວງຮຽນທີ່ສັ້ນກວ່າ."
+
+# key: reference.fields.window_type
+#: ninefruits/term/models/window.py
+msgid "Window"
+msgstr "ໄລຍະເວລາ"
+
+# key: reference.fields.window_name
+#: ninefruits/term/models/window.py
+msgid "Name (optional)"
+msgstr "ຊື່ (ບໍ່ບັງຄັບ)"

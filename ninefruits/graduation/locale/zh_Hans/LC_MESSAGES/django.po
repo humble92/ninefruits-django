@@ -1,0 +1,444 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 22:30+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: actions/_support.py:24
+msgid "Enter a reason."
+msgstr "请输入理由。"
+
+# key: graduation.errors.not_enrolled
+#: actions/graduate_students.py:44
+msgid "Only an enrolled student can graduate."
+msgstr "只有在读学生可以办理毕业。"
+
+# key: graduation.errors.no_audit
+#: actions/graduate_students.py:51
+msgid "No stored degree audit: run the audit first."
+msgstr "没有已保存的毕业资格审核，请先执行审核。"
+
+# key: graduation.errors.audit_not_satisfied
+#: actions/graduate_students.py:53
+msgid "The latest degree audit is not satisfied."
+msgstr "最新的毕业资格审核不满足。"
+
+# key: graduation.errors.waiver_exists
+#: actions/waive_requirement.py:39
+msgid "A pending or approved waiver already exists for this requirement."
+msgstr "该要求已有待处理或已批准的豁免。"
+
+# key: graduation.errors.waiver_not_approved
+#: actions/waive_requirement.py:69
+msgid "Only an approved waiver can be lifted."
+msgstr "只能撤销已批准的豁免。"
+
+# key: grading.errors.request_decided
+#: actions/waive_requirement.py:106
+msgid "The request is already decided."
+msgstr "申请已处理。"
+
+# key: graduation.errors.own_waiver
+#: actions/waive_requirement.py:108
+msgid "You cannot decide your own waiver request."
+msgstr "不能审批自己提出的豁免申请。"
+
+# key: curriculum.fields.program_role
+#: admin/audits.py:36 models.py:68
+msgid "Program role"
+msgstr "修读类型"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: admin/audits.py:43 admin/audits.py:47 admin/audits.py:192 models.py:78 templates/graduation/partials/degree_audit.html:9 templates/graduation/partials/degree_audit.html:24
+msgid "Satisfied"
+msgstr "满足"
+
+# key: graduation.satisfied.no
+#: admin/audits.py:47 templates/graduation/partials/degree_audit.html:9 templates/graduation/partials/degree_audit.html:24
+msgid "Not satisfied"
+msgstr "不满足"
+
+# key: graduation.report_columns.program_name
+#: admin/audits.py:56 admin/audits.py:180 models.py:73
+msgctxt "graduation"
+msgid "Program"
+msgstr "专业"
+
+# key: registration.fields.status
+#: admin/audits.py:69 admin/audits.py:188 admin/waivers.py:41 admin/waivers.py:131
+msgctxt "registration"
+msgid "Status"
+msgstr "状态"
+
+# key: security.scope_types.global
+#: admin/audits.py:75
+msgid "All"
+msgstr "全部"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/audits.py:172 admin/waivers.py:115
+msgid "Student number"
+msgstr "学号"
+
+# key: people.sections.name
+# key: people.fields.name
+#: admin/audits.py:176
+msgctxt "people"
+msgid "Name"
+msgstr "姓名"
+
+# key: people.fields.year_level
+#: admin/audits.py:184
+msgctxt "people"
+msgid "Year"
+msgstr "年级"
+
+# key: graduation.fields.earned_credits
+#: admin/audits.py:196 models.py:79 templates/graduation/partials/degree_audit.html:10
+msgctxt "graduation"
+msgid "Earned credits"
+msgstr "已获学分"
+
+# key: grading.fields.cumulative_gpa
+#: admin/audits.py:201 models.py:84 templates/graduation/partials/degree_audit.html:11
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "累计绩点"
+
+# key: graduation.actions.run_audits
+#: admin/audits.py:223 admin/audits.py:233
+msgid "Run audits"
+msgstr "执行审核"
+
+# key: graduation.notifications.audits_run
+#: admin/audits.py:231
+#, python-format
+msgid "%(students)s student(s) audited, %(satisfied)s satisfied."
+msgstr "已审核 %(students)s 名学生，满足 %(satisfied)s 名。"
+
+# key: graduation.actions.open
+#: admin/audits.py:235
+msgctxt "graduation"
+msgid "Open"
+msgstr "打开"
+
+# key: graduation.actions.rerun
+#: admin/audits.py:249 admin/audits.py:263
+msgid "Audit again"
+msgstr "重新审核"
+
+# key: graduation.notifications.audit_saved
+#: admin/audits.py:257 admin/student_record.py:60
+msgid "Degree audit saved."
+msgstr "已保存毕业资格审核。"
+
+# key: graduation.actions.graduate
+#: admin/audits.py:269 admin/audits.py:293
+msgid "Graduate"
+msgstr "办理毕业"
+
+# key: graduation.notifications.graduated
+#: admin/audits.py:280
+#, python-format
+msgid "%(count)s student(s) graduated, %(errors)s not processed."
+msgstr "已办理毕业 %(count)s 名，未办理 %(errors)s 名。"
+
+# key: common.reason
+#: admin/forms.py:18 admin/waivers.py:123 models.py:138
+msgctxt "common"
+msgid "Reason"
+msgstr "原因"
+
+# key: graduation.report_columns.term_code
+#: admin/forms.py:29 models.py:76
+msgid "Term"
+msgstr "学期"
+
+# key: graduation.fields.min_year_level
+#: admin/forms.py:32
+msgid "From year level"
+msgstr "年级以上"
+
+# key: people.fields.graduation_date
+#: admin/forms.py:51
+msgid "Graduation date"
+msgstr "毕业日期"
+
+# key: curriculum.sections.requirements
+#: admin/forms.py:63 admin/waivers.py:119 models.py:136
+msgid "Requirements"
+msgstr "要求"
+
+# key: graduation.actions.audit_now
+#: admin/student_record.py:40 admin/student_record.py:65
+msgctxt "graduation.actions"
+msgid "Degree audit"
+msgstr "毕业资格审核"
+
+# key: graduation.actions.waive
+#: admin/student_record.py:75 admin/student_record.py:107
+msgid "Waive a requirement"
+msgstr "豁免要求"
+
+# key: graduation.notifications.waiver_requested
+#: admin/student_record.py:101
+msgid "Waiver requested; it counts once another person approves it."
+msgstr "已提交豁免申请，经另一位人员批准后生效。"
+
+# key: graduation.help.waiver
+#: admin/student_record.py:110
+msgid "Another person with the graduation permission must approve the waiver before it counts."
+msgstr "需由另一位具有毕业办理权限的人员批准后，豁免才生效。"
+
+# key: grading.fields.requested_by
+#: admin/waivers.py:127
+msgctxt "grading"
+msgid "Requested by"
+msgstr "申请人"
+
+# key: grading.fields.decided_by
+#: admin/waivers.py:135
+msgctxt "grading"
+msgid "Decided by"
+msgstr "处理人"
+
+# key: grading.fields.decision_note
+#: admin/waivers.py:139 models.py:151
+msgctxt "grading"
+msgid "Note"
+msgstr "处理意见"
+
+# key: graduation.fields.lift_reason
+#: admin/waivers.py:143 models.py:154
+msgid "Lift reason"
+msgstr "撤销理由"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/waivers.py:164 admin/waivers.py:180
+msgid "Approve"
+msgstr "批准"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: admin/waivers.py:174 enums.py:14
+msgid "Approved"
+msgstr "已批准"
+
+# key: grading.actions.reject
+#: admin/waivers.py:186 admin/waivers.py:202
+msgctxt "grading"
+msgid "Reject"
+msgstr "驳回"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: admin/waivers.py:196 enums.py:15
+msgid "Rejected"
+msgstr "已驳回"
+
+# key: graduation.actions.lift
+#: admin/waivers.py:208 admin/waivers.py:221
+msgid "Lift the waiver"
+msgstr "撤销豁免"
+
+# key: graduation.waiver_statuses.lifted
+#: admin/waivers.py:218 enums.py:16
+msgid "Lifted"
+msgstr "已撤销"
+
+# key: admin.navigation.graduation
+# key: permissions.resources.graduation
+# key: portal.navigation.graduation
+#: apps.py:21
+msgctxt "portal"
+msgid "Graduation"
+msgstr "毕业"
+
+# key: graduation.waiver_statuses.pending
+#: enums.py:13
+msgctxt "graduation"
+msgid "Pending"
+msgstr "待处理"
+
+# key: people.sections.record
+#: models.py:57 models.py:129
+msgid "Student record"
+msgstr "学籍"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: models.py:66
+msgid "graduation requirements"
+msgstr "毕业要求"
+
+# key: graduation.report_columns.required_credits
+#: models.py:81
+msgctxt "graduation"
+msgid "Required"
+msgstr "所需学分"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: models.py:88 templates/graduation/partials/degree_audit.html:18
+msgid "Audited"
+msgstr "审核时间"
+
+# key: graduation.actions.audit_now
+# key: graduation.resources.audits.label
+#: models.py:96
+msgid "Degree audit"
+msgstr "毕业资格审核"
+
+# key: graduation.resources.audits.plural_label
+#: models.py:97
+msgid "Degree audits"
+msgstr "毕业资格审核"
+
+# key: graduation.report_columns.status
+#: models.py:140
+msgctxt "graduation"
+msgid "Status"
+msgstr "状态"
+
+# key: grading.fields.requested_at
+#: models.py:148
+msgctxt "grading"
+msgid "Requested"
+msgstr "申请时间"
+
+# key: graduation.resources.waivers.label
+#: models.py:161
+msgid "Requirement waiver"
+msgstr "要求豁免"
+
+# key: graduation.resources.waivers.plural_label
+#: models.py:162
+msgid "Requirement waivers"
+msgstr "要求豁免"
+
+# key: graduation.issues.no_requirement_set
+#: services/degree_audit.py:103
+#, python-format
+msgid "No graduation requirements are defined for catalog year %(year)s."
+msgstr "未定义培养方案年份 %(year)s 的毕业要求。"
+
+# key: graduation.issues.requirement
+#: services/degree_audit.py:116
+#, python-format
+msgid "Requirement not met: %(name)s"
+msgstr "未满足的要求：%(name)s"
+
+# key: graduation.issues.total_credits
+#: services/degree_audit.py:121
+#, python-format
+msgid "Total credits %(earned)s of %(required)s required."
+msgstr "总学分 %(earned)s，需要 %(required)s。"
+
+# key: graduation.issues.gpa
+#: services/degree_audit.py:127
+#, python-format
+msgid "Cumulative GPA %(gpa)s below the minimum %(minimum)s."
+msgstr "累计平均绩点 %(gpa)s 低于最低要求 %(minimum)s。"
+
+# key: graduation.settings.degree_number_pattern
+#: settings_pages.py:20
+msgid "Degree number pattern"
+msgstr "学位编号格式"
+
+# key: graduation.settings.degree_number_pattern_help
+#: settings_pages.py:25
+#, python-brace-format
+msgid "Tokens: {PROGRAM} program code, {YYYY} or {YY} graduation year, {SEQ:5} sequence per distinct prefix (required). Default {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+msgstr "可用项：{PROGRAM} 专业代码，{YYYY} 或 {YY} 毕业年份，{SEQ:5} 按前缀计数的流水号（必需）。默认 {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001。"
+
+# key: graduation.settings.minimum_cumulative_gpa
+#: settings_pages.py:30
+msgid "Minimum cumulative GPA"
+msgstr "最低累计绩点"
+
+# key: graduation.settings.minimum_cumulative_gpa_help
+#: settings_pages.py:36
+msgid "Required to graduate (primary program). Leave empty for none."
+msgstr "毕业所需的累计绩点（主修）。留空则不适用。"
+
+# key: graduation.settings.title
+#: settings_pages.py:45
+msgid "Graduation settings"
+msgstr "毕业设置"
+
+# key: evaluation.portal.back
+#: templates/graduation/admin/audit_detail.html:10
+msgid "Back"
+msgstr "返回"
+
+# key: graduation.actions.save_audit
+#: templates/graduation/admin/audit_now.html:13
+msgid "Save this audit"
+msgstr "保存此次审核"
+
+# key: assessment.portal.cancel
+#: templates/graduation/admin/audit_now.html:14 templates/graduation/admin/graduate.html:26
+msgctxt "common"
+msgid "Cancel"
+msgstr "取消"
+
+# key: graduation.fields.waived
+#: templates/graduation/partials/degree_audit.html:24
+msgid "Waived"
+msgstr "豁免"
+
+# key: curriculum.fields.credits
+#: templates/graduation/partials/degree_audit.html:28
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "学分"
+
+# key: graduation.fields.courses
+#: templates/graduation/partials/degree_audit.html:29
+msgctxt "graduation"
+msgid "courses"
+msgstr "门课程"
+
+# key: graduation.fields.missing
+#: templates/graduation/partials/degree_audit.html:33
+msgctxt "graduation"
+msgid "Not passed"
+msgstr "未通过"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: templates/graduation/portal/my_graduation.html:8
+msgid "Graduation requirements"
+msgstr "毕业要求"
+
+# key: graduation.portal.intro
+#: templates/graduation/portal/my_graduation.html:9
+#, python-format
+msgid "Your progress against the requirements of catalog year %(year)s, evaluated now. Ask your department about waivers."
+msgstr "按培养方案年份 %(year)s 的要求评估的当前完成情况。豁免请咨询所在院系。"

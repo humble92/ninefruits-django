@@ -1,0 +1,110 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: reference.fields.name
+#: ninefruits/facility/admin.py ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ຊື່"
+
+# key: reference.fields.rooms_count
+#: ninefruits/facility/admin.py
+msgid "Rooms"
+msgstr "ຫ້ອງ"
+
+# key: reference.fields.building
+#: ninefruits/facility/admin.py ninefruits/facility/models/building.py
+msgid "Building"
+msgstr "ອາຄານ"
+
+# key: reference.fields.room_type
+#: ninefruits/facility/admin.py ninefruits/facility/models/building.py
+msgid "Room type"
+msgstr "ປະເພດຫ້ອງ"
+
+# key: reference.fields.code
+#: ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/facility/models/building.py
+msgid "Address"
+msgstr "ທີ່ຢູ່"
+
+# key: reference.fields.is_active
+#: ninefruits/facility/models/building.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: reference.resources.buildings.label
+#: ninefruits/facility/models/building.py
+msgid "building"
+msgstr "ອາຄານ"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/facility/models/building.py
+msgid "buildings"
+msgstr "ອາຄານ"
+
+# key: reference.fields.room_number
+#: ninefruits/facility/models/building.py
+msgid "Room number"
+msgstr "ເລກຫ້ອງ"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/facility/models/building.py
+msgid "Org unit"
+msgstr "ໜ່ວຍງານ"
+
+# key: reference.fields.capacity
+#: ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Capacity"
+msgstr "ຄວາມຈຸ"
+
+# key: reference.fields.is_schedulable
+#: ninefruits/facility/models/building.py
+msgid "Used for timetables"
+msgstr "ໃຊ້ສຳລັບຕາຕະລາງຮຽນ"
+
+# key: reference.help.is_schedulable
+#: ninefruits/facility/models/building.py
+msgid "Offered when timetables are made."
+msgstr "ສະແດງໃຫ້ເລືອກເມື່ອຈັດຕາຕະລາງຮຽນ."
+
+# key: reference.fields.note
+#: ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Note"
+msgstr "ໝາຍເຫດ"
+
+# key: reference.resources.rooms.label
+#: ninefruits/facility/models/building.py
+msgid "room"
+msgstr "ຫ້ອງ"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/facility/models/building.py
+msgid "rooms"
+msgstr "ຫ້ອງ"

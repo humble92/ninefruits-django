@@ -1,0 +1,1338 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 20:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: people.errors.additional_program_not_offered
+#: actions/additional_programs.py
+msgid "This program does not accept that kind of application."
+msgstr "ຫຼັກສູດນີ້ບໍ່ຮັບການສະໝັກປະເພດນັ້ນ."
+
+# key: people.errors.additional_program_already_held
+#: actions/additional_programs.py
+msgid "You already follow this program."
+msgstr "ທ່ານກຳລັງຮຽນຫຼັກສູດນີ້ຢູ່ແລ້ວ."
+
+# key: people.errors.additional_program_limit
+#: actions/additional_programs.py
+#, python-format
+msgid "You can have at most %(count)s at a time (including pending applications)."
+msgstr "ທ່ານສາມາດມີໄດ້ສູງສຸດ %(count)s ລາຍການໃນເວລາດຽວກັນ (ລວມທັງໃບສະໝັກທີ່ລໍຖ້າພິຈາລະນາ)."
+
+# key: people.errors.not_own_record
+#: actions/additional_programs.py actions/status_changes.py
+msgid "You can only make requests for your own record."
+msgstr "ທ່ານສາມາດຍື່ນຄຳຮ້ອງໄດ້ສະເພາະບັນທຶກຂອງຕົນເອງເທົ່ານັ້ນ."
+
+# key: people.errors.additional_program_inactive_record
+#: actions/additional_programs.py
+msgid "Only current students can apply."
+msgstr "ສະເພາະນັກສຶກສາປັດຈຸບັນເທົ່ານັ້ນຈຶ່ງສະໝັກໄດ້."
+
+# key: people.errors.additional_program_window_closed
+#: actions/additional_programs.py
+msgid "Applications for a second major or minor are not open for you now."
+msgstr "ການສະໝັກວິຊາເອກທີສອງ ຫຼື ວິຊາໂທບໍ່ໄດ້ເປີດສຳລັບທ່ານໃນຂະນະນີ້."
+
+# key: people.errors.additional_program_pending
+#: actions/additional_programs.py
+msgid "There is already a pending application for this program."
+msgstr "ມີໃບສະໝັກທີ່ລໍຖ້າພິຈາລະນາສຳລັບຫຼັກສູດນີ້ຢູ່ແລ້ວ."
+
+# key: people.errors.already_decided
+#: actions/additional_programs.py actions/status_changes.py
+msgid "This request has already been decided."
+msgstr "ຄຳຮ້ອງນີ້ຖືກຕັດສິນແລ້ວ."
+
+# key: people.errors.own_request
+#: actions/additional_programs.py actions/status_changes.py
+msgid "You cannot decide a request you made yourself."
+msgstr "ທ່ານບໍ່ສາມາດຕັດສິນຄຳຮ້ອງທີ່ຕົນເອງຍື່ນໄດ້."
+
+# key: people.errors.additional_program_end_invalid
+#: actions/additional_programs.py
+msgid "This program has already ended, or the date is before it started."
+msgstr "ຫຼັກສູດນີ້ສິ້ນສຸດແລ້ວ, ຫຼື ວັນທີຢູ່ກ່ອນວັນທີເລີ່ມ."
+
+# key: people.errors.instructor_not_current
+#: actions/advisors.py
+msgid "This instructor is not currently employed."
+msgstr "ອາຈານທ່ານນີ້ບໍ່ໄດ້ເຮັດວຽກຢູ່ໃນປັດຈຸບັນ."
+
+# key: people.errors.already_has_account
+#: actions/invitations.py
+msgid "This person already has an account."
+msgstr "ບຸກຄົນນີ້ມີບັນຊີຢູ່ແລ້ວ."
+
+# key: people.errors.email_in_use
+#: actions/invitations.py
+msgid "Another account uses this email."
+msgstr "ບັນຊີອື່ນໃຊ້ອີເມວນີ້ຢູ່ແລ້ວ."
+
+# key: people.invitations.invalid
+#: actions/invitations.py templates/person/accept_invitation.html
+msgid "This invitation link is invalid or has expired. Ask the school office for a new one."
+msgstr "ລິ້ງເຊີນນີ້ບໍ່ຖືກຕ້ອງ ຫຼື ໝົດອາຍຸແລ້ວ. ກະລຸນາຕິດຕໍ່ຫ້ອງການຂອງສະຖາບັນເພື່ອຂໍລິ້ງໃໝ່."
+
+# key: people.errors.merge_invalid
+#: actions/merge.py
+msgid "Choose a different person who has not been merged."
+msgstr "ກະລຸນາເລືອກບຸກຄົນອື່ນທີ່ຍັງບໍ່ໄດ້ຖືກລວມ."
+
+# key: people.errors.merge_two_instructors
+#: actions/merge.py
+msgid "Both people have instructor records. Merge the instructor records first."
+msgstr "ບຸກຄົນທັງສອງມີບັນທຶກອາຈານ. ກະລຸນາລວມບັນທຶກອາຈານກ່ອນ."
+
+# key: people.errors.merge_two_open_applications
+#: actions/merge.py
+msgid "Both people have an open application in the same admission cycle. Withdraw one first."
+msgstr "ບຸກຄົນທັງສອງມີໃບສະໝັກທີ່ຍັງເປີດຢູ່ໃນຮອບຮັບເຂົ້າຮຽນດຽວກັນ. ກະລຸນາຖອນໃບໜຶ່ງກ່ອນ."
+
+# key: people.errors.type_not_applicable
+#: actions/status_changes.py
+#, python-format
+msgid "This change does not apply to a student who is %(status)s."
+msgstr "ການປ່ຽນແປງນີ້ບໍ່ສາມາດນຳໃຊ້ກັບນັກສຶກສາທີ່ມີສະຖານະ %(status)s."
+
+# key: people.errors.not_requestable
+#: actions/status_changes.py
+msgid "Students cannot request this type of change."
+msgstr "ນັກສຶກສາບໍ່ສາມາດຂໍການປ່ຽນແປງປະເພດນີ້ໄດ້."
+
+# key: people.errors.request_pending
+#: actions/status_changes.py
+msgid "There is already a pending request for this record."
+msgstr "ມີຄຳຮ້ອງທີ່ລໍຖ້າພິຈາລະນາສຳລັບບັນທຶກນີ້ຢູ່ແລ້ວ."
+
+# key: people.errors.status_changed_meanwhile
+#: actions/status_changes.py
+msgid "The student's status changed after the request was made. Reject it and ask for a new request."
+msgstr "ສະຖານະຂອງນັກສຶກສາປ່ຽນແປງຫຼັງຈາກຍື່ນຄຳຮ້ອງ. ກະລຸນາປະຕິເສດ ແລະ ຂໍໃຫ້ຍື່ນຄຳຮ້ອງໃໝ່."
+
+# key: people.errors.person_merged
+#: actions/students.py
+msgid "This person was merged into another person. Use that person instead."
+msgstr "ບຸກຄົນນີ້ຖືກລວມເຂົ້າກັບບຸກຄົນອື່ນແລ້ວ. ກະລຸນາໃຊ້ບຸກຄົນນັ້ນແທນ."
+
+#: actions/students.py
+msgid "Enter a valid date."
+msgstr "ກະລຸນາປ້ອນວັນທີທີ່ຖືກຕ້ອງ."
+
+# key: people.errors.program_not_effective
+#: actions/students.py
+msgid "The program is not in effect on the admission date."
+msgstr "ຫຼັກສູດນີ້ບໍ່ມີຜົນໃນວັນທີຮັບເຂົ້າຮຽນ."
+
+# key: people.errors.student_number_taken
+#: actions/students.py
+msgid "This student number is already used."
+msgstr "ລະຫັດນັກສຶກສານີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: common.reason
+#: admin/common.py templates/person/portal/records.html
+msgctxt "common"
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: admissions.fields.decision_note
+# key: people.fields.decision_note
+#: admin/common.py models/additional_program.py models/status_change.py
+msgctxt "people"
+msgid "Decision note"
+msgstr "ໝາຍເຫດການຕັດສິນ"
+
+# key: people.fields.employee_number
+#: admin/instructors.py models/instructor.py
+msgid "Employee number"
+msgstr "ລະຫັດພະນັກງານ"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: admin/instructors.py models/instructor.py models/student_record.py templates/person/portal/records.html
+msgid "Org unit"
+msgstr "ໜ່ວຍງານ"
+
+# key: people.fields.employment_type
+#: admin/instructors.py models/instructor.py
+msgid "Employment type"
+msgstr "ປະເພດການຈ້າງງານ"
+
+# key: people.fields.academic_title
+#: admin/instructors.py models/instructor.py
+msgid "Academic title"
+msgstr "ຕຳແໜ່ງວິຊາການ"
+
+# key: people.fields.hire_date
+#: admin/instructors.py models/instructor.py
+msgid "Hire date"
+msgstr "ວັນທີເລີ່ມເຮັດວຽກ"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: admin/instructors.py admin/student_records.py models/advisor.py models/instructor.py models/student_record.py
+msgid "End date"
+msgstr "ວັນທີສິ້ນສຸດ"
+
+# key: validation.after_or_equal
+#: admin/instructors.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼັງຈາກ ຫຼື ເທົ່າກັບ %(date)s."
+
+#: admin/instructors.py
+msgid "The employee number has already been taken."
+msgstr "ລະຫັດພະນັກງານນີ້ຖືກໃຊ້ແລ້ວ."
+
+# key: people.sections.person
+# key: people.fields.person
+#: admin/instructors.py admin/student_records.py models/instructor.py models/student_record.py
+msgid "Person"
+msgstr "ບຸກຄົນ"
+
+# key: people.fields.new_person
+#: admin/instructors.py admin/student_records.py
+msgid "New person"
+msgstr "ບຸກຄົນໃໝ່"
+
+# key: people.fields.existing_person
+#: admin/instructors.py admin/student_records.py
+msgid "Existing person"
+msgstr "ບຸກຄົນທີ່ມີຢູ່ແລ້ວ"
+
+#: admin/instructors.py admin/student_records.py
+msgid "This field is required."
+msgstr "ຕ້ອງປ້ອນຂໍ້ມູນນີ້."
+
+# key: people.filters.current_instructors
+#: admin/instructors.py
+msgid "Current instructors only"
+msgstr "ສະເພາະອາຈານປັດຈຸບັນ"
+
+# key: common.yes
+#: admin/instructors.py admin/people.py
+msgid "Yes"
+msgstr "ແມ່ນ"
+
+#: admin/instructors.py admin/people.py
+msgid "No"
+msgstr "ບໍ່"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.sections.name
+# key: people.fields.name
+# key: reference.fields.name
+#: admin/instructors.py admin/people.py admin/requests.py admin/student_records.py models/person.py models/status_change.py templates/person/portal/advisees.html templates/person/portal/profile.html
+msgctxt "people"
+msgid "Name"
+msgstr "ຊື່"
+
+#: admin/instructors.py
+msgid "Instructor created."
+msgstr "ເພີ່ມອາຈານແລ້ວ."
+
+#: admin/instructors.py
+msgid "New instructor"
+msgstr "ເພີ່ມອາຈານ"
+
+# key: people.fields.from_statuses
+#: admin/instructors.py models/status_change.py
+msgid "Allowed from statuses"
+msgstr "ສະຖານະຕົ້ນທາງທີ່ອະນຸຍາດ"
+
+# key: validation.not_regex
+# key: validation.regex
+#: admin/instructors.py
+#, python-format
+msgctxt "validation.regex"
+msgid "The %(attribute)s field format is invalid."
+msgstr "ຮູບແບບຂອງຊ່ອງ %(attribute)s ບໍ່ຖືກຕ້ອງ."
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: admin/instructors.py models/status_change.py
+msgctxt "reference"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: people.fields.new_status
+#: admin/instructors.py admin/requests.py models/status_change.py
+msgid "New status"
+msgstr "ສະຖານະໃໝ່"
+
+# key: people.fields.family_name
+#: admin/people.py models/person.py
+msgid "Family name"
+msgstr "ນາມສະກຸນ"
+
+# key: people.help.romanized
+#: admin/people.py
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "ຊື່ຕາມກົດໝາຍເປັນຕົວອັກສອນລາຕິນ ຕາມໜັງສືຜ່ານແດນ. ເພີ່ມຊື່ທີ່ຂຽນໃນພາສາອື່ນຢູ່ຂ້າງລຸ່ມ."
+
+# key: people.fields.given_name
+#: admin/people.py models/person.py
+msgid "Given name"
+msgstr "ຊື່"
+
+# key: people.help.national_id_keep
+#: admin/people.py
+msgid "Leave empty to keep the stored value. Enter a new value to replace it."
+msgstr "ປ່ອຍຫວ່າງເພື່ອຮັກສາຄ່າທີ່ເກັບໄວ້. ປ້ອນຄ່າໃໝ່ເພື່ອແທນທີ່."
+
+# key: people.help.encrypted
+#: admin/people.py
+msgid "Stored encrypted. Shown masked; revealing it is logged."
+msgstr "ເກັບແບບເຂົ້າລະຫັດ. ສະແດງແບບປິດບັງ; ການເປີດເຜີຍຈະຖືກບັນທຶກໄວ້."
+
+# key: people.fields.birth_date
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "Birth date"
+msgstr "ວັນເດືອນປີເກີດ"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: admin/people.py models/person.py
+msgid "Gender"
+msgstr "ເພດ"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: admin/people.py models/person.py
+msgid "Nationality"
+msgstr "ສັນຊາດ"
+
+# key: people.fields.ethnicity
+#: admin/people.py models/person.py
+msgid "Ethnicity"
+msgstr "ຊົນເຜົ່າ"
+
+# key: people.fields.national_id
+#: admin/people.py
+msgid "National ID number"
+msgstr "ເລກບັດປະຈຳຕົວ"
+
+# key: people.fields.passport_number
+#: admin/people.py
+msgid "Passport number"
+msgstr "ເລກໜັງສືຜ່ານແດນ"
+
+# key: people.fields.contact_email
+#: admin/people.py models/person.py views/portal.py
+msgid "Contact email"
+msgstr "ອີເມວຕິດຕໍ່"
+
+# key: people.fields.phone
+#: admin/people.py models/person.py templates/person/portal/profile.html views/portal.py
+msgid "Phone"
+msgstr "ໂທລະສັບ"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "Address"
+msgstr "ທີ່ຢູ່"
+
+# key: people.fields.postal_code
+#: admin/people.py models/person.py views/portal.py
+msgid "Postal code"
+msgstr "ລະຫັດໄປສະນີ"
+
+#: admin/people.py
+msgid "The birth date must not be in the future."
+msgstr "ວັນເດືອນປີເກີດບໍ່ສາມາດເປັນມື້ໃນອະນາຄົດ."
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: admin/people.py
+msgid "Photo"
+msgstr "ຮູບພາບ"
+
+#: admin/people.py
+msgid "JPEG, PNG or WebP, at most 2 MB."
+msgstr "JPEG, PNG ຫຼື WebP, ສູງສຸດ 2 MB."
+
+#: admin/people.py
+msgid "The photo must not be larger than 2 MB."
+msgstr "ຮູບຕ້ອງບໍ່ເກີນ 2 MB."
+
+# key: people.resources.guardians.label
+#: admin/people.py models/person.py
+msgid "guardian"
+msgstr "ຜູ້ປົກຄອງ"
+
+# key: people.resources.guardians.plural_label
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "guardians"
+msgstr "ຜູ້ປົກຄອງ"
+
+# key: people.resources.student_records.label
+#: admin/people.py models/student_record.py
+msgid "student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: people.resources.student_records.plural_label
+#: admin/people.py importers.py models/student_record.py
+msgid "student records"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: admin/people.py admin/student_records.py models/status_change.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "people"
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: people.fields.login_email
+#: admin/people.py models/invitation.py
+msgid "Sign-in email"
+msgstr "ອີເມວເຂົ້າສູ່ລະບົບ"
+
+# key: people.help.invitation_email
+#: admin/people.py
+msgid "The invitation link is sent here. This becomes the sign-in email."
+msgstr "ລິ້ງເຊີນຈະຖືກສົ່ງໄປທີ່ນີ້. ອີເມວນີ້ຈະກາຍເປັນອີເມວເຂົ້າສູ່ລະບົບ."
+
+# key: people.fields.merge_target
+#: admin/people.py
+msgid "Keep this person"
+msgstr "ຮັກສາບຸກຄົນນີ້ໄວ້"
+
+# key: people.filters.merged
+#: admin/people.py
+msgctxt "people"
+msgid "Merged"
+msgstr "ລວມແລ້ວ"
+
+# key: security.scope_types.global
+#: admin/people.py
+msgid "All"
+msgstr "ທັງໝົດ"
+
+# key: admin.settings.student_records.title
+# key: people.fields.student_records_count
+# key: permissions.resources.student_records
+#: admin/people.py settings_pages.py
+msgid "Student records"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: people.sections.account
+# key: people.fields.has_account
+#: admin/people.py
+msgid "Account"
+msgstr "ບັນຊີ"
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: admin/people.py
+msgid "Personal details"
+msgstr "ຂໍ້ມູນສ່ວນຕົວ"
+
+# key: people.sections.contact
+#: admin/people.py
+msgid "Contact"
+msgstr "ການຕິດຕໍ່"
+
+# key: people.fields.romanized_name
+#: admin/people.py
+msgid "Romanized name"
+msgstr "ຊື່ເປັນຕົວອັກສອນລາຕິນ"
+
+# key: people.fields.no_account
+#: admin/people.py
+msgid "No account"
+msgstr "ບໍ່ມີບັນຊີ"
+
+# key: people.fields.merged_into
+#: admin/people.py models/person.py
+msgid "Merged into"
+msgstr "ລວມເຂົ້າກັບ"
+
+# key: people.actions.reveal_national_id
+#: admin/people.py
+msgid "Show national ID number"
+msgstr "ສະແດງເລກບັດປະຈຳຕົວ"
+
+# key: people.help.reveal
+#: admin/people.py templates/person/admin/revealed.html
+msgid "The full value is shown once and the reveal is recorded in the security log."
+msgstr "ຄ່າເຕັມຈະສະແດງພຽງຄັ້ງດຽວ ແລະ ການເປີດເຜີຍຈະຖືກບັນທຶກໃນບັນທຶກຄວາມປອດໄພ."
+
+# key: people.actions.reveal_passport_number
+#: admin/people.py
+msgid "Show passport number"
+msgstr "ສະແດງເລກໜັງສືຜ່ານແດນ"
+
+# key: people.actions.invite
+#: admin/people.py
+msgid "Invite to create an account"
+msgstr "ເຊີນສ້າງບັນຊີ"
+
+# key: people.notifications.invited
+#: admin/people.py
+msgid "Invitation sent."
+msgstr "ສົ່ງຄຳເຊີນແລ້ວ."
+
+# key: people.actions.merge
+#: admin/people.py
+msgid "Merge duplicate"
+msgstr "ລວມຂໍ້ມູນຊ້ຳ"
+
+# key: people.notifications.merged
+#: admin/people.py
+msgid "People merged."
+msgstr "ລວມບຸກຄົນແລ້ວ."
+
+# key: people.help.merge
+#: admin/people.py
+msgid "The other person's student records, instructor record, guardians and account move to the person you keep. The other person is marked as merged and cannot be used again. This cannot be undone."
+msgstr "ບັນທຶກນັກສຶກສາ, ບັນທຶກອາຈານ, ຜູ້ປົກຄອງ ແລະ ບັນຊີຂອງບຸກຄົນອີກຄົນຈະຍ້າຍໄປຫາບຸກຄົນທີ່ທ່ານຮັກສາໄວ້. ບຸກຄົນອີກຄົນຈະຖືກໝາຍວ່າລວມແລ້ວ ແລະ ບໍ່ສາມາດໃຊ້ໄດ້ອີກ. ການນີ້ບໍ່ສາມາດຍົກເລີກໄດ້."
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/requests.py admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"
+
+# key: people.fields.request_status
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgid "Request status"
+msgstr "ສະຖານະຄຳຮ້ອງ"
+
+# key: common.reason
+#: admin/requests.py models/status_change.py
+msgid "Reason"
+msgstr "ເຫດຜົນ"
+
+# key: grading.fields.requested_by
+# key: people.fields.requested_by
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgctxt "people"
+msgid "Requested by"
+msgstr "ຜູ້ຍື່ນຄຳຮ້ອງ"
+
+# key: admissions.fields.decided_by
+# key: grading.fields.decided_by
+# key: people.fields.decided_by
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgctxt "people"
+msgid "Decided by"
+msgstr "ຜູ້ຕັດສິນ"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/requests.py
+msgid "Approve"
+msgstr "ອະນຸມັດ"
+
+# key: people.notifications.approved
+#: admin/requests.py
+msgid "Request approved."
+msgstr "ອະນຸມັດຄຳຮ້ອງແລ້ວ."
+
+# key: grading.actions.reject
+# key: people.actions.reject
+#: admin/requests.py
+msgctxt "people"
+msgid "Reject"
+msgstr "ປະຕິເສດ"
+
+# key: people.notifications.rejected
+#: admin/requests.py
+msgid "Request rejected."
+msgstr "ປະຕິເສດຄຳຮ້ອງແລ້ວ."
+
+# key: curriculum.program_roles.primary
+# key: people.fields.primary_program
+#: admin/requests.py
+msgctxt "people"
+msgid "Primary program"
+msgstr "ຫຼັກສູດຫຼັກ"
+
+# key: assessment.fields.type
+# key: certificate.fields.type
+# key: curriculum.fields.requisite_kind
+# key: people.fields.program_role
+#: admin/requests.py models/additional_program.py models/student_record.py templates/person/portal/records.html
+msgctxt "people"
+msgid "Kind"
+msgstr "ປະເພດ"
+
+# key: people.fields.statement
+#: admin/requests.py models/additional_program.py templates/person/portal/records.html
+msgid "Statement"
+msgstr "ຄຳຊີ້ແຈງ"
+
+# key: people.fields.catalog_year
+#: admin/student_records.py models/student_record.py
+msgid "Catalog year"
+msgstr "ປີຫຼັກສູດ"
+
+# key: people.help.catalog_year
+#: admin/student_records.py
+msgid "Year of the curriculum that applies to this student, usually the admission year."
+msgstr "ປີຂອງຫຼັກສູດທີ່ນຳໃຊ້ກັບນັກສຶກສາຄົນນີ້, ໂດຍປົກກະຕິແມ່ນປີທີ່ຮັບເຂົ້າຮຽນ."
+
+# key: graduation.report_columns.year_level
+# key: people.fields.year_level
+#: admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "people"
+msgid "Year"
+msgstr "ປີຮຽນ"
+
+# key: people.fields.admission_type
+#: admin/student_records.py models/student_record.py
+msgid "Admission type"
+msgstr "ປະເພດການຮັບເຂົ້າຮຽນ"
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: admin/student_records.py models/student_record.py
+msgid "Admission term"
+msgstr "ພາກຮຽນທີ່ຮັບເຂົ້າ"
+
+# key: people.fields.institutional_email
+#: admin/student_records.py models/student_record.py
+msgid "School email"
+msgstr "ອີເມວຂອງສະຖາບັນ"
+
+# key: people.help.institutional_email
+#: admin/student_records.py
+msgid "School email address. Used to link school sign-in (SSO) accounts automatically when enabled."
+msgstr "ທີ່ຢູ່ອີເມວຂອງສະຖາບັນ. ໃຊ້ເພື່ອເຊື່ອມຕໍ່ບັນຊີເຂົ້າສູ່ລະບົບຂອງສະຖາບັນ (SSO) ໂດຍອັດຕະໂນມັດເມື່ອເປີດໃຊ້."
+
+# key: people.fields.tags
+#: admin/student_records.py models/student_record.py
+msgid "Tags"
+msgstr "ແທັກ"
+
+# key: people.help.tags
+#: admin/student_records.py
+msgid "Free labels for grouping, e.g. scholarship programs."
+msgstr "ປ້າຍກຳກັບອິດສະຫຼະສຳລັບການຈັດກຸ່ມ, ເຊັ່ນ ໂຄງການທຶນການສຶກສາ."
+
+# key: certificate.facts.program
+# key: graduation.report_columns.program_name
+# key: security.scope_types.program
+#: admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "security"
+msgid "Program"
+msgstr "ຫຼັກສູດ"
+
+# key: people.fields.admission_date
+#: admin/student_records.py models/student_record.py templates/person/portal/records.html
+msgid "Admission date"
+msgstr "ວັນທີຮັບເຂົ້າຮຽນ"
+
+# key: people.help.student_number_generated
+#: admin/student_records.py
+msgid "Leave empty to generate one with the student number pattern."
+msgstr "ປ່ອຍຫວ່າງເພື່ອສ້າງຕາມຮູບແບບລະຫັດນັກສຶກສາ."
+
+# key: people.resources.status_changes.label
+#: admin/student_records.py models/status_change.py
+msgid "status change"
+msgstr "ການປ່ຽນສະຖານະ"
+
+# key: people.resources.status_changes.plural_label
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
+msgid "status changes"
+msgstr "ການປ່ຽນສະຖານະ"
+
+# key: people.resources.advisor_assignments.label
+#: admin/student_records.py models/advisor.py
+msgid "advisor"
+msgstr "ອາຈານທີ່ປຶກສາ"
+
+# key: people.resources.advisor_assignments.plural_label
+#: admin/student_records.py models/advisor.py
+msgid "advisors"
+msgstr "ອາຈານທີ່ປຶກສາ"
+
+# key: people.resources.additional_programs.label
+#: admin/student_records.py models/student_record.py
+msgid "second major or minor"
+msgstr "ວິຊາເອກທີສອງ ຫຼື ວິຊາໂທ"
+
+# key: people.resources.additional_programs.plural_label
+#: admin/student_records.py models/student_record.py templates/person/portal/records.html
+msgid "second majors and minors"
+msgstr "ວິຊາເອກທີສອງ ແລະ ວິຊາໂທ"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: admin/student_records.py
+msgid "End"
+msgstr "ສິ້ນສຸດ"
+
+# key: people.fields.status_change_type
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
+msgid "Change type"
+msgstr "ປະເພດການປ່ຽນແປງ"
+
+# key: people.fields.effective_date
+# key: reference.fields.reorganization_date
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
+msgctxt "people"
+msgid "Effective date"
+msgstr "ວັນທີມີຜົນ"
+
+# key: people.fields.advisor
+# key: security.personas.advisor
+#: admin/student_records.py models/advisor.py templates/person/portal/records.html
+msgctxt "people"
+msgid "Advisor"
+msgstr "ອາຈານທີ່ປຶກສາ"
+
+# key: people.fields.advisor_role
+#: admin/student_records.py models/advisor.py
+msgid "Advisor role"
+msgstr "ບົດບາດອາຈານທີ່ປຶກສາ"
+
+# key: reference.fields.start_date
+#: admin/student_records.py models/advisor.py models/student_record.py
+msgid "Start date"
+msgstr "ວັນທີເລີ່ມ"
+
+# key: people.sections.record
+#: admin/student_records.py models/additional_program.py models/status_change.py
+msgid "Student record"
+msgstr "ບັນທຶກນັກສຶກສາ"
+
+# key: admin.audit.fields.properties
+#: admin/student_records.py
+msgid "Details"
+msgstr "ລາຍລະອຽດ"
+
+#: admin/student_records.py
+msgid "Student registered."
+msgstr "ລົງທະບຽນນັກສຶກສາແລ້ວ."
+
+# key: people.actions.register_student
+#: admin/student_records.py
+msgid "Register student"
+msgstr "ລົງທະບຽນນັກສຶກສາ"
+
+# key: people.actions.record_status_change
+#: admin/student_records.py
+msgid "Record status change"
+msgstr "ບັນທຶກການປ່ຽນສະຖານະ"
+
+# key: people.notifications.status_changed
+#: admin/student_records.py
+msgid "Status change recorded."
+msgstr "ບັນທຶກການປ່ຽນສະຖານະແລ້ວ."
+
+# key: grading.transcript.title
+#: admin/student_records.py
+msgid "Grade report"
+msgstr "ລາຍງານຜົນການຮຽນ"
+
+# key: people.actions.assign_advisor
+#: admin/student_records.py
+msgid "Assign advisor"
+msgstr "ມອບໝາຍອາຈານທີ່ປຶກສາ"
+
+# key: people.notifications.advisor_assigned
+#: admin/student_records.py
+msgid "Advisor assigned."
+msgstr "ມອບໝາຍອາຈານທີ່ປຶກສາແລ້ວ."
+
+# key: people.notifications.additional_program_ended
+#: admin/student_records.py
+msgid "Program ended."
+msgstr "ສິ້ນສຸດຫຼັກສູດແລ້ວ."
+
+# key: graduation.report_columns.enrolled
+# key: people.student_statuses.enrolled
+#: enums.py
+msgctxt "people"
+msgid "Enrolled"
+msgstr "ກຳລັງສຶກສາ"
+
+# key: people.student_statuses.on_leave
+#: enums.py
+msgid "On leave"
+msgstr "ພັກການຮຽນ"
+
+# key: admissions.application_statuses.withdrawn
+# key: people.student_statuses.withdrawn
+#: enums.py
+msgctxt "people"
+msgid "Withdrawn"
+msgstr "ລາອອກ"
+
+# key: people.student_statuses.dismissed
+#: enums.py
+msgid "Dismissed"
+msgstr "ຖືກໃຫ້ອອກ"
+
+# key: certificate.facts.graduation_date
+# key: people.student_statuses.graduated
+#: enums.py
+msgctxt "people"
+msgid "Graduated"
+msgstr "ຈົບການສຶກສາ"
+
+# key: grading.fields.requested_at
+# key: registration.fields.requested_at
+# key: people.status_change_statuses.requested
+#: enums.py
+msgctxt "people"
+msgid "Requested"
+msgstr "ຍື່ນຄຳຮ້ອງແລ້ວ"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: enums.py
+msgid "Approved"
+msgstr "ອະນຸມັດແລ້ວ"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: enums.py
+msgid "Rejected"
+msgstr "ປະຕິເສດແລ້ວ"
+
+# key: assessment.registration_statuses.cancelled
+# key: assessment.correction_statuses.cancelled
+# key: attendance.meeting_statuses.cancelled
+# key: grading.change_statuses.cancelled
+# key: offering.section_statuses.cancelled
+# key: people.status_change_statuses.cancelled
+# key: people.additional_program_request_statuses.cancelled
+#: enums.py
+msgctxt "people"
+msgid "Cancelled"
+msgstr "ຍົກເລີກແລ້ວ"
+
+# key: assessment.correction_statuses.pending
+# key: grading.change_statuses.pending
+# key: graduation.waiver_statuses.pending
+# key: people.additional_program_request_statuses.requested
+#: enums.py
+msgctxt "people"
+msgid "Pending"
+msgstr "ລໍຖ້າພິຈາລະນາ"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: enums.py
+msgid "Second major"
+msgstr "ວິຊາເອກທີສອງ"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: enums.py
+msgid "Minor"
+msgstr "ວິຊາໂທ"
+
+# key: people.advisor_roles.primary
+#: enums.py
+msgid "Primary advisor"
+msgstr "ອາຈານທີ່ປຶກສາຫຼັກ"
+
+# key: people.advisor_roles.co_advisor
+#: enums.py
+msgid "Co-advisor"
+msgstr "ອາຈານທີ່ປຶກສາຮ່ວມ"
+
+# key: people.employment_types.full_time
+#: enums.py
+msgid "Full-time"
+msgstr "ເຕັມເວລາ"
+
+# key: people.employment_types.part_time
+#: enums.py
+msgid "Part-time"
+msgstr "ບາງເວລາ"
+
+# key: people.employment_types.adjunct
+#: enums.py
+msgid "Adjunct"
+msgstr "ອາຈານພິເສດ"
+
+# key: people.employment_types.visiting
+#: enums.py
+msgid "Visiting"
+msgstr "ອາຈານຮັບເຊີນ"
+
+# key: people.employment_types.emeritus
+#: enums.py
+msgid "Emeritus"
+msgstr "ອາຈານກິດຕິມະສັກ"
+
+# key: people.genders.female
+#: enums.py
+msgid "Female"
+msgstr "ຍິງ"
+
+# key: people.genders.male
+#: enums.py
+msgid "Male"
+msgstr "ຊາຍ"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: enums.py
+msgid "Other"
+msgstr "ອື່ນໆ"
+
+# key: people.genders.undisclosed
+#: enums.py
+msgid "Not disclosed"
+msgstr "ບໍ່ເປີດເຜີຍ"
+
+# key: people.guardian_relationships.father
+#: enums.py
+msgid "Father"
+msgstr "ພໍ່"
+
+# key: people.guardian_relationships.mother
+#: enums.py
+msgid "Mother"
+msgstr "ແມ່"
+
+# key: people.guardian_relationships.guardian
+#: enums.py
+msgid "Guardian"
+msgstr "ຜູ້ປົກຄອງ"
+
+# key: people.guardian_relationships.spouse
+#: enums.py
+msgid "Spouse"
+msgstr "ຄູ່ສົມລົດ"
+
+# key: people.guardian_relationships.sibling
+#: enums.py
+msgid "Sibling"
+msgstr "ອ້າຍເອື້ອຍນ້ອງ"
+
+# key: people.guardian_relationships.grandparent
+#: enums.py
+msgid "Grandparent"
+msgstr "ປູ່ຍ່າຕາຍາຍ"
+
+# key: validation.email
+#: importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid email address."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນທີ່ຢູ່ອີເມວທີ່ຖືກຕ້ອງ."
+
+# key: people.import.unknown_program
+#: importers.py
+#, python-format
+msgid "No program with the code %(code)s."
+msgstr "ບໍ່ມີຫຼັກສູດທີ່ມີລະຫັດ %(code)s."
+
+# key: people.resources.instructors.plural_label
+#: importers.py models/instructor.py
+msgid "instructors"
+msgstr "ອາຈານ"
+
+# key: people.fields.requested_program
+#: models/additional_program.py
+msgid "Applied program"
+msgstr "ຫຼັກສູດທີ່ສະໝັກ"
+
+# key: people.fields.start_term
+#: models/additional_program.py
+msgid "Starting term"
+msgstr "ພາກຮຽນເລີ່ມຕົ້ນ"
+
+# key: people.fields.requested_at
+#: models/additional_program.py models/status_change.py
+msgid "Requested at"
+msgstr "ຍື່ນເມື່ອ"
+
+# key: people.resources.additional_program_requests.label
+#: models/additional_program.py
+msgid "second major or minor application"
+msgstr "ໃບສະໝັກວິຊາເອກທີສອງ ຫຼື ວິຊາໂທ"
+
+# key: people.resources.additional_program_requests.plural_label
+#: models/additional_program.py
+msgid "second major and minor applications"
+msgstr "ໃບສະໝັກວິຊາເອກທີສອງ ແລະ ວິຊາໂທ"
+
+# key: people.resources.instructors.label
+#: models/instructor.py
+msgid "instructor"
+msgstr "ອາຈານ"
+
+# key: people.fields.name_variants
+#: models/person.py
+msgid "Name in other languages"
+msgstr "ຊື່ໃນພາສາອື່ນ"
+
+# key: people.resources.people.label
+#: models/person.py
+msgid "person"
+msgstr "ບຸກຄົນ"
+
+# key: people.resources.people.plural_label
+#: models/person.py
+msgid "people"
+msgstr "ບຸກຄົນ"
+
+# key: people.fields.relationship
+#: models/person.py templates/person/portal/profile.html
+msgid "Relationship"
+msgstr "ຄວາມສຳພັນ"
+
+# key: people.fields.is_primary_contact
+#: models/person.py
+msgid "Primary contact"
+msgstr "ຜູ້ຕິດຕໍ່ຫຼັກ"
+
+# key: people.fields.can_student_request
+#: models/status_change.py
+msgid "Students can request"
+msgstr "ນັກສຶກສາຂໍໄດ້"
+
+# key: admin.role_assignments.fields.active
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: models/status_change.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ເປີດໃຊ້"
+
+# key: reference.fields.sort_order
+#: models/status_change.py
+msgid "Order"
+msgstr "ລຳດັບ"
+
+# key: people.resources.status_change_types.label
+#: models/status_change.py
+msgid "status change type"
+msgstr "ປະເພດການປ່ຽນສະຖານະ"
+
+# key: people.resources.status_change_types.plural_label
+#: models/status_change.py
+msgid "status change types"
+msgstr "ປະເພດການປ່ຽນສະຖານະ"
+
+# key: graduation.report_columns.term_code
+#: models/status_change.py
+msgid "Term"
+msgstr "ພາກຮຽນ"
+
+# key: people.fields.graduation_date
+#: models/student_record.py templates/person/portal/records.html
+msgid "Graduation date"
+msgstr "ວັນທີຈົບການສຶກສາ"
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "ສະບາຍດີ,"
+
+# key: people.invitations.mail_intro
+#: notifications.py
+msgid "Your school has invited you to create an account."
+msgstr "ສະຖາບັນຂອງທ່ານໄດ້ເຊີນທ່ານສ້າງບັນຊີ."
+
+# key: people.invitations.mail_expiry
+#: notifications.py
+#, python-format
+msgid "This link works until %(date)s."
+msgstr "ລິ້ງນີ້ໃຊ້ໄດ້ຈົນຮອດ %(date)s."
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ຂອບໃຈ,\n"
+"%(app)s"
+
+# key: people.invitations.mail_subject
+#: notifications.py
+#, python-format
+msgid "Create your %(app)s account"
+msgstr "ສ້າງບັນຊີ %(app)s ຂອງທ່ານ"
+
+# key: admin.settings.student_records.student_number_pattern
+#: settings_pages.py
+msgid "Student number pattern"
+msgstr "ຮູບແບບລະຫັດນັກສຶກສາ"
+
+# key: admin.settings.student_records.student_number_pattern_help
+#: settings_pages.py
+#, python-brace-format
+msgid "{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n digits. Example: {YYYY}{SEQ:5} gives 202600001."
+msgstr "{YYYY} ປີຮັບເຂົ້າ, {YY} ສອງຕົວເລກສຸດທ້າຍ, {SEQ:n} ລຳດັບເຕີມສູນໃຫ້ຄົບ n ຕົວເລກ. ຕົວຢ່າງ: {YYYY}{SEQ:5} ໃຫ້ 202600001."
+
+# key: admin.settings.student_records.invitation_valid_days
+#: settings_pages.py
+msgid "Invitation links valid for (days)"
+msgstr "ລິ້ງເຊີນໃຊ້ໄດ້ເປັນເວລາ (ວັນ)"
+
+# key: admin.settings.student_records.max_second_majors
+#: settings_pages.py
+msgid "Second majors at a time"
+msgstr "ຈຳນວນວິຊາເອກທີສອງພ້ອມກັນ"
+
+# key: admin.settings.student_records.max_minors
+#: settings_pages.py
+msgid "Minors at a time"
+msgstr "ຈຳນວນວິຊາໂທພ້ອມກັນ"
+
+# key: people.invitations.title
+#: templates/person/accept_invitation.html
+msgid "Create your account"
+msgstr "ສ້າງບັນຊີຂອງທ່ານ"
+
+# key: people.invitations.instructions
+#: templates/person/accept_invitation.html
+#, python-format
+msgid "Choose a password for %(email)s."
+msgstr "ກະລຸນາເລືອກລະຫັດຜ່ານສຳລັບ %(email)s."
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/person/accept_invitation.html
+msgid "Create account"
+msgstr "ສ້າງບັນຊີ"
+
+#: templates/person/admin/history.html
+msgid "Change history"
+msgstr "ປະຫວັດການປ່ຽນແປງ"
+
+# key: admin.audit.fields.occurred_at
+#: templates/person/admin/history.html
+msgctxt "admin"
+msgid "Time"
+msgstr "ເວລາ"
+
+# key: admin.record_changes.fields.table
+#: templates/person/admin/history.html
+msgid "Table"
+msgstr "ຕາຕະລາງ"
+
+# key: admin.record_changes.fields.operation
+#: templates/person/admin/history.html
+msgctxt "admin"
+msgid "Operation"
+msgstr "ການດຳເນີນການ"
+
+# key: admin.record_changes.fields.changed_columns
+#: templates/person/admin/history.html
+msgid "Changed columns"
+msgstr "ຖັນທີ່ປ່ຽນແປງ"
+
+# key: admin.audit.fields.actor
+#: templates/person/admin/history.html
+msgid "User"
+msgstr "ຜູ້ໃຊ້"
+
+#: templates/person/admin/history.html
+msgid "No changes recorded yet."
+msgstr "ຍັງບໍ່ມີການປ່ຽນແປງທີ່ບັນທຶກໄວ້."
+
+# key: evaluation.portal.back
+#: templates/person/admin/revealed.html
+msgid "Back"
+msgstr "ກັບຄືນ"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: templates/person/portal/advisees.html views/portal.py
+msgid "Advisees"
+msgstr "ນັກສຶກສາໃນທີ່ປຶກສາ"
+
+# key: common.none
+#: templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "common"
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: templates/person/portal/profile.html views/portal.py
+msgid "My details"
+msgstr "ຂໍ້ມູນຂອງຂ້ອຍ"
+
+# key: portal.profile.registrar_fields
+#: templates/person/portal/profile.html
+msgid "Contact the registrar's office to change your name, birth date or identity numbers."
+msgstr "ກະລຸນາຕິດຕໍ່ຫ້ອງການທະບຽນເພື່ອປ່ຽນຊື່, ວັນເດືອນປີເກີດ ຫຼື ເລກປະຈຳຕົວ."
+
+# key: common.save
+#: templates/person/portal/profile.html
+msgctxt "common"
+msgid "Save"
+msgstr "ບັນທຶກ"
+
+# key: portal.profile.remove_confirm
+#: templates/person/portal/profile.html
+msgid "Remove this guardian?"
+msgstr "ລຶບຜູ້ປົກຄອງນີ້ອອກບໍ?"
+
+# key: portal.profile.remove
+#: templates/person/portal/profile.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "ລຶບອອກ"
+
+# key: portal.profile.add_guardian
+#: templates/person/portal/profile.html
+msgid "Add guardian"
+msgstr "ເພີ່ມຜູ້ປົກຄອງ"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: templates/person/portal/records.html views/portal.py
+msgid "My records"
+msgstr "ບັນທຶກຂອງຂ້ອຍ"
+
+# key: portal.records.choose
+#: templates/person/portal/records.html
+msgid "You have more than one student record. Choose one:"
+msgstr "ທ່ານມີບັນທຶກນັກສຶກສາຫຼາຍກວ່າໜຶ່ງລາຍການ. ກະລຸນາເລືອກ:"
+
+# key: portal.records.none
+#: templates/person/portal/records.html
+msgid "You have no student record."
+msgstr "ທ່ານບໍ່ມີບັນທຶກນັກສຶກສາ."
+
+# key: portal.records.pending
+#: templates/person/portal/records.html
+#, python-format
+msgid "Pending request: %(type)s from %(date)s."
+msgstr "ຄຳຮ້ອງທີ່ລໍຖ້າພິຈາລະນາ: %(type)s ຕັ້ງແຕ່ %(date)s."
+
+# key: portal.records.cancel_confirm
+#: templates/person/portal/records.html
+msgid "Cancel this request?"
+msgstr "ຍົກເລີກຄຳຮ້ອງນີ້ບໍ?"
+
+# key: grading.actions.cancel_request
+# key: portal.records.cancel
+#: templates/person/portal/records.html
+msgctxt "portal"
+msgid "Cancel request"
+msgstr "ຍົກເລີກຄຳຮ້ອງ"
+
+# key: portal.records.request_title
+#: templates/person/portal/records.html
+msgid "Request a status change"
+msgstr "ຍື່ນຄຳຮ້ອງຂໍປ່ຽນສະຖານະ"
+
+# key: portal.records.submit_request
+#: templates/person/portal/records.html
+msgid "Submit request"
+msgstr "ສົ່ງຄຳຮ້ອງ"
+
+# key: portal.records.additional_program_request
+#: templates/person/portal/records.html
+#, python-format
+msgid "%(role)s application for %(program)s: %(status)s"
+msgstr "ໃບສະໝັກ %(role)s ສຳລັບ %(program)s: %(status)s"
+
+# key: portal.records.additional_program_open
+#: templates/person/portal/records.html
+#, python-format
+msgid "Applications for a second major or minor are open (starting %(term)s)."
+msgstr "ເປີດຮັບສະໝັກວິຊາເອກທີສອງ ຫຼື ວິຊາໂທແລ້ວ (ເລີ່ມ %(term)s)."
+
+#: templates/person/portal/records.html
+msgid "Show programs"
+msgstr "ສະແດງຫຼັກສູດ"
+
+# key: portal.records.apply_additional_program
+#: templates/person/portal/records.html
+msgctxt "portal"
+msgid "Apply"
+msgstr "ສະໝັກ"
+
+# key: authentication.fields.new_password
+#: views/invitations.py
+msgid "New password"
+msgstr "ລະຫັດຜ່ານໃໝ່"
+
+# key: authentication.fields.password_confirmation
+#: views/invitations.py
+msgid "Confirm password"
+msgstr "ຢືນຢັນລະຫັດຜ່ານ"
+
+#: views/invitations.py
+msgid "The password field confirmation does not match."
+msgstr "ການຢືນຢັນລະຫັດຜ່ານບໍ່ກົງກັນ."
+
+# key: people.invitations.accepted
+#: views/invitations.py
+msgid "Your account is ready. Welcome."
+msgstr "ບັນຊີຂອງທ່ານພ້ອມໃຊ້ແລ້ວ. ຍິນດີຕ້ອນຮັບ."
+
+# key: portal.records.request_submitted
+#: views/portal.py
+msgid "Your request was submitted. The registrar's office will review it."
+msgstr "ສົ່ງຄຳຮ້ອງຂອງທ່ານແລ້ວ. ຫ້ອງການທະບຽນຈະພິຈາລະນາ."
+
+# key: portal.records.additional_program_requested
+#: views/portal.py
+msgid "Your application was submitted. The program's office will review it."
+msgstr "ສົ່ງໃບສະໝັກຂອງທ່ານແລ້ວ. ຫ້ອງການຂອງຫຼັກສູດຈະພິຈາລະນາ."
+
+# key: portal.profile.saved
+#: views/portal.py
+msgid "Your details were saved."
+msgstr "ບັນທຶກຂໍ້ມູນຂອງທ່ານແລ້ວ."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: views/portal.py
+msgctxt "portal"
+msgid "My records"
+msgstr "ບັນທຶກຂອງຂ້ອຍ"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: views/portal.py
+msgctxt "portal"
+msgid "My details"
+msgstr "ຂໍ້ມູນຂອງຂ້ອຍ"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: views/portal.py
+msgctxt "portal"
+msgid "Advisees"
+msgstr "ນັກສຶກສາໃນທີ່ປຶກສາ"

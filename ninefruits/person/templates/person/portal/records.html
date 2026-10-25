@@ -1,0 +1,132 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}Student and alumni view of their own records (original livewire/portal/my-records).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <h1 class="text-2xl font-semibold">{% translate "My records" %}</h1>
+
+    {% if records|length > 1 %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-4">
+            <p class="mb-2 text-sm text-zinc-600">{% translate "You have more than one student record. Choose one:" %}</p>
+            <div class="flex flex-wrap gap-2">
+                {% for option in records %}
+                    <form method="post" action="{% url 'portal:records' %}">
+                        {% csrf_token %}<input type="hidden" name="action" value="choose"><input type="hidden" name="record_id" value="{{ option.pk }}">
+                        <button type="submit" class="rounded border px-3 py-2 text-sm {% if option.pk == record.pk %}border-zinc-900 bg-zinc-900 text-white{% else %}border-zinc-300{% endif %}">
+                            {{ option.student_number }} · {{ option.program.name }} · {{ option.get_status_display }}
+                        </button>
+                    </form>
+                {% endfor %}
+            </div>
+        </section>
+    {% endif %}
+
+    {% if record is None %}
+        <p class="text-sm text-zinc-600">{% translate "You have no student record." %}</p>
+    {% else %}
+        <section class="rounded-lg border border-zinc-200 bg-white p-6">
+            <dl class="grid gap-3 text-sm sm:grid-cols-[12rem_1fr]">
+                <dt class="text-zinc-500">{% translate "Student number" %}</dt><dd>{{ record.student_number }}</dd>
+                <dt class="text-zinc-500">{% translate "Program" context "security" %}</dt><dd>{{ record.program.name }}</dd>
+                <dt class="text-zinc-500">{% translate "Org unit" %}</dt><dd>{{ record.org_unit.name }}</dd>
+                <dt class="text-zinc-500">{% translate "Status" context "people" %}</dt><dd>{{ status_label }}</dd>
+                <dt class="text-zinc-500">{% translate "Year" context "people" %}</dt><dd>{{ record.year_level }}</dd>
+                <dt class="text-zinc-500">{% translate "Admission date" %}</dt><dd>{{ record.admission_date|date:"Y-m-d" }}</dd>
+                {% if record.graduation_date %}
+                    <dt class="text-zinc-500">{% translate "Graduation date" %}</dt><dd>{{ record.graduation_date|date:"Y-m-d" }}</dd>
+                {% endif %}
+                <dt class="text-zinc-500">{% translate "Advisor" context "people" %}</dt>
+                <dd>{% if advisors %}{{ advisors|join:", " }}{% else %}{% translate "None" context "common" %}{% endif %}</dd>
+            </dl>
+        </section>
+
+        {% if pending %}
+            <section class="rounded-lg border border-amber-300 bg-amber-50 p-4 text-sm">
+                {% blocktranslate with type=pending.type.name date=pending.effective_date|date:"Y-m-d" %}Pending request: {{ type }} from {{ date }}.{% endblocktranslate %}
+                <form method="post" action="{% url 'portal:records' %}" class="inline" hx-post="{% url 'portal:records' %}" hx-confirm="{% translate 'Cancel this request?' %}">
+                    {% csrf_token %}<input type="hidden" name="action" value="cancel"><input type="hidden" name="change_id" value="{{ pending.pk }}">
+                    <button type="submit" class="ms-2 underline">{% translate "Cancel request" context "portal" %}</button>
+                </form>
+            </section>
+        {% elif requestable_types %}
+            <section class="rounded-lg border border-zinc-200 bg-white p-6">
+                <h2 class="mb-4 font-medium">{% translate "Request a status change" %}</h2>
+                <form method="post" action="{% url 'portal:records' %}" class="grid gap-4 sm:grid-cols-2">
+                    {% csrf_token %}<input type="hidden" name="action" value="request_change">
+                    <div>
+                        <label for="type" class="block text-sm font-medium">{% translate "Change type" %}</label>
+                        <select id="type" name="status_change_type" required class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                            <option value="">-</option>
+                            {% for change_type in requestable_types %}<option value="{{ change_type.pk }}">{{ change_type.name }}</option>{% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <label for="effective_date" class="block text-sm font-medium">{% translate "Effective date" context "people" %}</label>
+                        <input id="effective_date" name="effective_date" type="date" value="{{ today }}" required class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                    </div>
+                    <div class="sm:col-span-2">
+                        <label for="reason" class="block text-sm font-medium">{% translate "Reason" context "common" %}</label>
+                        <textarea id="reason" name="reason" rows="3" maxlength="2000" required class="mt-1 w-full rounded border border-zinc-300 px-3 py-2"></textarea>
+                    </div>
+                    <div><button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Submit request" %}</button></div>
+                </form>
+            </section>
+        {% endif %}
+
+        <section class="space-y-3 rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="font-medium">{% translate "second majors and minors"|capfirst %}</h2>
+            {% for additional in additional_programs %}
+                <p class="text-sm">{{ additional.get_role_display }} · {{ additional.program.name }} · {{ additional.start_date|date:"Y-m-d" }} ~ {{ additional.end_date|date:"Y-m-d" }}</p>
+            {% empty %}
+                <p class="text-sm text-zinc-500">{% translate "None" context "common" %}</p>
+            {% endfor %}
+
+            {% for application in additional_requests %}
+                <p class="text-sm text-zinc-600">
+                    {% blocktranslate with role=application.get_role_display program=application.program.name status=application.get_status_display %}{{ role }} application for {{ program }}: {{ status }}{% endblocktranslate %}
+                    {% if application.decision_note %}({{ application.decision_note }}){% endif %}
+                    {% if application.status == "requested" %}
+                        <form method="post" action="{% url 'portal:records' %}" class="inline" hx-post="{% url 'portal:records' %}" hx-confirm="{% translate 'Cancel this request?' %}">
+                            {% csrf_token %}<input type="hidden" name="action" value="cancel_additional_program"><input type="hidden" name="request_id" value="{{ application.pk }}">
+                            <button type="submit" class="ms-2 underline">{% translate "Cancel request" context "portal" %}</button>
+                        </form>
+                    {% endif %}
+                </p>
+            {% endfor %}
+
+            {% if application_term %}
+                <div class="border-t border-zinc-100 pt-3">
+                    <p class="mb-3 text-sm text-zinc-600">{% blocktranslate with term=application_term.name %}Applications for a second major or minor are open (starting {{ term }}).{% endblocktranslate %}</p>
+                    <form method="get" action="{% url 'portal:records' %}" class="mb-3 flex gap-2">
+                        <select name="role" aria-label="{% translate 'Kind' context 'people' %}" class="rounded border border-zinc-300 px-3 py-2">
+                            {% for value, label in roles %}<option value="{{ value }}" {% if value == selected_role %}selected{% endif %}>{{ label }}</option>{% endfor %}
+                        </select>
+                        <button type="submit" class="rounded border border-zinc-300 px-3 py-2 text-sm">{% translate "Show programs" %}</button>
+                    </form>
+                    <form method="post" action="{% url 'portal:records' %}" class="grid gap-3 sm:grid-cols-3">
+                        {% csrf_token %}<input type="hidden" name="action" value="apply_additional_program"><input type="hidden" name="role" value="{{ selected_role }}">
+                        <select name="program" required aria-label="{% translate 'Program' context 'security' %}" class="rounded border border-zinc-300 px-3 py-2 sm:col-span-3">
+                            <option value="">-</option>
+                            {% for option in additional_options %}<option value="{{ option.pk }}">{{ option.name }}</option>{% endfor %}
+                        </select>
+                        <textarea name="statement" rows="2" maxlength="2000" placeholder="{% translate 'Statement' %}" class="rounded border border-zinc-300 px-3 py-2 sm:col-span-3"></textarea>
+                        <div class="sm:col-span-3"><button type="submit" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Apply" context "portal" %}</button></div>
+                    </form>
+                </div>
+            {% endif %}
+        </section>
+
+        <section class="rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="mb-3 font-medium">{% translate "status changes"|capfirst %}</h2>
+            {% for change in changes %}
+                <p class="border-b border-zinc-100 py-2 text-sm last:border-0">
+                    {{ change.effective_date|date:"Y-m-d" }} · {{ change.type.name }} · {{ change.get_status_display }}
+                    {% if change.decision_note %}<span class="text-zinc-500">({{ change.decision_note }})</span>{% endif %}
+                </p>
+            {% empty %}
+                <p class="text-sm text-zinc-500">{% translate "None" context "common" %}</p>
+            {% endfor %}
+        </section>
+    {% endif %}
+</div>
+{% endblock %}

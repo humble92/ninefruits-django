@@ -1,0 +1,11 @@
+{% load i18n %}
+{% comment %}Running term closes above the term record list (job_batches progress).{% endcomment %}
+{% for batch in term_close_batches %}
+    <div class="mb-4 rounded border border-base-200 px-4 py-3 text-sm dark:border-base-700" role="status" data-term-close>
+        <p class="font-medium">{% blocktranslate with term=batch.term %}Term close {{ term }} is running.{% endblocktranslate %}</p>
+        <p class="text-base-500">
+            {% blocktranslate with processed=batch.processed total=batch.total progress=batch.progress %}{{ processed }} of {{ total }} student group(s) done ({{ progress }}%).{% endblocktranslate %}
+            {% if batch.failed %}<span class="text-red-600">{% translate "A part failed: start the close again after fixing the cause." %}</span>{% endif %}
+        </p>
+    </div>
+{% endfor %}

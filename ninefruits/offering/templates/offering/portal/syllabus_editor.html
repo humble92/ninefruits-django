@@ -1,0 +1,61 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}Syllabus editor (original livewire/portal/syllabus-editor). Adding or removing an
+assessment item posts the form back without saving.{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <div>
+        <a href="{% url 'portal:section_detail' section.pk %}" class="text-sm text-zinc-600 underline">{{ section.label }}</a>
+        <h1 class="mt-1 text-2xl font-semibold">{% translate "Edit syllabus" %}: {{ section.label }} {{ section.version.title }}</h1>
+        <p class="text-sm text-zinc-600">{{ section.term.name }} · {{ section.session.name }}</p>
+    </div>
+
+    <form method="post" class="space-y-6" data-syllabus-form>
+        {% csrf_token %}
+        <section class="grid gap-4 rounded-lg border border-zinc-200 bg-white p-6 sm:grid-cols-2">
+            <div>
+                <label for="language" class="block text-sm font-medium">{% translate "Language" context "offering" %}</label>
+                <input id="language" type="text" name="language" value="{{ language }}" maxlength="16" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">
+                {% for error in errors.language %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+            </div>
+            <label class="flex items-center gap-2 text-sm sm:mt-6">
+                <input type="checkbox" name="published" value="1"{% if published %} checked{% endif %}> {% translate "Published (visible to students)" %}
+            </label>
+            {% for part in parts %}
+                <div class="sm:col-span-2">
+                    <label for="{{ part.key }}" class="block text-sm font-medium">{{ part.label }}</label>
+                    <textarea id="{{ part.key }}" name="{{ part.key }}" rows="4" maxlength="5000" class="mt-1 w-full rounded border border-zinc-300 px-3 py-2">{{ part.value }}</textarea>
+                    {% for error in part.errors %}<p class="mt-1 text-sm text-red-600">{{ error }}</p>{% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+
+        <section class="rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="mb-3 font-medium">{% translate "Assessment" %}</h2>
+            {% for item in assessment %}
+                <div class="mb-2 flex flex-wrap gap-2">
+                    <input type="text" name="assessment_item" value="{{ item.item|default:'' }}" placeholder="{% translate 'Item' %}" aria-label="{% translate 'Item' %}" class="min-w-0 flex-1 rounded border border-zinc-300 px-3 py-2">
+                    <input type="number" name="assessment_weight" value="{{ item.weight|default_if_none:'' }}" min="0" max="100" step="any" placeholder="%" aria-label="{% translate 'Weight' %}" class="w-24 rounded border border-zinc-300 px-3 py-2">
+                    <button type="submit" name="remove_assessment" value="{{ item.index }}" formnovalidate class="text-sm text-red-700 underline">{% translate "Remove" context "portal" %}</button>
+                    {% for error in item.errors %}<p class="w-full text-sm text-red-600">{{ error }}</p>{% endfor %}
+                </div>
+            {% endfor %}
+            <button type="submit" name="add_assessment" value="1" formnovalidate class="text-sm underline">{% translate "Add item" %}</button>
+        </section>
+
+        <section class="rounded-lg border border-zinc-200 bg-white p-6">
+            <h2 class="mb-3 font-medium">{% translate "Weekly plan" %}</h2>
+            {% for week in weekly_plan %}
+                <div class="mb-2 flex flex-wrap items-center gap-2">
+                    <input type="hidden" name="week" value="{{ week.week }}">
+                    <span class="w-16 text-sm text-zinc-500">{% blocktranslate with week=week.week %}Week {{ week }}{% endblocktranslate %}</span>
+                    <input type="text" name="topic" value="{{ week.topic }}" maxlength="500" aria-label="{% blocktranslate with week=week.week %}Week {{ week }}{% endblocktranslate %}" class="min-w-0 flex-1 rounded border border-zinc-300 px-3 py-2">
+                    {% for error in week.errors %}<p class="w-full text-sm text-red-600">{{ error }}</p>{% endfor %}
+                </div>
+            {% endfor %}
+        </section>
+
+        <button type="submit" name="save" value="1" class="rounded bg-zinc-900 px-4 py-2 text-sm font-medium text-white">{% translate "Save" %}</button>
+    </form>
+</div>
+{% endblock %}

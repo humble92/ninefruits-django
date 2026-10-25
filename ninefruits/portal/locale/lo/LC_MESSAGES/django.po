@@ -1,0 +1,305 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ninefruits/portal/menu.py ninefruits/portal/views/dashboard.py
+msgctxt "portal"
+msgid "Home"
+msgstr "ໜ້າຫຼັກ"
+
+#: ninefruits/portal/menu.py
+msgctxt "portal"
+msgid "Security"
+msgstr "ຄວາມປອດໄພ"
+
+#: ninefruits/portal/menu.py ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Administration"
+msgstr "ການບໍລິຫານ"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+#, python-format
+msgctxt "portal"
+msgid "Welcome, %(name)s"
+msgstr "ຍິນດີຕ້ອນຮັບ, %(name)s"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Your access"
+msgstr "ສິດການເຂົ້າເຖິງຂອງທ່ານ"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Roles"
+msgstr "ບົດບາດ"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "common"
+msgid "None"
+msgstr "ບໍ່ມີ"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Personas"
+msgstr "ສະຖານະຜູ້ໃຊ້"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/portal/templates/portal/security.html
+#: ninefruits/portal/views/security.py
+msgid "Two-factor authentication"
+msgstr "ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: security.mfa.description
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Two-factor authentication protects your account with a code from an "
+"authenticator app in addition to your password."
+msgstr "ການຢືນຢັນສອງຂັ້ນຕອນປົກປ້ອງບັນຊີຂອງທ່ານດ້ວຍລະຫັດຈາກແອັບຢືນຢັນຕົວຕົນ ນອກເໜືອຈາກລະຫັດຜ່ານ."
+
+# key: security.mfa.enrollment_required
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Two-factor authentication is required for your account. Please set it up to "
+"continue."
+msgstr "ບັນຊີຂອງທ່ານຈຳເປັນຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ. ກະລຸນາຕັ້ງຄ່າເພື່ອດຳເນີນການຕໍ່."
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/portal/templates/portal/security.html
+msgid "Authenticator app"
+msgstr "ແອັບຢືນຢັນຕົວຕົນ"
+
+# key: security.mfa.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is enabled."
+msgstr "ເປີດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນແລ້ວ."
+
+# key: security.mfa.regenerate_recovery_codes
+#: ninefruits/portal/templates/portal/security.html
+msgid "Generate new recovery codes"
+msgstr "ສ້າງລະຫັດກູ້ຄືນໃໝ່"
+
+# key: security.mfa.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Disable two-factor authentication?"
+msgstr "ປິດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນບໍ?"
+
+# key: security.mfa.disable
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Disable"
+msgstr "ປິດໃຊ້"
+
+# key: security.mfa.scan_qr_code
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Scan this QR code with your authenticator app, then enter the code it shows."
+msgstr "ສະແກນລະຫັດ QR ນີ້ດ້ວຍແອັບຢືນຢັນຕົວຕົນຂອງທ່ານ, ແລ້ວປ້ອນລະຫັດທີ່ສະແດງ."
+
+# key: security.mfa.setup_key
+#: ninefruits/portal/templates/portal/security.html
+msgid "Setup key"
+msgstr "ຄີຕັ້ງຄ່າ"
+
+# key: authentication.two_factor.code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "ລະຫັດ"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "ຢືນຢັນ"
+
+# key: security.mfa.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Enable two-factor authentication"
+msgstr "ເປີດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ"
+
+# key: security.mfa.recovery_codes_instructions
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Store these recovery codes in a safe place. Each can be used once if you "
+"lose your device."
+msgstr "ກະລຸນາເກັບລະຫັດກູ້ຄືນເຫຼົ່ານີ້ໄວ້ໃນບ່ອນປອດໄພ. ແຕ່ລະລະຫັດໃຊ້ໄດ້ຄັ້ງດຽວຖ້າທ່ານເສຍອຸປະກອນ."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email code"
+msgstr "ລະຫັດທາງອີເມວ"
+
+# key: security.email_code.description
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid ""
+"Receive a one-time code at %(email)s each time you sign in. Less secure than "
+"an authenticator app; use it if you cannot install one."
+msgstr ""
+"ຮັບລະຫັດໃຊ້ຄັ້ງດຽວທີ່ %(email)s ທຸກຄັ້ງທີ່ເຂົ້າສູ່ລະບົບ. ປອດໄພໜ້ອຍກວ່າແອັບຢືນຢັນຕົວຕົນ; "
+"ໃຊ້ເມື່ອທ່ານບໍ່ສາມາດຕິດຕັ້ງແອັບໄດ້."
+
+# key: security.email_code.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email codes are turned on."
+msgstr "ເປີດໃຊ້ລະຫັດທາງອີເມວແລ້ວ."
+
+# key: security.email_code.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Turn off email codes?"
+msgstr "ປິດໃຊ້ລະຫັດທາງອີເມວບໍ?"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "ລະຫັດທາງອີເມວ"
+
+# key: authentication.two_factor.resend_email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a new code"
+msgstr "ສົ່ງລະຫັດໃໝ່"
+
+# key: security.email_code.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a code to set up"
+msgstr "ສົ່ງລະຫັດເພື່ອຕັ້ງຄ່າ"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Remembered devices"
+msgstr "ອຸປະກອນທີ່ຈື່ໄວ້"
+
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s day."
+msgid_plural ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s days."
+msgstr[0] ""
+"ເມື່ອທ່ານເລືອກ \"ຈື່ອຸປະກອນນີ້\" ຕອນເຂົ້າສູ່ລະບົບ, ບຣາວເຊີນີ້ຈະບໍ່ຖາມລະຫັດເປັນເວລາ %(days)s ມື້."
+msgstr[1] ""
+"ເມື່ອທ່ານເລືອກ \"ຈື່ອຸປະກອນນີ້\" ຕອນເຂົ້າສູ່ລະບົບ, ບຣາວເຊີນີ້ຈະບໍ່ຖາມລະຫັດເປັນເວລາ %(days)s ມື້."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Changing your two-factor setup forgets every remembered device."
+msgstr "ການປ່ຽນການຕັ້ງຄ່າການຢືນຢັນສອງຂັ້ນຕອນຈະລືມອຸປະກອນທີ່ຈື່ໄວ້ທັງໝົດ."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Forget this device"
+msgstr "ລືມອຸປະກອນນີ້"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "This device is not remembered."
+msgstr "ອຸປະກອນນີ້ບໍ່ໄດ້ຖືກຈື່ໄວ້."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Change password"
+msgstr "ປ່ຽນລະຫັດຜ່ານ"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Your password was changed. Other sessions were signed out."
+msgstr "ປ່ຽນລະຫັດຜ່ານແລ້ວ. ເຊດຊັນອື່ນໄດ້ອອກຈາກລະບົບແລ້ວ."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Current password"
+msgstr "ລະຫັດຜ່ານປັດຈຸບັນ"
+
+# key: authentication.fields.new_password
+#: ninefruits/portal/templates/portal/security.html
+msgid "New password"
+msgstr "ລະຫັດຜ່ານໃໝ່"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/portal/templates/portal/security.html
+msgid "Confirm password"
+msgstr "ຢືນຢັນລະຫັດຜ່ານ"
+
+# key: security.sso.title
+#: ninefruits/portal/templates/portal/security.html
+msgid "School sign-in"
+msgstr "ການເຂົ້າສູ່ລະບົບຂອງສະຖາບັນ"
+
+# key: security.sso.help
+#: ninefruits/portal/templates/portal/security.html
+msgid "Link your school account to sign in with it."
+msgstr "ເຊື່ອມຕໍ່ບັນຊີຂອງສະຖາບັນເພື່ອໃຊ້ເຂົ້າສູ່ລະບົບ."
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/portal/templates/portal/security.html
+msgid "Linked"
+msgstr "ເຊື່ອມຕໍ່ແລ້ວ"
+
+# key: security.sso.unlink_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink this school account? You will need your password to sign in."
+msgstr "ຍົກເລີກການເຊື່ອມຕໍ່ບັນຊີຂອງສະຖາບັນນີ້ບໍ? ທ່ານຈະຕ້ອງໃຊ້ລະຫັດຜ່ານເພື່ອເຂົ້າສູ່ລະບົບ."
+
+# key: security.sso.unlink
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink"
+msgstr "ຍົກເລີກການເຊື່ອມຕໍ່"
+
+# key: security.sso.link
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Link"
+msgstr "ເຊື່ອມຕໍ່"
+
+#: ninefruits/portal/templatetags/portal.py
+#, python-format
+msgctxt "security"
+msgid ""
+"Two-factor authentication is required for your account. Please set it up by "
+"%(date)s."
+msgstr "ບັນຊີຂອງທ່ານຈຳເປັນຕ້ອງໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນ. ກະລຸນາຕັ້ງຄ່າພາຍໃນ %(date)s."
+
+#: ninefruits/portal/templatetags/portal.py
+msgctxt "security"
+msgid "We recommend enabling two-factor authentication for your account."
+msgstr "ພວກເຮົາແນະນຳໃຫ້ເປີດໃຊ້ການຢືນຢັນສອງຂັ້ນຕອນສຳລັບບັນຊີຂອງທ່ານ."
+
+#: ninefruits/portal/views/security.py
+msgid "Start the setup again."
+msgstr "ກະລຸນາເລີ່ມການຕັ້ງຄ່າໃໝ່."
+
+#: ninefruits/portal/views/security.py
+msgid "The code must be 6 digits."
+msgstr "ລະຫັດຕ້ອງມີ 6 ຕົວເລກ."
+
+# key: security.email_code.not_allowed
+#: ninefruits/portal/views/security.py
+msgid "Email codes are not available at this institution."
+msgstr "ລະຫັດທາງອີເມວບໍ່ມີໃຫ້ໃຊ້ໃນສະຖາບັນນີ້."
+
+# key: security.email_code.wait
+#: ninefruits/portal/views/security.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "ກະລຸນາລໍຖ້າ %(seconds)s ວິນາທີກ່ອນຂໍລະຫັດໃໝ່."
+
+#: ninefruits/portal/views/security.py
+msgid "The email code must be 6 digits."
+msgstr "ລະຫັດອີເມວຕ້ອງມີ 6 ຕົວເລກ."

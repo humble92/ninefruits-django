@@ -1,0 +1,37 @@
+{% load i18n %}
+{% comment %}SSO providers editor (original Filament Repeater). The last row adds a provider; client
+secrets are never shown and an empty secret keeps the stored one.{% endcomment %}
+<div class="flex flex-col gap-4" data-sso-providers>
+    {% for row in widget.rows %}
+        <div class="grid gap-3 rounded-default border border-base-200 p-4 md:grid-cols-2 dark:border-base-800">
+            {% with prefix=row.prefix values=row.values %}
+            <label class="text-sm">{% translate "Key" context "security" %}
+                <input type="text" name="{{ prefix }}-key" value="{{ values.key }}" maxlength="32" class="mt-1 block w-full rounded-default border border-base-200 px-3 py-2 dark:border-base-700 dark:bg-base-900">
+            </label>
+            <label class="text-sm">{% translate "Button label" %}
+                <input type="text" name="{{ prefix }}-label" value="{{ values.label|default:'' }}" maxlength="64" class="mt-1 block w-full rounded-default border border-base-200 px-3 py-2 dark:border-base-700 dark:bg-base-900">
+            </label>
+            <label class="text-sm md:col-span-2">{% translate "Issuer URL" %}
+                <input type="url" name="{{ prefix }}-issuer" value="{{ values.issuer|default:'' }}" class="mt-1 block w-full rounded-default border border-base-200 px-3 py-2 dark:border-base-700 dark:bg-base-900">
+            </label>
+            <label class="text-sm">{% translate "Client ID" %}
+                <input type="text" name="{{ prefix }}-client_id" value="{{ values.client_id|default:'' }}" class="mt-1 block w-full rounded-default border border-base-200 px-3 py-2 dark:border-base-700 dark:bg-base-900">
+            </label>
+            <label class="text-sm">{% translate "Client secret" %}
+                <input type="password" name="{{ prefix }}-client_secret" value="" autocomplete="new-password" class="mt-1 block w-full rounded-default border border-base-200 px-3 py-2 dark:border-base-700 dark:bg-base-900">
+                <span class="mt-1 block text-xs text-font-subtle-light dark:text-font-subtle-dark">{% translate "Stored encrypted. Leave empty to keep the stored value." %}</span>
+            </label>
+            <label class="text-sm">{% translate "Scopes" %}
+                <input type="text" name="{{ prefix }}-scopes" value="{{ values.scopes|default:'' }}" class="mt-1 block w-full rounded-default border border-base-200 px-3 py-2 dark:border-base-700 dark:bg-base-900">
+            </label>
+            <div class="flex flex-col gap-2 text-sm">
+                <label class="flex items-center gap-2"><input type="checkbox" name="{{ prefix }}-trusts_mfa" value="1" {% if values.trusts_mfa %}checked{% endif %}> {% translate "Counts as two-factor authentication" %}</label>
+                <span class="text-xs text-font-subtle-light dark:text-font-subtle-dark">{% translate "Turn on only if the school's sign-in itself requires two-factor authentication." %}</span>
+                <label class="flex items-center gap-2"><input type="checkbox" name="{{ prefix }}-is_enabled" value="1" {% if values.is_enabled %}checked{% endif %}> {% translate "Active" %}</label>
+                {% if values.key %}<label class="flex items-center gap-2 text-red-600"><input type="checkbox" name="{{ prefix }}-delete" value="1"> {% translate "Remove this provider" %}</label>{% endif %}
+            </div>
+            {% endwith %}
+        </div>
+    {% endfor %}
+    <p class="text-xs text-font-subtle-light dark:text-font-subtle-dark">{% translate "Redirect URI to register with the provider" %}: <code>{{ widget.redirect_uri }}</code></p>
+</div>

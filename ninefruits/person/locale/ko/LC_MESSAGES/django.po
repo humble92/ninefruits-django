@@ -1,0 +1,1330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 20:15+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: people.errors.additional_program_not_offered
+#: actions/additional_programs.py
+msgid "This program does not accept that kind of application."
+msgstr "이 프로그램은 해당 신청을 받지 않습니다."
+
+# key: people.errors.additional_program_already_held
+#: actions/additional_programs.py
+msgid "You already follow this program."
+msgstr "이미 이수 중인 프로그램입니다."
+
+# key: people.errors.additional_program_limit
+#: actions/additional_programs.py
+#, python-format
+msgid "You can have at most %(count)s at a time (including pending applications)."
+msgstr "동시에 %(count)s개까지 가능합니다(처리 중인 신청 포함)."
+
+# key: people.errors.not_own_record
+#: actions/additional_programs.py actions/status_changes.py
+msgid "You can only make requests for your own record."
+msgstr "본인 학적에 대해서만 신청할 수 있습니다."
+
+# key: people.errors.additional_program_inactive_record
+#: actions/additional_programs.py
+msgid "Only current students can apply."
+msgstr "재학 중인 학생만 신청할 수 있습니다."
+
+# key: people.errors.additional_program_window_closed
+#: actions/additional_programs.py
+msgid "Applications for a second major or minor are not open for you now."
+msgstr "지금은 복수전공·부전공 신청 기간이 아닙니다."
+
+# key: people.errors.additional_program_pending
+#: actions/additional_programs.py
+msgid "There is already a pending application for this program."
+msgstr "이 프로그램에 처리 중인 신청이 이미 있습니다."
+
+# key: people.errors.already_decided
+#: actions/additional_programs.py actions/status_changes.py
+msgid "This request has already been decided."
+msgstr "이미 처리된 신청입니다."
+
+# key: people.errors.own_request
+#: actions/additional_programs.py actions/status_changes.py
+msgid "You cannot decide a request you made yourself."
+msgstr "본인이 신청한 건은 처리할 수 없습니다."
+
+# key: people.errors.additional_program_end_invalid
+#: actions/additional_programs.py
+msgid "This program has already ended, or the date is before it started."
+msgstr "이미 종료되었거나 시작일보다 이른 날짜입니다."
+
+# key: people.errors.instructor_not_current
+#: actions/advisors.py
+msgid "This instructor is not currently employed."
+msgstr "재직 중인 교원이 아닙니다."
+
+# key: people.errors.already_has_account
+#: actions/invitations.py
+msgid "This person already has an account."
+msgstr "이미 계정이 있는 인물입니다."
+
+# key: people.errors.email_in_use
+#: actions/invitations.py
+msgid "Another account uses this email."
+msgstr "다른 계정이 사용 중인 이메일입니다."
+
+# key: people.invitations.invalid
+#: actions/invitations.py templates/person/accept_invitation.html
+msgid "This invitation link is invalid or has expired. Ask the school office for a new one."
+msgstr "잘못되었거나 만료된 링크입니다. 학교에 새 안내를 요청하세요."
+
+# key: people.errors.merge_invalid
+#: actions/merge.py
+msgid "Choose a different person who has not been merged."
+msgstr "병합되지 않은 다른 인물을 선택하세요."
+
+# key: people.errors.merge_two_instructors
+#: actions/merge.py
+msgid "Both people have instructor records. Merge the instructor records first."
+msgstr "두 인물 모두 교원 정보가 있습니다. 교원 정보를 먼저 정리하세요."
+
+# key: people.errors.merge_two_open_applications
+#: actions/merge.py
+msgid "Both people have an open application in the same admission cycle. Withdraw one first."
+msgstr "두 인물 모두 같은 모집 회차에 진행 중인 지원서가 있습니다. 하나를 먼저 포기 처리하세요."
+
+# key: people.errors.type_not_applicable
+#: actions/status_changes.py
+#, python-format
+msgid "This change does not apply to a student who is %(status)s."
+msgstr "현재 상태(%(status)s)에서는 신청할 수 없는 변동입니다."
+
+# key: people.errors.not_requestable
+#: actions/status_changes.py
+msgid "Students cannot request this type of change."
+msgstr "학생이 신청할 수 없는 변동 유형입니다."
+
+# key: people.errors.request_pending
+#: actions/status_changes.py
+msgid "There is already a pending request for this record."
+msgstr "이 학적에 처리 중인 신청이 이미 있습니다."
+
+# key: people.errors.status_changed_meanwhile
+#: actions/status_changes.py
+msgid "The student's status changed after the request was made. Reject it and ask for a new request."
+msgstr "신청 후 학적 상태가 바뀌었습니다. 반려하고 다시 신청하도록 안내하세요."
+
+# key: people.errors.person_merged
+#: actions/students.py
+msgid "This person was merged into another person. Use that person instead."
+msgstr "다른 인물로 병합된 인물입니다. 병합된 인물을 사용하세요."
+
+#: actions/students.py
+msgid "Enter a valid date."
+msgstr "올바른 날짜를 입력하세요."
+
+# key: people.errors.program_not_effective
+#: actions/students.py
+msgid "The program is not in effect on the admission date."
+msgstr "입학일에 유효한 프로그램이 아닙니다."
+
+# key: people.errors.student_number_taken
+#: actions/students.py
+msgid "This student number is already used."
+msgstr "이미 사용 중인 학번입니다."
+
+# key: common.reason
+#: admin/common.py templates/person/portal/records.html
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: admissions.fields.decision_note
+# key: people.fields.decision_note
+#: admin/common.py models/additional_program.py models/status_change.py
+msgctxt "people"
+msgid "Decision note"
+msgstr "처리 의견"
+
+# key: people.fields.employee_number
+#: admin/instructors.py models/instructor.py
+msgid "Employee number"
+msgstr "교직원 번호"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: admin/instructors.py models/instructor.py models/student_record.py templates/person/portal/records.html
+msgid "Org unit"
+msgstr "조직 단위"
+
+# key: people.fields.employment_type
+#: admin/instructors.py models/instructor.py
+msgid "Employment type"
+msgstr "고용 구분"
+
+# key: people.fields.academic_title
+#: admin/instructors.py models/instructor.py
+msgid "Academic title"
+msgstr "직위"
+
+# key: people.fields.hire_date
+#: admin/instructors.py models/instructor.py
+msgid "Hire date"
+msgstr "임용일"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: admin/instructors.py admin/student_records.py models/advisor.py models/instructor.py models/student_record.py
+msgid "End date"
+msgstr "종료일"
+
+# key: validation.after_or_equal
+#: admin/instructors.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s은(는) %(date)s 이후 날짜이거나 같은 날짜여야 합니다."
+
+#: admin/instructors.py
+msgid "The employee number has already been taken."
+msgstr "이미 사용 중인 교번입니다."
+
+# key: people.sections.person
+# key: people.fields.person
+#: admin/instructors.py admin/student_records.py models/instructor.py models/student_record.py
+msgid "Person"
+msgstr "인물"
+
+# key: people.fields.new_person
+#: admin/instructors.py admin/student_records.py
+msgid "New person"
+msgstr "새 인물"
+
+# key: people.fields.existing_person
+#: admin/instructors.py admin/student_records.py
+msgid "Existing person"
+msgstr "기존 인물"
+
+#: admin/instructors.py admin/student_records.py
+msgid "This field is required."
+msgstr "필수 항목입니다."
+
+# key: people.filters.current_instructors
+#: admin/instructors.py
+msgid "Current instructors only"
+msgstr "재직 교원만"
+
+# key: common.yes
+#: admin/instructors.py admin/people.py
+msgid "Yes"
+msgstr "예"
+
+#: admin/instructors.py admin/people.py
+msgid "No"
+msgstr "아니요"
+
+# key: admin.users.fields.name
+# key: people.sections.name
+# key: people.fields.name
+# key: reference.fields.name
+#: admin/instructors.py admin/people.py admin/requests.py admin/student_records.py models/person.py models/status_change.py templates/person/portal/advisees.html templates/person/portal/profile.html
+msgctxt "people"
+msgid "Name"
+msgstr "이름"
+
+#: admin/instructors.py
+msgid "Instructor created."
+msgstr "교원을 등록했습니다."
+
+#: admin/instructors.py
+msgid "New instructor"
+msgstr "교원 등록"
+
+# key: people.fields.from_statuses
+#: admin/instructors.py models/status_change.py
+msgid "Allowed from statuses"
+msgstr "변동 가능한 현재 상태"
+
+# key: validation.not_regex
+# key: validation.regex
+#: admin/instructors.py
+#, python-format
+msgctxt "validation.regex"
+msgid "The %(attribute)s field format is invalid."
+msgstr "%(attribute)s 형식이 올바르지 않습니다."
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: admin/instructors.py models/status_change.py
+msgctxt "reference"
+msgid "Code"
+msgstr "코드"
+
+# key: people.fields.new_status
+#: admin/instructors.py admin/requests.py models/status_change.py
+msgid "New status"
+msgstr "변동 후 상태"
+
+# key: people.fields.family_name
+#: admin/people.py models/person.py
+msgid "Family name"
+msgstr "성(로마자)"
+
+# key: people.help.romanized
+#: admin/people.py
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "여권과 같은 로마자 법적 이름. 한글 등 다른 언어 이름은 아래 언어별 이름에 입력한다."
+
+# key: people.fields.given_name
+#: admin/people.py models/person.py
+msgid "Given name"
+msgstr "이름(로마자)"
+
+# key: people.help.national_id_keep
+#: admin/people.py
+msgid "Leave empty to keep the stored value. Enter a new value to replace it."
+msgstr "비워 두면 저장된 값을 유지한다. 새 값을 입력하면 바뀐다."
+
+# key: people.help.encrypted
+#: admin/people.py
+msgid "Stored encrypted. Shown masked; revealing it is logged."
+msgstr "암호화하여 저장한다. 가려서 표시하며, 전체 보기는 기록된다."
+
+# key: people.fields.birth_date
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "Birth date"
+msgstr "생년월일"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: admin/people.py models/person.py
+msgid "Gender"
+msgstr "성별"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: admin/people.py models/person.py
+msgid "Nationality"
+msgstr "국적"
+
+# key: people.fields.ethnicity
+#: admin/people.py models/person.py
+msgid "Ethnicity"
+msgstr "민족"
+
+# key: people.fields.national_id
+#: admin/people.py
+msgid "National ID number"
+msgstr "주민등록번호"
+
+# key: people.fields.passport_number
+#: admin/people.py
+msgid "Passport number"
+msgstr "여권번호"
+
+# key: people.fields.contact_email
+#: admin/people.py models/person.py views/portal.py
+msgid "Contact email"
+msgstr "연락용 이메일"
+
+# key: people.fields.phone
+#: admin/people.py models/person.py templates/person/portal/profile.html views/portal.py
+msgid "Phone"
+msgstr "전화번호"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "Address"
+msgstr "주소"
+
+# key: people.fields.postal_code
+#: admin/people.py models/person.py views/portal.py
+msgid "Postal code"
+msgstr "우편번호"
+
+#: admin/people.py
+msgid "The birth date must not be in the future."
+msgstr "생년월일은 오늘 이후일 수 없습니다."
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: admin/people.py
+msgid "Photo"
+msgstr "사진"
+
+#: admin/people.py
+msgid "JPEG, PNG or WebP, at most 2 MB."
+msgstr "JPEG, PNG 또는 WebP, 최대 2MB."
+
+#: admin/people.py
+msgid "The photo must not be larger than 2 MB."
+msgstr "사진은 2MB를 넘을 수 없습니다."
+
+# key: people.resources.guardians.label
+#: admin/people.py models/person.py
+msgid "guardian"
+msgstr "보호자"
+
+# key: people.resources.guardians.plural_label
+#: admin/people.py models/person.py templates/person/portal/profile.html
+msgid "guardians"
+msgstr "보호자"
+
+# key: people.resources.student_records.label
+#: admin/people.py models/student_record.py
+msgid "student record"
+msgstr "학적"
+
+# key: people.resources.student_records.plural_label
+#: admin/people.py importers.py models/student_record.py
+msgid "student records"
+msgstr "학적"
+
+# key: admissions.fields.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+# key: people.fields.status
+#: admin/people.py admin/student_records.py models/status_change.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "people"
+msgid "Status"
+msgstr "학적 상태"
+
+# key: people.fields.login_email
+#: admin/people.py models/invitation.py
+msgid "Sign-in email"
+msgstr "로그인 이메일"
+
+# key: people.help.invitation_email
+#: admin/people.py
+msgid "The invitation link is sent here. This becomes the sign-in email."
+msgstr "가입 링크를 이 주소로 보낸다. 이 주소가 로그인 이메일이 된다."
+
+# key: people.fields.merge_target
+#: admin/people.py
+msgid "Keep this person"
+msgstr "남길 인물"
+
+# key: people.filters.merged
+#: admin/people.py
+msgctxt "people"
+msgid "Merged"
+msgstr "병합됨"
+
+# key: security.scope_types.global
+#: admin/people.py
+msgid "All"
+msgstr "전체"
+
+# key: admin.settings.student_records.title
+# key: permissions.resources.student_records
+#: admin/people.py settings_pages.py
+msgid "Student records"
+msgstr "학적"
+
+# key: people.sections.account
+# key: people.fields.has_account
+#: admin/people.py
+msgid "Account"
+msgstr "계정"
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: admin/people.py
+msgid "Personal details"
+msgstr "인적 사항"
+
+# key: people.sections.contact
+#: admin/people.py
+msgid "Contact"
+msgstr "연락처"
+
+# key: people.fields.romanized_name
+#: admin/people.py
+msgid "Romanized name"
+msgstr "로마자 이름"
+
+# key: people.fields.no_account
+#: admin/people.py
+msgid "No account"
+msgstr "계정 없음"
+
+# key: people.fields.merged_into
+#: admin/people.py models/person.py
+msgid "Merged into"
+msgstr "병합 대상"
+
+# key: people.actions.reveal_national_id
+#: admin/people.py
+msgid "Show national ID number"
+msgstr "주민등록번호 보기"
+
+# key: people.help.reveal
+#: admin/people.py templates/person/admin/revealed.html
+msgid "The full value is shown once and the reveal is recorded in the security log."
+msgstr "전체 값을 한 번 보여 주며, 보안 로그에 기록된다."
+
+# key: people.actions.reveal_passport_number
+#: admin/people.py
+msgid "Show passport number"
+msgstr "여권번호 보기"
+
+# key: people.actions.invite
+#: admin/people.py
+msgid "Invite to create an account"
+msgstr "계정 가입 안내 보내기"
+
+# key: people.notifications.invited
+#: admin/people.py
+msgid "Invitation sent."
+msgstr "가입 안내를 보냈습니다."
+
+# key: people.actions.merge
+#: admin/people.py
+msgid "Merge duplicate"
+msgstr "중복 인물 병합"
+
+# key: people.notifications.merged
+#: admin/people.py
+msgid "People merged."
+msgstr "인물을 병합했습니다."
+
+# key: people.help.merge
+#: admin/people.py
+msgid "The other person's student records, instructor record, guardians and account move to the person you keep. The other person is marked as merged and cannot be used again. This cannot be undone."
+msgstr "다른 인물의 학적, 교원 정보, 보호자, 계정을 남길 인물로 옮긴다. 다른 인물은 병합됨으로 표시되어 더 이상 쓸 수 없다. 되돌릴 수 없다."
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: admin/requests.py admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgid "Student number"
+msgstr "학번"
+
+# key: people.fields.request_status
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgid "Request status"
+msgstr "처리 상태"
+
+# key: common.reason
+#: admin/requests.py models/status_change.py
+msgid "Reason"
+msgstr "사유"
+
+# key: grading.fields.requested_by
+# key: people.fields.requested_by
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgctxt "people"
+msgid "Requested by"
+msgstr "신청자"
+
+# key: grading.fields.decided_by
+# key: people.fields.decided_by
+#: admin/requests.py models/additional_program.py models/status_change.py
+msgctxt "people"
+msgid "Decided by"
+msgstr "처리자"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: admin/requests.py
+msgid "Approve"
+msgstr "승인"
+
+# key: people.notifications.approved
+#: admin/requests.py
+msgid "Request approved."
+msgstr "신청을 승인했습니다."
+
+# key: grading.actions.reject
+# key: people.actions.reject
+#: admin/requests.py
+msgctxt "people"
+msgid "Reject"
+msgstr "반려"
+
+# key: people.notifications.rejected
+#: admin/requests.py
+msgid "Request rejected."
+msgstr "신청을 반려했습니다."
+
+# key: curriculum.program_roles.primary
+# key: people.fields.primary_program
+#: admin/requests.py
+msgctxt "people"
+msgid "Primary program"
+msgstr "주전공"
+
+# key: assessment.fields.type
+# key: certificate.fields.type
+# key: people.fields.program_role
+#: admin/requests.py models/additional_program.py models/student_record.py templates/person/portal/records.html
+msgctxt "people"
+msgid "Kind"
+msgstr "구분"
+
+# key: people.fields.statement
+#: admin/requests.py models/additional_program.py templates/person/portal/records.html
+msgid "Statement"
+msgstr "신청 사유"
+
+# key: people.fields.catalog_year
+#: admin/student_records.py models/student_record.py
+msgid "Catalog year"
+msgstr "교육과정 적용 연도"
+
+# key: people.help.catalog_year
+#: admin/student_records.py
+msgid "Year of the curriculum that applies to this student, usually the admission year."
+msgstr "이 학생에게 적용할 교육과정 연도. 보통 입학 연도."
+
+# key: certificate.facts.year_level
+# key: graduation.report_columns.year_level
+# key: people.fields.year_level
+#: admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "people"
+msgid "Year"
+msgstr "학년"
+
+# key: people.fields.admission_type
+#: admin/student_records.py models/student_record.py
+msgid "Admission type"
+msgstr "입학 구분"
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: admin/student_records.py models/student_record.py
+msgid "Admission term"
+msgstr "입학 학기"
+
+# key: people.fields.institutional_email
+#: admin/student_records.py models/student_record.py
+msgid "School email"
+msgstr "학교 이메일"
+
+# key: people.help.institutional_email
+#: admin/student_records.py
+msgid "School email address. Used to link school sign-in (SSO) accounts automatically when enabled."
+msgstr "학교 이메일 주소. 설정에 따라 학교 통합 로그인(SSO) 계정 자동 연결에 쓰인다."
+
+# key: people.fields.tags
+#: admin/student_records.py models/student_record.py
+msgid "Tags"
+msgstr "태그"
+
+# key: people.help.tags
+#: admin/student_records.py
+msgid "Free labels for grouping, e.g. scholarship programs."
+msgstr "장학 프로그램 등 묶음을 위한 자유 라벨."
+
+# key: certificate.facts.program
+# key: graduation.report_columns.program_name
+# key: security.scope_types.program
+#: admin/student_records.py models/student_record.py templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "security"
+msgid "Program"
+msgstr "프로그램"
+
+# key: people.fields.admission_date
+#: admin/student_records.py models/student_record.py templates/person/portal/records.html
+msgid "Admission date"
+msgstr "입학일"
+
+# key: people.help.student_number_generated
+#: admin/student_records.py
+msgid "Leave empty to generate one with the student number pattern."
+msgstr "비워 두면 학번 형식에 따라 자동으로 만든다."
+
+# key: people.resources.status_changes.label
+#: admin/student_records.py models/status_change.py
+msgid "status change"
+msgstr "학적 변동"
+
+# key: people.resources.status_changes.plural_label
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
+msgid "status changes"
+msgstr "학적 변동"
+
+# key: people.resources.advisor_assignments.label
+#: admin/student_records.py models/advisor.py
+msgid "advisor"
+msgstr "지도교수"
+
+# key: people.resources.advisor_assignments.plural_label
+#: admin/student_records.py models/advisor.py
+msgid "advisors"
+msgstr "지도교수"
+
+# key: people.resources.additional_programs.label
+#: admin/student_records.py models/student_record.py
+msgid "second major or minor"
+msgstr "복수전공·부전공"
+
+# key: people.resources.additional_programs.plural_label
+#: admin/student_records.py models/student_record.py templates/person/portal/records.html
+msgid "second majors and minors"
+msgstr "복수전공·부전공"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: admin/student_records.py
+msgid "End"
+msgstr "종료"
+
+# key: people.fields.status_change_type
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
+msgid "Change type"
+msgstr "변동 유형"
+
+# key: people.fields.effective_date
+#: admin/student_records.py models/status_change.py templates/person/portal/records.html
+msgctxt "people"
+msgid "Effective date"
+msgstr "변동일"
+
+# key: people.fields.advisor
+# key: security.personas.advisor
+#: admin/student_records.py models/advisor.py templates/person/portal/records.html
+msgctxt "people"
+msgid "Advisor"
+msgstr "지도교수"
+
+# key: people.fields.advisor_role
+#: admin/student_records.py models/advisor.py
+msgid "Advisor role"
+msgstr "지도 구분"
+
+# key: reference.fields.start_date
+#: admin/student_records.py models/advisor.py models/student_record.py
+msgid "Start date"
+msgstr "시작일"
+
+# key: people.sections.record
+#: admin/student_records.py models/additional_program.py models/status_change.py
+msgid "Student record"
+msgstr "학적"
+
+# key: admin.audit.fields.properties
+#: admin/student_records.py
+msgid "Details"
+msgstr "상세"
+
+#: admin/student_records.py
+msgid "Student registered."
+msgstr "학적을 등록했습니다."
+
+# key: people.actions.register_student
+#: admin/student_records.py
+msgid "Register student"
+msgstr "학적 등록"
+
+# key: people.actions.record_status_change
+#: admin/student_records.py
+msgid "Record status change"
+msgstr "학적 변동 처리"
+
+# key: people.notifications.status_changed
+#: admin/student_records.py
+msgid "Status change recorded."
+msgstr "학적 변동을 처리했습니다."
+
+# key: grading.transcript.title
+#: admin/student_records.py
+msgid "Grade report"
+msgstr "성적표"
+
+# key: people.actions.assign_advisor
+#: admin/student_records.py
+msgid "Assign advisor"
+msgstr "지도교수 배정"
+
+# key: people.notifications.advisor_assigned
+#: admin/student_records.py
+msgid "Advisor assigned."
+msgstr "지도교수를 배정했습니다."
+
+# key: people.notifications.additional_program_ended
+#: admin/student_records.py
+msgid "Program ended."
+msgstr "종료했습니다."
+
+# key: graduation.report_columns.enrolled
+# key: people.student_statuses.enrolled
+#: enums.py
+msgctxt "people"
+msgid "Enrolled"
+msgstr "재학"
+
+# key: people.student_statuses.on_leave
+#: enums.py
+msgid "On leave"
+msgstr "휴학"
+
+# key: admissions.application_statuses.withdrawn
+# key: people.student_statuses.withdrawn
+#: enums.py
+msgctxt "people"
+msgid "Withdrawn"
+msgstr "자퇴"
+
+# key: people.student_statuses.dismissed
+#: enums.py
+msgid "Dismissed"
+msgstr "제적"
+
+# key: certificate.facts.graduation_date
+# key: graduation.report_columns.graduation_date
+# key: people.student_statuses.graduated
+#: enums.py
+msgctxt "people"
+msgid "Graduated"
+msgstr "졸업"
+
+# key: grading.fields.requested_at
+# key: people.status_change_statuses.requested
+#: enums.py
+msgctxt "people"
+msgid "Requested"
+msgstr "신청"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.status_change_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: enums.py
+msgid "Approved"
+msgstr "승인"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.status_change_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: enums.py
+msgid "Rejected"
+msgstr "반려"
+
+# key: assessment.registration_statuses.cancelled
+# key: assessment.correction_statuses.cancelled
+# key: grading.change_statuses.cancelled
+# key: people.status_change_statuses.cancelled
+# key: people.additional_program_request_statuses.cancelled
+#: enums.py
+msgctxt "people"
+msgid "Cancelled"
+msgstr "취소"
+
+# key: assessment.correction_statuses.pending
+# key: grading.change_statuses.pending
+# key: graduation.waiver_statuses.pending
+# key: lms.link_statuses.pending
+# key: people.additional_program_request_statuses.requested
+#: enums.py
+msgctxt "people"
+msgid "Pending"
+msgstr "처리 중"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: enums.py
+msgid "Second major"
+msgstr "복수전공"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: enums.py
+msgid "Minor"
+msgstr "부전공"
+
+# key: people.advisor_roles.primary
+#: enums.py
+msgid "Primary advisor"
+msgstr "주 지도교수"
+
+# key: people.advisor_roles.co_advisor
+#: enums.py
+msgid "Co-advisor"
+msgstr "공동 지도교수"
+
+# key: people.employment_types.full_time
+#: enums.py
+msgid "Full-time"
+msgstr "전임"
+
+# key: people.employment_types.part_time
+#: enums.py
+msgid "Part-time"
+msgstr "비전임"
+
+# key: people.employment_types.adjunct
+#: enums.py
+msgid "Adjunct"
+msgstr "겸임"
+
+# key: people.employment_types.visiting
+#: enums.py
+msgid "Visiting"
+msgstr "초빙"
+
+# key: people.employment_types.emeritus
+#: enums.py
+msgid "Emeritus"
+msgstr "명예"
+
+# key: people.genders.female
+#: enums.py
+msgid "Female"
+msgstr "여성"
+
+# key: people.genders.male
+#: enums.py
+msgid "Male"
+msgstr "남성"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: enums.py
+msgid "Other"
+msgstr "기타"
+
+# key: people.genders.undisclosed
+#: enums.py
+msgid "Not disclosed"
+msgstr "밝히지 않음"
+
+# key: people.guardian_relationships.father
+#: enums.py
+msgid "Father"
+msgstr "부"
+
+# key: people.guardian_relationships.mother
+#: enums.py
+msgid "Mother"
+msgstr "모"
+
+# key: people.guardian_relationships.guardian
+#: enums.py
+msgid "Guardian"
+msgstr "후견인"
+
+# key: people.guardian_relationships.spouse
+#: enums.py
+msgid "Spouse"
+msgstr "배우자"
+
+# key: people.guardian_relationships.sibling
+#: enums.py
+msgid "Sibling"
+msgstr "형제자매"
+
+# key: people.guardian_relationships.grandparent
+#: enums.py
+msgid "Grandparent"
+msgstr "조부모"
+
+# key: validation.email
+#: importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid email address."
+msgstr "%(attribute)s은(는) 유효한 이메일 주소여야 합니다."
+
+# key: people.import.unknown_program
+#: importers.py
+#, python-format
+msgid "No program with the code %(code)s."
+msgstr "코드가 %(code)s인 프로그램이 없습니다."
+
+# key: people.resources.instructors.plural_label
+#: importers.py models/instructor.py
+msgid "instructors"
+msgstr "교원"
+
+# key: people.fields.requested_program
+#: models/additional_program.py
+msgid "Applied program"
+msgstr "신청 프로그램"
+
+# key: people.fields.start_term
+#: models/additional_program.py
+msgid "Starting term"
+msgstr "시작 학기"
+
+# key: people.fields.requested_at
+#: models/additional_program.py models/status_change.py
+msgid "Requested at"
+msgstr "신청 일시"
+
+# key: people.resources.additional_program_requests.label
+#: models/additional_program.py
+msgid "second major or minor application"
+msgstr "복수전공·부전공 신청"
+
+# key: people.resources.additional_program_requests.plural_label
+#: models/additional_program.py
+msgid "second major and minor applications"
+msgstr "복수전공·부전공 신청"
+
+# key: people.resources.instructors.label
+#: models/instructor.py
+msgid "instructor"
+msgstr "교원"
+
+# key: people.fields.name_variants
+#: models/person.py
+msgid "Name in other languages"
+msgstr "언어별 이름"
+
+# key: people.resources.people.label
+#: models/person.py
+msgid "person"
+msgstr "인물"
+
+# key: people.resources.people.plural_label
+#: models/person.py
+msgid "people"
+msgstr "인물"
+
+# key: people.fields.relationship
+#: models/person.py templates/person/portal/profile.html
+msgid "Relationship"
+msgstr "관계"
+
+# key: people.fields.is_primary_contact
+#: models/person.py
+msgid "Primary contact"
+msgstr "주 연락처"
+
+# key: people.fields.can_student_request
+#: models/status_change.py
+msgid "Students can request"
+msgstr "학생 신청 가능"
+
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: models/status_change.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "사용"
+
+# key: reference.fields.sort_order
+#: models/status_change.py
+msgid "Order"
+msgstr "순서"
+
+# key: people.resources.status_change_types.label
+#: models/status_change.py
+msgid "status change type"
+msgstr "학적 변동 유형"
+
+# key: people.resources.status_change_types.plural_label
+#: models/status_change.py
+msgid "status change types"
+msgstr "학적 변동 유형"
+
+# key: graduation.report_columns.term_code
+#: models/status_change.py
+msgid "Term"
+msgstr "학기"
+
+# key: people.fields.graduation_date
+#: models/student_record.py templates/person/portal/records.html
+msgid "Graduation date"
+msgstr "졸업일"
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "안녕하세요."
+
+# key: people.invitations.mail_intro
+#: notifications.py
+msgid "Your school has invited you to create an account."
+msgstr "학교에서 계정 가입을 안내합니다."
+
+# key: people.invitations.mail_expiry
+#: notifications.py
+#, python-format
+msgid "This link works until %(date)s."
+msgstr "이 링크는 %(date)s까지 사용할 수 있습니다."
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"감사합니다.\n"
+"%(app)s"
+
+# key: people.invitations.mail_subject
+#: notifications.py
+#, python-format
+msgid "Create your %(app)s account"
+msgstr "%(app)s 계정 만들기"
+
+# key: admin.settings.student_records.student_number_pattern
+#: settings_pages.py
+msgid "Student number pattern"
+msgstr "학번 형식"
+
+# key: admin.settings.student_records.student_number_pattern_help
+#: settings_pages.py
+#, python-brace-format
+msgid "{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n digits. Example: {YYYY}{SEQ:5} gives 202600001."
+msgstr "{YYYY} 입학 연도, {YY} 연도 끝 두 자리, {SEQ:n} n자리 일련번호. 예: {YYYY}{SEQ:5} → 202600001"
+
+# key: admin.settings.student_records.invitation_valid_days
+#: settings_pages.py
+msgid "Invitation links valid for (days)"
+msgstr "가입 안내 링크 유효 기간(일)"
+
+# key: admin.settings.student_records.max_second_majors
+#: settings_pages.py
+msgid "Second majors at a time"
+msgstr "동시 복수전공 수"
+
+# key: admin.settings.student_records.max_minors
+#: settings_pages.py
+msgid "Minors at a time"
+msgstr "동시 부전공 수"
+
+# key: people.invitations.title
+#: templates/person/accept_invitation.html
+msgid "Create your account"
+msgstr "계정 만들기"
+
+# key: people.invitations.instructions
+#: templates/person/accept_invitation.html
+#, python-format
+msgid "Choose a password for %(email)s."
+msgstr "%(email)s 계정의 비밀번호를 정하세요."
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/person/accept_invitation.html
+msgid "Create account"
+msgstr "계정 만들기"
+
+#: templates/person/admin/history.html
+msgid "Change history"
+msgstr "변경 이력"
+
+# key: admin.audit.fields.occurred_at
+#: templates/person/admin/history.html
+msgctxt "admin"
+msgid "Time"
+msgstr "시각"
+
+# key: admin.record_changes.fields.table
+#: templates/person/admin/history.html
+msgid "Table"
+msgstr "테이블"
+
+# key: admin.record_changes.fields.operation
+#: templates/person/admin/history.html
+msgctxt "admin"
+msgid "Operation"
+msgstr "작업"
+
+# key: admin.record_changes.fields.changed_columns
+#: templates/person/admin/history.html
+msgid "Changed columns"
+msgstr "변경 컬럼"
+
+# key: admin.audit.fields.actor
+#: templates/person/admin/history.html
+msgid "User"
+msgstr "사용자"
+
+#: templates/person/admin/history.html
+msgid "No changes recorded yet."
+msgstr "기록된 변경이 없습니다."
+
+# key: evaluation.portal.back
+#: templates/person/admin/revealed.html
+msgid "Back"
+msgstr "목록으로"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: templates/person/portal/advisees.html views/portal.py
+msgid "Advisees"
+msgstr "지도 학생"
+
+# key: common.none
+#: templates/person/portal/advisees.html templates/person/portal/records.html
+msgctxt "common"
+msgid "None"
+msgstr "없음"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: templates/person/portal/profile.html views/portal.py
+msgid "My details"
+msgstr "내 정보"
+
+# key: portal.profile.registrar_fields
+#: templates/person/portal/profile.html
+msgid "Contact the registrar's office to change your name, birth date or identity numbers."
+msgstr "이름, 생년월일, 신분 번호 변경은 학적 담당 부서에 요청하세요."
+
+# key: common.save
+#: templates/person/portal/profile.html
+msgctxt "common"
+msgid "Save"
+msgstr "저장"
+
+# key: portal.profile.remove_confirm
+#: templates/person/portal/profile.html
+msgid "Remove this guardian?"
+msgstr "이 보호자를 삭제할까요?"
+
+# key: portal.profile.remove
+#: templates/person/portal/profile.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "삭제"
+
+# key: portal.profile.add_guardian
+#: templates/person/portal/profile.html
+msgid "Add guardian"
+msgstr "보호자 추가"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: templates/person/portal/records.html views/portal.py
+msgid "My records"
+msgstr "내 학적"
+
+# key: portal.records.choose
+#: templates/person/portal/records.html
+msgid "You have more than one student record. Choose one:"
+msgstr "학적이 여러 개 있습니다. 볼 학적을 고르세요."
+
+# key: portal.records.none
+#: templates/person/portal/records.html
+msgid "You have no student record."
+msgstr "학적이 없습니다."
+
+# key: portal.records.pending
+#: templates/person/portal/records.html
+#, python-format
+msgid "Pending request: %(type)s from %(date)s."
+msgstr "처리 중인 신청: %(type)s (%(date)s부터)"
+
+# key: portal.records.cancel_confirm
+#: templates/person/portal/records.html
+msgid "Cancel this request?"
+msgstr "이 신청을 취소할까요?"
+
+# key: grading.actions.cancel_request
+# key: portal.records.cancel
+#: templates/person/portal/records.html
+msgctxt "portal"
+msgid "Cancel request"
+msgstr "신청 취소"
+
+# key: portal.records.request_title
+#: templates/person/portal/records.html
+msgid "Request a status change"
+msgstr "학적 변동 신청"
+
+# key: portal.records.submit_request
+#: templates/person/portal/records.html
+msgid "Submit request"
+msgstr "신청"
+
+# key: portal.records.additional_program_request
+#: templates/person/portal/records.html
+#, python-format
+msgid "%(role)s application for %(program)s: %(status)s"
+msgstr "%(program)s %(role)s 신청: %(status)s"
+
+# key: portal.records.additional_program_open
+#: templates/person/portal/records.html
+#, python-format
+msgid "Applications for a second major or minor are open (starting %(term)s)."
+msgstr "복수전공·부전공 신청 기간입니다(%(term)s부터 이수)."
+
+#: templates/person/portal/records.html
+msgid "Show programs"
+msgstr "프로그램 보기"
+
+# key: portal.records.apply_additional_program
+#: templates/person/portal/records.html
+msgctxt "portal"
+msgid "Apply"
+msgstr "신청"
+
+# key: authentication.fields.new_password
+#: views/invitations.py
+msgid "New password"
+msgstr "새 비밀번호"
+
+# key: authentication.fields.password_confirmation
+#: views/invitations.py
+msgid "Confirm password"
+msgstr "비밀번호 확인"
+
+#: views/invitations.py
+msgid "The password field confirmation does not match."
+msgstr "비밀번호 확인이 일치하지 않습니다."
+
+# key: people.invitations.accepted
+#: views/invitations.py
+msgid "Your account is ready. Welcome."
+msgstr "계정이 만들어졌습니다. 환영합니다."
+
+# key: portal.records.request_submitted
+#: views/portal.py
+msgid "Your request was submitted. The registrar's office will review it."
+msgstr "신청했습니다. 학적 담당 부서에서 검토합니다."
+
+# key: portal.records.additional_program_requested
+#: views/portal.py
+msgid "Your application was submitted. The program's office will review it."
+msgstr "신청했습니다. 해당 학과에서 검토합니다."
+
+# key: portal.profile.saved
+#: views/portal.py
+msgid "Your details were saved."
+msgstr "저장했습니다."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: views/portal.py
+msgctxt "portal"
+msgid "My records"
+msgstr "내 학적"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: views/portal.py
+msgctxt "portal"
+msgid "My details"
+msgstr "내 정보"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: views/portal.py
+msgctxt "portal"
+msgid "Advisees"
+msgstr "지도 학생"

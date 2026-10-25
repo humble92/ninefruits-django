@@ -1,0 +1,308 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/portal/menu.py ninefruits/portal/views/dashboard.py
+msgctxt "portal"
+msgid "Home"
+msgstr "홈"
+
+#: ninefruits/portal/menu.py
+msgctxt "portal"
+msgid "Security"
+msgstr "보안"
+
+#: ninefruits/portal/menu.py ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Administration"
+msgstr "관리"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+#, python-format
+msgctxt "portal"
+msgid "Welcome, %(name)s"
+msgstr "%(name)s 님, 환영합니다"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Your access"
+msgstr "내 권한"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Roles"
+msgstr "역할"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "common"
+msgid "None"
+msgstr "없음"
+
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Personas"
+msgstr "신분"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/portal/templates/portal/security.html
+#: ninefruits/portal/views/security.py
+msgid "Two-factor authentication"
+msgstr "2단계 인증"
+
+# key: security.mfa.description
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Two-factor authentication protects your account with a code from an "
+"authenticator app in addition to your password."
+msgstr ""
+"2단계 인증은 비밀번호와 함께 인증 앱의 코드를 확인해 계정을 보호합니다."
+
+# key: security.mfa.enrollment_required
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Two-factor authentication is required for your account. Please set it up to "
+"continue."
+msgstr "이 계정은 2단계 인증이 필요합니다. 계속하려면 설정해 주세요."
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/portal/templates/portal/security.html
+msgid "Authenticator app"
+msgstr "인증 앱"
+
+# key: security.mfa.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is enabled."
+msgstr "2단계 인증을 사용 중입니다."
+
+# key: security.mfa.regenerate_recovery_codes
+#: ninefruits/portal/templates/portal/security.html
+msgid "Generate new recovery codes"
+msgstr "복구 코드 새로 만들기"
+
+# key: security.mfa.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Disable two-factor authentication?"
+msgstr "2단계 인증을 사용 중지할까요?"
+
+# key: security.mfa.disable
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Disable"
+msgstr "사용 중지"
+
+# key: security.mfa.scan_qr_code
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Scan this QR code with your authenticator app, then enter the code it shows."
+msgstr "인증 앱으로 QR 코드를 스캔한 뒤 표시된 코드를 입력하세요."
+
+# key: security.mfa.setup_key
+#: ninefruits/portal/templates/portal/security.html
+msgid "Setup key"
+msgstr "설정 키"
+
+# key: authentication.two_factor.code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "코드"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "확인"
+
+# key: security.mfa.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Enable two-factor authentication"
+msgstr "2단계 인증 사용"
+
+# key: security.mfa.recovery_codes_instructions
+#: ninefruits/portal/templates/portal/security.html
+msgid ""
+"Store these recovery codes in a safe place. Each can be used once if you "
+"lose your device."
+msgstr ""
+"복구 코드를 안전한 곳에 보관하세요. 기기를 잃어버렸을 때 코드 하나당 한 번 사"
+"용할 수 있습니다."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email code"
+msgstr "이메일 코드"
+
+# key: security.email_code.description
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid ""
+"Receive a one-time code at %(email)s each time you sign in. Less secure than "
+"an authenticator app; use it if you cannot install one."
+msgstr ""
+"로그인할 때마다 %(email)s 주소로 일회용 코드를 받습니다. 인증 앱보다 안전성"
+"이 낮으므로 인증 앱을 쓸 수 없을 때 사용하세요."
+
+# key: security.email_code.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email codes are turned on."
+msgstr "이메일 코드를 사용 중입니다."
+
+# key: security.email_code.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Turn off email codes?"
+msgstr "이메일 코드 사용을 중지할까요?"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "이메일 코드"
+
+# key: authentication.two_factor.resend_email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a new code"
+msgstr "코드 다시 보내기"
+
+# key: security.email_code.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a code to set up"
+msgstr "설정용 코드 보내기"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Remembered devices"
+msgstr "기억된 기기"
+
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s day."
+msgid_plural ""
+"When you tick \"Remember this device\" at sign-in, this browser skips the "
+"code for %(days)s days."
+msgstr[0] ""
+"로그인할 때 \"이 기기 기억\"을 선택하면 이 브라우저에서는 %(days)s일 동안 코"
+"드를 묻지 않습니다."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Changing your two-factor setup forgets every remembered device."
+msgstr "2단계 인증 설정을 바꾸면 기억된 기기가 모두 해제됩니다."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Forget this device"
+msgstr "이 기기 기억 해제"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "This device is not remembered."
+msgstr "이 기기는 기억되어 있지 않습니다."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Change password"
+msgstr "비밀번호 변경"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Your password was changed. Other sessions were signed out."
+msgstr "비밀번호를 변경했습니다. 다른 세션은 로그아웃되었습니다."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Current password"
+msgstr "현재 비밀번호"
+
+# key: authentication.fields.new_password
+#: ninefruits/portal/templates/portal/security.html
+msgid "New password"
+msgstr "새 비밀번호"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/portal/templates/portal/security.html
+msgid "Confirm password"
+msgstr "비밀번호 확인"
+
+# key: security.sso.title
+#: ninefruits/portal/templates/portal/security.html
+msgid "School sign-in"
+msgstr "학교 통합 로그인"
+
+# key: security.sso.help
+#: ninefruits/portal/templates/portal/security.html
+msgid "Link your school account to sign in with it."
+msgstr "학교 계정을 연결하면 그 계정으로 로그인할 수 있습니다."
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/portal/templates/portal/security.html
+msgid "Linked"
+msgstr "연결됨"
+
+# key: security.sso.unlink_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink this school account? You will need your password to sign in."
+msgstr "학교 계정 연결을 해제할까요? 이후에는 비밀번호로 로그인해야 합니다."
+
+# key: security.sso.unlink
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink"
+msgstr "연결 해제"
+
+# key: security.sso.link
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Link"
+msgstr "연결"
+
+#: ninefruits/portal/templatetags/portal.py
+#, python-format
+msgctxt "security"
+msgid ""
+"Two-factor authentication is required for your account. Please set it up by "
+"%(date)s."
+msgstr "이 계정은 2단계 인증이 필요합니다. %(date)s까지 설정해 주세요."
+
+#: ninefruits/portal/templatetags/portal.py
+msgctxt "security"
+msgid "We recommend enabling two-factor authentication for your account."
+msgstr "계정 보호를 위해 2단계 인증 사용을 권장합니다."
+
+#: ninefruits/portal/views/security.py
+msgid "Start the setup again."
+msgstr "설정을 처음부터 다시 시작하세요."
+
+#: ninefruits/portal/views/security.py
+msgid "The code must be 6 digits."
+msgstr "코드는 6자리 숫자여야 합니다."
+
+# key: security.email_code.not_allowed
+#: ninefruits/portal/views/security.py
+msgid "Email codes are not available at this institution."
+msgstr "이 기관에서는 이메일 코드를 사용할 수 없습니다."
+
+# key: security.email_code.wait
+#: ninefruits/portal/views/security.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "%(seconds)s초 후에 다시 요청할 수 있습니다."
+
+#: ninefruits/portal/views/security.py
+msgid "The email code must be 6 digits."
+msgstr "이메일 코드는 6자리 숫자여야 합니다."

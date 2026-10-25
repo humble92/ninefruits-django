@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% load nf_i18n portal %}
+{% comment %}Sign-in, registration and other pages for guests (original components/layouts/guest).
+Pages extend this and fill the "content" block.{% endcomment %}
+{% block body %}
+<main class="mx-auto flex min-h-screen max-w-md flex-col justify-center px-4 py-12">
+    <div class="mb-6 flex items-center justify-between">
+        <span class="text-lg font-semibold">{{ site_name|default:"Ninefruits" }}</span>
+        {% locale_switcher %}
+    </div>
+
+    <div class="rounded-lg border border-zinc-200 bg-white p-6 shadow-sm">
+        {% include "partials/messages.html" %}
+        {% block content %}{% endblock %}
+    </div>
+</main>
+{% endblock %}

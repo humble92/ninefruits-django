@@ -1,0 +1,22 @@
+{% load i18n %}
+{% comment %}One registration button (a form). Context: action, optional name/value (the row id),
+confirm (question asked first with JavaScript), style (button classes); term and search come
+from the page.{% endcomment %}
+<form method="post" action="{% url 'portal:registration' %}" class="inline"
+      hx-post="{% url 'portal:registration' %}" hx-target="#registration" hx-select="#registration" hx-swap="outerHTML"{% if confirm %} hx-confirm="{{ confirm }}"{% endif %}>
+    {% csrf_token %}
+    <input type="hidden" name="action" value="{{ action }}">
+    <input type="hidden" name="term" value="{{ term.pk }}">
+    <input type="hidden" name="q" value="{{ search }}">
+    {% if name %}<input type="hidden" name="{{ name }}" value="{{ value }}">{% endif %}
+    <button type="submit" class="{{ style }}" data-action="{{ action }}">
+        {% if action == "drop" %}{% translate "Drop" context "registration.portal" %}
+        {% elif action == "withdraw" %}{% translate "Withdraw" context "registration.portal" %}
+        {% elif action == "leave_waitlist" %}{% translate "Leave waitlist" %}
+        {% elif action == "submit_cart" %}{% translate "Register all" %}
+        {% elif action == "remove_from_cart" %}{% translate "Remove" context "portal" %}
+        {% elif action == "add_to_cart" %}{% translate "Add to cart" %}
+        {% elif action == "enroll" %}{% translate "Register" context "registration" %}
+        {% elif action == "waitlist" %}{% translate "Join waitlist" %}{% endif %}
+    </button>
+</form>

@@ -1,0 +1,33 @@
+{% extends "layouts/guest.html" %}
+{% load i18n nf_i18n %}
+{% comment %}Public list of cycles taking applications (original admissions/index).{% endcomment %}
+{% block content %}
+    <h1 class="mb-2 text-xl font-semibold">{% translate "Admissions" context "admissions" %}</h1>
+    <p class="mb-6 text-sm text-zinc-600">{% translate "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate." %}</p>
+
+    {% for cycle in cycles %}
+        <section class="mb-4 border-b border-zinc-100 pb-4 last:border-0">
+            <h2 class="font-medium">{{ cycle.name }}</h2>
+            <p class="text-sm text-zinc-600">
+                {% if cycle.is_rolling %}{% translate "Applications accepted at any time." %}{% else %}{% blocktranslate with date=cycle.closes_at|lll %}Applications close {{ date }}.{% endblocktranslate %}{% endif %}
+            </p>
+            {% if cycle.description %}<p class="mt-1 text-sm">{{ cycle.description }}</p>{% endif %}
+            <ul class="mt-2 list-inside list-disc text-sm">
+                {% for offered in cycle.programs.all %}<li>{{ offered.program.name }}</li>{% endfor %}
+            </ul>
+        </section>
+    {% empty %}
+        <p class="text-sm text-zinc-600">{% translate "No cycle is taking applications right now." %}</p>
+    {% endfor %}
+
+    <div class="mt-6 flex flex-col gap-2">
+        {% if user.is_authenticated %}
+            <a href="{% url 'portal:applications' %}" class="rounded bg-zinc-900 px-4 py-2 text-center text-sm font-medium text-white">{% translate "Go to my applications" %}</a>
+        {% else %}
+            {% if registration_enabled and cycles %}
+                <a href="{% url 'account_signup' %}" class="rounded bg-zinc-900 px-4 py-2 text-center text-sm font-medium text-white">{% translate "Create an account to apply" %}</a>
+            {% endif %}
+            <a href="{% url 'account_login' %}" class="rounded border border-zinc-300 px-4 py-2 text-center text-sm font-medium">{% translate "Sign in" context "authentication" %}</a>
+        {% endif %}
+    </div>
+{% endblock %}

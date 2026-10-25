@@ -1,0 +1,2 @@
+-- @apply policies/registration.sql
+

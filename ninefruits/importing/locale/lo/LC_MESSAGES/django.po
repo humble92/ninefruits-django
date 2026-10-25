@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 13:29+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "ການນຳເຂົ້າ %(type)s ສຳເລັດແລ້ວ"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "ນຳເຂົ້າ %(count)s ແຖວແລ້ວ."
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s ແຖວລົ້ມເຫຼວ; ກະລຸນາດາວໂຫຼດແຖວທີ່ລົ້ມເຫຼວເພື່ອແກ້ໄຂ."
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "ແຖວທີ່ລົ້ມເຫຼວ"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "ແຖວທີ່ລົ້ມເຫຼວ"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "ແຖວ"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "ປະເພດການນຳເຂົ້າ"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "ແຖວທີ່ລົ້ມເຫຼວ"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "ສະຖານະ"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "ຢູ່ໃນຄິວ"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "ດາວໂຫຼດແຖວທີ່ລົ້ມເຫຼວ"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "ໜ່ວຍງານ"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "ຫຼັກສູດ"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "ອາຄານ"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "ຫ້ອງ"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "ລະຫັດ"
+
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "ສຳເລັດ"
+
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "ໄຟລ໌"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "ແຖວທີ່ປະມວນຜົນແລ້ວ"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "ຈຳນວນແຖວ"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "ແຖວທີ່ນຳເຂົ້າແລ້ວ"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "ຜູ້ນຳເຂົ້າ"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "ເລີ່ມເມື່ອ"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "ການນຳເຂົ້າ CSV"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "ການນຳເຂົ້າ CSV"
+
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "ຂໍ້ຜິດພາດ"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "ຈຳເປັນຕ້ອງປ້ອນຊ່ອງ %(attribute)s."
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີຫຼັງຈາກ ຫຼື ເທົ່າກັບ %(date)s."
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີບໍ່ເກີນ %(max)s ຕົວອັກສອນ."
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "%(attribute)s ທີ່ເລືອກບໍ່ຖືກຕ້ອງ."
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນຈຳນວນເຕັມ."
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນຕົວເລກ."
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນ true ຫຼື false."
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງເປັນວັນທີທີ່ຖືກຕ້ອງ."
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າລະຫວ່າງ %(min)s ຫາ %(max)s."
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າຢ່າງໜ້ອຍ %(min)s."
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "ບໍ່ຮູ້ຈັກລະຫັດ %(column)s \"%(code)s\"."
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "ຖືກປະຕິເສດໂດຍຖານຂໍ້ມູນ: %(message)s"

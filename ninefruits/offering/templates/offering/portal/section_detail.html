@@ -1,0 +1,76 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}A section as students see it (original livewire/portal/section-detail).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <div>
+        <a href="{% url 'portal:catalog' %}?term={{ section.term_id }}" class="text-sm text-zinc-600 underline">{% translate "Course catalog" context "offering" %}</a>
+        <h1 class="mt-1 text-2xl font-semibold">{{ section.label }} {{ version.title }}</h1>
+        <p class="text-sm text-zinc-600">{{ section.term.name }} · {{ section.session.name }} ({{ section.session.start_date|date:"Y-m-d" }} ~ {{ section.session.end_date|date:"Y-m-d" }})</p>
+        {% for link in lms_links %}
+            <a href="{{ link.url }}" target="_blank" rel="noopener" class="mt-1 inline-block text-sm underline" data-lms-link>{{ link.label }}</a>
+        {% endfor %}
+    </div>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-6">
+        <dl class="grid gap-3 text-sm sm:grid-cols-[12rem_1fr]">
+            <dt class="text-zinc-500">{% translate "Credits" context "curriculum" %}</dt>
+            <dd>{{ version.credits }} ({% blocktranslate with lecture=version.lecture_hours lab=version.lab_hours %}lecture {{ lecture }} h, lab {{ lab }} h{% endblocktranslate %})</dd>
+            <dt class="text-zinc-500">{% translate "Course category" %}</dt><dd>{% if version.category %}{{ version.category.name }}{% else %}-{% endif %}</dd>
+            <dt class="text-zinc-500">{% translate "Grading" %}</dt><dd>{{ grading_basis }}</dd>
+            <dt class="text-zinc-500">{% translate "Instructors" context "offering" %}</dt>
+            <dd>{% if instructors %}{{ instructors }}{% else %}{% translate "Instructor to be announced" %}{% endif %}</dd>
+            <dt class="text-zinc-500">{% translate "Schedule" %}</dt>
+            <dd>{% if schedule %}{{ schedule }}{% else %}{% translate "Time to be announced" %}{% endif %}</dd>
+            <dt class="text-zinc-500">{% translate "Capacity" context "offering" %}</dt><dd>{{ section.capacity }}</dd>
+            {% if section.instruction_language %}
+                <dt class="text-zinc-500">{% translate "Language of instruction" %}</dt><dd>{{ section.instruction_language }}</dd>
+            {% endif %}
+            {% if requisite_groups %}
+                <dt class="text-zinc-500">{% translate "Requisites" %}</dt>
+                <dd>{% for group in requisite_groups %}<span class="block">{{ group }}</span>{% endfor %}</dd>
+            {% endif %}
+            {% if version.description %}
+                <dt class="text-zinc-500">{% translate "Description" context "curriculum" %}</dt><dd class="whitespace-pre-line">{{ version.description }}</dd>
+            {% endif %}
+        </dl>
+    </section>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-6" data-syllabus>
+        <div class="mb-3 flex items-center justify-between">
+            <h2 class="font-medium">{% translate "Syllabus" %}</h2>
+            {% if can_edit %}<a href="{% url 'portal:syllabus_edit' section.pk %}" class="text-sm underline">{% translate "Edit syllabus" %}</a>{% endif %}
+        </div>
+        {% if syllabus is None %}
+            <p class="text-sm text-zinc-500">{% translate "No syllabus yet." %}</p>
+        {% else %}
+            {% if not syllabus.published_at %}
+                <p class="mb-3 rounded bg-amber-50 px-3 py-2 text-sm text-amber-800">{% translate "Draft: students do not see it until it is published." %}</p>
+            {% endif %}
+            <div class="space-y-4 text-sm">
+                {% for part in syllabus_parts %}
+                    <div><h3 class="font-medium">{{ part.label }}</h3><p class="whitespace-pre-line text-zinc-700">{{ part.text }}</p></div>
+                {% endfor %}
+                {% if syllabus.content.assessment %}
+                    <div>
+                        <h3 class="font-medium">{% translate "Assessment" %}</h3>
+                        <ul class="list-inside list-disc text-zinc-700">
+                            {% for item in syllabus.content.assessment %}<li>{{ item.item }}{% if item.weight is not None %} {{ item.weight }}%{% endif %}</li>{% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                {% if syllabus.content.weekly_plan %}
+                    <div>
+                        <h3 class="font-medium">{% translate "Weekly plan" %}</h3>
+                        <table class="mt-1 w-full">
+                            {% for week in syllabus.content.weekly_plan %}
+                                <tr class="border-t border-zinc-100"><td class="w-20 py-1 text-zinc-500">{% blocktranslate with week=week.week %}Week {{ week }}{% endblocktranslate %}</td><td class="py-1">{{ week.topic }}</td></tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+    </section>
+</div>
+{% endblock %}

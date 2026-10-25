@@ -1,0 +1,42 @@
+{% load i18n %}
+{% comment %}Registrants tab of the session page (original RegistrationsRelationManager).{% endcomment %}
+<div class="overflow-x-auto" data-registrants>
+    <p class="mb-2 flex flex-wrap gap-2 text-sm">
+        {% for value, label in statuses %}
+            <a href="{{ base_url }}{% if value %}?registrants={{ value }}{% endif %}" class="rounded px-2 py-0.5 {% if value == current_status %}bg-primary-600 text-white{% else %}border border-base-200{% endif %}">{{ label }}</a>
+        {% endfor %}
+    </p>
+    <table class="w-full text-sm">
+        <thead>
+            <tr class="text-left text-base-500">
+                <th class="px-2 py-1">{% translate "Student number" %}</th>
+                <th class="px-2 py-1">{% translate "Name" context "people" %}</th>
+                <th class="px-2 py-1">{% translate "Status" context "registration" %}</th>
+                <th class="px-2 py-1">{% translate "Total" %}</th>
+                <th class="px-2 py-1">{% translate "Passed" %}</th>
+                <th class="px-2 py-1">{% translate "Registered" context "assessment.fields" %}</th>
+                <th class="px-2 py-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in rows %}
+                <tr class="border-t border-base-200" data-status="{{ row.status_value }}">
+                    <td class="px-2 py-1">{{ row.student_number }}</td>
+                    <td class="px-2 py-1">{{ row.name }}</td>
+                    <td class="px-2 py-1">{{ row.status }}</td>
+                    <td class="px-2 py-1">{{ row.total|default_if_none:"-" }}{% if row.scores %}<div class="text-xs text-base-500">{{ row.scores }}</div>{% endif %}</td>
+                    <td class="px-2 py-1">{% if row.passed is None %}-{% elif row.passed %}<span class="text-green-700">{% translate "Passed" %}</span>{% else %}<span class="text-red-700">{% translate "Not passed" context "assessment" %}</span>{% endif %}</td>
+                    <td class="px-2 py-1">{{ row.registered_at|date:"Y-m-d H:i" }}</td>
+                    <td class="px-2 py-1 whitespace-nowrap">
+                        {% if row.result_url %}<a class="underline" href="{{ row.result_url }}" data-action="result">{% translate "Enter result" %}</a>{% endif %}
+                        {% if row.correct_url %}<a class="text-amber-700 underline" href="{{ row.correct_url }}" data-action="correct">{% translate "Request a correction" %}</a>{% endif %}
+                        {% if row.absent_url %} · <a class="text-amber-700 underline" href="{{ row.absent_url }}" data-action="absent">{% translate "Absent" context "assessment" %}</a>{% endif %}
+                        {% if row.cancel_url %} · <a class="text-red-600 underline" href="{{ row.cancel_url }}" data-action="cancel">{% translate "Cancel registration" %}</a>{% endif %}
+                    </td>
+                </tr>
+            {% empty %}
+                <tr><td colspan="7" class="px-2 py-2 text-base-500">{% translate "None" context "common" %}</td></tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

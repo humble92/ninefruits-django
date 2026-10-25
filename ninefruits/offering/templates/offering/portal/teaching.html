@@ -1,0 +1,50 @@
+{% extends "portal/base.html" %}
+{% load i18n %}
+{% comment %}An instructor's sections and timetable (original livewire/portal/my-teaching).{% endcomment %}
+{% block content %}
+<div class="space-y-6">
+    <div class="flex flex-wrap items-end justify-between gap-3">
+        <h1 class="text-2xl font-semibold">{{ title }}</h1>
+        {% if terms %}
+            <form method="get" action="{% url 'portal:teaching' %}" hx-get="{% url 'portal:teaching' %}" hx-select="main" hx-target="main" hx-swap="outerHTML" hx-push-url="true" hx-trigger="change">
+                {% translate "term" as term_label %}
+                <select name="term" aria-label="{{ term_label|capfirst }}" class="rounded border border-zinc-300 px-3 py-2">
+                    {% for term in terms %}<option value="{{ term.pk }}"{% if term.pk == term_id %} selected{% endif %}>{{ term.name }}</option>{% endfor %}
+                </select>
+                <noscript><button type="submit" class="text-sm underline">{% translate "Show" %}</button></noscript>
+            </form>
+        {% endif %}
+    </div>
+
+    <section class="rounded-lg border border-zinc-200 bg-white p-4">
+        {% include "offering/partials/timetable.html" %}
+    </section>
+
+    <section class="overflow-x-auto rounded-lg border border-zinc-200 bg-white">
+        <table class="w-full text-sm">
+            <thead class="bg-zinc-50 text-left">
+                <tr>
+                    <th class="px-4 py-2">{% translate "Section" context "offering" %}</th>
+                    <th class="px-4 py-2">{% translate "Title" context "curriculum" %}</th>
+                    <th class="px-4 py-2">{% translate "Schedule" %}</th>
+                    <th class="px-4 py-2">{% translate "Syllabus" %}</th>
+                    {% for header in extra_headers %}<th class="px-4 py-2">{{ header }}</th>{% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                    <tr class="border-t border-zinc-100">
+                        <td class="px-4 py-2"><a href="{% url 'portal:section_detail' row.section.pk %}" class="underline">{{ row.label }}</a></td>
+                        <td class="px-4 py-2">{{ row.title }}</td>
+                        <td class="px-4 py-2">{{ row.schedule }}</td>
+                        <td class="px-4 py-2"><a href="{% url 'portal:syllabus_edit' row.section.pk %}" class="underline">{{ row.syllabus_status }}</a></td>
+                        {% for cell in row.extra %}<td class="px-4 py-2">{{ cell }}</td>{% endfor %}
+                    </tr>
+                {% empty %}
+                    <tr><td colspan="{{ extra_headers|length|add:4 }}" class="px-4 py-6 text-center text-zinc-500">{% translate "No sections in this term." %}</td></tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+</div>
+{% endblock %}

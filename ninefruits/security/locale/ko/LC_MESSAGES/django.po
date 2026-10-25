@@ -1,0 +1,1425 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-24 18:08+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: security.errors.cannot_deactivate_self
+#: actions/accounts.py
+msgid "You cannot deactivate your own account."
+msgstr "자기 자신의 계정은 비활성화할 수 없습니다."
+
+# key: security.errors.target_more_privileged
+#: actions/accounts.py
+#, python-format
+msgid "This account holds permissions you do not have (%(permissions)s); only an administrator with those permissions can change it."
+msgstr "이 계정은 본인이 갖고 있지 않은 권한을 갖고 있습니다(%(permissions)s). 해당 권한을 가진 관리자만 변경할 수 있습니다."
+
+# key: json.The provided password does not match your current password.
+#: actions/accounts.py
+msgid "The provided password does not match your current password."
+msgstr "입력하신 비밀번호가 현재 비밀번호와 일치하지 않습니다."
+
+#: actions/accounts.py
+msgid "The password field confirmation does not match."
+msgstr "비밀번호 확인이 일치하지 않습니다."
+
+#: actions/accounts.py admin.py
+msgid "The email has already been taken."
+msgstr "이미 사용 중인 이메일입니다."
+
+# key: security.errors.persona_role_not_assignable
+#: actions/assign_role.py
+msgid "Persona roles are granted automatically and cannot be assigned."
+msgstr "신분 역할은 자동으로 부여되므로 직접 할당할 수 없습니다."
+
+# key: security.errors.scope_id_mismatch
+#: actions/assign_role.py admin.py
+msgid "Choose a scope target for scoped assignments, and none for global assignments."
+msgstr "범위 할당에는 대상을 지정하고, 전체 할당에는 지정하지 마세요."
+
+# key: offering.errors.meeting_time_order
+#: actions/assign_role.py admin.py
+msgid "The end must be after the start."
+msgstr "종료는 시작보다 뒤여야 합니다."
+
+# key: security.errors.self_assignment
+#: actions/assign_role.py
+msgid "You cannot assign a role to yourself."
+msgstr "자기 자신에게는 역할을 부여할 수 없습니다."
+
+# key: security.errors.role_exceeds_actor
+#: actions/assign_role.py
+#, python-format
+msgid "This role carries permissions you do not hold (%(permissions)s)."
+msgstr "이 역할에는 본인이 갖고 있지 않은 권한이 포함되어 있습니다(%(permissions)s)."
+
+# key: security.errors.scope_exceeds_actor
+#: actions/assign_role.py
+msgid "This scope is wider than the one you manage role assignments for."
+msgstr "이 범위는 본인이 역할 할당을 관리하는 범위보다 넓습니다."
+
+# key: security.sso.linked_to_another_account
+#: actions/identities.py
+msgid "This school account is linked to another user."
+msgstr "이 학교 계정은 다른 사용자에게 연결되어 있습니다."
+
+# key: security.sso.already_linked
+#: actions/identities.py
+msgid "Your account is already linked to another account of this provider."
+msgstr "이 제공자의 다른 계정이 이미 연결되어 있습니다."
+
+# key: json.The provided two factor authentication code was invalid.
+#: actions/mfa.py
+msgid "The provided two factor authentication code was invalid."
+msgstr "입력하신 2단계 인증 코드가 올바르지 않습니다."
+
+#: actions/mfa.py
+msgid "Recovery codes need an authenticator app. Set one up first."
+msgstr "복구 코드는 인증 앱이 있어야 합니다. 먼저 인증 앱을 설정하세요."
+
+# key: security.email_code.not_allowed
+#: actions/mfa.py
+msgid "Email codes are not available at this institution."
+msgstr "이 기관에서는 이메일 코드를 사용할 수 없습니다."
+
+# key: security.email_code.invalid
+#: actions/mfa.py views.py
+msgid "The code is invalid or has expired."
+msgstr "코드가 올바르지 않거나 만료되었습니다."
+
+# key: security.mfa.cannot_disable_required
+#: actions/mfa.py
+msgid "Two-factor authentication is required for your account and cannot be disabled."
+msgstr "이 계정은 2단계 인증이 필수이므로 사용 중지할 수 없습니다."
+
+# key: auth.failed
+#: adapters.py views_sso.py
+msgid "These credentials do not match our records."
+msgstr "아이디나 이메일 또는 비밀번호가 올바르지 않습니다. 입력한 정보를 다시 확인해 주세요."
+
+#: adapters.py
+msgid "Too many login attempts. Please try again later."
+msgstr "로그인 시도가 너무 많습니다. 잠시 후 다시 시도하세요."
+
+# key: common.reason
+#: admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "사유"
+
+# key: admin.users.fields.locale
+# key: common.language
+#: admin.py
+msgid "Language"
+msgstr "언어"
+
+# key: admin.users.fields.name
+# key: people.sections.name
+# key: people.fields.name
+# key: reference.fields.name
+#: admin.py
+msgid "Name"
+msgstr "이름"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: admin.py forms.py
+msgctxt "authentication"
+msgid "Email"
+msgstr "이메일"
+
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: admin.py templates/security/widgets/sso_providers.html
+msgid "Active"
+msgstr "사용"
+
+# key: admin.users.help.name
+#: admin.py
+msgid "Used only for accounts without a person (e.g. service accounts). Linked accounts show the person's name."
+msgstr "인물과 연결되지 않은 계정(서비스 계정 등)에만 쓰입니다. 연결된 계정은 인물 이름을 표시합니다."
+
+# key: admin.role_assignments.fields.role
+# key: offering.fields.instructor_role
+#: admin.py
+msgid "Role"
+msgstr "역할"
+
+# key: admin.role_assignments.fields.scope
+#: admin.py
+msgid "Scope"
+msgstr "범위"
+
+# key: admin.role_assignments.fields.scope_target
+#: admin.py
+msgid "Scope target"
+msgstr "범위 대상"
+
+# key: reference.help.org_unit_descendants
+#: admin.py
+msgid "Includes all units below the selected ones."
+msgstr "선택한 조직 아래의 모든 조직을 포함합니다."
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: admin.py
+msgid "Starts"
+msgstr "시작"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: admin.py
+msgid "Ends"
+msgstr "종료"
+
+#: admin.py
+msgid "Role assignment"
+msgstr "역할 할당"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: admin.py
+msgid "Role assignments"
+msgstr "역할 할당"
+
+# key: admin.role_assignments.actions.revoke
+#: admin.py
+msgid "End assignment"
+msgstr "할당 종료"
+
+# key: permissions.resources.users
+#: admin.py
+msgctxt "admin"
+msgid "Users"
+msgstr "사용자"
+
+# key: admin.users.fields.mfa_enrolled
+#: admin.py
+msgid "Two-factor"
+msgstr "2단계 인증"
+
+# key: admin.users.fields.linked_person
+#: admin.py
+msgid "Linked person"
+msgstr "연결된 인물"
+
+# key: common.yes
+#: admin.py
+msgid "Yes"
+msgstr "예"
+
+# key: common.none
+#: admin.py
+msgid "None"
+msgstr "없음"
+
+# key: admin.users.actions.reset_mfa
+# key: permissions.users.reset_mfa
+#: admin.py
+msgid "Reset two-factor authentication"
+msgstr "2단계 인증 초기화"
+
+# key: admin.users.notifications.mfa_reset
+#: admin.py
+msgid "Two-factor authentication was reset."
+msgstr "2단계 인증을 초기화했습니다."
+
+# key: admin.users.actions.unlock
+#: admin.py
+msgid "Unlock sign-in"
+msgstr "로그인 잠금 해제"
+
+# key: admin.users.notifications.unlocked
+#: admin.py
+msgid "Sign-in unlocked."
+msgstr "로그인 잠금을 해제했습니다."
+
+# key: admin.role_assignments.actions.assign
+#: admin.py
+msgid "Assign role"
+msgstr "역할 할당"
+
+# key: admin.role_assignments.notifications.assigned
+#: admin.py
+msgid "Role assigned."
+msgstr "역할을 할당했습니다."
+
+# key: admin.role_assignments.notifications.revoked
+#: admin.py
+msgid "Assignment ended."
+msgstr "할당을 종료했습니다."
+
+# key: admin.roles.fields.name
+#: admin.py
+msgid "Internal name"
+msgstr "내부 이름"
+
+# key: admin.roles.fields.display_name
+#: admin.py
+msgid "Display name"
+msgstr "표시 이름"
+
+# key: admin.roles.fields.description
+# key: evaluation.fields.description
+# key: reference.fields.description
+#: admin.py
+msgid "Description"
+msgstr "설명"
+
+# key: admin.roles.fields.name_help
+#: admin.py
+msgid "Lowercase letters, digits and underscores, e.g. registrar."
+msgstr "영문 소문자, 숫자, 밑줄만 사용합니다. 예: registrar"
+
+#: admin.py
+msgid "The name has already been taken."
+msgstr "이미 사용 중인 이름입니다."
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: admin.py
+msgctxt "admin"
+msgid "Roles"
+msgstr "역할"
+
+# key: admin.roles.system_role_permissions
+#: admin.py
+msgid "System roles always have every permission."
+msgstr "시스템 역할은 항상 모든 권한을 가집니다."
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: admin.py
+msgid "General"
+msgstr "기본 정보"
+
+# key: admin.roles.fields.permissions_count
+#: admin.py
+msgid "Permissions"
+msgstr "권한 수"
+
+# key: admin.roles.fields.persona
+#: admin.py
+msgid "Persona"
+msgstr "신분"
+
+# key: admin.roles.fields.active_assignments_count
+#: admin.py
+msgid "Active assignments"
+msgstr "현재 할당 수"
+
+# key: permissions.resources.people
+#: enums.py
+msgctxt "permissions"
+msgid "People"
+msgstr "인물"
+
+# key: permissions.resources.accounts
+#: enums.py
+msgctxt "permissions"
+msgid "Accounts"
+msgstr "계정"
+
+# key: permissions.resources.student_records
+#: enums.py
+msgctxt "permissions"
+msgid "Student records"
+msgstr "학적"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: enums.py
+msgctxt "permissions"
+msgid "Status changes"
+msgstr "학적 변동"
+
+# key: permissions.resources.instructors
+#: enums.py
+msgctxt "permissions"
+msgid "Instructors"
+msgstr "교원"
+
+# key: permissions.resources.advisors
+#: enums.py
+msgctxt "permissions"
+msgid "Advisors"
+msgstr "지도교수"
+
+# key: permissions.resources.authentication_settings
+#: enums.py
+msgctxt "permissions"
+msgid "Sign-in settings"
+msgstr "로그인 설정"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: enums.py
+msgctxt "permissions"
+msgid "Reference data"
+msgstr "기준정보"
+
+# key: permissions.resources.lookup_values
+#: enums.py
+msgctxt "permissions"
+msgid "Code data"
+msgstr "코드 데이터"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: enums.py
+msgctxt "permissions"
+msgid "Org units"
+msgstr "조직 단위"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: enums.py
+msgctxt "permissions"
+msgid "Programs"
+msgstr "프로그램"
+
+# key: permissions.resources.facilities
+#: enums.py
+msgctxt "permissions"
+msgid "Buildings and rooms"
+msgstr "건물과 강의실"
+
+# key: permissions.resources.terms
+#: enums.py
+msgctxt "permissions"
+msgid "Academic years and terms"
+msgstr "학년도와 학기"
+
+# key: permissions.resources.term_windows
+#: enums.py
+msgctxt "permissions"
+msgid "Term windows"
+msgstr "업무 기간"
+
+# key: permissions.resources.course_categories
+#: enums.py
+msgctxt "permissions"
+msgid "Course categories"
+msgstr "교과 구분"
+
+# key: permissions.resources.grade_scales
+#: enums.py
+msgctxt "permissions"
+msgid "Grade scales"
+msgstr "성적 척도"
+
+# key: permissions.resources.admin_panel
+#: enums.py
+msgctxt "permissions"
+msgid "Administration panel"
+msgstr "관리 화면"
+
+# key: permissions.resources.users
+#: enums.py
+msgctxt "permissions"
+msgid "Users"
+msgstr "사용자"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: enums.py
+msgctxt "permissions"
+msgid "Roles"
+msgstr "역할"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: enums.py
+msgctxt "permissions"
+msgid "Role assignments"
+msgstr "역할 할당"
+
+# key: permissions.resources.audit_records
+#: enums.py
+msgctxt "permissions"
+msgid "Audit records"
+msgstr "감사 기록"
+
+# key: permissions.resources.security_events
+#: enums.py
+msgctxt "permissions"
+msgid "Security events"
+msgstr "보안 이벤트"
+
+# key: permissions.resources.security_settings
+#: enums.py
+msgctxt "permissions"
+msgid "Security settings"
+msgstr "보안 설정"
+
+#: enums.py
+msgctxt "permissions"
+msgid "Queue monitor (Flower)"
+msgstr "작업 대기열 모니터 (Flower)"
+
+# key: permissions.resources.institution_settings
+#: enums.py
+msgctxt "permissions"
+msgid "Institution settings"
+msgstr "기관 설정"
+
+# key: permissions.resources.admission_cycles
+#: enums.py
+msgctxt "permissions"
+msgid "Admission cycles"
+msgstr "모집 회차"
+
+# key: permissions.resources.applications
+#: enums.py
+msgctxt "permissions"
+msgid "Applications"
+msgstr "지원서"
+
+# key: permissions.resources.courses
+#: enums.py
+msgctxt "permissions"
+msgid "Courses"
+msgstr "교과목"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: enums.py
+msgctxt "permissions"
+msgid "Graduation requirements"
+msgstr "졸업 요건"
+
+# key: permissions.resources.sections
+#: enums.py
+msgctxt "permissions"
+msgid "Sections"
+msgstr "개설강좌"
+
+# key: permissions.resources.additional_programs
+#: enums.py
+msgctxt "permissions"
+msgid "Second majors and minors"
+msgstr "복수전공·부전공"
+
+# key: permissions.resources.enrollments
+#: enums.py
+msgctxt "permissions"
+msgid "Registrations"
+msgstr "수강 현황"
+
+# key: permissions.resources.registration
+#: enums.py
+msgctxt "permissions"
+msgid "Registration adjustments"
+msgstr "수강 조정"
+
+# key: permissions.resources.registration_rules
+#: enums.py
+msgctxt "permissions"
+msgid "Registration rules"
+msgstr "수강신청 규칙"
+
+# key: permissions.resources.registration_holds
+#: enums.py
+msgctxt "permissions"
+msgid "Registration holds and overrides"
+msgstr "수강신청 제한과 예외"
+
+# key: permissions.resources.grades
+#: enums.py
+msgctxt "permissions"
+msgid "Grades"
+msgstr "성적"
+
+# key: permissions.resources.grade_changes
+#: enums.py
+msgctxt "permissions"
+msgid "Grade changes"
+msgstr "성적 정정"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: enums.py
+msgctxt "permissions"
+msgid "Grading policy"
+msgstr "성적 처리 정책"
+
+# key: permissions.resources.grade_exceptions
+#: enums.py
+msgctxt "permissions"
+msgid "Grade exceptions"
+msgstr "성적 예외 제출"
+
+# key: permissions.resources.evaluations
+#: enums.py
+msgctxt "permissions"
+msgid "Course evaluation"
+msgstr "강의평가"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: enums.py
+msgctxt "permissions"
+msgid "Examinations"
+msgstr "어학/종합시험"
+
+# key: admin.navigation.graduation
+# key: permissions.resources.graduation
+# key: portal.navigation.graduation
+#: enums.py
+msgctxt "permissions"
+msgid "Graduation"
+msgstr "졸업"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: enums.py
+msgctxt "permissions"
+msgid "Reports"
+msgstr "보고서"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: enums.py
+msgctxt "permissions"
+msgid "LMS integration"
+msgstr "LMS 연동"
+
+# key: permissions.resources.certificates
+#: enums.py
+msgctxt "permissions"
+msgid "Certificates"
+msgstr "증명서"
+
+# key: permissions.admin_panel.access
+#: enums.py
+msgctxt "permissions"
+msgid "Open the administration panel"
+msgstr "관리 화면 사용"
+
+# key: permissions.users.view
+#: enums.py
+msgctxt "permissions"
+msgid "View users"
+msgstr "사용자 조회"
+
+# key: permissions.users.create
+#: enums.py
+msgctxt "permissions"
+msgid "Create users"
+msgstr "사용자 생성"
+
+# key: permissions.users.update
+#: enums.py
+msgctxt "permissions"
+msgid "Edit users"
+msgstr "사용자 수정"
+
+# key: permissions.users.reset_mfa
+#: enums.py
+msgctxt "permissions"
+msgid "Reset two-factor authentication"
+msgstr "2단계 인증 초기화"
+
+# key: permissions.roles.view
+#: enums.py
+msgctxt "permissions"
+msgid "View roles"
+msgstr "역할 조회"
+
+# key: permissions.roles.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Create and edit roles"
+msgstr "역할 생성 및 수정"
+
+# key: permissions.role_assignments.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Assign and end roles"
+msgstr "역할 할당 및 종료"
+
+# key: permissions.audit_records.view
+#: enums.py
+msgctxt "permissions"
+msgid "View audit records"
+msgstr "감사 기록 조회"
+
+# key: permissions.security_events.view
+#: enums.py
+msgctxt "permissions"
+msgid "View security events"
+msgstr "보안 이벤트 조회"
+
+# key: permissions.security_settings.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage security settings"
+msgstr "보안 설정 관리"
+
+# key: permissions.institution_settings.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage institution settings"
+msgstr "기관 설정 관리"
+
+# key: permissions.queue_monitor.view
+#: enums.py
+msgctxt "permissions"
+msgid "View the queue monitor"
+msgstr "큐 모니터 조회"
+
+# key: permissions.reference_data.view
+#: enums.py
+msgctxt "permissions"
+msgid "View reference data"
+msgstr "기준정보 조회"
+
+# key: permissions.reference_data.import
+#: enums.py
+msgctxt "permissions"
+msgid "Import reference data from CSV"
+msgstr "기준정보 CSV 가져오기"
+
+# key: permissions.lookup_values.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage code data, countries and languages"
+msgstr "코드 데이터, 국가, 언어 관리"
+
+# key: permissions.org_units.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage org units and reorganizations"
+msgstr "조직 단위와 개편 관리"
+
+# key: permissions.programs.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage programs"
+msgstr "프로그램 관리"
+
+# key: permissions.facilities.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage buildings and rooms"
+msgstr "건물과 강의실 관리"
+
+# key: permissions.terms.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage academic years, terms, term types and time slots"
+msgstr "학년도, 학기, 학기 종류, 교시 관리"
+
+# key: permissions.term_windows.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage term windows"
+msgstr "업무 기간 관리"
+
+# key: permissions.course_categories.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage course categories"
+msgstr "교과 구분 관리"
+
+# key: permissions.grade_scales.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage grade scales"
+msgstr "성적 척도 관리"
+
+# key: permissions.people.view
+#: enums.py
+msgctxt "permissions"
+msgid "View all people"
+msgstr "전체 인물 조회"
+
+# key: permissions.people.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Create and edit people"
+msgstr "인물 등록과 수정"
+
+# key: permissions.people.view_sensitive
+#: enums.py
+msgctxt "permissions"
+msgid "Reveal national ID and passport numbers"
+msgstr "신분증·여권번호 표시"
+
+# key: permissions.people.merge
+#: enums.py
+msgctxt "permissions"
+msgid "Merge duplicate people"
+msgstr "중복 인물 병합"
+
+# key: permissions.accounts.invite
+#: enums.py
+msgctxt "permissions"
+msgid "Invite people to create an account"
+msgstr "계정 초대"
+
+# key: permissions.student_records.view
+#: enums.py
+msgctxt "permissions"
+msgid "View student records"
+msgstr "학적 조회"
+
+# key: permissions.student_records.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Create and edit student records"
+msgstr "학적 등록과 수정"
+
+# key: permissions.student_status_changes.approve
+#: enums.py
+msgctxt "permissions"
+msgid "Approve and record status changes"
+msgstr "학적 변동 승인과 처리"
+
+# key: permissions.instructors.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage instructors"
+msgstr "교원 관리"
+
+# key: permissions.advisors.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Assign advisors"
+msgstr "지도교수 배정"
+
+# key: permissions.authentication_settings.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage sign-in methods and SSO"
+msgstr "로그인 수단과 SSO 관리"
+
+# key: permissions.admission_cycles.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage admission cycles and admission settings"
+msgstr "모집 회차와 입학 설정 관리"
+
+# key: permissions.applications.view
+#: enums.py
+msgctxt "permissions"
+msgid "View applications"
+msgstr "지원서 조회"
+
+# key: permissions.applications.review
+#: enums.py
+msgctxt "permissions"
+msgid "Review and decide applications"
+msgstr "지원서 검토와 합격 결정"
+
+# key: permissions.applications.matriculate
+#: enums.py
+msgctxt "permissions"
+msgid "Create student records for admitted applicants"
+msgstr "합격자 학적 생성"
+
+# key: permissions.courses.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage courses, versions and requisites"
+msgstr "교과목, 버전, 선수과목 관리"
+
+# key: permissions.curriculum.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage graduation requirements"
+msgstr "졸업 요건 관리"
+
+# key: permissions.sections.view
+#: enums.py
+msgctxt "permissions"
+msgid "View sections"
+msgstr "개설강좌 조회"
+
+# key: permissions.sections.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Plan sections (instructors, times, rooms)"
+msgstr "개설강좌 편성(담당 교원, 시간, 강의실)"
+
+# key: permissions.additional_programs.approve
+#: enums.py
+msgctxt "permissions"
+msgid "Decide second major and minor applications"
+msgstr "복수전공·부전공 신청 승인"
+
+# key: permissions.enrollments.view
+#: enums.py
+msgctxt "permissions"
+msgid "View registrations and rosters"
+msgstr "수강 현황과 수강생 명단 조회"
+
+# key: permissions.registration.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Register, drop and withdraw students for them (with a reason)"
+msgstr "학생 대신 수강신청·취소·철회(사유 필요)"
+
+# key: permissions.registration_rules.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage registration rule sets and credit limits"
+msgstr "수강신청 규칙 세트와 학점 상한 관리"
+
+# key: permissions.registration_holds.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Place and release holds, grant rule overrides"
+msgstr "수강신청 제한 설정·해제, 규칙 예외 허용"
+
+# key: permissions.grades.view
+#: enums.py
+msgctxt "permissions"
+msgid "View grades, grade progress and term records"
+msgstr "성적, 성적 처리 현황, 학기 기록 조회"
+
+# key: permissions.grades.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Finalize and return grades, enter grades for instructors, close terms"
+msgstr "성적 확정과 반려, 교원 대신 성적 입력, 학기 마감"
+
+# key: permissions.grade_changes.request
+#: enums.py
+msgctxt "permissions"
+msgid "Request a change to a finalized grade"
+msgstr "확정된 성적의 정정 요청"
+
+# key: permissions.grade_changes.approve
+#: enums.py
+msgctxt "permissions"
+msgid "Approve or reject grade changes (not your own requests)"
+msgstr "성적 정정 승인·반려(본인 요청 제외)"
+
+# key: permissions.grading_policies.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage GPA, retake, academic standing and honors policy"
+msgstr "평점, 재수강, 학사경고, 성적우수 정책 관리"
+
+# key: permissions.grade_exceptions.review
+#: enums.py
+msgctxt "permissions"
+msgid "Be told when staff submit grades outside the grade caps (department heads, academic office)"
+msgstr "직원이 등급 비율을 넘겨 예외 제출하면 알림을 받음(학과장, 학사팀장)"
+
+# key: permissions.evaluations.view
+#: enums.py
+msgctxt "permissions"
+msgid "View course evaluation response rates and results"
+msgstr "강의평가 응답률과 결과 조회"
+
+# key: permissions.evaluations.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage evaluation forms, term evaluations and publication"
+msgstr "강의평가 양식, 학기 강의평가, 결과 공개 관리"
+
+# key: permissions.certificates.issue
+#: enums.py
+msgctxt "permissions"
+msgid "Issue, re-render and revoke certificates"
+msgstr "증명서 발급, 재생성, 취소"
+
+# key: permissions.certificates.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage certificate kinds, templates and settings"
+msgstr "증명서 종류, 서식, 설정 관리"
+
+# key: permissions.assessments.record
+#: enums.py
+msgctxt "permissions"
+msgid "Register students, enter and publish results, record external results"
+msgstr "응시 등록, 결과 입력·공개, 외부 성적 등록"
+
+# key: permissions.assessments.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage examination kinds, areas and sessions"
+msgstr "시험 종류, 영역, 회차 관리"
+
+# key: permissions.graduation.audit
+#: enums.py
+msgctxt "permissions"
+msgid "Run and view degree audits"
+msgstr "졸업 요건 점검 실행·조회"
+
+# key: permissions.graduation.process
+#: enums.py
+msgctxt "permissions"
+msgid "Process graduations, grant requirement waivers"
+msgstr "졸업 처리, 요건 면제 승인"
+
+# key: permissions.reports.view
+#: enums.py
+msgctxt "permissions"
+msgid "View standard reports and download them"
+msgstr "표준 보고서 조회와 내려받기"
+
+# key: permissions.lms.manage
+#: enums.py
+msgctxt "permissions"
+msgid "Manage LMS platforms, links and synchronization"
+msgstr "LMS 플랫폼, 연결, 동기화 관리"
+
+# key: security.mfa_enforcement.disabled
+#: enums.py
+msgid "Not used"
+msgstr "사용 안 함"
+
+# key: security.mfa_enforcement.recommended
+#: enums.py
+msgid "Recommended (optional)"
+msgstr "권장 (선택)"
+
+# key: security.mfa_enforcement.required_for_roles
+#: enums.py
+msgid "Required for selected roles"
+msgstr "지정 역할 필수"
+
+# key: security.mfa_enforcement.required_for_all
+#: enums.py
+msgid "Required for everyone"
+msgstr "전체 필수"
+
+# key: security.mfa_methods.authenticator_app
+#: enums.py
+msgid "Authenticator app"
+msgstr "인증 앱"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: enums.py
+msgid "Email code"
+msgstr "이메일 코드"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: enums.py
+msgctxt "security"
+msgid "Applicant"
+msgstr "지원자"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: enums.py
+msgctxt "security"
+msgid "Student"
+msgstr "학생"
+
+# key: security.personas.alumni
+#: enums.py
+msgctxt "security"
+msgid "Alumni"
+msgstr "졸업생"
+
+# key: security.personas.instructor
+#: enums.py
+msgctxt "security"
+msgid "Instructor"
+msgstr "교원"
+
+# key: security.personas.advisor
+#: enums.py
+msgctxt "security"
+msgid "Advisor"
+msgstr "지도교수"
+
+# key: security.scope_types.global
+#: enums.py
+msgctxt "security"
+msgid "All"
+msgstr "전체"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: enums.py
+msgctxt "security"
+msgid "Org unit"
+msgstr "조직 단위"
+
+# key: security.scope_types.program
+#: enums.py
+msgctxt "security"
+msgid "Program"
+msgstr "프로그램"
+
+# key: security.sso_link_modes.manual
+#: enums.py
+msgid "Users link their own accounts"
+msgstr "사용자가 직접 연결"
+
+# key: security.sso_link_modes.institutional_email
+#: enums.py
+msgid "Link automatically by verified school email"
+msgstr "확인된 학교 이메일로 자동 연결"
+
+# key: security.student_number_login.disabled
+#: enums.py
+msgid "Not allowed"
+msgstr "허용 안 함"
+
+# key: security.student_number_login.active_records
+#: enums.py
+msgid "Current students only"
+msgstr "재학생만"
+
+# key: security.student_number_login.all_records
+#: enums.py
+msgid "Current students and graduates"
+msgstr "재학생과 졸업생"
+
+# key: authentication.fields.email_or_student_number
+#: forms.py
+msgid "Email or student number"
+msgstr "이메일 또는 학번"
+
+# key: authentication.fields.password
+#: forms.py
+msgctxt "authentication"
+msgid "Password"
+msgstr "비밀번호"
+
+# key: authentication.login.remember_me
+#: forms.py
+msgid "Keep me signed in"
+msgstr "로그인 상태 유지"
+
+# key: auth.inactive
+#: middleware.py
+msgid "This account has been deactivated. Contact the administrator."
+msgstr "비활성화된 계정입니다. 관리자에게 문의하세요."
+
+# key: security.mfa.enrollment_required
+#: middleware.py
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "이 계정은 2단계 인증이 필요합니다. 계속하려면 설정해 주세요."
+
+# key: security.email_code.mail_greeting
+#: notifications.py
+msgid "Hello,"
+msgstr "안녕하세요."
+
+# key: security.email_code.mail_intro
+#: notifications.py
+msgid "Use this code to finish signing in:"
+msgstr "로그인을 마치려면 아래 코드를 입력하세요."
+
+# key: security.email_code.mail_expiry
+#: notifications.py
+#, python-format
+msgid "The code expires in %(minutes)s minutes and can be used once."
+msgstr "코드는 %(minutes)s분 후 만료되며 한 번만 사용할 수 있습니다."
+
+# key: security.email_code.mail_ignore
+#: notifications.py
+msgid "If you did not try to sign in, change your password."
+msgstr "로그인을 시도하지 않았다면 비밀번호를 변경하세요."
+
+# key: security.email_code.mail_salutation
+#: notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"감사합니다.\n"
+"%(app)s감사합니다.\n"
+"%(app)s"
+
+# key: security.email_code.mail_subject
+#: notifications.py
+msgid "Your sign-in code"
+msgstr "로그인 확인 코드"
+
+# key: admin.settings.security.mfa_enforcement
+#: settings_pages.py
+msgid "Policy"
+msgstr "정책"
+
+# key: admin.users.actions.reset_mfa
+# key: permissions.users.reset_mfa
+# key: admin.settings.security.mfa_required_roles
+#: settings_pages.py
+msgid "Roles that must use two-factor authentication"
+msgstr "2단계 인증이 필수인 역할"
+
+# key: security.mfa_enforcement.required_for_roles
+#: settings_pages.py
+msgid "Used when the policy is Required for selected roles."
+msgstr "정책이 '선택한 역할에 필수'일 때 적용됩니다."
+
+# key: admin.settings.security.mfa_grace_period_days
+#: settings_pages.py
+msgid "Grace period (days)"
+msgstr "유예 기간(일)"
+
+# key: admin.settings.security.mfa_grace_period_help
+#: settings_pages.py
+msgid "Days a user can keep working after the requirement first applies to them. 0 means immediately."
+msgstr "필수 정책이 처음 적용된 뒤 설정 없이 사용할 수 있는 일수입니다. 0이면 즉시 적용됩니다."
+
+# key: admin.settings.security.mfa_remember_device_days
+#: settings_pages.py
+msgid "Remember devices for (days)"
+msgstr "기기 기억 기간(일)"
+
+# key: admin.settings.security.mfa_remember_device_help
+#: settings_pages.py
+msgid "Users can skip the code on a trusted device for this many days. 0 turns this off."
+msgstr "신뢰한 기기에서는 이 기간 동안 코드 입력을 생략합니다. 0이면 사용하지 않습니다."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+# key: admin.settings.security.mfa_email_code_enabled
+#: settings_pages.py
+msgid "Allow email codes"
+msgstr "이메일 코드 허용"
+
+# key: admin.settings.security.mfa_email_code_help
+#: settings_pages.py
+msgid "Users can choose one-time codes by email instead of an authenticator app. Turning this off stops email codes from counting as two-factor authentication."
+msgstr "사용자가 인증 앱 대신 이메일 일회용 코드를 선택할 수 있습니다. 끄면 이메일 코드는 2단계 인증으로 인정되지 않습니다."
+
+#: settings_pages.py
+msgid "Choose at least one role."
+msgstr "역할을 하나 이상 고르세요."
+
+# key: permissions.resources.security_events
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: settings_pages.py
+msgid "Security"
+msgstr "보안"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: settings_pages.py views.py
+msgid "Two-factor authentication"
+msgstr "2단계 인증"
+
+# key: admin.settings.security.mfa_description
+#: settings_pages.py
+msgid "Changes apply to every user immediately."
+msgstr "변경 사항은 모든 사용자에게 즉시 적용됩니다."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
+msgstr "%(key)s: 키는 영문 소문자, 숫자, 하이픈만 씁니다."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: each provider needs its own key."
+msgstr "%(key)s: 제공자마다 다른 키가 필요합니다."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the button label is required (64 characters at most)."
+msgstr "%(key)s: 버튼 이름이 필요합니다(최대 64자)."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the issuer must be a URL."
+msgstr "%(key)s: 발급자는 URL이어야 합니다."
+
+#: settings_pages.py
+#, python-format
+msgid "%(key)s: the client ID is required."
+msgstr "%(key)s: 클라이언트 ID가 필요합니다."
+
+# key: authentication.fields.email_or_student_number
+# key: admin.settings.authentication.student_number_login
+#: settings_pages.py
+msgid "Sign in with student number"
+msgstr "학번으로 로그인"
+
+# key: admin.settings.authentication.password_login_for_sso_users
+#: settings_pages.py
+msgid "Allow passwords for users with school sign-in"
+msgstr "학교 계정을 연결한 사용자의 비밀번호 로그인 허용"
+
+# key: admin.settings.authentication.password_login_for_sso_users_help
+#: settings_pages.py
+msgid "When off, users who have linked a school account must use it to sign in."
+msgstr "끄면 학교 계정을 연결한 사용자는 학교 통합 로그인으로만 로그인합니다."
+
+# key: admin.settings.authentication.lockout_threshold
+#: settings_pages.py
+msgid "Lock after failed attempts"
+msgstr "잠금까지 실패 횟수"
+
+# key: admin.settings.authentication.lockout_threshold_help
+#: settings_pages.py
+msgid "Failed passwords in a row before the account is locked. 0 turns locking off."
+msgstr "연속으로 비밀번호를 틀린 횟수가 이 값에 이르면 계정을 잠급니다. 0이면 잠그지 않습니다."
+
+# key: admin.settings.authentication.lockout_minutes
+#: settings_pages.py
+msgid "Lock duration (minutes)"
+msgstr "잠금 시간(분)"
+
+# key: permissions.resources.accounts
+# key: admin.settings.authentication.sso_link_mode
+#: settings_pages.py
+msgid "Account linking"
+msgstr "계정 연결 방식"
+
+# key: admin.settings.authentication.sso_providers
+#: settings_pages.py
+msgid "Providers"
+msgstr "제공자"
+
+# key: permissions.resources.authentication_settings
+# key: admin.settings.authentication.title
+#: settings_pages.py
+msgid "Sign-in methods"
+msgstr "로그인 수단"
+
+# key: authentication.fields.password
+# key: admin.settings.authentication.password_section
+#: settings_pages.py
+msgid "Passwords"
+msgstr "비밀번호"
+
+# key: admin.settings.authentication.sso_section
+#: settings_pages.py
+msgid "School sign-in (SSO)"
+msgstr "학교 통합 로그인(SSO)"
+
+# key: assessment.portal.cancel
+#: templates/security/admin/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "취소"
+
+# key: admin.settings.authentication.provider_key
+# key: lms.fields.credential_key
+#: templates/security/widgets/sso_providers.html
+msgctxt "security"
+msgid "Key"
+msgstr "키"
+
+# key: admin.settings.authentication.provider_label
+#: templates/security/widgets/sso_providers.html
+msgid "Button label"
+msgstr "버튼 이름"
+
+# key: admin.settings.authentication.issuer
+#: templates/security/widgets/sso_providers.html
+msgid "Issuer URL"
+msgstr "발급자(Issuer) URL"
+
+# key: admin.settings.authentication.client_id
+#: templates/security/widgets/sso_providers.html
+msgid "Client ID"
+msgstr "클라이언트 ID"
+
+# key: admin.settings.authentication.client_secret
+#: templates/security/widgets/sso_providers.html
+msgid "Client secret"
+msgstr "클라이언트 비밀값"
+
+# key: admin.settings.authentication.client_secret_help
+#: templates/security/widgets/sso_providers.html
+msgid "Stored encrypted. Leave empty to keep the stored value."
+msgstr "암호화하여 저장합니다. 비워 두면 저장된 값을 유지합니다."
+
+# key: admin.role_assignments.fields.scope
+# key: admin.settings.authentication.scopes
+#: templates/security/widgets/sso_providers.html
+msgid "Scopes"
+msgstr "범위(scope)"
+
+# key: admin.users.actions.reset_mfa
+# key: permissions.users.reset_mfa
+# key: admin.settings.authentication.trusts_mfa
+#: templates/security/widgets/sso_providers.html
+msgid "Counts as two-factor authentication"
+msgstr "2단계 인증으로 인정"
+
+# key: admin.settings.authentication.trusts_mfa_help
+#: templates/security/widgets/sso_providers.html
+msgid "Turn on only if the school's sign-in itself requires two-factor authentication."
+msgstr "학교 통합 로그인 자체가 2단계 인증을 요구하는 경우에만 켜세요."
+
+#: templates/security/widgets/sso_providers.html
+msgid "Remove this provider"
+msgstr "이 제공자 삭제"
+
+# key: admin.settings.authentication.redirect_uri
+#: templates/security/widgets/sso_providers.html
+msgid "Redirect URI to register with the provider"
+msgstr "제공자에 등록할 리디렉션 URI"
+
+#: views.py
+msgid "The email code must be 6 digits."
+msgstr "이메일 코드는 6자리 숫자여야 합니다."
+
+# key: security.email_code.sent
+#: views.py
+msgid "A new code has been sent to your email."
+msgstr "새 코드를 이메일로 보냈습니다."
+
+# key: security.email_code.wait
+#: views.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "%(seconds)s초 후에 다시 요청할 수 있습니다."
+
+# key: security.sso.failed
+#: views_sso.py
+msgid "School sign-in failed. Try again or sign in with your password."
+msgstr "학교 통합 로그인에 실패했습니다. 다시 시도하거나 비밀번호로 로그인하세요."
+
+# key: security.sso.expired
+#: views_sso.py
+msgid "The sign-in attempt expired. Try again."
+msgstr "로그인 시도가 만료되었습니다. 다시 시도하세요."
+
+# key: admin.users.notifications.unlocked
+# key: security.sso.cancelled
+#: views_sso.py
+#| msgid "Sign-in unlocked."
+msgid "Sign-in was cancelled."
+msgstr "로그인을 취소했습니다."
+
+# key: security.sso.linked
+#: views_sso.py
+#, python-format
+msgid "%(provider)s account linked."
+msgstr "%(provider)s 계정을 연결했습니다."
+
+# key: security.sso.not_linked
+#: views_sso.py
+#, python-format
+msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
+msgstr "%(provider)s 계정이 이곳 계정과 연결되어 있지 않습니다. 비밀번호로 로그인한 뒤 보안 화면에서 연결하세요."
+
+#~ msgid "Org unit or program id. An org unit also covers every unit below it."
+#~ msgstr "조직 단위 또는 프로그램 ID. 조직 단위는 하위 단위를 모두 포함합니다."
