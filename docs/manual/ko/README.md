@@ -21,3 +21,9 @@
 | [audit-and-maintenance.md](operations/audit-and-maintenance.md) | 감사 해시 체인, 보존과 정리, 파일 정리, 상태 점검 |
 | [load-testing.md](operations/load-testing.md) | 수강신청 피크 부하 테스트(Locust)와 워커 수 판단 |
 | [troubleshooting.md](operations/troubleshooting.md) | 흔한 증상, 확인할 것, 요청 단위 추적 |
+
+## 그 밖의 문서
+
+- [LMS 연동 가이드](../../lms-integration-guide.md): API와 LMS 커넥터(개발자)
+- [언어 추가 가이드](../../development/adding-a-language.ko.md), [명명 규칙](../../development/naming.md), [리뷰 체크리스트](../../development/review-checklist.md)(개발자)
+- [문서 색인](../../README.md)

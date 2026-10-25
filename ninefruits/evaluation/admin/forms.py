@@ -69,7 +69,7 @@ class CopyFormForm(forms.Form):
         return code
 
 
-class QuestionInline(CatalogPermissionMixin, StackedInline):  # type: ignore[misc]
+class QuestionInline(CatalogPermissionMixin, StackedInline):
     """The questions of a form. Locked once the form has responses; copy the form to change
     them."""
 
@@ -88,7 +88,7 @@ class QuestionInline(CatalogPermissionMixin, StackedInline):  # type: ignore[mis
         return not (isinstance(obj, EvaluationForm) and obj.is_locked())
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", EvaluationQuestion))
+        return self.policy_allows(request, "view_any", EvaluationQuestion)
 
     def has_add_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return self._editable(request, obj)
@@ -134,7 +134,7 @@ class EvaluationFormAdmin(ReferenceAdmin):
         return int(getattr(obj, "_questions", 0))
 
     def has_copy_form_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return bool(request.user.has_perm("create", EvaluationForm))
+        return self.policy_allows(request, "create", EvaluationForm)
 
     @action(description=_("Copy form"), url_path="copy", permissions=["copy_form"], icon="content_copy")
     def copy_form(self, request: HttpRequest, object_id: Any) -> HttpResponse:

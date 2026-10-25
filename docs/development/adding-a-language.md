@@ -60,21 +60,38 @@ Reference data created by `setup_install` has translatable names stored as JSON 
 | Manual index | `docs/manual/<locale>/README.md` | Title, audience, links to the two parts |
 | Project README | `README.<locale>.md` | Same sections as `README.md`; demo accounts and commands unchanged |
 | Language table | Top of every `README*.md` | One row per language. Add the new row to all of them |
-| Screenshots | `docs/screenshots/<locale>/` | From demo data only |
+| Screenshots | `docs/screenshots/<locale>/{admin,instructor,student}.png` | See below |
 
 Korean is the source of the manuals (`docs/manual/ko/`). Screen names in bold must match the UI labels of that language, so finish step 1 before the manual.
+
+The three **screenshots** are taken from demo data only (never from real data). Create a separate demo database, start a development server and run the script:
+
+```bash
+echo "$ADMIN_PASSWORD" | uv run manage.py setup_install --force --profile=korean-university --grade-scale=4.5 \
+    --admin-email=admin@example.test --admin-name=Admin
+uv run manage.py setup_demo --size=small --seed=42 --force
+uv run manage.py runserver 8765 &
+uv run python tools/screenshots.py vi --base-url=http://127.0.0.1:8765
+```
+
+The script (Playwright, Chromium) signs in as the demo system administrator, instructor and student, switches the account language (`POST /i18n/locale/`), captures `/admin/` and `/portal/` at 1366×900 and saves them in `docs/screenshots/<locale>/`. Run `uv run playwright install chromium` once first (or point to an existing Chromium with `--chromium=/path`). The new language must be enabled among the institution's supported languages (step 2). Without arguments it captures all four languages.
 
 ## 5. PDFs and fonts
 
 Certificates, transcripts and attendance sheets are rendered by Gotenberg (Chromium). Its image ships the Noto fonts, which cover Lao, Thai, Khmer, Arabic, Devanagari and CJK. PDF templates extend `templates/pdf/layout.html`, whose font stack is Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans Lao, Noto Sans; mark text with `lang="..."` when a script needs its own font first (`:lang(zh)`, `:lang(lo)` rules). For a script not covered, add the font to the Gotenberg image and to the layout. `uv run manage.py pdf_sample` renders a mixed-script table to check the result.
 
-## 6. Checklist before the pull request
+## 6. Demo data (optional)
+
+`ninefruits/setup/seeders/demo/people.py` mixes Faker locales (`en_US`, `ko_KR`, `zh_CN`) in names and stores per-script name variants. If Faker has a locale for the language and names in its script matter for demonstrations, add it.
+
+## 7. Checklist before the pull request
 
 - [ ] `LANGUAGES`, `TRANSLATED_LOCALES` (and `EXTRA_LANG_INFO` and a formats module if Django does not know the language)
 - [ ] Catalogs complete: `uv run manage.py i18n_missing <locale> --strict` reports 0 missing
 - [ ] Settings migration (if shipped) or institution settings updated
 - [ ] Seeded names translated (or consciously left to fall back to English)
-- [ ] `docs/manual/<locale>/` and `README.<locale>.md`, language table in every `README*.md`
+- [ ] `docs/manual/<locale>/` (28 administrator chapters + index, 9 operations documents, index) and `README.<locale>.md`, language table in every `README*.md`
+- [ ] Screenshots in `docs/screenshots/<locale>/`
 - [ ] `uv run pytest`, `uv run ruff check`, `uv run manage.py check` pass
 - [ ] A native speaker reviewed the UI strings and at least the first manual chapters; note the reviewer in the pull request
 

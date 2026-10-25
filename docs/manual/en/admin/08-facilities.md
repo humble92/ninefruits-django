@@ -14,7 +14,7 @@ Enter the code (for example `SCI`), the name (per language) and the address. A b
 | Name | Optional, for example Main Auditorium |
 | Room type | A value from the `room_type` code list (classroom, laboratory, etc.) |
 | Org unit | The department that manages the room (optional) |
-| Capacity | Compared with the section capacity when timetables are made (Phase 4) |
+| Capacity | Compared with the section capacity when timetables are made ([chapter 18](18-sections-and-timetables.md)) |
 | Used for timetables | When off, the room is left out when timetables are made (offices, storage, etc.) |
 
 For many rooms, use [CSV import](09-csv-import.md). Buildings must be registered first.

@@ -21,7 +21,7 @@ class Command(AuditedCommand):
         parser.add_argument("--term", default=None, help="Term code")
         parser.add_argument("--dry-run", action="store_true", help="Report differences only")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         code = options.get("platform")
         platforms = list(
             LmsPlatform.objects.filter(code=code) if code else LmsPlatform.objects.active().order_by("code")

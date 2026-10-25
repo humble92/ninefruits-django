@@ -34,7 +34,7 @@ class Command(StatusCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("term", help="Term code, e.g. 2027-SP")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         term = Term.objects.filter(code=options["term"]).first()
         if term is None:
             self.error("Unknown term code.")

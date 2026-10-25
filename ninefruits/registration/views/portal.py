@@ -10,7 +10,7 @@ block is swapped. Registration actions are limited to 30 a minute per user (port
 
 from __future__ import annotations
 
-from collections.abc import Callable
+from collections.abc import Callable, Sequence
 from decimal import Decimal
 from typing import Any
 from urllib.parse import urlencode
@@ -37,7 +37,7 @@ from ninefruits.registration.enums import AttemptOutcome, EnrollmentStatus, Wait
 from ninefruits.registration.models import CartItem, CreditLimitPolicy, Enrollment, WaitlistEntry
 from ninefruits.registration.rules.credit_limit import credits_text
 from ninefruits.registration.services.seat_allocator import SeatAllocator
-from ninefruits.registration.services.waitlists import position as waitlist_position
+from ninefruits.registration.services.waitlists import positions as waitlist_positions
 from ninefruits.registration.services.waitlists import waiting_counts
 from ninefruits.term.enums import TermStatus, TermWindowType
 from ninefruits.term.models import Term
@@ -88,7 +88,7 @@ class RegistrationView(LoginRequiredMixin, View):
         url = reverse("portal:registration") + (f"?{urlencode(query)}" if query else "")
         return HttpResponseRedirect(url)
 
-    def _say(self, request: HttpRequest, messages: list[str | None], tone: str) -> None:
+    def _say(self, request: HttpRequest, messages: Sequence[str | None], tone: str) -> None:
         request.session[FLASH_KEY] = {
             "tone": tone,
             "messages": [str(message) for message in messages if message],
@@ -180,12 +180,13 @@ class RegistrationView(LoginRequiredMixin, View):
             [meeting for e in active for meeting in e.section.meetings.all()],
             lambda meeting: (labels.get(meeting.section_id, ""), room_label(meeting)),
         )
-        waitlist = [
-            {"entry": entry, "label": entry.section.label(), "position": waitlist_position(entry)}
-            for entry in WaitlistEntry.objects.visible_to(request.user)
+        entries = list(
+            WaitlistEntry.objects.visible_to(request.user)
             .filter(student_record=record, status=WaitlistStatus.WAITING, section__term=term)
             .select_related("section__course")
-        ]
+        )
+        places = waitlist_positions(entries)
+        waitlist = [{"entry": entry, "label": entry.section.label(), "position": places[entry.pk]} for entry in entries]
         cart = [
             {
                 "item": item,
@@ -228,7 +229,7 @@ class RegistrationView(LoginRequiredMixin, View):
             .filter(Q(course__code__istartswith=search) | Q(_search__icontains=search))
             .values("pk")
         )
-        sections = (
+        found = (
             Section.objects.visible_to(request.user)
             .filter(status=SectionStatus.PUBLISHED, term=term, pk__in=matches)
             .select_related("course", "version", "session")
@@ -245,7 +246,7 @@ class RegistrationView(LoginRequiredMixin, View):
             )
             .order_by("course__code", "section_code")[:SEARCH_LIMIT]
         )
-        sections = list(sections)
+        sections = list(found)
         waiting = waiting_counts([section.pk for section in sections])
         seats = SeatAllocator()
         rows = []
@@ -304,9 +305,10 @@ class RegistrationView(LoginRequiredMixin, View):
         return self._back(request, term_id, search)
 
     def _section(self, request: HttpRequest, term_id: int | None) -> Section:
-        return get_object_or_404(
+        section: Section = get_object_or_404(
             Section.objects.visible_to(request.user), pk=_int(request.POST.get("section_id")), term_id=term_id
         )
+        return section
 
     def _enroll(self, request: HttpRequest, record: Any, term_id: int | None, waitlist: bool = False) -> None:
         outcome = EnrollStudent().handle(
@@ -349,11 +351,12 @@ class RegistrationView(LoginRequiredMixin, View):
         self._say(request, lines or [_("The cart is empty.")], "info")
 
     def _enrollment(self, request: HttpRequest, record: Any) -> Enrollment:
-        return get_object_or_404(
+        enrollment: Enrollment = get_object_or_404(
             Enrollment.objects.visible_to(request.user).select_related("section", "student_record"),
             pk=_int(request.POST.get("enrollment_id")),
             student_record=record,
         )
+        return enrollment
 
     def _drop(self, request: HttpRequest, record: Any, term_id: int | None) -> None:
         DropEnrollment().drop(self._enrollment(request, record), request.user)

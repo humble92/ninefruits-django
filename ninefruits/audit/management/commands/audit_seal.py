@@ -22,7 +22,7 @@ class Command(AuditedCommand):
             help="Only these audit tables (record_changes, activity_log, security_events)",
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         summary: dict[str, int] = {}
         for table in chain.tables(options["table"]):
             sealed = chain.seal(table)

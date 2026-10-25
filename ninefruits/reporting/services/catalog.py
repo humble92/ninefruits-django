@@ -16,7 +16,7 @@ from dataclasses import dataclass
 from datetime import UTC, date, datetime
 from typing import Any
 
-from django.db.models import Exists, OuterRef
+from django.db.models import Exists, OuterRef, QuerySet
 from django.http import Http404
 from django.utils import timezone
 from django.utils.functional import Promise
@@ -263,7 +263,8 @@ class ReportCatalog:
 
         definition = self.definition(key)
         model = VIEW_MODELS[definition.view]
-        queryset = model.objects.all()
+        # Each view model has its own columns; the filters below are checked against the report.
+        queryset: QuerySet[Any] = model._default_manager.all()
 
         org_unit_ids: list[int] | None = None
         if params.get("org_unit") not in (None, ""):
@@ -295,7 +296,7 @@ class ReportCatalog:
             elif param == "year_level":
                 queryset = queryset.filter(year_level=int(value))
             elif param == "term":
-                term = Term.objects.filter(pk=_int(value)).first()
+                term = Term.objects.filter(pk=_int(value) or 0).first()
                 if term is None:
                     raise Http404("Unknown term.")
                 queryset = queryset.filter(term_code=term.code)

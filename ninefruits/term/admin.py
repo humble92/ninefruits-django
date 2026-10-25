@@ -176,7 +176,7 @@ class TermSessionFormSet(forms.BaseInlineFormSet):  # type: ignore[type-arg]
                 raise ValidationError(_("The full-term session belongs to the term and cannot be deleted."))
 
 
-class TermSessionInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class TermSessionInline(CatalogPermissionMixin, TabularInline):
     """Sessions of a term. The full-term session is created with the term and follows its
     dates; other sessions (halves, intensive blocks) are added here."""
 
@@ -252,7 +252,7 @@ class TermWindowForm(TargetCriteriaForm):
         return cleaned
 
 
-class TermWindowInline(CatalogPermissionMixin, StackedInline):  # type: ignore[misc]
+class TermWindowInline(CatalogPermissionMixin, StackedInline):
     """Business windows of a term. Several windows of one type with different eligibility make a
     staggered opening (e.g. fourth-year students first). Windows about courses belong to a
     session."""
@@ -321,9 +321,9 @@ class ChangeStatusForm(BaseDialogForm):
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
-        term = Term.objects.filter(pk=self.object_id).first()
+        term = Term.objects.filter(pk=self.object_id).first() if self.object_id is not None else None
         allowed = TermStatus(term.status).allowed_next() if term else []
-        self.fields["status"].choices = [(status.value, status.label) for status in allowed]
+        self.fields["status"].choices = [(status.value, status.label) for status in allowed]  # type: ignore[attr-defined]
 
 
 class CopyWindowsForm(forms.Form):

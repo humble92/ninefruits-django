@@ -11,9 +11,8 @@ from django.contrib import admin, messages
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.utils.http import url_has_allowed_host_and_scheme
-from django.utils.translation import gettext as gettext_now
+from django.utils.translation import gettext, pgettext_lazy
 from django.utils.translation import gettext_lazy as _
-from django.utils.translation import pgettext_lazy
 from unfold.widgets import (
     UnfoldAdminCheckboxSelectMultipleWidget,
     UnfoldAdminSelectWidget,
@@ -82,9 +81,11 @@ def find_section(term_id: int | None, label: str) -> Any:
         Section.objects.filter(term_id=term_id, course__code=course_code, section_code=section_code)
         .select_related("course")
         .first()
+        if term_id is not None
+        else None
     )
     if section is None:
-        raise ValidationError(gettext_now("Unknown section %(section)s.") % {"section": label})
+        raise ValidationError(gettext("Unknown section %(section)s.") % {"section": label})
     return section
 
 
@@ -107,6 +108,8 @@ class UserForm(forms.Form):
 def section_choices(term_id: int | None) -> list[tuple[int, str]]:
     from ninefruits.offering.models import Section
 
+    if term_id is None:
+        return []
     sections = (
         Section.objects.filter(term_id=term_id, status=SectionStatus.PUBLISHED)
         .select_related("course", "version")
@@ -191,7 +194,7 @@ class PlaceHoldForm(UserForm):
         if starts is not None and ends is not None and ends <= starts:
             self.add_error(
                 "ends_at",
-                gettext_now("The %(attribute)s field must be a date after %(date)s.")
+                gettext("The %(attribute)s field must be a date after %(date)s.")
                 % {"attribute": _("Ends"), "date": _("Starts")},
             )
         return cleaned
@@ -238,7 +241,7 @@ class GrantOverrideForm(UserForm):
         elif cleaned.get("course"):
             course = Course.objects.filter(code=cleaned["course"].strip()).first()
             if course is None:
-                self.add_error("course", gettext_now("Unknown course %(course)s.") % {"course": cleaned["course"]})
+                self.add_error("course", gettext("Unknown course %(course)s.") % {"course": cleaned["course"]})
             cleaned["course_obj"] = course
         return cleaned
 
@@ -308,7 +311,7 @@ class ChoiceFilter(admin.SimpleListFilter):
         value = self.value()
         if value in (None, "all"):
             return queryset
-        return queryset.filter(**{self.parameter_name: value})
+        return queryset.filter(**{str(self.parameter_name): value})
 
 
 class InForceFilter(admin.SimpleListFilter):

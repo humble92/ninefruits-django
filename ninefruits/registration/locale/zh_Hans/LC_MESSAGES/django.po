@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 20:15+0000\n"
+"POT-Creation-Date: 2026-10-24 23:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -55,22 +55,20 @@ msgid "You left the waitlist."
 msgstr "你已退出候补。"
 
 # key: validation.after
-#: actions/manage_holds.py:48 importers.py:106
+#: actions/manage_holds.py:48 admin/common.py:197 importers.py:106
 #, python-format
 msgid "The %(attribute)s field must be a date after %(date)s."
 msgstr "%(attribute)s 必须要晚于 %(date)s。"
 
 # key: admin.role_assignments.fields.ends_at
 # key: registration.fields.ends_at
-#: actions/manage_holds.py:49 admin/common.py:185 admin/common.py:195
-#: models/holds.py:56
+#: actions/manage_holds.py:49 admin/common.py:188 admin/common.py:198 models/holds.py:56
 msgid "Ends"
 msgstr "结束"
 
 # key: admin.role_assignments.fields.starts_at
 # key: registration.fields.starts_at
-#: actions/manage_holds.py:49 admin/common.py:184 admin/common.py:195
-#: models/holds.py:55
+#: actions/manage_holds.py:49 admin/common.py:187 admin/common.py:198 models/holds.py:55
 msgid "Starts"
 msgstr "开始"
 
@@ -113,15 +111,12 @@ msgstr "时间"
 # key: certificate.facts.student_number
 # key: graduation.report_columns.student_number
 # key: people.fields.student_number
-#: admin/attempts.py:74 admin/common.py:93 admin/enrollments.py:139
-#: admin/holds.py:69 templates/registration/admin/roster.html:8
-#: templates/registration/admin/waitlist.html:9
+#: admin/attempts.py:74 admin/common.py:94 admin/enrollments.py:139 admin/holds.py:69 templates/registration/admin/roster.html:8 templates/registration/admin/waitlist.html:9
 msgid "Student number"
 msgstr "学号"
 
 # key: offering.fields.section
-#: admin/attempts.py:78 admin/common.py:129 admin/common.py:205
-#: admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
+#: admin/attempts.py:78 admin/common.py:132 admin/common.py:208 admin/enrollments.py:147 models/enrollment.py:97 models/holds.py:116
 msgctxt "offering"
 msgid "Section"
 msgstr "课程班"
@@ -137,103 +132,108 @@ msgid "By"
 msgstr "操作人"
 
 # key: common.reason
-#: admin/common.py:48 admin/holds.py:77 models/holds.py:57 models/holds.py:121
+#: admin/common.py:47 admin/holds.py:77 models/holds.py:57 models/holds.py:121
 msgctxt "common"
 msgid "Reason"
 msgstr "原因"
 
 # key: registration.import.unknown_student
-#: admin/common.py:72 importers.py:87
+#: admin/common.py:71 importers.py:87
 #, python-format
 msgid "No student record with number %(number)s."
 msgstr "没有学号为 %(number)s 的学籍。"
 
+#: admin/common.py:88
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "未知的课程班 %(section)s。"
+
 # key: registration.fields.waive
-#: admin/common.py:132
+#: admin/common.py:135
 msgid "Waive rules"
 msgstr "不适用的规则"
 
 # key: registration.fields.waitlist_if_full
-#: admin/common.py:135
+#: admin/common.py:138
 msgid "Add to the waitlist if full"
 msgstr "满员时加入候补"
 
 # key: registration.fields.hold_type
-#: admin/common.py:174 admin/holds.py:83 admin/holds.py:116 models/holds.py:51
+#: admin/common.py:177 admin/holds.py:83 admin/holds.py:116 models/holds.py:51
 msgid "Hold type"
 msgstr "限制类型"
 
 # key: registration.fields.blocks_registration
-#: admin/common.py:176 models/holds.py:52
+#: admin/common.py:179 models/holds.py:52
 msgid "Blocks registration"
 msgstr "限制选课"
 
 # key: registration.fields.blocks_grades
-#: admin/common.py:179 models/holds.py:53
+#: admin/common.py:182 models/holds.py:53
 msgid "Blocks grade viewing"
 msgstr "限制查看成绩"
 
 # key: registration.fields.blocks_certificates
-#: admin/common.py:182 models/holds.py:54
+#: admin/common.py:185 models/holds.py:54
 msgid "Blocks certificates"
 msgstr "限制开具证明"
 
 # key: reference.resources.terms.label
-#: admin/common.py:202 admin/common.py:250 admin/holds.py:200 admin/rules.py:54
-#: admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22
-#: templates/registration/portal/registration.html:17
+#: admin/common.py:205 admin/common.py:253 admin/holds.py:200 admin/rules.py:54 admin/rules.py:147 admin/rules.py:164 models/holds.py:108 models/rules.py:22 templates/registration/portal/registration.html:17
 msgid "term"
 msgstr "学期"
 
 # key: registration.fields.rule
-#: admin/common.py:203 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96
-#: admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
+#: admin/common.py:206 admin/holds.py:204 admin/rules.py:84 admin/rules.py:96 admin/rules.py:310 models/holds.py:109 models/rules.py:52 models/rules.py:66
 msgid "Rule"
 msgstr "规则"
 
 # key: registration.help.override_section
-#: admin/common.py:208
+#: admin/common.py:211
 msgid "Leave empty to apply to every section of the term."
 msgstr "留空则适用于该学期所有课程班。"
 
 # key: curriculum.resources.courses.label
-#: admin/common.py:212 models/holds.py:119
+#: admin/common.py:215 models/holds.py:119
 msgid "course"
 msgstr "课程"
 
 # key: registration.help.override_course
-#: admin/common.py:215
+#: admin/common.py:218
 msgid "Leave empty for any course. Ignored when a section is chosen."
 msgstr "留空则适用于所有课程。选择课程班时忽略。"
 
 # key: registration.fields.expires_at
-#: admin/common.py:218 models/holds.py:122
+#: admin/common.py:221 models/holds.py:122
 msgid "Expires"
 msgstr "到期"
 
+#: admin/common.py:244
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "未知的课程 %(course)s。"
+
 # key: security.scope_types.global
-#: admin/common.py:256 admin/common.py:292 admin/common.py:321
+#: admin/common.py:259 admin/common.py:295 admin/common.py:324
 msgid "All"
 msgstr "全部"
 
 # key: registration.fields.in_force
-#: admin/common.py:317
+#: admin/common.py:320
 msgid "In force"
 msgstr "生效中"
 
 # key: common.yes
-#: admin/common.py:321
+#: admin/common.py:324
 msgid "Yes"
 msgstr "是"
 
-#: admin/common.py:321
+#: admin/common.py:324
 msgid "No"
 msgstr "否"
 
 # key: registration.fields.status
-#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115
-#: models/enrollment.py:231 templates/registration/admin/roster.html:11
-#: templates/registration/admin/waitlist.html:11
+#: admin/enrollments.py:33 admin/enrollments.py:160 models/enrollment.py:115 models/enrollment.py:231 templates/registration/admin/roster.html:11 templates/registration/admin/waitlist.html:11
 msgctxt "registration"
 msgid "Status"
 msgstr "状态"
@@ -245,34 +245,30 @@ msgid "Register a student"
 msgstr "为学生选课"
 
 # key: registration.portal.dropped
-#: admin/enrollments.py:75 views/portal.py:360
+#: admin/enrollments.py:75 views/portal.py:363
 msgid "Dropped."
 msgstr "已退课。"
 
 # key: registration.portal.withdrawn
-#: admin/enrollments.py:77 views/portal.py:364
+#: admin/enrollments.py:77 views/portal.py:367
 msgid "Withdrawn."
 msgstr "已撤课。"
 
 # key: registration.actions.drop
-#: admin/enrollments.py:79 admin/enrollments.py:199
-#: templates/registration/admin/roster.html:29
+#: admin/enrollments.py:79 admin/enrollments.py:200 templates/registration/admin/roster.html:29
 msgctxt "registration.actions"
 msgid "Drop"
 msgstr "退课"
 
 # key: registration.actions.withdraw
-#: admin/enrollments.py:79 admin/enrollments.py:209
-#: templates/registration/admin/roster.html:30
+#: admin/enrollments.py:79 admin/enrollments.py:210 templates/registration/admin/roster.html:30
 msgctxt "registration.actions"
 msgid "Withdraw"
 msgstr "撤课"
 
 # key: people.sections.name
 # key: people.fields.name
-#: admin/enrollments.py:143 admin/holds.py:73
-#: templates/registration/admin/roster.html:9
-#: templates/registration/admin/waitlist.html:10
+#: admin/enrollments.py:143 admin/holds.py:73 templates/registration/admin/roster.html:9 templates/registration/admin/waitlist.html:10
 msgctxt "people"
 msgid "Name"
 msgstr "姓名"
@@ -284,8 +280,7 @@ msgid "Title"
 msgstr "课程名称"
 
 # key: registration.fields.source
-#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59
-#: templates/registration/admin/roster.html:13
+#: admin/enrollments.py:169 models/enrollment.py:128 models/holds.py:59 templates/registration/admin/roster.html:13
 msgctxt "registration"
 msgid "Source"
 msgstr "来源"
@@ -343,6 +338,12 @@ msgstr "候补名单"
 #: admin/roster.py:187 admin/roster.py:198
 msgid "Promote now"
 msgstr "立即递补"
+
+# key: registration.notifications.promoted
+#: admin/roster.py:195
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "递补 %(promoted)s 人，移出 %(removed)s 人，过期 %(expired)s 人。"
 
 # key: registration.actions.remove_from_waitlist
 #: admin/roster.py:217 templates/registration/admin/waitlist.html:24
@@ -485,8 +486,7 @@ msgstr "学期类型"
 # key: portal.navigation.registration
 # key: reference.term_window_types.registration
 # key: registration.portal.title
-#: apps.py:21 templates/registration/portal/registration.html:12
-#: views/portal.py:123
+#: apps.py:21 templates/registration/portal/registration.html:12 views/portal.py:123
 msgid "Registration"
 msgstr "选课"
 
@@ -522,8 +522,7 @@ msgstr "候补递补"
 
 # key: registration.attempt_actions.cart
 # key: registration.portal.cart
-#: enums.py:19 models/enrollment.py:293 models/enrollment.py:294
-#: templates/registration/portal/registration.html:88
+#: enums.py:19 models/enrollment.py:293 models/enrollment.py:294 templates/registration/portal/registration.html:88
 msgid "Cart"
 msgstr "购物车"
 
@@ -783,8 +782,7 @@ msgstr "已选学分"
 
 # key: registration.fields.is_retake
 # key: registration.portal.retake
-#: models/enrollment.py:123 templates/registration/admin/roster.html:12
-#: templates/registration/portal/registration.html:65
+#: models/enrollment.py:123 templates/registration/admin/roster.html:12 templates/registration/portal/registration.html:65
 msgid "Retake"
 msgstr "重修"
 
@@ -1068,9 +1066,7 @@ msgid "Program"
 msgstr "专业项目"
 
 # key: common.none
-#: templates/registration/admin/roster.html:34
-#: templates/registration/admin/waitlist.html:27
-#: templates/registration/portal/registration.html:76
+#: templates/registration/admin/roster.html:34 templates/registration/admin/waitlist.html:27 templates/registration/portal/registration.html:76
 msgctxt "common"
 msgid "None"
 msgstr "无"
@@ -1186,13 +1182,12 @@ msgid "Waitlist position %(position)s"
 msgstr "候补第 %(position)s 位"
 
 # key: registration.portal.cart_empty
-#: templates/registration/portal/registration.html:99 views/portal.py:349
+#: templates/registration/portal/registration.html:99 views/portal.py:351
 msgid "The cart is empty."
 msgstr "购物车是空的。"
 
 # key: offering.catalog.search
-#: templates/registration/portal/registration.html:106
-#: templates/registration/portal/registration.html:108
+#: templates/registration/portal/registration.html:106 templates/registration/portal/registration.html:108
 msgid "Search"
 msgstr "搜索"
 
@@ -1218,16 +1213,16 @@ msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
 msgstr "空位 %(general)s · 预留 %(reserved)s · 容量 %(capacity)s"
 
 # key: registration.errors.too_many_requests
-#: views/portal.py:295
+#: views/portal.py:296
 msgid "Too many requests. Wait a minute and try again."
 msgstr "请求过多，请一分钟后再试。"
 
 # key: registration.portal.registered
-#: views/portal.py:322 views/portal.py:347
+#: views/portal.py:324 views/portal.py:349
 msgid "Registered."
 msgstr "选课成功。"
 
 # key: registration.portal.added_to_cart
-#: views/portal.py:332
+#: views/portal.py:334
 msgid "Added to the cart."
 msgstr "已加入购物车。"

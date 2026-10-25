@@ -26,7 +26,7 @@ class Command(AuditedCommand):
             "--dry-run", action="store_true", help="List the applicants without creating student records"
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         cycle = AdmissionCycle.objects.filter(code=options["cycle"]).first()
         term = Term.objects.filter(code=options.get("term") or "").first()
         actor = self.actor()

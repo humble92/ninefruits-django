@@ -43,4 +43,4 @@
 
 ບໍ່ສາມາດຣີເຊັດບັນຊີຂອງຕົນເອງໄດ້. ການຣີເຊັດຈະຖືກບັນທຶກພ້ອມເຫດຜົນໄວ້ໃນເຫດການຄວາມປອດໄພ ແລະ ບັນທຶກກິດຈະກຳ.
 
-ຖ້າຜູ້ບໍລິຫານພຽງຄົນດຽວເຮັດໂທລະສັບເສຍ ແລະ ເຂົ້າໜ້າບໍລິຫານບໍ່ໄດ້ ຜູ້ດຳເນີນງານ IT ສາມາດຣີເຊັດດ້ວຍ `uv run manage.py security_reset_mfa` (Docker: `docker compose exec app uv run manage.py security_reset_mfa`, [ເອກະສານອ້າງອີງຄຳສັ່ງ](../operations/commands.md), ເພີ່ມໃນ Phase 2).
+ຖ້າຜູ້ບໍລິຫານພຽງຄົນດຽວເຮັດໂທລະສັບເສຍ ແລະ ເຂົ້າໜ້າບໍລິຫານບໍ່ໄດ້ ຜູ້ດຳເນີນງານ IT ສາມາດຣີເຊັດດ້ວຍ `uv run manage.py security_reset_mfa` (Docker: `docker compose exec app uv run manage.py security_reset_mfa`, [ເອກະສານອ້າງອີງຄຳສັ່ງ](../operations/commands.md)).

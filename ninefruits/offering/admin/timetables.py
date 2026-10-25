@@ -10,7 +10,7 @@ from django.contrib import admin
 from django.core.exceptions import PermissionDenied
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
-from django.utils.translation import gettext as gettext_now
+from django.utils.translation import gettext
 from django.utils.translation import gettext_lazy as _
 from unfold.widgets import UnfoldAdminSelectWidget
 
@@ -43,7 +43,7 @@ class TimetableForm(forms.Form):
         self.fields["mode"].choices = [("room", _("Room")), ("instructor", _("instructor"))]  # type: ignore[attr-defined]
         mode = self.data.get("mode") or "room"
         if mode == "instructor":
-            self.fields["target"].label = gettext_now("instructor").capitalize()
+            self.fields["target"].label = gettext("instructor").capitalize()
             choices = [(pk, label) for pk, label in instructor_choices()]
         else:
             rooms = Room.objects.filter(is_active=True).select_related("building")

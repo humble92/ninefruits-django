@@ -1,6 +1,6 @@
 # 9. CSV 导入
 
-使用组织单位、专业项目、楼宇、教室、代码数据列表界面上方的 **导入 CSV** 按钮（`通过 CSV 导入基础数据` 权限）。学籍、教师、课程、选课限制的导入将在相应的 Phase 中以同样方式添加。特别大的文件可由 IT 运维人员用 `reference_import` 命令以同样方式导入。
+使用组织单位、专业项目、楼宇、教室、代码数据列表界面上方的 **导入 CSV** 按钮（`通过 CSV 导入基础数据` 权限）。学籍、教师、课程、选课限制也以同样方式导入（见下文）。特别大的文件可由 IT 运维人员用 `reference_import` 命令以同样方式导入。
 
 ## 通用规则
 
@@ -54,7 +54,7 @@ student_number,program,admission_date,year_level,status,family_name,given_name,n
 202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
 ```
 
-课程（Phase 4）的导入随相应功能一起添加。
+课程版本的导入见[第 17 章](17-courses-and-curriculum.md)，选课限制的导入见[第 20 章](20-registration.md)。
 
 ## 选课限制
 

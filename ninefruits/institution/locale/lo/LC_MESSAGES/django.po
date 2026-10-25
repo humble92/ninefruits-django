@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 23:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,14 +18,12 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 # key: reference.fields.iso_code
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
 msgid "ISO code"
 msgstr "ລະຫັດ ISO"
 
 # key: reference.fields.alpha3_code
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
 msgid "Three-letter code"
 msgstr "ລະຫັດສາມຕົວອັກສອນ"
 
@@ -41,9 +39,7 @@ msgid "The %(attribute)s field must be %(size)s characters."
 msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີ %(size)s ຕົວອັກສອນ."
 
 # key: reference.fields.name
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
-#: ninefruits/institution/models/lookup.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
 msgctxt "reference"
 msgid "Name"
 msgstr "ຊື່"
@@ -77,8 +73,7 @@ msgstr "ຍັງໃຊ້ງານຢູ່"
 
 # key: reference.errors.in_use_body
 #: ninefruits/institution/admin_support.py
-msgid ""
-"Other records refer to this one. Deactivate it or end its validity instead."
+msgid "Other records refer to this one. Deactivate it or end its validity instead."
 msgstr "ມີບັນທຶກອື່ນອ້າງອີງເຖິງລາຍການນີ້. ກະລຸນາປິດໃຊ້ ຫຼື ສິ້ນສຸດການມີຜົນແທນ."
 
 # key: assessment.fields.file
@@ -115,25 +110,16 @@ msgid "Required columns: %(columns)s"
 msgstr "ຖັນບັງຄັບ: %(columns)s"
 
 #: ninefruits/institution/admin_support.py
-msgid ""
-"Rows are matched by code: importing the same file again updates instead of "
-"duplicating. Empty translation cells keep existing translations."
-msgstr ""
-"ແຖວຖືກຈັບຄູ່ດ້ວຍລະຫັດ: ການນຳເຂົ້າໄຟລ໌ດຽວກັນຄືນຈະອັບເດດ ແທນທີ່ຈະຊ້ຳ. "
-"ຊ່ອງແປທີ່ວ່າງຈະຮັກສາຄຳແປເດີມ."
+msgid "Rows are matched by code: importing the same file again updates instead of duplicating. Empty translation cells keep existing translations."
+msgstr "ແຖວຖືກຈັບຄູ່ດ້ວຍລະຫັດ: ການນຳເຂົ້າໄຟລ໌ດຽວກັນຄືນຈະອັບເດດ ແທນທີ່ຈະຊ້ຳ. ຊ່ອງແປທີ່ວ່າງຈະຮັກສາຄຳແປເດີມ."
 
 #: ninefruits/institution/admin_support.py
 #, python-format
-msgid ""
-"Import #%(id)s queued (%(rows)s rows). This page shows the result when it is "
-"finished."
-msgstr ""
-"ໄດ້ຮັບການນຳເຂົ້າ #%(id)s (%(rows)s ແຖວ) ແລ້ວ. ເມື່ອສຳເລັດ ໜ້ານີ້ຈະສະແດງຜົນ."
+msgid "Import #%(id)s queued (%(rows)s rows). This page shows the result when it is finished."
+msgstr "ໄດ້ຮັບການນຳເຂົ້າ #%(id)s (%(rows)s ແຖວ) ແລ້ວ. ເມື່ອສຳເລັດ ໜ້ານີ້ຈະສະແດງຜົນ."
 
 # key: reference.fields.is_active
-#: ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
-#: ninefruits/institution/models/lookup.py
+#: ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
 msgctxt "reference.fields"
 msgid "Active"
 msgstr "ເປີດໃຊ້"
@@ -232,3 +218,14 @@ msgstr "ສະຖານະພາບການຮຽນ"
 #: ninefruits/institution/target_criteria_fields.py
 msgid "The standing from the latest term close. Leave empty for any."
 msgstr "ສະຖານະພາບຈາກການປິດພາກຮຽນຄັ້ງລ່າສຸດ. ປະຫວ່າງໄວ້ສຳລັບທຸກສະຖານະພາບ."
+
+# key: validation.gte.numeric
+#: ninefruits/institution/target_criteria_fields.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າຫຼາຍກວ່າ ຫຼື ເທົ່າກັບ %(value)s."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "ໄຟລ໌ໃຫຍ່ເກີນໄປ (%(size)s ໄບຕ໌, ສູງສຸດ %(limit)s)."

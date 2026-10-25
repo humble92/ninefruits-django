@@ -87,15 +87,11 @@ class CycleProgramForm(forms.ModelForm):  # type: ignore[type-arg]
         self.fields["capacity"].validators.append(MinValueValidator(0))
 
 
-class CycleProgramInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
-    model = AdmissionCycleProgram
-    form = CycleProgramForm
+class _CycleRowsInline(CatalogPermissionMixin, TabularInline):
+    """Rows edited with their cycle (programs offered, documents asked for)."""
+
     extra = 0
     tab = True
-    fields = ("program", "capacity", "applications_count")
-    readonly_fields = ("applications_count",)
-    verbose_name = _("program offered")
-    verbose_name_plural = _("Programs offered")
     permissions: ClassVar[dict[str, str]] = {
         "view": Permission.ADMISSION_CYCLES_MANAGE,
         "add": Permission.ADMISSION_CYCLES_MANAGE,
@@ -104,10 +100,19 @@ class CycleProgramInline(CatalogPermissionMixin, TabularInline):  # type: ignore
     }
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", AdmissionCycle))
+        return self.policy_allows(request, "view_any", AdmissionCycle)
 
     def has_add_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return self._allowed(request, "add")
+
+
+class CycleProgramInline(_CycleRowsInline):
+    model = AdmissionCycleProgram
+    form = CycleProgramForm
+    fields = ("program", "capacity", "applications_count")
+    readonly_fields = ("applications_count",)
+    verbose_name = _("program offered")
+    verbose_name_plural = _("Programs offered")
 
     @display(description=_("applications"))
     def applications_count(self, obj: AdmissionCycleProgram) -> int:
@@ -133,11 +138,10 @@ class CycleDocumentTypeForm(forms.ModelForm):  # type: ignore[type-arg]
         )
 
 
-class CycleDocumentTypeInline(CycleProgramInline):
+class CycleDocumentTypeInline(_CycleRowsInline):
     model = AdmissionCycleDocumentType
     form = CycleDocumentTypeForm
     fields = ("document_type", "is_required")
-    readonly_fields = ()
     verbose_name = _("document")
     verbose_name_plural = _("Documents")
 
@@ -176,7 +180,7 @@ class AdmissionCycleAdmin(ReferenceAdmin):
     )
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", AdmissionCycle))
+        return self.policy_allows(request, "view_any", AdmissionCycle)
 
     def get_queryset(self, request: HttpRequest) -> Any:
         return super().get_queryset(request).annotate(application_total=Count("applications"))
@@ -195,7 +199,7 @@ class AdmissionCycleAdmin(ReferenceAdmin):
 
     # -- release decisions (original AdmissionCycleResource::releaseAction) ----------------------
     def has_release_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", Application))
+        return self.policy_allows(request, "view_any", Application)
 
     def _release(self, request: HttpRequest, object_id: Any) -> HttpResponse:
         if not self.has_release_permission(request):

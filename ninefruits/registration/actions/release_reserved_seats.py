@@ -5,6 +5,7 @@ runs after that time to hand the freed seats to the waitlists (original
 from __future__ import annotations
 
 from datetime import datetime
+from functools import partial
 
 from django.db import transaction
 from django.utils import timezone
@@ -30,5 +31,5 @@ class ReleaseReservedSeats:
         # Counter-like column: no updated_at, so the audit trigger ignores the change.
         SectionSeatGroup.objects.filter(pk__in=[pk for pk, _section in groups]).update(release_processed_at=at)
         for section_id in sections:
-            transaction.on_commit(lambda section_id=section_id: promote_waitlist.delay(section_id))
+            transaction.on_commit(partial(promote_waitlist.delay, section_id))
         return sections

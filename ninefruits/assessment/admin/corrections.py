@@ -83,7 +83,7 @@ class AssessmentResultCorrectionAdmin(CatalogAdmin):
 
     # -- access ----------------------------------------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", AssessmentResultCorrection))
+        return self.policy_allows(request, "view_any", AssessmentResultCorrection)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -148,19 +148,20 @@ class AssessmentResultCorrectionAdmin(CatalogAdmin):
 
     @display(description=pgettext_lazy("grading", "Note"))
     def decision_column(self, obj: AssessmentResultCorrection) -> str:
-        if obj.decided_by_id is None:
+        if obj.decided_by is None:
             return Truncator(obj.decision_note).chars(40) if obj.decision_note else "-"
         note = f" · {Truncator(obj.decision_note).chars(40)}" if obj.decision_note else ""
         return f"{obj.decided_by.email}{note}"
 
     # -- buttons ---------------------------------------------------------------------------------
     def _correction(self, request: HttpRequest, object_id: Any) -> AssessmentResultCorrection:
-        return get_object_or_404(
+        correction: AssessmentResultCorrection = get_object_or_404(
             self.get_queryset(request).select_related(
                 "result__student_record", "result__assessment_type", "result__session"
             ),
             pk=object_id,
         )
+        return correction
 
     def _changelist_url(self) -> str:
         return reverse("admin:assessment_assessmentresultcorrection_changelist")

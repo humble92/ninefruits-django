@@ -200,7 +200,9 @@ class SyllabusEditorView(LoginRequiredMixin, View):
     template_name = "offering/portal/syllabus_editor.html"
 
     def _section(self, request: HttpRequest, pk: int) -> Section:
-        section = get_object_or_404(Section.objects.select_related("course", "version", "term", "session"), pk=pk)
+        section: Section = get_object_or_404(
+            Section.objects.select_related("course", "version", "term", "session"), pk=pk
+        )
         if not can_edit_syllabus(request.user, section):
             raise PermissionDenied
         return section

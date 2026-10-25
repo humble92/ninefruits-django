@@ -67,7 +67,7 @@ class EvaluationMethodRequestAdmin(CatalogAdmin):
     actions_row = ("approve_row", "reject_row")
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", EvaluationMethodRequest))
+        return self.policy_allows(request, "view_any", EvaluationMethodRequest)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -112,17 +112,18 @@ class EvaluationMethodRequestAdmin(CatalogAdmin):
 
     @display(description=pgettext_lazy("grading", "Decided by"))
     def decided(self, obj: EvaluationMethodRequest) -> str:
-        if obj.decided_by_id is None:
+        if obj.decided_by is None:
             return "-"
         note = f" · {Truncator(obj.decision_note).chars(40)}" if obj.decision_note else ""
         return f"{obj.decided_by.email}{note}"
 
     # -- actions ---------------------------------------------------------------------------------
     def _request(self, request: HttpRequest, object_id: Any) -> EvaluationMethodRequest:
-        return get_object_or_404(
+        method_request: EvaluationMethodRequest = get_object_or_404(
             self.get_queryset(request).select_related("section__course", "section__version", "requested_by"),
             pk=object_id,
         )
+        return method_request
 
     def _changelist_url(self) -> str:
         return reverse("admin:grading_evaluationmethodrequest_changelist")

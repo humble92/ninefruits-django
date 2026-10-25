@@ -38,7 +38,14 @@ class SeatAllocator:
     def lock(self, section_id: int) -> Section:
         if not transaction.get_connection().in_atomic_block:
             raise RuntimeError("Seats are taken inside a transaction.")
-        return Section.objects.select_for_update().get(pk=section_id)
+        # FOR NO KEY UPDATE: seat takers still wait for each other, but rows that only reference
+        # the section (registration attempts, LMS sync logs: foreign key checks take KEY SHARE)
+        # are not blocked by another student's seat lock. The version comes with the row, so no
+        # query runs for it while the lock is held; only the section row is locked.
+        section: Section = (
+            Section.objects.select_related("version").select_for_update(of=("self",), no_key=True).get(pk=section_id)
+        )
+        return section
 
     def _reserved_groups(self, section: Section, at: datetime) -> list[SectionSeatGroup]:
         groups = SectionSeatGroup.objects.filter(section_id=section.pk).order_by("sort_order", "id")

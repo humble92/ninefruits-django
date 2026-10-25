@@ -47,6 +47,7 @@ class LmsPlatformQuerySet(VisibleQuerySet):
 class LmsPlatform(TimeStampedModel):
     code = models.CharField(pgettext_lazy("reference", "Code"), max_length=32, unique=True)
     name = TranslatableJSONField(pgettext_lazy("reference", "Name"))
+    name_translations: dict[str, str]  # TranslationsAccessor, set by the field
     #: null (records only), moodle, openedx, ...: the connector that talks to the platform.
     driver = models.CharField(_("Driver"), max_length=32, choices=LmsDriver.choices, default=LmsDriver.NULL)
     base_url = models.CharField(_("Base URL"), max_length=255, null=True, blank=True)

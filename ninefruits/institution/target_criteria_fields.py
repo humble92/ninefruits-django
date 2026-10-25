@@ -11,9 +11,8 @@ from typing import Any, ClassVar
 
 from django import forms
 from django.utils import timezone
-from django.utils.translation import gettext as gettext_now
+from django.utils.translation import gettext, pgettext
 from django.utils.translation import gettext_lazy as _
-from django.utils.translation import pgettext
 from unfold.widgets import (
     UnfoldAdminCheckboxSelectMultipleWidget,
     UnfoldAdminIntegerFieldWidget,
@@ -107,13 +106,13 @@ class TargetCriteriaForm(forms.ModelForm):  # type: ignore[type-arg]
         if start is not None and end is not None and end < start:
             self.add_error(
                 f"{prefix}__admission_year_to",
-                gettext_now("The %(attribute)s field must be greater than or equal to %(value)s.")
+                gettext("The %(attribute)s field must be greater than or equal to %(value)s.")
                 % {"attribute": _("Admitted until (year)"), "value": _("Admitted from (year)")},
             )
         return cleaned
 
     def _post_clean(self) -> None:
-        super()._post_clean()
+        super()._post_clean()  # type: ignore[misc]  # private Django API missing from django-stubs
         if not self.errors:
             setattr(self.instance, self.criteria_field, self.criteria())
 
@@ -136,7 +135,7 @@ def criteria_summary(criteria: TargetCriteria) -> str:
     else:
         years = None
     parts = [
-        f"{gettext_now('Year levels')} {', '.join(str(level) for level in criteria.year_levels)}"
+        f"{gettext('Year levels')} {', '.join(str(level) for level in criteria.year_levels)}"
         if criteria.year_levels
         else None,
         f"{pgettext('reference', 'Admitted')} {years}" if years else None,

@@ -5,6 +5,7 @@ from __future__ import annotations
 
 from collections.abc import Iterable
 from datetime import timedelta
+from functools import partial
 from typing import Any
 
 from django.core.exceptions import PermissionDenied, ValidationError
@@ -113,7 +114,7 @@ class ReleaseDecisions:
                 properties={"decision": str(application.status)},
                 causer=released_by,
             )
-            transaction.on_commit(lambda application=application: send_application_decision(application))
+            transaction.on_commit(partial(send_application_decision, application))
             released += 1
         return released
 

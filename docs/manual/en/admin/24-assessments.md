@@ -86,7 +86,7 @@ The list shows pending requests by default (status filter **All** for every requ
 
 ## Graduation requirements
 
-In **Curriculum > Graduation requirements** choose the requirement kind **Passed examination** and pick the **Examination kind**. A student satisfies it with at least one passed result (session or external) of that kind. The top of the portal **Examinations** page shows the kinds required by the student's curriculum and whether they are passed. The degree audit (Phase 11) reads this requirement. A kind used by a requirement cannot be deleted (make it inactive instead).
+In **Curriculum > Graduation requirements** choose the requirement kind **Passed examination** and pick the **Examination kind**. A student satisfies it with at least one passed result (session or external) of that kind. The top of the portal **Examinations** page shows the kinds required by the student's curriculum and whether they are passed. The degree audit ([chapter 26](26-graduation.md)) reads this requirement. A kind used by a requirement cannot be deleted (make it inactive instead).
 
 ## Student portal
 

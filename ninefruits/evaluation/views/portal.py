@@ -118,7 +118,9 @@ class EvaluationsView(LoginRequiredMixin, View):
         if enrollment is None:
             raise Http404
         answers = {
-            key[len(ANSWER_PREFIX) :]: value for key, value in request.POST.items() if key.startswith(ANSWER_PREFIX)
+            key[len(ANSWER_PREFIX) :]: str(value)
+            for key, value in request.POST.items()
+            if key.startswith(ANSWER_PREFIX)
         }
         try:
             SubmitEvaluation(tasks)(enrollment, answers, request.user)

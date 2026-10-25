@@ -24,7 +24,7 @@
 ### `migrate`
 
 - 用途：应用数据库迁移。这是包装 Django 默认命令的 Ninefruits 命令，未指定 `--database` 时使用架构所有者连接（`migrator`，角色 `app_migrator`）。应用连接（`app_runtime`）没有 DDL 权限。`showmigrations`、`sqlmigrate` 也同样默认使用 `migrator` 连接。
-- 执行时机：首次安装以及每次部署时（后续阶段由 `setup_install` 一并执行）。
+- 执行时机：首次安装以及每次部署时（`setup_install` 也会一并执行）。
 - 选项：与 Django `migrate` 相同（`app_label`、`migration_name`、`--plan`、`--check`、`--database`）。
 - 审计：不记录（架构变更保留在迁移历史 `django_migrations` 中）
 - 示例
@@ -92,7 +92,7 @@
 - 用途：创建虚拟大学数据（组织、专业项目、楼宇与教室、以今天为基准的上一、当前、下一学期及业务期间、韩国大学配置方案）。输出各角色的固定演示账户（`registrar@demo.test` 等，密码 `demo-password`）。大量数据以批量插入方式创建。
 - 执行时机：开发、培训、演示环境。**在生产环境（`DJANGO_ENV=production`）中即使加 `--force` 也不会执行。**
 - 选项：`--size=tiny|small|medium|large`（学生约 20/100/2,000/20,000 名；`tiny` 用于测试和快速检查）、`--seed=`（相同的值生成相同的数据）、`--force`（省略确认）。
-- `--student-accounts`：为所有在读学生创建账户，并写入私有存储中的 `load-accounts.csv`（邮箱、密码），用于负载测试（[负载测试](load-testing.md)）。学籍数据自 Phase 2 起才有，在此之前只写入表头。
+- `--student-accounts`：为所有在读学生创建账户，并写入私有存储中的 `load-accounts.csv`（邮箱、密码），用于负载测试（[负载测试](load-testing.md)）。
 - 审计：记录（规模、种子、耗时）
 - 示例：`uv run manage.py setup_demo --size=small --seed=42 --force`
 - 失败时：没有必需数据时，因缺少角色会跳过演示账户。请先执行 `setup_install`。在同一数据库中再次执行时会跳过已有的演示数据。
@@ -102,7 +102,7 @@
 ### `reference_import`
 
 - 用途：导入基础数据 CSV。使用与管理界面 **导入 CSV** 相同的规则（按代码查找已有行并更新，空的翻译单元格保留原值，失败行单独记录）。
-- 参数：`type` `org_units`、`programs`、`buildings`、`rooms`、`lookup_values`、`students`（学籍，Phase 2）、`instructors`（教师，Phase 2）、`courses`（课程版本，Phase 4）、`registration_holds`（选课限制，Phase 5）/ `file` 带表头行的 UTF-8 CSV。
+- 参数：`type` `org_units`、`programs`、`buildings`、`rooms`、`lookup_values`、`students`（学籍）、`instructors`（教师）、`courses`（课程版本）、`registration_holds`（选课限制）/ `file` 带表头行的 UTF-8 CSV。
 - 选项：`--actor=`（必填；导入记录归属该账户，结果显示在该账户的 **CSV 导入** 界面）、`--chunk=100`（每个 Celery 任务的行数）、`--dry-run`（只检查表头和行数）。
 - 审计：记录（类型、文件名、行数、导入编号、失败行数）
 - 列格式：[管理员手册第 9 章](../admin/09-csv-import.md)。
@@ -135,6 +135,14 @@
 - 审计：记录（创建/删除的权限）
 - 输出解读：`create`、`delete` 行。有删除时会出现确认提问。
 - 失败时：在确认提问中选择"否"时以退出码 1 结束，不做任何修改。
+
+### `security_reencrypt_secrets`
+
+- 用途：更换 `DJANGO_SECRET_KEY` 后，用新密钥重新加密以其派生密钥加密的机密值（身份验证器应用的 TOTP 机密、恢复码种子、SSO 客户端机密）。在此之前，这些值用 `DJANGO_SECRET_KEY_FALLBACKS` 中的旧密钥读取。删除旧密钥之前执行（[密钥管理](security-keys.md)）。
+- 参数/选项：`--dry-run`（只统计仍用旧密钥加密的数量）。
+- 审计：记录（数量）
+- 输出解读：`Dry run: 0 authenticator(s) and 0 SSO client secret(s) use a previous key.` 表示可以删除旧密钥。`cannot be decrypted` 表示有值无法用任何已配置的密钥读取：把旧密钥放入 `DJANGO_SECRET_KEY_FALLBACKS` 后重新执行。
+- 示例：`uv run manage.py security_reencrypt_secrets --dry-run`
 
 ### `security_reset_mfa`
 
@@ -378,6 +386,20 @@
 - 执行时机：对接结束、怀疑令牌泄露、负责人变更时。
 
 ## 运维检查与清理（Phase 13）
+
+### `system_health_check`
+
+- 用途：检查配置与密钥（`DJANGO_SECRET_KEY`、PII 密钥、`DEBUG`）、数据库连接与角色（runtime、migrator、reporting）、个人信息表的 RLS、待执行的迁移、权限目录同步、Redis、Celery worker、Gotenberg、私有存储写入、beat 心跳（`core.heartbeat`，5 分钟以内）。
+- 选项：`--json`（监控用输出）。
+- 审计：无（查询）
+- 退出码：任一项失败时为 2。
+- 执行时机：部署后立即执行、怀疑故障时、由监控系统定期执行。负载均衡器使用 `/api/v1/health/`。
+- 示例
+
+  ```bash
+  uv run manage.py system_health_check
+  uv run manage.py system_health_check --json
+  ```
 
 ### `audit_seal`
 

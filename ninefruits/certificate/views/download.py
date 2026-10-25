@@ -19,7 +19,7 @@ class CertificateDownloadView(PrivateMediaDownloadView):
     disposition: ClassVar[Literal["attachment", "inline"]] = "inline"
 
     def get_media(self, request: HttpRequest, **kwargs: Any) -> Media | None:
-        issue = get_object_or_404(CertificateIssue.objects.visible_to(request.user), pk=kwargs["pk"])
+        issue: CertificateIssue = get_object_or_404(CertificateIssue.objects.visible_to(request.user), pk=kwargs["pk"])
         if not request.user.has_perm("download", issue):
             raise PermissionDenied
         self.issue = issue

@@ -43,6 +43,7 @@ dependencies = [
 [dependency-groups]
 dev = [
     "bandit>=1.9.4",
+    "celery-types>=0.26.0",
     "django-seal>=1.7.1",
     "django-stubs>=6.1.2",
     "djangorestframework-stubs>=3.18.1",
@@ -58,6 +59,9 @@ dev = [
     "respx>=0.23.1",
     "ruff>=0.17.2",
     "time-machine>=3.5.1",
+]
+loadtest = [
+    "locust>=2.47.0",
 ]
 
 [tool.pytest.ini_options]
@@ -89,6 +93,10 @@ plugins = ["mypy_django_plugin.main", "mypy_drf_plugin.main"]
 strict = true
 ignore_missing_imports = true
 exclude = ["migrations/", "tests/"]
+# Local stubs for third-party packages without type information (typings/unfold: the admin
+# decorators). `uv run mypy` checks the same paths as CI.
+mypy_path = "typings"
+files = ["ninefruits", "config", "tools/checks"]
 
 [tool.django-stubs]
 django_settings_module = "config.settings.test"

@@ -91,7 +91,7 @@ class StudentStatusChangeAdmin(ReadOnlyCatalogAdmin):
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is not None:
             return bool(request.user.has_perm("view", obj))
-        return bool(request.user.has_perm("view_any", StudentStatusChange))
+        return self.policy_allows(request, "view_any", StudentStatusChange)
 
     @display(description=_("Student number"), ordering="student_record__student_number")
     def record_link(self, obj: StudentStatusChange) -> Any:
@@ -126,7 +126,9 @@ class StudentStatusChangeAdmin(ReadOnlyCatalogAdmin):
         return obj.decided_by.email if obj.decided_by else "-"
 
     def _change(self, request: HttpRequest, object_id: Any) -> StudentStatusChange:
-        change = get_object_or_404(StudentStatusChange.objects.visible_to(request.user), pk=object_id)
+        change: StudentStatusChange = get_object_or_404(
+            StudentStatusChange.objects.visible_to(request.user), pk=object_id
+        )
         if change.status != StatusChangeStatus.REQUESTED or not request.user.has_perm("decide", change):
             raise PermissionDenied
         return change
@@ -205,7 +207,7 @@ class AdditionalProgramRequestAdmin(ReadOnlyCatalogAdmin):
     actions_row = ("approve", "reject")
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", AdditionalProgramRequest))
+        return self.policy_allows(request, "view_any", AdditionalProgramRequest)
 
     @display(description=_("Student number"))
     def record_link(self, obj: AdditionalProgramRequest) -> Any:
@@ -241,7 +243,9 @@ class AdditionalProgramRequestAdmin(ReadOnlyCatalogAdmin):
         return str(AdditionalProgramRequestStatus(obj.status).label)
 
     def _request_for(self, request: HttpRequest, object_id: Any) -> AdditionalProgramRequest:
-        application = get_object_or_404(AdditionalProgramRequest.objects.visible_to(request.user), pk=object_id)
+        application: AdditionalProgramRequest = get_object_or_404(
+            AdditionalProgramRequest.objects.visible_to(request.user), pk=object_id
+        )
         if not request.user.has_perm("decide", application):
             raise PermissionDenied
         return application

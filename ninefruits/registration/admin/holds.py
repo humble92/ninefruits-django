@@ -53,7 +53,7 @@ class _StudentListMixin:
         )
 
     def get_actions(self, request: HttpRequest, action_location: Any = ActionLocation.CHANGE_LIST) -> dict[str, Any]:
-        actions = super().get_actions(request, action_location)  # type: ignore[misc]
+        actions: dict[str, Any] = super().get_actions(request, action_location)  # type: ignore[misc]
         actions.pop("delete_selected", None)
         return actions
 
@@ -111,14 +111,14 @@ class RegistrationHoldAdmin(_StudentListMixin, ReferenceAdmin):
     actions_row = ("release_row",)
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", RegistrationHold))
+        return self.policy_allows(request, "view_any", RegistrationHold)
 
     @display(description=_("Hold type"), label=True)
     def type_badge(self, obj: RegistrationHold) -> str:
         return str(HoldType(obj.hold_type).label)
 
     def has_place_hold_permission(self, request: HttpRequest) -> bool:
-        return bool(request.user.has_perm("create", RegistrationHold))
+        return self.policy_allows(request, "create", RegistrationHold)
 
     @action(description=_("Place a hold"), url_path="place", permissions=["place_hold"], icon="block")
     def place_hold(self, request: HttpRequest) -> HttpResponse:
@@ -195,7 +195,7 @@ class RegistrationOverrideAdmin(_StudentListMixin, ReferenceAdmin):
     actions_row = ("revoke_row",)
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", RegistrationOverride))
+        return self.policy_allows(request, "view_any", RegistrationOverride)
 
     @display(description=_("term"))
     def term_name(self, obj: RegistrationOverride) -> str:
@@ -207,9 +207,9 @@ class RegistrationOverrideAdmin(_StudentListMixin, ReferenceAdmin):
 
     @display(description=_("Applies to"))
     def limit(self, obj: RegistrationOverride) -> str:
-        if obj.section_id is not None:
+        if obj.section is not None:
             return obj.section.label()
-        if obj.course_id is not None:
+        if obj.course is not None:
             return obj.course.code
         return str(_("Whole term"))
 
@@ -218,7 +218,7 @@ class RegistrationOverrideAdmin(_StudentListMixin, ReferenceAdmin):
         return obj.created_at
 
     def has_grant_override_permission(self, request: HttpRequest) -> bool:
-        return bool(request.user.has_perm("create", RegistrationOverride))
+        return self.policy_allows(request, "create", RegistrationOverride)
 
     @action(description=_("Grant an override"), url_path="grant", permissions=["grant_override"], icon="verified_user")
     def grant_override(self, request: HttpRequest) -> HttpResponse:

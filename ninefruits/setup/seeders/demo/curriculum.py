@@ -163,14 +163,14 @@ class DemoCurriculumSeeder(Seeder):
         first_department = next((row for row in planned if not row[0].startswith("GEN")), None)
         revised_from = date(today.year - 2, 3, 1)
         if first_department is not None:
-            code, unit, title, _credits, category, *_rest = first_department
+            code, unit, title, _credits, category_id, *_rest = first_department
             planned.append(
                 (
                     f"{code}X",
                     unit,
                     {"en": f"Old {title['en']}", "ko": f"(구) {title['ko']}"},
                     3,
-                    category,
+                    category_id,
                     date(2010, 3, 1),
                     date(2019, 2, 28),
                     False,
@@ -182,7 +182,9 @@ class DemoCurriculumSeeder(Seeder):
         )
         versions: list[CourseVersion] = []
         by_code: dict[str, _Course] = {}
-        for course, (code, _unit, title, credits, category, start, end, _active) in zip(created, planned, strict=True):
+        for course, (code, _unit, title, credits, category_id, start, end, _active) in zip(
+            created, planned, strict=True
+        ):
             course_versions = []
             if first_department is not None and code == first_department[0]:
                 course_versions.append(
@@ -193,7 +195,7 @@ class DemoCurriculumSeeder(Seeder):
                         title=title,
                         credits=Decimal(credits),
                         lecture_hours=Decimal(credits),
-                        category_id=category,
+                        category_id=category_id,
                     )
                 )
                 course_versions.append(
@@ -203,7 +205,7 @@ class DemoCurriculumSeeder(Seeder):
                         title=title,
                         credits=Decimal(4),
                         lecture_hours=Decimal(credits),
-                        category_id=category,
+                        category_id=category_id,
                     )
                 )
             else:
@@ -215,7 +217,7 @@ class DemoCurriculumSeeder(Seeder):
                         title=title,
                         credits=Decimal(credits),
                         lecture_hours=Decimal(credits),
-                        category_id=category,
+                        category_id=category_id,
                     )
                 )
             versions.extend(course_versions)
@@ -230,7 +232,7 @@ class DemoCurriculumSeeder(Seeder):
             )
 
         by_unit: dict[str, list[_Course]] = defaultdict(list)
-        for code, unit, *_rest in planned:
+        for code, unit, *_details in planned:
             if code.endswith("X"):
                 continue
             by_unit["GEN" if code.startswith("GEN") else unit.code].append(by_code[code])

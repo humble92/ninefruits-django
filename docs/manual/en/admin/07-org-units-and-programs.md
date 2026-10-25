@@ -34,7 +34,7 @@ A simple typo is fixed by **editing** the name, not by a reorganization (the dat
 
 ## Programs
 
-Degree programs or major programs. Student records belong to a program (Phase 2).
+Degree programs or major programs. Student records belong to a program ([chapter 12](12-people-and-student-records.md)).
 
 | Field | Description |
 |---|---|

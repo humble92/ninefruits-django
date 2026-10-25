@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 23:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # key: reference.fields.iso_code
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
 msgid "ISO code"
 msgstr "ISO 代码"
 
 # key: reference.fields.alpha3_code
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
 msgid "Three-letter code"
 msgstr "三字母代码"
 
@@ -42,9 +40,7 @@ msgid "The %(attribute)s field must be %(size)s characters."
 msgstr "%(attribute)s 必须是 %(size)s 个字符。"
 
 # key: reference.fields.name
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
-#: ninefruits/institution/models/lookup.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
 msgctxt "reference"
 msgid "Name"
 msgstr "名称"
@@ -77,8 +73,7 @@ msgstr "仍在使用中"
 
 # key: reference.errors.in_use_body
 #: ninefruits/institution/admin_support.py
-msgid ""
-"Other records refer to this one. Deactivate it or end its validity instead."
+msgid "Other records refer to this one. Deactivate it or end its validity instead."
 msgstr "有其他数据引用此记录，无法删除。请停用或结束其有效期。"
 
 # key: assessment.fields.file
@@ -115,22 +110,16 @@ msgid "Required columns: %(columns)s"
 msgstr "必填列：%(columns)s"
 
 #: ninefruits/institution/admin_support.py
-msgid ""
-"Rows are matched by code: importing the same file again updates instead of "
-"duplicating. Empty translation cells keep existing translations."
+msgid "Rows are matched by code: importing the same file again updates instead of duplicating. Empty translation cells keep existing translations."
 msgstr "按代码匹配行：再次导入同一文件会更新而不会重复。空的翻译单元格保留已有翻译。"
 
 #: ninefruits/institution/admin_support.py
 #, python-format
-msgid ""
-"Import #%(id)s queued (%(rows)s rows). This page shows the result when it is "
-"finished."
+msgid "Import #%(id)s queued (%(rows)s rows). This page shows the result when it is finished."
 msgstr "已接收导入 #%(id)s（%(rows)s 行）。完成后此页面会显示结果。"
 
 # key: reference.fields.is_active
-#: ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
-#: ninefruits/institution/models/lookup.py
+#: ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
 msgctxt "reference.fields"
 msgid "Active"
 msgstr "启用"
@@ -229,3 +218,14 @@ msgstr "学业状态"
 #: ninefruits/institution/target_criteria_fields.py
 msgid "The standing from the latest term close. Leave empty for any."
 msgstr "最近一次学期结算的学业状态。留空表示全部。"
+
+# key: validation.gte.numeric
+#: ninefruits/institution/target_criteria_fields.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s 必须大于或等于 %(value)s。"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "文件过大（%(size)s 字节，最多 %(limit)s）。"

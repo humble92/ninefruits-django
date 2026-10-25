@@ -46,6 +46,7 @@ from ninefruits.person.models import (
     StudentStatusChangeType,
 )
 from ninefruits.person.services import CurrentStudentRecord
+from ninefruits.security.authorization import signed_in_user
 from ninefruits.term.enums import TermWindowType
 from ninefruits.term.services.term_resolver import TermResolver
 
@@ -228,6 +229,14 @@ class GuardianForm(forms.Form):
     is_primary_contact = forms.BooleanField(required=False)
 
 
+def _own_person_id(request: HttpRequest) -> int:
+    """The signed-in user's person (``_PersonRequiredMixin`` lets only accounts with one through)."""
+    person_id = signed_in_user(request).person_id
+    if person_id is None:
+        raise Http404
+    return person_id
+
+
 class MyProfileView(_PersonRequiredMixin, View):
     """A person's own contact details and guardians. Names, birth date and identity numbers are
     changed by the registrar."""
@@ -235,7 +244,7 @@ class MyProfileView(_PersonRequiredMixin, View):
     template_name = "person/portal/profile.html"
 
     def get(self, request: HttpRequest) -> HttpResponse:
-        person = get_object_or_404(Person, pk=request.user.person_id)
+        person = get_object_or_404(Person, pk=_own_person_id(request))
         return render(
             request,
             self.template_name,
@@ -272,7 +281,7 @@ class MyProfileView(_PersonRequiredMixin, View):
             raise ValidationError(form.errors.as_data())
         data = form.cleaned_data
         Guardian.objects.create(
-            person_id=request.user.person_id,
+            person_id=_own_person_id(request),
             relationship=data["relationship"],
             full_name=data["full_name"],
             phone=data["phone"] or None,
@@ -281,7 +290,7 @@ class MyProfileView(_PersonRequiredMixin, View):
         )
 
     def do_remove_guardian(self, request: HttpRequest) -> None:
-        get_object_or_404(Guardian, pk=request.POST.get("guardian_id") or 0, person_id=request.user.person_id).delete()
+        get_object_or_404(Guardian, pk=request.POST.get("guardian_id") or 0, person_id=_own_person_id(request)).delete()
 
 
 class AdviseesView(_PersonRequiredMixin, View):
@@ -292,7 +301,7 @@ class AdviseesView(_PersonRequiredMixin, View):
     def get(self, request: HttpRequest) -> HttpResponse:
         assignments = sorted(
             AdvisorAssignment.objects.current()
-            .filter(instructor__person_id=request.user.person_id)
+            .filter(instructor__person_id=_own_person_id(request))
             .select_related("student_record__person", "student_record__program"),
             key=lambda assignment: assignment.student_record.student_number,
         )
@@ -333,7 +342,7 @@ def register_menu() -> None:
         pgettext_lazy("portal", "My details"),
         "portal:profile",
         order=60,
-        visible=lambda request: request.user.person_id is not None,
+        visible=lambda request: getattr(request.user, "person_id", None) is not None,
     )
     menu.register(
         "advisees", pgettext_lazy("portal", "Advisees"), "portal:advisees", order=80, personas={Persona.ADVISOR}

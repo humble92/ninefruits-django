@@ -31,16 +31,16 @@ class Policy:
 
 class UserPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.USERS_VIEW)
+        return bool(user.has_perm(Permission.USERS_VIEW))
 
     def view(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.USERS_VIEW)
+        return bool(user.has_perm(Permission.USERS_VIEW))
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.USERS_CREATE)
+        return bool(user.has_perm(Permission.USERS_CREATE))
 
     def update(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.USERS_UPDATE)
+        return bool(user.has_perm(Permission.USERS_UPDATE))
 
     def unlock(self, user: Any, obj: Any) -> bool:
         return user.has_perm(Permission.USERS_UPDATE) and obj is not None and user.pk != obj.pk
@@ -55,16 +55,16 @@ class UserPolicy(Policy):
 
 class RolePolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ROLES_VIEW)
+        return bool(user.has_perm(Permission.ROLES_VIEW))
 
     def view(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ROLES_VIEW)
+        return bool(user.has_perm(Permission.ROLES_VIEW))
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ROLES_MANAGE)
+        return bool(user.has_perm(Permission.ROLES_MANAGE))
 
     def update(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ROLES_MANAGE)
+        return bool(user.has_perm(Permission.ROLES_MANAGE))
 
     def delete(self, user: Any, obj: Any) -> bool:
         return (
@@ -78,10 +78,10 @@ class RolePolicy(Policy):
 
 class RoleAssignmentPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.USERS_VIEW)
+        return bool(user.has_perm(Permission.USERS_VIEW))
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ROLE_ASSIGNMENTS_MANAGE)
+        return bool(user.has_perm(Permission.ROLE_ASSIGNMENTS_MANAGE))
 
     def revoke(self, user: Any, obj: Any) -> bool:
         """Ending an assignment. Users cannot change their own assignments (separation of duties)."""
@@ -97,18 +97,18 @@ class AuditRecordPolicy(Policy):
     """Activity log and record changes. Audit records are read only."""
 
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.AUDIT_RECORDS_VIEW)
+        return bool(user.has_perm(Permission.AUDIT_RECORDS_VIEW))
 
     def view(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.AUDIT_RECORDS_VIEW)
+        return bool(user.has_perm(Permission.AUDIT_RECORDS_VIEW))
 
 
 class SecurityEventPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.SECURITY_EVENTS_VIEW)
+        return bool(user.has_perm(Permission.SECURITY_EVENTS_VIEW))
 
     def view(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.SECURITY_EVENTS_VIEW)
+        return bool(user.has_perm(Permission.SECURITY_EVENTS_VIEW))
 
 
 _registry: dict[str, Policy] = {

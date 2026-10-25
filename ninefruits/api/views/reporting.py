@@ -51,12 +51,14 @@ def _attnames(model: type[models.Model]) -> dict[str, str]:
 
 def _filterable(model: type[models.Model]) -> dict[str, str]:
     return {
-        field.column: field.attname for field in model._meta.concrete_fields if not isinstance(field, models.JSONField)
+        field.column: field.attname
+        for field in model._meta.concrete_fields
+        if field.column is not None and not isinstance(field, models.JSONField)
     }
 
 
 class ReportViewSet(viewsets.ViewSet):
-    permission_classes = [HasCatalogPermission(Permission.REPORTS_VIEW)]
+    permission_classes = [HasCatalogPermission(Permission.REPORTS_VIEW)]  # type: ignore[list-item]  # an instance (HasCatalogPermission.__call__)
     lookup_field = "name"
     lookup_value_regex = r"[a-z_]+"
 

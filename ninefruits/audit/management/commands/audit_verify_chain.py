@@ -21,7 +21,7 @@ class Command(StatusCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("--table", action="append", default=[], help="Only these audit tables")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         problems = 0
         for table in chain.tables(options["table"]):
             result = chain.verify(table)

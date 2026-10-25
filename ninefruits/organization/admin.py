@@ -123,7 +123,7 @@ class OrgUnitForm(EffectivePeriodForm):
             self.fields["effective_start_date"].initial = timezone.localdate()
 
 
-class SuccessionInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class SuccessionInline(CatalogPermissionMixin, TabularInline):
     """Units that took over from this one. Read only; recorded by the Reorganize action."""
 
     model = OrgUnitSuccession
@@ -175,7 +175,7 @@ class ReorganizeForm(BaseDialogForm):
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
-        self.fields["successors"].choices = unit_choices(self.object_id)
+        self.fields["successors"].choices = unit_choices(self.object_id)  # type: ignore[attr-defined]
 
 
 @admin.register(OrgUnit)
@@ -263,7 +263,7 @@ class ProgramForm(EffectivePeriodForm):
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
         self.fields["org_unit"].queryset = OrgUnit.objects.order_by("code")  # type: ignore[attr-defined]
-        self.fields["degree_level"].choices = DegreeLevel.choices
+        self.fields["degree_level"].choices = DegreeLevel.choices  # type: ignore[attr-defined]
         if not self.instance.pk:
             self.fields["effective_start_date"].initial = timezone.localdate()
 

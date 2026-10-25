@@ -108,7 +108,7 @@ class EnrollmentAdmin(CatalogAdmin):
 
     # -- access ----------------------------------------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", Enrollment))
+        return self.policy_allows(request, "view_any", Enrollment)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -176,7 +176,7 @@ class EnrollmentAdmin(CatalogAdmin):
 
     # -- actions ---------------------------------------------------------------------------------
     def has_register_student_permission(self, request: HttpRequest) -> bool:
-        return bool(request.user.has_perm("create", Enrollment))
+        return self.policy_allows(request, "create", Enrollment)
 
     @action(
         description=pgettext_lazy("registration", "Register a student"),
@@ -191,9 +191,10 @@ class EnrollmentAdmin(CatalogAdmin):
         return bool(request.user.has_perm(Permission.REGISTRATION_MANAGE))
 
     def _enrollment(self, request: HttpRequest, object_id: Any) -> Enrollment:
-        return get_object_or_404(
+        enrollment: Enrollment = get_object_or_404(
             self.get_queryset(request).select_related("section__course", "student_record"), pk=object_id
         )
+        return enrollment
 
     @action(
         description=pgettext_lazy("registration.actions", "Drop"),

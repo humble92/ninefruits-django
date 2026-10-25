@@ -21,3 +21,9 @@
 | [audit-and-maintenance.md](operations/audit-and-maintenance.md) | 审计哈希链、审计记录保留与清理、孤立文件清理、状态检查 |
 | [load-testing.md](operations/load-testing.md) | 用 Locust 重现选课高峰的负载测试及 worker 数量判断 |
 | [troubleshooting.md](operations/troubleshooting.md) | 常见故障现象与检查要点、按请求 ID 追踪 |
+
+## 其他文档
+
+- [LMS 对接指南](../../lms-integration-guide.md)：API 与 LMS 连接器（开发人员）
+- [添加语言](../../development/adding-a-language.md)、[命名规则](../../development/naming.md)、[评审检查清单](../../development/review-checklist.md)（开发人员）
+- [文档索引](../../README.md)

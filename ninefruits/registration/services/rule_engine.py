@@ -37,7 +37,7 @@ class RegistrationRuleEngine:
         )
         for name in ("course", "version", "term", "session"):
             section._state.fields_cache[name] = getattr(loaded, name)
-        section._prefetched_objects_cache = {
+        section._prefetched_objects_cache = {  # type: ignore[attr-defined]  # Django internal
             **getattr(section, "_prefetched_objects_cache", {}),
             "meetings": loaded.meetings.all(),
         }

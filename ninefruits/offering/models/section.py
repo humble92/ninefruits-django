@@ -134,6 +134,7 @@ class Section(TimeStampedModel):
         _("Language of instruction"), max_length=16, null=True, blank=True, help_text=_("e.g. ko, en")
     )
     note = TranslatableJSONField(pgettext_lazy("offering", "Note"), null=True, blank=True, max_length=2000)
+    note_translations: dict[str, str]  # TranslationsAccessor, set by the field
     copied_from_section = models.ForeignKey(
         "self", on_delete=models.SET_NULL, null=True, blank=True, related_name="copies", editable=False
     )
@@ -174,19 +175,19 @@ class Section(TimeStampedModel):
         return self.label()
 
     @property
-    def term_session_id(self) -> int | None:
+    def term_session_id(self) -> int:
         return self.session_id
 
     @term_session_id.setter
-    def term_session_id(self, value: int | None) -> None:
+    def term_session_id(self, value: int) -> None:
         self.session_id = value
 
     @property
-    def course_version_id(self) -> int | None:
+    def course_version_id(self) -> int:
         return self.version_id
 
     @course_version_id.setter
-    def course_version_id(self, value: int | None) -> None:
+    def course_version_id(self, value: int) -> None:
         self.version_id = value
 
     @property

@@ -17,14 +17,14 @@ from django.shortcuts import get_object_or_404
 from django.template.loader import render_to_string
 from django.urls import path, reverse
 from django.utils import timezone
-from django.utils.translation import gettext as gettext_now
+from django.utils.translation import gettext, pgettext, pgettext_lazy
 from django.utils.translation import gettext_lazy as _
-from django.utils.translation import pgettext, pgettext_lazy
 from unfold.decorators import action, display
 
 from ninefruits.registration.actions import LeaveWaitlist, PromoteWaitlist
 from ninefruits.registration.enums import EnrollmentSource, EnrollmentStatus, WaitlistStatus
 from ninefruits.registration.models import Enrollment, WaitlistEntry
+from ninefruits.security.authorization import policy_allows
 from ninefruits.security.enums import Permission
 
 from .common import ConfirmForm, ReasonForm, run_form
@@ -114,7 +114,7 @@ class SectionRegistrationMixin:
     def registration_fieldsets(self, request: HttpRequest, obj: Any) -> list[Any]:
         """Roster and waitlist tabs (read only: changes go through the buttons)."""
         _request.set(request)
-        if obj is None or not request.user.has_perm("view_any", Enrollment):
+        if obj is None or not policy_allows(request.user, "view_any", Enrollment):
             return []
         fieldsets: list[Any] = [
             (
@@ -192,7 +192,7 @@ class SectionRegistrationMixin:
 
         def perform(form: Any) -> str:
             counts = PromoteWaitlist().handle(section)
-            return gettext_now("Promoted %(promoted)s, removed %(removed)s, expired %(expired)s.") % counts
+            return gettext("Promoted %(promoted)s, removed %(removed)s, expired %(expired)s.") % counts
 
         return run_form(
             self, request, form, _("Promote now"), _section_url(section.pk), perform, subtitle=section.label()

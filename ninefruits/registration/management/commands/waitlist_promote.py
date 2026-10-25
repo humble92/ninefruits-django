@@ -20,7 +20,7 @@ class Command(AuditedCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("term", nargs="?", help="Term code; default: every term with waiting students")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         term_id = None
         if options.get("term"):
             term_id = Term.objects.filter(code=options["term"]).values_list("pk", flat=True).first()

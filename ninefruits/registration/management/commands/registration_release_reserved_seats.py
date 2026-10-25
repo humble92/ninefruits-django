@@ -14,7 +14,7 @@ from ninefruits.registration.actions import ReleaseReservedSeats
 class Command(StatusCommand):
     help = "Hand reserved seats past their release time to the waitlists (scheduled every 5 minutes)"
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         with session_context().system("command:registration_release_reserved_seats"):
             sections = ReleaseReservedSeats().handle()
         self.info(f"{len(sections)} section(s) with released seats.")

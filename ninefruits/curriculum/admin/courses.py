@@ -173,7 +173,8 @@ class CourseCreateForm(CourseForm):
 
     def version_values(self) -> dict[str, Any]:
         values = {name: self.cleaned_data.get(name) for name in VERSION_FIELDS}
-        values["course_category_id"] = values.pop("category").pk if values.get("category") else None
+        category = values.pop("category")
+        values["course_category_id"] = category.pk if category else None
         return values
 
 
@@ -183,7 +184,7 @@ class FirstVersionForm(VersionFieldsMixin):
         fields = VERSION_FIELDS
 
 
-class CourseVersionInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class CourseVersionInline(CatalogPermissionMixin, TabularInline):
     """Versions of the course (read here; each opens on its own page with its requisites)."""
 
     model = CourseVersion
@@ -268,7 +269,7 @@ class EquivalencyForm(forms.ModelForm):  # type: ignore[type-arg]
         return cleaned
 
 
-class CourseEquivalencyInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class CourseEquivalencyInline(CatalogPermissionMixin, TabularInline):
     """Substitutions: which course counts for this one, and in which period."""
 
     model = CourseEquivalency
@@ -338,7 +339,8 @@ class ReviseForm(VersionFieldsMixin):
 
     def attributes(self) -> dict[str, Any]:
         values = {name: self.cleaned_data.get(name) for name in VERSION_FIELDS[2:]}
-        values["course_category_id"] = values.pop("category").pk if values.get("category") else None
+        category = values.pop("category")
+        values["course_category_id"] = category.pk if category else None
         return values
 
 
@@ -417,8 +419,10 @@ class CourseAdmin(ReferenceAdmin):
             return HttpResponseRedirect(admin_url(obj))
         return super().response_add(request, obj, post_url_continue)
 
+    _versions: dict[int, CourseVersion] | None = None
+
     def _current(self, obj: Course) -> CourseVersion | None:
-        cache = getattr(self, "_versions", None)
+        cache = self._versions
         if cache is None:
             today = timezone.localdate()
             cache = {v.course_id: v for v in CourseVersion.objects.effective_on(today)}
@@ -503,11 +507,11 @@ class RequisiteForm(forms.ModelForm):  # type: ignore[type-arg]
             self.fields["required_course"].label_from_instance = lambda course: course.code  # type: ignore[attr-defined]
         if "group_number" in self.fields:
             self.fields["group_number"].validators.extend(
-                [validators.MinValueValidator(1), validators.MaxValueValidator(20)]  # type: ignore[attr-defined]
+                [validators.MinValueValidator(1), validators.MaxValueValidator(20)]
             )
 
 
-class RequisiteInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class RequisiteInline(CatalogPermissionMixin, TabularInline):
     """Courses in the same group are alternatives (one of them is enough); every group must be met."""
 
     model = CourseRequisite
@@ -535,7 +539,8 @@ class CourseVersionForm(VersionFieldsMixin):
 
     def _course_id(self) -> int | None:
         course = self.cleaned_data.get("course") if hasattr(self, "cleaned_data") else None
-        return course.pk if course is not None else self.instance.course_id
+        course_id: int | None = course.pk if course is not None else self.instance.course_id
+        return course_id
 
 
 @admin.register(CourseVersion)

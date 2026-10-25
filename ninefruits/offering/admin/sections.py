@@ -200,7 +200,7 @@ def declare_criteria_fields(form_class: type[forms.BaseForm], prefixes: tuple[st
             if name.endswith("__academic_standings"):
                 continue
             form_class.declared_fields[name] = field  # type: ignore[attr-defined]
-            form_class.base_fields[name] = field
+            form_class.base_fields[name] = field  # type: ignore[attr-defined]
 
 
 class SectionCreateForm(forms.ModelForm):  # type: ignore[type-arg]
@@ -295,7 +295,8 @@ class SectionForm(CriteriaFormMixin):
 
     def data_for_action(self) -> dict[str, Any]:
         data = {name: self.cleaned_data.get(name) for name in self.Meta.fields if name in self.cleaned_data}
-        data["org_unit_id"] = data.pop("org_unit").pk if data.get("org_unit") else None
+        org_unit = data.pop("org_unit", None)
+        data["org_unit_id"] = org_unit.pk if org_unit else None
         data["term_session_id"] = self.cleaned_data.get("term_session_id")
         data["eligibility"] = self.criteria("eligibility")
         data["exclusion"] = self.criteria("exclusion")
@@ -381,7 +382,7 @@ class InstructorAssignmentForm(forms.ModelForm):  # type: ignore[type-arg]
 
     def _post_clean(self) -> None:
         if self.instance.pk:
-            super()._post_clean()
+            super()._post_clean()  # type: ignore[misc]  # private Django API missing from django-stubs
 
 
 class SeatGroupForm(TargetCriteriaForm):
@@ -445,7 +446,7 @@ class SectionPartInline(CatalogPermissionMixin):
         return self._manages(request, obj)
 
 
-class MeetingInline(SectionPartInline, TabularInline):  # type: ignore[misc]
+class MeetingInline(SectionPartInline, TabularInline):
     """Weekly meetings. A room or instructor already booked at the time is refused with the name
     of the other section."""
 
@@ -458,7 +459,7 @@ class MeetingInline(SectionPartInline, TabularInline):  # type: ignore[misc]
         return super().get_queryset(request).select_related("room__building").order_by("weekday", "start_time")
 
 
-class InstructorInline(SectionPartInline, TabularInline):  # type: ignore[misc]
+class InstructorInline(SectionPartInline, TabularInline):
     """Instructors of a section (several allowed, e.g. team teaching)."""
 
     model = SectionInstructor
@@ -470,7 +471,7 @@ class InstructorInline(SectionPartInline, TabularInline):  # type: ignore[misc]
         return super().get_queryset(request).select_related("instructor__person")
 
 
-class SeatGroupInline(SectionPartInline, StackedInline):  # type: ignore[misc]
+class SeatGroupInline(SectionPartInline, StackedInline):
     """Reserved seats (e.g. 30 for majors) that open to everyone at a set time."""
 
     model = SectionSeatGroup

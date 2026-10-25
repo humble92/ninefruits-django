@@ -17,7 +17,7 @@ class Command(AuditedCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("--dry-run", action="store_true", help="List only")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         dry_run = self.is_dry_run()
         summary = prune_orphans(dry_run=dry_run)
         for row in summary.orphan_rows:

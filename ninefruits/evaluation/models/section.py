@@ -25,7 +25,7 @@ class SectionEvaluationQuerySet(SectionQuerySet):
 
 
 class SectionEvaluation(Section):
-    objects = SectionEvaluationQuerySet.as_manager()
+    objects = SectionEvaluationQuerySet.as_manager()  # type: ignore[misc]  # a proxy may narrow the manager
 
     class Meta:
         proxy = True

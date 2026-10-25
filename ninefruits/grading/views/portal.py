@@ -78,7 +78,9 @@ class GradeEntryView(LoginRequiredMixin, View):
 
     # -- access ----------------------------------------------------------------------------------
     def _section(self, request: HttpRequest, pk: int) -> Section:
-        section = get_object_or_404(Section.objects.select_related("course", "version", "session", "term"), pk=pk)
+        section: Section = get_object_or_404(
+            Section.objects.select_related("course", "version", "session", "term"), pk=pk
+        )
         user = request.user
         allowed = section.is_taught_by(user) or any(
             section.is_in_scope_of(user, permission)
@@ -275,8 +277,9 @@ class GradeEntryView(LoginRequiredMixin, View):
         if action not in self.ACTIONS:
             raise Http404
         if argument:
-            request.POST = request.POST.copy()
-            request.POST["request_id"] = argument
+            post = request.POST.copy()
+            post["request_id"] = argument
+            request.POST = post  # type: ignore[assignment]  # the handlers read the request id from the form
         if action == "import_lms":
             return self._import_lms(request, section)
         handler: Callable[[HttpRequest, Section], tuple[list[Any], str]] = getattr(self, f"_{action}")

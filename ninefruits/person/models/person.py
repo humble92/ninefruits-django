@@ -36,7 +36,7 @@ _SEARCH_SQL = (
 )
 
 
-class PersonQuerySet(EncryptedPiiQuerySet, VisibleQuerySet):
+class PersonQuerySet(EncryptedPiiQuerySet, VisibleQuerySet):  # type: ignore[override]  # both bases get a plugin as_manager
     def visible_to(self, user: Any) -> Self:
         """People the user may see: everyone with ``people.view``, otherwise themselves, people
         they created, people whose student records (or applications) they can see, and
@@ -59,7 +59,7 @@ class PersonQuerySet(EncryptedPiiQuerySet, VisibleQuerySet):
     def search(self, term: str) -> Self:
         """Romanized name, any name variant, or exact national ID / passport number."""
         term = term.strip()
-        condition = Q(pk__in=RawSQL(_SEARCH_SQL, ["%" + term + "%"]))  # noqa: S611 - constant SQL, bound value
+        condition = Q(pk__in=RawSQL(_SEARCH_SQL, ["%" + term + "%"]))  # noqa: S611 - constant SQL, bound value  # nosec B611
         condition |= Q(national_id_hash=pii_hash(term, PiiType.NATIONAL_ID))
         condition |= Q(passport_number_hash=pii_hash(term, PiiType.PASSPORT_NUMBER))
         return self.filter(condition)
@@ -124,7 +124,7 @@ class Person(HasMedia, EncryptedPiiModel, TimeStampedModel):
         editable=False,
     )
 
-    objects = PersonQuerySet.as_manager()
+    objects = PersonQuerySet.as_manager()  # type: ignore[misc]  # narrows the EncryptedPiiModel manager
 
     class Meta:
         db_table = "people"

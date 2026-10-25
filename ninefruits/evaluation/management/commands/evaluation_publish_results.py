@@ -19,7 +19,7 @@ class Command(AuditedCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("term", help="Term code")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         term = Term.objects.filter(code=options["term"]).first()
         evaluation = TermEvaluation.objects.filter(term_id=term.pk).first() if term is not None else None
         if evaluation is None:

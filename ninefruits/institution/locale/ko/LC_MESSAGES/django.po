@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-10-24 13:23+0000\n"
+"POT-Creation-Date: 2026-10-24 23:14+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,12 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 # key: reference.fields.iso_code
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
 msgid "ISO code"
 msgstr "ISO 코드"
 
 # key: reference.fields.alpha3_code
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
 msgid "Three-letter code"
 msgstr "3자리 코드"
 
@@ -42,9 +40,7 @@ msgid "The %(attribute)s field must be %(size)s characters."
 msgstr "%(attribute)s은(는) %(size)s자여야 합니다."
 
 # key: reference.fields.name
-#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
-#: ninefruits/institution/models/lookup.py
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
 msgctxt "reference"
 msgid "Name"
 msgstr "이름"
@@ -77,8 +73,7 @@ msgstr "사용 중입니다"
 
 # key: reference.errors.in_use_body
 #: ninefruits/institution/admin_support.py
-msgid ""
-"Other records refer to this one. Deactivate it or end its validity instead."
+msgid "Other records refer to this one. Deactivate it or end its validity instead."
 msgstr "다른 데이터가 참조하고 있어 삭제할 수 없습니다. 사용 중지하거나 적용 기간을 종료하세요."
 
 # key: assessment.fields.file
@@ -115,22 +110,16 @@ msgid "Required columns: %(columns)s"
 msgstr "필수 열: %(columns)s"
 
 #: ninefruits/institution/admin_support.py
-msgid ""
-"Rows are matched by code: importing the same file again updates instead of "
-"duplicating. Empty translation cells keep existing translations."
+msgid "Rows are matched by code: importing the same file again updates instead of duplicating. Empty translation cells keep existing translations."
 msgstr "행은 코드로 찾습니다. 같은 파일을 다시 가져오면 중복되지 않고 갱신됩니다. 빈 번역 칸은 기존 번역을 지우지 않습니다."
 
 #: ninefruits/institution/admin_support.py
 #, python-format
-msgid ""
-"Import #%(id)s queued (%(rows)s rows). This page shows the result when it is "
-"finished."
+msgid "Import #%(id)s queued (%(rows)s rows). This page shows the result when it is finished."
 msgstr "가져오기 #%(id)s(%(rows)s행)을 접수했습니다. 끝나면 이 화면에 결과가 나옵니다."
 
 # key: reference.fields.is_active
-#: ninefruits/institution/models/country.py
-#: ninefruits/institution/models/language.py
-#: ninefruits/institution/models/lookup.py
+#: ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
 msgctxt "reference.fields"
 msgid "Active"
 msgstr "사용"
@@ -229,3 +218,14 @@ msgstr "학업 상태"
 #: ninefruits/institution/target_criteria_fields.py
 msgid "The standing from the latest term close. Leave empty for any."
 msgstr "최근 학기 마감의 학업 상태. 비우면 모두."
+
+# key: validation.gte.numeric
+#: ninefruits/institution/target_criteria_fields.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s의 값은 %(value)s보다 같거나 커야 합니다."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "파일이 너무 큽니다(%(size)s바이트, 최대 %(limit)s)."

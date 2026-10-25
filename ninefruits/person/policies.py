@@ -12,7 +12,7 @@ from ninefruits.security.policies import Policy, register
 
 class PersonPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return (
+        return bool(
             user.has_perm(Permission.PEOPLE_VIEW)
             or user.has_perm(Permission.STUDENT_RECORDS_VIEW)
             or user.has_perm(Permission.STUDENT_RECORDS_MANAGE)
@@ -22,7 +22,7 @@ class PersonPolicy(Policy):
         return obj is not None and obj.is_visible_to(user)
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.PEOPLE_MANAGE) or user.has_perm(Permission.STUDENT_RECORDS_MANAGE)
+        return bool(user.has_perm(Permission.PEOPLE_MANAGE) or user.has_perm(Permission.STUDENT_RECORDS_MANAGE))
 
     def update(self, user: Any, obj: Any) -> bool:
         if obj is None:
@@ -64,13 +64,13 @@ class GuardianPolicy(Policy):
 
 class StudentRecordPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.STUDENT_RECORDS_VIEW) or user.has_perm(Permission.STUDENT_RECORDS_MANAGE)
+        return bool(user.has_perm(Permission.STUDENT_RECORDS_VIEW) or user.has_perm(Permission.STUDENT_RECORDS_MANAGE))
 
     def view(self, user: Any, obj: Any) -> bool:
         return obj is not None and obj.is_visible_to(user)
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.STUDENT_RECORDS_MANAGE)
+        return bool(user.has_perm(Permission.STUDENT_RECORDS_MANAGE))
 
     def update(self, user: Any, obj: Any) -> bool:
         return obj is not None and obj.is_manageable_by(user)
@@ -88,8 +88,8 @@ class StudentRecordPolicy(Policy):
 
 class StudentStatusChangePolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.STUDENT_STATUS_CHANGES_APPROVE) or user.has_perm(
-            Permission.STUDENT_RECORDS_VIEW
+        return bool(
+            user.has_perm(Permission.STUDENT_STATUS_CHANGES_APPROVE) or user.has_perm(Permission.STUDENT_RECORDS_VIEW)
         )
 
     def view(self, user: Any, obj: Any) -> bool:
@@ -116,7 +116,7 @@ class StudentStatusChangePolicy(Policy):
 
 class InstructorPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return (
+        return bool(
             user.has_perm(Permission.INSTRUCTORS_MANAGE)
             or user.has_perm(Permission.PEOPLE_VIEW)
             or user.has_perm(Permission.ADVISORS_MANAGE)
@@ -126,10 +126,10 @@ class InstructorPolicy(Policy):
         return self.view_any(user, obj)
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.INSTRUCTORS_MANAGE)
+        return bool(user.has_perm(Permission.INSTRUCTORS_MANAGE))
 
     def update(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.INSTRUCTORS_MANAGE)
+        return bool(user.has_perm(Permission.INSTRUCTORS_MANAGE))
 
     def delete(self, user: Any, obj: Any) -> bool:
         return False
@@ -137,7 +137,7 @@ class InstructorPolicy(Policy):
 
 class AdditionalProgramRequestPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return (
+        return bool(
             user.has_perm(Permission.ADDITIONAL_PROGRAMS_APPROVE)
             or user.has_perm(Permission.STUDENT_RECORDS_VIEW)
             or user.has_perm(Permission.STUDENT_RECORDS_MANAGE)

@@ -8,6 +8,7 @@ from typing import Any
 
 from celery import shared_task
 from django.core.cache import cache
+from django.core.management import call_command
 
 from ninefruits.core.tasks import SystemTask, single_instance
 
@@ -39,12 +40,11 @@ def promote_waitlist(self: Any, section_id: int) -> dict[str, int] | None:
 
 @shared_task(name="registration.promote_waitlists", base=SystemTask)
 @single_instance("registration.promote_waitlists")
-def promote_waitlists() -> dict[str, int]:
+def promote_waitlists() -> Any:
     """Hourly safety net (original scheduled ``waitlist:promote``): serves every waitlist and
-    expires those whose windows have closed."""
-    from ninefruits.registration.services.waitlists import promote_all
-
-    return promote_all()
+    expires those whose windows have closed. Runs the ``waitlist_promote`` command, so the
+    scheduled run is audited like a manual one (as the original scheduler did)."""
+    return call_command("waitlist_promote", verbosity=0)
 
 
 @shared_task(name="registration.release_reserved_seats", base=SystemTask)

@@ -31,7 +31,7 @@ class Command(AuditedCommand):
             help="Read the password from standard input (non-interactive installs)",
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         role = Role.objects.filter(name="system_administrator").first()
         if role is None:
             self.error(

@@ -6,7 +6,7 @@ from __future__ import annotations
 
 import functools
 from collections.abc import Callable
-from typing import Any
+from typing import TYPE_CHECKING, Any
 
 from celery import Task, shared_task
 from django.core.cache import cache
@@ -16,8 +16,16 @@ from ninefruits.core.db import session_context
 
 HEARTBEAT_CACHE_KEY = "system:heartbeat"
 
+# celery-types makes Task generic; Celery's Task class is not subscriptable at run time.
+if TYPE_CHECKING:
+    from celery.result import AsyncResult
 
-class SystemTask(Task):  # type: ignore[misc]
+    _TaskBase = Task[..., Any]
+else:
+    _TaskBase = Task
+
+
+class SystemTask(_TaskBase):
     abstract = True
     acks_late = True
 
@@ -33,10 +41,22 @@ class SystemTask(Task):  # type: ignore[misc]
         finally:
             db.leave()
 
-    def apply_async(self, args: Any = None, kwargs: Any = None, **options: Any) -> Any:
+    def apply_async(
+        self,
+        args: tuple[Any, ...] | None = None,
+        kwargs: dict[str, Any] | None = None,
+        task_id: str | None = None,
+        producer: Any = None,
+        link: Any = None,
+        link_error: Any = None,
+        shadow: str | None = None,
+        **options: Any,
+    ) -> AsyncResult[Any]:
         current = context.current()
         headers = {**current.as_headers(), **(options.pop("headers", None) or {})}
-        return super().apply_async(args, kwargs, headers=headers, **options)
+        return super().apply_async(
+            args, kwargs, task_id, producer, link, link_error, shadow, headers=headers, **options
+        )
 
 
 def single_instance(

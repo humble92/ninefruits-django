@@ -100,7 +100,7 @@ class TermEvaluationAdmin(CatalogAdmin):
 
     # -- access ----------------------------------------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", TermEvaluation))
+        return self.policy_allows(request, "view_any", TermEvaluation)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -141,10 +141,13 @@ class TermEvaluationAdmin(CatalogAdmin):
         return reverse("admin:evaluation_termevaluation_changelist")
 
     def _evaluation(self, request: HttpRequest, object_id: Any) -> TermEvaluation:
-        return get_object_or_404(self.get_queryset(request).select_related("term", "form"), pk=object_id)
+        evaluation: TermEvaluation = get_object_or_404(
+            self.get_queryset(request).select_related("term", "form"), pk=object_id
+        )
+        return evaluation
 
     def has_prepare_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return bool(request.user.has_perm("create", TermEvaluation))
+        return self.policy_allows(request, "create", TermEvaluation)
 
     def _prepare(self, request: HttpRequest, evaluation: TermEvaluation | None, title: Any) -> HttpResponse:
         form = PrepareForm(request.POST or None, evaluation=evaluation)
@@ -182,7 +185,7 @@ class TermEvaluationAdmin(CatalogAdmin):
         return self._prepare(request, evaluation, pgettext_lazy("evaluation", "Change"))
 
     def has_publish_row_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return bool(request.user.has_perm("update", TermEvaluation))
+        return self.policy_allows(request, "update", TermEvaluation)
 
     @action(
         description=pgettext_lazy("evaluation", "Publish results"),

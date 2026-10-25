@@ -21,7 +21,7 @@ class Command(AuditedCommand):
             "--force", action="store_true", help="Delete permissions removed from the catalog without asking"
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         sync = SyncPermissionCatalog()
         plan = sync.plan()
         for name in plan["created"]:

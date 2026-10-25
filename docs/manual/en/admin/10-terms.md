@@ -60,7 +60,7 @@ There are two kinds of window.
 | Registration | 11 February 10:00 | Year level 3 |
 | Registration | 12 February 10:00 | Year levels 1, 2 |
 
-Each student's year level and admission year come from the Phase 2 student record data.
+Each student's year level and admission year come from the student record data ([chapter 12](12-people-and-student-records.md)).
 
 ## Class periods
 

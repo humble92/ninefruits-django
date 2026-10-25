@@ -74,7 +74,8 @@ class EmailCodeChallenge:
         entry = cache.get(f"mfa-email-code-resend:{user.pk}")
         if not isinstance(entry, dict):
             return 0
-        return max(0, math.ceil(entry["reset_at"] - time.time()))
+        reset_at = float(entry["reset_at"])
+        return max(0, math.ceil(reset_at - time.time()))
 
     @staticmethod
     def _key(user: User, purpose: str) -> str:

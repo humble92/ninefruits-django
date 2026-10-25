@@ -32,7 +32,7 @@ class Command(StatusCommand):
         parser.add_argument("--term", help="Term code (default: the section's latest term)")
         parser.add_argument("--at", help='Time to judge, e.g. "2027-02-10 10:00 Asia/Seoul"')
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         with session_context().system("command:registration_simulate"):
             return self._simulate(options)
 

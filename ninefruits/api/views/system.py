@@ -18,6 +18,7 @@ from django.db import connection
 from django.utils import timezone
 from drf_spectacular.types import OpenApiTypes
 from drf_spectacular.utils import extend_schema
+from rest_framework.exceptions import NotAuthenticated
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.request import Request
 from rest_framework.response import Response
@@ -101,6 +102,8 @@ class MeView(APIView):
         from .tokens import token_auth
 
         user = request.user
+        if not user.is_authenticated:  # IsAuthenticated lets only signed-in users through
+            raise NotAuthenticated
         token = token_auth(request)
         return Response(
             {

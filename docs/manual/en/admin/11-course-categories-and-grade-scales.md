@@ -4,7 +4,7 @@
 
 Menu: **Reference data > Course categories** (`Manage course categories` permission). Replaces `SFOBJDIST` of the legacy system (YUSTIC).
 
-The classification of courses, such as general education required or major elective. Categories can be grouped by setting a **Parent** (for example General education → General education required, General education elective). Graduation requirements (Phases 4 and 11) refer to them, as in "30 credits of major required courses".
+The classification of courses, such as general education required or major elective. Categories can be grouped by setting a **Parent** (for example General education → General education required, General education elective). Graduation requirements ([chapter 17](17-courses-and-curriculum.md), [chapter 26](26-graduation.md)) refer to them, as in "30 credits of major required courses".
 
 ## Grade scales
 

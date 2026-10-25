@@ -27,7 +27,7 @@ class SectionGradeQuerySet(SectionQuerySet):
 
 
 class SectionGrade(Section):
-    objects = SectionGradeQuerySet.as_manager()
+    objects = SectionGradeQuerySet.as_manager()  # type: ignore[misc]  # a proxy may narrow the manager
 
     class Meta:
         proxy = True

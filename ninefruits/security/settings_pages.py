@@ -135,7 +135,7 @@ class SsoProvidersWidget(forms.Widget):
     template_name = "security/widgets/sso_providers.html"
     extra_rows = 1
 
-    def format_value(self, value: Any) -> list[dict[str, Any]]:  # type: ignore[override]
+    def format_value(self, value: Any) -> list[dict[str, Any]]:
         return list(value or [])
 
     def get_context(self, name: str, value: Any, attrs: dict[str, Any] | None) -> dict[str, Any]:

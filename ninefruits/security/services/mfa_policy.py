@@ -85,4 +85,4 @@ class MfaPolicy:
 
 def uses_authenticator_app(user: User) -> bool:
     """A confirmed authenticator app (allauth TOTP authenticator, ADR 0001-django)."""
-    return Authenticator.objects.filter(user_id=user.pk, type=Authenticator.Type.TOTP).exists()
+    return bool(Authenticator.objects.filter(user_id=user.pk, type=Authenticator.Type.TOTP).exists())

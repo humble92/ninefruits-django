@@ -18,7 +18,7 @@ class Command(AuditedCommand):
         parser.add_argument("user", help="Email of the user")
         parser.add_argument("--reason", help="Why the lock is released early (required)")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         user = User.objects.filter(email=str(options["user"]).lower()).first()
         reason = (options.get("reason") or "").strip()
         if user is None:

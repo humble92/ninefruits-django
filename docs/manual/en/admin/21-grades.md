@@ -142,6 +142,6 @@ The screens and functions are those of the original (Filament, Livewire); how th
 - In **Grading policy**, write the grade caps as letters and percentages separated by commas, e.g. `A=30, B=40`. Empty means no cap.
 - Portal grade entry: under absolute evaluation the grade appears next to the score shortly after it is typed. **Save draft**, **Check grade caps** and **Submit grades** are at the bottom of the screen; when saving fails (e.g. a score out of range) the entered values are shown again with the error. **Request change** on a student's row opens the request fields below the table.
 - Staff grade report address: `/student-records/{student record id}/transcript/` (the **Grade report** button on the student record screen, **Grade report** on a term record row). Add `?format=pdf` for a PDF.
-- Loading scores from the LMS is added to the grade entry screen in Phase 12. The grades of a term whose course evaluation is open and unfinished are hidden with a notice and a link to **Course evaluation** ([chapter 22](22-course-evaluation.md)).
+- For a section linked to an LMS, the grade entry screen can load LMS scores as a draft ([chapter 28](28-lms-integration.md)). The grades of a term whose course evaluation is open and unfinished are hidden with a notice and a link to **Course evaluation** ([chapter 22](22-course-evaluation.md)).
 
 [Administrator manual contents](README.md)

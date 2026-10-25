@@ -132,14 +132,14 @@ class RequirementForm(forms.ModelForm):  # type: ignore[type-arg]
         for name in ("category", "assessment_type", "min_credits", "min_courses"):
             if name in self.cleaned_data:
                 setattr(self.instance, name, self.cleaned_data[name])
-        super()._post_clean()
+        super()._post_clean()  # type: ignore[misc]  # private Django API missing from django-stubs
 
     def save_courses(self) -> None:
         if self.instance.pk:
             self.instance.courses.set(self.cleaned_data.get("course_ids") or [])
 
 
-class RequirementInline(CatalogPermissionMixin, StackedInline):  # type: ignore[misc]
+class RequirementInline(CatalogPermissionMixin, StackedInline):
     model = CurriculumRequirement
     fk_name = "requirement_set"
     form = RequirementForm

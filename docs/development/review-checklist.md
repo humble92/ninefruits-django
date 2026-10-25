@@ -8,10 +8,10 @@ PR 설명에 해당 없는 항목은 "해당 없음"으로 표시한다. 자동 
 ## 1. 자동 검사
 
 - [ ] `uv run ruff format --check`, `uv run ruff check` 통과 (CI)
-- [ ] `uv run mypy ninefruits config` 통과 (CI)
+- [ ] `uv run mypy ninefruits config tools/checks` 통과 (CI)
 - [ ] `uv run tools/checks/raw_sql.py`(원시 SQL 검사), `uv run manage.py naming_check`(명명 검사), `uv run manage.py i18n_missing --strict`(번역 누락) 통과 (CI)
 - [ ] `uv run pytest -n auto -m "not concurrency"`, `uv run pytest -m concurrency` 통과 (CI)
-- [ ] `uv run bandit -q -r ninefruits`, `pip-audit` 경고 없음 (CI)
+- [ ] `uv run bandit -q -c pyproject.toml -r ninefruits --severity-level medium`, `pip-audit --strict`(`uv export`로 만든 목록) 경고 없음 (CI)
 - [ ] `uv run manage.py makemigrations --check --dry-run` 변경 없음, `uv run manage.py check` 통과
 - [ ] 새 관리 명령은 `docs/manual/{ko,en,zh_Hans,lo}/operations/commands.md`에 `### \`명령\`` 항목이 있다 (CI, `tests/tooling/test_command_documentation.py`)
 
@@ -59,7 +59,8 @@ PR 설명에 해당 없는 항목은 "해당 없음"으로 표시한다. 자동 
 - [ ] 화면 문구는 gettext(`_()`, `{% translate %}`)이고 msgid는 영어 원문이다. 같은 영어가 다르게 번역돼야 하면 `pgettext("{원본 그룹}", ...)`
 - [ ] `ko`, `zh_Hans`, `lo` 번역을 모두 넣었다 (`uv run manage.py i18n_missing --strict`, CI)
 - [ ] 날짜와 숫자는 사용자 로케일로 표시한다 (`nf_i18n`의 `ll`, `lll`, `number` 필터)
-- [ ] 관리자 매뉴얼 해당 장과 운영 매뉴얼을 한국어로 먼저 고치고 4개 언어를 맞췄다
+- [ ] 관리자 매뉴얼 해당 장과 운영 매뉴얼을 한국어로 먼저 고치고 4개 언어를 맞췄다. 매뉴얼의 상대 링크와 언어별 파일 목록은 `tests/tooling/test_command_documentation.py`가 검사한다 (CI)
+- [ ] 화면이 크게 바뀌었으면 README 스크린샷을 다시 찍었다(`uv run python tools/screenshots.py`, [언어 추가 가이드 4절](adding-a-language.ko.md#4-문서))
 
 ## 7. 테스트
 

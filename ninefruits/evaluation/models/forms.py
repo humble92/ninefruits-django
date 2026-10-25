@@ -33,14 +33,18 @@ def responses_exist(**filters: Any) -> bool:
 class EvaluationForm(TimeStampedModel):
     code = models.CharField(pgettext_lazy("reference", "Code"), max_length=32, unique=True)
     name = TranslatableJSONField(pgettext_lazy("reference", "Name"))
+    name_translations: dict[str, str]  # TranslationsAccessor, set by the field
     description = TranslatableJSONField(
         pgettext_lazy("evaluation", "Description"), null=True, blank=True, max_length=2000
     )
+    description_translations: dict[str, str]  # TranslationsAccessor, set by the field
     scale_points = models.SmallIntegerField(
         _("Scale points"), default=5, validators=[MinValueValidator(2), MaxValueValidator(10)]
     )
     scale_low_label = TranslatableJSONField(_("Label of 1"), null=True, blank=True)
+    scale_low_label_translations: dict[str, str]  # TranslationsAccessor, set by the field
     scale_high_label = TranslatableJSONField(_("Label of the highest point"), null=True, blank=True)
+    scale_high_label_translations: dict[str, str]  # TranslationsAccessor, set by the field
     is_active = models.BooleanField(pgettext_lazy("reference.fields", "Active"), default=True)
 
     objects = VisibleQuerySet.as_manager()
@@ -72,7 +76,9 @@ class EvaluationQuestion(TimeStampedModel):
     )
     sort_order = models.IntegerField(_("Order"), default=0)
     category = TranslatableJSONField(_("Area"), null=True, blank=True)
+    category_translations: dict[str, str]  # TranslationsAccessor, set by the field
     text = TranslatableJSONField(_("Question"), max_length=1000)
+    text_translations: dict[str, str]  # TranslationsAccessor, set by the field
     question_type = models.CharField(_("Type"), max_length=16, choices=QuestionType.choices, default=QuestionType.SCALE)
     is_required = models.BooleanField(pgettext_lazy("evaluation", "Required"), default=True)
     is_reversed = models.BooleanField(

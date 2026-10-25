@@ -67,9 +67,11 @@ class CourseVersion(EffectivePeriodMixin, TimeStampedModel):
 
     course = models.ForeignKey(Course, on_delete=models.CASCADE, related_name="versions")
     title = TranslatableJSONField(pgettext_lazy("curriculum", "Title"))
+    title_translations: dict[str, str]  # TranslationsAccessor, set by the field
     description = TranslatableJSONField(
         pgettext_lazy("curriculum", "Description"), null=True, blank=True, max_length=2000
     )
+    description_translations: dict[str, str]  # TranslationsAccessor, set by the field
     credits = models.DecimalField(pgettext_lazy("curriculum", "Credits"), max_digits=4, decimal_places=1)
     lecture_hours = models.DecimalField(_("Lecture hours"), max_digits=4, decimal_places=1, default=0)
     lab_hours = models.DecimalField(_("Lab hours"), max_digits=4, decimal_places=1, default=0)

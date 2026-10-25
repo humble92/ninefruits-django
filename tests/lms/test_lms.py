@@ -14,6 +14,7 @@ from django.core import serializers
 from django.core.management import call_command
 from django.db import connection
 
+from ninefruits.audit.models import ActivityLog
 from ninefruits.core.db import session_context
 from ninefruits.lms import tasks
 from ninefruits.lms.actions import PullGrades, ReconcilePlatform
@@ -167,6 +168,22 @@ def test_loads_platform_scores_into_the_grade_entry_screen_as_a_draft(
     assert signed_in(lms.student).post(url, {"action": "import_lms"}).status_code == 403
 
 
+def test_refuses_to_load_platform_scores_for_someone_who_may_not_enter_the_grades(lms: Lms) -> None:
+    # Security review H5: importing scores is grade entry. Without an open grade entry window the
+    # instructor may not, nor may an unrelated account; staff with grades.manage in scope may.
+    from django.core.exceptions import PermissionDenied
+
+    from ninefruits.security.enums import Permission
+    from tests.factories.security import UserFactory
+
+    for actor in (lms.teacher, lms.student):
+        with pytest.raises(PermissionDenied):
+            PullGrades().handle(lms.platform, lms.section, actor)
+    registrar = UserFactory(permissions=[Permission.GRADES_MANAGE])
+    assert PullGrades().handle(lms.platform, lms.section, registrar) == {}
+    assert not LmsSyncLog.objects.filter(operation=SyncOperation.GRADES_PULL).exists()
+
+
 def test_shows_the_course_link_in_the_portal_and_restricts_links_and_logs_by_permission_and_rls(
     lms: Lms, django_capture_on_commit_callbacks: Any
 ) -> None:
@@ -306,8 +323,10 @@ def test_enrollment_events_add_and_remove_members_through_the_tasks(
 
     # Inactive platforms are skipped by the tasks; the nightly task reconciles active ones.
     assert tasks.sync_section.delay(lms.platform.pk + 1000, lms.section.pk).get() is None
-    result = tasks.reconcile.delay().get()
-    assert result == {"TEST": {"sections": 1, "added": 1, "removed": 0, "failed": 0}}
+    assert tasks.reconcile.delay().get() == 0
+    # The scheduled run is audited like the command (the original scheduler ran lms:reconcile).
+    entry = ActivityLog.objects.filter(log_name="command", properties__command="lms_reconcile").latest("id")
+    assert entry.properties["result"] == {"TEST": {"sections": 1, "added": 1, "removed": 0, "failed": 0}}
 
 
 def test_visible_to_matches_row_level_security(lms: Lms, django_capture_on_commit_callbacks: Any) -> None:

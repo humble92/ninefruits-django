@@ -24,7 +24,7 @@
 ### `migrate`
 
 - 용도: DB 마이그레이션을 적용한다. Django 기본 명령을 감싼 Ninefruits 명령으로, `--database`를 주지 않으면 스키마 소유자 연결(`migrator`, 역할 `app_migrator`)을 쓴다. 애플리케이션 연결(`app_runtime`)은 DDL 권한이 없다. `showmigrations`, `sqlmigrate`도 같은 방식으로 `migrator` 연결을 기본값으로 쓴다.
-- 실행 시점: 최초 설치, 그리고 배포할 때마다(이후 Phase에서는 `setup_install`이 함께 실행한다).
+- 실행 시점: 최초 설치, 그리고 배포할 때마다(`setup_install`도 함께 실행한다).
 - 옵션: Django `migrate`와 같다(`app_label`, `migration_name`, `--plan`, `--check`, `--database`).
 - 감사: 기록 안 함(스키마 변경은 마이그레이션 이력 `django_migrations`에 남는다)
 - 예시
@@ -92,7 +92,7 @@
 - 용도: 가상 대학 데이터를 만든다(조직, 프로그램, 건물·강의실, 오늘을 기준으로 지난·현재·다음 학기와 업무 기간, 한국 대학 프로파일). 역할별 고정 데모 계정(`registrar@demo.test` 등, 비밀번호 `demo-password`)을 출력한다. 대량 데이터는 일괄 삽입으로 만든다.
 - 실행 시점: 개발, 교육, 시연 환경. **운영 환경(`DJANGO_ENV=production`)에서는 `--force`를 줘도 실행되지 않는다.**
 - 옵션: `--size=tiny|small|medium|large`(학생 약 20/100/2,000/20,000명. `tiny`는 테스트와 빠른 확인용), `--seed=`(같은 값이면 같은 데이터), `--force`(확인 질문 생략).
-- `--student-accounts`: 재학생 전원에게 계정을 만들고 비공개 저장소의 `load-accounts.csv`(이메일, 비밀번호)에 적는다. 부하 테스트용([부하 테스트](load-testing.md)). 학적 데이터는 Phase 2부터 생기므로 그 전에는 머리글만 적힌다.
+- `--student-accounts`: 재학생 전원에게 계정을 만들고 비공개 저장소의 `load-accounts.csv`(이메일, 비밀번호)에 적는다. 부하 테스트용([부하 테스트](load-testing.md)).
 - 감사: 기록 (크기, 시드, 소요 시간)
 - 예시: `uv run manage.py setup_demo --size=small --seed=42 --force`
 - 실패 시: 필수 데이터가 없으면 데모 계정의 역할이 없어 건너뛴다. 먼저 `setup_install`을 실행한다. 같은 DB에서 다시 실행하면 이미 있는 데모 데이터는 건너뛴다.
@@ -102,7 +102,7 @@
 ### `reference_import`
 
 - 용도: 기준정보 CSV를 가져온다. 관리 화면의 **CSV 가져오기**와 같은 가져오기 규칙을 쓴다(코드로 기존 행을 찾아 갱신, 빈 번역 칸은 기존 값 유지, 실패한 행만 따로 기록).
-- 인수: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students`(학적, Phase 2), `instructors`(교원, Phase 2), `courses`(교과목 버전, Phase 4), `registration_holds`(수강신청 제한, Phase 5) / `file` 머리글 행이 있는 UTF-8 CSV.
+- 인수: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students`(학적), `instructors`(교원), `courses`(교과목 버전), `registration_holds`(수강신청 제한) / `file` 머리글 행이 있는 UTF-8 CSV.
 - 옵션: `--actor=`(필수. 가져오기 기록이 이 계정으로 남고 결과가 이 계정의 **CSV 가져오기** 화면에 보인다), `--chunk=100`(Celery 작업당 행 수), `--dry-run`(머리글 검사와 행 수만).
 - 감사: 기록 (유형, 파일 이름, 행 수, 가져오기 번호, 실패 행 수)
 - 열 형식: [관리자 매뉴얼 9장](../admin/09-csv-import.md).
@@ -135,6 +135,14 @@
 - 감사: 기록 (생성/삭제한 권한)
 - 출력 해석: `create`, `delete` 줄. 삭제가 있으면 확인 질문이 나온다.
 - 실패 시: 확인 질문에 "아니요"를 고르면 종료 코드 1로 아무것도 바꾸지 않는다.
+
+### `security_reencrypt_secrets`
+
+- 용도: `DJANGO_SECRET_KEY`를 교체한 뒤, 이 키에서 만든 키로 암호화된 비밀값(인증 앱 TOTP 비밀값, 복구 코드 시드, SSO 클라이언트 비밀값)을 새 키로 다시 암호화한다. 그때까지는 `DJANGO_SECRET_KEY_FALLBACKS`의 이전 키로 읽는다. 이전 키를 지우기 전에 실행한다([키 관리](security-keys.md)).
+- 인수/옵션: `--dry-run`(이전 키로 암호화된 건수만 센다).
+- 감사: 기록 (건수)
+- 출력 해석: `Dry run: 0 authenticator(s) and 0 SSO client secret(s) use a previous key.`이면 이전 키를 지워도 된다. `cannot be decrypted`이면 어느 키로도 읽을 수 없는 값이 있다. 이전 키를 `DJANGO_SECRET_KEY_FALLBACKS`에 넣고 다시 실행한다.
+- 예시: `uv run manage.py security_reencrypt_secrets --dry-run`
 
 ### `security_reset_mfa`
 
@@ -378,6 +386,20 @@
 - 실행 시점: 연동 종료, 토큰 유출 의심, 담당자 변경 시.
 
 ## 운영 점검과 정리 (Phase 13)
+
+### `system_health_check`
+
+- 용도: 설정과 키(`DJANGO_SECRET_KEY`, PII 키, `DEBUG`), DB 연결과 역할(runtime·migrator·reporting), 개인정보 테이블의 RLS, 대기 중 마이그레이션, 권한 카탈로그 동기화, Redis, Celery 워커, Gotenberg, 비공개 저장소 쓰기, beat 심장박동(`core.heartbeat`, 5분 이내)을 점검한다.
+- 옵션: `--json`(모니터링용 출력).
+- 감사: 없음 (조회)
+- 종료 코드: 하나라도 실패하면 2.
+- 실행 시점: 배포 직후, 장애 의심 시, 모니터링에서 주기적으로. 부하 분산기용으로는 `/api/v1/health/`를 쓴다.
+- 예시
+
+  ```bash
+  uv run manage.py system_health_check
+  uv run manage.py system_health_check --json
+  ```
 
 ### `audit_seal`
 

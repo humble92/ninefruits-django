@@ -36,7 +36,7 @@ class Command(AuditedCommand):
         parser.add_argument("file", help="CSV with student_number and a column per area code")
         parser.add_argument("--dry-run", action="store_true", help="Check the rows without recording")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         session = find_session(options["type"], options["held_date"])
         path = Path(options["file"])
         actor = self.actor()

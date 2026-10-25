@@ -21,3 +21,9 @@
 | [deployment-checklist.md](operations/deployment-checklist.md) | ການຕັ້ງຄ່າ Python ແລະ gunicorn, ຕົວແປສະພາບແວດລ້ອມສຳລັບການນຳໃຊ້ຈິງ, ຂັ້ນຕອນການນຳໃຊ້ລະບົບ, ການກວດກາຕາມກຳນົດ |
 | [load-testing.md](operations/load-testing.md) | ການທົດສອບພາລະຊ່ວງສູງສຸດຂອງການລົງທະບຽນຮຽນດ້ວຍ Locust ແລະ ເກນທີ່ໃຊ້ຕັດສິນຈຳນວນ worker |
 | [troubleshooting.md](operations/troubleshooting.md) | ອາການທີ່ພົບເລື້ອຍ ແລະ ສິ່ງທີ່ຕ້ອງກວດ, ການຕິດຕາມດ້ວຍ X-Request-Id |
+
+## ເອກະສານອື່ນ
+
+- [ຄູ່ມືການເຊື່ອມຕໍ່ LMS](../../lms-integration-guide.md): API ແລະ ຕົວເຊື່ອມຕໍ່ LMS (ນັກພັດທະນາ)
+- [ການເພີ່ມພາສາ](../../development/adding-a-language.md), [ກົດການຕັ້ງຊື່](../../development/naming.md), [ລາຍການກວດທົບທວນໂຄດ](../../development/review-checklist.md) (ນັກພັດທະນາ)
+- [ສາລະບານເອກະສານ](../../README.md)

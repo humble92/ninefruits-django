@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from typing import Any
+from typing import Any, ClassVar
 
 from django.contrib.auth import get_backends
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
@@ -54,7 +54,7 @@ class User(AbstractBaseUser):
 
     USERNAME_FIELD = "email"
     EMAIL_FIELD = "email"
-    REQUIRED_FIELDS: list[str] = []
+    REQUIRED_FIELDS: ClassVar[list[str]] = []
 
     class Meta:
         db_table = "users"
@@ -99,12 +99,13 @@ class User(AbstractBaseUser):
         return self.locale
 
     # -- authorization (CatalogPermissionBackend answers; no PermissionsMixin) ------------------
-    def has_perm(self, perm: str, obj: object | None = None) -> bool:
+    def has_perm(self, perm: str, obj: Any = None) -> bool:
+        """``obj``: a model instance, or a model class for class level policy abilities."""
         if not self.is_active:
             return False
         return any(hasattr(backend, "has_perm") and backend.has_perm(self, perm, obj) for backend in get_backends())
 
-    def has_perms(self, perm_list: list[str], obj: object | None = None) -> bool:
+    def has_perms(self, perm_list: list[str], obj: Any = None) -> bool:
         return all(self.has_perm(perm, obj) for perm in perm_list)
 
     def has_module_perms(self, app_label: str) -> bool:

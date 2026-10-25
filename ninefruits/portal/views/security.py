@@ -34,6 +34,7 @@ from ninefruits.security.actions import (
     UnlinkIdentity,
     UpdateUserPassword,
 )
+from ninefruits.security.authorization import signed_in_user
 from ninefruits.security.enums import MfaMethod, MfaRequirement
 from ninefruits.security.models import UserIdentity
 from ninefruits.security.services.email_code import PURPOSE_ENROLLMENT, EmailCodeChallenge
@@ -91,7 +92,7 @@ class SecurityView(LoginRequiredMixin, View):
 
     # -- actions (original component methods) ----------------------------------------------
     def do_enable(self, request: HttpRequest, extra: dict[str, Any]) -> None:
-        request.session[PENDING_SECRET_KEY] = StartAuthenticatorAppEnrollment()(request.user)  # type: ignore[arg-type]
+        request.session[PENDING_SECRET_KEY] = StartAuthenticatorAppEnrollment()(signed_in_user(request))
 
     def do_confirm(self, request: HttpRequest, extra: dict[str, Any]) -> None:
         secret = request.session.get(PENDING_SECRET_KEY)
@@ -100,25 +101,25 @@ class SecurityView(LoginRequiredMixin, View):
             raise ValidationError({"code": _("Start the setup again.")})
         if not (len(code) == 6 and code.isdigit()):
             raise ValidationError({"code": _("The code must be 6 digits.")})
-        extra["recovery_codes"] = ConfirmAuthenticatorApp()(request.user, secret, code)  # type: ignore[arg-type]
+        extra["recovery_codes"] = ConfirmAuthenticatorApp()(signed_in_user(request), secret, code)
         request.session.pop(PENDING_SECRET_KEY, None)
 
     def do_regenerate_recovery_codes(self, request: HttpRequest, extra: dict[str, Any]) -> None:
-        extra["recovery_codes"] = GenerateRecoveryCodes()(request.user)  # type: ignore[arg-type]
+        extra["recovery_codes"] = GenerateRecoveryCodes()(signed_in_user(request))
 
     def do_disable(self, request: HttpRequest, extra: dict[str, Any]) -> None:
-        DisableMfaMethod()(request.user, MfaMethod.AUTHENTICATOR_APP)  # type: ignore[arg-type]
+        DisableMfaMethod()(signed_in_user(request), MfaMethod.AUTHENTICATOR_APP)
         request.session.pop(PENDING_SECRET_KEY, None)
 
     def do_send_email_code(self, request: HttpRequest, extra: dict[str, Any]) -> None:
         if not MfaPolicy().email_codes_allowed():
             raise ValidationError({"email_code": _("Email codes are not available at this institution.")})
         challenge = EmailCodeChallenge()
-        if not challenge.send(request.user, PURPOSE_ENROLLMENT):  # type: ignore[arg-type]
+        if not challenge.send(signed_in_user(request), PURPOSE_ENROLLMENT):
             raise ValidationError(
                 {
                     "email_code": _("Please wait %(seconds)s seconds before requesting another code.")
-                    % {"seconds": challenge.seconds_until_resend(request.user)}  # type: ignore[arg-type]
+                    % {"seconds": challenge.seconds_until_resend(signed_in_user(request))}
                 }
             )
         request.session[EMAIL_CODE_SENT_KEY] = True
@@ -127,28 +128,28 @@ class SecurityView(LoginRequiredMixin, View):
         code = request.POST.get("email_code", "").strip()
         if not (len(code) == 6 and code.isdigit()):
             raise ValidationError({"email_code": _("The email code must be 6 digits.")})
-        EnableEmailMfa()(request.user, code)  # type: ignore[arg-type]
+        EnableEmailMfa()(signed_in_user(request), code)
         request.session.pop(EMAIL_CODE_SENT_KEY, None)
 
     def do_disable_email(self, request: HttpRequest, extra: dict[str, Any]) -> None:
-        DisableMfaMethod()(request.user, MfaMethod.EMAIL_CODE)  # type: ignore[arg-type]
+        DisableMfaMethod()(signed_in_user(request), MfaMethod.EMAIL_CODE)
 
     def do_forget_device(self, request: HttpRequest, extra: dict[str, Any]) -> None:
         extra["device_forgotten"] = True
 
     def do_unlink_identity(self, request: HttpRequest, extra: dict[str, Any]) -> None:
         identity = get_object_or_404(UserIdentity, pk=request.POST.get("identity_id"), user=request.user)
-        UnlinkIdentity()(request.user, identity)  # type: ignore[arg-type]
+        UnlinkIdentity()(signed_in_user(request), identity)
 
     def do_change_password(self, request: HttpRequest, extra: dict[str, Any]) -> None:
         UpdateUserPassword()(
-            request.user,  # type: ignore[arg-type]
+            signed_in_user(request),
             request.POST.get("current_password", ""),
             request.POST.get("password", ""),
             request.POST.get("password_confirmation", ""),
             current_session_key=request.session.session_key,
         )
-        update_session_auth_hash(request, request.user)  # type: ignore[arg-type]
+        update_session_auth_hash(request, signed_in_user(request))
         extra["password_changed"] = True
 
     # -- rendering ---------------------------------------------------------------------------
@@ -169,9 +170,9 @@ class SecurityView(LoginRequiredMixin, View):
         partial: str | None = None,
         **extra: Any,
     ) -> HttpResponse:
-        user = request.user
+        user = signed_in_user(request)
         policy = MfaPolicy()
-        methods = policy.methods_for(user)  # type: ignore[arg-type]
+        methods = policy.methods_for(user)
         secret = request.session.get(PENDING_SECRET_KEY)
         uses_app = MfaMethod.AUTHENTICATOR_APP in methods
         pending = bool(secret) and not uses_app
@@ -189,16 +190,13 @@ class SecurityView(LoginRequiredMixin, View):
             "email_codes_allowed": policy.email_codes_allowed(),
             "email_code_sent": bool(request.session.get(EMAIL_CODE_SENT_KEY)),
             "pending": pending,
-            "requirement_required": policy.requirement_for(user) == MfaRequirement.REQUIRED,  # type: ignore[arg-type]
+            "requirement_required": policy.requirement_for(user) == MfaRequirement.REQUIRED,
             "enrolled": methods != [],
             "qr_code_svg": qr_code_svg,
             "setup_key": setup_key,
             "recovery_codes": [],
             "remember_device_days": policy.remember_device_days(),
-            "device_trusted": (
-                TrustedDevices(policy).is_trusted(request, user)  # type: ignore[arg-type]
-                and not extra.get("device_forgotten")
-            ),
+            "device_trusted": (TrustedDevices(policy).is_trusted(request, user) and not extra.get("device_forgotten")),
             "sso_providers": [
                 {
                     "provider": provider,

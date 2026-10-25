@@ -23,7 +23,7 @@ class Command(AuditedCommand):
         )
         parser.add_argument("--reason", default=None, help="What the token is for (recorded in the audit)")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         from ninefruits.security.models import User
 
         user = User.objects.filter(email=options["email"]).first()

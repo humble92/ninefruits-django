@@ -29,7 +29,7 @@ class StartAuthenticatorAppEnrollment:
     user confirms it with a code."""
 
     def __call__(self, user: User) -> str:
-        secret = generate_totp_secret()
+        secret: str = generate_totp_secret()
         record_security_event(SecurityEventType.MFA_ENABLED, user=user)
         return secret
 
@@ -44,7 +44,7 @@ class ConfirmAuthenticatorApp:
         with transaction.atomic():
             Authenticator.objects.filter(user_id=user.pk, type=Authenticator.Type.TOTP).delete()
             TOTP.activate(user, secret)
-            codes = RecoveryCodes.activate(user).generate_codes()
+            codes: list[str] = RecoveryCodes.activate(user).generate_codes()
             record_security_event(SecurityEventType.MFA_CONFIRMED, user=user)
         return codes
 
@@ -55,7 +55,7 @@ class GenerateRecoveryCodes:
             raise ValidationError({"recovery_codes": _("Recovery codes need an authenticator app. Set one up first.")})
         with transaction.atomic():
             Authenticator.objects.filter(user_id=user.pk, type=Authenticator.Type.RECOVERY_CODES).delete()
-            codes = RecoveryCodes.activate(user).generate_codes()
+            codes: list[str] = RecoveryCodes.activate(user).generate_codes()
             record_security_event(SecurityEventType.MFA_RECOVERY_CODES_REGENERATED, user=user)
         return codes
 

@@ -16,7 +16,7 @@ from ninefruits.admission.actions import RegisterApplicant
 from ninefruits.admission.actions.registration import registration_enabled
 
 
-class ApplicantSignupForm(SignupForm):
+class ApplicantSignupForm(SignupForm):  # type: ignore[misc]  # django-allauth has no type information
     """Name (romanized), personal email and password. Saving creates the person and the account
     with ``RegisterApplicant``; allauth then mails the link to verify the address."""
 
@@ -30,7 +30,7 @@ class ApplicantSignupForm(SignupForm):
         self.fields["email"].help_text = _("Your personal email. It stays your sign-in name after you graduate.")
 
     def clean(self) -> dict[str, Any]:
-        cleaned = super().clean()
+        cleaned: dict[str, Any] = super().clean()
         if not registration_enabled():
             self.add_error("email", _("Creating an account is not available. Contact the admissions office."))
         return cleaned

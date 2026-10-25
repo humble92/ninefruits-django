@@ -43,7 +43,7 @@ class Command(AuditedCommand):
             help=f"Give every enrolled student an account (load tests) and write {LOAD_ACCOUNTS_FILE}",
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         if is_production():
             self.error("Demo data cannot be created in production.")
             return self.FAILURE
@@ -63,6 +63,13 @@ class Command(AuditedCommand):
             )
             if not confirmed:
                 return self.FAILURE
+
+        from ninefruits.organization.models import OrgUnitType
+
+        if not OrgUnitType.objects.filter(code="university").exists():
+            # The demo builds on the essential data (unit types, roles, code lists).
+            self.error("The essential data is missing. Run `manage.py setup_install` first.")
+            return self.FAILURE
 
         seed = options.get("seed")
         started = time.monotonic()

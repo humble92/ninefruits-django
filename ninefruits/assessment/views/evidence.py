@@ -18,7 +18,9 @@ class EvidenceDownloadView(PrivateMediaDownloadView):
     disposition = "inline"
 
     def get_media(self, request: HttpRequest, **kwargs: Any) -> Media | None:
-        result = AssessmentResult.objects.visible_to(request.user).filter(pk=kwargs["pk"]).first()
+        result: AssessmentResult | None = (
+            AssessmentResult.objects.visible_to(request.user).filter(pk=kwargs["pk"]).first()
+        )
         if result is None or not request.user.has_perm("view", result):
             raise PermissionDenied
         return result.get_first_media(AssessmentResult.EVIDENCE_COLLECTION)

@@ -112,6 +112,15 @@ def test_never_creates_demo_data_in_production() -> None:
     assert not User.objects.filter(email__endswith="@demo.test").exists()
 
 
+def test_demo_asks_for_setup_install_when_the_essential_data_is_missing() -> None:
+    from ninefruits.organization.models import OrgUnitType
+
+    OrgUnitType.objects.filter(code="university").delete()
+    err = StringIO()
+    assert call_command("setup_demo", force=True, stdout=StringIO(), stderr=err) == 1
+    assert "setup_install" in err.getvalue()
+
+
 def test_refuses_an_unknown_demo_size() -> None:
     assert call_command("setup_demo", force=True, size="huge", stdout=StringIO(), stderr=StringIO()) == 1
 

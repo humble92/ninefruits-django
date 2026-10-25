@@ -129,7 +129,7 @@ class CertificateRenderer:
             return self._content(issue)
 
     def template(self, issue: CertificateIssue) -> CertificateTemplate:
-        template = CertificateTemplate.objects.filter(
+        template: CertificateTemplate | None = CertificateTemplate.objects.filter(
             certificate_type_id=issue.certificate_type_id, locale=issue.locale
         ).first()
         if template is None:

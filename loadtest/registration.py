@@ -3,11 +3,22 @@
     uv run --group loadtest locust -f loadtest/registration.py --headless -u 100 -r 20 -t 1m \\
         --host http://127.0.0.1:8000 --csv storage/loadtest/run
 
+Run the server behind one trusted proxy hop (``TRUSTED_PROXY_COUNT=1``): every simulated
+student then sends its own ``X-Forwarded-For`` address, the way Nginx reports campus clients,
+and allauth's per-address sign-in limit (``LOGIN_RATE_LIMIT_PER_IP``) applies per student
+instead of to the load generator's single address.
+
 Environment:
 
-- ``ACCOUNTS``: CSV with ``email,password`` written by ``setup_demo --student-accounts``
-  (default ``storage/private/load-accounts.csv``).
+- ``ACCOUNTS``: CSV with ``email,password`` written by ``setup_demo --student-accounts`` into
+  private storage (default ``$PRIVATE_MEDIA_ROOT/load-accounts.csv``, else
+  ``storage/private/load-accounts.csv``).
 - ``SEARCH``: catalog search text (default ``GEN``, the demo's general-education course codes).
+- ``ADDRESSES``: how many client addresses the students share. ``0`` (default): one address per
+  student account. ``1``: every student behind one NAT address (shows the per-address sign-in
+  limit); ``N``: students spread over N addresses.
+- ``FIRST_ACCOUNT``: index of the first account (default: random), so consecutive runs use other
+  students than the iterations a previous run cut off at its end (those can still hold a seat).
 
 Every iteration signs in as the next student (fresh cookies), opens the registration page,
 searches the catalog the way the browser does (HTMX ``?partial=results``), registers for the
@@ -16,13 +27,20 @@ refusal (full section, rule, closed window) is a handled outcome, not an error; 
 failures and slow pages fail the thresholds, which are checked when the run ends:
 
 - ``registration_page`` p95 < 800 ms, ``enroll`` p95 < 1500 ms, failures < 1 %.
+
+The registration buttons post like HTMX does (``HX-Request``): the view runs the action and
+answers 302 to the registration page, which the client follows; the ``enroll`` and ``drop``
+timings include that page, as the browser waits for it before it swaps ``#registration``.
+After the run, ``loadtest/seat_check.sql`` confirms no section holds more students than seats.
 """
 
 from __future__ import annotations
 
 import csv
+import ipaddress
 import itertools
 import os
+import random
 import re
 import threading
 from pathlib import Path
@@ -31,16 +49,21 @@ from typing import Any
 from locust import HttpUser, between, events, task
 
 ROOT = Path(__file__).resolve().parents[1]
-ACCOUNTS_FILE = Path(os.environ.get("ACCOUNTS", ROOT / "storage" / "private" / "load-accounts.csv"))
+_PRIVATE = Path(os.environ.get("PRIVATE_MEDIA_ROOT", ROOT / "storage" / "private"))
+ACCOUNTS_FILE = Path(os.environ.get("ACCOUNTS", _PRIVATE / "load-accounts.csv"))
 SEARCH = os.environ.get("SEARCH", "GEN")
+ADDRESSES = int(os.environ.get("ADDRESSES", "0"))
 THRESHOLDS_MS = {"registration_page": 800, "enroll": 1500}
 MAX_FAILURE_RATIO = 0.01
+#: First simulated client address (a private range, one address per account index).
+FIRST_ADDRESS = int(ipaddress.ip_address("10.0.0.1"))
 
 CSRF_INPUT = re.compile(r'name="csrfmiddlewaretoken" value="([^"]+)"')
 TERM_INPUT = re.compile(r'name="term" value="(\d+)"')
 # One search result row (``data-*`` attributes, independent of the interface language).
 RESULT = re.compile(r'data-section="(\d+)" data-open-seats="(\d+)"')
 DROP = re.compile(r'name="action" value="drop">[\s\S]*?name="enrollment_id" value="(\d+)"')
+TONE = re.compile(r'role="status" data-tone="(\w+)"')
 
 
 def _load_accounts() -> list[dict[str, str]]:
@@ -51,16 +74,31 @@ def _load_accounts() -> list[dict[str, str]]:
 
 
 _accounts = _load_accounts()
-_next_account = itertools.cycle(range(len(_accounts)))
+_first = int(os.environ.get("FIRST_ACCOUNT") or random.randrange(len(_accounts)))  # noqa: S311 (not a secret)
+_next_account = itertools.islice(itertools.cycle(range(len(_accounts))), _first, None)
 _lock = threading.Lock()
 
 
-def _account() -> dict[str, str]:
+def _account() -> tuple[int, dict[str, str]]:
     with _lock:
-        return _accounts[next(_next_account)]
+        index = next(_next_account)
+    return index, _accounts[index]
 
 
-_outcomes: dict[str, int] = {"enrolled": 0, "dropped": 0, "refused": 0}
+def _address(index: int) -> str:
+    """The student's client address as the trusted proxy reports it."""
+    slot = index % ADDRESSES if ADDRESSES > 0 else index
+    return str(ipaddress.ip_address(FIRST_ADDRESS + slot))
+
+
+_outcomes: dict[str, int] = {
+    "enrolled": 0,
+    "dropped": 0,
+    "refused": 0,
+    "no_term": 0,
+    "no_results": 0,
+    "sign_in_refused": 0,
+}
 
 
 def _count(outcome: str) -> None:
@@ -80,20 +118,22 @@ class Student(HttpUser):
     @task
     def register_and_drop(self) -> None:
         self.client.cookies.clear()
-        account = _account()
+        index, account = _account()
+        self.client.headers["X-Forwarded-For"] = _address(index)
 
         login = self.client.get("/accounts/login/", name="login_page")
         token = _csrf(login.text)
         with self.client.post(
             "/accounts/login/",
             data={"csrfmiddlewaretoken": token or "", "login": account["email"], "password": account["password"]},
-            headers={"Referer": f"{self.host}/accounts/login/"},
             allow_redirects=False,
             name="login",
             catch_response=True,
         ) as signed_in:
             if signed_in.status_code != 302:
+                # 429: allauth's per-address limit; 200: the form came back with an error.
                 signed_in.failure(f"sign in returned {signed_in.status_code}")
+                _count("sign_in_refused")
                 return
 
         page = self.client.get("/portal/registration/", name="registration_page")
@@ -102,7 +142,8 @@ class Student(HttpUser):
         term = TERM_INPUT.search(page.text)
         token = _csrf(page.text)
         if term is None or token is None:
-            return  # no term open for this student: nothing to register
+            _count("no_term")  # no term open for this student: nothing to register
+            return
 
         search = self.client.get(
             "/portal/registration/",
@@ -112,6 +153,7 @@ class Student(HttpUser):
         )
         results = [(section, int(seats)) for section, seats in RESULT.findall(search.text)]
         if not results:
+            _count("no_results")
             return
         # Prefer a section with open seats; the first result's refusal is still a realistic outcome.
         section = next((section for section, seats in results if seats > 0), results[0][0])
@@ -121,19 +163,21 @@ class Student(HttpUser):
             token, {"action": "enroll", "term": term[1], "q": SEARCH, "section_id": section}, "enroll"
         )
         added = [enrollment for enrollment in DROP.findall(enrolled) if enrollment not in before]
-        if added:
-            _count("enrolled")
-            self._post(token, {"action": "drop", "term": term[1], "q": SEARCH, "enrollment_id": added[0]}, "drop")
-            _count("dropped")
-        else:
+        if not added:
             _count("refused")
+            return
+        _count("enrolled")
+        dropped = self._post(token, {"action": "drop", "term": term[1], "q": SEARCH, "enrollment_id": added[0]}, "drop")
+        tone = TONE.search(dropped)
+        if tone is not None and tone[1] == "success" and added[0] not in DROP.findall(dropped):
+            _count("dropped")
 
     def _post(self, token: str, data: dict[str, str], name: str) -> str:
         """Posts a registration button like HTMX does and returns the page it redirects to."""
         response = self.client.post(
             "/portal/registration/",
             data={"csrfmiddlewaretoken": token, **data},
-            headers={"HX-Request": "true", "Referer": f"{self.host}/portal/registration/"},
+            headers={"HX-Request": "true"},
             name=name,
         )
         return response.text

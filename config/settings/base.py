@@ -4,6 +4,7 @@ from datetime import timedelta
 from pathlib import Path
 
 import environ
+from django.core.exceptions import ImproperlyConfigured
 
 from ninefruits.core.pool import reset_connection
 
@@ -14,6 +15,9 @@ environ.Env.read_env(BASE_DIR / ".env", overwrite=False)
 
 DJANGO_ENV = env.str("DJANGO_ENV", default="local")
 SECRET_KEY = env.str("DJANGO_SECRET_KEY")
+# Key rotation (docs/manual/*/operations/security-keys.md): previous keys, comma separated, still
+# verify sessions, password reset links and signed values until they are removed.
+SECRET_KEY_FALLBACKS = env.list("DJANGO_SECRET_KEY_FALLBACKS", default=[])
 DEBUG = env.bool("DJANGO_DEBUG", default=False)
 ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["localhost", "127.0.0.1"])
 CSRF_TRUSTED_ORIGINS = env.list("DJANGO_CSRF_TRUSTED_ORIGINS", default=[])
@@ -100,6 +104,8 @@ MIDDLEWARE = [
     "ninefruits.adminpanel.middleware.AdminTimezoneMiddleware",
     "ninefruits.core.middleware.SetDatabaseSessionContextMiddleware",
     "ninefruits.security.middleware.EnsureUserIsActiveMiddleware",
+    # Idle session expiry (original): refreshes the expiry at most every SESSION_REFRESH_SECONDS.
+    "ninefruits.security.middleware.SlidingSessionExpiryMiddleware",
     "ninefruits.security.middleware.EnforceMfaPolicyMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.csp.ContentSecurityPolicyMiddleware",
@@ -134,6 +140,7 @@ TEMPLATES = [
 DB_RUNTIME_ROLE = env.str("DB_RUNTIME_ROLE", default="app_runtime")
 DB_REPORTING_ROLE = env.str("DB_REPORTING_ROLE", default="app_reporting")
 _DB_POOL = env.bool("DB_POOL", default=False)
+_DB_PREPARE_THRESHOLD = env.int("DB_PREPARE_THRESHOLD", default=0)
 _db_common = {
     "ENGINE": "django.db.backends.postgresql",
     "HOST": env.str("DB_HOST", default="127.0.0.1"),
@@ -148,14 +155,27 @@ DATABASES = {
         "USER": env.str("DB_USERNAME", default=DB_RUNTIME_ROLE),
         "PASSWORD": env.str("DB_PASSWORD", default=""),
         "OPTIONS": {
-            "pool": {
-                "min_size": env.int("DB_POOL_MIN", default=2),
-                "max_size": env.int("DB_POOL_MAX", default=20),
-                "reset": reset_connection,
-            }
-        }
-        if _DB_POOL
-        else {},
+            **(
+                {
+                    "pool": {
+                        "min_size": env.int("DB_POOL_MIN", default=2),
+                        "max_size": env.int("DB_POOL_MAX", default=20),
+                        "reset": reset_connection,
+                    }
+                }
+                if _DB_POOL
+                else {}
+            ),
+            # Prepared statements (operations manual, load testing): row level security makes
+            # query planning the largest database cost of a page. With pooled connections,
+            # server-side binding and DB_PREPARE_THRESHOLD=2 a query is planned once per
+            # connection. 0 (default): off. Not behind PgBouncer in transaction mode.
+            **(
+                {"server_side_binding": True, "prepare_threshold": _DB_PREPARE_THRESHOLD}
+                if _DB_PREPARE_THRESHOLD > 0
+                else {}
+            ),
+        },
     },
     "migrator": {
         **_db_common,
@@ -202,7 +222,8 @@ ACCOUNT_LOGOUT_ON_PASSWORD_CHANGE = False
 # allauth adds a limit on all sign-ins per IP address (default 30 a minute); the original had none.
 # Campuses behind one NAT address may need more on the first registration morning:
 # LOGIN_RATE_LIMIT_PER_IP=300/m/ip (empty: no per-address limit, as in the original).
-ACCOUNT_RATE_LIMITS = {
+# (False turns every allauth limit off: config/settings/test.py.)
+ACCOUNT_RATE_LIMITS: dict[str, str | None] | bool = {
     "login_failed": "5/m/key",
     "login": env.str("LOGIN_RATE_LIMIT_PER_IP", default="30/m/ip") or None,
 }
@@ -266,6 +287,7 @@ REDIS_URL = env.str("REDIS_URL", default="redis://127.0.0.1:6379/0")
 CACHES = {"default": {"BACKEND": "django_redis.cache.RedisCache", "LOCATION": REDIS_URL}}
 SESSION_ENGINE = "django.contrib.sessions.backends.cached_db"
 SESSION_COOKIE_AGE = env.int("SESSION_LIFETIME_MINUTES", default=120) * 60
+SESSION_REFRESH_SECONDS = 300
 SESSION_COOKIE_HTTPONLY = True
 SESSION_COOKIE_SAMESITE = "Lax"
 CSRF_COOKIE_SAMESITE = "Lax"
@@ -279,10 +301,22 @@ CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
 CELERY_TIMEZONE = TIME_ZONE
 
 # --- Mail (Django 6.1 MAILERS) ---------------------------------------------------------------
+# MAIL_ENCRYPTION: "" (none, e.g. Mailpit), "starttls" (port 587) or "ssl" (implicit TLS, 465).
+MAIL_ENCRYPTION = env.str("MAIL_ENCRYPTION", default="")
+if MAIL_ENCRYPTION not in ("", "starttls", "ssl"):
+    raise ImproperlyConfigured("MAIL_ENCRYPTION must be empty, 'starttls' or 'ssl'.")
 MAILERS = {
     "default": {
         "BACKEND": env.str("MAIL_BACKEND", default="django.core.mail.backends.smtp.EmailBackend"),
-        "OPTIONS": {"host": env.str("MAIL_HOST", default="127.0.0.1"), "port": env.int("MAIL_PORT", default=1025)},
+        "OPTIONS": {
+            "host": env.str("MAIL_HOST", default="127.0.0.1"),
+            "port": env.int("MAIL_PORT", default=1025),
+            "username": env.str("MAIL_USERNAME", default="") or None,
+            "password": env.str("MAIL_PASSWORD", default="") or None,
+            "use_tls": MAIL_ENCRYPTION == "starttls",
+            "use_ssl": MAIL_ENCRYPTION == "ssl",
+            "timeout": env.int("MAIL_TIMEOUT", default=10),
+        },
     }
 }
 DEFAULT_FROM_EMAIL = env.str("DEFAULT_FROM_EMAIL", default="no-reply@ninefruits.test")

@@ -75,7 +75,7 @@ class TagsField(forms.CharField):
             return ", ".join(str(tag) for tag in value)
         return value
 
-    def to_python(self, value: Any) -> list[str] | None:
+    def to_python(self, value: Any) -> list[str] | None:  # type: ignore[override]  # a JSON array, not text
         if isinstance(value, list):
             return [str(tag) for tag in value] or None
         text = super().to_python(value)
@@ -182,7 +182,7 @@ class RegisterStudentForm(PersonFields):
         return cleaned
 
 
-class StatusChangeInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class StatusChangeInline(CatalogPermissionMixin, TabularInline):
     """Status history of the record (requests and decisions). Read only: decisions are made in
     the status change queue, staff changes with "Record status change"."""
 
@@ -208,7 +208,7 @@ class StatusChangeInline(CatalogPermissionMixin, TabularInline):  # type: ignore
         return super().get_queryset(request).select_related("type", "requested_by", "decided_by")
 
 
-class AdvisorAssignmentInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class AdvisorAssignmentInline(CatalogPermissionMixin, TabularInline):
     model = AdvisorAssignment
     extra = 0
     tab = True
@@ -231,7 +231,7 @@ class AdvisorAssignmentInline(CatalogPermissionMixin, TabularInline):  # type: i
         return super().get_queryset(request).select_related("instructor__person")
 
 
-class AdditionalProgramInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class AdditionalProgramInline(CatalogPermissionMixin, TabularInline):
     """Second majors and minors. Added by approving an application; ending one needs a reason."""
 
     model = StudentRecordProgram
@@ -361,10 +361,10 @@ class StudentRecordAdmin(DegreeAuditActionsMixin, IssueCertificateActionMixin, R
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is not None:
             return bool(request.user.has_perm("view", obj))
-        return bool(request.user.has_perm("view_any", StudentRecord))
+        return self.policy_allows(request, "view_any", StudentRecord)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
-        return bool(request.user.has_perm("create", StudentRecord))
+        return self.policy_allows(request, "create", StudentRecord)
 
     def has_change_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is None:
@@ -479,7 +479,8 @@ class StudentRecordAdmin(DegreeAuditActionsMixin, IssueCertificateActionMixin, R
 
     # -- detail actions (original ViewStudentRecord header actions) ------------------------------
     def _record(self, request: HttpRequest, object_id: Any) -> StudentRecord:
-        return get_object_or_404(StudentRecord.objects.visible_to(request.user), pk=object_id)
+        record: StudentRecord = get_object_or_404(StudentRecord.objects.visible_to(request.user), pk=object_id)
+        return record
 
     def has_record_status_change_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
         if object_id is None:

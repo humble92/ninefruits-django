@@ -22,7 +22,7 @@ class Command(AuditedCommand):
         parser.add_argument("type", help="Kind code")
         parser.add_argument("held_date", help="Session date (YYYY-MM-DD)")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         session = find_session(options["type"], options["held_date"])
         actor = self.actor()
         if session is None or actor is None:

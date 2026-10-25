@@ -43,4 +43,4 @@
 
 본인 계정은 초기화할 수 없다. 초기화는 보안 이벤트와 업무 감사에 사유와 함께 남는다.
 
-유일한 관리자가 휴대폰을 잃어버려 관리 화면에 들어올 수 없으면 IT 운영자가 `uv run manage.py security_reset_mfa`로 초기화한다(Docker: `docker compose exec app uv run manage.py security_reset_mfa`, [명령 레퍼런스](../operations/commands.md), Phase 2에서 추가).
+유일한 관리자가 휴대폰을 잃어버려 관리 화면에 들어올 수 없으면 IT 운영자가 `uv run manage.py security_reset_mfa`로 초기화한다(Docker: `docker compose exec app uv run manage.py security_reset_mfa`, [명령 레퍼런스](../operations/commands.md)).

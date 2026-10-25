@@ -10,7 +10,7 @@ The three screens under the **Audit** menu are read-only; nobody can edit or del
 
 ## How to read them
 
-- **User** column: actions taken on screen show the user name or `user:number`, automatic jobs (Celery) show `system:job:...`, commands show `system:command:...`.
+- **User** column: actions taken on screen show the user name or `user:number`, automatic jobs (Celery) show `system:task:...`, commands show `system:command:...`.
 - Passwords, two-factor secrets and similar values are masked as `[redacted]`.
 - Records with the same **Request ID** were created by one screen request. Searching for the same request ID across the screens shows the full trail of one action. Command runs use a run ID starting with `cmd-`.
 

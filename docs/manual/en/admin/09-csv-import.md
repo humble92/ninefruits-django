@@ -1,6 +1,6 @@
 # 9. CSV import
 
-Use the **Import CSV** button at the top of the org unit, program, building, room and code list screens (`Import reference data from CSV` permission). Student record, instructor, course and registration hold imports are added the same way by their phases. Very large files can be imported the same way by the IT operator with the `reference_import` command.
+Use the **Import CSV** button at the top of the org unit, program, building, room and code list screens (`Import reference data from CSV` permission). Student records, instructors, courses and registration holds are imported the same way (below). Very large files can be imported the same way by the IT operator with the `reference_import` command.
 
 ## Common rules
 
@@ -54,7 +54,7 @@ student_number,program,admission_date,year_level,status,family_name,given_name,n
 202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
 ```
 
-The course import (Phase 4) is added together with that feature.
+The course version import is described in [chapter 17](17-courses-and-curriculum.md), the registration hold import in [chapter 20](20-registration.md).
 
 ## Registration holds
 

@@ -98,7 +98,7 @@ class CertificateIssueAdmin(CatalogAdmin):
 
     # -- access (original CertificateIssuePolicy) -------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", CertificateIssue))
+        return self.policy_allows(request, "view_any", CertificateIssue)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -149,7 +149,7 @@ class CertificateIssueAdmin(CatalogAdmin):
 
     @display(description=_("Issued by"))
     def issued_by_email(self, obj: CertificateIssue) -> str:
-        return str(obj.issued_by.email) if obj.issued_by_id else "-"
+        return str(obj.issued_by.email) if obj.issued_by else "-"
 
     @display(description="")
     def links(self, obj: CertificateIssue) -> str:
@@ -165,9 +165,10 @@ class CertificateIssueAdmin(CatalogAdmin):
 
     # -- row actions -----------------------------------------------------------------------------
     def _issue(self, request: HttpRequest, object_id: Any) -> CertificateIssue:
-        return get_object_or_404(
+        issue: CertificateIssue = get_object_or_404(
             self.get_queryset(request).select_related("certificate_type", "student_record"), pk=object_id
         )
+        return issue
 
     def _changelist_url(self) -> str:
         return reverse("admin:certificate_certificateissue_changelist")

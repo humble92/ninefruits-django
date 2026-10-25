@@ -44,7 +44,7 @@ def _drf_error(error: DjangoValidationError) -> ValidationError:
 
 class PlatformViewSet(viewsets.ReadOnlyModelViewSet):  # type: ignore[type-arg]
     serializer_class = PlatformSerializer
-    permission_classes = [HasCatalogPermission(Permission.LMS_MANAGE)]
+    permission_classes = [HasCatalogPermission(Permission.LMS_MANAGE)]  # type: ignore[list-item]  # an instance (HasCatalogPermission.__call__)
     lookup_field = "code"
     lookup_value_regex = r"[A-Za-z0-9_-]+"
     pagination_class = None

@@ -19,7 +19,7 @@ class PersonPhotoView(PrivateMediaDownloadView):
     cache_control: ClassVar[str] = "private, max-age=300"
 
     def get_media(self, request: HttpRequest, **kwargs: Any) -> Media | None:
-        person = get_object_or_404(Person.objects.visible_to(request.user), pk=kwargs["pk"])
+        person: Person = get_object_or_404(Person.objects.visible_to(request.user), pk=kwargs["pk"])
         if not request.user.has_perm("view", person):
             raise PermissionDenied
         return person.get_first_media(Person.PHOTO_COLLECTION)

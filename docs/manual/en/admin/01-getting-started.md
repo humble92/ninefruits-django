@@ -15,7 +15,7 @@ The administration panel has no sign-in screen of its own. `/admin/login/` also 
 
 | Screen | Address | Users |
 |---|---|---|
-| Portal | `/portal/` | Every user. Home (your access), security settings. Student and instructor features are added in later phases |
+| Portal | `/portal/` | Every user. Home (your access), security settings, and the menus of the user's personas (student, instructor, advisor, applicant) |
 | Administration panel | `/admin/` | Staff with the `Open the administration panel` permission |
 
 Both screens share the same sign-in.

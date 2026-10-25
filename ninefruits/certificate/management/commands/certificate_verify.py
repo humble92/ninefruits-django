@@ -17,7 +17,7 @@ class Command(StatusCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("code", help="Verification code printed on the certificate")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         result = CertificateVerification().check(str(options["code"]))
         issue = result.issue
         if issue is not None:

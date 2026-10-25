@@ -19,6 +19,8 @@ from typing import Any, ClassVar
 from django.http import HttpRequest
 from unfold.admin import ModelAdmin
 
+from ninefruits.security.authorization import policy_allows
+
 from .navigation import NavigationGroup
 
 
@@ -48,13 +50,18 @@ class CatalogPermissionMixin:
     def has_module_permission(self, request: HttpRequest) -> bool:
         return self.has_view_permission(request)
 
+    def policy_allows(self, request: HttpRequest, ability: str, target: Any) -> bool:
+        """The model policy's ``ability`` for ``target``: an instance, or the model class for
+        ``view_any``/``create`` (original ``Gate::allows('create', Model::class)``)."""
+        return policy_allows(request.user, ability, target)
+
     def get_queryset(self, request: HttpRequest) -> Any:
         queryset = super().get_queryset(request)  # type: ignore[misc]
         visible_to = getattr(queryset, "visible_to", None)
         return visible_to(request.user) if visible_to else queryset
 
 
-class CatalogAdmin(CatalogPermissionMixin, ModelAdmin):  # type: ignore[misc]
+class CatalogAdmin(CatalogPermissionMixin, ModelAdmin):
     pass
 
 

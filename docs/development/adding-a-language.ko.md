@@ -60,21 +60,38 @@ uv run manage.py i18n_import vi storage/vi.xlsx   # .po에 쓰고 컴파일
 | 매뉴얼 색인 | `docs/manual/<locale>/README.md` | 제목, 대상, 두 부분 링크 |
 | 프로젝트 README | `README.<locale>.md` | `README.md`와 같은 구성. 데모 계정과 명령은 그대로 |
 | 언어 표 | 모든 `README*.md` 상단 | 언어마다 한 행. 모든 README에 새 행을 넣는다 |
-| 스크린샷 | `docs/screenshots/<locale>/` | 데모 데이터로만 |
+| 스크린샷 | `docs/screenshots/<locale>/{admin,instructor,student}.png` | 아래 참고 |
 
 매뉴얼의 원본은 한국어(`docs/manual/ko/`)다. 굵게 쓴 화면 이름은 그 언어의 UI 라벨과 같아야 하므로 1단계를 끝낸 뒤 매뉴얼을 번역한다.
+
+**스크린샷** 세 장은 데모 데이터로만 만든다(실제 데이터 금지). 데모 DB를 따로 만들어 개발 서버를 띄운 뒤 스크립트를 실행한다.
+
+```bash
+echo "$ADMIN_PASSWORD" | uv run manage.py setup_install --force --profile=korean-university --grade-scale=4.5 \
+    --admin-email=admin@example.test --admin-name=Admin
+uv run manage.py setup_demo --size=small --seed=42 --force
+uv run manage.py runserver 8765 &
+uv run python tools/screenshots.py vi --base-url=http://127.0.0.1:8765
+```
+
+스크립트(Playwright, Chromium)가 데모 시스템 관리자·교원·학생으로 로그인해 계정 언어를 바꾸고(`POST /i18n/locale/`) `/admin/`과 `/portal/`을 1366×900으로 찍어 `docs/screenshots/<locale>/`에 저장한다. 처음 한 번 `uv run playwright install chromium`이 필요하다(이미 있는 Chromium은 `--chromium=/경로`). 새 언어가 기관 설정의 제공 언어에 켜져 있어야 한다(2단계). 인수 없이 실행하면 4개 언어를 모두 찍는다.
 
 ## 5. PDF와 글꼴
 
 증명서, 성적표, 출석부는 Gotenberg(Chromium)가 렌더링한다. 그 이미지에는 Noto 글꼴이 들어 있어 라오어, 태국어, 크메르어, 아랍어, 데바나가리, CJK를 덮는다. PDF 템플릿은 `templates/pdf/layout.html`을 확장하며 글꼴 순서는 Noto Sans CJK KR, Noto Sans CJK SC, Noto Sans Lao, Noto Sans다. 어떤 문자에 전용 글꼴이 먼저 필요하면 `lang="..."`을 붙인다(`:lang(zh)`, `:lang(lo)` 규칙). 덮지 않는 문자는 Gotenberg 이미지와 레이아웃에 글꼴을 추가한다. `uv run manage.py pdf_sample`로 여러 문자가 섞인 표를 렌더링해 확인한다.
 
-## 6. 풀 리퀘스트 전 체크리스트
+## 6. 데모 데이터 (선택)
+
+`ninefruits/setup/seeders/demo/people.py`는 이름에 Faker 로케일(`en_US`, `ko_KR`, `zh_CN`)을 섞고 문자별 이름 변형을 저장한다. 그 언어의 Faker 로케일이 있고 시연에 그 문자 이름이 중요하면 추가한다.
+
+## 7. 풀 리퀘스트 전 체크리스트
 
 - [ ] `LANGUAGES`, `TRANSLATED_LOCALES`(Django가 모르는 언어면 `EXTRA_LANG_INFO`와 형식 모듈도)
 - [ ] 카탈로그 완성: `uv run manage.py i18n_missing <locale> --strict`가 0 missing
 - [ ] 설정 마이그레이션(탑재 시) 또는 기관 설정 갱신
 - [ ] 시드 이름 번역(또는 영어 대체를 의도적으로 선택)
-- [ ] `docs/manual/<locale>/`와 `README.<locale>.md`, 모든 `README*.md`의 언어 표
+- [ ] `docs/manual/<locale>/`(관리자 28장 + 색인, 운영 9개, 색인)와 `README.<locale>.md`, 모든 `README*.md`의 언어 표
+- [ ] `docs/screenshots/<locale>/` 스크린샷
 - [ ] `uv run pytest`, `uv run ruff check`, `uv run manage.py check` 통과
 - [ ] 원어민이 UI 문자열과 최소한 매뉴얼 앞부분을 검수했고 풀 리퀘스트에 검수자를 적음
 

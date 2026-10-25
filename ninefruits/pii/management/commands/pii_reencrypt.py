@@ -26,7 +26,7 @@ class Command(AuditedCommand):
         parser.add_argument("--dry-run", action="store_true", help="Count records still encrypted with a previous key")
         parser.add_argument("--force", action="store_true", help="Do not ask for confirmation")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         label = str(options["model"])
         try:
             model = apps.get_model(label)

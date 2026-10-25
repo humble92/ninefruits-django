@@ -189,7 +189,7 @@ class ApplicationAdmin(ReadOnlyCatalogAdmin):
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is not None:
             return bool(request.user.has_perm("view", obj))
-        return bool(request.user.has_perm("view_any", Application))
+        return self.policy_allows(request, "view_any", Application)
 
     def get_queryset(self, request: HttpRequest) -> Any:
         return super().get_queryset(request).exclude(status=ApplicationStatus.DRAFT)
@@ -228,11 +228,11 @@ class ApplicationAdmin(ReadOnlyCatalogAdmin):
     # -- detail -------------------------------------------------------------------------------------
     @display(description=_("Admission type"))
     def admission_type_name(self, obj: Application) -> str:
-        return str(obj.admission_type.name) if obj.admission_type_id else "-"
+        return str(obj.admission_type.name) if obj.admission_type else "-"
 
     @display(description=_("Country of previous school"))
     def previous_school_country_name(self, obj: Application) -> str:
-        return str(obj.previous_school_country.name) if obj.previous_school_country_id else "-"
+        return str(obj.previous_school_country.name) if obj.previous_school_country else "-"
 
     @display(description=pgettext_lazy("people", "Name"))
     def applicant_link(self, obj: Application) -> Any:
@@ -274,7 +274,7 @@ class ApplicationAdmin(ReadOnlyCatalogAdmin):
         type_ids = {media.custom_property("document_type_id") for media in files}
         names = {value.pk: str(value.name) for value in LookupValue.objects.filter(pk__in=[t for t in type_ids if t])}
         return format_html_join(
-            mark_safe("<br>"),
+            mark_safe("<br>"),  # a constant separator  # nosec B308
             '{}: <a href="{}" class="underline">{}</a>',
             (
                 (
@@ -288,11 +288,11 @@ class ApplicationAdmin(ReadOnlyCatalogAdmin):
 
     @display(description=pgettext_lazy("admissions", "Decided by"))
     def decided_by_email(self, obj: Application) -> str:
-        return obj.decided_by.email if obj.decided_by_id else "-"
+        return obj.decided_by.email if obj.decided_by else "-"
 
     @display(description=_("Student number"))
     def student_number(self, obj: Application) -> str:
-        return obj.student_record.student_number if obj.student_record_id else "-"
+        return obj.student_record.student_number if obj.student_record else "-"
 
     def change_view(self, request: HttpRequest, object_id: str, form_url: str = "", extra_context: Any = None) -> Any:
         self._request = request
@@ -300,12 +300,13 @@ class ApplicationAdmin(ReadOnlyCatalogAdmin):
 
     # -- detail actions (original ViewApplication header actions) ----------------------------------
     def _application(self, request: HttpRequest, object_id: Any) -> Application:
-        return get_object_or_404(
+        application: Application = get_object_or_404(
             Application.objects.visible_to(request.user)
             .exclude(status=ApplicationStatus.DRAFT)
             .select_related("admission_cycle", "person", "program"),
             pk=object_id,
         )
+        return application
 
     def _find(self, request: HttpRequest, object_id: Any) -> Application | None:
         if object_id is None:

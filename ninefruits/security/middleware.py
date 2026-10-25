@@ -1,11 +1,14 @@
-"""EnsureUserIsActive and EnforceMfaPolicy (original middleware of the same names)."""
+"""EnsureUserIsActive and EnforceMfaPolicy (original middleware of the same names), and the idle
+session expiry of the original session driver."""
 
 from __future__ import annotations
 
+import time
 from collections.abc import Callable
 from fnmatch import fnmatch
 from typing import Any
 
+from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth import logout
 from django.core.exceptions import PermissionDenied
@@ -31,6 +34,37 @@ class EnsureUserIsActiveMiddleware:
             messages.error(request, _("This account has been deactivated. Contact the administrator."))
             return redirect("account_login")
         return self.get_response(request)
+
+
+#: Session key of the last expiry refresh (epoch seconds).
+SESSION_REFRESHED_KEY = "_session_refreshed_at"
+
+
+class SlidingSessionExpiryMiddleware:
+    """Signed-in sessions end after ``SESSION_COOKIE_AGE`` without activity, as in the original
+    (Laravel's session lifetime counts from the last request); Django's own expiry counts from
+    the last save. Saving on every request (``SESSION_SAVE_EVERY_REQUEST``) would cost a write
+    per request, so the expiry is pushed forward at most every ``SESSION_REFRESH_SECONDS``: the
+    idle limit is the lifetime minus at most that interval (security review F3)."""
+
+    def __init__(self, get_response: Callable[[HttpRequest], HttpResponse]) -> None:
+        self.get_response = get_response
+
+    def __call__(self, request: HttpRequest) -> HttpResponse:
+        response = self.get_response(request)
+        session = getattr(request, "session", None)
+        user = getattr(request, "user", None)
+        if session is None or user is None or not user.is_authenticated or session.session_key is None:
+            return response
+        interval = int(getattr(settings, "SESSION_REFRESH_SECONDS", 300))
+        now = int(time.time())
+        try:
+            refreshed = int(session.get(SESSION_REFRESHED_KEY, 0))
+        except TypeError, ValueError:
+            refreshed = 0
+        if now - refreshed >= interval:
+            session[SESSION_REFRESHED_KEY] = now  # marks the session modified: saved, cookie renewed
+        return response
 
 
 class EnforceMfaPolicyMiddleware:

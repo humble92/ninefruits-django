@@ -38,7 +38,7 @@ class Command(StatusCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("--limit", type=int, default=100, help="Maximum groups to list")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         limit = max(1, int(options["limit"]))
         # Every person, whatever the operator's account could see (row level security).
         with session_context().system("people_find_duplicates"):

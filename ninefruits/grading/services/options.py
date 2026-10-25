@@ -79,7 +79,7 @@ class GradeOptions:
 
     def takes_score(self, enrollment: Any) -> bool:
         """Whether the grade comes from a score: absolute evaluation of a graded course."""
-        return (
+        return bool(
             enrollment.section.evaluation_method == EvaluationMethod.ABSOLUTE
             and enrollment.version.grading_basis == GradingBasis.GRADED
         )

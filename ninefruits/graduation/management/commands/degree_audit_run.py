@@ -22,7 +22,7 @@ class Command(AuditedCommand):
             "--min-year-level", type=int, help="Only students at or above this year level", default=None
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         term = None
         if options.get("term"):
             term = Term.objects.filter(code=options["term"]).first()

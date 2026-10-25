@@ -22,7 +22,7 @@ class Command(AuditedCommand):
         parser.add_argument("--section", default=None, help="One section, course code-section code (e.g. CSE2010-01)")
         parser.add_argument("--dry-run", action="store_true", help="Log what would be sent")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         platform = LmsPlatform.objects.filter(code=options["platform"]).first()
         if platform is None:
             self.error("Unknown platform code.")

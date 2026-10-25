@@ -45,7 +45,7 @@ def applicant_registration_enabled() -> bool:
         return False
 
 
-class AccountAdapter(DefaultAccountAdapter):
+class AccountAdapter(DefaultAccountAdapter):  # type: ignore[misc]  # django-allauth has no type information
     error_messages = {
         **DefaultAccountAdapter.error_messages,
         # One message for every failure, so it reveals nothing about the account.
@@ -82,13 +82,13 @@ class AccountAdapter(DefaultAccountAdapter):
         return client_ip(request)
 
 
-class SocialAccountAdapter(DefaultSocialAccountAdapter):
+class SocialAccountAdapter(DefaultSocialAccountAdapter):  # type: ignore[misc]  # django-allauth has no type information
     def is_open_for_signup(self, request: HttpRequest, sociallogin: Any) -> bool:
         """SSO sign-in never creates an account (ADR 0007)."""
         return False
 
 
-class MfaAdapter(DefaultMFAAdapter):
+class MfaAdapter(DefaultMFAAdapter):  # type: ignore[misc]  # django-allauth has no type information
     def encrypt(self, text: str) -> str:
         return encrypt_string(text)
 

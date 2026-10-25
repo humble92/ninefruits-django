@@ -9,7 +9,7 @@
 
 from __future__ import annotations
 
-from typing import Any, ClassVar, Self
+from typing import TYPE_CHECKING, Any, ClassVar, Self
 
 from django.conf import settings
 from django.core.validators import MaxValueValidator, MinValueValidator
@@ -24,6 +24,9 @@ from ninefruits.i18n.fields import TranslatableJSONField
 from ninefruits.i18n.translation import translate
 from ninefruits.media.services import PDF, HasMedia, MediaCollection
 
+if TYPE_CHECKING:
+    from ninefruits.media.models import Media
+
 
 class CertificateType(TimeStampedModel):
     """A kind of certificate (legacy FCERT with one PDFlib script per kind and language)."""
@@ -35,6 +38,7 @@ class CertificateType(TimeStampedModel):
         help_text=_("Used in serial numbers, e.g. ENR, GRD, TRN."),
     )
     name = TranslatableJSONField(pgettext_lazy("reference", "Name"))
+    name_translations: dict[str, str]  # TranslationsAccessor, set by the field
     audience = models.CharField(
         pgettext_lazy("certificate", "For"),
         max_length=16,
@@ -206,6 +210,6 @@ class CertificateIssue(HasMedia, TimeStampedModel):
     def is_revoked(self) -> bool:
         return self.status == CertificateIssueStatus.REVOKED
 
-    def pdf(self) -> Any:
+    def pdf(self) -> Media | None:
         """The stored PDF (a ``Media`` row) or ``None``."""
         return self.get_first_media(self.PDF_COLLECTION)

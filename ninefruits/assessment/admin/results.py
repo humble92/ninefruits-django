@@ -85,7 +85,7 @@ class AssessmentResultAdmin(CatalogAdmin):
 
     # -- access ----------------------------------------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", AssessmentResult))
+        return self.policy_allows(request, "view_any", AssessmentResult)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False

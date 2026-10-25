@@ -34,6 +34,4 @@
 | [27. Reports and reporting views](27-reports.md) | Standard reports and CSV, reporting schema views, BI access |
 | [28. LMS integration](28-lms-integration.md) | Platforms and drivers, course links and sync history, immediate updates and nightly reconciliation, LMS score drafts |
 
-Chapters are added as phases progress.
-
 Reference data screens (menu **Reference data**) are visible with the `View reference data` permission; each screen also needs its management permission (for example `Manage org units and reorganizations`) to create or edit records.

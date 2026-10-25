@@ -65,7 +65,7 @@ class CertificateTemplateForm(forms.ModelForm):  # type: ignore[type-arg]
         self.fields["footer"].max_length = 1000  # type: ignore[attr-defined]
 
 
-class CertificateTemplateInline(CatalogPermissionMixin, StackedInline):  # type: ignore[misc]
+class CertificateTemplateInline(CatalogPermissionMixin, StackedInline):
     """The wording of a kind per language. Placeholders in braces are filled at issue time."""
 
     model = CertificateTemplate

@@ -299,7 +299,10 @@ class AssessmentSessionAdmin(ReferenceAdmin):
 
     # -- buttons ---------------------------------------------------------------------------------
     def _session(self, request: HttpRequest, object_id: Any) -> AssessmentSession:
-        return get_object_or_404(AssessmentSession.objects.select_related("assessment_type"), pk=object_id)
+        session: AssessmentSession = get_object_or_404(
+            AssessmentSession.objects.select_related("assessment_type"), pk=object_id
+        )
+        return session
 
     def _records(self, request: HttpRequest) -> bool:
         return bool(request.user.has_perm(Permission.ASSESSMENTS_RECORD))

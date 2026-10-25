@@ -81,7 +81,7 @@ Register rows cannot be edited or deleted on screen (a row opens a read-only det
 - The verification URL (`{institution address}/verify/{code}/`) and a QR code are printed at the bottom of the certificate. The code is a random 20-character string (capital letters and digits); case does not matter. The address comes from the `APP_URL` environment variable.
 - The page opens without signing in and is limited to 30 requests per minute per address (IP; HTTP 429 beyond). Search engines are asked not to index it (`noindex`). It shows whether the certificate was issued, its kind, serial number, issue date, and the masked name and student number. Revoked, expired and unknown codes each get a different answer. The code field on the page checks a code too (`/verify/?code=...`).
 - To check a submitted PDF file itself, compare the checksum (SHA-256) in the register detail with the file's hash. The command `uv run manage.py certificate_verify {code}` checks a code too ([commands](../operations/commands.md)).
-- A verification JSON API for other systems comes with Phase 12 (same rules, same details).
+- Other systems get the same check with the same details as JSON: `GET /api/v1/certificates/verify/<verification code>/` (no sign-in, 30 requests a minute per address, [LMS integration guide](../../../lms-integration-guide.md)).
 
 ## Student portal
 

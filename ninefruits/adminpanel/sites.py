@@ -30,7 +30,7 @@ from django.utils.translation import pgettext_lazy
 from django.views.decorators.csp import csp_override
 from unfold.sites import UnfoldAdminSite
 
-from .navigation import NavigationGroup, register_link
+from .navigation import APP_GROUPS, NavigationGroup, register_link
 
 logger = logging.getLogger(__name__)
 
@@ -105,6 +105,25 @@ class NinefruitsAdminSite(UnfoldAdminSite):  # type: ignore[misc]
 
         response: HttpResponse = LogoutView.as_view()(request)
         return response
+
+    def get_app_list(self, request: HttpRequest, app_label: str | None = None) -> list[dict[str, Any]]:
+        """Apps under their translated navigation group (the dashboard and app index showed the
+        untranslated app names); apps of the same group are merged, in the group order."""
+        apps: list[dict[str, Any]] = super().get_app_list(request, app_label)
+        order = list(NavigationGroup)
+        merged: dict[Any, dict[str, Any]] = {}
+        others: list[dict[str, Any]] = []
+        for app in apps:
+            group = APP_GROUPS.get(app["app_label"])
+            if group is None:
+                others.append(app)
+            elif group in merged:
+                merged[group]["models"] = sorted(
+                    [*merged[group]["models"], *app["models"]], key=lambda model: str(model["name"])
+                )
+            else:
+                merged[group] = {**app, "name": group.label}
+        return [merged[group] for group in order if group in merged] + others
 
     # -- custom views ----------------------------------------------------------------------
     def register_view(

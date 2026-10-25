@@ -21,3 +21,9 @@ Other languages: [한국어](../ko/README.md), [简体中文](../zh_Hans/README.
 | [audit-and-maintenance.md](operations/audit-and-maintenance.md) | Audit hash chain, retention and pruning, file cleanup, health check |
 | [load-testing.md](operations/load-testing.md) | Load test for the registration peak (Locust) and the worker count decision |
 | [troubleshooting.md](operations/troubleshooting.md) | Common symptoms, what to check, per-request tracing |
+
+## Other documents
+
+- [LMS integration guide](../../lms-integration-guide.md): the API and LMS connectors (developers)
+- [Adding a language](../../development/adding-a-language.md), [naming rules](../../development/naming.md), [review checklist](../../development/review-checklist.md) (developers)
+- [Documentation index](../../README.md)

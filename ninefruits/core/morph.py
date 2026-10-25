@@ -24,4 +24,5 @@ def resolve(type_name: str | None, pk: Any) -> models.Model | None:
     if not type_name or pk is None:
         return None
     model = apps.get_model(type_name)
-    return model._default_manager.filter(pk=pk).first()
+    instance: models.Model | None = model._default_manager.filter(pk=pk).first()
+    return instance

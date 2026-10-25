@@ -23,7 +23,7 @@ class Command(AuditedCommand):
         parser.add_argument("--student-number", help="One student")
         parser.add_argument("--reason", help="Why (required)")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         term = Term.objects.filter(code=options["term"]).first() if options.get("term") else None
         record = (
             StudentRecord.objects.filter(student_number=options["student_number"]).first()

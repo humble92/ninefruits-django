@@ -31,7 +31,7 @@ SETUP_PERMISSIONS: dict[str, str] = {
 }
 
 
-class AssessmentComponentInline(CatalogPermissionMixin, StackedInline):  # type: ignore[misc]
+class AssessmentComponentInline(CatalogPermissionMixin, StackedInline):
     """The scored areas of a kind. A kind without areas is scored by one total (or pass/fail)."""
 
     model = AssessmentComponent

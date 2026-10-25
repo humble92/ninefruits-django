@@ -8,6 +8,7 @@ from __future__ import annotations
 from typing import Any
 
 from celery import shared_task
+from django.core.management import call_command
 
 from ninefruits.core.tasks import SystemTask, single_instance
 
@@ -62,12 +63,7 @@ def sync_enrollment(self: Any, platform_id: int, enrollment_id: int, removed: bo
 
 @shared_task(name="lms.reconcile", base=SystemTask)
 @single_instance("lms.reconcile")
-def reconcile() -> dict[str, dict[str, Any]]:
-    """Daily at 02:30 (original scheduled ``lms:reconcile``): every active platform."""
-    from ninefruits.lms.actions import ReconcilePlatform
-    from ninefruits.lms.models import LmsPlatform
-
-    return {
-        platform.code: dict(ReconcilePlatform().handle(platform))
-        for platform in LmsPlatform.objects.active().order_by("code")
-    }
+def reconcile() -> Any:
+    """Daily at 02:30 (original scheduled ``lms:reconcile``): every active platform. Runs the
+    ``lms_reconcile`` command, so the scheduled run is audited like a manual one."""
+    return call_command("lms_reconcile", verbosity=0)

@@ -59,4 +59,6 @@ ENV DJANGO_SETTINGS_MODULE=config.settings.production
 RUN DJANGO_SECRET_KEY=build-only uv run --no-sync manage.py compilemessages --ignore=.venv \
     && DJANGO_SECRET_KEY=build-only uv run --no-sync manage.py collectstatic --noinput
 EXPOSE 8000
-CMD ["uv", "run", "--no-sync", "gunicorn", "config.wsgi", "--bind", "0.0.0.0:8000", "--workers", "4", "--access-logfile", "-"]
+# Worker count and the rest: config/gunicorn.py (GUNICORN_* variables, operations manual, load testing).
+ENV GUNICORN_BIND=0.0.0.0:8000 GUNICORN_ACCESS_LOG=-
+CMD ["uv", "run", "--no-sync", "gunicorn", "config.wsgi", "-c", "config/gunicorn.py"]

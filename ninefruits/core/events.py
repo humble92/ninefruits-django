@@ -6,6 +6,7 @@ from __future__ import annotations
 
 from collections import defaultdict
 from collections.abc import Callable
+from functools import partial
 from typing import Any
 
 from django.db import transaction
@@ -30,7 +31,7 @@ def dispatch(event: Any) -> None:
     for listener in list(_sync[type(event)]):
         listener(event)
     for listener in list(_after_commit[type(event)]):
-        transaction.on_commit(lambda listener=listener: listener(event))
+        transaction.on_commit(partial(listener, event))
 
 
 def listeners_for(event_type: type) -> list[Listener]:

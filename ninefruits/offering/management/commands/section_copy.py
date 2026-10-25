@@ -27,7 +27,7 @@ class Command(AuditedCommand):
         )
         parser.add_argument("--dry-run", action="store_true", help="Show what would be copied without saving")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         source = Term.objects.filter(code=options["from_term"]).first()
         target = Term.objects.filter(code=options["to_term"]).first()
         actor = self.actor()

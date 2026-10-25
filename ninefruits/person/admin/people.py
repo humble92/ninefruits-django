@@ -182,7 +182,7 @@ def _initial(person: Person, name: str) -> Any:
     return getattr(person, name)
 
 
-class PersonAdminForm(PersonFields, forms.ModelForm):  # type: ignore[type-arg,misc]
+class PersonAdminForm(PersonFields, forms.ModelForm):  # type: ignore[type-arg]
     photo = forms.ImageField(label=_("Photo"), required=False, help_text=_("JPEG, PNG or WebP, at most 2 MB."))
 
     class Meta:
@@ -210,11 +210,11 @@ class PersonAdminForm(PersonFields, forms.ModelForm):  # type: ignore[type-arg,m
         if commit:
             person.save()
         else:
-            self.save_m2m = lambda: None  # no many-to-many fields
+            self.save_m2m = lambda: None  # type: ignore[method-assign]  # no many-to-many fields
         return person
 
 
-class GuardianInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class GuardianInline(CatalogPermissionMixin, TabularInline):
     model = Guardian
     extra = 0
     tab = True
@@ -239,7 +239,7 @@ class GuardianInline(CatalogPermissionMixin, TabularInline):  # type: ignore[mis
         return self._can_change_person(request, obj)
 
 
-class StudentRecordInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class StudentRecordInline(CatalogPermissionMixin, TabularInline):
     """The person's student records (one per admission), read only with links."""
 
     model = StudentRecord
@@ -320,7 +320,7 @@ class PersonAdmin(CatalogAdmin):
     form = PersonAdminForm
     list_display = ("name_column", "birth_date", "email", "records_count", "has_account")
     list_filter = (MergedFilter,)
-    search_fields: tuple[str, ...] = ()
+    search_fields = ()
     show_full_result_count = False
     ordering = ("family_name", "given_name", "id")
     inlines = (StudentRecordInline, GuardianInline)
@@ -348,14 +348,16 @@ class PersonAdmin(CatalogAdmin):
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is not None:
             return bool(request.user.has_perm("view", obj))
-        return bool(request.user.has_perm("view_any", Person))
+        return self.policy_allows(request, "view_any", Person)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
-        return bool(request.user.has_perm("create", Person))
+        return self.policy_allows(request, "create", Person)
 
     def has_change_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is None:
-            return bool(request.user.has_perm("create", Person) or request.user.has_perm(Permission.PEOPLE_MANAGE))
+            return bool(
+                self.policy_allows(request, "create", Person) or request.user.has_perm(Permission.PEOPLE_MANAGE)
+            )
         return bool(request.user.has_perm("update", obj))
 
     def has_delete_permission(self, request: HttpRequest, obj: Any = None) -> bool:
@@ -521,7 +523,8 @@ class PersonAdmin(CatalogAdmin):
 
     # -- detail actions (original ViewPerson header actions) -------------------------------------
     def _person(self, request: HttpRequest, object_id: Any) -> Person:
-        return get_object_or_404(Person.objects.visible_to(request.user), pk=object_id)
+        person: Person = get_object_or_404(Person.objects.visible_to(request.user), pk=object_id)
+        return person
 
     def has_reveal_national_id_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
         return self._may_reveal(request, object_id, "national_id")

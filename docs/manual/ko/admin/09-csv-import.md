@@ -54,7 +54,7 @@ student_number,program,admission_date,year_level,status,family_name,given_name,n
 202600001,B-CSE,2026-03-02,1,enrolled,Kim,Minsu,김민수,2007-05-01
 ```
 
-교과목(Phase 4) 가져오기는 해당 기능과 함께 추가된다.
+교과목 버전 가져오기는 [17장](17-courses-and-curriculum.md), 수강신청 제한 가져오기는 [20장](20-registration.md)에 있다.
 
 ## 수강신청 제한
 

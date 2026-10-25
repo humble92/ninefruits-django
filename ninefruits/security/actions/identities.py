@@ -13,7 +13,7 @@ from ninefruits.security.models import User, UserIdentity
 
 class LinkIdentity:
     def __call__(self, user: User, provider: str, subject: str, email: str | None, how: str) -> UserIdentity:
-        existing = UserIdentity.objects.filter(provider=provider, subject=subject).first()
+        existing: UserIdentity | None = UserIdentity.objects.filter(provider=provider, subject=subject).first()
         if existing is not None and existing.user_id != user.pk:
             raise ValidationError({"sso": _("This school account is linked to another user.")})
         if existing is None and UserIdentity.objects.filter(user=user, provider=provider).exists():

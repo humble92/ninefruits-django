@@ -70,8 +70,9 @@ class TwoFactorChallengeView(TwoFactorStageView):
         if MfaMethod.AUTHENTICATOR_APP not in self.methods:
             raise PermissionDenied
         data = request.POST.copy()
-        if not data.get("code") and data.get("recovery_code"):
-            data["code"] = data["recovery_code"]
+        recovery_code = data.get("recovery_code")
+        if not data.get("code") and recovery_code:
+            data["code"] = recovery_code
         form = AuthenticateForm(user=self.user, data=data)
         if not form.is_valid():
             return self.render_challenge(request, form=form)

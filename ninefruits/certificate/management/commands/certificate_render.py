@@ -20,7 +20,7 @@ class Command(AuditedCommand):
         parser.add_argument("issue", help="Serial number of the issue")
         parser.add_argument("--reason", help="Why (required)")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         if not (options.get("reason") or "").strip():
             self.error("--reason is required.")
             return self.FAILURE

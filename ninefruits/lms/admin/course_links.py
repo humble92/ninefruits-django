@@ -89,7 +89,7 @@ class LmsCourseLinkAdmin(ReadOnlyCatalogAdmin):
     actions_row = ("resync_row",)
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", LmsCourseLink))
+        return self.policy_allows(request, "view_any", LmsCourseLink)
 
     @display(description=_("LMS platform"), ordering="platform__code")
     def platform_code(self, obj: LmsCourseLink) -> str:
@@ -130,7 +130,7 @@ class LmsCourseLinkAdmin(ReadOnlyCatalogAdmin):
 
     # -- synchronize again ------------------------------------------------------------------------
     def has_resync_row_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return bool(request.user.has_perm("resync", LmsCourseLink))
+        return self.policy_allows(request, "resync", LmsCourseLink)
 
     @action(description=_("Synchronize again"), url_path="resync", permissions=["resync_row"], icon="sync")
     def resync_row(self, request: HttpRequest, object_id: Any) -> HttpResponse:

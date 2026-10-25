@@ -11,7 +11,7 @@ from ninefruits.security.policies import Policy, register
 
 class AdmissionCyclePolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return (
+        return bool(
             user.has_perm(Permission.ADMISSION_CYCLES_MANAGE)
             or user.has_perm(Permission.APPLICATIONS_VIEW)
             or user.has_perm(Permission.APPLICATIONS_REVIEW)
@@ -21,19 +21,19 @@ class AdmissionCyclePolicy(Policy):
         return self.view_any(user, obj)
 
     def create(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ADMISSION_CYCLES_MANAGE)
+        return bool(user.has_perm(Permission.ADMISSION_CYCLES_MANAGE))
 
     def update(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.ADMISSION_CYCLES_MANAGE)
+        return bool(user.has_perm(Permission.ADMISSION_CYCLES_MANAGE))
 
     def delete(self, user: Any, obj: Any) -> bool:
         """Only cycles without applications (the database refuses others)."""
-        return user.has_perm(Permission.ADMISSION_CYCLES_MANAGE)
+        return bool(user.has_perm(Permission.ADMISSION_CYCLES_MANAGE))
 
 
 class ApplicationPolicy(Policy):
     def view_any(self, user: Any, obj: Any) -> bool:
-        return user.has_perm(Permission.APPLICATIONS_VIEW) or user.has_perm(Permission.APPLICATIONS_REVIEW)
+        return bool(user.has_perm(Permission.APPLICATIONS_VIEW) or user.has_perm(Permission.APPLICATIONS_REVIEW))
 
     def view(self, user: Any, obj: Any) -> bool:
         return obj is not None and obj.is_visible_to(user)

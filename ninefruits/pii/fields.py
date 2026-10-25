@@ -22,7 +22,7 @@ never appear in ``__repr__``, logs, serializers or admin lists (original H1)."""
 
 from __future__ import annotations
 
-from typing import Any, ClassVar, Self
+from typing import TYPE_CHECKING, Any, ClassVar, Self
 
 from django.db import models
 from django.db.models.query_utils import DeferredAttribute
@@ -32,6 +32,16 @@ from ninefruits.pii.hasher import pii_hash
 from ninefruits.pii.types import PiiType
 
 ENCRYPTED_SUFFIX = "_encrypted"
+
+
+# Both fields are nullable by default (null=True below), so the attribute is ``str | None``.
+# Django fields are not subscriptable at run time; the parameters are for django-stubs only.
+if TYPE_CHECKING:
+    _NullableTextField = models.TextField[str | None, str | None]
+    _NullableCharField = models.CharField[str | None, str | None]
+else:
+    _NullableTextField = models.TextField
+    _NullableCharField = models.CharField
 
 
 class _Undecrypted:
@@ -78,7 +88,7 @@ class EncryptedPiiDescriptor(DeferredAttribute):
             instance.__dict__[_cipher_key(attname)] = None if value in (None, "") else _Dirty
 
 
-class EncryptedPiiField(models.TextField):  # type: ignore[type-arg]
+class EncryptedPiiField(_NullableTextField):
     """Text column holding the PII ciphertext (see the module docstring)."""
 
     descriptor_class = EncryptedPiiDescriptor
@@ -159,7 +169,7 @@ class EncryptedPiiField(models.TextField):  # type: ignore[type-arg]
         setattr(instance, self.hash_field, None if value is None else pii_hash(value, self.pii_type))
 
 
-class PiiHashField(models.CharField):  # type: ignore[type-arg]
+class PiiHashField(_NullableCharField):
     """``<name>_hash`` char(64): HMAC-SHA256 search index of an encrypted value."""
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:

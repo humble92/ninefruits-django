@@ -47,7 +47,7 @@ class Command(AuditedCommand):
             help="Run without questions; the administrator password is read from standard input",
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         self._interactive = not options["force"] and sys.stdin.isatty()
         if not self._check_keys():
             return self.FAILURE
@@ -187,7 +187,8 @@ class Command(AuditedCommand):
             arguments["password_stdin"] = True
         if options.get("actor"):
             arguments["actor"] = options["actor"]
-        status = call_command(
+        # A StatusCommand returns its exit code (django-stubs says str: the printed output).
+        status: object = call_command(
             "security_create_administrator", stdout=self.stdout._out, stderr=self.stderr._out, **arguments
         )
         return status == self.SUCCESS

@@ -19,7 +19,7 @@ class Command(AuditedCommand):
         parser.add_argument("--list", action="store_true", help="List the tokens without revoking")
         parser.add_argument("--reason", default=None, help="Why (recorded in the audit)")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         from ninefruits.security.models import User
 
         user = User.objects.filter(email=options["email"]).first()

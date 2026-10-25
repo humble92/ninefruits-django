@@ -109,7 +109,7 @@ class LookupTypeForm(forms.ModelForm):  # type: ignore[type-arg]
         return code
 
 
-class LookupValueInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class LookupValueInline(CatalogPermissionMixin, TabularInline):
     """Original ``ValuesRelationManager``."""
 
     model = LookupValue

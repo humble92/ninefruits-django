@@ -22,7 +22,7 @@ class Command(AuditedCommand):
         parser.add_argument("--table", action="append", default=[], help="Only these audit tables")
         parser.add_argument("--dry-run", action="store_true", help="Count only")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         try:
             before = date.fromisoformat(options["before"]) if options["before"] else None
         except ValueError:

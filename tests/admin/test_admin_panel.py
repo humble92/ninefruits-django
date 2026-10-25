@@ -363,3 +363,19 @@ def test_renders_the_dashboard_in_korean_and_chinese() -> None:
         assert response.status_code == 200
         assert dashboard in content
         assert access in content  # sidebar group of the user and role admins
+
+
+def test_dashboard_apps_carry_their_translated_navigation_group() -> None:
+    """App headings use the navigation group labels (translated), apps of a group merged."""
+    from django.utils import translation
+
+    request = RequestFactory().get("/admin/")
+    request.user = administrator()
+    with translation.override("ko"):
+        apps = admin.site.get_app_list(request)
+        names = [str(app["name"]) for app in apps]
+        expected = str(NavigationGroup.CURRICULUM.value)
+    assert expected in names
+    assert expected != "Curriculum and sections"
+    assert len(names) == len(set(names))
+    assert "Offering" not in names and "Admission" not in names

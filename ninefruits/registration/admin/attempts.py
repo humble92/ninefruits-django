@@ -58,7 +58,7 @@ class RegistrationAttemptAdmin(ReadOnlyCatalogAdmin):
     list_per_page = 50
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", RegistrationAttempt))
+        return self.policy_allows(request, "view_any", RegistrationAttempt)
 
     def get_actions(self, request: HttpRequest, action_location: Any = ActionLocation.CHANGE_LIST) -> dict[str, Any]:
         actions = super().get_actions(request, action_location)
@@ -77,7 +77,7 @@ class RegistrationAttemptAdmin(ReadOnlyCatalogAdmin):
 
     @display(description=pgettext_lazy("offering", "Section"))
     def section_label(self, obj: RegistrationAttempt) -> str:
-        return obj.section.label() if obj.section_id else "-"
+        return obj.section.label() if obj.section else "-"
 
     @display(description=_("Action"))
     def action_label(self, obj: RegistrationAttempt) -> str:
@@ -101,4 +101,4 @@ class RegistrationAttemptAdmin(ReadOnlyCatalogAdmin):
 
     @display(description=_("By"))
     def actor_email(self, obj: RegistrationAttempt) -> str:
-        return obj.actor.email if obj.actor_id else "-"
+        return obj.actor.email if obj.actor else "-"

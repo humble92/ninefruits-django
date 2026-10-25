@@ -26,7 +26,7 @@ class Command(StatusCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("term", help="Term code, e.g. 2027-SP")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         # Reads every student record: as the system (row level security).
         with session_context().system("command:registration_preflight"):
             return self._check(options)

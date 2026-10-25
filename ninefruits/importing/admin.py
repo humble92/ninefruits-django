@@ -33,7 +33,7 @@ def completion_message(import_run: Import, label: Any = None) -> str:
     return f"{title}. {body}"
 
 
-class FailedImportRowInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class FailedImportRowInline(CatalogPermissionMixin, TabularInline):
     model = FailedImportRow
     fk_name = "import_run"
     extra = 0

@@ -25,7 +25,7 @@ class Command(AuditedCommand):
         )
         parser.add_argument("--dry-run", action="store_true", help="Count only")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         term = Term.objects.filter(code=options["term"]).first()
         if term is None:
             self.error("Unknown term code.")

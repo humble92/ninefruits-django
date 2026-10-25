@@ -84,7 +84,7 @@ class StudentRecordQuerySet(VisibleQuerySet):
                 .filter(instructor__person_id=user.person_id)
                 .values("student_record_id")
             )
-            condition |= Q(pk__in=RawSQL(_TAUGHT_RECORD_IDS_SQL, [user.person_id]))  # noqa: S611 - constant SQL
+            condition |= Q(pk__in=RawSQL(_TAUGHT_RECORD_IDS_SQL, [user.person_id]))  # noqa: S611 - constant SQL  # nosec B611
         return self.filter(condition)
 
 

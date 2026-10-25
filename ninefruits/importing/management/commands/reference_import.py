@@ -27,7 +27,7 @@ class Command(AuditedCommand):
         parser.add_argument("--chunk", type=int, default=DEFAULT_CHUNK_SIZE, help="Rows per queued task")
         parser.add_argument("--dry-run", action="store_true", help="Check the header and count rows without importing")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         type_key = str(options["type"])
         resource = registry.resource_for(type_key)
         if resource is None:

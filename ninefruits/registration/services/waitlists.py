@@ -50,3 +50,27 @@ def position(entry: Any) -> int:
 
     with session_context().system("registration.waitlist_count"):
         return int(entry.position())
+
+
+def positions(entries: list[Any]) -> dict[int, int]:
+    """:func:`position` of several entries (entry id -> position) with one query, for lists such
+    as a student's waitlists on the registration page."""
+    if not entries:
+        return {}
+    from ninefruits.core.db import session_context
+    from ninefruits.registration.models import WaitlistEntry
+
+    with session_context().system("registration.waitlist_count"):
+        waiting = list(
+            WaitlistEntry.objects.filter(
+                section_id__in={entry.section_id for entry in entries}, status=WaitlistStatus.WAITING
+            ).values_list("section_id", "requested_at")
+        )
+    return {
+        entry.pk: sum(
+            1
+            for section_id, requested_at in waiting
+            if section_id == entry.section_id and requested_at <= entry.requested_at
+        )
+        for entry in entries
+    }

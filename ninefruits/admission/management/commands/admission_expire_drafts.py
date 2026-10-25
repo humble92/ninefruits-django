@@ -16,7 +16,7 @@ class Command(AuditedCommand):
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument("--dry-run", action="store_true", help="Count the drafts without changing them")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         expire = ExpireDraftApplications()
         if self.is_dry_run():
             count = expire.query().count()

@@ -21,6 +21,7 @@ from ninefruits.admission.actions.registration import registration_enabled
 from ninefruits.admission.models import AdmissionCycle, AdmissionCycleProgram, Application
 from ninefruits.media.models import Media
 from ninefruits.media.views import PrivateMediaDownloadView
+from ninefruits.security.authorization import signed_in_user
 
 
 class AdmissionCycleListView(View):
@@ -53,12 +54,13 @@ class VerifyEmailView(LoginRequiredMixin, View):
     template_name = "admission/public/verify_email.html"
 
     def get(self, request: HttpRequest) -> HttpResponse:
-        if request.user.has_verified_email():
+        if signed_in_user(request).has_verified_email():
             return HttpResponseRedirect(reverse("portal:applications"))
         return render(request, self.template_name, {"title": _("Verify your email")})
 
     def post(self, request: HttpRequest) -> HttpResponse:
-        if not request.user.has_verified_email() and send_verification_email_for_user(request, request.user):
+        user = signed_in_user(request)
+        if not user.has_verified_email() and send_verification_email_for_user(request, user):
             # allauth adds its own "confirmation sent" message; keep only one notice.
             list(messages.get_messages(request))
             messages.success(request, _("A new link was sent."))

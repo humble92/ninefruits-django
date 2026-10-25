@@ -41,6 +41,7 @@ from ninefruits.institution.models import Country
 from ninefruits.organization.models import Program
 from ninefruits.person.enums import Gender
 from ninefruits.person.models import Person
+from ninefruits.security.authorization import signed_in_user
 
 
 def _redirect(request: HttpRequest, url: str) -> HttpResponse:
@@ -94,6 +95,14 @@ class ApplicantMixin(LoginRequiredMixin):
         return super().dispatch(request, *args, **kwargs)
 
 
+def _person_id(request: HttpRequest) -> int:
+    """The applicant's person (``ApplicantMixin`` lets only accounts with one through)."""
+    person_id = signed_in_user(request).person_id
+    if person_id is None:
+        raise Http404
+    return person_id
+
+
 class ApplicationsView(ApplicantMixin, View):
     """The applicant's applications and the cycles open for a new one."""
 
@@ -102,7 +111,9 @@ class ApplicationsView(ApplicantMixin, View):
     def get(self, request: HttpRequest) -> HttpResponse:
         return self.render(request)
 
-    def render(self, request: HttpRequest, errors: dict[str, list[str]] | None = None, status: int = 200) -> Any:
+    def render(
+        self, request: HttpRequest, errors: dict[str, list[str]] | None = None, status: int = 200
+    ) -> HttpResponse:
         cycles = _accepting_cycles()
         selected = _int(request.POST.get("cycle") or request.GET.get("cycle"))
         if selected is None and len(cycles) == 1:
@@ -110,7 +121,7 @@ class ApplicationsView(ApplicantMixin, View):
         cycle = next((cycle for cycle in cycles if cycle.pk == selected), None)
         applications = [
             {"application": application, "status": application.applicant_status()}
-            for application in Application.objects.filter(person_id=request.user.person_id)
+            for application in Application.objects.filter(person_id=_person_id(request))
             .select_related("admission_cycle", "program")
             .order_by("-created_at", "-id")
         ]
@@ -139,10 +150,10 @@ class ApplicationsView(ApplicantMixin, View):
             errors["admission_cycle_id"] = [_("This field is required.")]
         if program is None:
             errors["program_id"] = [_("This field is required.")]
-        if errors:
+        if errors or cycle is None or program is None:
             return self.render(request, errors, status=422)
         try:
-            application = StartApplication().handle(request.user, cycle, program)  # type: ignore[arg-type]
+            application = StartApplication().handle(signed_in_user(request), cycle, program)
         except ValidationError as error:
             return self.render(request, _errors_by_field(error), status=422)
         return HttpResponseRedirect(reverse("portal:application", args=[application.pk]))
@@ -156,12 +167,13 @@ class ApplicationDetailView(ApplicantMixin, View):
     actions = frozenset({"save", "submit", "respond", "withdraw"})
 
     def _application(self, request: HttpRequest, pk: int) -> Application:
-        return get_object_or_404(
-            Application.objects.filter(person_id=request.user.person_id).select_related(
+        application: Application = get_object_or_404(
+            Application.objects.filter(person_id=_person_id(request)).select_related(
                 "admission_cycle", "program", "student_record", "person"
             ),
             pk=pk,
         )
+        return application
 
     def get(self, request: HttpRequest, pk: int) -> HttpResponse:
         return self.render(request, self._application(request, pk))
@@ -325,7 +337,7 @@ def _show_applications(request: HttpRequest) -> bool:
     from ninefruits.portal.access import persona_values
     from ninefruits.security.enums import Persona
 
-    if request.user.person_id is None:
+    if getattr(request.user, "person_id", None) is None:
         return False
     return (
         Persona.APPLICANT.value in persona_values(request) or AdmissionCycle.objects.accepting_applications().exists()

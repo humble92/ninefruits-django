@@ -51,7 +51,7 @@ def show_errors(request: HttpRequest, error: ValidationError) -> None:
 
 
 def render_action_form(
-    model_admin: Any, request: HttpRequest, form: forms.Form, title: Any, back_url: str, **extra: Any
+    model_admin: Any, request: HttpRequest, form: forms.BaseForm, title: Any, back_url: str, **extra: Any
 ) -> HttpResponse:
     context = {
         **model_admin.admin_site.each_context(request),
@@ -64,8 +64,22 @@ def render_action_form(
     return render(request, "adminpanel/action_form.html", context)
 
 
+#: Largest CSV accepted by the import screens. The original's uploads were capped by Livewire's
+#: temporary upload limit (12 MB); the examination results CSV has its own 5 MB limit.
+IMPORT_MAX_SIZE = 12 * 1024 * 1024
+
+
 class ImportCsvForm(forms.Form):
     file = forms.FileField(label=_("CSV file"), help_text=_("UTF-8 with a header row."))
+
+    def clean_file(self) -> Any:
+        upload = self.cleaned_data["file"]
+        if upload.size > IMPORT_MAX_SIZE:
+            raise forms.ValidationError(
+                _("The file is too big (%(size)s bytes, at most %(limit)s).")
+                % {"size": upload.size, "limit": IMPORT_MAX_SIZE}
+            )
+        return upload
 
 
 class ReferenceAdmin(CatalogAdmin):

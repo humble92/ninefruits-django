@@ -1,6 +1,8 @@
 """Original tests/Feature/Security/HardeningTest.php (security review 2026-10-23), the
-authentication and authorization cases. The CSV formula and encrypted identifier case belongs
-to reporting/people (Phase 2, Phase 11)."""
+authentication and authorization cases, plus Django checks of the same fixes where the original
+relied on Filament (H1 form state, L1 header actions, L5 upload size). The CSV formula and
+encrypted identifier case belongs to reporting/people (Phase 2, Phase 11). The item by item map is
+porting/security-review.md."""
 
 from __future__ import annotations
 
@@ -9,12 +11,20 @@ from collections.abc import Callable
 import pytest
 from django.contrib.sessions.models import Session
 from django.core.exceptions import ValidationError
+from django.core.files.uploadedfile import SimpleUploadedFile
+from django.db import connection
 
+from ninefruits.attendance.models import ClassMeeting
 from ninefruits.audit.models import SecurityEvent
 from ninefruits.audit.security_events import SecurityEventType
+from ninefruits.institution.admin_support import IMPORT_MAX_SIZE, ImportCsvForm
+from ninefruits.registration.enums import WaitlistStatus
 from ninefruits.security.actions import AssignRole, UpdateUserAccount, UpdateUserPassword
 from ninefruits.security.enums import MfaEnforcement, Permission, ScopeType
+from tests.factories.person import PersonFactory
+from tests.factories.registration import WaitlistEntryFactory
 from tests.factories.security import RoleFactory, UserFactory
+from tests.reference_conftest import essential_data  # noqa: F401  (fixture)
 from tests.security.conftest import create_org_unit, signed_in
 
 pytestmark = pytest.mark.django_db
@@ -101,6 +111,21 @@ def test_signs_a_deactivated_user_out_on_the_next_request() -> None:
     assert "_auth_user_id" not in client.session
 
 
+def test_signs_a_deactivated_administrator_out_of_the_admin_panel() -> None:
+    # M8 covered the web routes and the admin panel; the Django middleware runs for both.
+    administrator = UserFactory(permissions=[Permission.ADMIN_PANEL_ACCESS, Permission.USERS_VIEW])
+    client = signed_in(administrator)
+
+    assert client.get("/admin/").status_code == 200
+    administrator.is_active = False
+    administrator.save()
+
+    response = client.get("/admin/security/user/")
+    assert response.status_code == 302
+    assert response["Location"] == "/accounts/login/"
+    assert "_auth_user_id" not in client.session
+
+
 def test_rotates_the_remember_token_ends_other_sessions_and_records_an_event_when_the_password_changes() -> None:
     user = UserFactory(password="Old-password-1!", remember_token="before")
     current = signed_in(user)
@@ -143,3 +168,62 @@ def test_password_change_from_the_security_page_keeps_the_current_session() -> N
 
     assert response.context["password_changed"]
     assert client.get("/portal/").status_code == 200
+
+
+@pytest.mark.usefixtures("essential_data")
+def test_keeps_encrypted_identifiers_and_their_hashes_out_of_the_person_edit_screen() -> None:
+    # H1: the original's Livewire form state carried the encrypted columns. The Django form has
+    # input-only fields; the page shows neither the values, the ciphertext nor the search hashes.
+    person = PersonFactory(national_id="TEST-900101-1234567")
+    person.passport_number_encrypted = "TEST-M7654321"
+    person.save()
+    with connection.cursor() as cursor:
+        cursor.execute(
+            "SELECT national_id_encrypted, national_id_hash, passport_number_encrypted, passport_number_hash "
+            "FROM people WHERE id = %s",
+            [person.pk],
+        )
+        stored = [value for value in cursor.fetchone() if value]
+    assert len(stored) == 4
+    manager = UserFactory(permissions=list(Permission))
+
+    page = signed_in(manager).get(f"/admin/person/person/{person.pk}/change/").content.decode()
+
+    for secret in ["TEST-900101-1234567", "TEST-M7654321", *stored]:
+        assert secret not in page
+
+
+@pytest.mark.usefixtures("essential_data")
+def test_refuses_meeting_generation_and_waitlist_promotion_to_staff_without_the_permission() -> None:
+    # L1: the original header actions had only visible(); the Django buttons check the permission
+    # again when the action runs (unfold @action permissions).
+    entry = WaitlistEntryFactory()
+    section = entry.section
+    viewer = signed_in(UserFactory(permissions=[Permission.ADMIN_PANEL_ACCESS, Permission.SECTIONS_VIEW]))
+    sections_staff = signed_in(
+        UserFactory(permissions=[Permission.ADMIN_PANEL_ACCESS, Permission.SECTIONS_VIEW, Permission.SECTIONS_MANAGE])
+    )
+    generate = f"/admin/offering/section/{section.pk}/generate-class-meetings/"
+    promote = f"/admin/offering/section/{section.pk}/promote-waitlist/"
+
+    assert viewer.post(generate, {}).status_code == 403
+    assert viewer.post(promote, {}).status_code == 403
+    assert sections_staff.post(promote, {}).status_code == 403
+    assert not ClassMeeting.objects.filter(section=section).exists()
+    entry.refresh_from_db()
+    assert entry.status == WaitlistStatus.WAITING
+
+    assert sections_staff.post(generate, {}).status_code == 302
+
+
+def test_limits_the_size_of_csv_imports() -> None:
+    # L5: the original capped the results CSV at 5 MB (assessment); reference imports were capped
+    # by the upload limit of Livewire (12 MB). The Django form checks it itself.
+    def form(size: int) -> ImportCsvForm:
+        upload = SimpleUploadedFile("rows.csv", b"x" * size, content_type="text/csv")
+        return ImportCsvForm(data={}, files={"file": upload})
+
+    assert form(IMPORT_MAX_SIZE).is_valid()
+    too_big = form(IMPORT_MAX_SIZE + 1)
+    assert not too_big.is_valid()
+    assert "too big" in str(too_big.errors["file"])

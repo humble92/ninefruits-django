@@ -102,7 +102,7 @@ def translatable_columns(attribute: str, *, required: bool = True, max_length: i
     return columns
 
 
-class ReferenceResource(resources.ModelResource):
+class ReferenceResource(resources.ModelResource):  # type: ignore[misc]  # django-import-export has no type information
     """Base for the reference data importers. Subclasses define :meth:`columns` and
     :meth:`resolve_record` (match by code)."""
 

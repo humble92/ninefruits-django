@@ -23,7 +23,7 @@ class Command(AuditedCommand):
         parser.add_argument("term", help="Term code")
         parser.add_argument("--dry-run", action="store_true", help="List the instructors without sending")
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         from ninefruits.registration.enums import EnrollmentStatus
         from ninefruits.registration.models import Enrollment
 

@@ -83,7 +83,7 @@
 | SQL 파일 | `db/sql/{functions|triggers|policies|views}/{name}.sql` (원본 `database/sql/` 그대로) | `db/sql/functions/i18n.sql` |
 | 감사 트리거 | `util.enable_audit()`가 `{table}_after_write_audit`, `{table}_after_truncate_audit` 생성 | `users_after_write_audit` |
 | 세션 설정 | `app.` 접두어 snake_case | `app.user_id`, `app.actor`, `app.locale` |
-| 시스템 수행자 | `system:{종류}:{이름}` | `system:job:ninefruits.registration.tasks...`, `system:command:term_close` |
+| 시스템 수행자 | `system:{종류}:{이름}` | `system:task:registration.promote_waitlist`, `system:command:term_close` |
 
 ---
 
@@ -94,23 +94,23 @@
 | 대상 | 규칙 | 예 |
 |---|---|---|
 | 앱 | 컨텍스트 단위, 단수 snake_case, `ninefruits/{context}/` | `ninefruits/registration`, `ninefruits/person` |
-| 모델 | 단수 PascalCase, `ninefruits/{context}/models/` (파일은 snake_case) | `CourseSection` (`models/course_section.py`), `StudentRecord` |
+| 모델 | 단수 PascalCase, `ninefruits/{context}/models/` (파일은 snake_case) 또는 `models.py` | `Section` (`offering/models/section.py`), `StudentRecord` |
 | `db_table` | 원본 테이블 이름 그대로(3절). 모델 이름과 다르면 `Meta.db_table`로 지정 | `db_table = "sections"`, `db_table = 'audit"."activity_log'` |
-| Action | 동사 + 목적어, `actions/` 모듈의 클래스 하나, `__call__` 또는 `handle` | `EnrollStudentInSection`, `FinalizeSectionGrades`, `MatriculateApplicant` |
-| Celery 작업 | 동사 + 목적어 snake_case 함수, `tasks.py` | `promote_waitlist_entries`, `recalculate_term_record` |
+| Action | 동사 + 목적어, `actions/` 모듈의 클래스 하나, `__call__` 또는 `handle` | `EnrollStudent`, `FinalizeGrades`, `MatriculateApplicant` |
+| Celery 작업 | 동사 + 목적어 snake_case 함수, `tasks.py`. 작업 이름(`name=`)은 `{context}.{함수}` | `promote_waitlist` (`registration.promote_waitlist`), `close_term_records` |
 | 이벤트 | 과거형 PascalCase dataclass, `events.py` | `EnrollmentConfirmed`, `GradesFinalized` |
-| 리스너 | 동사 + 목적어 snake_case 함수, `listeners.py` | `sync_enrollment_to_lms` |
-| 알림 | 상황 + `Notification`, `notifications.py` | `WaitlistPromotedNotification` |
-| 정책 | 모델 단위 함수, `policies.py`. 인증 백엔드 `has_perm(perm, obj)`가 부른다 | `can_view_student_record(user, record)` |
-| 폼 | `{Model}Form`, `{동작}{Model}Form`, `forms.py` | `CourseSectionForm`, `RequestStatusChangeForm` |
+| 리스너 | 동사 + 목적어 snake_case 함수, `listeners.py` | `promote_waitlist_after_drop`, `queue_section_sync` |
+| 알림 | `send_` + 상황 snake_case 함수, `notifications.py` | `send_waitlist_outcome`, `send_term_closed` |
+| 정책 | 모델 단위 `{Model}Policy` 클래스(`ninefruits.security.policies.Policy`), `policies.py`. 인증 백엔드 `has_perm(perm, obj)`가 부른다 | `StudentRecordPolicy`, `PersonPolicy` |
+| 폼 | `{Model}AdminForm`, `{동작}{대상}Form`, `forms.py` | `PersonAdminForm`, `RecordStatusChangeForm`, `AssignAdvisorForm` |
 | 열거형 | `{Model}{속성}` (`TextChoices` 또는 `StrEnum`), 값은 snake_case 문자열, `enums.py` | `EnrollmentStatus`, `GradeStatus`, `TermWindowType` |
 | 수강신청 규칙 | `{조건}Rule`, `ninefruits/registration/rules/` | `CreditLimitRule`, `TimeConflictRule` |
-| ModelAdmin | `{Model}Admin`, `admin/` (unfold `CatalogAdmin`/`ReadOnlyCatalogAdmin`) | `CourseSectionAdmin` |
-| 포털 뷰 | 화면 의미 PascalCase + `View`, 템플릿은 snake_case, `templates/portal/` 또는 `templates/{app}/` | `RegistrationCartView` / `portal/registration_cart.html` |
-| HTMX 조각 | 같은 템플릿 안의 `{% partialdef %}` 이름은 snake_case | `{% partialdef cart_items %}` |
+| ModelAdmin | `{Model}Admin`, `admin/` (unfold `CatalogAdmin`/`ReadOnlyCatalogAdmin`) | `SectionAdmin` |
+| 포털 뷰 | 화면 의미 PascalCase + `View`, `views/portal.py`, 템플릿은 snake_case `templates/{app}/portal/` | `RegistrationView` / `registration/portal/registration.html`, `MyAttendanceView` |
+| HTMX 조각 | 같은 템플릿 안의 `{% partialdef %}` 이름은 snake_case | `{% partialdef results inline %}` |
 | 관리 명령 | `{context}_{동작}` snake_case(원본 `{context}:{동작}`), `management/commands/{context}_{동작}.py` | `term_close`, `waitlist_promote` |
 | 팩토리 | `{Model}Factory`, `tests/factories/{app}.py` | `tests/factories/registration.py` 의 `EnrollmentFactory` |
-| 시더 | 내용 + `Seeder`, 종류별 폴더 `essential`, `profiles`, `demo` (`ninefruits/setup/seeders/`) | `essential/role_templates.py` 의 `RoleTemplateSeeder` |
+| 시더 | 내용 + `Seeder`, 종류별 폴더 `essential`, `profiles`, `demo` (`ninefruits/setup/seeders/`) | `essential/role_template.py` 의 `RoleTemplateSeeder` |
 | 테스트 | `tests/{app 또는 영역}/test_{대상}.py`, 함수는 `test_` + 원본 `it('...')` 문장을 snake_case로. DB 계층(함수, 트리거, RLS)은 `tests/db/` | `tests/registration/test_credit_limit_rule.py`, `tests/db/test_row_level_security.py` |
 | 마이그레이션 | `NNNN_{내용}.py` snake_case. 자동 생성 이름(`_auto_20261024_1200`)은 고친다 | `0002_roles_permissions_assignments_identities.py` |
 
@@ -126,11 +126,11 @@
 
 | 대상 | 규칙 | 예 |
 |---|---|---|
-| URL | kebab-case 복수 리소스, 끝에 `/` | `/portal/course-sections/<int:pk>/` |
-| URL 이름 | 네임스페이스 + kebab 또는 snake 이름 (`app_name`) | `portal:enrollments`, `portal:enrollment-detail`, `admin:settings_security` |
-| 권한 | `{resource}.{action}`, 리소스는 snake_case 복수 | `course_sections.create`, `grades.finalize`, `student_records.view_sensitive` |
+| URL | kebab-case 복수 리소스, 끝에 `/` | `/portal/sections/<int:pk>/attendance/`, `/portal/certificates/` |
+| URL 이름 | 네임스페이스 + snake 이름 (`app_name`) | `portal:attendance`, `portal:attendance_section`, `admin:settings_security` |
+| 권한 | `{resource}.{action}`, 리소스는 snake_case 복수 (`ninefruits.security.enums.Permission`) | `sections.manage`, `student_records.view`, `people.view_sensitive` |
 | 역할 | 표시명은 다국어, 내부 이름은 snake_case | `registrar`, `department_assistant` |
-| 설정 키 | 점 구분 snake_case | `security.mfa.enforcement`, `registration.waitlist.auto_enroll` |
+| 설정 | `settings` 테이블의 `group` + `name`, 둘 다 snake_case (`SettingsGroup` 필드) | `security.mfa_enforcement`, `institution.supported_locales` |
 | 업무 감사 이벤트 | 점 구분, 리소스 단수 + 과거형 동사 | `role.assigned`, `mfa.reset`, `settings.updated` |
 | 보안 이벤트 | `SecurityEventType` enum 값, 같은 형식 | `login.failed`, `sensitive_data.revealed` |
 | 번역 | gettext msgid = 영어 원문. 같은 영어가 뜻에 따라 다르게 번역되면 `pgettext("{원본 그룹}", ...)`, msgctxt는 snake_case | `_("Credit limit exceeded")`, `pgettext("portal", "Home")` |

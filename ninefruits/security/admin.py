@@ -81,7 +81,7 @@ class UserAdminForm(forms.ModelForm):  # type: ignore[type-arg]
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
-        self.fields["locale"].choices = _locale_choices()
+        self.fields["locale"].choices = _locale_choices()  # type: ignore[attr-defined]
         self.fields["email"].widget = forms.EmailInput(attrs={"class": UnfoldAdminTextInputWidget().attrs["class"]})
         self.fields["name"].required = self.instance.person_id is None
 
@@ -120,14 +120,15 @@ class AssignRoleForm(forms.Form):
     scope_type = forms.ChoiceField(
         label=_("Scope"), choices=(), initial=ScopeType.GLOBAL.value, widget=UnfoldAdminSelectWidget
     )
-    scope_org_unit = forms.ModelChoiceField(
+    # Querysets are set in __init__ (organization models load after this app).
+    scope_org_unit: forms.ModelChoiceField[Any] = forms.ModelChoiceField(
         label=_("Scope target"),
         queryset=None,
         required=False,
         help_text=_("Includes all units below the selected ones."),
         widget=UnfoldAdminSelectWidget,
     )
-    scope_program = forms.ModelChoiceField(
+    scope_program: forms.ModelChoiceField[Any] = forms.ModelChoiceField(
         label=_("Scope target"), queryset=None, required=False, widget=UnfoldAdminSelectWidget
     )
     starts_at = forms.SplitDateTimeField(label=_("Starts"), required=False, widget=UnfoldAdminSplitDateTimeWidget)
@@ -137,7 +138,7 @@ class AssignRoleForm(forms.Form):
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
         self.fields["role"].queryset = Role.objects.assignable()  # type: ignore[attr-defined]
-        self.fields["scope_type"].choices = ScopeType.choices()
+        self.fields["scope_type"].choices = ScopeType.choices()  # type: ignore[attr-defined]
         from ninefruits.organization.models import OrgUnit, Program
 
         self.fields["scope_org_unit"].queryset = OrgUnit.objects.order_by("code")  # type: ignore[attr-defined]
@@ -165,7 +166,7 @@ class AssignRoleForm(forms.Form):
         return cleaned
 
 
-class RoleAssignmentInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class RoleAssignmentInline(CatalogPermissionMixin, TabularInline):
     model = RoleAssignment
     fk_name = "user"
     extra = 0
@@ -236,7 +237,7 @@ class UserAdmin(CatalogAdmin):
         return self.inlines if obj is not None else ()
 
     def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
-        form = super().get_form(request, obj, change, **kwargs)
+        form: Any = super().get_form(request, obj, change, **kwargs)
         form.actor = request.user
         return form
 
@@ -281,7 +282,7 @@ class UserAdmin(CatalogAdmin):
         return object_id is not None and request.user.has_perm("unlock", self._target(object_id))
 
     def has_assign_role_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return request.user.has_perm("create", RoleAssignment)
+        return self.policy_allows(request, "create", RoleAssignment)
 
     @action(
         description=_("Reset two-factor authentication"),
@@ -415,7 +416,7 @@ class _RoleAdminFormBase(forms.ModelForm):  # type: ignore[type-arg]
         role: Role = self.instance
         locked = bool(role.pk and (role.is_system or role.is_persona()))
         self.fields["name"].disabled = locked
-        self.fields["name"].max_length = 100
+        self.fields["name"].max_length = 100  # type: ignore[attr-defined]
         held = set(role.permission_names()) if role.pk else set()
         for resource, permissions in Permission.grouped_by_resource().items():
             field = self.fields[f"permissions__{resource}"]

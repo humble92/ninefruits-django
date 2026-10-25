@@ -108,7 +108,7 @@ class SectionGradeAdmin(CatalogAdmin):
 
     # -- access ----------------------------------------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", SectionGrade))
+        return self.policy_allows(request, "view_any", SectionGrade)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -178,7 +178,10 @@ class SectionGradeAdmin(CatalogAdmin):
 
     # -- actions ---------------------------------------------------------------------------------
     def _section(self, request: HttpRequest, object_id: Any) -> SectionGrade:
-        return get_object_or_404(self.get_queryset(request).select_related("course", "version", "term"), pk=object_id)
+        grade: SectionGrade = get_object_or_404(
+            self.get_queryset(request).select_related("course", "version", "term"), pk=object_id
+        )
+        return grade
 
     def _changelist_url(self) -> str:
         return reverse("admin:grading_sectiongrade_changelist")

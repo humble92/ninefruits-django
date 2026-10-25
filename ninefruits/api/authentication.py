@@ -16,7 +16,7 @@ from ninefruits.core import context
 from ninefruits.core.db import session_context
 
 
-class TokenAuthentication(KnoxTokenAuthentication):
+class TokenAuthentication(KnoxTokenAuthentication):  # type: ignore[misc]  # django-rest-knox has no type information
     """``Authorization: Token <token>``. Inactive accounts are refused (knox)."""
 
     def authenticate(self, request: Any) -> tuple[Any, Any] | None:

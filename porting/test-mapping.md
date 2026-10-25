@@ -57,11 +57,12 @@
 | `Feature/Registration/EnrollmentTest.php` | `tests/registration/test_enrollment.py` (+ `test_registration_support.py`: 재수강 매개변수, 대기 만료, 유보석만 부족한 대기자, 장바구니, 강좌별 승격 잠금, 정원·평가 방식 변경 제한, CSV, 카탈로그 시더; `test_registration_access.py`: `visible_to`와 RLS 일치) | 완료 |
 | `Feature/Registration/LegacyRulesTest.php` | `tests/registration/test_legacy_rules.py` | 완료 |
 | `Feature/Registration/PortalRegistrationTest.php` | `tests/registration/test_portal_registration.py` (학생 RLS 아래 요청, + 시간표·HTMX 부분 응답, 요청 제한) | 완료 |
+| `load/registration.js` (k6 부하 테스트) | `loadtest/registration.py` (Locust, 학생마다 `X-Forwarded-For`), `loadtest/run.sh`, `loadtest/seat_check.sql` (pytest 아님. 결과는 운영 매뉴얼 load-testing.md) | 완료 |
 | `Feature/Registration/RegistrationCommandsTest.php` | `tests/registration/test_registration_commands.py` | 완료 |
 | `Feature/Security/AuthenticationTest.php` | `tests/security/test_authentication.py` | 완료 |
 | `Feature/Security/AuthorizationTest.php` | `tests/security/test_authorization.py`, `tests/security/test_security_admin.py` (사용자·역할·할당 관리 화면) | 완료 |
 | `Feature/Security/EmailCodeTwoFactorTest.php` | `tests/security/test_email_code_two_factor.py`, `tests/security/test_security_page.py` (포털 보안 화면 TOTP·복구 코드) | 완료 |
-| `Feature/Security/HardeningTest.php` | `tests/security/test_hardening.py`, `tests/reporting/test_report_catalog.py` (CSV 수식 사례 `test_neutralises_spreadsheet_formulas_in_csv_cells`), `tests/person/test_person_pii.py` (암호화 식별자 제외) | 완료 (같은 규칙의 명단 CSV용 `spreadsheet_cell`은 `tests/attendance/test_attendance.py`) |
+| `Feature/Security/HardeningTest.php` | `tests/security/test_hardening.py` (원본 5개 + Phase 13 추가: H1 인물 수정 화면, M8 관리 화면, L1 헤더 액션, L5 CSV 크기), `tests/reporting/test_report_catalog.py` (CSV 수식 사례 `test_neutralises_spreadsheet_formulas_in_csv_cells`), `tests/person/test_person_pii.py` (암호화 식별자 제외), `tests/lms/test_lms.py` (H5 `test_refuses_to_load_platform_scores_for_someone_who_may_not_enter_the_grades`), `tests/security/test_key_rotation.py` (`DJANGO_SECRET_KEY` 교체, 원본에 없음) | 완료 (같은 규칙의 명단 CSV용 `spreadsheet_cell`은 `tests/attendance/test_attendance.py`. 항목별 대응은 `porting/security-review.md`) |
 | `Feature/Security/MfaPolicyTest.php` | `tests/security/test_mfa_policy.py` | 완료 |
 | `Feature/Security/PersonalDataEncryptionTest.php` | `tests/pii/test_personal_data_encryption.py` (테스트 전용 모델 + 임시 테이블, 원본 암호문·해시 형식 고정), `tests/person/test_person_pii.py` (Person 암호화·검색·마스킹·재암호화), `tests/person/test_people_admin.py` (표시 해제 화면) | 완료 |
 | `Feature/Security/SecurityCommandsTest.php` | `tests/security/test_security_commands.py` (+ `security_create_administrator`, `security_sync_permissions`, 역할 템플릿), `tests/person/test_person_commands.py` (`people_find_duplicates`) | 완료 |
@@ -74,7 +75,7 @@
 | `Feature/Tooling/AuditCorrelationTest.php` | `tests/core/test_audit_correlation.py` (작업·명령), `tests/importing/test_import_correlation.py` (관리 화면 CSV 가져오기 작업, `reference_import`) | 완료 |
 | `Feature/Tooling/AuditedCommandTest.php` | `tests/core/test_audited_command.py` (테스트 전용 명령) | 부분(`security_sync_permissions`의 dry-run·`--force` 사례는 security 테스트, `naming_check` 종료 코드 2는 naming 테스트) |
 | `Feature/Tooling/CommandDocumentationTest.php` | `tests/tooling/test_command_documentation.py` (4개 언어, Django 명령, 상대 링크, 언어 간 파일 목록, `createsuperuser` 비활성) | 완료 |
-| `Feature/Tooling/OperationsCommandsTest.php` | `tests/audit/test_audit_chain.py` (seal·verify·prune), `tests/media/test_media.py` (media_prune_orphans) | 부분(`system_health_check`는 Phase 13) |
+| `Feature/Tooling/OperationsCommandsTest.php` | `tests/audit/test_audit_chain.py` (seal·verify·prune), `tests/media/test_media.py` (media_prune_orphans), `tests/tooling/test_system_health_check.py` (system_health_check) | 완료 |
 | `PHPStan/NoDynamicRawSqlRuleTest.php` | `tests/tooling/test_raw_sql_check.py` (+ `tests/tooling/data/raw_sql_examples.py`) | 완료 |
 | `Unit/Security/PasswordHashingTest.php` | `tests/security/test_password_hashing.py` | 완료 |
 | `Unit/Targeting/TargetCriteriaTest.php` | `tests/unit/test_target_criteria.py` | 완료 |
@@ -86,4 +87,5 @@ Django에만 있는 테스트
 |---|---|
 | `tests/db/test_schema_equivalence.py` | 원본 스키마 지문과 비교 (ADR 0001-django) |
 | `tests/db/test_model_schema.py` | 모델 필드와 실제 열 일치 |
+| `tests/registration/test_portal_query_count.py` | 수강신청 화면 쿼리 수가 등록·대기·검색 결과 수와 무관 (Phase 13 부하 테스트, 대기 순번 N+1 수정) |
 | `tests/api/test_api.py` | API v1(원본에 없음, Phase 12): 세션·knox 토큰 발급·사용·회수와 감사, 만료·비활성 계정, 토큰 명령, 카탈로그 권한, reporting 읽기의 RLS와 `data.exported`, throttle 3종, 스키마·Swagger UI 접근, 상태 점검, 증명서 진위 확인 JSON, LMS 콜백(동기화 결과, 점수 전달 → 초안) |

@@ -116,7 +116,8 @@ class SsoCallbackView(View):
             return _fail(request, _("School sign-in failed. Try again or sign in with your password."))
 
         subject = str(claims["sub"])
-        email = claims.get("email").lower() if isinstance(claims.get("email"), str) else None
+        claimed_email = claims.get("email")
+        email = claimed_email.lower() if isinstance(claimed_email, str) else None
         email_verified = claims.get("email_verified") in (True, "true")
 
         if attempt.get("intent") == "link":
@@ -131,7 +132,7 @@ class SsoCallbackView(View):
         from django.core.exceptions import ValidationError
 
         try:
-            LinkIdentity()(request.user, config.key, subject, email, "manual")  # type: ignore[arg-type]
+            LinkIdentity()(request.user, config.key, subject, email, "manual")
         except ValidationError as error:
             for message in error.messages:
                 messages.error(request, message)
@@ -179,8 +180,9 @@ class SsoCallbackView(View):
             identity.last_used_at = timezone.now().replace(microsecond=0)
             identity.save(update_fields=["last_used_at", "updated_at"])
 
-        user.backend = LOGIN_BACKEND  # type: ignore[attr-defined]
+        user.backend = LOGIN_BACKEND
         record_authentication(request, user, method="socialaccount", provider=config.key, uid=subject)
         login = Login(user=user, redirect_url=reverse("portal:dashboard"))
         login.state[TRUSTS_MFA_STATE] = config.trusts_mfa
-        return perform_login(request, login)
+        response: HttpResponse = perform_login(request, login)
+        return response

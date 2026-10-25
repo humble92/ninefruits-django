@@ -13,7 +13,7 @@ from allauth.core.internal.httpkit import headed_redirect_response
 from ninefruits.security.enums import MfaMethod
 
 
-class TwoFactorChallengeStage(LoginStage):
+class TwoFactorChallengeStage(LoginStage):  # type: ignore[misc]  # django-allauth has no type information
     key = "ninefruits_two_factor"
     urlname = "security:two_factor_challenge"
 

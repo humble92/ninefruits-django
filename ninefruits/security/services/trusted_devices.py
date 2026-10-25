@@ -58,23 +58,24 @@ class TrustedDevices:
             return False
         now = int(time.time())
         expires_at = payload.get("expires_at")
-        return (
-            isinstance(expires_at, int)
-            and now < expires_at <= now + days * 86400
-            and hmac.compare_digest(self.signature(user), str(payload.get("signature", "")))
-        )
+        if not isinstance(expires_at, int) or not now < expires_at <= now + days * 86400:
+            return False
+        signature = str(payload.get("signature", ""))
+        # Cookies signed before a SECRET_KEY rotation stay valid while the old key is a fallback.
+        keys = [settings.SECRET_KEY, *getattr(settings, "SECRET_KEY_FALLBACKS", [])]
+        return any(hmac.compare_digest(self.signature(user, key), signature) for key in keys if key)
 
     def forget(self, response: HttpResponseBase) -> None:
         response.delete_cookie(COOKIE)
 
     @staticmethod
-    def signature(user: User) -> str:
+    def signature(user: User, secret_key: str | None = None) -> str:
         parts = [str(user.pk)]
         for authenticator in Authenticator.objects.filter(user_id=user.pk, type=Authenticator.Type.TOTP).order_by("pk"):
             parts.extend((str(authenticator.pk), str(authenticator.type), str(authenticator.data.get("secret", ""))))
         enabled = user.email_mfa_enabled_at
         parts.append(str(int(enabled.timestamp())) if enabled else "")
-        key = hashlib.sha256((settings.SECRET_KEY + _SALT).encode()).digest()
+        key = hashlib.sha256(((secret_key or settings.SECRET_KEY) + _SALT).encode()).digest()
         return hmac.new(key, "|".join(parts).encode(), hashlib.sha256).hexdigest()
 
     @staticmethod

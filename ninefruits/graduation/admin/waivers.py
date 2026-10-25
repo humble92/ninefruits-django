@@ -80,7 +80,7 @@ class DegreeRequirementWaiverAdmin(CatalogAdmin):
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is not None:
             return bool(request.user.has_perm("view", obj))
-        return bool(request.user.has_perm("view_any", DegreeRequirementWaiver))
+        return self.policy_allows(request, "view_any", DegreeRequirementWaiver)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -126,7 +126,7 @@ class DegreeRequirementWaiverAdmin(CatalogAdmin):
 
     @display(description=pgettext_lazy("grading", "Requested by"))
     def requested_by_email(self, obj: DegreeRequirementWaiver) -> str:
-        return str(obj.requested_by.email) if obj.requested_by_id else "-"
+        return str(obj.requested_by.email) if obj.requested_by else "-"
 
     @display(description=pgettext_lazy("registration", "Status"), label=STATUS_COLORS)
     def status_badge(self, obj: DegreeRequirementWaiver) -> str:
@@ -134,7 +134,7 @@ class DegreeRequirementWaiverAdmin(CatalogAdmin):
 
     @display(description=pgettext_lazy("grading", "Decided by"))
     def decided_by_email(self, obj: DegreeRequirementWaiver) -> str:
-        return str(obj.decided_by.email) if obj.decided_by_id else "-"
+        return str(obj.decided_by.email) if obj.decided_by else "-"
 
     @display(description=pgettext_lazy("grading", "Note"))
     def decision_short(self, obj: DegreeRequirementWaiver) -> str:
@@ -146,10 +146,11 @@ class DegreeRequirementWaiverAdmin(CatalogAdmin):
 
     # -- buttons -----------------------------------------------------------------------------------
     def _waiver(self, request: HttpRequest, object_id: Any) -> DegreeRequirementWaiver:
-        return get_object_or_404(
+        waiver: DegreeRequirementWaiver = get_object_or_404(
             self.get_queryset(request).select_related("student_record", "requirement__assessment_type"),
             pk=object_id,
         )
+        return waiver
 
     def _changelist_url(self) -> str:
         return reverse("admin:graduation_degreerequirementwaiver_changelist")

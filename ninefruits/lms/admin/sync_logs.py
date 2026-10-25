@@ -86,7 +86,7 @@ class LmsSyncLogAdmin(ReadOnlyCatalogAdmin):
     readonly_fields = fields
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", LmsSyncLog))
+        return self.policy_allows(request, "view_any", LmsSyncLog)
 
     @display(description=_("LMS platform"), ordering="platform__code")
     def platform_code(self, obj: LmsSyncLog) -> str:

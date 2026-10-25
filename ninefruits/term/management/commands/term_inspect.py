@@ -50,7 +50,7 @@ class Command(StatusCommand):
             help='Point in time to check (default now), e.g. "2027-02-15 09:00" (UTC) or "2027-02-15 09:00 Asia/Seoul"',
         )
 
-    def handle(self, *args: Any, **options: Any) -> int:
+    def handle(self, *args: Any, **options: Any) -> int:  # type: ignore[override]  # exit code (StatusCommand)
         resolver = TermResolver()
         zone = resolver.zone()
         if options.get("at"):

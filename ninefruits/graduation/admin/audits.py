@@ -134,7 +134,7 @@ class DegreeAuditAdmin(CatalogAdmin):
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         if obj is not None:
             return bool(request.user.has_perm("view", obj))
-        return bool(request.user.has_perm("view_any", DegreeAudit))
+        return self.policy_allows(request, "view_any", DegreeAudit)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -207,9 +207,10 @@ class DegreeAuditAdmin(CatalogAdmin):
         return reverse("admin:graduation_degreeaudit_changelist")
 
     def _audit(self, request: HttpRequest, object_id: Any) -> DegreeAudit:
-        return get_object_or_404(
+        degree_audit: DegreeAudit = get_object_or_404(
             super().get_queryset(request).select_related("student_record__person", "program", "term"), pk=object_id
         )
+        return degree_audit
 
     def has_audit_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
         return can_audit(request.user)

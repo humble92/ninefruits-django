@@ -63,10 +63,8 @@ jobs:
       - name: ruff check
         run: uv run ruff check
       - name: mypy
-        # Strict mypy is not clean yet across all apps (see porting/phase-0-ci-notes.md); it
-        # reports but does not block until the backlog is cleared.
-        continue-on-error: true
-        run: uv run mypy ninefruits config tools/checks
+        # Strict, blocking (Phase 13). Paths and local stubs (typings/) are in pyproject.toml.
+        run: uv run mypy
       - name: bandit
         run: uv run bandit -q -c pyproject.toml -r ninefruits --severity-level medium
       - name: pip-audit

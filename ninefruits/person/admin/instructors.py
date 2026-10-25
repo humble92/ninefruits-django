@@ -56,7 +56,7 @@ def instructor_fields() -> dict[str, forms.Field]:
     }
 
 
-def _check_period(form: forms.Form, cleaned: dict[str, Any]) -> None:
+def _check_period(form: forms.BaseForm, cleaned: dict[str, Any]) -> None:
     hire, end = cleaned.get("hire_date"), cleaned.get("end_date")
     if hire and end and end < hire:
         form.add_error(
@@ -158,10 +158,10 @@ class InstructorAdmin(ReferenceAdmin):
     ordering = ("employee_number",)
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", Instructor))
+        return self.policy_allows(request, "view_any", Instructor)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
-        return bool(request.user.has_perm("create", Instructor))
+        return self.policy_allows(request, "create", Instructor)
 
     def has_change_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return bool(request.user.has_perm(Permission.INSTRUCTORS_MANAGE))

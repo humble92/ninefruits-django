@@ -72,7 +72,7 @@ class PrepareRuleSetForm(forms.Form):
         self.fields["copy_from_id"].initial = latest.pk if latest else None
 
 
-class RuleRowInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class RuleRowInline(CatalogPermissionMixin, TabularInline):
     """The rules of a set, read only here; each is edited on its own page."""
 
     model = RegistrationRule
@@ -141,7 +141,7 @@ class RegistrationRuleSetAdmin(CatalogAdmin):
     def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
         form = super().get_form(request, obj, change=change, **kwargs)
         if "note" in form.base_fields:
-            form.base_fields["note"].max_length = 2000
+            form.base_fields["note"].max_length = 2000  # type: ignore[attr-defined]
         return form
 
     @display(description=_("term"), ordering="term__start_date")
@@ -170,7 +170,7 @@ class RegistrationRuleSetAdmin(CatalogAdmin):
         return self.copied_from_name(obj)
 
     def has_prepare_permission(self, request: HttpRequest) -> bool:
-        return bool(request.user.has_perm("create", RegistrationRuleSet))
+        return self.policy_allows(request, "create", RegistrationRuleSet)
 
     @action(description=_("Prepare rules for a term"), url_path="prepare", permissions=["prepare"], icon="add")
     def prepare(self, request: HttpRequest) -> HttpResponse:
@@ -400,7 +400,7 @@ class CreditLimitPolicyAdmin(CatalogAdmin):
 
     @display(description=_("term type"))
     def term_type_display(self, obj: CreditLimitPolicy) -> str:
-        return str(obj.term_type.name) if obj.term_type_id else str(_("All term types"))
+        return str(obj.term_type.name) if obj.term_type else str(_("All term types"))
 
     @display(description=pgettext_lazy("registration", "Students"))
     def applies_to(self, obj: CreditLimitPolicy) -> str:

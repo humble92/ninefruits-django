@@ -36,7 +36,8 @@ _PERSON_ATTRIBUTE = "_import_person"
 
 
 def _person(record: models.Model) -> Person:
-    return getattr(record, _PERSON_ATTRIBUTE)
+    person: Person = getattr(record, _PERSON_ATTRIBUTE)
+    return person
 
 
 def _set_person(field: str) -> Any:
@@ -103,7 +104,7 @@ def person_for_new_record(row: Mapping[str, Any]) -> Person:
     """The existing person for a new record: matched by national ID when the row has one."""
     national_id = str(row.get("national_id") or "").strip()
     if national_id:
-        existing = Person.objects.not_merged().where_pii("national_id", national_id).first()
+        existing: Person | None = Person.objects.not_merged().where_pii("national_id", national_id).first()
         if existing is not None:
             return existing
     return Person()

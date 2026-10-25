@@ -43,4 +43,4 @@
 
 不能重置本人账户。重置会连同原因一起记录在安全事件和业务审计中。
 
-如果唯一的管理员丢失手机而无法进入管理界面，由 IT 运维人员使用 `uv run manage.py security_reset_mfa` 重置（Docker：`docker compose exec app uv run manage.py security_reset_mfa`，[命令参考](../operations/commands.md)，Phase 2 中添加）。
+如果唯一的管理员丢失手机而无法进入管理界面，由 IT 运维人员使用 `uv run manage.py security_reset_mfa` 重置（Docker：`docker compose exec app uv run manage.py security_reset_mfa`，[命令参考](../operations/commands.md)）。

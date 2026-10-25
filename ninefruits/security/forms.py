@@ -17,7 +17,7 @@ from django.utils.translation import pgettext_lazy
 from ninefruits.audit.security_events import SecurityEventType, record_security_event
 
 
-class LoginForm(AllauthLoginForm):
+class LoginForm(AllauthLoginForm):  # type: ignore[misc]  # django-allauth has no type information
     """Email or student number (institution setting) and password. Every failure, including
     deactivated, locked and SSO-only accounts, gets the same message (original
     ``Fortify::authenticateUsing``)."""
@@ -65,4 +65,5 @@ class LoginForm(AllauthLoginForm):
             raise adapter.validation_error("too_many_login_attempts")
         self._login = login
         self.user = user
-        return self.cleaned_data
+        cleaned: dict[str, Any] = self.cleaned_data
+        return cleaned

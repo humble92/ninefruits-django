@@ -43,4 +43,4 @@ Recommended operation: **Required for selected roles** for staff roles (registra
 
 You cannot reset your own account. The reset is recorded with its reason as a security event and in the activity log.
 
-If the only administrator loses their phone and cannot reach the administration panel, the IT operator resets it with `uv run manage.py security_reset_mfa` (Docker: `docker compose exec app uv run manage.py security_reset_mfa`, [command reference](../operations/commands.md), added in Phase 2).
+If the only administrator loses their phone and cannot reach the administration panel, the IT operator resets it with `uv run manage.py security_reset_mfa` (Docker: `docker compose exec app uv run manage.py security_reset_mfa`, [command reference](../operations/commands.md)).

@@ -71,7 +71,7 @@ class GradeChangeRequestAdmin(CatalogAdmin):
 
     # -- access ----------------------------------------------------------------------------------
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
-        return bool(request.user.has_perm("view_any", GradeChangeRequest))
+        return self.policy_allows(request, "view_any", GradeChangeRequest)
 
     def has_add_permission(self, request: HttpRequest, *args: Any) -> bool:
         return False
@@ -137,19 +137,20 @@ class GradeChangeRequestAdmin(CatalogAdmin):
 
     @display(description=pgettext_lazy("grading", "Decided by"))
     def decided(self, obj: GradeChangeRequest) -> str:
-        if obj.decided_by_id is None:
+        if obj.decided_by is None:
             return "-"
         note = f" · {Truncator(obj.decision_note).chars(40)}" if obj.decision_note else ""
         return f"{obj.decided_by.email}{note}"
 
     # -- actions ---------------------------------------------------------------------------------
     def _request(self, request: HttpRequest, object_id: Any) -> GradeChangeRequest:
-        return get_object_or_404(
+        change_request: GradeChangeRequest = get_object_or_404(
             self.get_queryset(request).select_related(
                 "enrollment__section__course", "enrollment__student_record", "requested_by"
             ),
             pk=object_id,
         )
+        return change_request
 
     def _changelist_url(self) -> str:
         return reverse("admin:grading_gradechangerequest_changelist")

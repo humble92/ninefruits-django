@@ -79,7 +79,7 @@ class GradeScaleItemForm(forms.ModelForm):  # type: ignore[type-arg]
         return cleaned
 
 
-class GradeScaleItemInline(CatalogPermissionMixin, TabularInline):  # type: ignore[misc]
+class GradeScaleItemInline(CatalogPermissionMixin, TabularInline):
     model = GradeScaleItem
     fk_name = "grade_scale"
     form = GradeScaleItemForm

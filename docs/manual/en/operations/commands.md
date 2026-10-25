@@ -24,7 +24,7 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 ### `migrate`
 
 - Purpose: applies database migrations. A Ninefruits wrapper around the Django command: without `--database` it uses the schema owner connection (`migrator`, role `app_migrator`). The application connection (`app_runtime`) has no DDL privileges. `showmigrations` and `sqlmigrate` also default to the `migrator` connection.
-- When: on first installation and on every deployment (from later phases on, `setup_install` runs it as well).
+- When: on first installation and on every deployment (`setup_install` runs it as well).
 - Options: the same as Django `migrate` (`app_label`, `migration_name`, `--plan`, `--check`, `--database`).
 - Audit: not recorded (schema changes are kept in the migration history `django_migrations`)
 - Examples
@@ -92,7 +92,7 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 - Purpose: creates a fictional university (org units, programs, buildings and rooms, the last, current and next term around today with their windows, the Korean university profile). Prints the fixed demo accounts per role (`registrar@demo.test` and so on, password `demo-password`). Volumes are created with bulk inserts.
 - When: development, training and demonstration environments. **Never runs in production (`DJANGO_ENV=production`), even with `--force`.**
 - Options: `--size=tiny|small|medium|large` (about 20/100/2,000/20,000 students; `tiny` for tests and quick checks), `--seed=` (same value, same data), `--force` (no confirmation).
-- `--student-accounts`: gives every enrolled student an account and writes `load-accounts.csv` (email, password) in private storage, for load tests ([load testing](load-testing.md)). Student records arrive in Phase 2; until then only the header is written.
+- `--student-accounts`: gives every enrolled student an account and writes `load-accounts.csv` (email, password) in private storage, for load tests ([load testing](load-testing.md)).
 - Audit: recorded (size, seed, duration)
 - Example: `uv run manage.py setup_demo --size=small --seed=42 --force`
 - On failure: without essential data the demo accounts are skipped (their roles are missing); run `setup_install` first. Running again on the same database skips the demo data that exists.
@@ -102,7 +102,7 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 ### `reference_import`
 
 - Purpose: imports reference data from CSV, with the same rules as **Import CSV** in the administration panel (rows are found by code and updated, empty translation cells keep existing values, failed rows are kept separately).
-- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students` (student records, Phase 2), `instructors` (Phase 2), `courses` (course versions, Phase 4), `registration_holds` (registration holds, Phase 5) / `file` UTF-8 CSV with a header row.
+- Arguments: `type` `org_units`, `programs`, `buildings`, `rooms`, `lookup_values`, `students` (student records), `instructors`, `courses` (course versions), `registration_holds` (registration holds) / `file` UTF-8 CSV with a header row.
 - Options: `--actor=` (required; the import is recorded under this account and its result appears on that account's **CSV imports** screen), `--chunk=100` (rows per Celery task), `--dry-run` (header check and row count only).
 - Audit: recorded (type, file name, rows, import number, failed rows)
 - Column format: [administrator manual chapter 9](../admin/09-csv-import.md).
@@ -135,6 +135,14 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 - Audit: recorded (permissions created/deleted)
 - Reading the output: `create` and `delete` lines. A confirmation prompt appears when there are deletions.
 - On failure: answering "no" to the confirmation exits with code 1 and changes nothing.
+
+### `security_reencrypt_secrets`
+
+- Purpose: after a `DJANGO_SECRET_KEY` rotation, encrypts the secrets protected with a key derived from it (authenticator app TOTP secrets, recovery code seeds, SSO client secrets) again with the new key. Until then they are read with the previous key in `DJANGO_SECRET_KEY_FALLBACKS`. Run it before removing the previous key ([Key management](security-keys.md)).
+- Arguments/options: `--dry-run` (only counts the secrets still encrypted with a previous key).
+- Audit: recorded (counts)
+- Reading the output: `Dry run: 0 authenticator(s) and 0 SSO client secret(s) use a previous key.` means the previous key can be removed. `cannot be decrypted` means a value cannot be read with any configured key: put the previous key in `DJANGO_SECRET_KEY_FALLBACKS` and run again.
+- Example: `uv run manage.py security_reencrypt_secrets --dry-run`
 
 ### `security_reset_mfa`
 
@@ -378,6 +386,20 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 - When: when an integration ends, a token may have leaked, or the person in charge changes.
 
 ## Operational checks and cleanup (Phase 13)
+
+### `system_health_check`
+
+- Purpose: checks configuration and keys (`DJANGO_SECRET_KEY`, PII keys, `DEBUG`), the DB connection and roles (runtime, migrator, reporting), RLS on personal data tables, pending migrations, permission catalog sync, Redis, the Celery workers, Gotenberg, private storage writes and the beat heartbeat (`core.heartbeat`, within 5 minutes).
+- Options: `--json` (output for monitoring).
+- Audit: none (read only)
+- Exit codes: 2 when any check fails.
+- When: right after deployment, when an outage is suspected, periodically from monitoring. Load balancers use `/api/v1/health/`.
+- Example
+
+  ```bash
+  uv run manage.py system_health_check
+  uv run manage.py system_health_check --json
+  ```
 
 ### `audit_seal`
 
