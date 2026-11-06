@@ -100,7 +100,7 @@ In the portal under **Registration** (`/portal/registration/`) the student choos
 
 - The same rules as for students are checked. **The registration period does not apply to staff registration.**
 - "Waive rules" only works for rules with **Overrides allowed** on. Section open and seats cannot be chosen (raise the capacity instead).
-- The result (registered, waitlisted, refused with reasons) is shown as a message at the top of the screen. It is recorded in the activity log with the reason.
+- The result (registered, waitlisted, refused with reasons) is shown as a message at the top of the screen. Only a completed registration is recorded in the activity log, together with the reason.
 
 **Drop and withdraw**: from the row menu in Registrations or **Drop** / **Withdraw** in the section's **Roster** tab, with a reason. Possible regardless of the term windows. When a seat is freed, waitlist promotion follows.
 
