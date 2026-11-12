@@ -30,7 +30,13 @@ from playwright.sync_api import Browser, Page, ViewportSize, sync_playwright
 
 ROOT = Path(__file__).resolve().parent.parent
 #: Locale directory names of the manuals (Django locale names) -> language codes of the app.
-LOCALES: dict[str, str] = {"en": "en", "ko": "ko", "zh_Hans": "zh-hans", "lo": "lo"}
+LOCALES: dict[str, str] = {
+    "en": "en",
+    "ko": "ko",
+    "zh_Hans": "zh-hans",
+    "lo": "lo",
+    **{code: code for code in ("de", "ru", "ms", "fil", "fr", "ja", "mn", "ne", "th", "tr", "uz", "vi")},
+}
 VIEWPORT: ViewportSize = {"width": 1366, "height": 900}
 DEFAULT_PASSWORD = "demo-password"  # noqa: S105 - fictional demo accounts (ninefruits/setup/conf.py)
 
@@ -101,7 +107,7 @@ def capture(browser: Browser, base_url: str, password: str, directory: str, code
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("locales", nargs="*", help="Locales to capture (default: en ko zh_Hans lo)")
+    parser.add_argument("locales", nargs="*", help="Locales to capture (default: every shipped language)")
     parser.add_argument("--base-url", default=os.environ.get("APP_URL", "http://127.0.0.1:8000"))
     parser.add_argument("--out", type=Path, default=ROOT / "docs" / "screenshots")
     parser.add_argument("--chromium", default=os.environ.get("PLAYWRIGHT_CHROMIUM"), help="Chromium executable")

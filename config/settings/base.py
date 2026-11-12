@@ -252,6 +252,18 @@ LANGUAGES = [
     ("ko", "한국어"),
     ("zh-hans", "简体中文"),
     ("lo", "ລາວ"),
+    ("de", "Deutsch"),
+    ("ru", "русский"),
+    ("ms", "Melayu"),
+    ("fil", "Filipino"),
+    ("fr", "français"),
+    ("ja", "日本語"),
+    ("mn", "монгол"),
+    ("ne", "नेपाली"),
+    ("th", "ไทย"),
+    ("tr", "Türkçe"),
+    ("uz", "o‘zbek"),
+    ("vi", "Tiếng Việt"),
 ]
 FALLBACK_LANGUAGE = "en"
 LOCALE_PATHS = [BASE_DIR / "locale"]
@@ -260,7 +272,7 @@ USE_TZ = True
 TIME_ZONE = env.str("APP_TIMEZONE", default="UTC")
 # Initial value of the institution settings time zone (settings migration only).
 INSTITUTION_TIMEZONE = env.str("INSTITUTION_TIMEZONE", default="UTC")
-# Date/number formats for languages Django does not ship (lo).
+# Date/number formats for languages Django does not ship (lo, fil).
 FORMAT_MODULE_PATH = ["ninefruits.i18n.formats"]
 
 # --- Static files and assets ------------------------------------------------------------------

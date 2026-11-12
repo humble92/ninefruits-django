@@ -35,8 +35,7 @@ msgid "This session already has windows."
 msgstr "이 세션에는 이미 업무 기간이 있습니다."
 
 # key: reference.fields.name
-#: ninefruits/term/admin.py ninefruits/term/models/term.py
-#: ninefruits/term/models/time_slot.py
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
 msgctxt "reference"
 msgid "Name"
 msgstr "이름"
@@ -82,9 +81,7 @@ msgstr "새 기간 밖으로 나가는 세션이 있습니다. 세션을 먼저 
 # key: validation.alpha_dash
 #: ninefruits/term/admin.py
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
 msgstr "%(attribute)s은(는) 문자, 숫자, 대쉬(-), 밑줄(_)만 포함할 수 있습니다."
 
 #: ninefruits/term/admin.py
@@ -146,9 +143,7 @@ msgstr "대상 조건"
 
 # key: reference.help.eligibility
 #: ninefruits/term/admin.py
-msgid ""
-"Leave empty for everyone. Several windows of the same type with different "
-"conditions open in stages."
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
 msgstr "비워 두면 전체가 대상입니다. 같은 업무에 조건이 다른 기간을 여러 개 두면 단계적으로 열립니다."
 
 # key: reference.eligibility.everyone
@@ -211,13 +206,8 @@ msgstr[0] "업무 기간 %(count)s개를 복사했습니다."
 
 # key: reference.help.copy_session_windows
 #: ninefruits/term/admin.py
-msgid ""
-"Copies the course windows (add/drop, withdrawal, grading, evaluation) of "
-"another session, moved to this session's dates: early windows keep their "
-"distance from the start, late ones from the end. Adjust them after copying."
-msgstr ""
-"다른 세션의 과목 업무 기간(정정, 수강 철회, 성적, 강의평가)을 이 세션 날짜에 맞춰 복사한다. 앞쪽 기간은 시작일 기준, 뒤쪽 기간은"
-" 종료일 기준으로 옮긴다. 복사 후 확인하고 고친다."
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "다른 세션의 과목 업무 기간(정정, 수강 철회, 성적, 강의평가)을 이 세션 날짜에 맞춰 복사한다. 앞쪽 기간은 시작일 기준, 뒤쪽 기간은 종료일 기준으로 옮긴다. 복사 후 확인하고 고친다."
 
 # key: reference.fields.weekdays
 #: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
@@ -332,9 +322,7 @@ msgstr "정규 학기"
 
 # key: reference.help.is_regular
 #: ninefruits/term/models/term.py
-msgid ""
-"Regular terms (e.g. spring, fall) and intensive sessions follow different "
-"rules later, such as credit limits."
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
 msgstr "정규 학기와 계절학기는 학점 상한 등 이후 규칙이 다르게 적용됩니다."
 
 # key: reference.fields.sort_order
@@ -391,9 +379,7 @@ msgstr "세션"
 
 # key: reference.help.term_session
 #: ninefruits/term/models/window.py
-msgid ""
-"Course deadlines follow the session of the course: the full term unless the "
-"window is for a shorter session."
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
 msgstr "과목의 일정은 과목이 속한 세션을 따른다. 짧은 세션용 기간이 아니면 전체 학기 세션이다."
 
 # key: reference.fields.window_type
@@ -405,3 +391,8 @@ msgstr "업무"
 #: ninefruits/term/models/window.py
 msgid "Name (optional)"
 msgstr "이름(선택)"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "제한"

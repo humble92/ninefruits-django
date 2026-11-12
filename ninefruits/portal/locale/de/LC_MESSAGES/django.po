@@ -1,0 +1,299 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/portal/menu.py ninefruits/portal/views/dashboard.py
+msgctxt "portal"
+msgid "Home"
+msgstr "Start"
+
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: ninefruits/portal/menu.py
+msgctxt "portal"
+msgid "Security"
+msgstr "Sicherheit"
+
+# key: portal.navigation.admin
+#: ninefruits/portal/menu.py ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Administration"
+msgstr "Verwaltung"
+
+# key: portal.dashboard.welcome
+#: ninefruits/portal/templates/portal/dashboard.html
+#, python-format
+msgctxt "portal"
+msgid "Welcome, %(name)s"
+msgstr "Willkommen, %(name)s"
+
+# key: portal.dashboard.access
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Your access"
+msgstr "Ihr Zugriff"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Roles"
+msgstr "Rollen"
+
+# key: common.none
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "common"
+msgid "None"
+msgstr "Keine"
+
+# key: portal.dashboard.personas
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Personas"
+msgstr "Personengruppen"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/portal/templates/portal/security.html ninefruits/portal/views/security.py
+msgid "Two-factor authentication"
+msgstr "Zwei-Faktor-Authentifizierung"
+
+# key: security.mfa.description
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication protects your account with a code from an authenticator app in addition to your password."
+msgstr "Die Zwei-Faktor-Authentifizierung schützt Ihr Konto zusätzlich zum Passwort mit einem Code aus einer Authenticator-App."
+
+# key: security.mfa.enrollment_required
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "Für Ihr Konto ist die Zwei-Faktor-Authentifizierung vorgeschrieben. Bitte richten Sie sie ein, um fortzufahren."
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/portal/templates/portal/security.html
+msgid "Authenticator app"
+msgstr "Authenticator-App"
+
+# key: security.mfa.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is enabled."
+msgstr "Die Zwei-Faktor-Authentifizierung ist aktiviert."
+
+# key: security.mfa.regenerate_recovery_codes
+#: ninefruits/portal/templates/portal/security.html
+msgid "Generate new recovery codes"
+msgstr "Neue Wiederherstellungscodes erzeugen"
+
+# key: security.mfa.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Disable two-factor authentication?"
+msgstr "Zwei-Faktor-Authentifizierung deaktivieren?"
+
+# key: security.mfa.disable
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Disable"
+msgstr "Deaktivieren"
+
+# key: security.mfa.scan_qr_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Scan this QR code with your authenticator app, then enter the code it shows."
+msgstr "Scannen Sie diesen QR-Code mit Ihrer Authenticator-App und geben Sie dann den angezeigten Code ein."
+
+# key: security.mfa.setup_key
+#: ninefruits/portal/templates/portal/security.html
+msgid "Setup key"
+msgstr "Einrichtungsschlüssel"
+
+# key: authentication.two_factor.code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "Code"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "Bestätigen"
+
+# key: security.mfa.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Enable two-factor authentication"
+msgstr "Zwei-Faktor-Authentifizierung aktivieren"
+
+# key: security.mfa.recovery_codes_instructions
+#: ninefruits/portal/templates/portal/security.html
+msgid "Store these recovery codes in a safe place. Each can be used once if you lose your device."
+msgstr "Bewahren Sie diese Wiederherstellungscodes sicher auf. Jeder kann einmal verwendet werden, falls Sie Ihr Gerät verlieren."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email code"
+msgstr "E-Mail-Code"
+
+# key: security.email_code.description
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid "Receive a one-time code at %(email)s each time you sign in. Less secure than an authenticator app; use it if you cannot install one."
+msgstr "Erhalten Sie bei jeder Anmeldung einen Einmalcode an %(email)s. Weniger sicher als eine Authenticator-App; verwenden Sie dies, wenn Sie keine installieren können."
+
+# key: security.email_code.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email codes are turned on."
+msgstr "E-Mail-Codes sind eingeschaltet."
+
+# key: security.email_code.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Turn off email codes?"
+msgstr "E-Mail-Codes ausschalten?"
+
+# key: authentication.two_factor.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "E-Mail-Code"
+
+# key: authentication.two_factor.resend_email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a new code"
+msgstr "Neuen Code senden"
+
+# key: security.email_code.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a code to set up"
+msgstr "Code zur Einrichtung senden"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Remembered devices"
+msgstr "Gemerkte Geräte"
+
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s day."
+msgid_plural "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s days."
+msgstr[0] "Wenn Sie bei der Anmeldung „Dieses Gerät merken“ ankreuzen, überspringt dieser Browser den Code für %(days)s Tag."
+msgstr[1] "Wenn Sie bei der Anmeldung „Dieses Gerät merken“ ankreuzen, überspringt dieser Browser den Code für %(days)s Tage."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Changing your two-factor setup forgets every remembered device."
+msgstr "Eine Änderung Ihrer Zwei-Faktor-Einstellungen vergisst alle gemerkten Geräte."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Forget this device"
+msgstr "Dieses Gerät vergessen"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "This device is not remembered."
+msgstr "Dieses Gerät ist nicht gemerkt."
+
+# upstream: Django/allauth catalog
+#: ninefruits/portal/templates/portal/security.html
+msgid "Change password"
+msgstr "Passwort ändern"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Your password was changed. Other sessions were signed out."
+msgstr "Ihr Passwort wurde geändert. Andere Sitzungen wurden abgemeldet."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Current password"
+msgstr "Aktuelles Passwort"
+
+# key: authentication.fields.new_password
+#: ninefruits/portal/templates/portal/security.html
+msgid "New password"
+msgstr "Neues Passwort"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/portal/templates/portal/security.html
+msgid "Confirm password"
+msgstr "Passwort bestätigen"
+
+# key: security.sso.title
+#: ninefruits/portal/templates/portal/security.html
+msgid "School sign-in"
+msgstr "Hochschul-Anmeldung"
+
+# key: security.sso.help
+#: ninefruits/portal/templates/portal/security.html
+msgid "Link your school account to sign in with it."
+msgstr "Verknüpfen Sie Ihr Hochschulkonto, um sich damit anzumelden."
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/portal/templates/portal/security.html
+msgid "Linked"
+msgstr "Verknüpft"
+
+# key: security.sso.unlink_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink this school account? You will need your password to sign in."
+msgstr "Verknüpfung mit diesem Hochschulkonto lösen? Sie brauchen dann Ihr Passwort zur Anmeldung."
+
+# key: security.sso.unlink
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink"
+msgstr "Verknüpfung lösen"
+
+# key: security.sso.link
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Link"
+msgstr "Verknüpfen"
+
+# key: security.mfa.required_by
+#: ninefruits/portal/templatetags/portal.py
+#, python-format
+msgctxt "security"
+msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
+msgstr "Für Ihr Konto ist die Zwei-Faktor-Authentifizierung vorgeschrieben. Bitte richten Sie sie bis %(date)s ein."
+
+# key: security.mfa.recommended
+#: ninefruits/portal/templatetags/portal.py
+msgctxt "security"
+msgid "We recommend enabling two-factor authentication for your account."
+msgstr "Wir empfehlen, die Zwei-Faktor-Authentifizierung für Ihr Konto zu aktivieren."
+
+#: ninefruits/portal/views/security.py
+msgid "Start the setup again."
+msgstr "Starten Sie die Einrichtung erneut."
+
+#: ninefruits/portal/views/security.py
+msgid "The code must be 6 digits."
+msgstr "Der Code muss aus 6 Ziffern bestehen."
+
+# key: security.email_code.not_allowed
+#: ninefruits/portal/views/security.py
+msgid "Email codes are not available at this institution."
+msgstr "E-Mail-Codes sind an dieser Hochschule nicht verfügbar."
+
+# key: security.email_code.wait
+#: ninefruits/portal/views/security.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "Bitte warten Sie %(seconds)s Sekunden, bevor Sie einen weiteren Code anfordern."
+
+#: ninefruits/portal/views/security.py
+msgid "The email code must be 6 digits."
+msgstr "Der E-Mail-Code muss aus 6 Ziffern bestehen."

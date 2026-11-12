@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: curriculum.errors.no_version_to_revise
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "There is no version in effect on that date."
+msgstr "Tiada versi yang berkuat kuasa pada tarikh tersebut."
+
+# key: curriculum.errors.revise_same_start
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "A version already starts on that date. Edit it instead."
+msgstr "Satu versi sudah bermula pada tarikh tersebut. Sunting versi itu sebagai ganti."
+
+# key: reference.fields.name
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nama"
+
+# key: reference.fields.parent
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/models/course_category.py
+msgid "Parent"
+msgstr "Induk"
+
+# key: validation.after_or_equal
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Medan %(attribute)s mestilah tarikh selepas atau sama dengan %(date)s."
+
+# key: reference.fields.effective_end_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid until"
+msgstr "Sah hingga"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid from"
+msgstr "Sah dari"
+
+# key: curriculum.errors.version_overlap
+#: ninefruits/curriculum/admin/courses.py
+msgid "This period overlaps another version of the course."
+msgstr "Tempoh ini bertindih dengan versi lain kursus ini."
+
+# key: validation.alpha_dash
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Medan %(attribute)s hanya boleh mengandungi huruf, nombor, sengkang dan garis bawah."
+
+# key: curriculum.fields.code
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Course code"
+msgstr "Kod kursus"
+
+# key: curriculum.resources.course_versions.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "course version"
+msgstr "versi kursus"
+
+# key: curriculum.resources.course_versions.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "versions"
+msgstr "versi"
+
+# key: curriculum.fields.title
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Nama kursus"
+
+# key: curriculum.fields.requisites
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Requisites"
+msgstr "Syarat kursus"
+
+# key: curriculum.actions.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "Revise from a date"
+msgstr "Versi baharu mulai tarikh"
+
+# key: curriculum.resources.course_equivalencies.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalency"
+msgstr "kesetaraan"
+
+# key: curriculum.resources.course_equivalencies.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalent courses"
+msgstr "kursus setara"
+
+# key: curriculum.fields.managing_unit
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Managing unit"
+msgstr "Unit pengurus"
+
+# key: curriculum.fields.effective_from
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version from"
+msgstr "Versi baharu mulai"
+
+# key: common.reason
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Sebab"
+
+# key: validation.after
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "Medan %(attribute)s mestilah tarikh selepas %(date)s."
+
+# key: curriculum.sections.course
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "curriculum.sections"
+msgid "Course"
+msgstr "Kursus"
+
+# key: curriculum.sections.first_version
+#: ninefruits/curriculum/admin/courses.py
+msgid "First version"
+msgstr "Versi pertama"
+
+#: ninefruits/curriculum/admin/courses.py
+msgid "Add course version"
+msgstr "Tambah versi kursus"
+
+# key: curriculum.fields.credits
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Kredit"
+
+# key: curriculum.notifications.revised
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version created."
+msgstr "Versi baharu telah dicipta."
+
+# key: curriculum.help.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "The current version ends the day before; the new version starts with a copy of it and its requisites. Sections already offered keep their version."
+msgstr "Versi semasa tamat sehari sebelumnya; versi baharu bermula sebagai salinan versi tersebut beserta syarat kursusnya. Seksyen yang telah ditawarkan mengekalkan versinya."
+
+# key: validation.gte.numeric
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Medan %(attribute)s mestilah lebih besar daripada atau sama dengan %(value)s."
+
+# key: curriculum.fields.catalog_year_to
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year to"
+msgstr "Tahun kurikulum hingga"
+
+# key: curriculum.fields.catalog_year_from
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year from"
+msgstr "Tahun kurikulum dari"
+
+# key: curriculum.errors.requirement_set_overlap
+#: ninefruits/curriculum/admin/requirements.py
+msgid "These catalog years overlap another requirement set of the program and role."
+msgstr "Tahun kurikulum ini bertindih dengan set syarat lain bagi program dan peranan tersebut."
+
+# key: curriculum.resources.courses.plural_label
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/importers.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "courses"
+msgstr "kursus"
+
+# key: validation.required
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Medan %(attribute)s diperlukan."
+
+# key: curriculum.fields.category
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgid "Course category"
+msgstr "Kategori kursus"
+
+# key: curriculum.fields.min_credits
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Minimum credits"
+msgstr "Kredit minimum"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Examination kind"
+msgstr "Jenis peperiksaan"
+
+# key: curriculum.sections.requirements
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Requirements"
+msgstr "Syarat"
+
+# key: curriculum.fields.program_role
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Program role"
+msgstr "Peranan program"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Programs"
+msgstr "Program"
+
+# key: curriculum.grading_bases.graded
+#: ninefruits/curriculum/enums.py
+msgid "Letter grade"
+msgstr "Gred huruf"
+
+# key: curriculum.grading_bases.pass_fail
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Pass/fail"
+msgstr "Lulus/gagal"
+
+# key: curriculum.program_roles.primary
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Primary program"
+msgstr "Program utama"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/curriculum/enums.py
+msgid "Second major"
+msgstr "Major kedua"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/curriculum/enums.py
+msgid "Minor"
+msgstr "Minor"
+
+# key: curriculum.requirement_kinds.category_credits
+#: ninefruits/curriculum/enums.py
+msgid "Credits in a category"
+msgstr "Kredit dalam kategori"
+
+# key: curriculum.requirement_kinds.required_courses
+#: ninefruits/curriculum/enums.py
+msgid "Required courses"
+msgstr "Kursus wajib"
+
+# key: curriculum.requirement_kinds.course_group
+#: ninefruits/curriculum/enums.py
+msgid "Choice from courses"
+msgstr "Pilihan daripada kursus"
+
+# key: curriculum.requirement_kinds.assessment_pass
+#: ninefruits/curriculum/enums.py
+msgid "Passed examination"
+msgstr "Lulus peperiksaan"
+
+# key: curriculum.requisite_kinds.prerequisite
+#: ninefruits/curriculum/enums.py
+msgid "Prerequisite"
+msgstr "Prasyarat"
+
+# key: curriculum.requisite_kinds.corequisite
+#: ninefruits/curriculum/enums.py
+msgid "Corequisite"
+msgstr "Kosyarat"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/curriculum/importers.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "%(attribute)s yang dipilih tidak sah."
+
+# key: curriculum.import.org_unit_required
+#: ninefruits/curriculum/importers.py
+msgid "New courses need an org_unit (code of the managing unit)."
+msgstr "Kursus baharu memerlukan org_unit (kod unit pengurus)."
+
+# key: reference.fields.is_active
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/course_category.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Aktif"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/curriculum/models/course.py
+msgid "course"
+msgstr "kursus"
+
+# key: curriculum.fields.description
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Description"
+msgstr "Keterangan"
+
+# key: curriculum.fields.lecture_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lecture hours"
+msgstr "Jam kuliah"
+
+# key: curriculum.fields.lab_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lab hours"
+msgstr "Jam amali"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/curriculum/models/course.py
+msgid "Grading"
+msgstr "Penggredan"
+
+# key: curriculum.fields.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Counts toward the credit limit"
+msgstr "Dikira dalam had kredit"
+
+# key: curriculum.help.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Turn off for courses outside the term credit limit (e.g. credit bank courses)."
+msgstr "Matikan bagi kursus di luar had kredit semester (cth. kursus bank kredit)."
+
+# key: curriculum.fields.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken again for credit"
+msgstr "Boleh diambil semula untuk kredit"
+
+# key: curriculum.help.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "Taking it again earns credits again (e.g. seminars with changing topics) instead of being a retake."
+msgstr "Mengambilnya semula memberikan kredit sekali lagi (cth. seminar dengan topik berubah) dan bukannya dikira sebagai ulang kursus."
+
+# key: evaluation.fields.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgctxt "evaluation.fields"
+msgid "Course evaluation"
+msgstr "Penilaian kursus"
+
+# key: evaluation.help.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgid "Off for internships or practica that are not evaluated."
+msgstr "Dimatikan bagi latihan industri atau praktikum yang tidak dinilai."
+
+# key: curriculum.fields.requisite_kind
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Kind"
+msgstr "Jenis"
+
+# key: curriculum.fields.group_number
+#: ninefruits/curriculum/models/course.py
+msgid "Group"
+msgstr "Kumpulan"
+
+# key: curriculum.fields.required_course
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum.fields"
+msgid "Course"
+msgstr "Kursus"
+
+# key: curriculum.fields.minimum_grade
+#: ninefruits/curriculum/models/course.py
+msgid "Minimum grade"
+msgstr "Gred minimum"
+
+# key: curriculum.fields.allows_concurrent
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken in the same term"
+msgstr "Boleh diambil dalam semester yang sama"
+
+# key: curriculum.fields.equivalent_course
+#: ninefruits/curriculum/models/course.py
+msgid "Equivalent course"
+msgstr "Kursus setara"
+
+# key: curriculum.fields.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Mutual"
+msgstr "Dua hala"
+
+# key: curriculum.help.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Each counts for the other. Off: only the equivalent course counts for this one."
+msgstr "Setiap satu dikira bagi yang lain. Dimatikan: hanya kursus setara dikira bagi kursus ini."
+
+# key: curriculum.fields.note
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Note"
+msgstr "Catatan"
+
+# key: reference.fields.code
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: reference.fields.sort_order
+#: ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgid "Order"
+msgstr "Susunan"
+
+# key: reference.resources.course_categories.label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course category"
+msgstr "kategori kursus"
+
+# key: reference.resources.course_categories.plural_label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course categories"
+msgstr "kategori kursus"
+
+# key: curriculum.help.catalog_year_to
+#: ninefruits/curriculum/models/requirement.py
+msgid "Empty: also for later catalog years until another set starts."
+msgstr "Kosong: juga bagi tahun kurikulum berikutnya sehingga set lain bermula."
+
+# key: curriculum.fields.total_credits
+#: ninefruits/curriculum/models/requirement.py
+msgid "Total credits"
+msgstr "Jumlah kredit"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/curriculum/models/requirement.py
+msgid "graduation requirements"
+msgstr "syarat bergraduat"
+
+# key: curriculum.fields.requirement_kind
+#: ninefruits/curriculum/models/requirement.py
+msgid "Requirement"
+msgstr "Syarat"
+
+# key: curriculum.fields.min_courses
+#: ninefruits/curriculum/models/requirement.py
+msgid "Minimum courses"
+msgstr "Kursus minimum"

@@ -1,0 +1,1430 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: security.errors.cannot_deactivate_self
+#: ninefruits/security/actions/accounts.py
+msgid "You cannot deactivate your own account."
+msgstr "Vous ne pouvez pas désactiver votre propre compte."
+
+# key: security.errors.target_more_privileged
+#: ninefruits/security/actions/accounts.py
+#, python-format
+msgid "This account holds permissions you do not have (%(permissions)s); only an administrator with those permissions can change it."
+msgstr "Ce compte dispose d’autorisations que vous n’avez pas (%(permissions)s) ; seul un administrateur disposant de ces autorisations peut le modifier."
+
+# key: json.The provided password does not match your current password.
+#: ninefruits/security/actions/accounts.py
+msgid "The provided password does not match your current password."
+msgstr "Le mot de passe fourni ne correspond pas à votre mot de passe actuel."
+
+#: ninefruits/security/actions/accounts.py
+msgid "The password field confirmation does not match."
+msgstr "La confirmation du mot de passe ne correspond pas."
+
+#: ninefruits/security/actions/accounts.py ninefruits/security/admin.py
+msgid "The email has already been taken."
+msgstr "Cette adresse e-mail est déjà utilisée."
+
+# key: security.errors.persona_role_not_assignable
+#: ninefruits/security/actions/assign_role.py
+msgid "Persona roles are granted automatically and cannot be assigned."
+msgstr "Les rôles de profil sont accordés automatiquement et ne peuvent pas être attribués."
+
+# key: security.errors.scope_id_mismatch
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "Choose a scope target for scoped assignments, and none for global assignments."
+msgstr "Choisissez une cible de périmètre pour les attributions avec périmètre, et aucune pour les attributions globales."
+
+# key: offering.errors.meeting_time_order
+# key: security.errors.invalid_period
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "The end must be after the start."
+msgstr "La fin doit être postérieure au début."
+
+# key: security.errors.self_assignment
+#: ninefruits/security/actions/assign_role.py
+msgid "You cannot assign a role to yourself."
+msgstr "Vous ne pouvez pas vous attribuer un rôle."
+
+# key: security.errors.role_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+#, python-format
+msgid "This role carries permissions you do not hold (%(permissions)s)."
+msgstr "Ce rôle comporte des autorisations dont vous ne disposez pas (%(permissions)s)."
+
+# key: security.errors.scope_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+msgid "This scope is wider than the one you manage role assignments for."
+msgstr "Ce périmètre est plus large que celui pour lequel vous gérez les attributions de rôles."
+
+# key: security.sso.linked_to_another_account
+#: ninefruits/security/actions/identities.py
+msgid "This school account is linked to another user."
+msgstr "Ce compte de l’établissement est lié à un autre utilisateur."
+
+# key: security.sso.already_linked
+#: ninefruits/security/actions/identities.py
+msgid "Your account is already linked to another account of this provider."
+msgstr "Votre compte est déjà lié à un autre compte de ce fournisseur."
+
+# key: json.The provided two factor authentication code was invalid.
+#: ninefruits/security/actions/mfa.py
+msgid "The provided two factor authentication code was invalid."
+msgstr "Le code de double authentification fourni n’est pas valide."
+
+#: ninefruits/security/actions/mfa.py
+msgid "Recovery codes need an authenticator app. Set one up first."
+msgstr "Les codes de récupération nécessitent une application d’authentification. Configurez-en une d’abord."
+
+# key: security.email_code.not_allowed
+#: ninefruits/security/actions/mfa.py
+msgid "Email codes are not available at this institution."
+msgstr "Les codes par e-mail ne sont pas disponibles dans cet établissement."
+
+# key: security.email_code.invalid
+#: ninefruits/security/actions/mfa.py ninefruits/security/views.py
+msgid "The code is invalid or has expired."
+msgstr "Le code n’est pas valide ou a expiré."
+
+# key: security.mfa.cannot_disable_required
+#: ninefruits/security/actions/mfa.py
+msgid "Two-factor authentication is required for your account and cannot be disabled."
+msgstr "La double authentification est obligatoire pour votre compte et ne peut pas être désactivée."
+
+# key: auth.failed
+#: ninefruits/security/adapters.py ninefruits/security/views_sso.py
+msgid "These credentials do not match our records."
+msgstr "Ces identifiants ne correspondent pas à nos enregistrements."
+
+#: ninefruits/security/adapters.py
+msgid "Too many login attempts. Please try again later."
+msgstr "Trop de tentatives de connexion. Veuillez réessayer plus tard."
+
+# key: common.reason
+#: ninefruits/security/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Motif"
+
+# key: admin.users.fields.locale
+# key: assessment.categories.language
+# key: common.language
+# key: offering.syllabus.language
+#: ninefruits/security/admin.py
+msgid "Language"
+msgstr "Langue"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+# key: people.sections.name
+# key: reference.fields.name
+#: ninefruits/security/admin.py
+msgid "Name"
+msgstr "Nom"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/security/admin.py ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Email"
+msgstr "E-mail"
+
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: ninefruits/security/admin.py ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Active"
+msgstr "Actif"
+
+# key: admin.users.help.name
+#: ninefruits/security/admin.py
+msgid "Used only for accounts without a person (e.g. service accounts). Linked accounts show the person's name."
+msgstr "Utilisé uniquement pour les comptes sans personne (p. ex. comptes de service). Les comptes liés affichent le nom de la personne."
+
+# key: admin.role_assignments.fields.role
+# key: graduation.report_columns.program_role
+# key: offering.fields.instructor_role
+#: ninefruits/security/admin.py
+msgid "Role"
+msgstr "Rôle"
+
+# key: admin.role_assignments.fields.scope
+#: ninefruits/security/admin.py
+msgid "Scope"
+msgstr "Périmètre"
+
+# key: admin.role_assignments.fields.scope_target
+#: ninefruits/security/admin.py
+msgid "Scope target"
+msgstr "Cible du périmètre"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/security/admin.py
+msgid "Includes all units below the selected ones."
+msgstr "Inclut toutes les unités situées sous celles sélectionnées."
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: ninefruits/security/admin.py
+msgid "Starts"
+msgstr "Début"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/security/admin.py
+msgid "Ends"
+msgstr "Fin"
+
+#: ninefruits/security/admin.py
+msgid "Role assignment"
+msgstr "Attribution de rôle"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/admin.py
+msgid "Role assignments"
+msgstr "Attributions de rôles"
+
+# key: admin.role_assignments.actions.revoke
+#: ninefruits/security/admin.py
+msgid "End assignment"
+msgstr "Mettre fin à l’attribution"
+
+# key: permissions.resources.users
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Users"
+msgstr "Utilisateurs"
+
+# key: admin.users.fields.mfa_enrolled
+#: ninefruits/security/admin.py
+msgid "Two-factor"
+msgstr "Double authentification"
+
+# key: admin.users.fields.linked_person
+#: ninefruits/security/admin.py
+msgid "Linked person"
+msgstr "Personne liée"
+
+# key: common.yes
+#: ninefruits/security/admin.py
+msgid "Yes"
+msgstr "Oui"
+
+# key: common.none
+#: ninefruits/security/admin.py
+msgid "None"
+msgstr "Aucun"
+
+# key: admin.users.actions.reset_mfa
+# key: permissions.users.reset_mfa
+#: ninefruits/security/admin.py
+msgid "Reset two-factor authentication"
+msgstr "Réinitialiser la double authentification"
+
+# key: admin.users.notifications.mfa_reset
+#: ninefruits/security/admin.py
+msgid "Two-factor authentication was reset."
+msgstr "La double authentification a été réinitialisée."
+
+# key: admin.users.actions.unlock
+#: ninefruits/security/admin.py
+msgid "Unlock sign-in"
+msgstr "Débloquer la connexion"
+
+# key: admin.users.notifications.unlocked
+#: ninefruits/security/admin.py
+msgid "Sign-in unlocked."
+msgstr "Connexion débloquée."
+
+# key: admin.role_assignments.actions.assign
+#: ninefruits/security/admin.py
+msgid "Assign role"
+msgstr "Attribuer un rôle"
+
+# key: admin.role_assignments.notifications.assigned
+#: ninefruits/security/admin.py
+msgid "Role assigned."
+msgstr "Rôle attribué."
+
+# key: admin.role_assignments.notifications.revoked
+#: ninefruits/security/admin.py
+msgid "Assignment ended."
+msgstr "Attribution terminée."
+
+# key: admin.roles.fields.name
+#: ninefruits/security/admin.py
+msgid "Internal name"
+msgstr "Nom interne"
+
+# key: admin.roles.fields.display_name
+#: ninefruits/security/admin.py
+msgid "Display name"
+msgstr "Nom affiché"
+
+# key: admin.roles.fields.description
+# key: admissions.fields.description
+# key: curriculum.fields.description
+# key: evaluation.fields.description
+# key: reference.fields.description
+#: ninefruits/security/admin.py
+msgid "Description"
+msgstr "Description"
+
+# key: admin.roles.fields.name_help
+#: ninefruits/security/admin.py
+msgid "Lowercase letters, digits and underscores, e.g. registrar."
+msgstr "Lettres minuscules, chiffres et tirets bas, p. ex. registrar."
+
+#: ninefruits/security/admin.py
+msgid "The name has already been taken."
+msgstr "Ce nom est déjà utilisé."
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Roles"
+msgstr "Rôles"
+
+# key: admin.roles.system_role_permissions
+#: ninefruits/security/admin.py
+msgid "System roles always have every permission."
+msgstr "Les rôles système disposent toujours de toutes les autorisations."
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/security/admin.py
+msgid "General"
+msgstr "Général"
+
+# key: admin.roles.fields.permissions_count
+# key: admin.roles.sections.permissions
+#: ninefruits/security/admin.py
+msgid "Permissions"
+msgstr "Autorisations"
+
+# key: admin.roles.fields.persona
+#: ninefruits/security/admin.py
+msgid "Persona"
+msgstr "Profil"
+
+# key: admin.roles.fields.active_assignments_count
+#: ninefruits/security/admin.py
+msgid "Active assignments"
+msgstr "Attributions actives"
+
+# key: permissions.resources.people
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "People"
+msgstr "Personnes"
+
+# key: permissions.resources.accounts
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Accounts"
+msgstr "Comptes"
+
+# key: permissions.resources.student_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Student records"
+msgstr "Dossiers étudiants"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Status changes"
+msgstr "Changements de statut"
+
+# key: permissions.resources.instructors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Instructors"
+msgstr "Enseignants"
+
+# key: permissions.resources.advisors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Advisors"
+msgstr "Enseignants référents"
+
+# key: permissions.resources.authentication_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sign-in settings"
+msgstr "Paramètres de connexion"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reference data"
+msgstr "Données de référence"
+
+# key: permissions.resources.lookup_values
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Code data"
+msgstr "Nomenclatures"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Org units"
+msgstr "Unités organisationnelles"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Programs"
+msgstr "Formations"
+
+# key: permissions.resources.facilities
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Buildings and rooms"
+msgstr "Bâtiments et salles"
+
+# key: permissions.resources.terms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Academic years and terms"
+msgstr "Années universitaires et semestres"
+
+# key: permissions.resources.term_windows
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Term windows"
+msgstr "Périodes de gestion"
+
+# key: permissions.resources.course_categories
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course categories"
+msgstr "Catégories de cours"
+
+# key: permissions.resources.grade_scales
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade scales"
+msgstr "Barèmes de notation"
+
+# key: permissions.resources.admin_panel
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Administration panel"
+msgstr "Panneau d’administration"
+
+# key: permissions.resources.users
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Users"
+msgstr "Utilisateurs"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Roles"
+msgstr "Rôles"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Role assignments"
+msgstr "Attributions de rôles"
+
+# key: permissions.resources.audit_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Audit records"
+msgstr "Enregistrements d’audit"
+
+# key: permissions.resources.security_events
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security events"
+msgstr "Événements de sécurité"
+
+# key: permissions.resources.security_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security settings"
+msgstr "Paramètres de sécurité"
+
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Queue monitor (Flower)"
+msgstr "Moniteur de files d’attente (Flower)"
+
+# key: permissions.resources.institution_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Institution settings"
+msgstr "Paramètres de l’établissement"
+
+# key: permissions.resources.admission_cycles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Admission cycles"
+msgstr "Campagnes d’admission"
+
+# key: permissions.resources.applications
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Applications"
+msgstr "Candidatures"
+
+# key: permissions.resources.courses
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Courses"
+msgstr "Cours"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation requirements"
+msgstr "Conditions d’obtention du diplôme"
+
+# key: permissions.resources.sections
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sections"
+msgstr "Groupes"
+
+# key: permissions.resources.additional_programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Second majors and minors"
+msgstr "Doubles majeures et mineures"
+
+# key: permissions.resources.enrollments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registrations"
+msgstr "Inscriptions"
+
+# key: permissions.resources.registration
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration adjustments"
+msgstr "Ajustements d’inscription"
+
+# key: permissions.resources.registration_rules
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration rules"
+msgstr "Règles d’inscription"
+
+# key: permissions.resources.registration_holds
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration holds and overrides"
+msgstr "Blocages et dérogations d’inscription"
+
+# key: permissions.resources.grades
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grades"
+msgstr "Notes"
+
+# key: permissions.resources.grade_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade changes"
+msgstr "Modifications de notes"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grading policy"
+msgstr "Règles de notation"
+
+# key: permissions.resources.grade_exceptions
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade exceptions"
+msgstr "Dérogations de notes"
+
+# key: permissions.resources.evaluations
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course evaluation"
+msgstr "Évaluation des enseignements"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Examinations"
+msgstr "Examens"
+
+# key: permissions.resources.graduation
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation"
+msgstr "Diplomation"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reports"
+msgstr "Rapports"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "LMS integration"
+msgstr "Intégration LMS"
+
+# key: permissions.resources.certificates
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Certificates"
+msgstr "Attestations"
+
+# key: permissions.admin_panel.access
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Open the administration panel"
+msgstr "Ouvrir le panneau d’administration"
+
+# key: permissions.users.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View users"
+msgstr "Consulter les utilisateurs"
+
+# key: permissions.users.create
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create users"
+msgstr "Créer des utilisateurs"
+
+# key: permissions.users.update
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Edit users"
+msgstr "Modifier les utilisateurs"
+
+# key: permissions.users.reset_mfa
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reset two-factor authentication"
+msgstr "Réinitialiser la double authentification"
+
+# key: permissions.roles.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View roles"
+msgstr "Consulter les rôles"
+
+# key: permissions.roles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit roles"
+msgstr "Créer et modifier des rôles"
+
+# key: permissions.role_assignments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign and end roles"
+msgstr "Attribuer des rôles et y mettre fin"
+
+# key: permissions.audit_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View audit records"
+msgstr "Consulter les enregistrements d’audit"
+
+# key: permissions.security_events.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View security events"
+msgstr "Consulter les événements de sécurité"
+
+# key: permissions.security_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage security settings"
+msgstr "Gérer les paramètres de sécurité"
+
+# key: permissions.institution_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage institution settings"
+msgstr "Gérer les paramètres de l’établissement"
+
+# key: permissions.queue_monitor.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View the queue monitor"
+msgstr "Consulter la supervision des files d’attente"
+
+# key: permissions.reference_data.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View reference data"
+msgstr "Consulter les données de référence"
+
+# key: permissions.reference_data.import
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Import reference data from CSV"
+msgstr "Importer des données de référence depuis un CSV"
+
+# key: permissions.lookup_values.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage code data, countries and languages"
+msgstr "Gérer les nomenclatures, pays et langues"
+
+# key: permissions.org_units.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage org units and reorganizations"
+msgstr "Gérer les unités organisationnelles et les réorganisations"
+
+# key: permissions.programs.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage programs"
+msgstr "Gérer les formations"
+
+# key: permissions.facilities.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage buildings and rooms"
+msgstr "Gérer les bâtiments et les salles"
+
+# key: permissions.terms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage academic years, terms, term types and time slots"
+msgstr "Gérer les années universitaires, semestres, types de semestre et créneaux"
+
+# key: permissions.term_windows.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage term windows"
+msgstr "Gérer les périodes de gestion"
+
+# key: permissions.course_categories.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage course categories"
+msgstr "Gérer les catégories de cours"
+
+# key: permissions.grade_scales.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage grade scales"
+msgstr "Gérer les barèmes de notation"
+
+# key: permissions.people.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View all people"
+msgstr "Consulter toutes les personnes"
+
+# key: permissions.people.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit people"
+msgstr "Créer et modifier des personnes"
+
+# key: permissions.people.view_sensitive
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reveal national ID and passport numbers"
+msgstr "Afficher en clair les numéros d’identification national et de passeport"
+
+# key: permissions.people.merge
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Merge duplicate people"
+msgstr "Fusionner les personnes en double"
+
+# key: permissions.accounts.invite
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Invite people to create an account"
+msgstr "Inviter des personnes à créer un compte"
+
+# key: permissions.student_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View student records"
+msgstr "Consulter les dossiers étudiants"
+
+# key: permissions.student_records.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit student records"
+msgstr "Créer et modifier des dossiers étudiants"
+
+# key: permissions.student_status_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve and record status changes"
+msgstr "Approuver et enregistrer les changements de statut"
+
+# key: permissions.instructors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage instructors"
+msgstr "Gérer les enseignants"
+
+# key: permissions.advisors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign advisors"
+msgstr "Affecter des enseignants référents"
+
+# key: permissions.authentication_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage sign-in methods and SSO"
+msgstr "Gérer les méthodes de connexion et le SSO"
+
+# key: permissions.admission_cycles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage admission cycles and admission settings"
+msgstr "Gérer les campagnes d’admission et les paramètres d’admission"
+
+# key: permissions.applications.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View applications"
+msgstr "Consulter les candidatures"
+
+# key: permissions.applications.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Review and decide applications"
+msgstr "Examiner les candidatures et statuer"
+
+# key: permissions.applications.matriculate
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create student records for admitted applicants"
+msgstr "Créer les dossiers étudiants des candidats admis"
+
+# key: permissions.courses.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage courses, versions and requisites"
+msgstr "Gérer les cours, leurs versions et leurs conditions préalables"
+
+# key: permissions.curriculum.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage graduation requirements"
+msgstr "Gérer les conditions d’obtention du diplôme"
+
+# key: permissions.sections.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View sections"
+msgstr "Consulter les groupes"
+
+# key: permissions.sections.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Plan sections (instructors, times, rooms)"
+msgstr "Planifier les groupes (enseignants, horaires, salles)"
+
+# key: permissions.additional_programs.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Decide second major and minor applications"
+msgstr "Statuer sur les demandes de double majeure et de mineure"
+
+# key: permissions.enrollments.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View registrations and rosters"
+msgstr "Consulter les inscriptions et les listes d’étudiants"
+
+# key: permissions.registration.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register, drop and withdraw students for them (with a reason)"
+msgstr "Inscrire et désinscrire des étudiants, enregistrer leurs abandons à leur place (avec un motif)"
+
+# key: permissions.registration_rules.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage registration rule sets and credit limits"
+msgstr "Gérer les règles d’inscription et les plafonds de crédits"
+
+# key: permissions.registration_holds.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Place and release holds, grant rule overrides"
+msgstr "Poser et lever des blocages, accorder des dérogations aux règles"
+
+# key: permissions.grades.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View grades, grade progress and term records"
+msgstr "Consulter les notes, l’avancement des notes et les bilans semestriels"
+
+# key: permissions.grades.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Finalize and return grades, enter grades for instructors, close terms"
+msgstr "Valider et renvoyer les notes, saisir les notes à la place des enseignants, clôturer les semestres"
+
+# key: permissions.grade_changes.request
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Request a change to a finalized grade"
+msgstr "Demander la modification d’une note définitive"
+
+# key: permissions.grade_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve or reject grade changes (not your own requests)"
+msgstr "Approuver ou refuser les modifications de notes (sauf ses propres demandes)"
+
+# key: permissions.grading_policies.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage GPA, retake, academic standing and honors policy"
+msgstr "Gérer les règles de moyenne, de reprise, de situation académique et de tableau d’honneur"
+
+# key: permissions.grade_exceptions.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Be told when staff submit grades outside the grade caps (department heads, academic office)"
+msgstr "Être prévenu lorsque le personnel soumet des notes hors des plafonds (directeurs de département, service de la scolarité)"
+
+# key: permissions.evaluations.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View course evaluation response rates and results"
+msgstr "Consulter les taux de réponse et les résultats de l’évaluation des enseignements"
+
+# key: permissions.evaluations.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage evaluation forms, term evaluations and publication"
+msgstr "Gérer les questionnaires d’évaluation, les évaluations par semestre et leur publication"
+
+# key: permissions.certificates.issue
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Issue, re-render and revoke certificates"
+msgstr "Délivrer, régénérer et révoquer des attestations"
+
+# key: permissions.certificates.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage certificate kinds, templates and settings"
+msgstr "Gérer les types d’attestation, les modèles et les paramètres"
+
+# key: permissions.assessments.record
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register students, enter and publish results, record external results"
+msgstr "Inscrire des étudiants, saisir et publier des résultats, enregistrer des résultats externes"
+
+# key: permissions.assessments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage examination kinds, areas and sessions"
+msgstr "Gérer les types d’examen, les épreuves et les sessions"
+
+# key: permissions.graduation.audit
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Run and view degree audits"
+msgstr "Lancer et consulter les vérifications du diplôme"
+
+# key: permissions.graduation.process
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Process graduations, grant requirement waivers"
+msgstr "Traiter les diplomations, accorder des dispenses de condition"
+
+# key: permissions.reports.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View standard reports and download them"
+msgstr "Consulter et télécharger les rapports standard"
+
+# key: permissions.lms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage LMS platforms, links and synchronization"
+msgstr "Gérer les plateformes LMS, les liens et la synchronisation"
+
+# key: security.mfa_enforcement.disabled
+#: ninefruits/security/enums.py
+msgid "Not used"
+msgstr "Non utilisée"
+
+# key: security.mfa_enforcement.recommended
+#: ninefruits/security/enums.py
+msgid "Recommended (optional)"
+msgstr "Recommandée (facultative)"
+
+# key: security.mfa_enforcement.required_for_roles
+#: ninefruits/security/enums.py
+msgid "Required for selected roles"
+msgstr "Obligatoire pour les rôles sélectionnés"
+
+# key: security.mfa_enforcement.required_for_all
+#: ninefruits/security/enums.py
+msgid "Required for everyone"
+msgstr "Obligatoire pour tous"
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/security/enums.py
+msgid "Authenticator app"
+msgstr "Application d’authentification"
+
+# key: authentication.two_factor.email_code
+#: ninefruits/security/enums.py
+msgid "Email code"
+msgstr "Code reçu par e-mail"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Applicant"
+msgstr "Candidat"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Student"
+msgstr "Étudiant"
+
+# key: security.personas.alumni
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Alumni"
+msgstr "Ancien étudiant"
+
+# key: security.personas.instructor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Instructor"
+msgstr "Enseignant"
+
+# key: security.personas.advisor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Advisor"
+msgstr "Enseignant référent"
+
+# key: security.scope_types.global
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "All"
+msgstr "Tout"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Org unit"
+msgstr "Unité organisationnelle"
+
+# key: security.scope_types.program
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Program"
+msgstr "Formation"
+
+# key: security.sso_link_modes.manual
+#: ninefruits/security/enums.py
+msgid "Users link their own accounts"
+msgstr "Les utilisateurs lient eux-mêmes leurs comptes"
+
+# key: security.sso_link_modes.institutional_email
+#: ninefruits/security/enums.py
+msgid "Link automatically by verified school email"
+msgstr "Liaison automatique par l’e-mail vérifié de l’établissement"
+
+# key: security.student_number_login.disabled
+#: ninefruits/security/enums.py
+msgid "Not allowed"
+msgstr "Non autorisée"
+
+# key: security.student_number_login.active_records
+#: ninefruits/security/enums.py
+msgid "Current students only"
+msgstr "Étudiants inscrits uniquement"
+
+# key: security.student_number_login.all_records
+#: ninefruits/security/enums.py
+msgid "Current students and graduates"
+msgstr "Étudiants inscrits et diplômés"
+
+# key: authentication.fields.email_or_student_number
+#: ninefruits/security/forms.py
+msgid "Email or student number"
+msgstr "E-mail ou numéro d’étudiant"
+
+# key: authentication.fields.password
+#: ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Password"
+msgstr "Mot de passe"
+
+# key: authentication.login.remember_me
+#: ninefruits/security/forms.py
+msgid "Keep me signed in"
+msgstr "Rester connecté"
+
+# key: auth.inactive
+#: ninefruits/security/middleware.py
+msgid "This account has been deactivated. Contact the administrator."
+msgstr "Ce compte a été désactivé. Contactez l’administrateur."
+
+# key: security.mfa.enrollment_required
+#: ninefruits/security/middleware.py
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "La double authentification est obligatoire pour votre compte. Veuillez la configurer pour continuer."
+
+# key: security.email_code.mail_greeting
+#: ninefruits/security/notifications.py
+msgid "Hello,"
+msgstr "Bonjour,"
+
+# key: security.email_code.mail_intro
+#: ninefruits/security/notifications.py
+msgid "Use this code to finish signing in:"
+msgstr "Utilisez ce code pour terminer votre connexion :"
+
+# key: security.email_code.mail_expiry
+#: ninefruits/security/notifications.py
+#, python-format
+msgid "The code expires in %(minutes)s minutes and can be used once."
+msgstr "Le code expire dans %(minutes)s minutes et ne peut être utilisé qu’une fois."
+
+# key: security.email_code.mail_ignore
+#: ninefruits/security/notifications.py
+msgid "If you did not try to sign in, change your password."
+msgstr "Si vous n’avez pas tenté de vous connecter, changez votre mot de passe."
+
+# key: security.email_code.mail_salutation
+#: ninefruits/security/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Merci,\n"
+"%(app)s"
+
+# key: security.email_code.mail_subject
+#: ninefruits/security/notifications.py
+msgid "Your sign-in code"
+msgstr "Votre code de connexion"
+
+# key: admin.settings.security.mfa_enforcement
+#: ninefruits/security/settings_pages.py
+msgid "Policy"
+msgstr "Politique"
+
+# key: admin.settings.security.mfa_required_roles
+#: ninefruits/security/settings_pages.py
+msgid "Roles that must use two-factor authentication"
+msgstr "Rôles devant utiliser la double authentification"
+
+#: ninefruits/security/settings_pages.py
+msgid "Used when the policy is Required for selected roles."
+msgstr "Utilisé lorsque la politique est « Obligatoire pour les rôles sélectionnés »."
+
+# key: admin.settings.security.mfa_grace_period_days
+#: ninefruits/security/settings_pages.py
+msgid "Grace period (days)"
+msgstr "Délai de grâce (jours)"
+
+# key: admin.settings.security.mfa_grace_period_help
+#: ninefruits/security/settings_pages.py
+msgid "Days a user can keep working after the requirement first applies to them. 0 means immediately."
+msgstr "Nombre de jours pendant lesquels un utilisateur peut continuer à travailler après la première application de l’exigence. 0 signifie immédiatement."
+
+# key: admin.settings.security.mfa_remember_device_days
+#: ninefruits/security/settings_pages.py
+msgid "Remember devices for (days)"
+msgstr "Mémoriser les appareils pendant (jours)"
+
+# key: admin.settings.security.mfa_remember_device_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can skip the code on a trusted device for this many days. 0 turns this off."
+msgstr "Les utilisateurs peuvent omettre le code sur un appareil de confiance pendant ce nombre de jours. 0 désactive cette option."
+
+# key: admin.settings.security.mfa_email_code_enabled
+#: ninefruits/security/settings_pages.py
+msgid "Allow email codes"
+msgstr "Autoriser les codes par e-mail"
+
+# key: admin.settings.security.mfa_email_code_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can choose one-time codes by email instead of an authenticator app. Turning this off stops email codes from counting as two-factor authentication."
+msgstr "Les utilisateurs peuvent choisir des codes à usage unique par e-mail au lieu d’une application d’authentification. Si cette option est désactivée, les codes par e-mail ne comptent plus comme double authentification."
+
+#: ninefruits/security/settings_pages.py
+msgid "Choose at least one role."
+msgstr "Choisissez au moins un rôle."
+
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: ninefruits/security/settings_pages.py
+msgid "Security"
+msgstr "Sécurité"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/security/settings_pages.py ninefruits/security/views.py
+msgid "Two-factor authentication"
+msgstr "Double authentification"
+
+# key: admin.settings.security.mfa_description
+#: ninefruits/security/settings_pages.py
+msgid "Changes apply to every user immediately."
+msgstr "Les modifications s’appliquent immédiatement à tous les utilisateurs."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
+msgstr "%(key)s : la clé utilise des lettres minuscules, des chiffres et des tirets."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: each provider needs its own key."
+msgstr "%(key)s : chaque fournisseur a besoin de sa propre clé."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the button label is required (64 characters at most)."
+msgstr "%(key)s : le libellé du bouton est obligatoire (64 caractères au plus)."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the issuer must be a URL."
+msgstr "%(key)s : l’émetteur doit être une URL."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the client ID is required."
+msgstr "%(key)s : l’ID client est obligatoire."
+
+# key: admin.settings.authentication.student_number_login
+#: ninefruits/security/settings_pages.py
+msgid "Sign in with student number"
+msgstr "Connexion avec le numéro d’étudiant"
+
+# key: admin.settings.authentication.password_login_for_sso_users
+#: ninefruits/security/settings_pages.py
+msgid "Allow passwords for users with school sign-in"
+msgstr "Autoriser les mots de passe pour les utilisateurs de la connexion établissement"
+
+# key: admin.settings.authentication.password_login_for_sso_users_help
+#: ninefruits/security/settings_pages.py
+msgid "When off, users who have linked a school account must use it to sign in."
+msgstr "Si cette option est désactivée, les utilisateurs ayant lié un compte de l’établissement doivent l’utiliser pour se connecter."
+
+# key: admin.settings.authentication.lockout_threshold
+#: ninefruits/security/settings_pages.py
+msgid "Lock after failed attempts"
+msgstr "Verrouiller après échecs"
+
+# key: admin.settings.authentication.lockout_threshold_help
+#: ninefruits/security/settings_pages.py
+msgid "Failed passwords in a row before the account is locked. 0 turns locking off."
+msgstr "Nombre d’échecs de mot de passe consécutifs avant le verrouillage du compte. 0 désactive le verrouillage."
+
+# key: admin.settings.authentication.lockout_minutes
+#: ninefruits/security/settings_pages.py
+msgid "Lock duration (minutes)"
+msgstr "Durée du verrouillage (minutes)"
+
+# key: admin.settings.authentication.sso_link_mode
+#: ninefruits/security/settings_pages.py
+msgid "Account linking"
+msgstr "Liaison des comptes"
+
+# key: admin.settings.authentication.sso_providers
+#: ninefruits/security/settings_pages.py
+msgid "Providers"
+msgstr "Fournisseurs"
+
+# key: admin.settings.authentication.title
+#: ninefruits/security/settings_pages.py
+msgid "Sign-in methods"
+msgstr "Méthodes de connexion"
+
+# key: admin.settings.authentication.password_section
+#: ninefruits/security/settings_pages.py
+msgid "Passwords"
+msgstr "Mots de passe"
+
+# key: admin.settings.authentication.sso_section
+#: ninefruits/security/settings_pages.py
+msgid "School sign-in (SSO)"
+msgstr "Connexion établissement (SSO)"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/security/templates/security/admin/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Annuler"
+
+# key: admin.settings.authentication.provider_key
+# key: lms.fields.credential_key
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgctxt "security"
+msgid "Key"
+msgstr "Clé"
+
+# key: admin.settings.authentication.provider_label
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Button label"
+msgstr "Libellé du bouton"
+
+# key: admin.settings.authentication.issuer
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Issuer URL"
+msgstr "URL de l’émetteur"
+
+# key: admin.settings.authentication.client_id
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client ID"
+msgstr "ID client"
+
+# key: admin.settings.authentication.client_secret
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client secret"
+msgstr "Secret client"
+
+# key: admin.settings.authentication.client_secret_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Stored encrypted. Leave empty to keep the stored value."
+msgstr "Stocké chiffré. Laissez vide pour conserver la valeur enregistrée."
+
+# key: admin.settings.authentication.scopes
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Scopes"
+msgstr "Scopes"
+
+# key: admin.settings.authentication.trusts_mfa
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Counts as two-factor authentication"
+msgstr "Compte comme double authentification"
+
+# key: admin.settings.authentication.trusts_mfa_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Turn on only if the school's sign-in itself requires two-factor authentication."
+msgstr "À activer uniquement si la connexion de l’établissement exige elle-même une double authentification."
+
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Remove this provider"
+msgstr "Supprimer ce fournisseur"
+
+# key: admin.settings.authentication.redirect_uri
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Redirect URI to register with the provider"
+msgstr "URI de redirection à enregistrer auprès du fournisseur"
+
+#: ninefruits/security/views.py
+msgid "The email code must be 6 digits."
+msgstr "Le code reçu par e-mail doit comporter 6 chiffres."
+
+# key: security.email_code.sent
+#: ninefruits/security/views.py
+msgid "A new code has been sent to your email."
+msgstr "Un nouveau code a été envoyé à votre adresse e-mail."
+
+# key: security.email_code.wait
+#: ninefruits/security/views.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "Veuillez patienter %(seconds)s secondes avant de demander un autre code."
+
+# key: security.sso.failed
+#: ninefruits/security/views_sso.py
+msgid "School sign-in failed. Try again or sign in with your password."
+msgstr "La connexion établissement a échoué. Réessayez ou connectez-vous avec votre mot de passe."
+
+# key: security.sso.expired
+#: ninefruits/security/views_sso.py
+msgid "The sign-in attempt expired. Try again."
+msgstr "La tentative de connexion a expiré. Réessayez."
+
+# key: security.sso.cancelled
+#: ninefruits/security/views_sso.py
+msgid "Sign-in was cancelled."
+msgstr "La connexion a été annulée."
+
+# key: security.sso.linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "%(provider)s account linked."
+msgstr "Compte %(provider)s lié."
+
+# key: security.sso.not_linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
+msgstr "Votre compte %(provider)s n’est lié à aucun compte ici. Connectez-vous avec votre mot de passe et liez-le dans Sécurité."
+
+#: models/user.py
+msgid "user"
+msgstr "utilisateur"
+
+#: models/user.py
+msgid "users"
+msgstr "utilisateurs"
+
+#: models/role.py
+msgid "role"
+msgstr "rôle"
+
+#: models/role.py
+msgid "roles"
+msgstr "rôles"

@@ -1226,3 +1226,13 @@ msgstr "选课成功。"
 #: views/portal.py:334
 msgid "Added to the cart."
 msgstr "已加入购物车。"
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "打开选课"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "已豁免"

@@ -1,0 +1,457 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: curriculum.errors.no_version_to_revise
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "There is no version in effect on that date."
+msgstr "त्यो मितिमा लागू संस्करण छैन।"
+
+# key: curriculum.errors.revise_same_start
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "A version already starts on that date. Edit it instead."
+msgstr "त्यो मितिमा सुरु हुने संस्करण पहिले नै छ। बरु त्यसैलाई सम्पादन गर्नुहोस्।"
+
+# key: reference.fields.name
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgctxt "reference"
+msgid "Name"
+msgstr "नाम"
+
+# key: reference.fields.parent
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/models/course_category.py
+msgid "Parent"
+msgstr "माथिल्लो"
+
+# key: validation.after_or_equal
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s %(date)s वा त्यसपछिको मिति हुनुपर्छ।"
+
+# key: reference.fields.effective_end_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid until"
+msgstr "मान्य सम्म"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid from"
+msgstr "मान्य देखि"
+
+# key: curriculum.errors.version_overlap
+#: ninefruits/curriculum/admin/courses.py
+msgid "This period overlaps another version of the course."
+msgstr "यो अवधि विषयको अर्को संस्करणसँग खप्टिन्छ।"
+
+# key: validation.alpha_dash
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s मा अक्षर, अङ्क, ड्यास र अन्डरस्कोर मात्र हुनुपर्छ।"
+
+# key: curriculum.fields.code
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Course code"
+msgstr "विषय कोड"
+
+# key: curriculum.resources.course_versions.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "course version"
+msgstr "विषय संस्करण"
+
+# key: curriculum.resources.course_versions.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "versions"
+msgstr "संस्करणहरू"
+
+# key: curriculum.fields.title
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "शीर्षक"
+
+# key: curriculum.fields.requisites
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Requisites"
+msgstr "पूर्वशर्तहरू"
+
+# key: curriculum.actions.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "Revise from a date"
+msgstr "मितिदेखि संशोधन गर्नुहोस्"
+
+# key: curriculum.resources.course_equivalencies.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalency"
+msgstr "समकक्षता"
+
+# key: curriculum.resources.course_equivalencies.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalent courses"
+msgstr "समकक्ष विषयहरू"
+
+# key: curriculum.fields.managing_unit
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Managing unit"
+msgstr "व्यवस्थापन गर्ने एकाइ"
+
+# key: curriculum.fields.effective_from
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version from"
+msgstr "नयाँ संस्करण लागू हुने मिति"
+
+# key: common.reason
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "common"
+msgid "Reason"
+msgstr "कारण"
+
+# key: validation.after
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s %(date)s पछिको मिति हुनुपर्छ।"
+
+# key: curriculum.sections.course
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "curriculum.sections"
+msgid "Course"
+msgstr "विषय"
+
+# key: curriculum.sections.first_version
+#: ninefruits/curriculum/admin/courses.py
+msgid "First version"
+msgstr "पहिलो संस्करण"
+
+#: ninefruits/curriculum/admin/courses.py
+msgid "Add course version"
+msgstr "विषय संस्करण थप्नुहोस्"
+
+# key: curriculum.fields.credits
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "क्रेडिट"
+
+# key: curriculum.notifications.revised
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version created."
+msgstr "नयाँ संस्करण बनाइयो।"
+
+# key: curriculum.help.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "The current version ends the day before; the new version starts with a copy of it and its requisites. Sections already offered keep their version."
+msgstr "हालको संस्करण अघिल्लो दिन सकिन्छ; नयाँ संस्करण त्यसको र त्यसका पूर्वशर्तहरूको प्रतिलिपिबाट सुरु हुन्छ। पहिले नै सञ्चालित सेक्सनहरूले आफ्नै संस्करण राख्छन्।"
+
+# key: validation.gte.numeric
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s %(value)s वा बढी हुनुपर्छ।"
+
+# key: curriculum.fields.catalog_year_to
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year to"
+msgstr "पाठ्यक्रम वर्ष (सम्म)"
+
+# key: curriculum.fields.catalog_year_from
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year from"
+msgstr "पाठ्यक्रम वर्ष (देखि)"
+
+# key: curriculum.errors.requirement_set_overlap
+#: ninefruits/curriculum/admin/requirements.py
+msgid "These catalog years overlap another requirement set of the program and role."
+msgstr "यी पाठ्यक्रम वर्षहरू कार्यक्रम र भूमिकाको अर्को आवश्यकता सेटसँग खप्टिन्छन्।"
+
+# key: curriculum.resources.courses.plural_label
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/importers.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "courses"
+msgstr "विषयहरू"
+
+# key: validation.required
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s अनिवार्य छ।"
+
+# key: curriculum.fields.category
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgid "Course category"
+msgstr "विषयको वर्ग"
+
+# key: curriculum.fields.min_credits
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Minimum credits"
+msgstr "न्यूनतम क्रेडिट"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Examination kind"
+msgstr "परीक्षाको प्रकार"
+
+# key: curriculum.sections.requirements
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Requirements"
+msgstr "आवश्यकताहरू"
+
+# key: curriculum.fields.program_role
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Program role"
+msgstr "कार्यक्रमको भूमिका"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Programs"
+msgstr "कार्यक्रमहरू"
+
+# key: curriculum.grading_bases.graded
+#: ninefruits/curriculum/enums.py
+msgid "Letter grade"
+msgstr "अक्षर ग्रेड"
+
+# key: curriculum.grading_bases.pass_fail
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Pass/fail"
+msgstr "उत्तीर्ण/अनुत्तीर्ण"
+
+# key: curriculum.program_roles.primary
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Primary program"
+msgstr "मुख्य कार्यक्रम"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/curriculum/enums.py
+msgid "Second major"
+msgstr "दोस्रो मुख्य विषय"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/curriculum/enums.py
+msgid "Minor"
+msgstr "माइनर"
+
+# key: curriculum.requirement_kinds.category_credits
+#: ninefruits/curriculum/enums.py
+msgid "Credits in a category"
+msgstr "वर्गभित्रका क्रेडिट"
+
+# key: curriculum.requirement_kinds.required_courses
+#: ninefruits/curriculum/enums.py
+msgid "Required courses"
+msgstr "अनिवार्य विषयहरू"
+
+# key: curriculum.requirement_kinds.course_group
+#: ninefruits/curriculum/enums.py
+msgid "Choice from courses"
+msgstr "विषयहरूमध्ये छनोट"
+
+# key: curriculum.requirement_kinds.assessment_pass
+#: ninefruits/curriculum/enums.py
+msgid "Passed examination"
+msgstr "उत्तीर्ण परीक्षा"
+
+# key: curriculum.requisite_kinds.prerequisite
+#: ninefruits/curriculum/enums.py
+msgid "Prerequisite"
+msgstr "पूर्वआवश्यक विषय"
+
+# key: curriculum.requisite_kinds.corequisite
+#: ninefruits/curriculum/enums.py
+msgid "Corequisite"
+msgstr "सहआवश्यक विषय"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/curriculum/importers.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "छानिएको %(attribute)s अमान्य छ।"
+
+# key: curriculum.import.org_unit_required
+#: ninefruits/curriculum/importers.py
+msgid "New courses need an org_unit (code of the managing unit)."
+msgstr "नयाँ विषयहरूलाई org_unit (व्यवस्थापन गर्ने एकाइको कोड) चाहिन्छ।"
+
+# key: reference.fields.is_active
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/course_category.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "सक्रिय"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/curriculum/models/course.py
+msgid "course"
+msgstr "विषय"
+
+# key: curriculum.fields.description
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Description"
+msgstr "विवरण"
+
+# key: curriculum.fields.lecture_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lecture hours"
+msgstr "व्याख्यान घण्टा"
+
+# key: curriculum.fields.lab_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lab hours"
+msgstr "प्रयोगशाला घण्टा"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/curriculum/models/course.py
+msgid "Grading"
+msgstr "ग्रेडिङ"
+
+# key: curriculum.fields.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Counts toward the credit limit"
+msgstr "क्रेडिट सीमामा गनिन्छ"
+
+# key: curriculum.help.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Turn off for courses outside the term credit limit (e.g. credit bank courses)."
+msgstr "सेमेस्टरको क्रेडिट सीमाबाहिरका विषयका लागि बन्द गर्नुहोस् (जस्तै क्रेडिट बैंक विषयहरू)।"
+
+# key: curriculum.fields.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken again for credit"
+msgstr "क्रेडिटका लागि फेरि लिन सकिन्छ"
+
+# key: curriculum.help.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "Taking it again earns credits again (e.g. seminars with changing topics) instead of being a retake."
+msgstr "फेरि लिँदा पुनः लिइएको नमानी फेरि क्रेडिट पाइन्छ (जस्तै शीर्षक बदलिने सेमिनार)।"
+
+# key: evaluation.fields.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgctxt "evaluation.fields"
+msgid "Course evaluation"
+msgstr "विषय मूल्याङ्कन"
+
+# key: evaluation.help.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgid "Off for internships or practica that are not evaluated."
+msgstr "मूल्याङ्कन नगरिने इन्टर्नसिप वा प्रयोगात्मक अभ्यासका लागि बन्द।"
+
+# key: curriculum.fields.requisite_kind
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Kind"
+msgstr "प्रकार"
+
+# key: curriculum.fields.group_number
+#: ninefruits/curriculum/models/course.py
+msgid "Group"
+msgstr "समूह"
+
+# key: curriculum.fields.required_course
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum.fields"
+msgid "Course"
+msgstr "विषय"
+
+# key: curriculum.fields.minimum_grade
+#: ninefruits/curriculum/models/course.py
+msgid "Minimum grade"
+msgstr "न्यूनतम ग्रेड"
+
+# key: curriculum.fields.allows_concurrent
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken in the same term"
+msgstr "एउटै सेमेस्टरमा लिन सकिन्छ"
+
+# key: curriculum.fields.equivalent_course
+#: ninefruits/curriculum/models/course.py
+msgid "Equivalent course"
+msgstr "समकक्ष विषय"
+
+# key: curriculum.fields.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Mutual"
+msgstr "पारस्परिक"
+
+# key: curriculum.help.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Each counts for the other. Off: only the equivalent course counts for this one."
+msgstr "दुवै एकअर्काका लागि गनिन्छन्। बन्द: समकक्ष विषय मात्र यसका लागि गनिन्छ।"
+
+# key: curriculum.fields.note
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Note"
+msgstr "टिप्पणी"
+
+# key: reference.fields.code
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Code"
+msgstr "कोड"
+
+# key: reference.fields.sort_order
+#: ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgid "Order"
+msgstr "क्रम"
+
+# key: reference.resources.course_categories.label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course category"
+msgstr "विषयको वर्ग"
+
+# key: reference.resources.course_categories.plural_label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course categories"
+msgstr "विषयका वर्गहरू"
+
+# key: curriculum.help.catalog_year_to
+#: ninefruits/curriculum/models/requirement.py
+msgid "Empty: also for later catalog years until another set starts."
+msgstr "खाली: अर्को सेट सुरु नभएसम्म पछिका पाठ्यक्रम वर्षहरूका लागि पनि।"
+
+# key: curriculum.fields.total_credits
+#: ninefruits/curriculum/models/requirement.py
+msgid "Total credits"
+msgstr "जम्मा क्रेडिट"
+
+# key: curriculum.resources.requirement_sets.label
+#: ninefruits/curriculum/models/requirement.py
+msgid "graduation requirements"
+msgstr "स्नातक आवश्यकता"
+
+# key: curriculum.fields.requirement_kind
+#: ninefruits/curriculum/models/requirement.py
+msgid "Requirement"
+msgstr "आवश्यकता"
+
+# key: curriculum.fields.min_courses
+#: ninefruits/curriculum/models/requirement.py
+msgid "Minimum courses"
+msgstr "न्यूनतम विषय"

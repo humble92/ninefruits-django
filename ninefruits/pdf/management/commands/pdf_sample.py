@@ -1,4 +1,5 @@
-"""``pdf_sample``: renders a mixed Korean, Chinese, Lao and English sample to check PDF fonts
+"""``pdf_sample``: renders a mixed-script sample (Hangul, CJK, Lao, Thai, Devanagari, Cyrillic,
+Latin) to check PDF fonts
 (original ``pdf:sample``)."""
 
 from __future__ import annotations
@@ -16,7 +17,7 @@ from ninefruits.pdf import PdfRenderingError, get_renderer
 
 
 class Command(StatusCommand):
-    help = "Render a mixed Korean, Chinese, Lao and English sample to check PDF fonts"
+    help = "Render a mixed-script sample (Hangul, CJK, Lao, Thai, Devanagari, Cyrillic, Latin) to check PDF fonts"
 
     def add_arguments(self, parser: CommandParser) -> None:
         parser.add_argument(

@@ -1,0 +1,472 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: attendance.errors.forbidden
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "Үүнийг зөвхөн тухайн бүлгийн багш болон бүлгийг хариуцсан ажилтан хийж болно."
+
+# key: attendance.errors.time_order
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "The end time must be after the start time."
+msgstr "Дуусах цаг эхлэх цагаас хойш байх ёстой."
+
+# key: attendance.errors.outside_session
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "The date is outside the session."
+msgstr "Огноо хичээллэх хугацаанаас гадуур байна."
+
+# key: attendance.errors.duplicate_meeting
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "A meeting at that date and time already exists."
+msgstr "Тухайн огноо, цагт хичээлийн цаг аль хэдийн байна."
+
+# key: attendance.errors.already_cancelled
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "This meeting is already cancelled."
+msgstr "Энэ хичээлийн цагийг аль хэдийн цуцалсан."
+
+# key: registration.errors.reason_required
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "Enter a reason."
+msgstr "Шалтгааныг оруулна уу."
+
+# key: attendance.errors.meeting_cancelled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "This meeting is cancelled."
+msgstr "Энэ хичээлийн цаг цуцлагдсан."
+
+# key: attendance.errors.meeting_future
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "Ирцийг хичээл болох өдрөөс эхлэн оруулж болно."
+
+# key: attendance.errors.not_enrolled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "A student is not enrolled in this section."
+msgstr "Нэг оюутан энэ бүлэгт бүртгэлгүй байна."
+
+# key: attendance.errors.invalid_status
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Unknown attendance status."
+msgstr "Тодорхойгүй ирцийн төлөв."
+
+# key: common.reason
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Шалтгаан"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Class meetings"
+msgstr "Хичээлийн цагууд"
+
+# key: attendance.actions.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Generate meetings"
+msgstr "Хичээлийн цаг үүсгэх"
+
+# key: attendance.portal.generated
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "%(count)s хичээлийн цаг үүслээ."
+
+# key: attendance.help.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "Долоо хоногийн хуваарийн цаг бүрээр тухайн хугацаанд нэг хичээлийн цаг үүсгэнэ. Байгаа хичээлийн цаг болон ирцийг хэвээр үлдээнэ."
+
+# key: attendance.portal.meeting_cancelled
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting cancelled."
+msgstr "Хичээлийн цагийг цуцаллаа."
+
+# key: attendance.portal.cancel
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "Цуцлах"
+
+# key: attendance.portal.meeting_restored
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting restored."
+msgstr "Хичээлийн цагийг сэргээлээ."
+
+# key: attendance.portal.restore
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Restore"
+msgstr "Сэргээх"
+
+# key: portal.navigation.attendance
+#: ninefruits/attendance/apps.py
+msgctxt "portal"
+msgid "Attendance"
+msgstr "Ирц"
+
+# key: attendance.statuses.present
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Present"
+msgstr "Ирсэн"
+
+# key: attendance.statuses.late
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Late"
+msgstr "Хоцорсон"
+
+# key: attendance.statuses.absent
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Absent"
+msgstr "Тасалсан"
+
+# key: attendance.statuses.excused
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Excused"
+msgstr "Чөлөөтэй"
+
+# key: attendance.meeting_statuses.scheduled
+#: ninefruits/attendance/enums.py
+msgid "Scheduled"
+msgstr "Товлосон"
+
+# key: attendance.meeting_statuses.cancelled
+#: ninefruits/attendance/enums.py
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "Цуцалсан"
+
+# key: offering.fields.section
+#: ninefruits/attendance/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Бүлэг"
+
+# key: attendance.fields.meeting_date
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Date"
+msgstr "Огноо"
+
+# key: attendance.fields.start_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Start"
+msgstr "Эхлэх"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "End"
+msgstr "Дуусах"
+
+# key: offering.fields.room
+#: ninefruits/attendance/models.py
+msgid "Room"
+msgstr "Танхим"
+
+# key: registration.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Төлөв"
+
+#: ninefruits/attendance/models.py
+msgid "class meeting"
+msgstr "хичээлийн цаг"
+
+# key: attendance.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "Ирц"
+
+# key: attendance.fields.note
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Note"
+msgstr "Тэмдэглэл"
+
+#: ninefruits/attendance/models.py
+msgid "attendance record"
+msgstr "ирцийн бүртгэл"
+
+#: ninefruits/attendance/models.py
+msgid "attendance records"
+msgstr "ирцийн бүртгэлүүд"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Student number"
+msgstr "Оюутны код"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Name"
+msgstr "Нэр"
+
+# key: reference.resources.programs.label
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "program"
+msgstr "хөтөлбөр"
+
+# key: people.fields.year_level
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Year"
+msgstr "Курс"
+
+# key: people.fields.contact_email
+#: ninefruits/attendance/services/roster.py
+msgid "Contact email"
+msgstr "Холбоо барих и-мэйл"
+
+# key: attendance.fields.time
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Time"
+msgstr "Цаг"
+
+# key: reference.resources.rooms.label
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "room"
+msgstr "танхим"
+
+# key: attendance.fields.recorded
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Recorded"
+msgstr "Бүртгэсэн"
+
+# key: attendance.portal.no_meetings
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "Одоогоор хичээлийн цаг алга. Долоо хоногийн хуваарийн цагаас үүсгэнэ үү."
+
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "Instructors"
+msgstr "Багш нар"
+
+# key: attendance.sheet.printed
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "Хэвлэсэн: %(date)s"
+
+# key: attendance.sheet.present
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "P"
+msgstr "И"
+
+# key: attendance.sheet.late
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "L"
+msgstr "Х"
+
+# key: attendance.sheet.absent
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "A"
+msgstr "Т"
+
+# key: attendance.sheet.excused
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "Ч"
+
+# key: attendance.sheet.legend
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "O ирсэн · △ хоцорсон · X тасалсан · Ч чөлөөтэй · хоосон бүртгээгүй"
+
+# key: attendance.portal.my_intro
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Attendance recorded by your instructors, per course."
+msgstr "Багш нарын бүртгэсэн ирц, хичээл тус бүрээр."
+
+# key: reference.resources.terms.label
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "term"
+msgstr "улирал"
+
+# key: offering.timetable.mode
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Show"
+msgstr "Харуулах"
+
+# key: attendance.fields.rate
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance rate"
+msgstr "Ирцийн хувь"
+
+# key: attendance.portal.not_recorded
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Not recorded"
+msgstr "Бүртгээгүй"
+
+# key: attendance.portal.no_courses
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "No courses in this term."
+msgstr "Энэ улиралд хичээл алга."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "My teaching"
+msgstr "Миний заах хичээл"
+
+# key: attendance.portal.intro
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "%(held)s хичээл орсон, %(students)s оюутан."
+
+# key: attendance.portal.roster_csv
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster (CSV)"
+msgstr "Нэрсийн жагсаалт (CSV)"
+
+# key: attendance.portal.sheet_pdf
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance sheet (PDF)"
+msgstr "Ирцийн хуудас (PDF)"
+
+# key: attendance.portal.entry_for
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "%(date)s %(time)s-ийн ирц"
+
+# key: attendance.portal.mark_all_present
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "All present"
+msgstr "Бүгд ирсэн"
+
+# key: evaluation.portal.back
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Back"
+msgstr "Буцах"
+
+# key: attendance.portal.no_students
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No students are enrolled."
+msgstr "Бүртгэлтэй оюутан алга."
+
+# key: attendance.portal.save
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Save attendance"
+msgstr "Ирц хадгалах"
+
+# key: attendance.portal.roster
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster"
+msgstr "Нэрсийн жагсаалт"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Photo"
+msgstr "Зураг"
+
+# key: attendance.portal.generate
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Generate from meeting times"
+msgstr "Хуваарийн цагаас үүсгэх"
+
+# key: attendance.portal.enter
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "Ирц"
+
+# key: attendance.portal.cancel_reason
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "Энэ хичээлийн цагийг яагаад цуцалж байна вэ? (баярын өдөр, багш ирээгүй, ...)"
+
+# key: attendance.portal.add_meeting
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Add a meeting"
+msgstr "Хичээлийн цаг нэмэх"
+
+# key: attendance.sheet.marks.present
+#: ninefruits/attendance/views/downloads.py
+msgid "O"
+msgstr "O"
+
+# key: attendance.sheet.marks.late
+#: ninefruits/attendance/views/downloads.py
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: ninefruits/attendance/views/downloads.py
+msgid "X"
+msgstr "X"
+
+# key: attendance.sheet.marks.excused
+#: ninefruits/attendance/views/downloads.py
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "Ч"
+
+# key: attendance.sheet.title
+#: ninefruits/attendance/views/downloads.py
+msgid "Attendance sheet"
+msgstr "Ирцийн хуудас"
+
+#: ninefruits/attendance/views/downloads.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF үүсгэж чадсангүй. Дараа дахин оролдоно уу."
+
+# key: attendance.portal.open
+#: ninefruits/attendance/views/portal.py
+msgctxt "attendance"
+msgid "Open"
+msgstr "Нээх"
+
+# key: attendance.portal.title
+#: ninefruits/attendance/views/portal.py
+msgid "Roster and attendance"
+msgstr "Нэрсийн жагсаалт ба ирц"
+
+# key: attendance.portal.saved
+#: ninefruits/attendance/views/portal.py
+msgid "Attendance saved."
+msgstr "Ирц хадгаллаа."
+
+# key: attendance.portal.meeting_added
+#: ninefruits/attendance/views/portal.py
+msgid "Meeting added."
+msgstr "Хичээлийн цаг нэмлээ."
+
+# key: attendance.portal.my_title
+#: ninefruits/attendance/views/portal.py
+msgid "My attendance"
+msgstr "Миний ирц"

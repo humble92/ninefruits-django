@@ -1,7 +1,7 @@
 # 管理命令参考
 
 - 对象：IT 运维人员
-- 范围：本仓库 Ninefruits 应用（`ninefruits/*/management/commands/`）注册的全部命令，以及运维中使用的 Django 内置命令。新增命令时必须同时在本文档（4 种语言）中添加 `### \`命令\`` 条目，否则 CI 不通过（`tests/tooling/test_command_documentation.py`）。
+- 范围：本仓库 Ninefruits 应用（`ninefruits/*/management/commands/`）注册的全部命令，以及运维中使用的 Django 内置命令。新增命令时必须同时在本文档（16 种语言）中添加 `### \`命令\`` 条目，否则 CI 不通过（`tests/tooling/test_command_documentation.py`）。
 
 ## 通用说明
 
@@ -509,7 +509,7 @@
 
 ### `pdf_sample`
 
-- 用途：把混合韩语、中文、老挝语和英语的表格渲染为 PDF，检查字体以及与 PDF 服务（Gotenberg）的连接。
+- 用途：把混合韩文、汉字与假名、老挝文、泰文、天城文、西里尔文和拉丁文的表格渲染为 PDF，检查字体以及与 PDF 服务（Gotenberg）的连接。
 - 参数：`[path]`（默认 `pdf-sample.pdf`，相对于私有文件存储 `PRIVATE_MEDIA_ROOT`）。
 - 审计：不记录
 - 失败时：退出码 1。连接错误时检查 `GOTENBERG_URL`、`GOTENBERG_TIMEOUT` 和 Gotenberg 容器状态。

@@ -1,0 +1,219 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "%(type)s の取り込みが完了しました"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "%(count)s 行を取り込みました。"
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s 行が失敗しました。失敗した行をダウンロードして修正してください。"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "失敗した行"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "失敗した行"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "行"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "取り込みの種類"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "失敗した行"
+
+# key: admissions.fields.status
+# key: offering.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "状態"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "待機中"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "失敗した行をダウンロード"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "組織単位"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "プログラム"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "建物"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "教室"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "コード"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "修了"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "ファイル"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "処理済みの行"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "行数"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "取り込んだ行"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "取り込み実行者"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "開始"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "CSV 取り込み"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "CSV 取り込み履歴"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "エラー"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s は必須です。"
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s には %(date)s 以降の日付を指定してください。"
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s は %(max)s 文字以下で入力してください。"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "選択された %(attribute)s は正しくありません。"
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s には整数を指定してください。"
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s には数値を指定してください。"
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "%(attribute)s には true か false を指定してください。"
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s には有効な日付を指定してください。"
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s は %(min)s から %(max)s の間で指定してください。"
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s には %(min)s 以上の値を指定してください。"
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "%(column)s のコード「%(code)s」は不明です。"
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "データベースで拒否されました: %(message)s"

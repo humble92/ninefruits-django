@@ -1,0 +1,519 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: certificate.errors.type_inactive
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "この種別の証明書は現在発行していません。"
+
+# key: certificate.errors.hold
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "この学生には証明書発行を制限する措置があります。先に解除してください。"
+
+# key: certificate.errors.no_template
+#: ninefruits/certificate/actions/issue_certificate.py ninefruits/certificate/services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "この種別には言語「%(locale)s」のテンプレートがありません。"
+
+# key: certificate.errors.already_revoked
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "この証明書はすでに失効しています。"
+
+# key: registration.errors.reason_required
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "理由を入力してください。"
+
+# key: certificate.errors.audience
+#: ninefruits/certificate/actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "この証明書の対象は次のとおりです: %(audience)s"
+
+# key: certificate.fields.type
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "種別"
+
+# key: common.language
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "common"
+msgid "Language"
+msgstr "言語"
+
+# key: certificate.fields.purpose
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Purpose"
+msgstr "用途"
+
+# key: certificate.fields.copies
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/models.py
+msgid "Copies"
+msgstr "部数"
+
+# key: common.reason
+#: ninefruits/certificate/admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: registration.fields.status
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "状態"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/services/renderer.py
+msgid "Student number"
+msgstr "学籍番号"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/certificate/admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "氏名"
+
+# key: certificate.fields.issued_by
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Issued by"
+msgstr "発行者"
+
+# key: certificate.actions.download
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: ninefruits/certificate/admin/issues.py
+msgid "Verification page"
+msgstr "検証ページ"
+
+# key: certificate.actions.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Render again"
+msgstr "再作成"
+
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF を作成できませんでした。しばらくしてからもう一度お試しください。"
+
+# key: common.saved
+#: ninefruits/certificate/admin/issues.py
+msgid "Saved"
+msgstr "保存しました"
+
+# key: certificate.help.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Renders the PDF again from the current data and template. The serial number and verification code stay."
+msgstr "現在のデータとテンプレートから PDF を再作成します。発行番号と検証コードは変わりません。"
+
+# key: certificate.actions.revoke
+#: ninefruits/certificate/admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "失効させる"
+
+# key: certificate.actions.issue
+#: ninefruits/certificate/admin/student_record.py
+msgid "Issue certificate"
+msgstr "証明書を発行"
+
+# key: certificate.notifications.issued
+#: ninefruits/certificate/admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "証明書 %(serial)s を発行しました。"
+
+# key: reference.fields.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: certificate.help.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "発行番号に使用します。例: ENR、GRD、TRN"
+
+# key: certificate.help.body
+#: ninefruits/certificate/admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "段落は空行で区切ります。プレースホルダー: %(placeholders)s"
+
+# key: certificate.fields.templates
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Templates"
+msgstr "テンプレート"
+
+# key: reference.fields.name
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: certificate.fields.audience
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "対象"
+
+# key: portal.navigation.certificates
+#: ninefruits/certificate/apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "証明書"
+
+# key: certificate.audiences.any
+#: ninefruits/certificate/enums.py
+msgid "Any student record"
+msgstr "すべての学籍"
+
+# key: certificate.audiences.enrolled
+#: ninefruits/certificate/enums.py
+msgid "Students (not graduated)"
+msgstr "学生(卒業前)"
+
+# key: certificate.audiences.graduated
+#: ninefruits/certificate/enums.py
+msgid "Graduates"
+msgstr "卒業生"
+
+# key: certificate.statuses.issued
+#: ninefruits/certificate/enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "発行済み"
+
+# key: certificate.statuses.revoked
+#: ninefruits/certificate/enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "失効"
+
+# key: certificate.verify.invalid_unknown
+#: ninefruits/certificate/enums.py
+msgid "No certificate matches this code."
+msgstr "このコードに一致する証明書はありません。"
+
+# key: certificate.verify.invalid_revoked
+#: ninefruits/certificate/enums.py
+msgid "This certificate has been revoked."
+msgstr "この証明書は失効しています。"
+
+# key: certificate.verify.invalid_expired
+#: ninefruits/certificate/enums.py
+msgid "The verification period for this certificate has ended. Ask the holder for a current one."
+msgstr "この証明書の検証期間は終了しました。所持者に最新の証明書を依頼してください。"
+
+# key: certificate.fields.has_grades
+#: ninefruits/certificate/models.py
+msgid "Includes grades"
+msgstr "成績を含む"
+
+# key: certificate.help.has_grades
+#: ninefruits/certificate/models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "確定した成績を学期ごとの表として追加します(成績証明書)。"
+
+# key: certificate.fields.has_photo
+#: ninefruits/certificate/models.py
+msgid "Includes photo"
+msgstr "写真を含む"
+
+# key: reference.fields.is_active
+#: ninefruits/certificate/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: reference.fields.sort_order
+#: ninefruits/certificate/models.py
+msgid "Order"
+msgstr "表示順"
+
+# key: certificate.resources.types.label
+#: ninefruits/certificate/models.py
+msgid "Certificate kind"
+msgstr "証明書種別"
+
+# key: certificate.resources.types.plural_label
+#: ninefruits/certificate/models.py
+msgid "Certificate kinds"
+msgstr "証明書種別"
+
+# key: certificate.fields.title
+#: ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "表題"
+
+# key: certificate.fields.body
+#: ninefruits/certificate/models.py
+msgid "Body"
+msgstr "本文"
+
+# key: certificate.fields.footer
+#: ninefruits/certificate/models.py
+msgid "Footer"
+msgstr "フッター"
+
+# key: certificate.fields.signer
+#: ninefruits/certificate/models.py
+msgid "Signer"
+msgstr "発行者名義"
+
+# key: certificate.help.signer
+#: ninefruits/certificate/models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "この言語について、証明書設定の発行者名義を上書きします。"
+
+# key: people.resources.student_records.label
+#: ninefruits/certificate/models.py
+msgid "student record"
+msgstr "学籍"
+
+# key: certificate.fields.serial_number
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgid "Serial number"
+msgstr "発行番号"
+
+# key: certificate.verify.code
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/verify.html
+msgid "Verification code"
+msgstr "検証コード"
+
+# key: certificate.fields.issued_at
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "発行日時"
+
+# key: certificate.resources.issues.label
+#: ninefruits/certificate/models.py
+msgid "Issued certificate"
+msgstr "発行済み証明書"
+
+# key: certificate.resources.issues.plural_label
+#: ninefruits/certificate/models.py
+msgid "Issued certificates"
+msgstr "発行済み証明書"
+
+# key: certificate.facts.student_name
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "氏名"
+
+# key: certificate.facts.birth_date
+#: ninefruits/certificate/services/renderer.py
+msgid "Date of birth"
+msgstr "生年月日"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/certificate/services/renderer.py
+msgid "Gender"
+msgstr "性別"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/certificate/services/renderer.py
+msgid "Nationality"
+msgstr "国籍"
+
+# key: certificate.facts.program
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "プログラム"
+
+# key: certificate.facts.admission_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "入学日"
+
+# key: certificate.facts.graduation_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "卒業日"
+
+# key: certificate.facts.status
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "学籍状態"
+
+# key: certificate.facts.year_level
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "学年"
+
+# key: certificate.settings.serial_pattern
+#: ninefruits/certificate/settings_pages.py
+msgid "Serial number pattern"
+msgstr "発行番号の形式"
+
+# key: certificate.settings.serial_pattern_help
+#: ninefruits/certificate/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 digits (required). The sequence restarts for each distinct prefix, so {TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr "トークン: {TYPE} 種別コード、{YYYY} または {YY} 年、{SEQ:6} 6 桁にゼロ埋めした連番(必須)。連番は接頭辞ごとに採番し直すため、{TYPE}-{YYYY}-{SEQ:6} は種別・年ごとの連番になります。"
+
+# key: certificate.settings.verification_valid_days
+#: ninefruits/certificate/settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "検証の有効期間(日)"
+
+# key: certificate.settings.verification_valid_days_help
+#: ninefruits/certificate/settings_pages.py
+msgid "0 = always. After this many days the verification page reports the certificate as expired."
+msgstr "0 = 無期限。この日数を過ぎると、検証ページで証明書は期限切れと表示されます。"
+
+# key: certificate.settings.signer
+#: ninefruits/certificate/settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "発行者名義(%(locale)s)"
+
+# key: certificate.settings.title
+#: ninefruits/certificate/settings_pages.py
+msgid "Certificate settings"
+msgstr "証明書設定"
+
+# key: certificate.settings.signers
+#: ninefruits/certificate/settings_pages.py
+msgid "Signer by language"
+msgstr "言語別の発行者名義"
+
+# key: certificate.settings.signers_help
+#: ninefruits/certificate/settings_pages.py
+msgid "Printed above the seal, e.g. \"President, Ninefruits University\". A template can override it."
+msgstr "印影の上に印字されます。例: 「Ninefruits 大学 学長」。テンプレートで上書きできます。"
+
+# key: certificate.pdf.serial
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "番号"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "コード"
+
+# key: curriculum.fields.title
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "科目名"
+
+# key: curriculum.fields.credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "単位"
+
+# key: grading.fields.grade
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "成績"
+
+# key: grading.grades.term_summary
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "GPA %(gpa)s · 履修 %(attempted)s 単位中 %(earned)s 単位修得"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "累積 GPA"
+
+# key: grading.fields.earned_credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "修得単位"
+
+# key: certificate.pdf.verify
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "この証明書は %(url)s で検証できます"
+
+# key: certificate.portal.title
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/views/portal.py
+msgid "My certificates"
+msgstr "自分の証明書"
+
+# key: certificate.portal.intro
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "Certificates issued to you by the registrar. Ask the registrar for a new one."
+msgstr "教務課が発行した証明書です。新しい証明書は教務課に申請してください。"
+
+# key: certificate.portal.none
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "まだ発行された証明書はありません。"
+
+# key: certificate.verify.title
+#: ninefruits/certificate/templates/certificate/verify.html ninefruits/certificate/views/public.py
+msgid "Certificate verification"
+msgstr "証明書の検証"
+
+# key: certificate.verify.intro
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "証明書に印刷された検証コードを入力するか、QR コードを読み取ってください。"
+
+# key: certificate.verify.check
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Check"
+msgstr "確認"
+
+# key: certificate.verify.valid
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "この証明書は本学が発行した有効な証明書です。"
+
+# key: certificate.verify.holder
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Holder"
+msgstr "所持者"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/certificate/views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "リクエストが多すぎます。1 分ほど待ってから再度お試しください。"

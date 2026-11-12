@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: evaluation.errors.form_in_use
+#: ninefruits/evaluation/actions/manage_term_evaluation.py
+msgid "The term already has responses with its form."
+msgstr "Học kỳ này đã có phản hồi theo phiếu hiện tại."
+
+# key: evaluation.errors.not_open
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "The course evaluation is not open for this course."
+msgstr "Đánh giá học phần chưa mở cho học phần này."
+
+# key: evaluation.errors.already_done
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "You have already evaluated this course."
+msgstr "Bạn đã đánh giá học phần này."
+
+# key: evaluation.errors.invalid_answer
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "An answer is not valid."
+msgstr "Có câu trả lời không hợp lệ."
+
+# key: evaluation.errors.missing_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "Hãy trả lời mọi câu hỏi bắt buộc (còn thiếu %(count)s)."
+
+# key: evaluation.errors.uniform_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "Every answer is the same. Please answer each question."
+msgstr "Tất cả câu trả lời đều giống nhau. Vui lòng trả lời từng câu hỏi."
+
+# key: validation.alpha_dash
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Trường %(attribute)s chỉ được chứa chữ cái, chữ số, dấu gạch ngang và dấu gạch dưới."
+
+# key: reference.fields.code
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: validation.unique
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s đã được sử dụng."
+
+# key: evaluation.fields.question
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Question"
+msgstr "Câu hỏi"
+
+# key: evaluation.fields.questions
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgid "Questions"
+msgstr "Câu hỏi"
+
+# key: reference.fields.name
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: evaluation.actions.copy_form
+#: ninefruits/evaluation/admin/forms.py
+msgid "Copy form"
+msgstr "Sao chép phiếu"
+
+# key: security.scope_types.global
+#: ninefruits/evaluation/admin/sections.py
+msgid "All"
+msgstr "Toàn bộ"
+
+# key: offering.fields.offering_unit
+#: ninefruits/evaluation/admin/sections.py
+msgid "Offering unit"
+msgstr "Đơn vị mở lớp"
+
+# key: offering.fields.section
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Lớp học phần"
+
+# key: curriculum.fields.title
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Tên học phần"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/evaluation/admin/sections.py
+msgid "Instructors"
+msgstr "Giảng viên"
+
+# key: evaluation.fields.responses
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/admin/terms.py
+msgid "Responses"
+msgstr "Phản hồi"
+
+# key: evaluation.fields.response_rate
+#: ninefruits/evaluation/admin/sections.py
+msgid "Response rate"
+msgstr "Tỷ lệ phản hồi"
+
+# key: evaluation.results.open
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/views/portal.py
+msgctxt "evaluation"
+msgid "Results"
+msgstr "Kết quả"
+
+# key: reference.resources.terms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "term"
+msgstr "học kỳ"
+
+# key: evaluation.resources.forms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/models/term.py
+msgid "evaluation form"
+msgstr "phiếu đánh giá"
+
+# key: evaluation.fields.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum responses"
+msgstr "Số phản hồi tối thiểu"
+
+# key: evaluation.help.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
+msgstr "Kết quả của một lớp học phần chỉ hiển thị khi có ít nhất số phản hồi và tỷ lệ phản hồi này, để số ít câu trả lời không thể làm lộ danh tính sinh viên."
+
+# key: evaluation.fields.minimum_response_percent
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum response rate (%)"
+msgstr "Tỷ lệ phản hồi tối thiểu (%)"
+
+# key: common.saved
+#: ninefruits/evaluation/admin/terms.py
+msgid "Saved"
+msgstr "Đã lưu"
+
+# key: evaluation.actions.prepare
+#: ninefruits/evaluation/admin/terms.py
+msgid "Set up a term"
+msgstr "Thiết lập học kỳ"
+
+# key: evaluation.actions.change
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Change"
+msgstr "Thay đổi"
+
+# key: evaluation.actions.publish
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "Công bố kết quả"
+
+#: ninefruits/evaluation/admin/terms.py
+msgid "Already published."
+msgstr "Đã công bố."
+
+# key: evaluation.help.publish
+#: ninefruits/evaluation/admin/terms.py
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
+msgstr "Từ bây giờ giảng viên xem được kết quả của lớp mình (các lớp có đủ phản hồi)."
+
+# key: evaluation.portal.title
+#: ninefruits/evaluation/apps.py ninefruits/evaluation/templates/evaluation/portal/evaluations.html ninefruits/evaluation/views/portal.py
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "Đánh giá học phần"
+
+# key: evaluation.question_types.scale
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "Thang đo"
+
+# key: evaluation.question_types.text
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "Ý kiến"
+
+# key: evaluation.fields.description
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Description"
+msgstr "Mô tả"
+
+# key: evaluation.fields.scale_points
+#: ninefruits/evaluation/models/forms.py
+msgid "Scale points"
+msgstr "Số mức thang đo"
+
+# key: evaluation.fields.scale_low_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of 1"
+msgstr "Nhãn của mức 1"
+
+# key: evaluation.fields.scale_high_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of the highest point"
+msgstr "Nhãn của mức cao nhất"
+
+# key: reference.fields.is_active
+#: ninefruits/evaluation/models/forms.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: evaluation.resources.forms.plural_label
+#: ninefruits/evaluation/models/forms.py
+msgid "evaluation forms"
+msgstr "phiếu đánh giá"
+
+# key: reference.fields.sort_order
+#: ninefruits/evaluation/models/forms.py
+msgid "Order"
+msgstr "Thứ tự"
+
+# key: evaluation.fields.category
+#: ninefruits/evaluation/models/forms.py
+msgid "Area"
+msgstr "Lĩnh vực"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/evaluation/models/forms.py
+msgid "Type"
+msgstr "Loại"
+
+# key: evaluation.fields.is_required
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Required"
+msgstr "Bắt buộc"
+
+# key: evaluation.fields.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "Reversed"
+msgstr "Đảo chiều"
+
+# key: evaluation.help.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
+msgstr "Dành cho câu hỏi diễn đạt theo hướng tiêu cực: câu trả lời được đảo chiều khi tính trung bình (5 tính là 1)."
+
+# key: evaluation.resources.sections.label
+#: ninefruits/evaluation/models/section.py
+msgid "section response"
+msgstr "phản hồi theo lớp"
+
+# key: evaluation.resources.sections.plural_label
+#: ninefruits/evaluation/models/section.py
+msgid "responses by section"
+msgstr "phản hồi theo lớp học phần"
+
+# key: evaluation.fields.published_at
+#: ninefruits/evaluation/models/term.py
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "Ngày công bố kết quả"
+
+# key: evaluation.resources.terms.label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluation"
+msgstr "đánh giá học kỳ"
+
+# key: evaluation.resources.terms.plural_label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluations"
+msgstr "đánh giá học kỳ"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/evaluation/notifications.py
+msgid "Hello,"
+msgstr "Xin chào,"
+
+# key: evaluation.mail.reminder_intro
+#: ninefruits/evaluation/notifications.py
+msgid "Please evaluate these courses:"
+msgstr "Vui lòng đánh giá các học phần sau:"
+
+# key: evaluation.mail.reminder_anonymous
+#: ninefruits/evaluation/notifications.py
+msgid "Your answers are anonymous."
+msgstr "Câu trả lời của bạn được ẩn danh."
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "Mở đánh giá học phần"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/evaluation/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Trân trọng,\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: ninefruits/evaluation/notifications.py
+msgid "Course evaluation is open"
+msgstr "Đánh giá học phần đang mở"
+
+# key: evaluation.settings.grades_require_evaluation
+#: ninefruits/evaluation/settings_pages.py
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "Ẩn điểm của học kỳ cho đến khi hoàn thành đánh giá"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "Chỉ trong thời gian đánh giá đang mở; điểm sẽ hiển thị khi đánh giá đóng."
+
+# key: evaluation.settings.reject_uniform_answers
+#: ninefruits/evaluation/settings_pages.py
+msgid "Refuse the same answer to every question"
+msgstr "Từ chối khi mọi câu hỏi có cùng một câu trả lời"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "Giống hệ thống cũ từ chối toàn bộ 1 hoặc toàn bộ 5."
+
+# key: evaluation.settings.minimum_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Defaults for a new term's evaluation."
+msgstr "Giá trị mặc định cho đánh giá của học kỳ mới."
+
+# key: evaluation.settings.title
+#: ninefruits/evaluation/settings_pages.py
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "Đánh giá học phần"
+
+# key: evaluation.portal.anonymous
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
+msgstr "Câu trả lời của bạn được ẩn danh. Giảng viên chỉ xem được số liệu tổng hợp sau khi kết quả được công bố."
+
+# key: evaluation.portal.submit_confirm
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "Gửi đánh giá? Sau khi gửi bạn không thể thay đổi."
+
+# key: evaluation.portal.back
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Back"
+msgstr "Quay lại"
+
+# key: evaluation.portal.optional
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "optional"
+msgstr "không bắt buộc"
+
+# key: evaluation.portal.submit
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit"
+msgstr "Gửi"
+
+# key: evaluation.portal.done
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Done"
+msgstr "Đã xong"
+
+# key: evaluation.portal.evaluate
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Evaluate"
+msgstr "Đánh giá"
+
+# key: evaluation.portal.none_open
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "No course evaluation is open for you."
+msgstr "Hiện không có đánh giá học phần nào mở cho bạn."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "My teaching"
+msgstr "Giảng dạy của tôi"
+
+# key: evaluation.results.title
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html ninefruits/evaluation/views/portal.py
+msgid "Course evaluation results"
+msgstr "Kết quả đánh giá học phần"
+
+# key: evaluation.results.responses
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(responses)s / %(expected)s đã phản hồi (%(rate)s%%)"
+
+# key: evaluation.results.overall
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "overall %(mean)s"
+msgstr "chung %(mean)s"
+
+# key: evaluation.results.not_published
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "The results are not published yet."
+msgstr "Kết quả chưa được công bố."
+
+# key: evaluation.results.too_few
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
+msgstr "Quá ít phản hồi để hiển thị kết quả (cần ít nhất %(minimum)s phản hồi và %(percent)s%%)."
+
+# key: evaluation.results.mean
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Mean"
+msgstr "Trung bình"
+
+# key: evaluation.results.reversed
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "reversed"
+msgstr "đảo chiều"
+
+# key: common.none
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgctxt "common"
+msgid "None"
+msgstr "Không có"
+
+# key: evaluation.results.not_yet
+#: ninefruits/evaluation/views/portal.py
+msgid "Not published"
+msgstr "Chưa công bố"
+
+# key: evaluation.grades_hidden
+#: ninefruits/evaluation/views/portal.py
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "Điểm của %(term)s sẽ hiển thị sau khi bạn hoàn thành đánh giá học phần của học kỳ đó."
+
+# key: evaluation.portal.submitted
+#: ninefruits/evaluation/views/portal.py
+msgid "Thank you. Your evaluation was submitted."
+msgstr "Cảm ơn bạn. Đánh giá của bạn đã được gửi."

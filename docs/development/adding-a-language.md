@@ -2,13 +2,13 @@
 
 Korean 한국어: [adding-a-language.ko.md](adding-a-language.ko.md)
 
-Ninefruits ships in Korean, English, Simplified Chinese and Lao. Nothing in the code lists the languages: a language exists when its gettext catalogs exist (`locale/<locale>/` and the apps' `ninefruits/<app>/locale/<locale>/`) and the language is enabled in the institution settings. This page is the whole workflow for adding one more, written for a developer or a translator who has never worked on the project. Budget: two to four days for the UI strings and the manual with machine-assisted translation, plus a native review.
+Ninefruits ships in 16 languages: Korean, English, Simplified Chinese, Lao, German, Filipino, French, Japanese, Mongolian, Malay, Nepali, Russian, Thai, Turkish, Uzbek and Vietnamese. Nothing in the code lists the languages: a language exists when its gettext catalogs exist (`locale/<locale>/` and the apps' `ninefruits/<app>/locale/<locale>/`) and the language is enabled in the institution settings. This page is the whole workflow for adding one more, written for a developer or a translator who has never worked on the project. Budget: two to four days for the UI strings and the manual with machine-assisted translation, plus a native review.
 
 ## 0. Pick the language code
 
 - Use the ISO 639-1 code (`lo`, `vi`, `th`), with a script or region only when the writing differs (`zh-hans`, `pt-br`). Django uses two spellings of the same code: the **language code** (`zh-hans`, stored in `users.locale`, in the institution settings and as the key of translatable database values) and the **locale name** (`zh_Hans`, the catalog directory name). `django.utils.translation.to_locale()` converts one to the other.
 - Check that CLDR knows it (dates, numbers and the language menu use it through Babel): `uv run python -c "from babel import Locale; print(Locale.parse('lo').get_display_name('lo'))"` must print the language name in that language.
-- Add the code to `LANGUAGES` in `config/settings/base.py` and the locale name to `TRANSLATED_LOCALES` in `ninefruits/i18n/catalogs.py` (the languages `i18n_makemessages` updates by default). If Django does not know the language (Lao was such a case), add it to `EXTRA_LANG_INFO` in `ninefruits/i18n/apps.py` (name and local name) and add a formats module `ninefruits/i18n/formats/<locale>/formats.py` (date and number formats; copy `lo` and adjust from CLDR).
+- Add the code to `LANGUAGES` in `config/settings/base.py` and the locale name to `TRANSLATED_LOCALES` in `ninefruits/i18n/catalogs.py` (the languages `i18n_makemessages` updates by default). If Django does not know the language (Lao and Filipino were such cases), add it to `EXTRA_LANG_INFO` in `ninefruits/i18n/apps.py` (name and local name) and add a formats module `ninefruits/i18n/formats/<locale>/formats.py` (date and number formats; copy `lo` and adjust from CLDR).
 
 ## 1. UI strings (gettext catalogs)
 
@@ -32,14 +32,14 @@ The sheet has the columns `catalog`, `context`, `source` (English), `source_plur
 Notes:
 
 - Never run plain `makemessages` from an app directory that has no `locale/` of its own: it rewrites the global catalog with only that app's strings. `i18n_makemessages` runs from the repository root with the right ignore list.
-- Plurals: the catalog header sets `Plural-Forms` for the language (Korean, Chinese and Lao have one form: `nplurals=1; plural=0;`).
+- Plurals: the catalog header sets `Plural-Forms` for the language (Korean, Chinese, Lao, Japanese, Malay, Thai, Uzbek and Vietnamese have one form: `nplurals=1; plural=0;`). `tools/convert_translations.py` (`PLURAL_FORMS`) lists the rule of every shipped language.
 - Same English, different meaning: the source uses `pgettext("<group>", "...")`, and translators see the context in the `context` column.
-- Django, allauth and unfold ship many languages but not all (unfold ships none). If the admin panel or the sign-in pages still show English in the new language, add the strings to `ninefruits/i18n/vendor_strings.py` and translate them in `locale/<locale>/`. For Lao they are already there.
+- Django, allauth and unfold ship many languages but not all (unfold ships none). If the admin panel or the sign-in pages still show English in the new language, add the strings to `ninefruits/i18n/vendor_strings.py` and translate them in `locale/<locale>/`. For Lao they are already there. For the twelve languages added on 2026-11-11 the strings Django and allauth translate were copied from their catalogs, and the rest (unfold, and everything for Filipino, which Django and allauth do not ship) were translated in `locale/<locale>/`.
 - Check: `uv run manage.py i18n_missing vi --strict` must report `0 missing`. CI runs `i18n_missing --strict` for every language, so a new language cannot be merged half done.
 - Compiled catalogs (`.mo`) are build output: the test run compiles stale ones, the Docker image runs `compilemessages`. GNU gettext (`xgettext`, `msguniq`, `msgmerge`) is needed for `i18n_makemessages` and `i18n_missing`.
 - Glossary: `docs/development/naming.md` section 6 lists the domain terms (student record, term, section, enrollment …). Decide the translation of each term once, before translating, and write it down for the manual.
 
-Strings of the original application (`lang/*.php` of ninefruits-laravel) can be converted for a language the original had: `uv run python tools/convert_translations.py --fill --app <app>` fills the empty entries by English text.
+Strings of the original application (`lang/*.php` of ninefruits-laravel) can be converted for a language the original had: `uv run python tools/convert_translations.py --fill --app <app>` fills the empty entries by English text (`--source` or `NINEFRUITS_LARAVEL_LANG` names the original `lang/` directory, `--lang <locale>` limits the languages).
 
 ## 2. Enable the language
 
@@ -74,7 +74,7 @@ uv run manage.py runserver 8765 &
 uv run python tools/screenshots.py vi --base-url=http://127.0.0.1:8765
 ```
 
-The script (Playwright, Chromium) signs in as the demo system administrator, instructor and student, switches the account language (`POST /i18n/locale/`), captures `/admin/` and `/portal/` at 1366×900 and saves them in `docs/screenshots/<locale>/`. Run `uv run playwright install chromium` once first (or point to an existing Chromium with `--chromium=/path`). The new language must be enabled among the institution's supported languages (step 2). Without arguments it captures all four languages.
+The script (Playwright, Chromium) signs in as the demo system administrator, instructor and student, switches the account language (`POST /i18n/locale/`), captures `/admin/` and `/portal/` at 1366×900 and saves them in `docs/screenshots/<locale>/`. Run `uv run playwright install chromium` once first (or point to an existing Chromium with `--chromium=/path`). The new language must be enabled among the institution's supported languages (step 2). Without arguments it captures every shipped language.
 
 ## 5. PDFs and fonts
 
@@ -95,4 +95,4 @@ Certificates, transcripts and attendance sheets are rendered by Gotenberg (Chrom
 - [ ] `uv run pytest`, `uv run ruff check`, `uv run manage.py check` pass
 - [ ] A native speaker reviewed the UI strings and at least the first manual chapters; note the reviewer in the pull request
 
-Lao was added on 2026-10-23 in the original as the first language after the original three; the port ships it from the start.
+Lao was added on 2026-10-23 in the original as the first language after the original three; the port ships it from the start. Twelve more followed together on 2026-11-11 (German, Russian, Malay, Filipino, French, Japanese, Mongolian, Nepali, Thai, Turkish, Uzbek, Vietnamese; settings migration `ninefruits/settings/migrations/0017_twelve_locales.py`, original commit 67d653c). Their UI strings and manuals are machine-assisted translations still awaiting native review.

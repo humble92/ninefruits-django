@@ -1,0 +1,396 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.errors.term_status_transition
+#: ninefruits/term/actions/change_term_status.py
+#, python-format
+msgid "A term cannot move from %(from)s to %(to)s."
+msgstr "ภาคการศึกษาไม่สามารถเปลี่ยนจาก %(from)s เป็น %(to)s ได้"
+
+# key: reference.errors.invalid_session_copy
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "Choose another session of the same term."
+msgstr "กรุณาเลือกช่วงการเรียนอื่นของภาคการศึกษาเดียวกัน"
+
+# key: reference.errors.session_has_windows
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "This session already has windows."
+msgstr "ช่วงการเรียนนี้มีช่วงเวลาดำเนินการอยู่แล้ว"
+
+# key: reference.fields.name
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: validation.after
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s ต้องเป็นวันที่หลังจาก %(date)s"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "End date"
+msgstr "วันที่สิ้นสุด"
+
+# key: reference.fields.start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Start date"
+msgstr "วันที่เริ่ม"
+
+# key: validation.after_or_equal
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s ต้องเป็นวันที่ตั้งแต่ %(date)s เป็นต้นไป"
+
+# key: reference.fields.instruction_end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes end"
+msgstr "วันสิ้นสุดการเรียน"
+
+# key: reference.fields.instruction_start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes start"
+msgstr "วันเปิดเรียน"
+
+# key: reference.errors.sessions_outside_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Some sessions would fall outside the new dates. Change them first."
+msgstr "บางช่วงการเรียนจะอยู่นอกวันที่ใหม่ กรุณาแก้ไขช่วงการเรียนเหล่านั้นก่อน"
+
+# key: validation.alpha_dash
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s ต้องมีเฉพาะตัวอักษร ตัวเลข ขีดกลาง และขีดล่างเท่านั้น"
+
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The session must lie within its term (%(start)s - %(end)s)."
+msgstr "ช่วงการเรียนต้องอยู่ภายในภาคการศึกษา (%(start)s - %(end)s)"
+
+#: ninefruits/term/admin.py
+msgid "The full-term session belongs to the term and cannot be deleted."
+msgstr "ช่วงการเรียนเต็มภาคการศึกษาเป็นของภาคการศึกษาและลบไม่ได้"
+
+# key: reference.resources.term_sessions.label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "session"
+msgstr "ช่วงการเรียน"
+
+# key: reference.resources.term_sessions.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "sessions"
+msgstr "ช่วงการเรียน"
+
+# key: reference.resources.term_windows.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term windows"
+msgstr "ช่วงเวลาดำเนินการ"
+
+# key: reference.actions.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copy windows"
+msgstr "คัดลอกช่วงเวลา"
+
+# key: reference.fields.is_full_term
+# key: reference.term_sessions.full_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Full term"
+msgstr "เต็มภาคการศึกษา"
+
+# key: reference.fields.closes_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Closes"
+msgstr "ปิด"
+
+# key: reference.fields.opens_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Opens"
+msgstr "เปิด"
+
+# key: reference.resources.term_windows.label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term window"
+msgstr "ช่วงเวลาดำเนินการ"
+
+# key: reference.fields.eligibility
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "Eligibility"
+msgstr "ผู้มีสิทธิ์"
+
+# key: reference.help.eligibility
+#: ninefruits/term/admin.py
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
+msgstr "เว้นว่างไว้สำหรับทุกคน ช่วงเวลาประเภทเดียวกันหลายช่วงที่มีเงื่อนไขต่างกันจะเปิดเป็นลำดับขั้น"
+
+# key: reference.eligibility.everyone
+#: ninefruits/term/admin.py
+msgid "Everyone"
+msgstr "ทุกคน"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "จำกัดสิทธิ์"
+
+# key: reference.fields.status
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgctxt "reference"
+msgid "Status"
+msgstr "สถานะ"
+
+# key: common.reason
+#: ninefruits/term/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: reference.fields.source_session
+#: ninefruits/term/admin.py
+msgid "Copy from session"
+msgstr "คัดลอกจากช่วงการเรียน"
+
+# key: reference.fields.academic_year
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Academic year"
+msgstr "ปีการศึกษา"
+
+# key: reference.fields.term_type
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Term type"
+msgstr "ประเภทภาคการศึกษา"
+
+# key: reference.fields.windows_count
+#: ninefruits/term/admin.py
+msgid "Windows"
+msgstr "ช่วงเวลา"
+
+# key: reference.actions.change_status
+#: ninefruits/term/admin.py
+msgid "Change status"
+msgstr "เปลี่ยนสถานะ"
+
+# key: reference.notifications.term_status_changed
+#: ninefruits/term/admin.py
+msgid "Term status changed."
+msgstr "เปลี่ยนสถานะภาคการศึกษาแล้ว"
+
+#: ninefruits/term/admin.py
+msgid "No windows to copy."
+msgstr "ไม่มีช่วงเวลาที่จะคัดลอก"
+
+# key: reference.notifications.session_windows_copied
+#: ninefruits/term/admin.py
+#, python-format
+msgid "One window copied."
+msgid_plural "%(count)s windows copied."
+msgstr[0] "คัดลอกแล้ว %(count)s ช่วงเวลา"
+
+# key: reference.help.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "คัดลอกช่วงเวลาดำเนินการของรายวิชา (เพิ่ม/ลด ถอนรายวิชา กรอกเกรด ประเมิน) จากช่วงการเรียนอื่นโดยเลื่อนตามวันที่ของช่วงการเรียนนี้ ช่วงต้นคงระยะห่างจากวันเริ่ม ช่วงท้ายคงระยะห่างจากวันสิ้นสุด กรุณาปรับหลังคัดลอก"
+
+# key: reference.fields.weekdays
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "Days"
+msgstr "วัน"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "End"
+msgstr "สิ้นสุด"
+
+# key: reference.fields.start_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Start"
+msgstr "เริ่ม"
+
+# key: reference.term_statuses.planned
+#: ninefruits/term/enums.py
+msgid "Planned"
+msgstr "วางแผน"
+
+# key: reference.term_statuses.published
+#: ninefruits/term/enums.py
+msgctxt "reference.term_statuses"
+msgid "Published"
+msgstr "เผยแพร่แล้ว"
+
+# key: reference.term_statuses.grades_closed
+#: ninefruits/term/enums.py
+msgid "Grades closed"
+msgstr "ปิดผลการเรียน"
+
+# key: reference.term_statuses.archived
+#: ninefruits/term/enums.py
+msgid "Archived"
+msgstr "เก็บถาวร"
+
+# key: reference.term_window_types.registration_cart
+#: ninefruits/term/enums.py
+msgid "Registration cart"
+msgstr "ตะกร้าลงทะเบียน"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: registration.portal.title
+#: ninefruits/term/enums.py
+msgid "Registration"
+msgstr "การลงทะเบียนเรียน"
+
+# key: reference.term_window_types.add_drop
+#: ninefruits/term/enums.py
+msgid "Add/drop"
+msgstr "เพิ่ม/ลดรายวิชา"
+
+# key: reference.term_window_types.withdrawal
+#: ninefruits/term/enums.py
+msgid "Withdrawal"
+msgstr "ถอนรายวิชา"
+
+# key: grading.entry.title
+#: ninefruits/term/enums.py
+msgid "Grade entry"
+msgstr "การกรอกเกรด"
+
+# key: reference.term_window_types.grade_appeal
+#: ninefruits/term/enums.py
+msgid "Grade appeal"
+msgstr "อุทธรณ์ผลการเรียน"
+
+# key: reference.term_window_types.course_evaluation
+#: ninefruits/term/enums.py
+msgctxt "reference.term_window_types"
+msgid "Course evaluation"
+msgstr "ประเมินรายวิชา"
+
+# key: reference.term_window_types.graduation_application
+#: ninefruits/term/enums.py
+msgid "Graduation application"
+msgstr "ยื่นขอสำเร็จการศึกษา"
+
+# key: reference.term_window_types.additional_program_application
+#: ninefruits/term/enums.py
+msgid "Second major and minor applications"
+msgstr "ยื่นคำขอวิชาเอกที่สองและวิชาโท"
+
+# key: reference.fields.code
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Code"
+msgstr "รหัส"
+
+# key: reference.resources.academic_years.label
+#: ninefruits/term/models/term.py
+msgid "academic year"
+msgstr "ปีการศึกษา"
+
+# key: reference.resources.academic_years.plural_label
+#: ninefruits/term/models/term.py
+msgid "academic years"
+msgstr "ปีการศึกษา"
+
+# key: reference.fields.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular term"
+msgstr "ภาคการศึกษาปกติ"
+
+# key: reference.help.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
+msgstr "ภาคการศึกษาปกติ (เช่น ภาคต้น ภาคปลาย) และภาคเรียนเร่งรัดจะใช้กฎต่างกันในภายหลัง เช่น หน่วยกิตสูงสุด"
+
+# key: reference.fields.sort_order
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgid "Order"
+msgstr "ลำดับ"
+
+# key: reference.resources.term_types.label
+#: ninefruits/term/models/term.py
+msgid "term type"
+msgstr "ประเภทภาคการศึกษา"
+
+# key: reference.resources.term_types.plural_label
+#: ninefruits/term/models/term.py
+msgid "term types"
+msgstr "ประเภทภาคการศึกษา"
+
+# key: reference.help.term_code
+#: ninefruits/term/models/term.py
+msgid "For display only, e.g. 2026-FA. The code carries no business meaning."
+msgstr "ใช้แสดงผลเท่านั้น เช่น 2026-FA รหัสนี้ไม่มีความหมายทางธุรกิจ"
+
+# key: reference.resources.terms.label
+#: ninefruits/term/models/term.py
+msgid "term"
+msgstr "ภาคการศึกษา"
+
+# key: reference.resources.terms.plural_label
+#: ninefruits/term/models/term.py
+msgid "terms"
+msgstr "ภาคการศึกษา"
+
+# key: reference.fields.is_active
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ใช้งาน"
+
+# key: reference.resources.time_slots.label
+#: ninefruits/term/models/time_slot.py
+msgid "class period"
+msgstr "คาบ"
+
+# key: reference.resources.time_slots.plural_label
+#: ninefruits/term/models/time_slot.py
+msgid "class periods"
+msgstr "คาบ"
+
+# key: reference.fields.term_session
+#: ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Session"
+msgstr "ช่วงการเรียน"
+
+# key: reference.help.term_session
+#: ninefruits/term/models/window.py
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
+msgstr "กำหนดเวลาของรายวิชาเป็นไปตามช่วงการเรียนของรายวิชา คือเต็มภาคการศึกษา เว้นแต่ช่วงเวลาดำเนินการนั้นกำหนดสำหรับช่วงการเรียนที่สั้นกว่า"
+
+# key: reference.fields.window_type
+#: ninefruits/term/models/window.py
+msgid "Window"
+msgstr "ช่วงเวลา"
+
+# key: reference.fields.window_name
+#: ninefruits/term/models/window.py
+msgid "Name (optional)"
+msgstr "ชื่อ (ไม่บังคับ)"

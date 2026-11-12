@@ -1,0 +1,468 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: evaluation.errors.form_in_use
+#: ninefruits/evaluation/actions/manage_term_evaluation.py
+msgid "The term already has responses with its form."
+msgstr "この学期にはすでにこの評価票による回答があります。"
+
+# key: evaluation.errors.not_open
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "The course evaluation is not open for this course."
+msgstr "この科目の授業評価は受付期間外です。"
+
+# key: evaluation.errors.already_done
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "You have already evaluated this course."
+msgstr "この科目はすでに評価済みです。"
+
+# key: evaluation.errors.invalid_answer
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "An answer is not valid."
+msgstr "正しくない回答があります。"
+
+# key: evaluation.errors.missing_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "必須の設問にすべて回答してください(未回答 %(count)s 件)。"
+
+# key: evaluation.errors.uniform_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "Every answer is the same. Please answer each question."
+msgstr "すべての回答が同じです。設問ごとに回答してください。"
+
+# key: validation.alpha_dash
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s には英数字、ハイフン、アンダースコアのみ使用できます。"
+
+# key: reference.fields.code
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: validation.unique
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s はすでに使用されています。"
+
+# key: evaluation.fields.question
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Question"
+msgstr "設問"
+
+# key: evaluation.fields.questions
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgid "Questions"
+msgstr "設問"
+
+# key: reference.fields.name
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: evaluation.actions.copy_form
+#: ninefruits/evaluation/admin/forms.py
+msgid "Copy form"
+msgstr "評価票をコピー"
+
+# key: security.scope_types.global
+#: ninefruits/evaluation/admin/sections.py
+msgid "All"
+msgstr "全体"
+
+# key: offering.fields.offering_unit
+#: ninefruits/evaluation/admin/sections.py
+msgid "Offering unit"
+msgstr "開講組織"
+
+# key: offering.fields.section
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "offering"
+msgid "Section"
+msgstr "開講科目"
+
+# key: curriculum.fields.title
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "科目名"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: ninefruits/evaluation/admin/sections.py
+msgid "Instructors"
+msgstr "担当教員"
+
+# key: evaluation.fields.responses
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/admin/terms.py
+msgid "Responses"
+msgstr "回答数"
+
+# key: evaluation.fields.response_rate
+#: ninefruits/evaluation/admin/sections.py
+msgid "Response rate"
+msgstr "回答率"
+
+# key: evaluation.results.open
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/views/portal.py
+msgctxt "evaluation"
+msgid "Results"
+msgstr "結果"
+
+# key: reference.resources.terms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "term"
+msgstr "学期"
+
+# key: evaluation.resources.forms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/models/term.py
+msgid "evaluation form"
+msgstr "評価票"
+
+# key: evaluation.fields.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum responses"
+msgstr "最低回答数"
+
+# key: evaluation.help.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
+msgstr "開講科目の結果は、回答数と回答率がともにこの値以上の場合にのみ表示されます。少数の回答から学生が特定されないようにするためです。"
+
+# key: evaluation.fields.minimum_response_percent
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum response rate (%)"
+msgstr "最低回答率(%)"
+
+# key: common.saved
+#: ninefruits/evaluation/admin/terms.py
+msgid "Saved"
+msgstr "保存しました"
+
+# key: evaluation.actions.prepare
+#: ninefruits/evaluation/admin/terms.py
+msgid "Set up a term"
+msgstr "学期を設定"
+
+# key: evaluation.actions.change
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Change"
+msgstr "変更"
+
+# key: evaluation.actions.publish
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "結果を公開"
+
+#: ninefruits/evaluation/admin/terms.py
+msgid "Already published."
+msgstr "すでに公開されています。"
+
+# key: evaluation.help.publish
+#: ninefruits/evaluation/admin/terms.py
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
+msgstr "今後、教員は担当開講科目の結果を確認できます(回答数が十分な開講科目のみ)。"
+
+# key: evaluation.portal.title
+#: ninefruits/evaluation/apps.py ninefruits/evaluation/templates/evaluation/portal/evaluations.html ninefruits/evaluation/views/portal.py
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "授業評価"
+
+# key: evaluation.question_types.scale
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "尺度"
+
+# key: evaluation.question_types.text
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "自由記述"
+
+# key: evaluation.fields.description
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Description"
+msgstr "説明"
+
+# key: evaluation.fields.scale_points
+#: ninefruits/evaluation/models/forms.py
+msgid "Scale points"
+msgstr "尺度の段階数"
+
+# key: evaluation.fields.scale_low_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of 1"
+msgstr "1 のラベル"
+
+# key: evaluation.fields.scale_high_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of the highest point"
+msgstr "最高段階のラベル"
+
+# key: reference.fields.is_active
+#: ninefruits/evaluation/models/forms.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: evaluation.resources.forms.plural_label
+#: ninefruits/evaluation/models/forms.py
+msgid "evaluation forms"
+msgstr "評価票"
+
+# key: reference.fields.sort_order
+#: ninefruits/evaluation/models/forms.py
+msgid "Order"
+msgstr "表示順"
+
+# key: evaluation.fields.category
+#: ninefruits/evaluation/models/forms.py
+msgid "Area"
+msgstr "領域"
+
+# key: evaluation.fields.question_type
+#: ninefruits/evaluation/models/forms.py
+msgid "Type"
+msgstr "形式"
+
+# key: evaluation.fields.is_required
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Required"
+msgstr "必須"
+
+# key: evaluation.fields.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "Reversed"
+msgstr "逆転項目"
+
+# key: evaluation.help.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
+msgstr "否定的な表現の設問用です。平均の計算では回答を反転します(5 は 1 として計算)。"
+
+# key: evaluation.resources.sections.label
+#: ninefruits/evaluation/models/section.py
+msgid "section response"
+msgstr "開講科目別回答"
+
+# key: evaluation.resources.sections.plural_label
+#: ninefruits/evaluation/models/section.py
+msgid "responses by section"
+msgstr "開講科目別回答"
+
+# key: evaluation.fields.published_at
+#: ninefruits/evaluation/models/term.py
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "結果公開日時"
+
+# key: evaluation.resources.terms.label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluation"
+msgstr "学期の授業評価"
+
+# key: evaluation.resources.terms.plural_label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluations"
+msgstr "学期の授業評価"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/evaluation/notifications.py
+msgid "Hello,"
+msgstr "こんにちは。"
+
+# key: evaluation.mail.reminder_intro
+#: ninefruits/evaluation/notifications.py
+msgid "Please evaluate these courses:"
+msgstr "次の科目の授業評価にご協力ください:"
+
+# key: evaluation.mail.reminder_anonymous
+#: ninefruits/evaluation/notifications.py
+msgid "Your answers are anonymous."
+msgstr "回答は匿名です。"
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "授業評価を開く"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/evaluation/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"よろしくお願いいたします。\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: ninefruits/evaluation/notifications.py
+msgid "Course evaluation is open"
+msgstr "授業評価の受付が始まりました"
+
+# key: evaluation.settings.grades_require_evaluation
+#: ninefruits/evaluation/settings_pages.py
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "授業評価が完了するまで学期の成績を非表示にする"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "評価の受付期間中のみ適用されます。受付終了後は成績が表示されます。"
+
+# key: evaluation.settings.reject_uniform_answers
+#: ninefruits/evaluation/settings_pages.py
+msgid "Refuse the same answer to every question"
+msgstr "すべての設問に同じ回答をした場合は受け付けない"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "旧システムで全問 1 または全問 5 の回答を拒否していたのと同じ動作です。"
+
+# key: evaluation.settings.minimum_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Defaults for a new term's evaluation."
+msgstr "新しい学期の授業評価の既定値です。"
+
+# key: evaluation.settings.title
+#: ninefruits/evaluation/settings_pages.py
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "授業評価"
+
+# key: evaluation.portal.anonymous
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
+msgstr "回答は匿名です。教員は結果公開後に集計のみを確認できます。"
+
+# key: evaluation.portal.submit_confirm
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "評価を提出しますか?提出後は変更できません。"
+
+# key: evaluation.portal.back
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Back"
+msgstr "戻る"
+
+# key: evaluation.portal.optional
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "optional"
+msgstr "任意"
+
+# key: evaluation.portal.submit
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit"
+msgstr "提出"
+
+# key: evaluation.portal.done
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Done"
+msgstr "回答済み"
+
+# key: evaluation.portal.evaluate
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Evaluate"
+msgstr "評価する"
+
+# key: evaluation.portal.none_open
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "No course evaluation is open for you."
+msgstr "回答できる授業評価はありません。"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "My teaching"
+msgstr "担当授業"
+
+# key: evaluation.results.title
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html ninefruits/evaluation/views/portal.py
+msgid "Course evaluation results"
+msgstr "授業評価結果"
+
+# key: evaluation.results.responses
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(expected)s 名中 %(responses)s 名が回答(%(rate)s%%)"
+
+# key: evaluation.results.overall
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "overall %(mean)s"
+msgstr "全体 %(mean)s"
+
+# key: evaluation.results.not_published
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "The results are not published yet."
+msgstr "結果はまだ公開されていません。"
+
+# key: evaluation.results.too_few
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
+msgstr "回答が少ないため結果を表示できません(%(minimum)s 件以上かつ %(percent)s%% 以上が必要です)。"
+
+# key: evaluation.results.mean
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Mean"
+msgstr "平均"
+
+# key: evaluation.results.reversed
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "reversed"
+msgstr "逆転"
+
+# key: common.none
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgctxt "common"
+msgid "None"
+msgstr "なし"
+
+# key: evaluation.results.not_yet
+#: ninefruits/evaluation/views/portal.py
+msgid "Not published"
+msgstr "未公開"
+
+# key: evaluation.grades_hidden
+#: ninefruits/evaluation/views/portal.py
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "%(term)s の成績は、授業評価を完了すると表示されます。"
+
+# key: evaluation.portal.submitted
+#: ninefruits/evaluation/views/portal.py
+msgid "Thank you. Your evaluation was submitted."
+msgstr "ご協力ありがとうございました。評価を提出しました。"

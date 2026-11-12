@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: curriculum.errors.no_version_to_revise
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "There is no version in effect on that date."
+msgstr "Không có phiên bản nào có hiệu lực vào ngày đó."
+
+# key: curriculum.errors.revise_same_start
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "A version already starts on that date. Edit it instead."
+msgstr "Đã có phiên bản bắt đầu vào ngày đó. Hãy chỉnh sửa phiên bản đó."
+
+# key: reference.fields.name
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: reference.fields.parent
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/models/course_category.py
+msgid "Parent"
+msgstr "Cấp trên"
+
+# key: validation.after_or_equal
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Trường %(attribute)s phải là một ngày sau hoặc bằng %(date)s."
+
+# key: reference.fields.effective_end_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid until"
+msgstr "Hiệu lực đến"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid from"
+msgstr "Hiệu lực từ"
+
+# key: curriculum.errors.version_overlap
+#: ninefruits/curriculum/admin/courses.py
+msgid "This period overlaps another version of the course."
+msgstr "Khoảng thời gian này trùng với một phiên bản khác của học phần."
+
+# key: validation.alpha_dash
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Trường %(attribute)s chỉ được chứa chữ cái, chữ số, dấu gạch ngang và dấu gạch dưới."
+
+# key: curriculum.fields.code
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Course code"
+msgstr "Mã học phần"
+
+# key: curriculum.resources.course_versions.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "course version"
+msgstr "phiên bản học phần"
+
+# key: curriculum.resources.course_versions.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "versions"
+msgstr "phiên bản"
+
+# key: curriculum.fields.title
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Tên học phần"
+
+# key: curriculum.fields.requisites
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Requisites"
+msgstr "Điều kiện học phần"
+
+# key: curriculum.actions.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "Revise from a date"
+msgstr "Sửa đổi từ một ngày"
+
+# key: curriculum.resources.course_equivalencies.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalency"
+msgstr "tương đương"
+
+# key: curriculum.resources.course_equivalencies.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalent courses"
+msgstr "học phần tương đương"
+
+# key: curriculum.fields.managing_unit
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Managing unit"
+msgstr "Đơn vị quản lý"
+
+# key: curriculum.fields.effective_from
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version from"
+msgstr "Phiên bản mới từ ngày"
+
+# key: common.reason
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Lý do"
+
+# key: validation.after
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "Trường %(attribute)s phải là một ngày sau %(date)s."
+
+# key: curriculum.sections.course
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "curriculum.sections"
+msgid "Course"
+msgstr "Học phần"
+
+# key: curriculum.sections.first_version
+#: ninefruits/curriculum/admin/courses.py
+msgid "First version"
+msgstr "Phiên bản đầu tiên"
+
+#: ninefruits/curriculum/admin/courses.py
+msgid "Add course version"
+msgstr "Thêm phiên bản học phần"
+
+# key: curriculum.fields.credits
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Số tín chỉ"
+
+# key: curriculum.notifications.revised
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version created."
+msgstr "Đã tạo phiên bản mới."
+
+# key: curriculum.help.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "The current version ends the day before; the new version starts with a copy of it and its requisites. Sections already offered keep their version."
+msgstr "Phiên bản hiện tại kết thúc vào ngày hôm trước; phiên bản mới bắt đầu bằng bản sao của nó và các điều kiện học phần. Các lớp học phần đã mở vẫn giữ phiên bản cũ."
+
+# key: validation.gte.numeric
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Trường %(attribute)s phải lớn hơn hoặc bằng %(value)s."
+
+# key: curriculum.fields.catalog_year_to
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year to"
+msgstr "Áp dụng đến khóa"
+
+# key: curriculum.fields.catalog_year_from
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year from"
+msgstr "Áp dụng từ khóa"
+
+# key: curriculum.errors.requirement_set_overlap
+#: ninefruits/curriculum/admin/requirements.py
+msgid "These catalog years overlap another requirement set of the program and role."
+msgstr "Các khóa này trùng với một bộ điều kiện khác của cùng chương trình và vai trò."
+
+# key: curriculum.resources.courses.plural_label
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/importers.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "courses"
+msgstr "học phần"
+
+# key: validation.required
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Trường %(attribute)s là bắt buộc."
+
+# key: curriculum.fields.category
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgid "Course category"
+msgstr "Loại học phần"
+
+# key: curriculum.fields.min_credits
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Minimum credits"
+msgstr "Số tín chỉ tối thiểu"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Examination kind"
+msgstr "Loại kỳ thi"
+
+# key: curriculum.sections.requirements
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Requirements"
+msgstr "Điều kiện"
+
+# key: curriculum.fields.program_role
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Program role"
+msgstr "Vai trò chương trình"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Programs"
+msgstr "Chương trình đào tạo"
+
+# key: curriculum.grading_bases.graded
+#: ninefruits/curriculum/enums.py
+msgid "Letter grade"
+msgstr "Điểm chữ"
+
+# key: curriculum.grading_bases.pass_fail
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Pass/fail"
+msgstr "Đạt/không đạt"
+
+# key: curriculum.program_roles.primary
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Primary program"
+msgstr "Ngành chính"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/curriculum/enums.py
+msgid "Second major"
+msgstr "Ngành thứ hai"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/curriculum/enums.py
+msgid "Minor"
+msgstr "Ngành phụ"
+
+# key: curriculum.requirement_kinds.category_credits
+#: ninefruits/curriculum/enums.py
+msgid "Credits in a category"
+msgstr "Số tín chỉ theo loại học phần"
+
+# key: curriculum.requirement_kinds.required_courses
+#: ninefruits/curriculum/enums.py
+msgid "Required courses"
+msgstr "Học phần bắt buộc"
+
+# key: curriculum.requirement_kinds.course_group
+#: ninefruits/curriculum/enums.py
+msgid "Choice from courses"
+msgstr "Lựa chọn từ nhóm học phần"
+
+# key: curriculum.requirement_kinds.assessment_pass
+#: ninefruits/curriculum/enums.py
+msgid "Passed examination"
+msgstr "Đạt kỳ thi"
+
+# key: curriculum.requisite_kinds.prerequisite
+#: ninefruits/curriculum/enums.py
+msgid "Prerequisite"
+msgstr "Học phần tiên quyết"
+
+# key: curriculum.requisite_kinds.corequisite
+#: ninefruits/curriculum/enums.py
+msgid "Corequisite"
+msgstr "Học phần song hành"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/curriculum/importers.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "Giá trị đã chọn của %(attribute)s không hợp lệ."
+
+# key: curriculum.import.org_unit_required
+#: ninefruits/curriculum/importers.py
+msgid "New courses need an org_unit (code of the managing unit)."
+msgstr "Học phần mới cần có org_unit (mã đơn vị quản lý)."
+
+# key: reference.fields.is_active
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/course_category.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/curriculum/models/course.py
+msgid "course"
+msgstr "học phần"
+
+# key: curriculum.fields.description
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Description"
+msgstr "Mô tả"
+
+# key: curriculum.fields.lecture_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lecture hours"
+msgstr "Số giờ lý thuyết"
+
+# key: curriculum.fields.lab_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lab hours"
+msgstr "Số giờ thực hành"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/curriculum/models/course.py
+msgid "Grading"
+msgstr "Hình thức đánh giá"
+
+# key: curriculum.fields.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Counts toward the credit limit"
+msgstr "Tính vào giới hạn tín chỉ"
+
+# key: curriculum.help.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Turn off for courses outside the term credit limit (e.g. credit bank courses)."
+msgstr "Tắt đối với học phần nằm ngoài giới hạn tín chỉ của học kỳ (ví dụ học phần ngân hàng tín chỉ)."
+
+# key: curriculum.fields.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken again for credit"
+msgstr "Được học lại để tích lũy thêm tín chỉ"
+
+# key: curriculum.help.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "Taking it again earns credits again (e.g. seminars with changing topics) instead of being a retake."
+msgstr "Học lại sẽ được tích lũy thêm tín chỉ (ví dụ seminar có chủ đề thay đổi) thay vì tính là học lại để cải thiện điểm."
+
+# key: evaluation.fields.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgctxt "evaluation.fields"
+msgid "Course evaluation"
+msgstr "Đánh giá học phần"
+
+# key: evaluation.help.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgid "Off for internships or practica that are not evaluated."
+msgstr "Tắt đối với thực tập hoặc thực hành không được đánh giá."
+
+# key: curriculum.fields.requisite_kind
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Kind"
+msgstr "Loại"
+
+# key: curriculum.fields.group_number
+#: ninefruits/curriculum/models/course.py
+msgid "Group"
+msgstr "Nhóm"
+
+# key: curriculum.fields.required_course
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum.fields"
+msgid "Course"
+msgstr "Học phần"
+
+# key: curriculum.fields.minimum_grade
+#: ninefruits/curriculum/models/course.py
+msgid "Minimum grade"
+msgstr "Điểm tối thiểu"
+
+# key: curriculum.fields.allows_concurrent
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken in the same term"
+msgstr "Được học cùng học kỳ"
+
+# key: curriculum.fields.equivalent_course
+#: ninefruits/curriculum/models/course.py
+msgid "Equivalent course"
+msgstr "Học phần tương đương"
+
+# key: curriculum.fields.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Mutual"
+msgstr "Hai chiều"
+
+# key: curriculum.help.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Each counts for the other. Off: only the equivalent course counts for this one."
+msgstr "Mỗi học phần được tính cho học phần kia. Tắt: chỉ học phần tương đương được tính cho học phần này."
+
+# key: curriculum.fields.note
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Note"
+msgstr "Ghi chú"
+
+# key: reference.fields.code
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: reference.fields.sort_order
+#: ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgid "Order"
+msgstr "Thứ tự"
+
+# key: reference.resources.course_categories.label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course category"
+msgstr "loại học phần"
+
+# key: reference.resources.course_categories.plural_label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course categories"
+msgstr "loại học phần"
+
+# key: curriculum.help.catalog_year_to
+#: ninefruits/curriculum/models/requirement.py
+msgid "Empty: also for later catalog years until another set starts."
+msgstr "Để trống: áp dụng cả cho các khóa sau cho đến khi có bộ điều kiện khác."
+
+# key: curriculum.fields.total_credits
+#: ninefruits/curriculum/models/requirement.py
+msgid "Total credits"
+msgstr "Tổng số tín chỉ"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/curriculum/models/requirement.py
+msgid "graduation requirements"
+msgstr "điều kiện tốt nghiệp"
+
+# key: curriculum.fields.requirement_kind
+#: ninefruits/curriculum/models/requirement.py
+msgid "Requirement"
+msgstr "Điều kiện"
+
+# key: curriculum.fields.min_courses
+#: ninefruits/curriculum/models/requirement.py
+msgid "Minimum courses"
+msgstr "Số học phần tối thiểu"

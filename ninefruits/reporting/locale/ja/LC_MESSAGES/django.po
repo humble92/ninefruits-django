@@ -1,0 +1,401 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/reporting/admin/__init__.py ninefruits/reporting/admin/reports.py
+msgid "Reports"
+msgstr "レポート"
+
+# key: graduation.reports.report
+#: ninefruits/reporting/admin/reports.py
+msgid "Report"
+msgstr "レポート"
+
+# key: reference.resources.terms.label
+#: ninefruits/reporting/admin/reports.py
+msgid "term"
+msgstr "学期"
+
+# key: reference.resources.org_units.label
+#: ninefruits/reporting/admin/reports.py
+msgid "org unit"
+msgstr "組織単位"
+
+# key: registration.fields.status
+#: ninefruits/reporting/admin/reports.py
+msgctxt "registration"
+msgid "Status"
+msgstr "状態"
+
+# key: people.fields.year_level
+#: ninefruits/reporting/admin/reports.py
+msgctxt "people"
+msgid "Year"
+msgstr "学年"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/reporting/admin/reports.py
+msgid "Academic standing"
+msgstr "学業状況"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/reporting/admin/reports.py ninefruits/reporting/services/catalog.py
+msgid "Satisfied"
+msgstr "充足"
+
+# key: reference.fields.start_date
+#: ninefruits/reporting/admin/reports.py
+msgid "Start date"
+msgstr "開始日"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/reporting/admin/reports.py
+msgid "End date"
+msgstr "終了日"
+
+# key: graduation.satisfied.no
+#: ninefruits/reporting/admin/reports.py
+msgid "Not satisfied"
+msgstr "未充足"
+
+# key: people.sections.record
+#: ninefruits/reporting/models.py
+msgid "Student record"
+msgstr "学籍"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/reporting/models.py ninefruits/reporting/services/catalog.py
+msgid "Student number"
+msgstr "学籍番号"
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/reporting/models.py
+msgid "Person"
+msgstr "人物"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/reporting/models.py
+msgid "Name"
+msgstr "氏名"
+
+# key: grading.fields.count
+# key: graduation.report_columns.students
+#: ninefruits/reporting/models.py
+msgid "Students"
+msgstr "学生数"
+
+#: ninefruits/reporting/models.py
+msgid "Headcount"
+msgstr "在籍者数"
+
+#: ninefruits/reporting/models.py
+msgid "Term records"
+msgstr "学期記録"
+
+#: ninefruits/reporting/models.py
+msgid "Course grades"
+msgstr "科目別成績"
+
+#: ninefruits/reporting/models.py
+msgid "Section enrollments"
+msgstr "開講科目別履修者数"
+
+#: ninefruits/reporting/models.py
+msgid "Section meetings"
+msgstr "授業時間"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/reporting/models.py ninefruits/reporting/services/catalog.py
+msgid "Status changes"
+msgstr "学籍異動"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/reporting/models.py
+msgid "Degree audits"
+msgstr "卒業判定"
+
+# key: graduation.reports.names.students
+#: ninefruits/reporting/services/catalog.py
+msgid "Student list"
+msgstr "学生一覧"
+
+# key: graduation.reports.names.headcount
+#: ninefruits/reporting/services/catalog.py
+msgid "Headcount by unit, program, year and status"
+msgstr "組織・プログラム・学年・学籍状態別の学生数"
+
+# key: graduation.reports.names.term_records
+#: ninefruits/reporting/services/catalog.py
+msgid "Term grade summary (warnings, honors)"
+msgstr "学期成績集計(警告・優秀者)"
+
+# key: graduation.reports.names.graduation_candidates
+#: ninefruits/reporting/services/catalog.py
+msgid "Graduation candidates (latest audit)"
+msgstr "卒業予定者(最新の判定)"
+
+# key: graduation.reports.names.section_enrollments
+#: ninefruits/reporting/services/catalog.py
+msgid "Enrollment per section"
+msgstr "開講科目別履修者数"
+
+# key: graduation.reports.names.not_registered
+#: ninefruits/reporting/services/catalog.py
+msgid "Students not registered in a term"
+msgstr "学期の未履修登録者"
+
+# key: graduation.report_columns.student_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Name"
+msgstr "氏名"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "プログラム"
+
+# key: graduation.report_columns.program_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Program code"
+msgstr "プログラムコード"
+
+# key: graduation.report_columns.program_role
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Role"
+msgstr "区分"
+
+# key: graduation.report_columns.org_unit_name
+#: ninefruits/reporting/services/catalog.py
+msgid "Unit"
+msgstr "組織"
+
+# key: graduation.report_columns.org_unit_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Unit code"
+msgstr "組織コード"
+
+# key: graduation.report_columns.year_level
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Year"
+msgstr "学年"
+
+# key: graduation.report_columns.status
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "学籍状態"
+
+# key: graduation.report_columns.admission_date
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Admitted"
+msgstr "入学日"
+
+# key: graduation.report_columns.graduation_date
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Graduated"
+msgstr "卒業日"
+
+# key: graduation.report_columns.degree_number
+#: ninefruits/reporting/services/catalog.py
+msgid "Degree number"
+msgstr "学位記番号"
+
+# key: graduation.report_columns.students
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Students"
+msgstr "学生数"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Term"
+msgstr "学期"
+
+# key: graduation.report_columns.attempted_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Attempted"
+msgstr "履修単位"
+
+# key: graduation.report_columns.earned_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Earned"
+msgstr "修得単位"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: ninefruits/reporting/services/catalog.py
+msgid "Term GPA"
+msgstr "学期 GPA"
+
+# key: graduation.report_columns.cumulative_earned_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Cumulative earned"
+msgstr "累積修得単位"
+
+# key: graduation.report_columns.cumulative_gpa
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Cumulative GPA"
+msgstr "累積 GPA"
+
+# key: graduation.report_columns.academic_standing
+#: ninefruits/reporting/services/catalog.py
+msgid "Standing"
+msgstr "学業状況"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: ninefruits/reporting/services/catalog.py
+msgid "Warnings"
+msgstr "警告回数"
+
+# key: graduation.report_columns.is_honors
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Honors"
+msgstr "優秀者"
+
+# key: graduation.report_columns.honors_rank
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Honors rank"
+msgstr "優秀者順位"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "必要単位"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/reporting/services/catalog.py
+msgid "Audited"
+msgstr "判定日時"
+
+# key: graduation.report_columns.type_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Change"
+msgstr "異動"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/reporting/services/catalog.py
+msgid "From"
+msgstr "変更前"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/reporting/services/catalog.py
+msgid "To"
+msgstr "変更後"
+
+# key: graduation.report_columns.effective_date
+#: ninefruits/reporting/services/catalog.py
+msgid "Effective"
+msgstr "発効日"
+
+# key: graduation.report_columns.decided_at
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Decided"
+msgstr "決定日時"
+
+# key: graduation.report_columns.course_code
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation.report_columns"
+msgid "Course"
+msgstr "科目"
+
+# key: graduation.report_columns.course_title
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Title"
+msgstr "科目名"
+
+# key: graduation.report_columns.section_code
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Section"
+msgstr "クラス"
+
+# key: graduation.report_columns.instructors
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Instructors"
+msgstr "担当教員"
+
+# key: graduation.report_columns.capacity
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Capacity"
+msgstr "定員"
+
+# key: graduation.report_columns.enrolled
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Enrolled"
+msgstr "履修者"
+
+# key: graduation.report_columns.waiting
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Waiting"
+msgstr "キャンセル待ち"
+
+# key: offering.timetable.mode
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "Show"
+msgstr "表示"
+
+# key: graduation.reports.rows
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+#, python-format
+msgid "%(count)s row(s) (first 500 on screen; the CSV has them all)"
+msgstr "%(count)s 行(画面には最初の 500 行を表示、CSV にはすべて含まれます)"
+
+# key: graduation.reports.download_csv
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "Download CSV"
+msgstr "CSV をダウンロード"
+
+# key: graduation.reports.empty
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "No rows. Choose the filters above."
+msgstr "該当する行はありません。上の条件を選択してください。"

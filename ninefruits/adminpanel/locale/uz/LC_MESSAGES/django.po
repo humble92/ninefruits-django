@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/adminpanel/config.py
+msgctxt "security"
+msgid "Two-factor authentication"
+msgstr "Ikki bosqichli autentifikatsiya"
+
+# key: admin.navigation.portal
+#: ninefruits/adminpanel/config.py ninefruits/adminpanel/templates/adminpanel/dashboard.html
+msgctxt "admin"
+msgid "Portal"
+msgstr "Portal"
+
+# key: admin.navigation.student_records
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Students and staff"
+msgstr "Talabalar va xodimlar"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "Qabul"
+
+# key: admin.navigation.curriculum
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Curriculum and sections"
+msgstr "Oʻquv reja va fan guruhlari"
+
+# key: admin.navigation.registration
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Registration"
+msgstr "Fanlarga yozilish"
+
+# key: admin.navigation.grading
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Grades"
+msgstr "Baholar"
+
+# key: admin.navigation.evaluation
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Course evaluation"
+msgstr "Fan soʻrovnomasi"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Examinations"
+msgstr "Imtihonlar"
+
+# key: admin.navigation.certificates
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Certificates"
+msgstr "Maʼlumotnomalar"
+
+# key: admin.navigation.graduation
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Graduation"
+msgstr "Bitiruv"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Reports"
+msgstr "Hisobotlar"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "LMS integration"
+msgstr "LMS integratsiyasi"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Reference data"
+msgstr "Asosiy maʼlumotlar"
+
+# key: admin.navigation.access
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Users and access"
+msgstr "Foydalanuvchilar va kirish"
+
+# key: admin.navigation.audit
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Audit"
+msgstr "Audit"
+
+# key: admin.navigation.settings
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Settings"
+msgstr "Sozlamalar"
+
+#: ninefruits/adminpanel/navigation.py ninefruits/adminpanel/sites.py
+msgctxt "admin"
+msgid "Dashboard"
+msgstr "Boshqaruv paneli"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/adminpanel/templates/adminpanel/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+# key: portal.dashboard.welcome
+#: ninefruits/adminpanel/templates/adminpanel/dashboard.html
+#, python-format
+msgctxt "admin"
+msgid "Welcome, %(name)s"
+msgstr "Xush kelibsiz, %(name)s"
+
+# key: authentication.logout
+#: ninefruits/adminpanel/templates/adminpanel/dashboard.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Chiqish"

@@ -1,0 +1,1321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/grading/actions/_support.py
+msgid "Enter a reason."
+msgstr "Maglagay ng dahilan."
+
+# key: grading.errors.term_not_published
+#: ninefruits/grading/actions/close_term.py
+msgid "Only a published term closes."
+msgstr "Ang nakalathalang termino lamang ang maaaring isara."
+
+# key: grading.errors.term_not_ready
+#: ninefruits/grading/actions/close_term.py
+#, python-format
+msgid "%(count)s section(s) have grades that are not final."
+msgstr "May mga markang hindi pa pinal sa %(count)s seksiyon."
+
+# key: grading.errors.not_all_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+#, python-format
+msgid "Not all grades are submitted (%(count)s missing)."
+msgstr "Hindi pa naisusumite ang lahat ng marka (%(count)s ang kulang)."
+
+# key: grading.errors.nothing_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+msgid "There are no submitted grades."
+msgstr "Walang naisumiteng marka."
+
+# key: grading.errors.not_finalized
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "Only a final grade needs a change request."
+msgstr "Ang pinal na marka lamang ang nangangailangan ng kahilingan sa pagbabago."
+
+# key: grading.errors.new_grade_required
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/views/portal.py
+msgid "Enter the new score or grade."
+msgstr "Ilagay ang bagong iskor o marka."
+
+# key: grading.errors.same_grade
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "The new grade is the current grade."
+msgstr "Ang bagong marka ay ang kasalukuyang marka."
+
+# key: grading.errors.request_pending
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "A change request for this grade is already open."
+msgstr "May bukas nang kahilingan sa pagbabago para sa markang ito."
+
+# key: grading.errors.request_decided
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/actions/manage_method_requests.py
+msgid "The request is already decided."
+msgstr "Napagpasyahan na ang kahilingan."
+
+# key: grading.errors.own_request
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "You cannot decide your own request."
+msgstr "Hindi mo maaaring pagpasyahan ang sarili mong kahilingan."
+
+# key: grading.errors.same_method
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "The section already uses that evaluation method."
+msgstr "Ginagamit na ng seksiyon ang paraan ng pagmamarkang iyon."
+
+# key: grading.errors.method_request_pending
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "A change request for this section is already waiting."
+msgstr "May naghihintay nang kahilingan sa pagbabago para sa seksiyong ito."
+
+# key: grading.errors.method_has_grades
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "May naipasok nang mga marka; hindi na mababago ang paraan ng pagmamarka."
+
+# key: grading.errors.scale_fixed
+#: ninefruits/grading/actions/save_grade_scale.py
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "Itinakda ang iskala ng marka sa pag-install at hindi ito mababago."
+
+# key: grading.errors.not_editable
+#: ninefruits/grading/actions/save_grades.py
+msgid "Some grades can no longer be changed here."
+msgstr "Hindi na mababago rito ang ilang marka."
+
+# key: grading.errors.over_caps
+#: ninefruits/grading/actions/save_grades.py
+msgid "The grades are outside the institution's grade caps. Adjust them, or ask the office."
+msgstr "Labas sa mga limitasyon ng marka ng institusyon ang mga marka. Ayusin ang mga ito, o magtanong sa opisina."
+
+# key: grading.errors.exception_reason_required
+#: ninefruits/grading/actions/save_grades.py
+msgid "Submitting outside the grade caps needs a reason."
+msgstr "Kailangan ng dahilan para magsumite nang labas sa mga limitasyon ng marka."
+
+# key: grading.errors.missing_grades
+#: ninefruits/grading/actions/save_grades.py
+#, python-format
+msgid "%(count)s student(s) have no grade yet."
+msgstr "%(count)s mag-aaral ang wala pang marka."
+
+# key: grading.errors.entry_closed
+#: ninefruits/grading/actions/save_grades.py
+msgid "Grade entry is not open for this section."
+msgstr "Hindi bukas ang pagpasok ng marka para sa seksiyong ito."
+
+# key: grading.fields.decision_note
+#: ninefruits/grading/admin/common.py ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Tala"
+
+# key: reference.resources.terms.label
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgid "term"
+msgstr "termino"
+
+# key: offering.fields.dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Preview only"
+msgstr "Preview lamang"
+
+# key: grading.help.close_dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Only check whether the term can close."
+msgstr "Suriin lamang kung maaaring isara ang termino."
+
+# key: common.reason
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/notifications.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Dahilan"
+
+# key: common.yes
+#: ninefruits/grading/admin/common.py
+msgid "Yes"
+msgstr "Oo"
+
+#: ninefruits/grading/admin/common.py
+msgid "No"
+msgstr "Hindi"
+
+# key: registration.fields.status
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Katayuan"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "Student number"
+msgstr "Student number"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "people"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: offering.fields.section
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Seksiyon"
+
+# key: grading.fields.change
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Change"
+msgstr "Pagbabago"
+
+# key: grading.fields.requested_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Hiniling ni"
+
+# key: grading.fields.decided_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "Nagpasya"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgid "Approve"
+msgstr "Aprubahan"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/enums.py
+msgid "Approved"
+msgstr "Inaprubahan"
+
+# key: grading.help.approve
+#: ninefruits/grading/admin/grade_changes.py
+#, python-format
+msgid "The grade changes from %(from)s to %(to)s now, and the student's GPA is recalculated."
+msgstr "Magbabago na ngayon ang marka mula %(from)s patungong %(to)s, at muling kakalkulahin ang GPA ng mag-aaral."
+
+# key: grading.actions.reject
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Tanggihan"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/enums.py
+msgid "Rejected"
+msgstr "Tinanggihan"
+
+# key: grading.actions.cancel_request
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Kanselahin ang kahilingan"
+
+# key: grading.help.scale_fixed
+#: ninefruits/grading/admin/grade_scales.py
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "Itinakda ang iskala ng marka sa pag-install: nakabatay rito ang mga marka at GPA. Hindi ito maaaring ilipat sa ibang iskala."
+
+# key: validation.required
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Kinakailangan ang field na %(attribute)s."
+
+# key: reference.fields.grade_points
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "Grade points"
+msgstr "Grade point"
+
+# key: validation.max.numeric
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/settings_pages.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "Hindi dapat lumampas sa %(max)s ang field na %(attribute)s."
+
+# key: validation.gte.numeric
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Dapat mas malaki o katumbas ng %(value)s ang field na %(attribute)s."
+
+# key: reference.fields.max_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "To (%)"
+msgstr "Hanggang (%)"
+
+# key: reference.fields.min_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "From (%)"
+msgstr "Mula (%)"
+
+# key: reference.resources.grade_scale_items.label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grade"
+msgstr "marka"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grades"
+msgstr "mga marka"
+
+# key: reference.fields.name
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: reference.fields.items_count
+#: ninefruits/grading/admin/grade_scales.py
+msgctxt "reference"
+msgid "Grades"
+msgstr "Mga marka"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgid "Evaluation"
+msgstr "Paraan ng pagmamarka"
+
+# key: grading.notifications.method_approved
+#: ninefruits/grading/admin/method_requests.py
+#, python-format
+msgid "Approved. %(count)s draft grade(s) cleared."
+msgstr "Inaprubahan. %(count)s draft na marka ang binura."
+
+# key: grading.help.approve_method
+#: ninefruits/grading/admin/method_requests.py
+msgid "The section's evaluation method changes now. Draft grades entered under the old method are cleared; the instructor is told by email."
+msgstr "Magbabago na ngayon ang paraan ng pagmamarka ng seksiyon. Buburahin ang mga draft na markang naipasok sa lumang paraan; aabisuhan ang instruktor sa email."
+
+# key: offering.fields.offering_unit
+#: ninefruits/grading/admin/section_grades.py
+msgid "Offering unit"
+msgstr "Nag-aalok na yunit"
+
+# key: grading.fields.exception_submitted
+#: ninefruits/grading/admin/section_grades.py
+msgid "Submitted as an exception"
+msgstr "Isinumite bilang eksepsiyon"
+
+# key: grading.fields.ready_to_finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Ready to finalize"
+msgstr "Handa nang gawing pinal"
+
+# key: curriculum.fields.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Pamagat"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/grading/admin/section_grades.py
+msgid "Instructors"
+msgstr "Mga instruktor"
+
+# key: grading.fields.pending
+#: ninefruits/grading/admin/section_grades.py
+msgid "Not submitted"
+msgstr "Hindi naisumite"
+
+# key: grading.fields.submitted
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading.fields"
+msgid "Submitted"
+msgstr "Naisumite"
+
+# key: grading.fields.finalized
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading"
+msgid "Final"
+msgstr "Pinal"
+
+# key: grading.fields.exception
+#: ninefruits/grading/admin/section_grades.py
+msgid "Exception"
+msgstr "Eksepsiyon"
+
+# key: grading.actions.open_entry
+# key: grading.grades.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/apps.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Grades"
+msgstr "Mga marka"
+
+# key: grading.actions.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize"
+msgstr "Gawing pinal"
+
+# key: grading.notifications.finalized
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) finalized."
+msgstr "%(count)s marka ang ginawang pinal."
+
+# key: grading.help.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalized grades are final: they change only through an approved grade change request. Students see them from now on."
+msgstr "Pinal na ang mga markang ginawang pinal: mababago lamang ang mga ito sa pamamagitan ng inaprubahang kahilingan sa pagbabago ng marka. Makikita na ito ng mga mag-aaral mula ngayon."
+
+# key: grading.actions.return
+#: ninefruits/grading/admin/section_grades.py
+msgid "Return to instructor"
+msgstr "Ibalik sa instruktor"
+
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) returned."
+msgstr "%(count)s marka ang ibinalik."
+
+# key: grading.actions.finalize_selected
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize selected"
+msgstr "Gawing pinal ang mga napili"
+
+# key: grading.notifications.skipped
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "Not finalized: %(sections)s"
+msgstr "Hindi ginawang pinal: %(sections)s"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Academic standing"
+msgstr "Academic standing"
+
+# key: grading.fields.honors
+# key: grading.settings.honors
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Honors"
+msgstr "Karangalan"
+
+# key: reference.resources.programs.label
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "program"
+msgstr "programa"
+
+# key: grading.fields.earned_credits
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Nakuhang units"
+
+# key: grading.fields.closed
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Closed"
+msgstr "Isinara"
+
+# key: grading.transcript.title
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/transcript.html ninefruits/grading/views/transcript.py
+msgid "Grade report"
+msgstr "Ulat ng marka"
+
+# key: grading.actions.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Close term"
+msgstr "Isara ang termino"
+
+# key: grading.help.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Every grade of the term must be final. Closing calculates term records, academic standing and honors, and moves the term to grades closed."
+msgstr "Dapat pinal ang bawat marka ng termino. Kinakalkula ng pagsasara ang mga rekord ng termino, academic standing at karangalan, at inililipat ang termino sa sarado na ang marka."
+
+# key: grading.notifications.close_ready
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Ready to close: %(students)s student(s)."
+msgstr "Handa nang isara: %(students)s mag-aaral."
+
+# key: grading.notifications.close_blocked
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Cannot close yet: %(sections)s section(s) have grades that are not final."
+msgstr "Hindi pa maisasara: may mga markang hindi pa pinal sa %(sections)s seksiyon."
+
+# key: grading.notifications.open_section
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(section)s: %(count)s not final"
+msgstr "%(section)s: %(count)s hindi pa pinal"
+
+# key: grading.notifications.close_started
+#: ninefruits/grading/admin/term_records.py
+msgid "Term close started. The term moves to grades closed when it finishes."
+msgstr "Sinimulan ang pagsasara ng termino. Lilipat ang termino sa sarado na ang marka kapag natapos ito."
+
+# key: grading.actions.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculate"
+msgstr "Kalkulahin muli"
+
+# key: grading.notifications.recalculated
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(count)s student(s) recalculated."
+msgstr "%(count)s mag-aaral ang muling kinalkula."
+
+# key: grading.help.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculates credits and GPA from final grades, e.g. after a policy change. Standing and honors stay as decided at term close."
+msgstr "Muling kinakalkula ang units at GPA mula sa mga pinal na marka, hal. pagkatapos ng pagbabago ng patakaran. Nananatili ang standing at karangalan ayon sa napagpasyahan sa pagsasara ng termino."
+
+# key: grading.applies_to.graded
+#: ninefruits/grading/enums.py
+msgid "Graded courses"
+msgstr "Mga asignaturang may marka"
+
+# key: grading.applies_to.pass_fail
+#: ninefruits/grading/enums.py
+msgid "Pass/fail courses"
+msgstr "Mga asignaturang pasado/bagsak"
+
+# key: grading.applies_to.both
+#: ninefruits/grading/enums.py
+msgid "Both"
+msgstr "Pareho"
+
+# key: grading.evaluation_methods.absolute
+#: ninefruits/grading/enums.py
+msgid "Absolute evaluation"
+msgstr "Absolute na pagmamarka"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: ninefruits/grading/enums.py ninefruits/grading/settings_pages.py
+msgid "Relative evaluation"
+msgstr "Relative na pagmamarka"
+
+# key: grading.standings.good
+#: ninefruits/grading/enums.py
+msgid "Good standing"
+msgstr "Good standing"
+
+# key: grading.standings.warning
+#: ninefruits/grading/enums.py
+msgid "Academic warning"
+msgstr "Academic warning"
+
+# key: grading.standings.dismissal_review
+#: ninefruits/grading/enums.py
+msgid "Dismissal review"
+msgstr "Pagsusuri ng pagkatanggal"
+
+# key: registration.grade_statuses.none
+#: ninefruits/grading/enums.py
+msgid "No grade"
+msgstr "Walang marka"
+
+# key: registration.grade_statuses.draft
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Draft"
+msgstr "Draft"
+
+# key: registration.grade_statuses.submitted
+#: ninefruits/grading/enums.py
+msgctxt "registration.grade_statuses"
+msgid "Submitted"
+msgstr "Naisumite"
+
+# key: registration.grade_statuses.finalized
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Final"
+msgstr "Pinal"
+
+# key: grading.gpa_roundings.round
+#: ninefruits/grading/enums.py
+msgid "Round half up"
+msgstr "I-round (kalahati pataas)"
+
+# key: grading.gpa_roundings.floor
+#: ninefruits/grading/enums.py
+msgid "Cut off"
+msgstr "Putulin"
+
+# key: grading.retake_policies.latest
+#: ninefruits/grading/enums.py
+msgid "Latest attempt"
+msgstr "Pinakahuling pagkuha"
+
+# key: grading.retake_policies.best
+#: ninefruits/grading/enums.py
+msgid "Best attempt"
+msgstr "Pinakamahusay na pagkuha"
+
+# key: grading.change_statuses.pending
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Pending"
+msgstr "Nakabinbin"
+
+# key: grading.change_statuses.cancelled
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Cancelled"
+msgstr "Kinansela"
+
+# key: reference.fields.code
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: reference.fields.max_grade_points
+#: ninefruits/grading/models/grade_scale.py
+msgid "Maximum grade points"
+msgstr "Pinakamataas na grade point"
+
+# key: reference.fields.is_default
+#: ninefruits/grading/models/grade_scale.py
+msgid "Default"
+msgstr "Default"
+
+# key: reference.resources.grade_scales.label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scale"
+msgstr "iskala ng marka"
+
+# key: reference.resources.grade_scales.plural_label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scales"
+msgstr "mga iskala ng marka"
+
+# key: reference.fields.grade
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Grade"
+msgstr "Marka"
+
+# key: reference.fields.counts_in_gpa
+#: ninefruits/grading/models/grade_scale.py
+msgid "Counts in GPA"
+msgstr "Ibinibilang sa GPA"
+
+# key: reference.fields.is_passing
+#: ninefruits/grading/models/grade_scale.py
+msgid "Passing"
+msgstr "Pasado"
+
+# key: certificate.fields.audience
+# key: grading.fields.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "For"
+msgstr "Para sa"
+
+# key: grading.help.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "Ang mga letter grade ay para sa mga asignaturang may marka, ang P/NP para sa mga asignaturang pasado/bagsak; \"pareho\" hal. para sa I (incomplete)."
+
+# key: reference.fields.sort_order
+#: ninefruits/grading/models/grade_scale.py
+msgid "Order"
+msgstr "Pagkakasunod"
+
+# key: grading.fields.new_grade
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "New grade"
+msgstr "Bagong marka"
+
+# key: grading.fields.new_score
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "New score"
+msgstr "Bagong iskor"
+
+# key: grading.fields.requested_at
+#: ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Hiniling"
+
+# key: grading.resources.grade_changes.label
+#: ninefruits/grading/models/requests.py
+msgid "grade change"
+msgstr "pagbabago ng marka"
+
+# key: grading.resources.grade_changes.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "grade changes"
+msgstr "mga pagbabago ng marka"
+
+# key: grading.resources.method_requests.label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method request"
+msgstr "kahilingan sa paraan ng pagmamarka"
+
+# key: grading.resources.method_requests.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method requests"
+msgstr "mga kahilingan sa paraan ng pagmamarka"
+
+# key: grading.resources.section_grades.label
+# key: grading.resources.section_grades.plural_label
+#: ninefruits/grading/models/section_grade.py
+msgid "grade progress"
+msgstr "progreso ng marka"
+
+# key: people.resources.student_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "student record"
+msgstr "rekord ng mag-aaral"
+
+# key: grading.fields.attempted_credits
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Attempted credits"
+msgstr "Kinuhang units"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: ninefruits/grading/models/term_record.py
+msgid "Term GPA"
+msgstr "GPA ng termino"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Kabuuang GPA"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: ninefruits/grading/models/term_record.py
+msgid "Warnings"
+msgstr "Mga babala"
+
+# key: grading.fields.honors_rank
+#: ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Honors rank"
+msgstr "Ranggo sa karangalan"
+
+# key: grading.resources.term_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "term record"
+msgstr "rekord ng termino"
+
+# key: grading.resources.term_records.plural_label
+#: ninefruits/grading/models/term_record.py
+msgid "term records"
+msgstr "mga rekord ng termino"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/grading/notifications.py
+msgid "Hello,"
+msgstr "Magandang araw,"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Salamat,\n"
+"%(app)s"
+
+# key: grading.mail.returned_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades returned: %(section)s"
+msgstr "Ibinalik ang mga marka: %(section)s"
+
+# key: grading.mail.returned_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The grades of %(section)s were returned to you. Please check them and submit again."
+msgstr "Ibinalik sa iyo ang mga marka ng %(section)s. Pakisuri ang mga ito at isumite muli."
+
+# key: grading.mail.open_grade_entry
+#: ninefruits/grading/notifications.py
+msgid "Open grade entry"
+msgstr "Buksan ang pagpasok ng marka"
+
+# key: grading.mail.missing_subject
+#: ninefruits/grading/notifications.py
+msgid "Grades not submitted yet"
+msgstr "Hindi pa naisusumite ang mga marka"
+
+# key: grading.mail.missing_intro
+#: ninefruits/grading/notifications.py
+msgid "These sections still have grades that are not submitted:"
+msgstr "May mga markang hindi pa naisusumite sa mga seksiyong ito:"
+
+# key: grading.mail.open_teaching
+#: ninefruits/grading/notifications.py
+msgid "Open my teaching"
+msgstr "Buksan ang aking pagtuturo"
+
+# key: grading.mail.method_approved_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method changed: %(section)s"
+msgstr "Binago ang paraan ng pagmamarka: %(section)s"
+
+# key: grading.mail.method_approved_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(section)s is now evaluated by %(method)s."
+msgstr "Minamarkahan na ngayon ang %(section)s ayon sa %(method)s."
+
+# key: grading.mail.method_rejected_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method request rejected: %(section)s"
+msgstr "Tinanggihan ang kahilingan sa paraan ng pagmamarka: %(section)s"
+
+# key: grading.mail.method_rejected_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The request to evaluate %(section)s by %(method)s was rejected."
+msgstr "Tinanggihan ang kahilingang markahan ang %(section)s ayon sa %(method)s."
+
+# key: grading.mail.method_drafts_cleared
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(count)s draft grade(s) entered under the old method were cleared; please enter them again."
+msgstr "Binura ang %(count)s draft na markang naipasok sa lumang paraan; pakipasok muli ang mga ito."
+
+# key: grading.mail.exception_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades submitted outside the caps: %(section)s"
+msgstr "Mga markang isinumite nang labas sa mga limitasyon: %(section)s"
+
+# key: grading.mail.exception_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(user)s submitted the grades of %(section)s outside the institution's grade caps."
+msgstr "Isinumite ni %(user)s ang mga marka ng %(section)s nang labas sa mga limitasyon ng marka ng institusyon."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Term closed: %(term)s"
+msgstr "Isinara ang termino: %(term)s"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The term close of %(term)s finished. The term is now grades closed."
+msgstr "Natapos ang pagsasara ng terminong %(term)s. Sarado na ngayon ang marka ng termino."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(records)s term record(s), %(warnings)s academic warning(s), %(dismissal_reviews)s dismissal review(s), %(honors)s honors student(s)."
+msgstr "%(records)s rekord ng termino, %(warnings)s academic warning, %(dismissal_reviews)s pagsusuri para sa dismissal, %(honors)s mag-aaral na may karangalan."
+
+#: ninefruits/grading/notifications.py
+msgid "Open term records"
+msgstr "Buksan ang mga rekord ng termino"
+
+# key: grading.distribution.over
+#: ninefruits/grading/services/distribution.py
+#, python-format
+msgid "%(group)s: %(percent)s%% of the students, cap %(cap)s%% (up to %(limit)s%% allowed)"
+msgstr "%(group)s: %(percent)s%% ng mga mag-aaral, limitasyon %(cap)s%% (hanggang %(limit)s%% ang pinapayagan)"
+
+# key: validation.numeric
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "Dapat isang numero ang field na %(attribute)s."
+
+# key: grading.fields.score
+#: ninefruits/grading/services/options.py
+msgid "Score (%)"
+msgstr "Iskor (%)"
+
+# key: grading.errors.no_default_scale
+#: ninefruits/grading/services/options.py
+msgid "There is no default grade scale."
+msgstr "Walang default na iskala ng marka."
+
+# key: grading.errors.no_score_here
+#: ninefruits/grading/services/options.py
+msgid "This section takes grades only (relative evaluation or a pass/fail course): leave the score empty."
+msgstr "Marka lamang ang tinatanggap ng seksiyong ito (relative na pagmamarka o asignaturang pasado/bagsak): iwanang blangko ang iskor."
+
+# key: grading.errors.score_without_grade
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "No grade covers the score %(score)s."
+msgstr "Walang markang sumasaklaw sa iskor na %(score)s."
+
+# key: grading.errors.grade_not_allowed
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The grade %(grade)s is not allowed for this course."
+msgstr "Hindi pinapayagan ang markang %(grade)s para sa asignaturang ito."
+
+# key: grading.errors.above_retake_cap
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "A retake can receive at most %(grade)s."
+msgstr "Hanggang %(grade)s lamang ang maaaring makuha sa retake."
+
+#: ninefruits/grading/settings_pages.py
+msgid "Write each cap as a letter and a percentage, e.g. A=30, B=40."
+msgstr "Isulat ang bawat limit bilang titik at porsiyento, hal. A=30, B=40."
+
+# key: grading.fields.cap
+#: ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cap"
+msgstr "Limitasyon"
+
+# key: grading.settings.no_cap
+#: ninefruits/grading/settings_pages.py
+msgid "No cap"
+msgstr "Walang limitasyon"
+
+# key: grading.settings.gpa_decimals
+#: ninefruits/grading/settings_pages.py
+msgid "Decimals"
+msgstr "Mga decimal"
+
+# key: grading.settings.gpa_rounding
+#: ninefruits/grading/settings_pages.py
+msgid "Rounding"
+msgstr "Pag-round"
+
+# key: grading.settings.retake_policy
+#: ninefruits/grading/settings_pages.py
+msgid "Retakes in the cumulative GPA"
+msgstr "Mga retake sa kabuuang GPA"
+
+# key: grading.settings.retake_policy_help
+#: ninefruits/grading/settings_pages.py
+msgid "Term GPAs always keep every grade of their term."
+msgstr "Laging pinapanatili ng GPA ng termino ang bawat marka ng terminong iyon."
+
+# key: grading.settings.retake_max_grade
+#: ninefruits/grading/settings_pages.py
+msgid "Highest grade for a retake"
+msgstr "Pinakamataas na marka para sa retake"
+
+# key: grading.settings.retake_max_grade_help
+#: ninefruits/grading/settings_pages.py
+msgid "Grades above it cannot be given to a retake."
+msgstr "Hindi maibibigay sa retake ang mga markang mas mataas dito."
+
+# key: grading.settings.relative_grade_caps
+#: ninefruits/grading/settings_pages.py
+msgid "Grade caps"
+msgstr "Mga limitasyon ng marka"
+
+# key: grading.settings.relative_grade_caps_help
+#: ninefruits/grading/settings_pages.py
+msgid "The most a grade group (the letter: A for A+, A0, A-) may take of a section's graded students. Groups without a cap are free."
+msgstr "Ang pinakamaraming bahagi ng mga mag-aaral na may marka sa isang seksiyon na maaaring makakuha ng isang grupo ng marka (ang titik: A para sa A+, A0, A-). Malaya ang mga grupong walang limitasyon."
+
+# key: grading.settings.relative_cap_tolerance_percent
+#: ninefruits/grading/settings_pages.py
+msgid "Tolerance above the cap"
+msgstr "Palugit sa itaas ng limitasyon"
+
+# key: grading.settings.relative_minimum_students
+#: ninefruits/grading/settings_pages.py
+msgid "Check from this many graded students"
+msgstr "Suriin simula sa ganitong bilang ng mag-aaral na may marka"
+
+# key: grading.settings.relative_minimum_students_help
+#: ninefruits/grading/settings_pages.py
+msgid "Smaller sections are not checked against the caps."
+msgstr "Hindi sinusuri laban sa mga limitasyon ang mas maliliit na seksiyon."
+
+# key: grading.settings.warning_gpa_below
+#: ninefruits/grading/settings_pages.py
+msgid "Warning when the term GPA is below"
+msgstr "Babala kapag ang GPA ng termino ay mas mababa sa"
+
+# key: grading.settings.warning_gpa_below_help
+#: ninefruits/grading/settings_pages.py
+msgid "A term with only pass/fail courses gives no warning."
+msgstr "Walang babala sa terminong puro pasado/bagsak na asignatura."
+
+# key: grading.settings.standing_regular_terms_only
+#: ninefruits/grading/settings_pages.py
+msgid "Judge only regular terms (not summer or winter)"
+msgstr "Suriin lamang ang mga regular na termino (hindi summer o winter)"
+
+# key: grading.settings.dismissal_warning_count
+#: ninefruits/grading/settings_pages.py
+msgid "Warnings for dismissal review"
+msgstr "Mga babala para sa pagsusuri ng pagkatanggal"
+
+# key: grading.settings.dismissal_warning_count_help
+#: ninefruits/grading/settings_pages.py
+msgid "0 turns it off. The student is flagged for review; dismissal is a status change."
+msgstr "Pinapatay ito ng 0. Mamarkahan ang mag-aaral para sa pagsusuri; ang pagkatanggal ay isang pagbabago ng katayuan."
+
+# key: grading.settings.dismissal_consecutive_only
+#: ninefruits/grading/settings_pages.py
+msgid "Count only consecutive warnings"
+msgstr "Bilangin lamang ang sunud-sunod na babala"
+
+# key: grading.settings.honors_min_gpa
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum term GPA"
+msgstr "Pinakamababang GPA ng termino"
+
+# key: grading.settings.honors_min_credits
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum GPA credits in the term"
+msgstr "Pinakamababang GPA units sa termino"
+
+# key: grading.settings.honors_exclude_failing
+#: ninefruits/grading/settings_pages.py
+msgid "No honors with a failed course"
+msgstr "Walang karangalan kapag may bagsak na asignatura"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/grading/settings_pages.py
+msgid "Grading policy"
+msgstr "Patakaran sa pagmamarka"
+
+# key: grading.settings.scale
+#: ninefruits/grading/settings_pages.py
+msgid "Grade scale"
+msgstr "Iskala ng marka"
+
+# key: grading.settings.scale_fixed
+#: ninefruits/grading/settings_pages.py
+#, python-format
+msgid "Grade scale: %(scale)s (fixed at installation)."
+msgstr "Iskala ng marka: %(scale)s (itinakda sa pag-install)."
+
+# key: grading.settings.gpa
+#: ninefruits/grading/settings_pages.py
+msgid "GPA"
+msgstr "GPA"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "Term close %(term)s is running."
+msgstr "Tumatakbo ang pagsasara ng terminong %(term)s."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "%(processed)s of %(total)s student group(s) done (%(progress)s%%)."
+msgstr "%(processed)s sa %(total)s grupo ng mag-aaral ang tapos na (%(progress)s%%)."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+msgid "A part failed: start the close again after fixing the cause."
+msgstr "May bahaging nabigo: simulan muli ang pagsasara pagkatapos ayusin ang sanhi."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "My teaching"
+msgstr "Aking pagtuturo"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/views/portal.py
+msgid "Grade entry"
+msgstr "Pagpasok ng marka"
+
+# key: grading.entry.counts
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(none)s not entered, %(draft)s draft, %(submitted)s submitted, %(finalized)s final"
+msgstr "%(none)s hindi naipasok, %(draft)s draft, %(submitted)s naisumite, %(finalized)s pinal"
+
+# key: grading.entry.window_open
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is open."
+msgstr "Bukas ang pagpasok ng marka."
+
+# key: grading.entry.window_closed
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is closed."
+msgstr "Sarado ang pagpasok ng marka."
+
+# key: grading.entry.absolute_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Enter each student's score (0–100). The grade follows from the score on %(scale)s. Choose a grade directly only for one without a score (e.g. I)."
+msgstr "Ilagay ang iskor ng bawat mag-aaral (0–100). Sumusunod ang marka sa iskor ayon sa %(scale)s. Direktang pumili ng marka para lamang sa walang iskor (hal. I)."
+
+# key: grading.entry.relative_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Do not enter scores: give each student a grade."
+msgstr "Huwag maglagay ng iskor: bigyan ng marka ang bawat mag-aaral."
+
+# key: grading.entry.method_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change to %(method)s requested and waiting for the scheduling staff."
+msgstr "Hiniling ang pagbabago sa %(method)s at naghihintay sa kawani ng iskedyul."
+
+# key: grading.entry.method_request_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "To change to %(method)s, ask the scheduling staff with a reason (possible until grades are submitted)."
+msgstr "Para magbago sa %(method)s, humiling sa kawani ng iskedyul kasama ang dahilan (posible hanggang maisumite ang mga marka)."
+
+# key: grading.actions.request_method
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Request %(method)s"
+msgstr "Hilingin ang %(method)s"
+
+# key: grading.entry.exception_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submitted as an exception."
+msgstr "Isinumite bilang eksepsiyon."
+
+# key: grading.entry.exception_detail
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "By %(user)s on %(date)s, outside the grade caps."
+msgstr "Ni %(user)s noong %(date)s, labas sa mga limitasyon ng marka."
+
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Score (%%)"
+msgstr "Iskor (%%)"
+
+# key: grading.fields.grade
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Marka"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "Retake"
+msgstr "Retake"
+
+# key: grading.entry.by_score
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "By score"
+msgstr "Ayon sa iskor"
+
+# key: grading.entry.change_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change %(from)s → %(to)s requested"
+msgstr "Hiniling ang pagbabagong %(from)s → %(to)s"
+
+# key: grading.actions.request_change
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Request change"
+msgstr "Humiling ng pagbabago"
+
+# key: grading.entry.no_students
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "No students."
+msgstr "Walang mag-aaral."
+
+# key: grading.entry.distribution_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grades against the caps"
+msgstr "Mga marka laban sa mga limitasyon"
+
+# key: grading.entry.distribution_checked
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: each grade group must stay within its cap."
+msgstr "%(graded)s mag-aaral na may marka: dapat manatili ang bawat grupo ng marka sa loob ng limitasyon nito."
+
+# key: grading.entry.distribution_exempt
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: sections under %(minimum)s are not checked against the caps."
+msgstr "%(graded)s mag-aaral na may marka: hindi sinusuri laban sa mga limitasyon ang mga seksiyong mas kaunti sa %(minimum)s."
+
+# key: grading.fields.grade_group
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade group"
+msgstr "Grupo ng marka"
+
+# key: grading.fields.count
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Students"
+msgstr "Mga mag-aaral"
+
+# key: grading.entry.exception_reason_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)."
+msgstr "Labas sa mga limitasyon ang mga marka. Maaari pa ring magsumite ang kawani bilang naitalang eksepsiyon: ibigay ang dahilan (aabisuhan ang mga tagasuri, at ipapakita ito ng seksiyon)."
+
+# key: grading.fields.exception_reason
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Reason for the exception"
+msgstr "Dahilan ng eksepsiyon"
+
+# key: grading.actions.save_draft
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Save draft"
+msgstr "I-save ang draft"
+
+# key: grading.actions.validate_distribution
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Check grade caps"
+msgstr "Suriin ang mga limitasyon ng marka"
+
+# key: grading.entry.submit_confirm
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit the grades? You cannot change them afterwards; ask the office if one is wrong."
+msgstr "Isumite ang mga marka? Hindi mo na mababago ang mga ito pagkatapos; magtanong sa opisina kung may mali."
+
+# key: grading.actions.submit
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit grades"
+msgstr "Isumite ang mga marka"
+
+# key: grading.entry.help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Save drafts any time; submit once every student has a grade."
+msgstr "Mag-save ng draft anumang oras; isumite kapag may marka na ang bawat mag-aaral."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cancel"
+msgstr "Kanselahin"
+
+# key: grading.transcript.print
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Print"
+msgstr "I-print"
+
+# key: grading.grades.blocked
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+#, python-format
+msgid "Your grades are not available: you have a hold (%(type)s). Contact the office that placed it."
+msgstr "Hindi available ang iyong mga marka: mayroon kang hold (%(type)s). Makipag-ugnayan sa opisinang naglagay nito."
+
+# key: grading.grades.term_summary
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "GPA %(gpa)s · %(earned)s sa %(attempted)s units ang nakuha"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Code"
+
+# key: curriculum.fields.credits
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Units"
+
+# key: grading.grades.superseded
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "replaced by a retake in the cumulative GPA"
+msgstr "pinalitan ng retake sa kabuuang GPA"
+
+# key: grading.grades.none
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "No final grades yet."
+msgstr "Wala pang pinal na marka."
+
+# key: grading.transcript.unofficial
+#: ninefruits/grading/templates/grading/transcript.html
+msgid "Unofficial grade report. Request an official transcript from the registrar."
+msgstr "Hindi opisyal na ulat ng marka. Humiling ng opisyal na Transcript of Records sa registrar."
+
+# key: grading.transcript.printed_at
+#: ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgctxt "grading"
+msgid "Printed %(date)s"
+msgstr "Inilimbag noong %(date)s"
+
+# key: grading.entry.open
+#: ninefruits/grading/views/portal.py
+msgid "Enter grades"
+msgstr "Ipasok ang mga marka"
+
+# key: grading.entry.saved
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) saved."
+msgstr "%(count)s marka ang na-save."
+
+# key: grading.entry.distribution_ok
+#: ninefruits/grading/views/portal.py
+msgid "The grades are within the caps."
+msgstr "Nasa loob ng mga limitasyon ang mga marka."
+
+# key: grading.entry.submitted
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) submitted."
+msgstr "%(count)s marka ang naisumite."
+
+#: ninefruits/grading/views/portal.py
+msgid "The reason is too long."
+msgstr "Masyadong mahaba ang dahilan."
+
+# key: grading.entry.method_requested
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "Change to %(method)s requested. You will be told by email."
+msgstr "Hiniling ang pagbabago sa %(method)s. Aabisuhan ka sa email."
+
+# key: grading.entry.change_requested
+#: ninefruits/grading/views/portal.py
+msgid "Grade change requested."
+msgstr "Hiniling ang pagbabago ng marka."
+
+# key: admin.navigation.grading
+# key: grading.actions.open_entry
+# key: grading.grades.title
+# key: permissions.resources.grades
+# key: portal.navigation.grades
+# key: reference.fields.items_count
+#: ninefruits/grading/views/portal.py
+msgid "Grades"
+msgstr "Mga marka"
+
+#: ninefruits/grading/views/transcript.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Hindi nagawa ang PDF. Subukang muli mamaya."

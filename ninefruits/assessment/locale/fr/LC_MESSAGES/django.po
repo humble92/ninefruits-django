@@ -1,0 +1,784 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/assessment/actions/_support.py
+msgid "Enter a reason."
+msgstr "Saisissez un motif."
+
+# key: assessment.errors.pass_score_published
+#: ninefruits/assessment/actions/change_session_pass_score.py
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "Les résultats sont publiés : la note de réussite ne peut plus changer. Utilisez les demandes de correction."
+
+# key: assessment.errors.not_locked
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "This result is not published; enter it directly."
+msgstr "Ce résultat n’est pas publié ; saisissez-le directement."
+
+# key: assessment.errors.correction_pending
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "A correction request is already pending for this result."
+msgstr "Une demande de correction est déjà en attente pour ce résultat."
+
+# key: grading.errors.request_decided
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "The request is already decided."
+msgstr "La demande a déjà été traitée."
+
+# key: assessment.errors.own_correction
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "You cannot decide your own correction request."
+msgstr "Vous ne pouvez pas statuer sur votre propre demande de correction."
+
+# key: assessment.errors.not_registered
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/actions/register_for_assessment.py
+msgid "The student is not registered for this session."
+msgstr "L’étudiant n’est pas inscrit à cette session."
+
+# key: assessment.errors.published_locked
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are published: request a correction instead."
+msgstr "Les résultats de cette session sont publiés : demandez plutôt une correction."
+
+# key: assessment.errors.no_external
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind does not take external results."
+msgstr "Ce type n’accepte pas de résultats externes."
+
+# key: assessment.errors.future_date
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/admin/forms.py
+msgid "The date cannot be in the future."
+msgstr "La date ne peut pas être dans le futur."
+
+# key: assessment.errors.already_published
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are already published."
+msgstr "Les résultats de cette session sont déjà publiés."
+
+# key: assessment.errors.score_missing
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "La note de %(component)s est manquante."
+
+# key: assessment.errors.score_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "La note de %(component)s doit être comprise entre 0 et %(max)s."
+
+# key: assessment.errors.total_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "Le total doit être compris entre 0 et %(max)s."
+
+# key: assessment.errors.decision_required
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "Choose passed or not passed."
+msgstr "Choisissez réussi ou non réussi."
+
+# key: assessment.errors.no_pass_score
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "Ce type n’a pas de note de réussite : choisissez réussi ou non réussi."
+
+# key: assessment.errors.type_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This kind of examination is no longer held."
+msgstr "Ce type d’examen n’est plus organisé."
+
+# key: assessment.errors.record_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Only current students can register."
+msgstr "Seuls les étudiants inscrits peuvent s’inscrire."
+
+# key: assessment.errors.registration_closed
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Registration for this session is closed."
+msgstr "Les inscriptions à cette session sont closes."
+
+# key: assessment.errors.session_past
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session has already been held."
+msgstr "Cette session a déjà eu lieu."
+
+# key: assessment.errors.already_registered
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Already registered for this session."
+msgstr "Déjà inscrit à cette session."
+
+# key: assessment.errors.full
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session is full."
+msgstr "Cette session est complète."
+
+# key: assessment.errors.already_cancelled
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This registration is already cancelled."
+msgstr "Cette inscription est déjà annulée."
+
+# key: assessment.errors.has_result
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "Un résultat a été saisi ; l’inscription ne peut pas être annulée."
+
+# key: assessment.fields.type
+#: ninefruits/assessment/admin/common.py ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Kind"
+msgstr "Type"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Passed"
+msgstr "Réussi"
+
+# key: assessment.passed.no
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "Non réussi"
+
+# key: registration.fields.status
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Statut"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Student number"
+msgstr "Numéro d’étudiant"
+
+# key: assessment.fields.previous
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Current values"
+msgstr "Valeurs actuelles"
+
+# key: assessment.fields.proposed
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Proposed values"
+msgstr "Valeurs proposées"
+
+# key: common.reason
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Motif"
+
+# key: grading.fields.requested_by
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Demandée par"
+
+# key: grading.fields.decision_note
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Remarque"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/assessment/admin/corrections.py
+msgid "Approve"
+msgstr "Approuver"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Approved"
+msgstr "Approuvée"
+
+# key: grading.actions.reject
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Refuser"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Rejected"
+msgstr "Refusée"
+
+# key: grading.actions.cancel_request
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Annuler la demande"
+
+# key: validation.alpha_dash
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Le champ %(attribute)s ne doit contenir que des lettres, des chiffres, des tirets et des tirets bas."
+
+# key: assessment.fields.note
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Note"
+msgstr "Remarque"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/assessment/admin/forms.py
+msgid "Code"
+msgstr "Code"
+
+# key: validation.unique
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "La valeur du champ %(attribute)s est déjà utilisée."
+
+# key: assessment.fields.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Reason for changing the pass score"
+msgstr "Motif de la modification de la note de réussite"
+
+# key: assessment.help.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "Consigné dans le journal d’audit avec les étudiants dont le résultat a changé."
+
+# key: validation.after
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "Le champ %(attribute)s doit être une date postérieure au %(date)s."
+
+# key: assessment.fields.registration_closes_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registration closes"
+msgstr "Clôture des inscriptions"
+
+# key: assessment.fields.registration_opens_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/sessions.py
+msgid "Registration opens"
+msgstr "Ouverture des inscriptions"
+
+# key: assessment.fields.file
+#: ninefruits/assessment/admin/forms.py
+msgid "CSV file"
+msgstr "Fichier CSV"
+
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "Le fichier est trop volumineux (%(size)s octets, au plus %(limit)s)."
+
+# key: assessment.fields.total_score
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Total"
+msgstr "Total"
+
+# key: assessment.help.decision_automatic
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "Décidé d’après les notes : total supérieur ou égal à %(score)s et chaque épreuve au moins à son minimum."
+
+# key: assessment.fields.taken_date
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Taken on"
+msgstr "Passé le"
+
+# key: assessment.fields.level
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Level"
+msgstr "Niveau"
+
+# key: assessment.fields.certificate_number
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgid "Certificate number"
+msgstr "Numéro de certificat"
+
+# key: assessment.fields.evidence
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Evidence"
+msgstr "Justificatif"
+
+# key: assessment.fields.source
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Source"
+msgstr "Origine"
+
+# key: common.yes
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "Yes"
+msgstr "Oui"
+
+# upstream: Django/allauth catalog
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "No"
+msgstr "Non"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "people"
+msgid "Name"
+msgstr "Nom"
+
+# key: assessment.actions.record_external
+#: ninefruits/assessment/admin/results.py
+msgid "Record an external result"
+msgstr "Enregistrer un résultat externe"
+
+# key: assessment.actions.remove
+#: ninefruits/assessment/admin/results.py
+msgctxt "assessment"
+msgid "Remove"
+msgstr "Retirer"
+
+# key: assessment.fields.published_at
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Results published"
+msgstr "Résultats publiés"
+
+# key: assessment.fields.venue
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Venue"
+msgstr "Lieu"
+
+# key: assessment.fields.registrants
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registrants"
+msgstr "Inscrits"
+
+# key: assessment.fields.results
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Results"
+msgstr "Résultats"
+
+# key: assessment.notifications.rejudged
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "%(count)s résultat(s) réévalué(s) : %(passed)s désormais réussi(s), %(failed)s désormais échoué(s)."
+
+# key: security.scope_types.global
+#: ninefruits/assessment/admin/sessions.py
+msgid "All"
+msgstr "Tout"
+
+# key: assessment.actions.publish
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "Publier les résultats"
+
+# key: assessment.help.publish
+#: ninefruits/assessment/admin/sessions.py
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "Les étudiants voient désormais leurs résultats. Les résultats saisis ultérieurement sont visibles immédiatement."
+
+#: ninefruits/assessment/admin/sessions.py
+msgid "The file is not UTF-8 text."
+msgstr "Le fichier n’est pas du texte UTF-8."
+
+# key: assessment.notifications.imported
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "%(recorded)s enregistré(s), %(absent)s absent(s), %(errors)s erreur(s)."
+
+# key: assessment.actions.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "Import results (CSV)"
+msgstr "Importer les résultats (CSV)"
+
+# key: assessment.help.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "CSV avec une ligne d’en-tête : student_number, une colonne par code d’épreuve (ou total), et en option passed (Y/N), absent (Y) et note. Les lignes des étudiants non inscrits sont ignorées."
+
+# key: assessment.actions.register_student
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "Inscrire un étudiant"
+
+# key: assessment.registration_statuses.registered
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "Inscrit"
+
+# key: assessment.actions.enter_result
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Enter result"
+msgstr "Saisir le résultat"
+
+# key: assessment.actions.request_correction
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Request a correction"
+msgstr "Demander une correction"
+
+# key: assessment.help.correction
+#: ninefruits/assessment/admin/sessions.py
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "Les résultats de cette session sont publiés. Proposez les nouvelles valeurs avec un motif ; une autre personne disposant de l’autorisation de gestion approuve, puis la modification est appliquée."
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment"
+msgid "Absent"
+msgstr "Absent"
+
+# key: assessment.actions.cancel
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Cancel registration"
+msgstr "Annuler l’inscription"
+
+# key: assessment.fields.components
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Areas"
+msgstr "Épreuves"
+
+# key: reference.fields.name
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nom"
+
+# key: assessment.fields.category
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Category"
+msgstr "Catégorie"
+
+# key: assessment.fields.scoring
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Scoring"
+msgstr "Notation"
+
+# key: assessment.fields.pass_score
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py
+msgid "Pass score"
+msgstr "Note de réussite"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/apps.py
+msgctxt "portal"
+msgid "Examinations"
+msgstr "Examens"
+
+# key: assessment.categories.language
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Language"
+msgstr "Langue"
+
+# key: assessment.categories.comprehensive
+#: ninefruits/assessment/enums.py
+msgid "Comprehensive"
+msgstr "Examen général"
+
+# key: assessment.categories.thesis
+#: ninefruits/assessment/enums.py
+msgid "Thesis"
+msgstr "Mémoire"
+
+# key: assessment.categories.external
+#: ninefruits/assessment/enums.py
+msgid "External test"
+msgstr "Test externe"
+
+# key: assessment.scoring_methods.score
+#: ninefruits/assessment/enums.py ninefruits/assessment/models/results.py
+msgid "Score"
+msgstr "Note"
+
+# key: assessment.scoring_methods.pass_fail
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "Réussi/échoué"
+
+# key: assessment.correction_statuses.cancelled
+# key: assessment.registration_statuses.cancelled
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "Annulée"
+
+# key: assessment.correction_statuses.pending
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pending"
+msgstr "En attente"
+
+# key: assessment.sources.session
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Session"
+msgstr "Session"
+
+# key: assessment.sources.external
+#: ninefruits/assessment/enums.py
+msgid "External"
+msgstr "Externe"
+
+# key: people.resources.student_records.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "student record"
+msgstr "dossier étudiant"
+
+# key: assessment.resources.sessions.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "Examination session"
+msgstr "Session d’examen"
+
+# key: assessment.resources.results.label
+#: ninefruits/assessment/models/results.py
+msgid "Examination result"
+msgstr "Résultat d’examen"
+
+# key: assessment.resources.results.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Examination results"
+msgstr "Résultats d’examen"
+
+# key: grading.fields.requested_at
+#: ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Demandée le"
+
+# key: assessment.resources.corrections.label
+#: ninefruits/assessment/models/results.py
+msgid "Result correction"
+msgstr "Correction de résultat"
+
+# key: assessment.resources.corrections.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Result corrections"
+msgstr "Corrections de résultats"
+
+# key: assessment.fields.held_date
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Date"
+msgstr "Date"
+
+# key: assessment.fields.capacity
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "Capacité"
+
+# key: assessment.help.session_pass_score
+#: ninefruits/assessment/models/sessions.py
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "Laissez vide pour utiliser la note de réussite du type. Une modification avant publication réévalue tous les résultats saisis ; après publication, elle est figée."
+
+# key: assessment.resources.sessions.plural_label
+#: ninefruits/assessment/models/sessions.py
+msgid "Examination sessions"
+msgstr "Sessions d’examen"
+
+# key: assessment.fields.registered_at
+#: ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "Inscrit le"
+
+# key: reference.fields.code
+#: ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: assessment.help.scoring
+#: ninefruits/assessment/models/types.py
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "Note : les épreuves (ou un total unique) comparées à la note de réussite, chaque épreuve devant atteindre son minimum. Réussi/échoué : le personnel décide pour chaque étudiant."
+
+# key: assessment.fields.max_score
+#: ninefruits/assessment/models/types.py
+msgid "Maximum score"
+msgstr "Note maximale"
+
+# key: assessment.help.max_score
+#: ninefruits/assessment/models/types.py
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "Pour les types sans épreuves. Avec des épreuves, le maximum est leur somme."
+
+# key: assessment.help.pass_score
+#: ninefruits/assessment/models/types.py
+msgid "Total needed to pass. A session can override it."
+msgstr "Total nécessaire pour réussir. Une session peut le remplacer."
+
+# key: assessment.fields.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "External results"
+msgstr "Résultats externes"
+
+# key: assessment.help.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "Des résultats d’un organisme extérieur (TOPIK, HSK, ...) peuvent être enregistrés avec un justificatif."
+
+# key: reference.fields.is_active
+#: ninefruits/assessment/models/types.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Actif"
+
+# key: reference.fields.sort_order
+#: ninefruits/assessment/models/types.py
+msgid "Order"
+msgstr "Ordre"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/assessment/models/types.py
+msgid "Examination kind"
+msgstr "Type d’examen"
+
+# key: assessment.resources.types.plural_label
+#: ninefruits/assessment/models/types.py
+msgid "Examination kinds"
+msgstr "Types d’examen"
+
+# key: assessment.help.component_code
+#: ninefruits/assessment/models/types.py
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "Nom de colonne dans le CSV des résultats, p. ex. LISTENING."
+
+# key: assessment.fields.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Minimum to pass"
+msgstr "Minimum requis"
+
+# key: assessment.help.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Below this the student fails whatever the total."
+msgstr "En dessous, l’étudiant échoue quel que soit le total."
+
+# key: common.none
+#: ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "common"
+msgid "None"
+msgstr "Aucun"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html ninefruits/assessment/views/portal.py
+msgid "Examinations"
+msgstr "Examens"
+
+# key: assessment.portal.intro
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "Inscrivez-vous aux sessions d’examen et consultez vos résultats une fois publiés."
+
+# key: assessment.portal.required
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Required by your curriculum"
+msgstr "Exigé par votre cursus"
+
+# key: assessment.portal.not_yet
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Not yet"
+msgstr "Pas encore"
+
+# key: assessment.portal.open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Open for registration"
+msgstr "Inscriptions ouvertes"
+
+# key: assessment.portal.closes
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "Clôture des inscriptions : %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Cancel this registration?"
+msgstr "Annuler cette inscription ?"
+
+# key: assessment.portal.cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "Annuler"
+
+# key: assessment.portal.register
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Register"
+msgstr "S’inscrire"
+
+# key: assessment.portal.no_open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No session is open for registration."
+msgstr "Aucune session n’est ouverte aux inscriptions."
+
+# key: assessment.portal.my_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "Mes inscriptions"
+
+# key: assessment.portal.no_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No registrations."
+msgstr "Aucune inscription."
+
+# key: assessment.portal.my_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "My results"
+msgstr "Mes résultats"
+
+# key: assessment.portal.no_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No results yet."
+msgstr "Aucun résultat pour le moment."
+
+# key: assessment.portal.registered
+#: ninefruits/assessment/views/portal.py
+msgid "You are registered."
+msgstr "Vous êtes inscrit."
+
+# key: assessment.portal.cancelled
+#: ninefruits/assessment/views/portal.py
+msgid "Your registration is cancelled."
+msgstr "Votre inscription est annulée."

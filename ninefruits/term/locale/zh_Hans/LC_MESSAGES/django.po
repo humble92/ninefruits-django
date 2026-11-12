@@ -35,8 +35,7 @@ msgid "This session already has windows."
 msgstr "该时段已有业务期间。"
 
 # key: reference.fields.name
-#: ninefruits/term/admin.py ninefruits/term/models/term.py
-#: ninefruits/term/models/time_slot.py
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
 msgctxt "reference"
 msgid "Name"
 msgstr "名称"
@@ -82,9 +81,7 @@ msgstr "有时段会超出新的日期范围，请先修改时段。"
 # key: validation.alpha_dash
 #: ninefruits/term/admin.py
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
 msgstr "%(attribute)s 只能由字母、数字、短划线(-)和下划线(_)组成。"
 
 #: ninefruits/term/admin.py
@@ -146,9 +143,7 @@ msgstr "适用对象"
 
 # key: reference.help.eligibility
 #: ninefruits/term/admin.py
-msgid ""
-"Leave empty for everyone. Several windows of the same type with different "
-"conditions open in stages."
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
 msgstr "留空表示所有人。同一业务设置多个不同条件的期间可分阶段开放。"
 
 # key: reference.eligibility.everyone
@@ -211,10 +206,7 @@ msgstr[0] "已复制 %(count)s 个业务期间。"
 
 # key: reference.help.copy_session_windows
 #: ninefruits/term/admin.py
-msgid ""
-"Copies the course windows (add/drop, withdrawal, grading, evaluation) of "
-"another session, moved to this session's dates: early windows keep their "
-"distance from the start, late ones from the end. Adjust them after copying."
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
 msgstr "将其他时段的课程业务期间（加退选、退课、成绩、课程评价）按本时段日期复制：前段期间以开始日期为准，后段期间以结束日期为准。复制后请检查调整。"
 
 # key: reference.fields.weekdays
@@ -330,9 +322,7 @@ msgstr "正常学期"
 
 # key: reference.help.is_regular
 #: ninefruits/term/models/term.py
-msgid ""
-"Regular terms (e.g. spring, fall) and intensive sessions follow different "
-"rules later, such as credit limits."
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
 msgstr "正常学期与短学期在学分上限等规则上有所不同。"
 
 # key: reference.fields.sort_order
@@ -389,9 +379,7 @@ msgstr "时段"
 
 # key: reference.help.term_session
 #: ninefruits/term/models/window.py
-msgid ""
-"Course deadlines follow the session of the course: the full term unless the "
-"window is for a shorter session."
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
 msgstr "课程的日程遵循课程所属的时段。除非用于较短的时段，否则为全学期时段。"
 
 # key: reference.fields.window_type
@@ -403,3 +391,8 @@ msgstr "业务"
 #: ninefruits/term/models/window.py
 msgid "Name (optional)"
 msgstr "名称（可选）"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "受限"

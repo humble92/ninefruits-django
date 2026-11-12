@@ -76,6 +76,6 @@ The screens and functions are those of the original (Filament, Livewire); some c
 - **Graduation > Requirement waivers** (`/admin/graduation/degreerequirementwaiver/`): the status filter defaults to **Pending** and the menu shows the number pending. **Approve**, **Reject** and **Lift the waiver** on a row open a page for the note (reason). Opening them for your own request or for a waiver already decided returns 403.
 - **Settings > Graduation settings** (`/admin/settings/graduation/`): the degree number pattern is saved only with exactly one `{SEQ:n}`. The minimum cumulative GPA is 0 to 5; empty means not applied.
 - Portal **Graduation requirements** (`/portal/graduation/`): in the menu of students and alumni. With several student records (readmission) it uses the record chosen in the portal.
-- Graduation writes the status change and the degree number in the system context after checking the permissions (graduation processing, the record's scope, the status change approval scope), so graduation staff do not also need `Manage student records`. The data change log still names the user who processed it.
+- Graduation writes the status change and the degree number in the system context after checking the permissions (graduation processing, the record's scope, the status change approval scope), so graduation staff do not also need `Create and edit student records`. The data change log still names the user who processed it.
 
 [Administrator manual contents](README.md)

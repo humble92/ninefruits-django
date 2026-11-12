@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: attendance.errors.forbidden
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "この操作は担当教員と開講科目を管理する職員のみ行えます。"
+
+# key: attendance.errors.time_order
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "The end time must be after the start time."
+msgstr "終了時刻は開始時刻より後にしてください。"
+
+# key: attendance.errors.outside_session
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "The date is outside the session."
+msgstr "日付が授業期間外です。"
+
+# key: attendance.errors.duplicate_meeting
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "A meeting at that date and time already exists."
+msgstr "同じ日時の授業回がすでに存在します。"
+
+# key: attendance.errors.already_cancelled
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "This meeting is already cancelled."
+msgstr "この授業回はすでに休講になっています。"
+
+# key: registration.errors.reason_required
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "Enter a reason."
+msgstr "理由を入力してください。"
+
+# key: attendance.errors.meeting_cancelled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "This meeting is cancelled."
+msgstr "この授業回は休講です。"
+
+# key: attendance.errors.meeting_future
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "出欠は授業当日から入力できます。"
+
+# key: attendance.errors.not_enrolled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "A student is not enrolled in this section."
+msgstr "この開講科目を履修していない学生が含まれています。"
+
+# key: attendance.errors.invalid_status
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Unknown attendance status."
+msgstr "不明な出欠区分です。"
+
+# key: common.reason
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Class meetings"
+msgstr "授業回"
+
+# key: attendance.actions.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Generate meetings"
+msgstr "授業回を生成"
+
+# key: attendance.portal.generated
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "%(count)s 件の授業回を作成しました。"
+
+# key: attendance.help.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "毎週の授業時間に基づき、期間内の各回ごとに授業回を作成します。既存の授業回と出欠記録は保持されます。"
+
+# key: attendance.portal.meeting_cancelled
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting cancelled."
+msgstr "休講にしました。"
+
+# key: attendance.portal.cancel
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "休講にする"
+
+# key: attendance.portal.meeting_restored
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting restored."
+msgstr "授業回を元に戻しました。"
+
+# key: attendance.portal.restore
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Restore"
+msgstr "元に戻す"
+
+# key: portal.navigation.attendance
+#: ninefruits/attendance/apps.py
+msgctxt "portal"
+msgid "Attendance"
+msgstr "出欠"
+
+# key: attendance.statuses.present
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Present"
+msgstr "出席"
+
+# key: attendance.statuses.late
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Late"
+msgstr "遅刻"
+
+# key: attendance.statuses.absent
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Absent"
+msgstr "欠席"
+
+# key: attendance.statuses.excused
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Excused"
+msgstr "公欠"
+
+# key: attendance.meeting_statuses.scheduled
+#: ninefruits/attendance/enums.py
+msgid "Scheduled"
+msgstr "予定"
+
+# key: attendance.meeting_statuses.cancelled
+#: ninefruits/attendance/enums.py
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "休講"
+
+# key: offering.fields.section
+#: ninefruits/attendance/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "開講科目"
+
+# key: attendance.fields.meeting_date
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Date"
+msgstr "日付"
+
+# key: attendance.fields.start_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Start"
+msgstr "開始"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "End"
+msgstr "終了"
+
+# key: offering.fields.room
+#: ninefruits/attendance/models.py
+msgid "Room"
+msgstr "教室"
+
+# key: registration.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "registration"
+msgid "Status"
+msgstr "状態"
+
+#: ninefruits/attendance/models.py
+msgid "class meeting"
+msgstr "授業回"
+
+# key: attendance.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "出欠"
+
+# key: attendance.fields.note
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Note"
+msgstr "備考"
+
+#: ninefruits/attendance/models.py
+msgid "attendance record"
+msgstr "出欠記録"
+
+#: ninefruits/attendance/models.py
+msgid "attendance records"
+msgstr "出欠記録"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Student number"
+msgstr "学籍番号"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Name"
+msgstr "氏名"
+
+# key: reference.resources.programs.label
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "program"
+msgstr "プログラム"
+
+# key: people.fields.year_level
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Year"
+msgstr "学年"
+
+# key: people.fields.contact_email
+#: ninefruits/attendance/services/roster.py
+msgid "Contact email"
+msgstr "連絡用メールアドレス"
+
+# key: attendance.fields.time
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Time"
+msgstr "時間"
+
+# key: reference.resources.rooms.label
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "room"
+msgstr "教室"
+
+# key: attendance.fields.recorded
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Recorded"
+msgstr "記録済み"
+
+# key: attendance.portal.no_meetings
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "まだ授業回がありません。毎週の授業時間から生成してください。"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "Instructors"
+msgstr "担当教員"
+
+# key: attendance.sheet.printed
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "出力日 %(date)s"
+
+# key: attendance.sheet.present
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "P"
+msgstr "出"
+
+# key: attendance.sheet.late
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "L"
+msgstr "遅"
+
+# key: attendance.sheet.absent
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "A"
+msgstr "欠"
+
+# key: attendance.sheet.excused
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "公"
+
+# key: attendance.sheet.legend
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "○ 出席 · △ 遅刻 · × 欠席 · 公 公欠 · 空欄 未記録"
+
+# key: attendance.portal.my_intro
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Attendance recorded by your instructors, per course."
+msgstr "担当教員が記録した科目ごとの出欠です。"
+
+# key: reference.resources.terms.label
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "term"
+msgstr "学期"
+
+# key: offering.timetable.mode
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Show"
+msgstr "表示"
+
+# key: attendance.fields.rate
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance rate"
+msgstr "出席率"
+
+# key: attendance.portal.not_recorded
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Not recorded"
+msgstr "未記録"
+
+# key: attendance.portal.no_courses
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "No courses in this term."
+msgstr "この学期の履修科目はありません。"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "My teaching"
+msgstr "担当授業"
+
+# key: attendance.portal.intro
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "実施済み授業回 %(held)s 回、学生 %(students)s 名"
+
+# key: attendance.portal.roster_csv
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster (CSV)"
+msgstr "履修者名簿(CSV)"
+
+# key: attendance.portal.sheet_pdf
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance sheet (PDF)"
+msgstr "出席簿(PDF)"
+
+# key: attendance.portal.entry_for
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "%(date)s %(time)s の出欠"
+
+# key: attendance.portal.mark_all_present
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "All present"
+msgstr "全員出席"
+
+# key: evaluation.portal.back
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Back"
+msgstr "戻る"
+
+# key: attendance.portal.no_students
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No students are enrolled."
+msgstr "履修している学生はいません。"
+
+# key: attendance.portal.save
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Save attendance"
+msgstr "出欠を保存"
+
+# key: attendance.portal.roster
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster"
+msgstr "履修者名簿"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Photo"
+msgstr "写真"
+
+# key: attendance.portal.generate
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Generate from meeting times"
+msgstr "授業時間から生成"
+
+# key: attendance.portal.enter
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "出欠入力"
+
+# key: attendance.portal.cancel_reason
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "休講の理由(祝日、教員不在など)"
+
+# key: attendance.portal.add_meeting
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Add a meeting"
+msgstr "授業回を追加"
+
+# key: attendance.sheet.marks.present
+#: ninefruits/attendance/views/downloads.py
+msgid "O"
+msgstr "○"
+
+# key: attendance.sheet.marks.late
+#: ninefruits/attendance/views/downloads.py
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: ninefruits/attendance/views/downloads.py
+msgid "X"
+msgstr "×"
+
+# key: attendance.sheet.marks.excused
+#: ninefruits/attendance/views/downloads.py
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "公"
+
+# key: attendance.sheet.title
+#: ninefruits/attendance/views/downloads.py
+msgid "Attendance sheet"
+msgstr "出席簿"
+
+#: ninefruits/attendance/views/downloads.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF を作成できませんでした。しばらくしてからもう一度お試しください。"
+
+# key: attendance.portal.open
+#: ninefruits/attendance/views/portal.py
+msgctxt "attendance"
+msgid "Open"
+msgstr "開く"
+
+# key: attendance.portal.title
+#: ninefruits/attendance/views/portal.py
+msgid "Roster and attendance"
+msgstr "名簿と出欠"
+
+# key: attendance.portal.saved
+#: ninefruits/attendance/views/portal.py
+msgid "Attendance saved."
+msgstr "出欠を保存しました。"
+
+# key: attendance.portal.meeting_added
+#: ninefruits/attendance/views/portal.py
+msgid "Meeting added."
+msgstr "授業回を追加しました。"
+
+# key: attendance.portal.my_title
+#: ninefruits/attendance/views/portal.py
+msgid "My attendance"
+msgstr "自分の出欠"

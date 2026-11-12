@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "Mỗi điểm phải là một số từ 0 đến 100."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown operation."
+msgstr "Thao tác không xác định."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown status."
+msgstr "Trạng thái không xác định."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "Mục nhật ký đồng bộ không xác định."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "This step is already finished."
+msgstr "Bước này đã hoàn tất."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "Thao tác không khớp với mục nhật ký đồng bộ."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "Lớp học phần không được liên kết với nền tảng này."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "Hãy gửi một đối tượng ánh xạ ID người dùng với điểm."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "Không có lớp học phần nào được liên kết với khóa học này."
+
+# key: lms.resources.platforms.label
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "LMS platform"
+msgstr "Nền tảng LMS"
+
+# key: registration.fields.status
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "Trạng thái"
+
+# key: reference.resources.terms.label
+#: ninefruits/lms/admin/course_links.py
+msgid "term"
+msgstr "học kỳ"
+
+# key: offering.fields.section
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Lớp học phần"
+
+# key: lms.fields.external_course_id
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course id on the platform"
+msgstr "Mã khóa học trên nền tảng"
+
+# key: lms.fields.external_url
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course URL"
+msgstr "URL khóa học"
+
+# key: lms.fields.last_error
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Last error"
+msgstr "Lỗi gần nhất"
+
+# key: lms.actions.resync
+#: ninefruits/lms/admin/course_links.py
+msgid "Synchronize again"
+msgstr "Đồng bộ lại"
+
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "Đồng bộ thất bại: %(error)s"
+
+# key: lms.notifications.synced
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "Đã đồng bộ: %(members)s thành viên."
+
+#: ninefruits/lms/admin/course_links.py
+msgid "Pushes the course, its instructors and its enrolled students to the platform again."
+msgstr "Gửi lại khóa học, giảng viên và sinh viên đang đăng ký học lên nền tảng."
+
+# key: lms.fields.not_implemented
+#: ninefruits/lms/admin/platforms.py
+msgid "not implemented yet"
+msgstr "chưa được triển khai"
+
+#: ninefruits/lms/admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "Dòng %(number)s: hãy ghi theo dạng khóa=giá trị."
+
+# key: reference.fields.code
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: lms.fields.driver
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Driver"
+msgstr "Trình kết nối"
+
+# key: lms.help.driver
+#: ninefruits/lms/admin/platforms.py
+msgid "The connector that talks to the platform. \"null\" records what would be sent without calling anything; use it to prepare and test."
+msgstr "Trình kết nối giao tiếp với nền tảng. \"null\" chỉ ghi lại những gì sẽ được gửi mà không gọi đến đâu; dùng để chuẩn bị và kiểm thử."
+
+# key: lms.fields.base_url
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Base URL"
+msgstr "URL gốc"
+
+# key: lms.fields.credentials
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Credentials"
+msgstr "Thông tin xác thực"
+
+# key: lms.help.credentials
+#: ninefruits/lms/admin/platforms.py
+msgid "Tokens and secrets the driver needs (see docs/lms-integration-guide.md). Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr "Token và khóa bí mật mà trình kết nối cần (xem docs/lms-integration-guide.md). Được lưu dưới dạng mã hóa; để trống khi chỉnh sửa để giữ giá trị đã lưu."
+
+#: ninefruits/lms/admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "Mỗi dòng một cặp khóa=giá trị, ví dụ: token=..."
+
+# key: lms.help.is_active
+#: ninefruits/lms/admin/platforms.py
+msgid "Active platforms receive published sections and roster changes as they happen, and the nightly reconcile."
+msgstr "Nền tảng đang hoạt động nhận các lớp học phần đã công bố và thay đổi danh sách lớp ngay khi phát sinh, cùng với đối soát hằng đêm."
+
+# key: lms.help.should_pull_grades
+#: ninefruits/lms/admin/platforms.py
+msgid "Lets instructors load the platform's final scores into the grade entry screen as a draft."
+msgstr "Cho phép giảng viên tải điểm cuối kỳ của nền tảng vào màn hình nhập điểm dưới dạng bản nháp."
+
+#: ninefruits/lms/admin/platforms.py
+msgid "This code is already used."
+msgstr "Mã này đã được sử dụng."
+
+# key: reference.fields.name
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Course links"
+msgstr "Liên kết khóa học"
+
+# key: admin.record_changes.fields.operation
+# key: lms.fields.operation
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Operation"
+msgstr "Thao tác"
+
+# key: admin.audit.fields.actor
+#: ninefruits/lms/admin/sync_logs.py
+msgid "User"
+msgstr "Người dùng"
+
+# key: lms.fields.message
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Message"
+msgstr "Thông điệp"
+
+#: ninefruits/lms/admin/sync_logs.py
+msgid "Payload"
+msgstr "Nội dung"
+
+# key: lms.link_statuses.pending
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "Chờ xử lý"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/lms/enums.py
+msgid "Linked"
+msgstr "Đã liên kết"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "Thất bại"
+
+# key: lms.drivers.null
+#: ninefruits/lms/enums.py
+msgid "None (records only)"
+msgstr "Không có (chỉ ghi lại)"
+
+# key: lms.operations.course.sync
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "Khóa học"
+
+# key: lms.operations.enrollment.add
+#: ninefruits/lms/enums.py
+msgid "Add member"
+msgstr "Thêm thành viên"
+
+# key: lms.operations.enrollment.remove
+#: ninefruits/lms/enums.py
+msgid "Remove member"
+msgstr "Xóa thành viên"
+
+# key: lms.operations.grades.pull
+#: ninefruits/lms/enums.py
+msgid "Pull scores"
+msgstr "Lấy điểm"
+
+#: ninefruits/lms/enums.py
+msgid "Scores delivered"
+msgstr "Đã gửi điểm"
+
+# key: lms.operations.reconcile
+#: ninefruits/lms/enums.py
+msgid "Reconcile"
+msgstr "Đối soát"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/lms/enums.py
+msgid "Queued"
+msgstr "Trong hàng đợi"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/lms/enums.py
+msgid "Succeeded"
+msgstr "Thành công"
+
+# key: lms.sync_statuses.skipped
+#: ninefruits/lms/enums.py
+msgid "Skipped"
+msgstr "Bỏ qua"
+
+#: ninefruits/lms/models.py
+msgid "Options"
+msgstr "Tùy chọn"
+
+# key: reference.fields.is_active
+#: ninefruits/lms/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: lms.fields.should_sync_enrollments
+#: ninefruits/lms/models.py
+msgid "Synchronize rosters"
+msgstr "Đồng bộ danh sách lớp"
+
+# key: lms.fields.should_pull_grades
+#: ninefruits/lms/models.py
+msgid "Pull final scores"
+msgstr "Lấy điểm cuối kỳ"
+
+# key: lms.resources.platforms.plural_label
+#: ninefruits/lms/models.py
+msgid "LMS platforms"
+msgstr "Nền tảng LMS"
+
+# key: lms.fields.last_synced_at
+#: ninefruits/lms/models.py
+msgid "Last synced"
+msgstr "Đồng bộ gần nhất"
+
+# key: lms.resources.course_links.label
+#: ninefruits/lms/models.py
+msgid "Course link"
+msgstr "Liên kết khóa học"
+
+#: ninefruits/lms/models.py
+msgid "User id on the platform"
+msgstr "ID người dùng trên nền tảng"
+
+#: ninefruits/lms/models.py
+msgid "User link"
+msgstr "Liên kết người dùng"
+
+#: ninefruits/lms/models.py
+msgid "User links"
+msgstr "Liên kết người dùng"
+
+# key: lms.fields.started_at
+#: ninefruits/lms/models.py
+msgid "Started"
+msgstr "Bắt đầu"
+
+#: ninefruits/lms/models.py
+msgid "Finished"
+msgstr "Đã kết thúc"
+
+# key: lms.resources.sync_logs.label
+#: ninefruits/lms/models.py
+msgid "Sync log"
+msgstr "Nhật ký đồng bộ"
+
+# key: lms.resources.sync_logs.plural_label
+#: ninefruits/lms/models.py
+msgid "Sync logs"
+msgstr "Nhật ký đồng bộ"
+
+# key: grading.entry.import_lms
+#: ninefruits/lms/services/grades.py
+msgid "Load scores from the LMS"
+msgstr "Tải điểm từ LMS"
+
+# key: grading.entry.lms_imported
+#: ninefruits/lms/services/grades.py
+#, python-format
+msgid "%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "Đã tải %(count)s điểm từ LMS dưới dạng bản nháp. Hãy kiểm tra và lưu."
+
+# key: lms.portal.open_course
+#: ninefruits/lms/services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "Mở khóa học trên %(platform)s"

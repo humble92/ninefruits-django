@@ -33,11 +33,11 @@ def test_uses_the_browser_language_when_supported(client: Client) -> None:
     assert response.content.decode() == "zh-hans|语言"
     assert response.headers["Content-Language"] == "zh-hans"
     assert client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="ko-KR,ko;q=0.9").content.decode() == "ko|언어"
-    assert client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="fr-FR").content.decode() == "en|Language"
+    assert client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="es-ES").content.decode() == "en|Language"
 
 
 def test_browser_language_order_and_variants(client: Client) -> None:
-    assert language_of(client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="fr;q=1, ko;q=0.5")) == "ko"
+    assert language_of(client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="es;q=1, ko;q=0.5")) == "ko"
     assert language_of(client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="en;q=0.4, ko;q=0.8")) == "ko"
     assert language_of(client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="zh-Hans-CN")) == "zh-hans"
     assert language_of(client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="zh")) == "zh-hans"
@@ -50,6 +50,32 @@ def test_ships_lao_as_a_supported_language(client: Client) -> None:
     assert "lo" in SupportedLocales().all()
     assert has_catalog("lo")
     assert client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE="lo-LA,lo;q=0.9").content.decode() == "lo|ພາສາ"
+
+
+@pytest.mark.parametrize(
+    ("header", "code"),
+    [
+        ("de-DE,de;q=0.9", "de"),
+        ("ru-RU,ru;q=0.9", "ru"),
+        ("ms-MY,ms;q=0.9", "ms"),
+        ("fil-PH,fil;q=0.9", "fil"),
+        ("fr-FR,fr;q=0.9", "fr"),
+        ("ja-JP,ja;q=0.9", "ja"),
+        ("mn-MN,mn;q=0.9", "mn"),
+        ("ne-NP,ne;q=0.9", "ne"),
+        ("th-TH,th;q=0.9", "th"),
+        ("tr-TR,tr;q=0.9", "tr"),
+        ("uz-UZ,uz;q=0.9", "uz"),
+        ("vi-VN,vi;q=0.9", "vi"),
+    ],
+)
+def test_ships_the_twelve_languages_added_on_2026_11_11(client: Client, header: str, code: str) -> None:
+    assert code in SupportedLocales().all()
+    assert has_catalog(code)
+    with translation.override(code):
+        word = translation.pgettext("common", "Language")
+    assert word != "Language"
+    assert client.get("/_test/language/", HTTP_ACCEPT_LANGUAGE=header).content.decode() == f"{code}|{word}"
 
 
 def test_prefers_the_language_chosen_by_the_user(client: Client) -> None:
@@ -68,7 +94,7 @@ def test_falls_back_to_the_institution_default() -> None:
     settings = InstitutionSettings.load()
     settings.default_locale = "ko"
     settings.save()
-    request = RequestFactory().get("/", HTTP_ACCEPT_LANGUAGE="fr")
+    request = RequestFactory().get("/", HTTP_ACCEPT_LANGUAGE="es")
     assert resolve_locale(request) == "ko"
 
     settings.default_locale = "xx"  # not offered: the fallback language

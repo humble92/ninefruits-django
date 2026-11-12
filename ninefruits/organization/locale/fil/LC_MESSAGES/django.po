@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: reference.errors.successor_required
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "Choose the successor unit."
+msgstr "Piliin ang kahaliling yunit."
+
+# key: reference.errors.single_successor
+#: ninefruits/organization/actions/reorganize_org_unit.py ninefruits/organization/admin.py
+msgid "Only a split can have several successors."
+msgstr "Ang paghahati lamang ang maaaring magkaroon ng ilang kahalili."
+
+# key: reference.errors.reorganization_before_start
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "The effective date must be after the unit started."
+msgstr "Dapat mas huli ang petsa ng bisa kaysa sa simula ng yunit."
+
+# key: reference.errors.successor_is_self
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "A unit cannot succeed itself."
+msgstr "Hindi maaaring halilihan ng yunit ang sarili nito."
+
+# key: validation.after_or_equal
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Dapat isang petsang pagkatapos o katumbas ng %(date)s ang field na %(attribute)s."
+
+# key: reference.fields.effective_end_date
+#: ninefruits/organization/admin.py
+msgid "Valid until"
+msgstr "May bisa hanggang"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/organization/admin.py
+msgid "Valid from"
+msgstr "May bisa mula"
+
+# key: reference.fields.name
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: reference.filters.current_only
+#: ninefruits/organization/admin.py
+msgid "Currently valid only"
+msgstr "Kasalukuyang may bisa lamang"
+
+# key: security.scope_types.global
+#: ninefruits/organization/admin.py
+msgid "All"
+msgstr "Lahat"
+
+# key: reference.resources.org_unit_successions.label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successor"
+msgstr "kahalili"
+
+# key: reference.resources.org_unit_successions.plural_label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successors"
+msgstr "mga kahalili"
+
+# key: reference.fields.successors
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Successor"
+msgstr "Kahalili"
+
+# key: reference.fields.change_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Change"
+msgstr "Pagbabago"
+
+# key: reference.fields.reorganization_date
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Effective date"
+msgstr "Petsa ng bisa"
+
+# key: reference.help.reorganization_date
+#: ninefruits/organization/admin.py
+msgid "The unit ends the day before this date; the successor takes over from this date."
+msgstr "Nagtatapos ang yunit sa araw bago ang petsang ito; ang kahalili ang hahalili simula sa petsang ito."
+
+# key: common.reason
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Dahilan"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Type"
+msgstr "Uri"
+
+# key: reference.fields.parent
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Parent"
+msgstr "Magulang"
+
+# key: reference.actions.reorganize
+#: ninefruits/organization/admin.py
+msgid "Reorganize"
+msgstr "Muling isaayos"
+
+# key: reference.notifications.reorganized
+#: ninefruits/organization/admin.py
+msgid "Reorganization recorded."
+msgstr "Naitala ang muling pagsasaayos."
+
+# key: validation.between.numeric
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "Dapat nasa pagitan ng %(min)s at %(max)s ang field na %(attribute)s."
+
+# key: reference.fields.standard_duration_years
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Standard duration (years)"
+msgstr "Karaniwang tagal (taon)"
+
+# key: reference.fields.degree_level
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Degree level"
+msgstr "Antas ng degree"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Org unit"
+msgstr "Yunit ng organisasyon"
+
+# key: reference.degree_levels.associate
+#: ninefruits/organization/enums.py
+msgid "Associate"
+msgstr "Associate"
+
+# key: reference.degree_levels.bachelor
+#: ninefruits/organization/enums.py
+msgid "Bachelor"
+msgstr "Batsilyer"
+
+# key: reference.degree_levels.master
+#: ninefruits/organization/enums.py
+msgid "Master"
+msgstr "Master"
+
+# key: reference.degree_levels.doctorate
+#: ninefruits/organization/enums.py
+msgid "Doctorate"
+msgstr "Doktorado"
+
+# key: reference.degree_levels.certificate
+#: ninefruits/organization/enums.py
+msgid "Certificate"
+msgstr "Sertipiko"
+
+# key: reference.degree_levels.non_degree
+#: ninefruits/organization/enums.py
+msgid "Non-degree"
+msgstr "Non-degree"
+
+# key: reference.org_unit_change_types.renamed
+#: ninefruits/organization/enums.py
+msgid "Renamed"
+msgstr "Pinalitan ng pangalan"
+
+# key: reference.org_unit_change_types.merged
+#: ninefruits/organization/enums.py
+msgctxt "reference"
+msgid "Merged"
+msgstr "Isinanib"
+
+# key: reference.org_unit_change_types.split
+#: ninefruits/organization/enums.py
+msgid "Split"
+msgstr "Hinati"
+
+# key: reference.org_unit_change_types.moved
+#: ninefruits/organization/enums.py
+msgid "Moved"
+msgstr "Inilipat"
+
+# key: reference.fields.code
+#: ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: reference.fields.is_academic
+#: ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Academic"
+msgstr "Akademiko"
+
+# key: reference.fields.sort_order
+#: ninefruits/organization/models/org_unit.py
+msgid "Order"
+msgstr "Pagkakasunod"
+
+# key: reference.resources.org_unit_types.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit type"
+msgstr "uri ng yunit ng organisasyon"
+
+# key: reference.resources.org_unit_types.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit types"
+msgstr "mga uri ng yunit ng organisasyon"
+
+# key: reference.fields.short_name
+#: ninefruits/organization/models/org_unit.py
+msgid "Short name"
+msgstr "Maikling pangalan"
+
+# key: reference.resources.org_units.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit"
+msgstr "yunit ng organisasyon"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org units"
+msgstr "mga yunit ng organisasyon"
+
+# key: reference.fields.degree_title
+#: ninefruits/organization/models/program.py
+msgid "Degree title"
+msgstr "Pangalan ng degree"
+
+# key: reference.fields.allows_second_major
+#: ninefruits/organization/models/program.py
+msgid "Accepts second majors"
+msgstr "Tumatanggap ng second major"
+
+# key: reference.fields.allows_minor
+#: ninefruits/organization/models/program.py
+msgid "Accepts minors"
+msgstr "Tumatanggap ng minor"
+
+# key: reference.resources.programs.label
+#: ninefruits/organization/models/program.py
+msgid "program"
+msgstr "programa"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/organization/models/program.py
+msgid "programs"
+msgstr "mga programa"

@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/assessment/actions/_support.py
+msgid "Enter a reason."
+msgstr "กรุณาระบุเหตุผล"
+
+# key: assessment.errors.pass_score_published
+#: ninefruits/assessment/actions/change_session_pass_score.py
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "ผลสอบประกาศแล้ว จึงเปลี่ยนคะแนนผ่านไม่ได้ กรุณาใช้คำขอแก้ไขผล"
+
+# key: assessment.errors.not_locked
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "This result is not published; enter it directly."
+msgstr "ผลสอบนี้ยังไม่ได้ประกาศ กรุณากรอกโดยตรง"
+
+# key: assessment.errors.correction_pending
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "A correction request is already pending for this result."
+msgstr "มีคำขอแก้ไขผลสอบนี้ที่รอพิจารณาอยู่แล้ว"
+
+# key: grading.errors.request_decided
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "The request is already decided."
+msgstr "คำขอนี้ได้รับการพิจารณาแล้ว"
+
+# key: assessment.errors.own_correction
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "You cannot decide your own correction request."
+msgstr "ท่านไม่สามารถพิจารณาคำขอแก้ไขของตนเองได้"
+
+# key: assessment.errors.not_registered
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/actions/register_for_assessment.py
+msgid "The student is not registered for this session."
+msgstr "นักศึกษาไม่ได้สมัครสอบรอบนี้"
+
+# key: assessment.errors.published_locked
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are published: request a correction instead."
+msgstr "ผลสอบของรอบนี้ประกาศแล้ว กรุณายื่นคำขอแก้ไขผลแทน"
+
+# key: assessment.errors.no_external
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind does not take external results."
+msgstr "ประเภทนี้ไม่รับผลสอบจากภายนอก"
+
+# key: assessment.errors.future_date
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/admin/forms.py
+msgid "The date cannot be in the future."
+msgstr "วันที่ต้องไม่เป็นวันในอนาคต"
+
+# key: assessment.errors.already_published
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are already published."
+msgstr "ผลสอบของรอบนี้ประกาศแล้ว"
+
+# key: assessment.errors.score_missing
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "ไม่มีคะแนนของ %(component)s"
+
+# key: assessment.errors.score_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "คะแนนของ %(component)s ต้องอยู่ระหว่าง 0 ถึง %(max)s"
+
+# key: assessment.errors.total_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "คะแนนรวมต้องอยู่ระหว่าง 0 ถึง %(max)s"
+
+# key: assessment.errors.decision_required
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "Choose passed or not passed."
+msgstr "กรุณาเลือกผ่านหรือไม่ผ่าน"
+
+# key: assessment.errors.no_pass_score
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "ประเภทนี้ไม่มีคะแนนผ่าน กรุณาเลือกผ่านหรือไม่ผ่าน"
+
+# key: assessment.errors.type_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This kind of examination is no longer held."
+msgstr "ไม่มีการจัดสอบประเภทนี้แล้ว"
+
+# key: assessment.errors.record_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Only current students can register."
+msgstr "สมัครสอบได้เฉพาะนักศึกษาปัจจุบัน"
+
+# key: assessment.errors.registration_closed
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Registration for this session is closed."
+msgstr "ปิดรับสมัครสอบรอบนี้แล้ว"
+
+# key: assessment.errors.session_past
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session has already been held."
+msgstr "รอบสอบนี้จัดสอบไปแล้ว"
+
+# key: assessment.errors.already_registered
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Already registered for this session."
+msgstr "สมัครสอบรอบนี้แล้ว"
+
+# key: assessment.errors.full
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session is full."
+msgstr "รอบสอบนี้เต็มแล้ว"
+
+# key: assessment.errors.already_cancelled
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This registration is already cancelled."
+msgstr "การสมัครสอบนี้ถูกยกเลิกแล้ว"
+
+# key: assessment.errors.has_result
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "มีการกรอกผลสอบแล้ว จึงยกเลิกการสมัครสอบไม่ได้"
+
+# key: assessment.fields.type
+#: ninefruits/assessment/admin/common.py ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Kind"
+msgstr "ประเภท"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Passed"
+msgstr "ผ่าน"
+
+# key: assessment.passed.no
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "ไม่ผ่าน"
+
+# key: registration.fields.status
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "registration"
+msgid "Status"
+msgstr "สถานะ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Student number"
+msgstr "รหัสนักศึกษา"
+
+# key: assessment.fields.previous
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Current values"
+msgstr "ค่าปัจจุบัน"
+
+# key: assessment.fields.proposed
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Proposed values"
+msgstr "ค่าที่เสนอ"
+
+# key: common.reason
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgctxt "common"
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: grading.fields.requested_by
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "ขอโดย"
+
+# key: grading.fields.decision_note
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Note"
+msgstr "หมายเหตุ"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/assessment/admin/corrections.py
+msgid "Approve"
+msgstr "อนุมัติ"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Approved"
+msgstr "อนุมัติแล้ว"
+
+# key: grading.actions.reject
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "ไม่อนุมัติ"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Rejected"
+msgstr "ไม่อนุมัติ"
+
+# key: grading.actions.cancel_request
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "ยกเลิกคำขอ"
+
+# key: validation.alpha_dash
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s ต้องมีเฉพาะตัวอักษร ตัวเลข ขีดกลาง และขีดล่างเท่านั้น"
+
+# key: assessment.fields.note
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Note"
+msgstr "หมายเหตุ"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/assessment/admin/forms.py
+msgid "Code"
+msgstr "รหัส"
+
+# key: validation.unique
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s นี้ถูกใช้ไปแล้ว"
+
+# key: assessment.fields.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Reason for changing the pass score"
+msgstr "เหตุผลที่เปลี่ยนคะแนนผ่าน"
+
+# key: assessment.help.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "บันทึกไว้ในบันทึกการตรวจสอบพร้อมรายชื่อนักศึกษาที่ผลสอบเปลี่ยนไป"
+
+# key: validation.after
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s ต้องเป็นวันที่หลังจาก %(date)s"
+
+# key: assessment.fields.registration_closes_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registration closes"
+msgstr "ปิดรับสมัครสอบ"
+
+# key: assessment.fields.registration_opens_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/sessions.py
+msgid "Registration opens"
+msgstr "เปิดรับสมัครสอบ"
+
+# key: assessment.fields.file
+#: ninefruits/assessment/admin/forms.py
+msgid "CSV file"
+msgstr "ไฟล์ CSV"
+
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "ไฟล์ใหญ่เกินไป (%(size)s ไบต์ สูงสุด %(limit)s)"
+
+# key: assessment.fields.total_score
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Total"
+msgstr "คะแนนรวม"
+
+# key: assessment.help.decision_automatic
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "ตัดสินจากคะแนน: คะแนนรวมไม่ต่ำกว่า %(score)s และทุกส่วนไม่ต่ำกว่าคะแนนขั้นต่ำ"
+
+# key: assessment.fields.taken_date
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Taken on"
+msgstr "วันที่สอบ"
+
+# key: assessment.fields.level
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Level"
+msgstr "ระดับ"
+
+# key: assessment.fields.certificate_number
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgid "Certificate number"
+msgstr "เลขที่ใบรับรองผล"
+
+# key: assessment.fields.evidence
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Evidence"
+msgstr "หลักฐาน"
+
+# key: assessment.fields.source
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Source"
+msgstr "ที่มา"
+
+# key: common.yes
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "Yes"
+msgstr "ใช่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "No"
+msgstr "ไม่ใช่"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "people"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: assessment.actions.record_external
+#: ninefruits/assessment/admin/results.py
+msgid "Record an external result"
+msgstr "บันทึกผลสอบจากภายนอก"
+
+# key: assessment.actions.remove
+#: ninefruits/assessment/admin/results.py
+msgctxt "assessment"
+msgid "Remove"
+msgstr "ลบ"
+
+# key: assessment.fields.published_at
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Results published"
+msgstr "ประกาศผลสอบเมื่อ"
+
+# key: assessment.fields.venue
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Venue"
+msgstr "สถานที่สอบ"
+
+# key: assessment.fields.registrants
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registrants"
+msgstr "ผู้สมัครสอบ"
+
+# key: assessment.fields.results
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Results"
+msgstr "ผลสอบ"
+
+# key: assessment.notifications.rejudged
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "ตัดสินผลใหม่ %(count)s รายการ: ผ่าน %(passed)s รายการ ไม่ผ่าน %(failed)s รายการ"
+
+# key: security.scope_types.global
+#: ninefruits/assessment/admin/sessions.py
+msgid "All"
+msgstr "ทั้งหมด"
+
+# key: assessment.actions.publish
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "ประกาศผลสอบ"
+
+# key: assessment.help.publish
+#: ninefruits/assessment/admin/sessions.py
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "นักศึกษาจะเห็นผลสอบตั้งแต่นี้ไป ผลที่กรอกภายหลังจะแสดงทันที"
+
+#: ninefruits/assessment/admin/sessions.py
+msgid "The file is not UTF-8 text."
+msgstr "ไฟล์ไม่ใช่ข้อความ UTF-8"
+
+# key: assessment.notifications.imported
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "บันทึก %(recorded)s รายการ ขาดสอบ %(absent)s รายการ ข้อผิดพลาด %(errors)s รายการ"
+
+# key: assessment.actions.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "Import results (CSV)"
+msgstr "นำเข้าผลสอบ (CSV)"
+
+# key: assessment.help.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "ไฟล์ CSV ที่มีแถวหัวตาราง: student_number, หนึ่งคอลัมน์ต่อรหัสส่วนการสอบ (หรือ total) และอาจมี passed (Y/N), absent (Y) และ note แถวของนักศึกษาที่ไม่ได้สมัครสอบจะถูกข้าม"
+
+# key: assessment.actions.register_student
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "สมัครสอบให้นักศึกษา"
+
+# key: assessment.registration_statuses.registered
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "สมัครแล้ว"
+
+# key: assessment.actions.enter_result
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Enter result"
+msgstr "กรอกผลสอบ"
+
+# key: assessment.actions.request_correction
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Request a correction"
+msgstr "ขอแก้ไขผล"
+
+# key: assessment.help.correction
+#: ninefruits/assessment/admin/sessions.py
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "ผลสอบของรอบนี้ประกาศแล้ว เสนอค่าใหม่พร้อมเหตุผล ผู้มีสิทธิ์จัดการอีกท่านหนึ่งจะอนุมัติแล้วระบบจึงปรับปรุงข้อมูล"
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment"
+msgid "Absent"
+msgstr "ขาดสอบ"
+
+# key: assessment.actions.cancel
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Cancel registration"
+msgstr "ยกเลิกการสมัครสอบ"
+
+# key: assessment.fields.components
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Areas"
+msgstr "ส่วนการสอบ"
+
+# key: reference.fields.name
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: assessment.fields.category
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Category"
+msgstr "หมวด"
+
+# key: assessment.fields.scoring
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Scoring"
+msgstr "วิธีให้คะแนน"
+
+# key: assessment.fields.pass_score
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py
+msgid "Pass score"
+msgstr "คะแนนผ่าน"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/apps.py
+msgctxt "portal"
+msgid "Examinations"
+msgstr "การสอบ"
+
+# key: assessment.categories.language
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Language"
+msgstr "ภาษา"
+
+# key: assessment.categories.comprehensive
+#: ninefruits/assessment/enums.py
+msgid "Comprehensive"
+msgstr "การสอบประมวลความรู้"
+
+# key: assessment.categories.thesis
+#: ninefruits/assessment/enums.py
+msgid "Thesis"
+msgstr "วิทยานิพนธ์"
+
+# key: assessment.categories.external
+#: ninefruits/assessment/enums.py
+msgid "External test"
+msgstr "การสอบภายนอก"
+
+# key: assessment.scoring_methods.score
+#: ninefruits/assessment/enums.py ninefruits/assessment/models/results.py
+msgid "Score"
+msgstr "คะแนน"
+
+# key: assessment.scoring_methods.pass_fail
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "ผ่าน/ไม่ผ่าน"
+
+# key: assessment.correction_statuses.cancelled
+# key: assessment.registration_statuses.cancelled
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "ยกเลิกแล้ว"
+
+# key: assessment.correction_statuses.pending
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pending"
+msgstr "รอพิจารณา"
+
+# key: assessment.sources.session
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Session"
+msgstr "รอบสอบ"
+
+# key: assessment.sources.external
+#: ninefruits/assessment/enums.py
+msgid "External"
+msgstr "ภายนอก"
+
+# key: people.resources.student_records.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "student record"
+msgstr "ระเบียนนักศึกษา"
+
+# key: assessment.resources.sessions.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "Examination session"
+msgstr "รอบสอบ"
+
+# key: assessment.resources.results.label
+#: ninefruits/assessment/models/results.py
+msgid "Examination result"
+msgstr "ผลสอบ"
+
+# key: assessment.resources.results.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Examination results"
+msgstr "ผลสอบ"
+
+# key: grading.fields.requested_at
+#: ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "ขอเมื่อ"
+
+# key: assessment.resources.corrections.label
+#: ninefruits/assessment/models/results.py
+msgid "Result correction"
+msgstr "การแก้ไขผลสอบ"
+
+# key: assessment.resources.corrections.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Result corrections"
+msgstr "การแก้ไขผลสอบ"
+
+# key: assessment.fields.held_date
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Date"
+msgstr "วันที่สอบ"
+
+# key: assessment.fields.capacity
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "จำนวนที่นั่ง"
+
+# key: assessment.help.session_pass_score
+#: ninefruits/assessment/models/sessions.py
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "เว้นว่างไว้เพื่อใช้คะแนนผ่านของประเภทการสอบ การเปลี่ยนก่อนประกาศผลจะตัดสินผลที่กรอกไว้ทั้งหมดใหม่ หลังประกาศผลจะเปลี่ยนไม่ได้"
+
+# key: assessment.resources.sessions.plural_label
+#: ninefruits/assessment/models/sessions.py
+msgid "Examination sessions"
+msgstr "รอบสอบ"
+
+# key: assessment.fields.registered_at
+#: ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "สมัครสอบเมื่อ"
+
+# key: reference.fields.code
+#: ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Code"
+msgstr "รหัส"
+
+# key: assessment.help.scoring
+#: ninefruits/assessment/models/types.py
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "คะแนน: นำส่วนการสอบ (หรือคะแนนรวม) เทียบกับคะแนนผ่าน และทุกส่วนต้องไม่ต่ำกว่าคะแนนขั้นต่ำ ผ่าน/ไม่ผ่าน: เจ้าหน้าที่ตัดสินเป็นรายบุคคล"
+
+# key: assessment.fields.max_score
+#: ninefruits/assessment/models/types.py
+msgid "Maximum score"
+msgstr "คะแนนเต็ม"
+
+# key: assessment.help.max_score
+#: ninefruits/assessment/models/types.py
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "สำหรับประเภทที่ไม่มีส่วนการสอบ หากมีส่วนการสอบ คะแนนเต็มคือผลรวมของทุกส่วน"
+
+# key: assessment.help.pass_score
+#: ninefruits/assessment/models/types.py
+msgid "Total needed to pass. A session can override it."
+msgstr "คะแนนรวมที่ต้องได้เพื่อผ่าน รอบสอบกำหนดค่าแทนได้"
+
+# key: assessment.fields.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "External results"
+msgstr "ผลสอบจากภายนอก"
+
+# key: assessment.help.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "บันทึกผลสอบจากหน่วยงานภายนอก (TOPIK, HSK, ...) พร้อมไฟล์หลักฐานได้"
+
+# key: reference.fields.is_active
+#: ninefruits/assessment/models/types.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ใช้งาน"
+
+# key: reference.fields.sort_order
+#: ninefruits/assessment/models/types.py
+msgid "Order"
+msgstr "ลำดับ"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/assessment/models/types.py
+msgid "Examination kind"
+msgstr "ประเภทการสอบ"
+
+# key: assessment.resources.types.plural_label
+#: ninefruits/assessment/models/types.py
+msgid "Examination kinds"
+msgstr "ประเภทการสอบ"
+
+# key: assessment.help.component_code
+#: ninefruits/assessment/models/types.py
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "ชื่อคอลัมน์ในไฟล์ CSV ผลสอบ เช่น LISTENING"
+
+# key: assessment.fields.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Minimum to pass"
+msgstr "คะแนนขั้นต่ำ"
+
+# key: assessment.help.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Below this the student fails whatever the total."
+msgstr "หากต่ำกว่านี้ถือว่าไม่ผ่าน ไม่ว่าคะแนนรวมจะเป็นเท่าใด"
+
+# key: common.none
+#: ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "common"
+msgid "None"
+msgstr "ไม่มี"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html ninefruits/assessment/views/portal.py
+msgid "Examinations"
+msgstr "การสอบ"
+
+# key: assessment.portal.intro
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "สมัครสอบในรอบสอบต่าง ๆ และดูผลสอบเมื่อประกาศแล้ว"
+
+# key: assessment.portal.required
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Required by your curriculum"
+msgstr "บังคับตามหลักสูตรของท่าน"
+
+# key: assessment.portal.not_yet
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Not yet"
+msgstr "ยังไม่ผ่าน"
+
+# key: assessment.portal.open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Open for registration"
+msgstr "เปิดรับสมัครสอบ"
+
+# key: assessment.portal.closes
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "ปิดรับสมัครสอบ %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Cancel this registration?"
+msgstr "ยกเลิกการสมัครสอบนี้?"
+
+# key: assessment.portal.cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+# key: assessment.portal.register
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Register"
+msgstr "สมัครสอบ"
+
+# key: assessment.portal.no_open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No session is open for registration."
+msgstr "ไม่มีรอบสอบที่เปิดรับสมัคร"
+
+# key: assessment.portal.my_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "การสมัครสอบของฉัน"
+
+# key: assessment.portal.no_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No registrations."
+msgstr "ไม่มีการสมัครสอบ"
+
+# key: assessment.portal.my_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "My results"
+msgstr "ผลสอบของฉัน"
+
+# key: assessment.portal.no_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No results yet."
+msgstr "ยังไม่มีผลสอบ"
+
+# key: assessment.portal.registered
+#: ninefruits/assessment/views/portal.py
+msgid "You are registered."
+msgstr "ท่านสมัครสอบแล้ว"
+
+# key: assessment.portal.cancelled
+#: ninefruits/assessment/views/portal.py
+msgid "Your registration is cancelled."
+msgstr "ยกเลิกการสมัครสอบของท่านแล้ว"

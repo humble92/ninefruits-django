@@ -243,4 +243,8 @@ VENDOR_STRINGS = [
     gettext_noop("Incorrect code."),
     gettext_noop("Alternative options"),
     gettext_noop("Use authenticator app or code"),
+    # Verbose names of the User model, also translated by django.contrib.auth, which takes
+    # precedence over the security app's catalog; the global catalog wins over both.
+    gettext_noop("user"),
+    gettext_noop("users"),
 ]

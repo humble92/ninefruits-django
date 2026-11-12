@@ -1,0 +1,917 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admissions.errors.no_person
+#: ninefruits/admission/actions/applications.py
+msgid "This account is not linked to a person."
+msgstr "Akaun ini tidak dipautkan kepada mana-mana individu."
+
+# key: admissions.errors.cycle_closed
+#: ninefruits/admission/actions/applications.py
+msgid "This cycle is not taking applications."
+msgstr "Pengambilan ini tidak menerima permohonan."
+
+# key: admissions.errors.already_applied
+#: ninefruits/admission/actions/applications.py
+msgid "You already have an open application in this cycle."
+msgstr "Anda sudah mempunyai permohonan terbuka dalam pengambilan ini."
+
+# key: admissions.errors.program_not_offered
+#: ninefruits/admission/actions/applications.py
+msgid "This program is not offered in the cycle."
+msgstr "Program ini tidak ditawarkan dalam pengambilan ini."
+
+# key: admissions.errors.not_draft
+#: ninefruits/admission/actions/applications.py
+msgid "Only applications that have not been submitted can be changed."
+msgstr "Hanya permohonan yang belum dihantar boleh diubah."
+
+#: ninefruits/admission/actions/applications.py
+msgid "Select a valid choice."
+msgstr "Pilih pilihan yang sah."
+
+#: ninefruits/admission/actions/applications.py
+msgid "The birth date must be a date before today."
+msgstr "Tarikh lahir mestilah tarikh sebelum hari ini."
+
+# key: admissions.errors.identity_locked
+#: ninefruits/admission/actions/applications.py
+msgid "Your name and birth date are kept by the registrar's office."
+msgstr "Nama dan tarikh lahir anda diselenggara oleh Pejabat Pendaftar."
+
+# key: admissions.errors.document_type_not_requested
+#: ninefruits/admission/actions/applications.py
+msgid "This cycle does not ask for this document."
+msgstr "Pengambilan ini tidak memerlukan dokumen ini."
+
+# key: admissions.errors.document_too_large
+#: ninefruits/admission/actions/applications.py
+#, python-format
+msgid "The file is larger than %(mb)s MB."
+msgstr "Saiz fail melebihi %(mb)s MB."
+
+# key: admissions.errors.document_type_invalid
+#: ninefruits/admission/actions/applications.py
+msgid "Upload a PDF, JPEG or PNG file."
+msgstr "Muat naik fail PDF, JPEG atau PNG."
+
+# key: admissions.errors.required_field
+#: ninefruits/admission/actions/applications.py
+msgid "This field is required to submit."
+msgstr "Medan ini wajib diisi untuk menghantar."
+
+# key: admissions.errors.documents_missing
+#: ninefruits/admission/actions/applications.py
+#, python-format
+msgid "Upload the required documents: %(documents)s."
+msgstr "Muat naik dokumen yang diwajibkan: %(documents)s."
+
+# key: admissions.errors.invalid_transition
+#: ninefruits/admission/actions/applications.py ninefruits/admission/actions/decisions.py
+msgid "This is not possible in the application's current status."
+msgstr "Tindakan ini tidak dibenarkan dalam status semasa permohonan."
+
+# key: admissions.errors.reason_required
+#: ninefruits/admission/actions/decisions.py
+msgid "Give the reason when recording a response for the applicant."
+msgstr "Nyatakan sebab apabila merekod maklum balas bagi pihak pemohon."
+
+# key: admissions.errors.no_open_offer
+#: ninefruits/admission/actions/decisions.py
+msgid "There is no offer to answer."
+msgstr "Tiada tawaran untuk dijawab."
+
+# key: admissions.errors.offer_expired
+#: ninefruits/admission/actions/decisions.py
+msgid "The deadline to accept this offer has passed. Contact the admissions office."
+msgstr "Tarikh akhir untuk menerima tawaran ini telah berlalu. Hubungi pejabat kemasukan."
+
+# key: admissions.errors.not_ready_to_matriculate
+#: ninefruits/admission/actions/matriculation.py
+msgid "Only accepted offers without a student record can be matriculated."
+msgstr "Hanya tawaran yang telah diterima dan belum mempunyai rekod pelajar boleh didaftarkan sebagai pelajar."
+
+# key: admissions.errors.registration_closed
+#: ninefruits/admission/actions/registration.py ninefruits/admission/forms.py
+msgid "Creating an account is not available. Contact the admissions office."
+msgstr "Penciptaan akaun tidak tersedia. Hubungi pejabat kemasukan."
+
+#: ninefruits/admission/actions/registration.py
+msgid "The email has already been taken."
+msgstr "E-mel ini telah digunakan."
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: ninefruits/admission/admin/applications.py
+msgid "Admission term"
+msgstr "Semester kemasukan"
+
+# key: admissions.help.admission_term
+#: ninefruits/admission/admin/applications.py
+msgid "The term the new students start in. Their admission date is the term's first day."
+msgstr "Semester pelajar baharu memulakan pengajian. Tarikh kemasukan mereka ialah hari pertama semester tersebut."
+
+# key: admissions.fields.decision_note
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decision note"
+msgstr "Catatan keputusan"
+
+# key: admissions.fields.response
+#: ninefruits/admission/admin/applications.py
+msgid "Response"
+msgstr "Maklum balas"
+
+# key: admissions.portal.accept
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Accept the offer"
+msgstr "Terima tawaran"
+
+# key: admissions.portal.decline
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Decline"
+msgstr "Tolak"
+
+# key: common.reason
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Sebab"
+
+# key: admissions.sections.application
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Application"
+msgstr "Permohonan"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/admission/admin/applications.py
+msgid "Applicant"
+msgstr "Pemohon"
+
+# key: admissions.sections.decision
+#: ninefruits/admission/admin/applications.py
+msgid "Decision"
+msgstr "Keputusan"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/admission/admin/applications.py
+msgctxt "people"
+msgid "Name"
+msgstr "Nama"
+
+# key: security.scope_types.program
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "security"
+msgid "Program"
+msgstr "Program"
+
+# key: admissions.fields.cycle
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/applications.html
+msgid "Admission cycle"
+msgstr "Pengambilan"
+
+# key: admissions.fields.status
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Status"
+msgstr "Status"
+
+# key: admissions.fields.decision_released
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Released"
+msgstr "Diumumkan"
+
+# key: people.fields.admission_type
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgid "Admission type"
+msgstr "Jenis kemasukan"
+
+# key: admissions.fields.previous_school_country
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Country of previous school"
+msgstr "Negara institusi terdahulu"
+
+# key: people.fields.birth_date
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Birth date"
+msgstr "Tarikh lahir"
+
+# key: people.fields.contact_email
+#: ninefruits/admission/admin/applications.py
+msgid "Contact email"
+msgstr "E-mel perhubungan"
+
+# key: people.fields.phone
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Phone"
+msgstr "Telefon"
+
+# key: admissions.fields.earlier_records
+#: ninefruits/admission/admin/applications.py
+msgid "Earlier student records"
+msgstr "Rekod pelajar terdahulu"
+
+# key: common.none
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "None"
+msgstr "Tiada"
+
+# key: admissions.sections.documents
+#: ninefruits/admission/admin/applications.py ninefruits/admission/admin/cycles.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Documents"
+msgstr "Dokumen"
+
+# key: admissions.fields.decided_by
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decided by"
+msgstr "Diputuskan oleh"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/admission/admin/applications.py
+msgid "Student number"
+msgstr "Nombor matrik"
+
+# key: admissions.actions.start_review
+#: ninefruits/admission/admin/applications.py
+msgid "Start review"
+msgstr "Mulakan semakan"
+
+# key: admissions.actions.admit
+#: ninefruits/admission/admin/applications.py
+msgid "Admit"
+msgstr "Terima masuk"
+
+# key: admissions.notifications.decided
+#: ninefruits/admission/admin/applications.py
+msgid "Decision saved. The applicant sees it once it is released."
+msgstr "Keputusan disimpan. Pemohon dapat melihatnya selepas diumumkan."
+
+# key: admissions.actions.reject
+#: ninefruits/admission/admin/applications.py
+msgctxt "admissions"
+msgid "Reject"
+msgstr "Tolak"
+
+# key: admissions.actions.release_decision
+#: ninefruits/admission/admin/applications.py
+msgid "Release decision"
+msgstr "Umumkan keputusan"
+
+# key: admissions.actions.matriculate
+#: ninefruits/admission/admin/applications.py
+msgid "Create student record"
+msgstr "Cipta rekod pelajar"
+
+# key: admissions.notifications.matriculated
+#: ninefruits/admission/admin/applications.py
+#, python-format
+msgid "Student record %(number)s created."
+msgstr "Rekod pelajar %(number)s telah dicipta."
+
+# key: admissions.actions.record_response
+#: ninefruits/admission/admin/applications.py
+msgid "Record offer response"
+msgstr "Rekod maklum balas tawaran"
+
+# key: admissions.actions.release_decisions
+#: ninefruits/admission/admin/applications.py ninefruits/admission/admin/cycles.py
+msgid "Release decisions"
+msgstr "Umumkan keputusan"
+
+# key: admissions.notifications.matriculated_bulk
+#: ninefruits/admission/admin/applications.py
+#, python-format
+msgid "%(count)s student record(s) created, %(skipped)s skipped."
+msgstr "%(count)s rekod pelajar dicipta, %(skipped)s dilangkau."
+
+# key: admissions.help.release_decisions
+#: ninefruits/admission/admin/cycles.py
+msgid "Applicants see their decision and get an email. A released decision can no longer be changed."
+msgstr "Pemohon dapat melihat keputusan dan menerima e-mel. Keputusan yang telah diumumkan tidak boleh diubah lagi."
+
+# key: admissions.fields.description
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Description"
+msgstr "Keterangan"
+
+#: ninefruits/admission/admin/cycles.py
+msgid "Use only letters, numbers, dashes and underscores."
+msgstr "Gunakan huruf, nombor, sengkang dan garis bawah sahaja."
+
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "program offered"
+msgstr "program ditawarkan"
+
+# key: admissions.sections.programs
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "Programs offered"
+msgstr "Program ditawarkan"
+
+# key: admissions.resources.applications.plural_label
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "applications"
+msgstr "permohonan"
+
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "document"
+msgstr "dokumen"
+
+# key: admissions.sections.cycle
+#: ninefruits/admission/admin/cycles.py
+msgid "Cycle"
+msgstr "Pengambilan"
+
+# key: admissions.fields.closes_at
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Closes"
+msgstr "Ditutup"
+
+# key: admissions.fields.rolling
+#: ninefruits/admission/admin/cycles.py
+msgid "Rolling (no deadline)"
+msgstr "Berterusan (tiada tarikh tutup)"
+
+#: ninefruits/admission/admin/cycles.py
+msgid "No decisions to release."
+msgstr "Tiada keputusan untuk diumumkan."
+
+# key: admissions.notifications.released
+#: ninefruits/admission/admin/cycles.py
+#, python-format
+msgid "One decision released."
+msgid_plural "%(count)s decisions released."
+msgstr[0] "%(count)s keputusan telah diumumkan."
+
+# key: admissions.application_statuses.draft
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Draft"
+msgstr "Draf"
+
+# key: admissions.application_statuses.submitted
+#: ninefruits/admission/enums.py
+msgctxt "admissions.application_statuses"
+msgid "Submitted"
+msgstr "Dihantar"
+
+# key: admissions.application_statuses.under_review
+#: ninefruits/admission/enums.py
+msgid "Under review"
+msgstr "Dalam semakan"
+
+# key: admissions.application_statuses.admitted
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Admitted"
+msgstr "Diterima masuk"
+
+# key: admissions.application_statuses.rejected
+#: ninefruits/admission/enums.py
+msgid "Not admitted"
+msgstr "Tidak berjaya"
+
+# key: admissions.application_statuses.confirmed
+#: ninefruits/admission/enums.py
+msgid "Enrollment confirmed"
+msgstr "Pendaftaran disahkan"
+
+# key: admissions.application_statuses.withdrawn
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Withdrawn"
+msgstr "Ditarik balik"
+
+# key: admissions.application_statuses.expired
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Expired"
+msgstr "Luput"
+
+# key: people.fields.family_name
+#: ninefruits/admission/forms.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Family name"
+msgstr "Nama keluarga"
+
+# key: people.fields.given_name
+#: ninefruits/admission/forms.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Given name"
+msgstr "Nama diri"
+
+# key: admissions.register.email_help
+#: ninefruits/admission/forms.py
+msgid "Your personal email. It stays your sign-in name after you graduate."
+msgstr "E-mel peribadi anda. Ia kekal sebagai nama log masuk anda selepas bergraduat."
+
+# key: reference.fields.code
+#: ninefruits/admission/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: admissions.help.cycle_code
+#: ninefruits/admission/models.py
+msgid "Short identifier used in application numbers, e.g. 2027-SPRING."
+msgstr "Pengecam ringkas yang digunakan dalam nombor permohonan, cth. 2027-SPRING."
+
+# key: reference.fields.name
+#: ninefruits/admission/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nama"
+
+# key: admissions.fields.opens_at
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Opens"
+msgstr "Dibuka"
+
+# key: admissions.help.closes_at
+#: ninefruits/admission/models.py
+msgid "Leave empty for rolling admission without a deadline."
+msgstr "Biarkan kosong untuk kemasukan berterusan tanpa tarikh tutup."
+
+# key: admissions.fields.is_published
+#: ninefruits/admission/models.py
+msgctxt "admissions.fields"
+msgid "Published"
+msgstr "Diterbitkan"
+
+# key: admissions.help.is_published
+#: ninefruits/admission/models.py
+msgid "Applicants can see and apply to published cycles between the opening and closing times."
+msgstr "Pemohon boleh melihat dan memohon pengambilan yang diterbitkan antara masa dibuka dan ditutup."
+
+# key: admissions.fields.should_release_decisions_immediately
+#: ninefruits/admission/models.py
+msgid "Release decisions immediately"
+msgstr "Umumkan keputusan serta-merta"
+
+# key: admissions.help.should_release_decisions_immediately
+#: ninefruits/admission/models.py
+msgid "Tell each applicant as soon as they are decided. Otherwise decisions are released together with the release action."
+msgstr "Maklumkan setiap pemohon sebaik sahaja keputusan dibuat. Jika tidak, keputusan diumumkan serentak melalui tindakan pengumuman."
+
+# key: admissions.fields.offer_response_days
+#: ninefruits/admission/models.py
+msgid "Days to accept an offer"
+msgstr "Hari untuk menerima tawaran"
+
+# key: admissions.help.offer_response_days
+#: ninefruits/admission/models.py
+msgid "Admitted applicants must accept within this many days after the release. Empty: no deadline."
+msgstr "Pemohon yang berjaya mesti menerima tawaran dalam tempoh hari ini selepas pengumuman. Kosong: tiada tarikh akhir."
+
+# key: admissions.resources.cycles.label
+#: ninefruits/admission/models.py
+msgid "admission cycle"
+msgstr "pengambilan"
+
+# key: admissions.resources.cycles.plural_label
+#: ninefruits/admission/models.py
+msgid "admission cycles"
+msgstr "pengambilan"
+
+#: ninefruits/admission/models.py
+msgid "The closing time must be after the opening time."
+msgstr "Masa tutup mestilah selepas masa buka."
+
+#: ninefruits/admission/models.py
+msgid "Enter a number between 1 and 365."
+msgstr "Masukkan nombor antara 1 hingga 365."
+
+# key: admissions.fields.capacity
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Capacity"
+msgstr "Kapasiti"
+
+# key: admissions.fields.document_type
+#: ninefruits/admission/models.py
+msgid "Document"
+msgstr "Dokumen"
+
+# key: admissions.fields.is_required
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Required"
+msgstr "Wajib"
+
+# key: admissions.fields.application_number
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgid "Application number"
+msgstr "Nombor permohonan"
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/admission/models.py
+msgid "Person"
+msgstr "Individu"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/admission/models.py
+msgid "Org unit"
+msgstr "Unit organisasi"
+
+# key: admissions.fields.previous_school_name
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Previous school"
+msgstr "Institusi terdahulu"
+
+# key: admissions.fields.previous_graduation_date
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Graduation date (previous school)"
+msgstr "Tarikh tamat pengajian (institusi terdahulu)"
+
+# key: admissions.fields.personal_statement
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Personal statement"
+msgstr "Pernyataan peribadi"
+
+# key: admissions.fields.submitted_at
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "admissions.fields"
+msgid "Submitted"
+msgstr "Dihantar"
+
+# key: admissions.fields.decided_at
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decided"
+msgstr "Diputuskan"
+
+# key: admissions.fields.offer_expires_at
+#: ninefruits/admission/models.py
+msgid "Offer deadline"
+msgstr "Tarikh akhir tawaran"
+
+# key: people.sections.record
+#: ninefruits/admission/models.py
+msgid "Student record"
+msgstr "Rekod pelajar"
+
+# key: admissions.resources.applications.label
+#: ninefruits/admission/models.py
+msgid "application"
+msgstr "permohonan"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/admission/notifications.py
+msgid "Hello,"
+msgstr "Salam sejahtera,"
+
+# key: admissions.mail.submitted_intro
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "We received your application %(number)s for %(program)s (%(cycle)s)."
+msgstr "Kami telah menerima permohonan anda %(number)s untuk %(program)s (%(cycle)s)."
+
+# key: admissions.mail.view_application
+#: ninefruits/admission/notifications.py
+msgid "View application"
+msgstr "Lihat permohonan"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Terima kasih,\n"
+"%(app)s"
+
+# key: admissions.mail.submitted_subject
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "Application %(number)s received"
+msgstr "Permohonan %(number)s telah diterima"
+
+# key: admissions.mail.decision_intro
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "A decision on your application for %(program)s (%(cycle)s) is available. Sign in to see it."
+msgstr "Keputusan bagi permohonan anda untuk %(program)s (%(cycle)s) telah tersedia. Log masuk untuk melihatnya."
+
+# key: admissions.mail.respond_by
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "If you are admitted, please answer by %(date)s."
+msgstr "Jika anda ditawarkan kemasukan, sila beri jawapan sebelum %(date)s."
+
+# key: admissions.mail.decision_subject
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "Decision on application %(number)s"
+msgstr "Keputusan permohonan %(number)s"
+
+# key: admin.settings.admissions.applicant_registration_enabled
+#: ninefruits/admission/settings_pages.py
+msgid "Applicants can create an account"
+msgstr "Pemohon boleh mencipta akaun"
+
+# key: admin.settings.admissions.applicant_registration_enabled_help
+#: ninefruits/admission/settings_pages.py
+msgid "Shows \"Create an account\" on the sign-in and admissions pages. Turn off when you do not take online applications."
+msgstr "Memaparkan \"Cipta akaun\" pada halaman log masuk dan kemasukan. Matikan jika permohonan dalam talian tidak diterima."
+
+# key: admin.settings.admissions.draft_expiry_days
+#: ninefruits/admission/settings_pages.py
+msgid "Expire untouched drafts after (days)"
+msgstr "Luputkan draf yang tidak disentuh selepas (hari)"
+
+# key: admin.settings.admissions.draft_expiry_days_help
+#: ninefruits/admission/settings_pages.py
+msgid "Drafts in closed cycles expire regardless."
+msgstr "Draf dalam pengambilan yang telah ditutup tetap luput."
+
+# key: admin.settings.admissions.max_document_size_mb
+#: ninefruits/admission/settings_pages.py
+msgid "Largest document (MB)"
+msgstr "Saiz dokumen maksimum (MB)"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: ninefruits/admission/settings_pages.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "Kemasukan"
+
+#: ninefruits/admission/templates/admission/admin/matriculate.html
+#, python-format
+msgid "%(counter)s application selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgid_plural "%(counter)s applications selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgstr[0] "%(counter)s permohonan dipilih. Permohonan yang belum disahkan, sudah mempunyai rekod pelajar atau di luar skop anda akan dilangkau."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/admission/templates/admission/admin/matriculate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Batal"
+
+# key: admissions.portal.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html ninefruits/admission/views/portal.py
+msgid "My applications"
+msgstr "Permohonan saya"
+
+# key: admissions.portal.matriculated
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "You are now a student. Your student number is %(number)s."
+msgstr "Anda kini seorang pelajar. Nombor matrik anda ialah %(number)s."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My records"
+msgstr "Rekod saya"
+
+# key: admissions.portal.admitted
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "Congratulations! You are admitted to %(program)s."
+msgstr "Tahniah! Anda ditawarkan kemasukan ke %(program)s."
+
+# key: admissions.portal.respond_by
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "Please answer by %(date)s."
+msgstr "Sila beri jawapan sebelum %(date)s."
+
+# key: admissions.portal.accept_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Accept the offer?"
+msgstr "Terima tawaran?"
+
+# key: admissions.portal.decline_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Decline the offer? This cannot be undone."
+msgstr "Tolak tawaran? Tindakan ini tidak boleh dibatalkan."
+
+# key: admissions.portal.confirmed
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "You accepted the offer. Your student record will be created before the term starts."
+msgstr "Anda telah menerima tawaran. Rekod pelajar anda akan dicipta sebelum semester bermula."
+
+# key: admissions.portal.rejected
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "We are sorry, we cannot offer you admission in this cycle."
+msgstr "Harap maaf, kami tidak dapat menawarkan kemasukan kepada anda dalam pengambilan ini."
+
+# key: admissions.portal.waiting
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Your application is being reviewed. You will get an email when the decision is available."
+msgstr "Permohonan anda sedang disemak. Anda akan menerima e-mel apabila keputusan tersedia."
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Personal details"
+msgstr "Butiran peribadi"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Gender"
+msgstr "Jantina"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Nationality"
+msgstr "Kewarganegaraan"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Address"
+msgstr "Alamat"
+
+# key: admissions.portal.identity_locked
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Your name and birth date are kept by the registrar's office. You can update contact details under"
+msgstr "Nama dan tarikh lahir anda diselenggara oleh Pejabat Pendaftar. Anda boleh mengemas kini butiran perhubungan di bawah"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My details"
+msgstr "Butiran saya"
+
+# key: admissions.portal.save_draft
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "admissions"
+msgid "Save draft"
+msgstr "Simpan draf"
+
+# key: admissions.portal.submit_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Submit the application? You cannot change it afterwards."
+msgstr "Hantar permohonan? Anda tidak boleh mengubahnya selepas ini."
+
+# key: admissions.portal.submit
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Submit application"
+msgstr "Hantar permohonan"
+
+# key: admissions.portal.withdraw
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Withdraw application"
+msgstr "Tarik balik permohonan"
+
+# key: admissions.portal.withdraw_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Withdraw this application?"
+msgstr "Tarik balik permohonan ini?"
+
+# key: admissions.portal.no_applications
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgid "You have no applications yet."
+msgstr "Anda belum mempunyai sebarang permohonan."
+
+# key: admissions.portal.new_application
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgid "Start an application"
+msgstr "Mulakan permohonan"
+
+# key: admissions.public.none
+#: ninefruits/admission/templates/admission/portal/applications.html ninefruits/admission/templates/admission/public/index.html
+msgid "No cycle is taking applications right now."
+msgstr "Tiada pengambilan yang menerima permohonan pada masa ini."
+
+# key: admissions.portal.start
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Start"
+msgstr "Mula"
+
+# key: admissions.public.title
+#: ninefruits/admission/templates/admission/public/index.html ninefruits/admission/views/public.py
+msgctxt "admissions"
+msgid "Admissions"
+msgstr "Kemasukan"
+
+# key: admissions.public.instructions
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate."
+msgstr "Pengambilan yang sedang menerima permohonan. Cipta akaun dengan e-mel peribadi anda untuk memohon; anda akan menggunakan akaun yang sama sebagai pelajar dan graduan."
+
+# key: admissions.public.rolling
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Applications accepted at any time."
+msgstr "Permohonan diterima pada bila-bila masa."
+
+# key: admissions.public.closes
+#: ninefruits/admission/templates/admission/public/index.html
+#, python-format
+msgid "Applications close %(date)s."
+msgstr "Permohonan ditutup pada %(date)s."
+
+# key: admissions.public.go_to_applications
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Go to my applications"
+msgstr "Pergi ke permohonan saya"
+
+# key: admissions.public.register
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Create an account to apply"
+msgstr "Cipta akaun untuk memohon"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: ninefruits/admission/templates/admission/public/index.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "Log masuk"
+
+# key: admissions.verify_email.title
+#: ninefruits/admission/templates/admission/public/verify_email.html ninefruits/admission/views/public.py
+msgid "Verify your email"
+msgstr "Sahkan e-mel anda"
+
+# key: admissions.verify_email.instructions
+#: ninefruits/admission/templates/admission/public/verify_email.html
+#, python-format
+msgid "We sent a link to %(email)s. Open it to verify your address before applying."
+msgstr "Kami telah menghantar pautan ke %(email)s. Buka pautan tersebut untuk mengesahkan alamat anda sebelum memohon."
+
+# key: admissions.verify_email.resend
+#: ninefruits/admission/templates/admission/public/verify_email.html
+msgid "Send the link again"
+msgstr "Hantar pautan sekali lagi"
+
+# key: authentication.logout
+#: ninefruits/admission/templates/admission/public/verify_email.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Log keluar"
+
+# upstream: Django/allauth catalog
+#: ninefruits/admission/views/portal.py
+msgid "This field is required."
+msgstr "Medan ini diperlukan."
+
+# key: admissions.portal.offer_accepted
+#: ninefruits/admission/views/portal.py
+msgid "You accepted the offer. The registrar's office will create your student record."
+msgstr "Anda telah menerima tawaran. Pejabat Pendaftar akan mencipta rekod pelajar anda."
+
+# key: admissions.portal.offer_declined
+#: ninefruits/admission/views/portal.py
+msgid "You declined the offer."
+msgstr "Anda telah menolak tawaran."
+
+# key: admissions.portal.withdrawn
+#: ninefruits/admission/views/portal.py
+msgid "The application was withdrawn."
+msgstr "Permohonan telah ditarik balik."
+
+# key: admissions.portal.saved
+#: ninefruits/admission/views/portal.py
+msgid "Draft saved."
+msgstr "Draf disimpan."
+
+# key: admissions.portal.submitted
+#: ninefruits/admission/views/portal.py
+msgid "Your application was submitted. We sent a confirmation to your email."
+msgstr "Permohonan anda telah dihantar. Kami telah menghantar pengesahan ke e-mel anda."
+
+# key: portal.navigation.applications
+#: ninefruits/admission/views/portal.py
+msgctxt "portal"
+msgid "Admissions"
+msgstr "Kemasukan"
+
+# key: admissions.verify_email.sent
+#: ninefruits/admission/views/public.py
+msgid "A new link was sent."
+msgstr "Pautan baharu telah dihantar."

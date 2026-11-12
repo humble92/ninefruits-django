@@ -35,8 +35,7 @@ msgid "This session already has windows."
 msgstr "ຊ່ວງຮຽນນີ້ມີໄລຍະເວລາຢູ່ແລ້ວ."
 
 # key: reference.fields.name
-#: ninefruits/term/admin.py ninefruits/term/models/term.py
-#: ninefruits/term/models/time_slot.py
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
 msgctxt "reference"
 msgid "Name"
 msgstr "ຊື່"
@@ -82,11 +81,8 @@ msgstr "ບາງຊ່ວງຮຽນຈະຢູ່ນອກວັນທີໃ
 # key: validation.alpha_dash
 #: ninefruits/term/admin.py
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
-msgstr ""
-"ຊ່ອງ %(attribute)s ຕ້ອງມີແຕ່ຕົວອັກສອນ, ຕົວເລກ, ຂີດກາງ ແລະ ຂີດລຸ່ມເທົ່ານັ້ນ."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີແຕ່ຕົວອັກສອນ, ຕົວເລກ, ຂີດກາງ ແລະ ຂີດລຸ່ມເທົ່ານັ້ນ."
 
 #: ninefruits/term/admin.py
 #, python-format
@@ -147,12 +143,8 @@ msgstr "ເງື່ອນໄຂຜູ້ມີສິດ"
 
 # key: reference.help.eligibility
 #: ninefruits/term/admin.py
-msgid ""
-"Leave empty for everyone. Several windows of the same type with different "
-"conditions open in stages."
-msgstr ""
-"ປ່ອຍຫວ່າງສຳລັບທຸກຄົນ. "
-"ໄລຍະເວລາຫຼາຍອັນຂອງປະເພດດຽວກັນທີ່ມີເງື່ອນໄຂຕ່າງກັນຈະເປີດເປັນຂັ້ນຕອນ."
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
+msgstr "ປ່ອຍຫວ່າງສຳລັບທຸກຄົນ. ໄລຍະເວລາຫຼາຍອັນຂອງປະເພດດຽວກັນທີ່ມີເງື່ອນໄຂຕ່າງກັນຈະເປີດເປັນຂັ້ນຕອນ."
 
 # key: reference.eligibility.everyone
 #: ninefruits/term/admin.py
@@ -215,15 +207,8 @@ msgstr[1] "ສຳເນົາໄລຍະເວລາ %(count)s ອັນແລ�
 
 # key: reference.help.copy_session_windows
 #: ninefruits/term/admin.py
-msgid ""
-"Copies the course windows (add/drop, withdrawal, grading, evaluation) of "
-"another session, moved to this session's dates: early windows keep their "
-"distance from the start, late ones from the end. Adjust them after copying."
-msgstr ""
-"ສຳເນົາໄລຍະເວລາຂອງວິຊາ (ເພີ່ມ/ຖອນ, ຖອນຕົວ, ການໃຫ້ເກຣດ, ການປະເມີນ) "
-"ຈາກຊ່ວງຮຽນອື່ນ, ໂດຍປັບຕາມວັນທີຂອງຊ່ວງຮຽນນີ້: "
-"ໄລຍະເວລາຕົ້ນຮັກສາໄລຍະຫ່າງຈາກວັນເລີ່ມ, ໄລຍະເວລາທ້າຍຮັກສາໄລຍະຫ່າງຈາກວັນສິ້ນສຸດ."
-" ກະລຸນາປັບແກ້ຫຼັງຈາກສຳເນົາ."
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "ສຳເນົາໄລຍະເວລາຂອງວິຊາ (ເພີ່ມ/ຖອນ, ຖອນຕົວ, ການໃຫ້ເກຣດ, ການປະເມີນ) ຈາກຊ່ວງຮຽນອື່ນ, ໂດຍປັບຕາມວັນທີຂອງຊ່ວງຮຽນນີ້: ໄລຍະເວລາຕົ້ນຮັກສາໄລຍະຫ່າງຈາກວັນເລີ່ມ, ໄລຍະເວລາທ້າຍຮັກສາໄລຍະຫ່າງຈາກວັນສິ້ນສຸດ. ກະລຸນາປັບແກ້ຫຼັງຈາກສຳເນົາ."
 
 # key: reference.fields.weekdays
 #: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
@@ -338,12 +323,8 @@ msgstr "ພາກຮຽນປົກກະຕິ"
 
 # key: reference.help.is_regular
 #: ninefruits/term/models/term.py
-msgid ""
-"Regular terms (e.g. spring, fall) and intensive sessions follow different "
-"rules later, such as credit limits."
-msgstr ""
-"ພາກຮຽນປົກກະຕິ (ເຊັ່ນ ພາກຮຽນຕົ້ນ, ພາກຮຽນປາຍ) ແລະ "
-"ພາກຮຽນເລັ່ງລັດຈະໃຊ້ກົດລະບຽບທີ່ແຕກຕ່າງກັນໃນພາຍຫຼັງ, ເຊັ່ນ ຂີດຈຳກັດໜ່ວຍກິດ."
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
+msgstr "ພາກຮຽນປົກກະຕິ (ເຊັ່ນ ພາກຮຽນຕົ້ນ, ພາກຮຽນປາຍ) ແລະ ພາກຮຽນເລັ່ງລັດຈະໃຊ້ກົດລະບຽບທີ່ແຕກຕ່າງກັນໃນພາຍຫຼັງ, ເຊັ່ນ ຂີດຈຳກັດໜ່ວຍກິດ."
 
 # key: reference.fields.sort_order
 #: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
@@ -399,12 +380,8 @@ msgstr "ຊ່ວງຮຽນ"
 
 # key: reference.help.term_session
 #: ninefruits/term/models/window.py
-msgid ""
-"Course deadlines follow the session of the course: the full term unless the "
-"window is for a shorter session."
-msgstr ""
-"ກຳນົດເວລາຂອງວິຊາຈະຕາມຊ່ວງຮຽນຂອງວິຊານັ້ນ: ເຕັມພາກຮຽນ "
-"ເວັ້ນແຕ່ໄລຍະເວລານີ້ແມ່ນສຳລັບຊ່ວງຮຽນທີ່ສັ້ນກວ່າ."
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
+msgstr "ກຳນົດເວລາຂອງວິຊາຈະຕາມຊ່ວງຮຽນຂອງວິຊານັ້ນ: ເຕັມພາກຮຽນ ເວັ້ນແຕ່ໄລຍະເວລານີ້ແມ່ນສຳລັບຊ່ວງຮຽນທີ່ສັ້ນກວ່າ."
 
 # key: reference.fields.window_type
 #: ninefruits/term/models/window.py
@@ -415,3 +392,8 @@ msgstr "ໄລຍະເວລາ"
 #: ninefruits/term/models/window.py
 msgid "Name (optional)"
 msgstr "ຊື່ (ບໍ່ບັງຄັບ)"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "ຈຳກັດ"

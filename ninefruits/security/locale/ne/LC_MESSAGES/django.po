@@ -1,0 +1,1431 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: security.errors.cannot_deactivate_self
+#: ninefruits/security/actions/accounts.py
+msgid "You cannot deactivate your own account."
+msgstr "तपाईं आफ्नै खाता निष्क्रिय गर्न सक्नुहुन्न।"
+
+# key: security.errors.target_more_privileged
+#: ninefruits/security/actions/accounts.py
+#, python-format
+msgid "This account holds permissions you do not have (%(permissions)s); only an administrator with those permissions can change it."
+msgstr "यो खातासँग तपाईंसँग नभएका अनुमतिहरू छन् (%(permissions)s); ती अनुमति भएका प्रशासकले मात्र यसलाई परिवर्तन गर्न सक्छन्।"
+
+# key: json.The provided password does not match your current password.
+#: ninefruits/security/actions/accounts.py
+msgid "The provided password does not match your current password."
+msgstr "दिइएको पासवर्ड तपाईंको हालको पासवर्डसँग मेल खाँदैन।"
+
+#: ninefruits/security/actions/accounts.py
+msgid "The password field confirmation does not match."
+msgstr "पासवर्ड पुष्टि मेल खाँदैन।"
+
+#: ninefruits/security/actions/accounts.py ninefruits/security/admin.py
+msgid "The email has already been taken."
+msgstr "यो इमेल पहिले नै प्रयोगमा छ।"
+
+# key: security.errors.persona_role_not_assignable
+#: ninefruits/security/actions/assign_role.py
+msgid "Persona roles are granted automatically and cannot be assigned."
+msgstr "पहिचान भूमिकाहरू स्वतः दिइन्छन् र तोक्न सकिँदैन।"
+
+# key: security.errors.scope_id_mismatch
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "Choose a scope target for scoped assignments, and none for global assignments."
+msgstr "दायरा भएको तोकाइका लागि दायराको लक्ष्य रोज्नुहोस्, र सबैका लागि कुनै नरोज्नुहोस्।"
+
+# key: offering.errors.meeting_time_order
+# key: security.errors.invalid_period
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "The end must be after the start."
+msgstr "अन्त्य सुरुभन्दा पछि हुनुपर्छ।"
+
+# key: security.errors.self_assignment
+#: ninefruits/security/actions/assign_role.py
+msgid "You cannot assign a role to yourself."
+msgstr "तपाईं आफैँलाई भूमिका तोक्न सक्नुहुन्न।"
+
+# key: security.errors.role_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+#, python-format
+msgid "This role carries permissions you do not hold (%(permissions)s)."
+msgstr "यो भूमिकामा तपाईंसँग नभएका अनुमतिहरू छन् (%(permissions)s)।"
+
+# key: security.errors.scope_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+msgid "This scope is wider than the one you manage role assignments for."
+msgstr "यो दायरा तपाईंले भूमिका तोकाइ व्यवस्थापन गर्ने दायराभन्दा फराकिलो छ।"
+
+# key: security.sso.linked_to_another_account
+#: ninefruits/security/actions/identities.py
+msgid "This school account is linked to another user."
+msgstr "यो विद्यालय खाता अर्को प्रयोगकर्तासँग जोडिएको छ।"
+
+# key: security.sso.already_linked
+#: ninefruits/security/actions/identities.py
+msgid "Your account is already linked to another account of this provider."
+msgstr "तपाईंको खाता यस प्रदायकको अर्को खातासँग पहिले नै जोडिएको छ।"
+
+# key: json.The provided two factor authentication code was invalid.
+#: ninefruits/security/actions/mfa.py
+msgid "The provided two factor authentication code was invalid."
+msgstr "दिइएको दुई-चरण प्रमाणीकरण कोड अमान्य थियो।"
+
+#: ninefruits/security/actions/mfa.py
+msgid "Recovery codes need an authenticator app. Set one up first."
+msgstr "रिकभरी कोडका लागि प्रमाणीकरण एप चाहिन्छ। पहिले एउटा सेटअप गर्नुहोस्।"
+
+# key: security.email_code.not_allowed
+#: ninefruits/security/actions/mfa.py
+msgid "Email codes are not available at this institution."
+msgstr "यस संस्थामा इमेल कोड उपलब्ध छैन।"
+
+# key: security.email_code.invalid
+#: ninefruits/security/actions/mfa.py ninefruits/security/views.py
+msgid "The code is invalid or has expired."
+msgstr "कोड अमान्य छ वा म्याद सकिएको छ।"
+
+# key: security.mfa.cannot_disable_required
+#: ninefruits/security/actions/mfa.py
+msgid "Two-factor authentication is required for your account and cannot be disabled."
+msgstr "तपाईंको खाताका लागि दुई-चरण प्रमाणीकरण अनिवार्य छ र असक्षम गर्न सकिँदैन।"
+
+# key: auth.failed
+#: ninefruits/security/adapters.py ninefruits/security/views_sso.py
+msgid "These credentials do not match our records."
+msgstr "यी विवरणहरू हाम्रो अभिलेखसँग मेल खाँदैनन्।"
+
+#: ninefruits/security/adapters.py
+msgid "Too many login attempts. Please try again later."
+msgstr "धेरै पटक लगइन प्रयास भयो। कृपया केही समयपछि फेरि प्रयास गर्नुहोस्।"
+
+# key: common.reason
+#: ninefruits/security/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "कारण"
+
+# key: admin.users.fields.locale
+# key: assessment.categories.language
+# key: common.language
+# key: offering.syllabus.language
+#: ninefruits/security/admin.py
+msgid "Language"
+msgstr "भाषा"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+# key: people.sections.name
+# key: reference.fields.name
+#: ninefruits/security/admin.py
+msgid "Name"
+msgstr "नाम"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/security/admin.py ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Email"
+msgstr "इमेल"
+
+# key: admin.role_assignments.fields.active
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: ninefruits/security/admin.py ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Active"
+msgstr "सक्रिय"
+
+# key: admin.users.help.name
+#: ninefruits/security/admin.py
+msgid "Used only for accounts without a person (e.g. service accounts). Linked accounts show the person's name."
+msgstr "व्यक्ति नजोडिएका खाताहरूका लागि मात्र प्रयोग हुन्छ (जस्तै सेवा खाता)। जोडिएका खाताहरूमा व्यक्तिको नाम देखिन्छ।"
+
+# key: admin.role_assignments.fields.role
+# key: graduation.report_columns.program_role
+# key: offering.fields.instructor_role
+#: ninefruits/security/admin.py
+msgid "Role"
+msgstr "भूमिका"
+
+# key: admin.role_assignments.fields.scope
+#: ninefruits/security/admin.py
+msgid "Scope"
+msgstr "दायरा"
+
+# key: admin.role_assignments.fields.scope_target
+#: ninefruits/security/admin.py
+msgid "Scope target"
+msgstr "दायराको लक्ष्य"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/security/admin.py
+msgid "Includes all units below the selected ones."
+msgstr "छानिएका एकाइमुनिका सबै एकाइ समावेश गर्छ।"
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: ninefruits/security/admin.py
+msgid "Starts"
+msgstr "सुरु"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/security/admin.py
+msgid "Ends"
+msgstr "अन्त्य"
+
+#: ninefruits/security/admin.py
+msgid "Role assignment"
+msgstr "भूमिका तोकाइ"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/admin.py
+msgid "Role assignments"
+msgstr "भूमिका तोकाइ"
+
+# key: admin.role_assignments.actions.revoke
+#: ninefruits/security/admin.py
+msgid "End assignment"
+msgstr "तोकाइ अन्त्य गर्नुहोस्"
+
+# key: permissions.resources.users
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Users"
+msgstr "प्रयोगकर्ताहरू"
+
+# key: admin.users.fields.mfa_enrolled
+#: ninefruits/security/admin.py
+msgid "Two-factor"
+msgstr "दुई-चरण"
+
+# key: admin.users.fields.linked_person
+#: ninefruits/security/admin.py
+msgid "Linked person"
+msgstr "जोडिएको व्यक्ति"
+
+# key: common.yes
+#: ninefruits/security/admin.py
+msgid "Yes"
+msgstr "हो"
+
+# key: common.none
+#: ninefruits/security/admin.py
+msgid "None"
+msgstr "छैन"
+
+# key: admin.users.actions.reset_mfa
+#: ninefruits/security/admin.py
+msgid "Reset two-factor authentication"
+msgstr "दुई-चरण प्रमाणीकरण रिसेट गर्नुहोस्"
+
+# key: admin.users.notifications.mfa_reset
+#: ninefruits/security/admin.py
+msgid "Two-factor authentication was reset."
+msgstr "दुई-चरण प्रमाणीकरण रिसेट गरियो।"
+
+# key: admin.users.actions.unlock
+#: ninefruits/security/admin.py
+msgid "Unlock sign-in"
+msgstr "साइन इन अनलक गर्नुहोस्"
+
+# key: admin.users.notifications.unlocked
+#: ninefruits/security/admin.py
+msgid "Sign-in unlocked."
+msgstr "साइन इन अनलक गरियो।"
+
+# key: admin.role_assignments.actions.assign
+#: ninefruits/security/admin.py
+msgid "Assign role"
+msgstr "भूमिका तोक्नुहोस्"
+
+# key: admin.role_assignments.notifications.assigned
+#: ninefruits/security/admin.py
+msgid "Role assigned."
+msgstr "भूमिका तोकियो।"
+
+# key: admin.role_assignments.notifications.revoked
+#: ninefruits/security/admin.py
+msgid "Assignment ended."
+msgstr "तोकाइ अन्त्य गरियो।"
+
+# key: admin.roles.fields.name
+#: ninefruits/security/admin.py
+msgid "Internal name"
+msgstr "आन्तरिक नाम"
+
+# key: admin.roles.fields.display_name
+#: ninefruits/security/admin.py
+msgid "Display name"
+msgstr "देखिने नाम"
+
+# key: admin.roles.fields.description
+# key: admissions.fields.description
+# key: curriculum.fields.description
+# key: evaluation.fields.description
+# key: reference.fields.description
+#: ninefruits/security/admin.py
+msgid "Description"
+msgstr "विवरण"
+
+# key: admin.roles.fields.name_help
+#: ninefruits/security/admin.py
+msgid "Lowercase letters, digits and underscores, e.g. registrar."
+msgstr "साना अङ्ग्रेजी अक्षर, अङ्क र अन्डरस्कोर, जस्तै registrar।"
+
+#: ninefruits/security/admin.py
+msgid "The name has already been taken."
+msgstr "यो नाम पहिले नै प्रयोगमा छ।"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Roles"
+msgstr "भूमिकाहरू"
+
+# key: admin.roles.system_role_permissions
+#: ninefruits/security/admin.py
+msgid "System roles always have every permission."
+msgstr "प्रणाली भूमिकाहरूसँग सधैँ सबै अनुमति हुन्छन्।"
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/security/admin.py
+msgid "General"
+msgstr "सामान्य"
+
+# key: admin.roles.fields.permissions_count
+# key: admin.roles.sections.permissions
+#: ninefruits/security/admin.py
+msgid "Permissions"
+msgstr "अनुमतिहरू"
+
+# key: admin.roles.fields.persona
+#: ninefruits/security/admin.py
+msgid "Persona"
+msgstr "पहिचान भूमिका"
+
+# key: admin.roles.fields.active_assignments_count
+#: ninefruits/security/admin.py
+msgid "Active assignments"
+msgstr "सक्रिय तोकाइ"
+
+# key: permissions.resources.people
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "People"
+msgstr "व्यक्तिहरू"
+
+# key: permissions.resources.accounts
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Accounts"
+msgstr "खाताहरू"
+
+# key: permissions.resources.student_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Student records"
+msgstr "विद्यार्थी अभिलेखहरू"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Status changes"
+msgstr "अभिलेख स्थिति परिवर्तनहरू"
+
+# key: permissions.resources.instructors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Instructors"
+msgstr "प्राध्यापकहरू"
+
+# key: permissions.resources.advisors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Advisors"
+msgstr "सल्लाहकार प्राध्यापकहरू"
+
+# key: permissions.resources.authentication_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sign-in settings"
+msgstr "साइन इन सेटिङ"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reference data"
+msgstr "सन्दर्भ डेटा"
+
+# key: permissions.resources.lookup_values
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Code data"
+msgstr "कोड डेटा"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Org units"
+msgstr "संगठन एकाइहरू"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Programs"
+msgstr "कार्यक्रमहरू"
+
+# key: permissions.resources.facilities
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Buildings and rooms"
+msgstr "भवन र कोठाहरू"
+
+# key: permissions.resources.terms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Academic years and terms"
+msgstr "शैक्षिक वर्ष र सेमेस्टर"
+
+# key: permissions.resources.term_windows
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Term windows"
+msgstr "सेमेस्टर कार्य अवधिहरू"
+
+# key: permissions.resources.course_categories
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course categories"
+msgstr "विषयका वर्गहरू"
+
+# key: permissions.resources.grade_scales
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade scales"
+msgstr "ग्रेड स्केलहरू"
+
+# key: permissions.resources.admin_panel
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Administration panel"
+msgstr "प्रशासन प्यानल"
+
+# key: permissions.resources.users
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Users"
+msgstr "प्रयोगकर्ताहरू"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Roles"
+msgstr "भूमिकाहरू"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Role assignments"
+msgstr "भूमिका तोकाइ"
+
+# key: permissions.resources.audit_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Audit records"
+msgstr "अडिट अभिलेखहरू"
+
+# key: permissions.resources.security_events
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security events"
+msgstr "सुरक्षा घटनाहरू"
+
+# key: permissions.resources.security_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security settings"
+msgstr "सुरक्षा सेटिङ"
+
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Queue monitor (Flower)"
+msgstr "कार्य लाइन मनिटर (Flower)"
+
+# key: permissions.resources.institution_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Institution settings"
+msgstr "संस्था सेटिङ"
+
+# key: permissions.resources.admission_cycles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Admission cycles"
+msgstr "भर्ना चरणहरू"
+
+# key: permissions.resources.applications
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Applications"
+msgstr "आवेदनहरू"
+
+# key: permissions.resources.courses
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Courses"
+msgstr "विषयहरू"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation requirements"
+msgstr "स्नातक आवश्यकताहरू"
+
+# key: permissions.resources.sections
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sections"
+msgstr "सेक्सनहरू"
+
+# key: permissions.resources.additional_programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Second majors and minors"
+msgstr "दोस्रो मुख्य विषय र माइनर"
+
+# key: permissions.resources.enrollments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registrations"
+msgstr "विषय दर्ताहरू"
+
+# key: permissions.resources.registration
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration adjustments"
+msgstr "दर्ता समायोजन"
+
+# key: permissions.resources.registration_rules
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration rules"
+msgstr "विषय दर्ता नियमहरू"
+
+# key: permissions.resources.registration_holds
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration holds and overrides"
+msgstr "दर्ता रोक र छुट"
+
+# key: permissions.resources.grades
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grades"
+msgstr "ग्रेड"
+
+# key: permissions.resources.grade_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade changes"
+msgstr "ग्रेड परिवर्तनहरू"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grading policy"
+msgstr "ग्रेडिङ नीति"
+
+# key: permissions.resources.grade_exceptions
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade exceptions"
+msgstr "ग्रेड अपवादहरू"
+
+# key: permissions.resources.evaluations
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course evaluation"
+msgstr "विषय मूल्याङ्कन"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Examinations"
+msgstr "परीक्षा"
+
+# key: permissions.resources.graduation
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation"
+msgstr "स्नातक"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reports"
+msgstr "प्रतिवेदन"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "LMS integration"
+msgstr "LMS एकीकरण"
+
+# key: permissions.resources.certificates
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Certificates"
+msgstr "प्रमाणपत्र"
+
+# key: permissions.admin_panel.access
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Open the administration panel"
+msgstr "प्रशासन प्यानल खोल्ने"
+
+# key: permissions.users.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View users"
+msgstr "प्रयोगकर्ता हेर्ने"
+
+# key: permissions.users.create
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create users"
+msgstr "प्रयोगकर्ता बनाउने"
+
+# key: permissions.users.update
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Edit users"
+msgstr "प्रयोगकर्ता सम्पादन गर्ने"
+
+# key: permissions.users.reset_mfa
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reset two-factor authentication"
+msgstr "दुई-चरण प्रमाणीकरण रिसेट गर्ने"
+
+# key: permissions.roles.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View roles"
+msgstr "भूमिका हेर्ने"
+
+# key: permissions.roles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit roles"
+msgstr "भूमिका बनाउने र सम्पादन गर्ने"
+
+# key: permissions.role_assignments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign and end roles"
+msgstr "भूमिका तोक्ने र अन्त्य गर्ने"
+
+# key: permissions.audit_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View audit records"
+msgstr "अडिट अभिलेख हेर्ने"
+
+# key: permissions.security_events.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View security events"
+msgstr "सुरक्षा घटना हेर्ने"
+
+# key: permissions.security_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage security settings"
+msgstr "सुरक्षा सेटिङ व्यवस्थापन गर्ने"
+
+# key: permissions.institution_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage institution settings"
+msgstr "संस्था सेटिङ व्यवस्थापन गर्ने"
+
+# key: permissions.queue_monitor.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View the queue monitor"
+msgstr "क्यु मनिटर हेर्ने"
+
+# key: permissions.reference_data.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View reference data"
+msgstr "सन्दर्भ डेटा हेर्ने"
+
+# key: permissions.reference_data.import
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Import reference data from CSV"
+msgstr "CSV बाट सन्दर्भ डेटा आयात गर्ने"
+
+# key: permissions.lookup_values.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage code data, countries and languages"
+msgstr "कोड डेटा, देश र भाषा व्यवस्थापन गर्ने"
+
+# key: permissions.org_units.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage org units and reorganizations"
+msgstr "संगठन एकाइ र पुनर्संरचना व्यवस्थापन गर्ने"
+
+# key: permissions.programs.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage programs"
+msgstr "कार्यक्रम व्यवस्थापन गर्ने"
+
+# key: permissions.facilities.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage buildings and rooms"
+msgstr "भवन र कोठा व्यवस्थापन गर्ने"
+
+# key: permissions.terms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage academic years, terms, term types and time slots"
+msgstr "शैक्षिक वर्ष, सेमेस्टर, सेमेस्टर प्रकार र पिरियड व्यवस्थापन गर्ने"
+
+# key: permissions.term_windows.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage term windows"
+msgstr "सेमेस्टर कार्य अवधि व्यवस्थापन गर्ने"
+
+# key: permissions.course_categories.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage course categories"
+msgstr "विषयका वर्ग व्यवस्थापन गर्ने"
+
+# key: permissions.grade_scales.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage grade scales"
+msgstr "ग्रेड स्केल व्यवस्थापन गर्ने"
+
+# key: permissions.people.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View all people"
+msgstr "सबै व्यक्ति हेर्ने"
+
+# key: permissions.people.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit people"
+msgstr "व्यक्ति बनाउने र सम्पादन गर्ने"
+
+# key: permissions.people.view_sensitive
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reveal national ID and passport numbers"
+msgstr "राष्ट्रिय परिचयपत्र र राहदानी नम्बर देखाउने"
+
+# key: permissions.people.merge
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Merge duplicate people"
+msgstr "दोहोरो व्यक्ति गाभ्ने"
+
+# key: permissions.accounts.invite
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Invite people to create an account"
+msgstr "व्यक्तिलाई खाता बनाउन निमन्त्रणा पठाउने"
+
+# key: permissions.student_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View student records"
+msgstr "विद्यार्थी अभिलेख हेर्ने"
+
+# key: permissions.student_records.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit student records"
+msgstr "विद्यार्थी अभिलेख बनाउने र सम्पादन गर्ने"
+
+# key: permissions.student_status_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve and record status changes"
+msgstr "अभिलेख स्थिति परिवर्तन स्वीकृत र अभिलेख गर्ने"
+
+# key: permissions.instructors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage instructors"
+msgstr "प्राध्यापक व्यवस्थापन गर्ने"
+
+# key: permissions.advisors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign advisors"
+msgstr "सल्लाहकार प्राध्यापक तोक्ने"
+
+# key: permissions.authentication_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage sign-in methods and SSO"
+msgstr "साइन इन विधि र SSO व्यवस्थापन गर्ने"
+
+# key: permissions.admission_cycles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage admission cycles and admission settings"
+msgstr "भर्ना चरण र भर्ना सेटिङ व्यवस्थापन गर्ने"
+
+# key: permissions.applications.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View applications"
+msgstr "आवेदन हेर्ने"
+
+# key: permissions.applications.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Review and decide applications"
+msgstr "आवेदनको समीक्षा र निर्णय गर्ने"
+
+# key: permissions.applications.matriculate
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create student records for admitted applicants"
+msgstr "भर्ना स्वीकृत आवेदकका विद्यार्थी अभिलेख बनाउने"
+
+# key: permissions.courses.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage courses, versions and requisites"
+msgstr "विषय, संस्करण र पूर्वशर्त व्यवस्थापन गर्ने"
+
+# key: permissions.curriculum.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage graduation requirements"
+msgstr "स्नातक आवश्यकता व्यवस्थापन गर्ने"
+
+# key: permissions.sections.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View sections"
+msgstr "सेक्सन हेर्ने"
+
+# key: permissions.sections.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Plan sections (instructors, times, rooms)"
+msgstr "सेक्सन योजना गर्ने (प्राध्यापक, समय, कोठा)"
+
+# key: permissions.additional_programs.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Decide second major and minor applications"
+msgstr "दोस्रो मुख्य विषय र माइनर आवेदनको निर्णय गर्ने"
+
+# key: permissions.enrollments.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View registrations and rosters"
+msgstr "विषय दर्ता र विद्यार्थी सूची हेर्ने"
+
+# key: permissions.registration.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register, drop and withdraw students for them (with a reason)"
+msgstr "विद्यार्थीको तर्फबाट दर्ता, हटाउने र परित्याग गर्ने (कारणसहित)"
+
+# key: permissions.registration_rules.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage registration rule sets and credit limits"
+msgstr "विषय दर्ता नियम सेट र क्रेडिट सीमा व्यवस्थापन गर्ने"
+
+# key: permissions.registration_holds.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Place and release holds, grant rule overrides"
+msgstr "रोक लगाउने र हटाउने, नियम छुट दिने"
+
+# key: permissions.grades.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View grades, grade progress and term records"
+msgstr "ग्रेड, ग्रेड प्रगति र सेमेस्टर अभिलेख हेर्ने"
+
+# key: permissions.grades.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Finalize and return grades, enter grades for instructors, close terms"
+msgstr "ग्रेड अन्तिम गर्ने र फिर्ता पठाउने, प्राध्यापकको तर्फबाट ग्रेड प्रविष्ट गर्ने, सेमेस्टर बन्द गर्ने"
+
+# key: permissions.grade_changes.request
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Request a change to a finalized grade"
+msgstr "अन्तिम ग्रेडमा परिवर्तन अनुरोध गर्ने"
+
+# key: permissions.grade_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve or reject grade changes (not your own requests)"
+msgstr "ग्रेड परिवर्तन स्वीकृत वा अस्वीकार गर्ने (आफ्नै अनुरोध बाहेक)"
+
+# key: permissions.grading_policies.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage GPA, retake, academic standing and honors policy"
+msgstr "GPA, पुनः लिने, शैक्षिक स्थिति र सम्मान नीति व्यवस्थापन गर्ने"
+
+# key: permissions.grade_exceptions.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Be told when staff submit grades outside the grade caps (department heads, academic office)"
+msgstr "कर्मचारीले ग्रेड सीमाबाहिर ग्रेड पेस गर्दा जानकारी पाउने (विभाग प्रमुख, शैक्षिक प्रशासन)"
+
+# key: permissions.evaluations.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View course evaluation response rates and results"
+msgstr "विषय मूल्याङ्कनको प्रतिक्रिया दर र नतिजा हेर्ने"
+
+# key: permissions.evaluations.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage evaluation forms, term evaluations and publication"
+msgstr "मूल्याङ्कन फारम, सेमेस्टर मूल्याङ्कन र प्रकाशन व्यवस्थापन गर्ने"
+
+# key: permissions.certificates.issue
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Issue, re-render and revoke certificates"
+msgstr "प्रमाणपत्र जारी गर्ने, फेरि बनाउने र रद्द गर्ने"
+
+# key: permissions.certificates.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage certificate kinds, templates and settings"
+msgstr "प्रमाणपत्रका प्रकार, टेम्प्लेट र सेटिङ व्यवस्थापन गर्ने"
+
+# key: permissions.assessments.record
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register students, enter and publish results, record external results"
+msgstr "विद्यार्थी दर्ता गर्ने, नतिजा प्रविष्ट र प्रकाशित गर्ने, बाह्य नतिजा अभिलेख गर्ने"
+
+# key: permissions.assessments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage examination kinds, areas and sessions"
+msgstr "परीक्षाका प्रकार, क्षेत्र र सत्र व्यवस्थापन गर्ने"
+
+# key: permissions.graduation.audit
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Run and view degree audits"
+msgstr "स्नातक योग्यता जाँच चलाउने र हेर्ने"
+
+# key: permissions.graduation.process
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Process graduations, grant requirement waivers"
+msgstr "स्नातक प्रक्रिया गर्ने, आवश्यकता छुट दिने"
+
+# key: permissions.reports.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View standard reports and download them"
+msgstr "मानक प्रतिवेदन हेर्ने र डाउनलोड गर्ने"
+
+# key: permissions.lms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage LMS platforms, links and synchronization"
+msgstr "LMS प्लेटफर्म, लिङ्क र सिङ्क व्यवस्थापन गर्ने"
+
+# key: security.mfa_enforcement.disabled
+#: ninefruits/security/enums.py
+msgid "Not used"
+msgstr "प्रयोग नगरिने"
+
+# key: security.mfa_enforcement.recommended
+#: ninefruits/security/enums.py
+msgid "Recommended (optional)"
+msgstr "सिफारिस गरिएको (वैकल्पिक)"
+
+# key: security.mfa_enforcement.required_for_roles
+#: ninefruits/security/enums.py
+msgid "Required for selected roles"
+msgstr "छानिएका भूमिकाका लागि अनिवार्य"
+
+# key: security.mfa_enforcement.required_for_all
+#: ninefruits/security/enums.py
+msgid "Required for everyone"
+msgstr "सबैका लागि अनिवार्य"
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/security/enums.py
+msgid "Authenticator app"
+msgstr "प्रमाणीकरण एप"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/security/enums.py
+msgid "Email code"
+msgstr "इमेल कोड"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Applicant"
+msgstr "आवेदक"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Student"
+msgstr "विद्यार्थी"
+
+# key: security.personas.alumni
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Alumni"
+msgstr "पूर्वविद्यार्थी"
+
+# key: security.personas.instructor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Instructor"
+msgstr "प्राध्यापक"
+
+# key: security.personas.advisor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Advisor"
+msgstr "सल्लाहकार प्राध्यापक"
+
+# key: security.scope_types.global
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "All"
+msgstr "सबै"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Org unit"
+msgstr "संगठन एकाइ"
+
+# key: security.scope_types.program
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Program"
+msgstr "कार्यक्रम"
+
+# key: security.sso_link_modes.manual
+#: ninefruits/security/enums.py
+msgid "Users link their own accounts"
+msgstr "प्रयोगकर्ताले आफ्नो खाता आफैँ जोड्छन्"
+
+# key: security.sso_link_modes.institutional_email
+#: ninefruits/security/enums.py
+msgid "Link automatically by verified school email"
+msgstr "प्रमाणित विद्यालय इमेलबाट स्वतः जोड्ने"
+
+# key: security.student_number_login.disabled
+#: ninefruits/security/enums.py
+msgid "Not allowed"
+msgstr "अनुमति छैन"
+
+# key: security.student_number_login.active_records
+#: ninefruits/security/enums.py
+msgid "Current students only"
+msgstr "हालका विद्यार्थी मात्र"
+
+# key: security.student_number_login.all_records
+#: ninefruits/security/enums.py
+msgid "Current students and graduates"
+msgstr "हालका विद्यार्थी र स्नातकहरू"
+
+# key: authentication.fields.email_or_student_number
+#: ninefruits/security/forms.py
+msgid "Email or student number"
+msgstr "इमेल वा विद्यार्थी नम्बर"
+
+# key: authentication.fields.password
+#: ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Password"
+msgstr "पासवर्ड"
+
+# key: authentication.login.remember_me
+#: ninefruits/security/forms.py
+msgid "Keep me signed in"
+msgstr "मलाई साइन इन गरिराख्नुहोस्"
+
+# key: auth.inactive
+#: ninefruits/security/middleware.py
+msgid "This account has been deactivated. Contact the administrator."
+msgstr "यो खाता निष्क्रिय गरिएको छ। प्रशासकलाई सम्पर्क गर्नुहोस्।"
+
+# key: security.mfa.enrollment_required
+#: ninefruits/security/middleware.py
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "तपाईंको खाताका लागि दुई-चरण प्रमाणीकरण अनिवार्य छ। जारी राख्न कृपया सेटअप गर्नुहोस्।"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/security/notifications.py
+msgid "Hello,"
+msgstr "नमस्ते,"
+
+# key: security.email_code.mail_intro
+#: ninefruits/security/notifications.py
+msgid "Use this code to finish signing in:"
+msgstr "साइन इन पूरा गर्न यो कोड प्रयोग गर्नुहोस्:"
+
+# key: security.email_code.mail_expiry
+#: ninefruits/security/notifications.py
+#, python-format
+msgid "The code expires in %(minutes)s minutes and can be used once."
+msgstr "कोडको म्याद %(minutes)s मिनेटमा सकिन्छ र एक पटक मात्र प्रयोग गर्न सकिन्छ।"
+
+# key: security.email_code.mail_ignore
+#: ninefruits/security/notifications.py
+msgid "If you did not try to sign in, change your password."
+msgstr "तपाईंले साइन इन गर्ने प्रयास गर्नुभएको होइन भने, आफ्नो पासवर्ड परिवर्तन गर्नुहोस्।"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/security/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"धन्यवाद,\n"
+"%(app)s"
+
+# key: security.email_code.mail_subject
+#: ninefruits/security/notifications.py
+msgid "Your sign-in code"
+msgstr "तपाईंको साइन इन कोड"
+
+# key: admin.settings.security.mfa_enforcement
+#: ninefruits/security/settings_pages.py
+msgid "Policy"
+msgstr "नीति"
+
+# key: admin.settings.security.mfa_required_roles
+#: ninefruits/security/settings_pages.py
+msgid "Roles that must use two-factor authentication"
+msgstr "दुई-चरण प्रमाणीकरण अनिवार्य हुने भूमिकाहरू"
+
+#: ninefruits/security/settings_pages.py
+msgid "Used when the policy is Required for selected roles."
+msgstr "नीति 'छानिएका भूमिकाहरूका लागि अनिवार्य' हुँदा प्रयोग हुन्छ।"
+
+# key: admin.settings.security.mfa_grace_period_days
+#: ninefruits/security/settings_pages.py
+msgid "Grace period (days)"
+msgstr "छुट अवधि (दिन)"
+
+# key: admin.settings.security.mfa_grace_period_help
+#: ninefruits/security/settings_pages.py
+msgid "Days a user can keep working after the requirement first applies to them. 0 means immediately."
+msgstr "नियम पहिलो पटक लागू भएपछि प्रयोगकर्ताले काम जारी राख्न पाउने दिन। 0 भनेको तुरुन्तै।"
+
+# key: admin.settings.security.mfa_remember_device_days
+#: ninefruits/security/settings_pages.py
+msgid "Remember devices for (days)"
+msgstr "उपकरण सम्झने अवधि (दिन)"
+
+# key: admin.settings.security.mfa_remember_device_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can skip the code on a trusted device for this many days. 0 turns this off."
+msgstr "विश्वसनीय उपकरणमा प्रयोगकर्ताले यति दिनसम्म कोड नहाली साइन इन गर्न सक्छन्। 0 ले यो बन्द गर्छ।"
+
+# key: admin.settings.security.mfa_email_code_enabled
+#: ninefruits/security/settings_pages.py
+msgid "Allow email codes"
+msgstr "इमेल कोड अनुमति दिनुहोस्"
+
+# key: admin.settings.security.mfa_email_code_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can choose one-time codes by email instead of an authenticator app. Turning this off stops email codes from counting as two-factor authentication."
+msgstr "प्रयोगकर्ताले प्रमाणीकरण एपको सट्टा इमेलबाट एक पटके कोड रोज्न सक्छन्। यो बन्द गर्दा इमेल कोडलाई दुई-चरण प्रमाणीकरण मानिँदैन।"
+
+#: ninefruits/security/settings_pages.py
+msgid "Choose at least one role."
+msgstr "कम्तीमा एउटा भूमिका छान्नुहोस्।"
+
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: ninefruits/security/settings_pages.py
+msgid "Security"
+msgstr "सुरक्षा"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/security/settings_pages.py ninefruits/security/views.py
+msgid "Two-factor authentication"
+msgstr "दुई-चरण प्रमाणीकरण"
+
+# key: admin.settings.security.mfa_description
+#: ninefruits/security/settings_pages.py
+msgid "Changes apply to every user immediately."
+msgstr "परिवर्तनहरू सबै प्रयोगकर्तामा तुरुन्तै लागू हुन्छन्।"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
+msgstr "%(key)s: कुञ्जीमा साना अङ्ग्रेजी अक्षर, अङ्क र हाइफन मात्र हुन्छन्।"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: each provider needs its own key."
+msgstr "%(key)s: प्रत्येक प्रदायकको आफ्नै कुञ्जी चाहिन्छ।"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the button label is required (64 characters at most)."
+msgstr "%(key)s: बटनको लेबल आवश्यक छ (बढीमा 64 अक्षर)।"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the issuer must be a URL."
+msgstr "%(key)s: जारीकर्ता URL हुनुपर्छ।"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the client ID is required."
+msgstr "%(key)s: क्लाइन्ट ID आवश्यक छ।"
+
+# key: admin.settings.authentication.student_number_login
+#: ninefruits/security/settings_pages.py
+msgid "Sign in with student number"
+msgstr "विद्यार्थी नम्बरले साइन इन"
+
+# key: admin.settings.authentication.password_login_for_sso_users
+#: ninefruits/security/settings_pages.py
+msgid "Allow passwords for users with school sign-in"
+msgstr "विद्यालय साइन इन भएका प्रयोगकर्तालाई पासवर्ड अनुमति दिनुहोस्"
+
+# key: admin.settings.authentication.password_login_for_sso_users_help
+#: ninefruits/security/settings_pages.py
+msgid "When off, users who have linked a school account must use it to sign in."
+msgstr "बन्द हुँदा, विद्यालय खाता जोडेका प्रयोगकर्ताले साइन इन गर्न त्यही खाता प्रयोग गर्नुपर्छ।"
+
+# key: admin.settings.authentication.lockout_threshold
+#: ninefruits/security/settings_pages.py
+msgid "Lock after failed attempts"
+msgstr "असफल प्रयासपछि लक गर्नुहोस्"
+
+# key: admin.settings.authentication.lockout_threshold_help
+#: ninefruits/security/settings_pages.py
+msgid "Failed passwords in a row before the account is locked. 0 turns locking off."
+msgstr "खाता लक हुनुअघि लगातार गलत पासवर्डको सङ्ख्या। 0 ले लक बन्द गर्छ।"
+
+# key: admin.settings.authentication.lockout_minutes
+#: ninefruits/security/settings_pages.py
+msgid "Lock duration (minutes)"
+msgstr "लक अवधि (मिनेट)"
+
+# key: admin.settings.authentication.sso_link_mode
+#: ninefruits/security/settings_pages.py
+msgid "Account linking"
+msgstr "खाता जोड्ने तरिका"
+
+# key: admin.settings.authentication.sso_providers
+#: ninefruits/security/settings_pages.py
+msgid "Providers"
+msgstr "प्रदायकहरू"
+
+# key: admin.settings.authentication.title
+#: ninefruits/security/settings_pages.py
+msgid "Sign-in methods"
+msgstr "साइन इन विधिहरू"
+
+# key: admin.settings.authentication.password_section
+#: ninefruits/security/settings_pages.py
+msgid "Passwords"
+msgstr "पासवर्ड"
+
+# key: admin.settings.authentication.sso_section
+#: ninefruits/security/settings_pages.py
+msgid "School sign-in (SSO)"
+msgstr "विद्यालय साइन इन (SSO)"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/security/templates/security/admin/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "रद्द गर्नुहोस्"
+
+# key: admin.settings.authentication.provider_key
+# key: lms.fields.credential_key
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgctxt "security"
+msgid "Key"
+msgstr "कुञ्जी"
+
+# key: admin.settings.authentication.provider_label
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Button label"
+msgstr "बटनको लेबल"
+
+# key: admin.settings.authentication.issuer
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Issuer URL"
+msgstr "जारीकर्ता URL"
+
+# key: admin.settings.authentication.client_id
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client ID"
+msgstr "क्लाइन्ट ID"
+
+# key: admin.settings.authentication.client_secret
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client secret"
+msgstr "क्लाइन्ट सिक्रेट"
+
+# key: admin.settings.authentication.client_secret_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Stored encrypted. Leave empty to keep the stored value."
+msgstr "इन्क्रिप्ट गरेर राखिन्छ। राखिएको मान कायम राख्न खाली छोड्नुहोस्।"
+
+# key: admin.settings.authentication.scopes
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Scopes"
+msgstr "स्कोपहरू"
+
+# key: admin.settings.authentication.trusts_mfa
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Counts as two-factor authentication"
+msgstr "दुई-चरण प्रमाणीकरण मानिन्छ"
+
+# key: admin.settings.authentication.trusts_mfa_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Turn on only if the school's sign-in itself requires two-factor authentication."
+msgstr "विद्यालयको साइन इन आफैँले दुई-चरण प्रमाणीकरण माग्छ भने मात्र खोल्नुहोस्।"
+
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Remove this provider"
+msgstr "यो प्रदायक हटाउनुहोस्"
+
+# key: admin.settings.authentication.redirect_uri
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Redirect URI to register with the provider"
+msgstr "प्रदायकमा दर्ता गर्ने रिडाइरेक्ट URI"
+
+#: ninefruits/security/views.py
+msgid "The email code must be 6 digits."
+msgstr "इमेल कोड 6 अङ्कको हुनुपर्छ।"
+
+# key: security.email_code.sent
+#: ninefruits/security/views.py
+msgid "A new code has been sent to your email."
+msgstr "तपाईंको इमेलमा नयाँ कोड पठाइयो।"
+
+# key: security.email_code.wait
+#: ninefruits/security/views.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "अर्को कोड माग्नुअघि कृपया %(seconds)s सेकेन्ड पर्खनुहोस्।"
+
+# key: security.sso.failed
+#: ninefruits/security/views_sso.py
+msgid "School sign-in failed. Try again or sign in with your password."
+msgstr "विद्यालय साइन इन असफल भयो। फेरि प्रयास गर्नुहोस् वा पासवर्डले साइन इन गर्नुहोस्।"
+
+# key: security.sso.expired
+#: ninefruits/security/views_sso.py
+msgid "The sign-in attempt expired. Try again."
+msgstr "साइन इन प्रयासको म्याद सकियो। फेरि प्रयास गर्नुहोस्।"
+
+# key: security.sso.cancelled
+#: ninefruits/security/views_sso.py
+msgid "Sign-in was cancelled."
+msgstr "साइन इन रद्द गरियो।"
+
+# key: security.sso.linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "%(provider)s account linked."
+msgstr "%(provider)s खाता जोडियो।"
+
+# key: security.sso.not_linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
+msgstr "तपाईंको %(provider)s खाता यहाँको कुनै खातासँग जोडिएको छैन। पासवर्डले साइन इन गरी सुरक्षा पृष्ठमा जोड्नुहोस्।"
+
+#: models/user.py
+msgid "user"
+msgstr "प्रयोगकर्ता"
+
+#: models/user.py
+msgid "users"
+msgstr "प्रयोगकर्ताहरू"
+
+#: models/role.py
+msgid "role"
+msgstr "भूमिका"
+
+#: models/role.py
+msgid "roles"
+msgstr "भूमिकाहरू"

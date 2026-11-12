@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: attendance.errors.forbidden
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "Nur die Lehrpersonen des Kurses und das zuständige Personal können dies tun."
+
+# key: attendance.errors.time_order
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "The end time must be after the start time."
+msgstr "Das Ende muss nach dem Beginn liegen."
+
+# key: attendance.errors.outside_session
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "The date is outside the session."
+msgstr "Das Datum liegt außerhalb des Kurszeitraums."
+
+# key: attendance.errors.duplicate_meeting
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "A meeting at that date and time already exists."
+msgstr "Zu diesem Datum und dieser Uhrzeit gibt es bereits einen Termin."
+
+# key: attendance.errors.already_cancelled
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "This meeting is already cancelled."
+msgstr "Dieser Termin ist bereits abgesagt."
+
+# key: registration.errors.reason_required
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "Enter a reason."
+msgstr "Geben Sie einen Grund ein."
+
+# key: attendance.errors.meeting_cancelled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "This meeting is cancelled."
+msgstr "Dieser Termin ist abgesagt."
+
+# key: attendance.errors.meeting_future
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "Die Anwesenheit kann ab dem Tag des Termins eingetragen werden."
+
+# key: attendance.errors.not_enrolled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "A student is not enrolled in this section."
+msgstr "Ein/e Studierende/r ist nicht in diesem Kurs eingeschrieben."
+
+# key: attendance.errors.invalid_status
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Unknown attendance status."
+msgstr "Unbekannter Anwesenheitsstatus."
+
+# key: common.reason
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Grund"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Class meetings"
+msgstr "Kurstermine"
+
+# key: attendance.actions.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Generate meetings"
+msgstr "Termine erzeugen"
+
+# key: attendance.portal.generated
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "%(count)s Termin(e) erstellt."
+
+# key: attendance.help.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "Erzeugt einen Termin für jedes Vorkommen der wöchentlichen Kurszeiten innerhalb ihres Zeitraums. Vorhandene Termine und ihre Anwesenheit bleiben erhalten."
+
+# key: attendance.portal.meeting_cancelled
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting cancelled."
+msgstr "Termin abgesagt."
+
+# key: attendance.portal.cancel
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "Absagen"
+
+# key: attendance.portal.meeting_restored
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting restored."
+msgstr "Termin wiederhergestellt."
+
+# key: attendance.portal.restore
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Restore"
+msgstr "Wiederherstellen"
+
+# key: portal.navigation.attendance
+#: ninefruits/attendance/apps.py
+msgctxt "portal"
+msgid "Attendance"
+msgstr "Anwesenheit"
+
+# key: attendance.statuses.present
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Present"
+msgstr "Anwesend"
+
+# key: attendance.statuses.late
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Late"
+msgstr "Verspätet"
+
+# key: attendance.statuses.absent
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Absent"
+msgstr "Abwesend"
+
+# key: attendance.statuses.excused
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Excused"
+msgstr "Entschuldigt"
+
+# key: attendance.meeting_statuses.scheduled
+#: ninefruits/attendance/enums.py
+msgid "Scheduled"
+msgstr "Geplant"
+
+# key: attendance.meeting_statuses.cancelled
+#: ninefruits/attendance/enums.py
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "Entfällt"
+
+# key: offering.fields.section
+#: ninefruits/attendance/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Kurs"
+
+# key: attendance.fields.meeting_date
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Date"
+msgstr "Datum"
+
+# key: attendance.fields.start_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Start"
+msgstr "Beginn"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "End"
+msgstr "Ende"
+
+# key: offering.fields.room
+#: ninefruits/attendance/models.py
+msgid "Room"
+msgstr "Raum"
+
+# key: registration.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Status"
+
+#: ninefruits/attendance/models.py
+msgid "class meeting"
+msgstr "Kurstermin"
+
+# key: attendance.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "Anwesenheit"
+
+# key: attendance.fields.note
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Note"
+msgstr "Anmerkung"
+
+#: ninefruits/attendance/models.py
+msgid "attendance record"
+msgstr "Anwesenheitseintrag"
+
+#: ninefruits/attendance/models.py
+msgid "attendance records"
+msgstr "Anwesenheitseinträge"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Student number"
+msgstr "Matrikelnummer"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Name"
+msgstr "Name"
+
+# key: reference.resources.programs.label
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "program"
+msgstr "Studiengang"
+
+# key: people.fields.year_level
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Year"
+msgstr "Studienjahr"
+
+# key: people.fields.contact_email
+#: ninefruits/attendance/services/roster.py
+msgid "Contact email"
+msgstr "Kontakt-E-Mail"
+
+# key: attendance.fields.time
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Time"
+msgstr "Uhrzeit"
+
+# key: reference.resources.rooms.label
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "room"
+msgstr "Raum"
+
+# key: attendance.fields.recorded
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Recorded"
+msgstr "Erfasst"
+
+# key: attendance.portal.no_meetings
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "Noch keine Kurstermine. Erzeugen Sie sie aus den wöchentlichen Kurszeiten."
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "Instructors"
+msgstr "Lehrpersonen"
+
+# key: attendance.sheet.printed
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "Gedruckt am %(date)s"
+
+# key: attendance.sheet.present
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "P"
+msgstr "A"
+
+# key: attendance.sheet.late
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "L"
+msgstr "V"
+
+# key: attendance.sheet.absent
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "A"
+msgstr "F"
+
+# key: attendance.sheet.excused
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "E"
+
+# key: attendance.sheet.legend
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "O anwesend · △ verspätet · X abwesend · E entschuldigt · leer nicht erfasst"
+
+# key: attendance.portal.my_intro
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Attendance recorded by your instructors, per course."
+msgstr "Von Ihren Lehrpersonen erfasste Anwesenheit, je Lehrveranstaltung."
+
+# key: reference.resources.terms.label
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "term"
+msgstr "Semester"
+
+# key: offering.timetable.mode
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Show"
+msgstr "Anzeigen"
+
+# key: attendance.fields.rate
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance rate"
+msgstr "Anwesenheitsquote"
+
+# key: attendance.portal.not_recorded
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Not recorded"
+msgstr "Nicht erfasst"
+
+# key: attendance.portal.no_courses
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "No courses in this term."
+msgstr "Keine Lehrveranstaltungen in diesem Semester."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "My teaching"
+msgstr "Meine Lehre"
+
+# key: attendance.portal.intro
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "%(held)s Termin(e) stattgefunden, %(students)s Studierende."
+
+# key: attendance.portal.roster_csv
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster (CSV)"
+msgstr "Teilnehmerliste (CSV)"
+
+# key: attendance.portal.sheet_pdf
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance sheet (PDF)"
+msgstr "Anwesenheitsliste (PDF)"
+
+# key: attendance.portal.entry_for
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "Anwesenheit am %(date)s %(time)s"
+
+# key: attendance.portal.mark_all_present
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "All present"
+msgstr "Alle anwesend"
+
+# key: evaluation.portal.back
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Back"
+msgstr "Zurück"
+
+# key: attendance.portal.no_students
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No students are enrolled."
+msgstr "Es sind keine Studierenden eingeschrieben."
+
+# key: attendance.portal.save
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Save attendance"
+msgstr "Anwesenheit speichern"
+
+# key: attendance.portal.roster
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster"
+msgstr "Teilnehmerliste"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Photo"
+msgstr "Foto"
+
+# key: attendance.portal.generate
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Generate from meeting times"
+msgstr "Aus Kurszeiten erzeugen"
+
+# key: attendance.portal.enter
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "Anwesenheit"
+
+# key: attendance.portal.cancel_reason
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "Warum entfällt dieser Termin? (Feiertag, Abwesenheit der Lehrperson, ...)"
+
+# key: attendance.portal.add_meeting
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Add a meeting"
+msgstr "Termin hinzufügen"
+
+# key: attendance.sheet.marks.present
+#: ninefruits/attendance/views/downloads.py
+msgid "O"
+msgstr "O"
+
+# key: attendance.sheet.marks.late
+#: ninefruits/attendance/views/downloads.py
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: ninefruits/attendance/views/downloads.py
+msgid "X"
+msgstr "X"
+
+# key: attendance.sheet.marks.excused
+#: ninefruits/attendance/views/downloads.py
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "E"
+
+# key: attendance.sheet.title
+#: ninefruits/attendance/views/downloads.py
+msgid "Attendance sheet"
+msgstr "Anwesenheitsliste"
+
+#: ninefruits/attendance/views/downloads.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Das PDF konnte nicht erstellt werden. Versuchen Sie es später erneut."
+
+# key: attendance.portal.open
+#: ninefruits/attendance/views/portal.py
+msgctxt "attendance"
+msgid "Open"
+msgstr "Öffnen"
+
+# key: attendance.portal.title
+#: ninefruits/attendance/views/portal.py
+msgid "Roster and attendance"
+msgstr "Teilnehmerliste und Anwesenheit"
+
+# key: attendance.portal.saved
+#: ninefruits/attendance/views/portal.py
+msgid "Attendance saved."
+msgstr "Anwesenheit gespeichert."
+
+# key: attendance.portal.meeting_added
+#: ninefruits/attendance/views/portal.py
+msgid "Meeting added."
+msgstr "Termin hinzugefügt."
+
+# key: attendance.portal.my_title
+#: ninefruits/attendance/views/portal.py
+msgid "My attendance"
+msgstr "Meine Anwesenheit"

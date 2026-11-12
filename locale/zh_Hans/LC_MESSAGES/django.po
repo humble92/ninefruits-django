@@ -315,7 +315,7 @@ msgstr "注销"
 #: ninefruits/i18n/vendor_strings.py
 #, python-format
 msgid "Add %(name)s"
-msgstr "增加 %(name)s"
+msgstr "添加%(name)s"
 
 # vendor: Django/allauth/unfold
 #: ninefruits/i18n/vendor_strings.py
@@ -1228,3 +1228,11 @@ msgstr "想要申请入学？"
 # key: admissions.register.see_cycles
 msgid "See open admissions"
 msgstr "查看招生信息"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "用户"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "用户"

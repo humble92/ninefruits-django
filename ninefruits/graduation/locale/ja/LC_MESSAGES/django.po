@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/graduation/actions/_support.py
+msgid "Enter a reason."
+msgstr "理由を入力してください。"
+
+# key: graduation.errors.not_enrolled
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "Only an enrolled student can graduate."
+msgstr "卒業できるのは在学中の学生のみです。"
+
+# key: graduation.errors.no_audit
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "No stored degree audit: run the audit first."
+msgstr "保存された卒業判定がありません。先に判定を実行してください。"
+
+# key: graduation.errors.audit_not_satisfied
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "The latest degree audit is not satisfied."
+msgstr "最新の卒業判定で要件を満たしていません。"
+
+# key: graduation.errors.waiver_exists
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "A pending or approved waiver already exists for this requirement."
+msgstr "この要件にはすでに承認待ちまたは承認済みの免除があります。"
+
+# key: graduation.errors.waiver_not_approved
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "Only an approved waiver can be lifted."
+msgstr "取り消せるのは承認済みの免除のみです。"
+
+# key: grading.errors.request_decided
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "The request is already decided."
+msgstr "この申請はすでに処理済みです。"
+
+# key: graduation.errors.own_waiver
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "You cannot decide your own waiver request."
+msgstr "自分の免除申請は承認・却下できません。"
+
+# key: curriculum.fields.program_role
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgid "Program role"
+msgstr "プログラム区分"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Satisfied"
+msgstr "充足"
+
+# key: graduation.satisfied.no
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Not satisfied"
+msgstr "未充足"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "プログラム"
+
+# key: registration.fields.status
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgctxt "registration"
+msgid "Status"
+msgstr "状態"
+
+# key: security.scope_types.global
+#: ninefruits/graduation/admin/audits.py
+msgid "All"
+msgstr "全体"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgid "Student number"
+msgstr "学籍番号"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Name"
+msgstr "氏名"
+
+# key: people.fields.year_level
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Year"
+msgstr "学年"
+
+# key: graduation.fields.earned_credits
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Earned credits"
+msgstr "修得単位"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "累積 GPA"
+
+# key: graduation.actions.run_audits
+#: ninefruits/graduation/admin/audits.py
+msgid "Run audits"
+msgstr "判定を実行"
+
+# key: graduation.notifications.audits_run
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(students)s student(s) audited, %(satisfied)s satisfied."
+msgstr "%(students)s 名を判定し、%(satisfied)s 名が要件を満たしました。"
+
+# key: graduation.actions.open
+#: ninefruits/graduation/admin/audits.py
+msgctxt "graduation"
+msgid "Open"
+msgstr "開く"
+
+# key: graduation.actions.rerun
+#: ninefruits/graduation/admin/audits.py
+msgid "Audit again"
+msgstr "再判定"
+
+# key: graduation.notifications.audit_saved
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/student_record.py
+msgid "Degree audit saved."
+msgstr "卒業判定を保存しました。"
+
+# key: graduation.actions.graduate
+#: ninefruits/graduation/admin/audits.py
+msgid "Graduate"
+msgstr "卒業処理"
+
+# key: graduation.notifications.graduated
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(count)s student(s) graduated, %(errors)s not processed."
+msgstr "%(count)s 名を卒業処理しました。未処理 %(errors)s 名。"
+
+# key: common.reason
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/models.py
+msgid "Term"
+msgstr "学期"
+
+# key: graduation.fields.min_year_level
+#: ninefruits/graduation/admin/forms.py
+msgid "From year level"
+msgstr "対象学年(以上)"
+
+# key: people.fields.graduation_date
+#: ninefruits/graduation/admin/forms.py
+msgid "Graduation date"
+msgstr "卒業日"
+
+# key: curriculum.sections.requirements
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Requirements"
+msgstr "要件"
+
+# key: graduation.actions.audit_now
+#: ninefruits/graduation/admin/student_record.py
+msgctxt "graduation.actions"
+msgid "Degree audit"
+msgstr "卒業判定"
+
+# key: graduation.actions.waive
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waive a requirement"
+msgstr "要件を免除"
+
+# key: graduation.notifications.waiver_requested
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waiver requested; it counts once another person approves it."
+msgstr "免除を申請しました。別の担当者が承認すると有効になります。"
+
+# key: graduation.help.waiver
+#: ninefruits/graduation/admin/student_record.py
+msgid "Another person with the graduation permission must approve the waiver before it counts."
+msgstr "免除が有効になるには、卒業権限を持つ別の担当者の承認が必要です。"
+
+# key: grading.fields.requested_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "申請者"
+
+# key: grading.fields.decided_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "決定者"
+
+# key: grading.fields.decision_note
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Note"
+msgstr "備考"
+
+# key: graduation.fields.lift_reason
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Lift reason"
+msgstr "取消理由"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/graduation/admin/waivers.py
+msgid "Approve"
+msgstr "承認"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Approved"
+msgstr "承認"
+
+# key: grading.actions.reject
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "却下"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Rejected"
+msgstr "却下"
+
+# key: graduation.actions.lift
+#: ninefruits/graduation/admin/waivers.py
+msgid "Lift the waiver"
+msgstr "免除を取り消す"
+
+# key: graduation.waiver_statuses.lifted
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Lifted"
+msgstr "取消"
+
+# key: portal.navigation.graduation
+#: ninefruits/graduation/apps.py
+msgctxt "portal"
+msgid "Graduation"
+msgstr "卒業"
+
+# key: graduation.waiver_statuses.pending
+#: ninefruits/graduation/enums.py
+msgctxt "graduation"
+msgid "Pending"
+msgstr "承認待ち"
+
+# key: people.sections.record
+#: ninefruits/graduation/models.py
+msgid "Student record"
+msgstr "学籍"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/graduation/models.py
+msgid "graduation requirements"
+msgstr "卒業要件"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "必要単位"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Audited"
+msgstr "判定日時"
+
+# key: graduation.actions.audit_now
+# key: graduation.resources.audits.label
+#: ninefruits/graduation/models.py
+msgid "Degree audit"
+msgstr "卒業判定"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/graduation/models.py
+msgid "Degree audits"
+msgstr "卒業判定"
+
+# key: graduation.report_columns.status
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "学籍状態"
+
+# key: grading.fields.requested_at
+#: ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "申請日時"
+
+# key: graduation.resources.waivers.label
+#: ninefruits/graduation/models.py
+msgid "Requirement waiver"
+msgstr "要件免除"
+
+# key: graduation.resources.waivers.plural_label
+#: ninefruits/graduation/models.py
+msgid "Requirement waivers"
+msgstr "要件免除"
+
+# key: graduation.issues.no_requirement_set
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "No graduation requirements are defined for catalog year %(year)s."
+msgstr "教育課程年度 %(year)s の卒業要件が定義されていません。"
+
+# key: graduation.issues.requirement
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Requirement not met: %(name)s"
+msgstr "未充足の要件: %(name)s"
+
+# key: graduation.issues.total_credits
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Total credits %(earned)s of %(required)s required."
+msgstr "総修得単位 %(earned)s(必要 %(required)s)"
+
+# key: graduation.issues.gpa
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Cumulative GPA %(gpa)s below the minimum %(minimum)s."
+msgstr "累積 GPA %(gpa)s が基準 %(minimum)s を下回っています。"
+
+# key: graduation.settings.degree_number_pattern
+#: ninefruits/graduation/settings_pages.py
+msgid "Degree number pattern"
+msgstr "学位記番号の形式"
+
+# key: graduation.settings.degree_number_pattern_help
+#: ninefruits/graduation/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {PROGRAM} program code, {YYYY} or {YY} graduation year, {SEQ:5} sequence per distinct prefix (required). Default {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+msgstr "トークン: {PROGRAM} プログラムコード、{YYYY} または {YY} 卒業年、{SEQ:5} 接頭辞ごとの連番(必須)。既定 {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001"
+
+# key: graduation.settings.minimum_cumulative_gpa
+#: ninefruits/graduation/settings_pages.py
+msgid "Minimum cumulative GPA"
+msgstr "累積 GPA の最低基準"
+
+# key: graduation.settings.minimum_cumulative_gpa_help
+#: ninefruits/graduation/settings_pages.py
+msgid "Required to graduate (primary program). Leave empty for none."
+msgstr "卒業に必要です(主専攻)。基準がない場合は空欄にします。"
+
+# key: graduation.settings.title
+#: ninefruits/graduation/settings_pages.py
+msgid "Graduation settings"
+msgstr "卒業設定"
+
+# key: evaluation.portal.back
+#: ninefruits/graduation/templates/graduation/admin/audit_detail.html
+msgid "Back"
+msgstr "戻る"
+
+# key: graduation.actions.save_audit
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html
+msgid "Save this audit"
+msgstr "この判定を保存"
+
+# key: assessment.portal.cancel
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html ninefruits/graduation/templates/graduation/admin/graduate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "取消"
+
+# key: graduation.fields.waived
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Waived"
+msgstr "免除"
+
+# key: curriculum.fields.credits
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "単位"
+
+# key: graduation.fields.courses
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "courses"
+msgstr "科目"
+
+# key: graduation.fields.missing
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Not passed"
+msgstr "未修得"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+msgid "Graduation requirements"
+msgstr "卒業要件"
+
+# key: graduation.portal.intro
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+#, python-format
+msgid "Your progress against the requirements of catalog year %(year)s, evaluated now. Ask your department about waivers."
+msgstr "教育課程年度 %(year)s の要件に対する現時点の達成状況です。免除については所属学科にお問い合わせください。"

@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: reference.errors.term_status_transition
+#: ninefruits/term/actions/change_term_status.py
+#, python-format
+msgid "A term cannot move from %(from)s to %(to)s."
+msgstr "Bir dönem %(from)s durumundan %(to)s durumuna geçemez."
+
+# key: reference.errors.invalid_session_copy
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "Choose another session of the same term."
+msgstr "Aynı dönemin başka bir alt dönemini seçin."
+
+# key: reference.errors.session_has_windows
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "This session already has windows."
+msgstr "Bu alt dönemin zaten işlem aralıkları var."
+
+# key: reference.fields.name
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Ad"
+
+# key: validation.after
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s %(date)s tarihinden sonra bir tarih olmalıdır."
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "End date"
+msgstr "Bitiş tarihi"
+
+# key: reference.fields.start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Start date"
+msgstr "Başlangıç tarihi"
+
+# key: validation.after_or_equal
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s %(date)s tarihi veya sonrası bir tarih olmalıdır."
+
+# key: reference.fields.instruction_end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes end"
+msgstr "Derslerin bitişi"
+
+# key: reference.fields.instruction_start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes start"
+msgstr "Derslerin başlangıcı"
+
+# key: reference.errors.sessions_outside_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Some sessions would fall outside the new dates. Change them first."
+msgstr "Bazı alt dönemler yeni tarihlerin dışında kalacak. Önce onları değiştirin."
+
+# key: validation.alpha_dash
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s yalnızca harf, rakam, tire ve alt çizgi içermelidir."
+
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The session must lie within its term (%(start)s - %(end)s)."
+msgstr "Alt dönem kendi dönemi içinde olmalıdır (%(start)s - %(end)s)."
+
+#: ninefruits/term/admin.py
+msgid "The full-term session belongs to the term and cannot be deleted."
+msgstr "Tam dönem alt dönemi döneme aittir ve silinemez."
+
+# key: reference.resources.term_sessions.label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "session"
+msgstr "alt dönem"
+
+# key: reference.resources.term_sessions.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "sessions"
+msgstr "alt dönemler"
+
+# key: reference.resources.term_windows.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term windows"
+msgstr "işlem aralıkları"
+
+# key: reference.actions.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copy windows"
+msgstr "İşlem aralıklarını kopyala"
+
+# key: reference.fields.is_full_term
+# key: reference.term_sessions.full_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Full term"
+msgstr "Tam dönem"
+
+# key: reference.fields.closes_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Closes"
+msgstr "Kapanış"
+
+# key: reference.fields.opens_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Opens"
+msgstr "Açılış"
+
+# key: reference.resources.term_windows.label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term window"
+msgstr "işlem aralığı"
+
+# key: reference.fields.eligibility
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "Eligibility"
+msgstr "Uygunluk"
+
+# key: reference.help.eligibility
+#: ninefruits/term/admin.py
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
+msgstr "Herkes için boş bırakın. Farklı koşullara sahip aynı türden birden fazla işlem aralığı kademeli olarak açılır."
+
+# key: reference.eligibility.everyone
+#: ninefruits/term/admin.py
+msgid "Everyone"
+msgstr "Herkes"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "Kısıtlı"
+
+# key: reference.fields.status
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgctxt "reference"
+msgid "Status"
+msgstr "Durum"
+
+# key: common.reason
+#: ninefruits/term/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Gerekçe"
+
+# key: reference.fields.source_session
+#: ninefruits/term/admin.py
+msgid "Copy from session"
+msgstr "Kopyalanacak alt dönem"
+
+# key: reference.fields.academic_year
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Academic year"
+msgstr "Akademik yıl"
+
+# key: reference.fields.term_type
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Term type"
+msgstr "Dönem türü"
+
+# key: reference.fields.windows_count
+#: ninefruits/term/admin.py
+msgid "Windows"
+msgstr "İşlem aralıkları"
+
+# key: reference.actions.change_status
+#: ninefruits/term/admin.py
+msgid "Change status"
+msgstr "Durumu değiştir"
+
+# key: reference.notifications.term_status_changed
+#: ninefruits/term/admin.py
+msgid "Term status changed."
+msgstr "Dönem durumu değiştirildi."
+
+#: ninefruits/term/admin.py
+msgid "No windows to copy."
+msgstr "Kopyalanacak işlem aralığı yok."
+
+# key: reference.notifications.session_windows_copied
+#: ninefruits/term/admin.py
+#, python-format
+msgid "One window copied."
+msgid_plural "%(count)s windows copied."
+msgstr[0] "%(count)s işlem aralığı kopyalandı."
+msgstr[1] "%(count)s işlem aralığı kopyalandı."
+
+# key: reference.help.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "Başka bir alt dönemin ders işlem aralıklarını (ekle/bırak, dersten çekilme, not girişi, değerlendirme) bu alt dönemin tarihlerine kaydırarak kopyalar: erken aralıklar başlangıca, geç aralıklar bitişe olan uzaklıklarını korur. Kopyaladıktan sonra düzenleyin."
+
+# key: reference.fields.weekdays
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "Days"
+msgstr "Günler"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "End"
+msgstr "Bitiş"
+
+# key: reference.fields.start_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Start"
+msgstr "Başlangıç"
+
+# key: reference.term_statuses.planned
+#: ninefruits/term/enums.py
+msgid "Planned"
+msgstr "Planlandı"
+
+# key: reference.term_statuses.published
+#: ninefruits/term/enums.py
+msgctxt "reference.term_statuses"
+msgid "Published"
+msgstr "Yayımlandı"
+
+# key: reference.term_statuses.grades_closed
+#: ninefruits/term/enums.py
+msgid "Grades closed"
+msgstr "Notlar kapatıldı"
+
+# key: reference.term_statuses.archived
+#: ninefruits/term/enums.py
+msgid "Archived"
+msgstr "Arşivlendi"
+
+# key: reference.term_window_types.registration_cart
+#: ninefruits/term/enums.py
+msgid "Registration cart"
+msgstr "Ders sepeti"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/term/enums.py
+msgid "Registration"
+msgstr "Ders kaydı"
+
+# key: reference.term_window_types.add_drop
+#: ninefruits/term/enums.py
+msgid "Add/drop"
+msgstr "Ekle/bırak"
+
+# key: reference.term_window_types.withdrawal
+#: ninefruits/term/enums.py
+msgid "Withdrawal"
+msgstr "Dersten çekilme"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/term/enums.py
+msgid "Grade entry"
+msgstr "Not girişi"
+
+# key: reference.term_window_types.grade_appeal
+#: ninefruits/term/enums.py
+msgid "Grade appeal"
+msgstr "Nota itiraz"
+
+# key: reference.term_window_types.course_evaluation
+#: ninefruits/term/enums.py
+msgctxt "reference.term_window_types"
+msgid "Course evaluation"
+msgstr "Ders değerlendirme"
+
+# key: reference.term_window_types.graduation_application
+#: ninefruits/term/enums.py
+msgid "Graduation application"
+msgstr "Mezuniyet başvurusu"
+
+# key: reference.term_window_types.additional_program_application
+#: ninefruits/term/enums.py
+msgid "Second major and minor applications"
+msgstr "Çift ana dal ve yan dal başvuruları"
+
+# key: reference.fields.code
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: reference.resources.academic_years.label
+#: ninefruits/term/models/term.py
+msgid "academic year"
+msgstr "akademik yıl"
+
+# key: reference.resources.academic_years.plural_label
+#: ninefruits/term/models/term.py
+msgid "academic years"
+msgstr "akademik yıllar"
+
+# key: reference.fields.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular term"
+msgstr "Normal dönem"
+
+# key: reference.help.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
+msgstr "Normal dönemler (ör. güz, bahar) ve yoğun dönemler, kredi sınırları gibi konularda farklı kurallara tabidir."
+
+# key: reference.fields.sort_order
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgid "Order"
+msgstr "Sıra"
+
+# key: reference.resources.term_types.label
+#: ninefruits/term/models/term.py
+msgid "term type"
+msgstr "dönem türü"
+
+# key: reference.resources.term_types.plural_label
+#: ninefruits/term/models/term.py
+msgid "term types"
+msgstr "dönem türleri"
+
+# key: reference.help.term_code
+#: ninefruits/term/models/term.py
+msgid "For display only, e.g. 2026-FA. The code carries no business meaning."
+msgstr "Yalnızca gösterim içindir, ör. 2026-FA. Kodun iş açısından bir anlamı yoktur."
+
+# key: reference.resources.terms.label
+#: ninefruits/term/models/term.py
+msgid "term"
+msgstr "dönem"
+
+# key: reference.resources.terms.plural_label
+#: ninefruits/term/models/term.py
+msgid "terms"
+msgstr "dönemler"
+
+# key: reference.fields.is_active
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Etkin"
+
+# key: reference.resources.time_slots.label
+#: ninefruits/term/models/time_slot.py
+msgid "class period"
+msgstr "ders saati"
+
+# key: reference.resources.time_slots.plural_label
+#: ninefruits/term/models/time_slot.py
+msgid "class periods"
+msgstr "ders saatleri"
+
+# key: reference.fields.term_session
+#: ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Session"
+msgstr "Alt dönem"
+
+# key: reference.help.term_session
+#: ninefruits/term/models/window.py
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
+msgstr "Ders işlem süreleri dersin alt dönemine göre belirlenir: işlem aralığı daha kısa bir alt dönem için değilse tam dönem."
+
+# key: reference.fields.window_type
+#: ninefruits/term/models/window.py
+msgid "Window"
+msgstr "İşlem aralığı"
+
+# key: reference.fields.window_name
+#: ninefruits/term/models/window.py
+msgid "Name (optional)"
+msgstr "Ad (isteğe bağlı)"

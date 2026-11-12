@@ -7,6 +7,7 @@ from __future__ import annotations
 
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 from ninefruits.core.models import VisibleQuerySet
 from ninefruits.i18n.fields import TranslatableJSONField
@@ -64,6 +65,8 @@ class Role(models.Model):
 
     class Meta:
         db_table = "roles"
+        verbose_name = _("role")
+        verbose_name_plural = _("roles")
         ordering = ["name"]
         constraints = [
             models.UniqueConstraint(fields=["name", "guard_name"], name="roles_name_guard_name_unique"),

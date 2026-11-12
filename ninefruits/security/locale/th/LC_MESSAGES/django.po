@@ -1,0 +1,1427 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: security.errors.cannot_deactivate_self
+#: ninefruits/security/actions/accounts.py
+msgid "You cannot deactivate your own account."
+msgstr "ท่านไม่สามารถระงับบัญชีของตนเองได้"
+
+# key: security.errors.target_more_privileged
+#: ninefruits/security/actions/accounts.py
+#, python-format
+msgid "This account holds permissions you do not have (%(permissions)s); only an administrator with those permissions can change it."
+msgstr "บัญชีนี้มีสิทธิ์ที่ท่านไม่มี (%(permissions)s) เฉพาะผู้ดูแลระบบที่มีสิทธิ์เหล่านั้นเท่านั้นที่เปลี่ยนแปลงได้"
+
+# key: json.The provided password does not match your current password.
+#: ninefruits/security/actions/accounts.py
+msgid "The provided password does not match your current password."
+msgstr "รหัสผ่านที่ระบุไม่ตรงกับรหัสผ่านปัจจุบันของท่าน"
+
+#: ninefruits/security/actions/accounts.py
+msgid "The password field confirmation does not match."
+msgstr "การยืนยันรหัสผ่านไม่ตรงกัน"
+
+#: ninefruits/security/actions/accounts.py ninefruits/security/admin.py
+msgid "The email has already been taken."
+msgstr "อีเมลนี้มีผู้ใช้แล้ว"
+
+# key: security.errors.persona_role_not_assignable
+#: ninefruits/security/actions/assign_role.py
+msgid "Persona roles are granted automatically and cannot be assigned."
+msgstr "บทบาทตามสถานะได้รับโดยอัตโนมัติและกำหนดเองไม่ได้"
+
+# key: security.errors.scope_id_mismatch
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "Choose a scope target for scoped assignments, and none for global assignments."
+msgstr "กรุณาเลือกเป้าหมายของขอบเขตสำหรับการกำหนดแบบมีขอบเขต และไม่ต้องเลือกสำหรับการกำหนดแบบทั้งหมด"
+
+# key: offering.errors.meeting_time_order
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "The end must be after the start."
+msgstr "เวลาสิ้นสุดต้องอยู่หลังเวลาเริ่ม"
+
+# key: security.errors.self_assignment
+#: ninefruits/security/actions/assign_role.py
+msgid "You cannot assign a role to yourself."
+msgstr "ท่านไม่สามารถกำหนดบทบาทให้ตนเองได้"
+
+# key: security.errors.role_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+#, python-format
+msgid "This role carries permissions you do not hold (%(permissions)s)."
+msgstr "บทบาทนี้มีสิทธิ์ที่ท่านไม่มี (%(permissions)s)"
+
+# key: security.errors.scope_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+msgid "This scope is wider than the one you manage role assignments for."
+msgstr "ขอบเขตนี้กว้างกว่าขอบเขตที่ท่านดูแลการกำหนดบทบาท"
+
+# key: security.sso.linked_to_another_account
+#: ninefruits/security/actions/identities.py
+msgid "This school account is linked to another user."
+msgstr "บัญชีสถาบันนี้เชื่อมโยงกับผู้ใช้อื่นอยู่แล้ว"
+
+# key: security.sso.already_linked
+#: ninefruits/security/actions/identities.py
+msgid "Your account is already linked to another account of this provider."
+msgstr "บัญชีของท่านเชื่อมโยงกับบัญชีอื่นของผู้ให้บริการนี้อยู่แล้ว"
+
+# key: json.The provided two factor authentication code was invalid.
+#: ninefruits/security/actions/mfa.py
+msgid "The provided two factor authentication code was invalid."
+msgstr "รหัสยืนยันตัวตนแบบสองขั้นตอนที่ระบุไม่ถูกต้อง"
+
+#: ninefruits/security/actions/mfa.py
+msgid "Recovery codes need an authenticator app. Set one up first."
+msgstr "รหัสกู้คืนต้องใช้แอปยืนยันตัวตน กรุณาตั้งค่าแอปก่อน"
+
+# key: security.email_code.not_allowed
+#: ninefruits/security/actions/mfa.py
+msgid "Email codes are not available at this institution."
+msgstr "สถาบันนี้ไม่เปิดให้ใช้รหัสทางอีเมล"
+
+# key: security.email_code.invalid
+#: ninefruits/security/actions/mfa.py ninefruits/security/views.py
+msgid "The code is invalid or has expired."
+msgstr "รหัสไม่ถูกต้องหรือหมดอายุแล้ว"
+
+# key: security.mfa.cannot_disable_required
+#: ninefruits/security/actions/mfa.py
+msgid "Two-factor authentication is required for your account and cannot be disabled."
+msgstr "บัญชีของท่านต้องใช้การยืนยันตัวตนแบบสองขั้นตอนและปิดใช้งานไม่ได้"
+
+# key: auth.failed
+#: ninefruits/security/adapters.py ninefruits/security/views_sso.py
+msgid "These credentials do not match our records."
+msgstr "ข้อมูลเข้าสู่ระบบไม่ตรงกับข้อมูลในระบบ"
+
+#: ninefruits/security/adapters.py
+msgid "Too many login attempts. Please try again later."
+msgstr "พยายามเข้าสู่ระบบหลายครั้งเกินไป กรุณาลองใหม่ภายหลัง"
+
+# key: common.reason
+#: ninefruits/security/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: admin.users.fields.locale
+# key: assessment.categories.language
+# key: common.language
+# key: offering.syllabus.language
+#: ninefruits/security/admin.py
+msgid "Language"
+msgstr "ภาษา"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+# key: people.sections.name
+# key: reference.fields.name
+#: ninefruits/security/admin.py
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/security/admin.py ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Email"
+msgstr "อีเมล"
+
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: ninefruits/security/admin.py ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Active"
+msgstr "ใช้งาน"
+
+# key: admin.users.help.name
+#: ninefruits/security/admin.py
+msgid "Used only for accounts without a person (e.g. service accounts). Linked accounts show the person's name."
+msgstr "ใช้เฉพาะบัญชีที่ไม่มีบุคคลเชื่อมโยง (เช่น บัญชีบริการ) บัญชีที่เชื่อมโยงแล้วจะแสดงชื่อของบุคคลนั้น"
+
+# key: admin.role_assignments.fields.role
+# key: graduation.report_columns.program_role
+# key: offering.fields.instructor_role
+#: ninefruits/security/admin.py
+msgid "Role"
+msgstr "บทบาท"
+
+# key: admin.role_assignments.fields.scope
+#: ninefruits/security/admin.py
+msgid "Scope"
+msgstr "ขอบเขต"
+
+# key: admin.role_assignments.fields.scope_target
+#: ninefruits/security/admin.py
+msgid "Scope target"
+msgstr "เป้าหมายของขอบเขต"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/security/admin.py
+msgid "Includes all units below the selected ones."
+msgstr "รวมหน่วยงานทั้งหมดที่อยู่ภายใต้หน่วยงานที่เลือก"
+
+# key: admin.role_assignments.fields.starts_at
+#: ninefruits/security/admin.py
+msgid "Starts"
+msgstr "เริ่มต้น"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/security/admin.py
+msgid "Ends"
+msgstr "สิ้นสุด"
+
+#: ninefruits/security/admin.py
+msgid "Role assignment"
+msgstr "การกำหนดบทบาท"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/admin.py
+msgid "Role assignments"
+msgstr "การกำหนดบทบาท"
+
+# key: admin.role_assignments.actions.revoke
+#: ninefruits/security/admin.py
+msgid "End assignment"
+msgstr "สิ้นสุดการกำหนด"
+
+# key: permissions.resources.users
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Users"
+msgstr "ผู้ใช้"
+
+# key: admin.users.fields.mfa_enrolled
+#: ninefruits/security/admin.py
+msgid "Two-factor"
+msgstr "สองขั้นตอน"
+
+# key: admin.users.fields.linked_person
+#: ninefruits/security/admin.py
+msgid "Linked person"
+msgstr "บุคคลที่เชื่อมโยง"
+
+# key: common.yes
+#: ninefruits/security/admin.py
+msgid "Yes"
+msgstr "ใช่"
+
+# key: common.none
+#: ninefruits/security/admin.py
+msgid "None"
+msgstr "ไม่มี"
+
+# key: admin.users.actions.reset_mfa
+# key: permissions.users.reset_mfa
+#: ninefruits/security/admin.py
+msgid "Reset two-factor authentication"
+msgstr "รีเซ็ตการยืนยันตัวตนแบบสองขั้นตอน"
+
+# key: admin.users.notifications.mfa_reset
+#: ninefruits/security/admin.py
+msgid "Two-factor authentication was reset."
+msgstr "รีเซ็ตการยืนยันตัวตนแบบสองขั้นตอนแล้ว"
+
+# key: admin.users.actions.unlock
+#: ninefruits/security/admin.py
+msgid "Unlock sign-in"
+msgstr "ปลดล็อกการเข้าสู่ระบบ"
+
+# key: admin.users.notifications.unlocked
+#: ninefruits/security/admin.py
+msgid "Sign-in unlocked."
+msgstr "ปลดล็อกการเข้าสู่ระบบแล้ว"
+
+# key: admin.role_assignments.actions.assign
+#: ninefruits/security/admin.py
+msgid "Assign role"
+msgstr "กำหนดบทบาท"
+
+# key: admin.role_assignments.notifications.assigned
+#: ninefruits/security/admin.py
+msgid "Role assigned."
+msgstr "กำหนดบทบาทแล้ว"
+
+# key: admin.role_assignments.notifications.revoked
+#: ninefruits/security/admin.py
+msgid "Assignment ended."
+msgstr "สิ้นสุดการกำหนดบทบาทแล้ว"
+
+# key: admin.roles.fields.name
+#: ninefruits/security/admin.py
+msgid "Internal name"
+msgstr "ชื่อภายในระบบ"
+
+# key: admin.roles.fields.display_name
+#: ninefruits/security/admin.py
+msgid "Display name"
+msgstr "ชื่อที่แสดง"
+
+# key: admin.roles.fields.description
+# key: admissions.fields.description
+# key: evaluation.fields.description
+# key: reference.fields.description
+#: ninefruits/security/admin.py
+msgid "Description"
+msgstr "คำอธิบาย"
+
+# key: admin.roles.fields.name_help
+#: ninefruits/security/admin.py
+msgid "Lowercase letters, digits and underscores, e.g. registrar."
+msgstr "ตัวพิมพ์เล็กภาษาอังกฤษ ตัวเลข และขีดล่าง เช่น registrar"
+
+#: ninefruits/security/admin.py
+msgid "The name has already been taken."
+msgstr "ชื่อนี้มีผู้ใช้แล้ว"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Roles"
+msgstr "บทบาท"
+
+# key: admin.roles.system_role_permissions
+#: ninefruits/security/admin.py
+msgid "System roles always have every permission."
+msgstr "บทบาทของระบบมีสิทธิ์ทุกรายการเสมอ"
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/security/admin.py
+msgid "General"
+msgstr "ทั่วไป"
+
+# key: admin.roles.fields.permissions_count
+# key: admin.roles.sections.permissions
+#: ninefruits/security/admin.py
+msgid "Permissions"
+msgstr "สิทธิ์"
+
+# key: admin.roles.fields.persona
+#: ninefruits/security/admin.py
+msgid "Persona"
+msgstr "บทบาทตามสถานะ"
+
+# key: admin.roles.fields.active_assignments_count
+#: ninefruits/security/admin.py
+msgid "Active assignments"
+msgstr "การกำหนดที่มีผลอยู่"
+
+# key: permissions.resources.people
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "People"
+msgstr "บุคคล"
+
+# key: permissions.resources.accounts
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Accounts"
+msgstr "บัญชี"
+
+# key: permissions.resources.student_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Student records"
+msgstr "ระเบียนนักศึกษา"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Status changes"
+msgstr "การเปลี่ยนสถานภาพ"
+
+# key: permissions.resources.instructors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Instructors"
+msgstr "อาจารย์"
+
+# key: permissions.resources.advisors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Advisors"
+msgstr "อาจารย์ที่ปรึกษา"
+
+# key: permissions.resources.authentication_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sign-in settings"
+msgstr "การตั้งค่าการเข้าสู่ระบบ"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reference data"
+msgstr "ข้อมูลอ้างอิง"
+
+# key: permissions.resources.lookup_values
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Code data"
+msgstr "ข้อมูลรหัส"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Org units"
+msgstr "หน่วยงาน"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Programs"
+msgstr "หลักสูตร"
+
+# key: permissions.resources.facilities
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Buildings and rooms"
+msgstr "อาคารและห้อง"
+
+# key: permissions.resources.terms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Academic years and terms"
+msgstr "ปีการศึกษาและภาคการศึกษา"
+
+# key: permissions.resources.term_windows
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Term windows"
+msgstr "ช่วงเวลาดำเนินการ"
+
+# key: permissions.resources.course_categories
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course categories"
+msgstr "หมวดวิชา"
+
+# key: permissions.resources.grade_scales
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade scales"
+msgstr "เกณฑ์ระดับคะแนน"
+
+# key: permissions.resources.admin_panel
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Administration panel"
+msgstr "แผงผู้ดูแลระบบ"
+
+# key: permissions.resources.users
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Users"
+msgstr "ผู้ใช้"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Roles"
+msgstr "บทบาท"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Role assignments"
+msgstr "การกำหนดบทบาท"
+
+# key: permissions.resources.audit_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Audit records"
+msgstr "บันทึกการตรวจสอบ"
+
+# key: permissions.resources.security_events
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security events"
+msgstr "เหตุการณ์ด้านความปลอดภัย"
+
+# key: permissions.resources.security_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security settings"
+msgstr "การตั้งค่าความปลอดภัย"
+
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Queue monitor (Flower)"
+msgstr "ตัวติดตามคิวงาน (Flower)"
+
+# key: permissions.resources.institution_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Institution settings"
+msgstr "การตั้งค่าสถาบัน"
+
+# key: permissions.resources.admission_cycles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Admission cycles"
+msgstr "รอบรับสมัคร"
+
+# key: permissions.resources.applications
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Applications"
+msgstr "ใบสมัคร"
+
+# key: permissions.resources.courses
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Courses"
+msgstr "รายวิชา"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation requirements"
+msgstr "เกณฑ์การสำเร็จการศึกษา"
+
+# key: permissions.resources.sections
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sections"
+msgstr "กลุ่มเรียน"
+
+# key: permissions.resources.additional_programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Second majors and minors"
+msgstr "วิชาเอกที่สองและวิชาโท"
+
+# key: permissions.resources.enrollments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registrations"
+msgstr "รายการลงทะเบียน"
+
+# key: permissions.resources.registration
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration adjustments"
+msgstr "การปรับปรุงการลงทะเบียน"
+
+# key: permissions.resources.registration_rules
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration rules"
+msgstr "กฎการลงทะเบียน"
+
+# key: permissions.resources.registration_holds
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration holds and overrides"
+msgstr "การระงับและการอนุญาตพิเศษในการลงทะเบียน"
+
+# key: permissions.resources.grades
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grades"
+msgstr "ผลการเรียน"
+
+# key: permissions.resources.grade_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade changes"
+msgstr "การแก้ไขเกรด"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grading policy"
+msgstr "นโยบายการวัดผล"
+
+# key: permissions.resources.grade_exceptions
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade exceptions"
+msgstr "กรณียกเว้นของเกรด"
+
+# key: permissions.resources.evaluations
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course evaluation"
+msgstr "การประเมินรายวิชา"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Examinations"
+msgstr "การสอบ"
+
+# key: permissions.resources.graduation
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation"
+msgstr "การสำเร็จการศึกษา"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reports"
+msgstr "รายงาน"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "LMS integration"
+msgstr "การเชื่อมต่อ LMS"
+
+# key: permissions.resources.certificates
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Certificates"
+msgstr "หนังสือรับรอง"
+
+# key: permissions.admin_panel.access
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Open the administration panel"
+msgstr "เข้าใช้แผงผู้ดูแลระบบ"
+
+# key: permissions.users.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View users"
+msgstr "ดูผู้ใช้"
+
+# key: permissions.users.create
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create users"
+msgstr "สร้างผู้ใช้"
+
+# key: permissions.users.update
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Edit users"
+msgstr "แก้ไขผู้ใช้"
+
+# key: permissions.users.reset_mfa
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reset two-factor authentication"
+msgstr "รีเซ็ตการยืนยันตัวตนแบบสองขั้นตอน"
+
+# key: permissions.roles.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View roles"
+msgstr "ดูบทบาท"
+
+# key: permissions.roles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit roles"
+msgstr "สร้างและแก้ไขบทบาท"
+
+# key: permissions.role_assignments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign and end roles"
+msgstr "กำหนดและสิ้นสุดบทบาท"
+
+# key: permissions.audit_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View audit records"
+msgstr "ดูบันทึกการตรวจสอบ"
+
+# key: permissions.security_events.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View security events"
+msgstr "ดูเหตุการณ์ด้านความปลอดภัย"
+
+# key: permissions.security_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage security settings"
+msgstr "จัดการการตั้งค่าความปลอดภัย"
+
+# key: permissions.institution_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage institution settings"
+msgstr "จัดการการตั้งค่าสถาบัน"
+
+# key: permissions.queue_monitor.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View the queue monitor"
+msgstr "ดูการติดตามคิว"
+
+# key: permissions.reference_data.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View reference data"
+msgstr "ดูข้อมูลอ้างอิง"
+
+# key: permissions.reference_data.import
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Import reference data from CSV"
+msgstr "นำเข้าข้อมูลอ้างอิงจาก CSV"
+
+# key: permissions.lookup_values.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage code data, countries and languages"
+msgstr "จัดการข้อมูลรหัส ประเทศ และภาษา"
+
+# key: permissions.org_units.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage org units and reorganizations"
+msgstr "จัดการหน่วยงานและการปรับโครงสร้าง"
+
+# key: permissions.programs.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage programs"
+msgstr "จัดการหลักสูตร"
+
+# key: permissions.facilities.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage buildings and rooms"
+msgstr "จัดการอาคารและห้อง"
+
+# key: permissions.terms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage academic years, terms, term types and time slots"
+msgstr "จัดการปีการศึกษา ภาคการศึกษา ประเภทภาคการศึกษา และคาบ"
+
+# key: permissions.term_windows.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage term windows"
+msgstr "จัดการช่วงเวลาดำเนินการ"
+
+# key: permissions.course_categories.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage course categories"
+msgstr "จัดการหมวดวิชา"
+
+# key: permissions.grade_scales.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage grade scales"
+msgstr "จัดการเกณฑ์ระดับคะแนน"
+
+# key: permissions.people.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View all people"
+msgstr "ดูบุคคลทั้งหมด"
+
+# key: permissions.people.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit people"
+msgstr "สร้างและแก้ไขบุคคล"
+
+# key: permissions.people.view_sensitive
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reveal national ID and passport numbers"
+msgstr "แสดงเลขประจำตัวประชาชนและเลขที่หนังสือเดินทาง"
+
+# key: permissions.people.merge
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Merge duplicate people"
+msgstr "รวมข้อมูลบุคคลที่ซ้ำกัน"
+
+# key: permissions.accounts.invite
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Invite people to create an account"
+msgstr "เชิญบุคคลให้สร้างบัญชี"
+
+# key: permissions.student_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View student records"
+msgstr "ดูระเบียนนักศึกษา"
+
+# key: permissions.student_records.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit student records"
+msgstr "สร้างและแก้ไขระเบียนนักศึกษา"
+
+# key: permissions.student_status_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve and record status changes"
+msgstr "อนุมัติและบันทึกการเปลี่ยนสถานภาพ"
+
+# key: permissions.instructors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage instructors"
+msgstr "จัดการอาจารย์"
+
+# key: permissions.advisors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign advisors"
+msgstr "กำหนดอาจารย์ที่ปรึกษา"
+
+# key: permissions.authentication_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage sign-in methods and SSO"
+msgstr "จัดการวิธีเข้าสู่ระบบและ SSO"
+
+# key: permissions.admission_cycles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage admission cycles and admission settings"
+msgstr "จัดการรอบรับสมัครและการตั้งค่าการรับสมัคร"
+
+# key: permissions.applications.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View applications"
+msgstr "ดูใบสมัคร"
+
+# key: permissions.applications.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Review and decide applications"
+msgstr "พิจารณาและตัดสินใบสมัคร"
+
+# key: permissions.applications.matriculate
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create student records for admitted applicants"
+msgstr "สร้างระเบียนนักศึกษาให้ผู้ได้รับคัดเลือก"
+
+# key: permissions.courses.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage courses, versions and requisites"
+msgstr "จัดการรายวิชา ฉบับรายวิชา และเงื่อนไขรายวิชา"
+
+# key: permissions.curriculum.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage graduation requirements"
+msgstr "จัดการเกณฑ์การสำเร็จการศึกษา"
+
+# key: permissions.sections.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View sections"
+msgstr "ดูกลุ่มเรียน"
+
+# key: permissions.sections.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Plan sections (instructors, times, rooms)"
+msgstr "วางแผนกลุ่มเรียน (อาจารย์ผู้สอน เวลา ห้อง)"
+
+# key: permissions.additional_programs.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Decide second major and minor applications"
+msgstr "พิจารณาคำขอวิชาเอกที่สองและวิชาโท"
+
+# key: permissions.enrollments.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View registrations and rosters"
+msgstr "ดูรายการลงทะเบียนและรายชื่อนักศึกษา"
+
+# key: permissions.registration.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register, drop and withdraw students for them (with a reason)"
+msgstr "ลงทะเบียน ลด และถอนรายวิชาแทนนักศึกษา (พร้อมเหตุผล)"
+
+# key: permissions.registration_rules.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage registration rule sets and credit limits"
+msgstr "จัดการชุดกฎการลงทะเบียนและหน่วยกิตสูงสุด"
+
+# key: permissions.registration_holds.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Place and release holds, grant rule overrides"
+msgstr "ระงับและยกเลิกการระงับ ให้การอนุญาตพิเศษตามกฎ"
+
+# key: permissions.grades.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View grades, grade progress and term records"
+msgstr "ดูเกรด ความคืบหน้าการส่งเกรด และบันทึกผลรายภาคการศึกษา"
+
+# key: permissions.grades.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Finalize and return grades, enter grades for instructors, close terms"
+msgstr "ยืนยันและส่งคืนเกรด กรอกเกรดแทนอาจารย์ผู้สอน ปิดภาคการศึกษา"
+
+# key: permissions.grade_changes.request
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Request a change to a finalized grade"
+msgstr "ขอแก้ไขเกรดที่ยืนยันแล้ว"
+
+# key: permissions.grade_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve or reject grade changes (not your own requests)"
+msgstr "อนุมัติหรือไม่อนุมัติการแก้ไขเกรด (ยกเว้นคำขอของตนเอง)"
+
+# key: permissions.grading_policies.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage GPA, retake, academic standing and honors policy"
+msgstr "จัดการนโยบายเกรดเฉลี่ย การเรียนซ้ำ สถานภาพทางวิชาการ และเกียรตินิยม"
+
+# key: permissions.grade_exceptions.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Be told when staff submit grades outside the grade caps (department heads, academic office)"
+msgstr "รับแจ้งเมื่อเจ้าหน้าที่ส่งเกรดเกินสัดส่วนสูงสุด (หัวหน้าภาควิชา ฝ่ายวิชาการ)"
+
+# key: permissions.evaluations.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View course evaluation response rates and results"
+msgstr "ดูอัตราการตอบและผลการประเมินรายวิชา"
+
+# key: permissions.evaluations.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage evaluation forms, term evaluations and publication"
+msgstr "จัดการแบบประเมิน การประเมินประจำภาคการศึกษา และการประกาศผล"
+
+# key: permissions.certificates.issue
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Issue, re-render and revoke certificates"
+msgstr "ออก สร้างใหม่ และเพิกถอนหนังสือรับรอง"
+
+# key: permissions.certificates.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage certificate kinds, templates and settings"
+msgstr "จัดการประเภท แม่แบบ และการตั้งค่าหนังสือรับรอง"
+
+# key: permissions.assessments.record
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register students, enter and publish results, record external results"
+msgstr "สมัครสอบให้นักศึกษา กรอกและประกาศผลสอบ บันทึกผลสอบจากภายนอก"
+
+# key: permissions.assessments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage examination kinds, areas and sessions"
+msgstr "จัดการประเภทการสอบ ส่วนการสอบ และรอบสอบ"
+
+# key: permissions.graduation.audit
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Run and view degree audits"
+msgstr "ดำเนินการและดูการตรวจสอบการสำเร็จการศึกษา"
+
+# key: permissions.graduation.process
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Process graduations, grant requirement waivers"
+msgstr "ดำเนินการสำเร็จการศึกษา ให้การยกเว้นเกณฑ์"
+
+# key: permissions.reports.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View standard reports and download them"
+msgstr "ดูและดาวน์โหลดรายงานมาตรฐาน"
+
+# key: permissions.lms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage LMS platforms, links and synchronization"
+msgstr "จัดการแพลตฟอร์ม LMS การเชื่อมโยง และการซิงค์"
+
+# key: security.mfa_enforcement.disabled
+#: ninefruits/security/enums.py
+msgid "Not used"
+msgstr "ไม่ใช้"
+
+# key: security.mfa_enforcement.recommended
+#: ninefruits/security/enums.py
+msgid "Recommended (optional)"
+msgstr "แนะนำ (ไม่บังคับ)"
+
+# key: security.mfa_enforcement.required_for_roles
+#: ninefruits/security/enums.py
+msgid "Required for selected roles"
+msgstr "บังคับสำหรับบทบาทที่เลือก"
+
+# key: security.mfa_enforcement.required_for_all
+#: ninefruits/security/enums.py
+msgid "Required for everyone"
+msgstr "บังคับสำหรับทุกคน"
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/security/enums.py
+msgid "Authenticator app"
+msgstr "แอปยืนยันตัวตน"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/security/enums.py
+msgid "Email code"
+msgstr "รหัสทางอีเมล"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Applicant"
+msgstr "ผู้สมัคร"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Student"
+msgstr "นักศึกษา"
+
+# key: security.personas.alumni
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Alumni"
+msgstr "ศิษย์เก่า"
+
+# key: security.personas.instructor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Instructor"
+msgstr "อาจารย์"
+
+# key: security.personas.advisor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Advisor"
+msgstr "อาจารย์ที่ปรึกษา"
+
+# key: security.scope_types.global
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "All"
+msgstr "ทั้งหมด"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Org unit"
+msgstr "หน่วยงาน"
+
+# key: security.scope_types.program
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Program"
+msgstr "หลักสูตร"
+
+# key: security.sso_link_modes.manual
+#: ninefruits/security/enums.py
+msgid "Users link their own accounts"
+msgstr "ผู้ใช้เชื่อมโยงบัญชีเอง"
+
+# key: security.sso_link_modes.institutional_email
+#: ninefruits/security/enums.py
+msgid "Link automatically by verified school email"
+msgstr "เชื่อมโยงอัตโนมัติด้วยอีเมลสถาบันที่ยืนยันแล้ว"
+
+# key: security.student_number_login.disabled
+#: ninefruits/security/enums.py
+msgid "Not allowed"
+msgstr "ไม่อนุญาต"
+
+# key: security.student_number_login.active_records
+#: ninefruits/security/enums.py
+msgid "Current students only"
+msgstr "เฉพาะนักศึกษาปัจจุบัน"
+
+# key: security.student_number_login.all_records
+#: ninefruits/security/enums.py
+msgid "Current students and graduates"
+msgstr "นักศึกษาปัจจุบันและผู้สำเร็จการศึกษา"
+
+# key: authentication.fields.email_or_student_number
+#: ninefruits/security/forms.py
+msgid "Email or student number"
+msgstr "อีเมลหรือรหัสนักศึกษา"
+
+# key: authentication.fields.password
+#: ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+# key: authentication.login.remember_me
+#: ninefruits/security/forms.py
+msgid "Keep me signed in"
+msgstr "จดจำการเข้าสู่ระบบ"
+
+# key: auth.inactive
+#: ninefruits/security/middleware.py
+msgid "This account has been deactivated. Contact the administrator."
+msgstr "บัญชีนี้ถูกระงับการใช้งาน กรุณาติดต่อผู้ดูแลระบบ"
+
+# key: security.mfa.enrollment_required
+#: ninefruits/security/middleware.py
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "บัญชีของท่านต้องใช้การยืนยันตัวตนแบบสองขั้นตอน กรุณาตั้งค่าเพื่อดำเนินการต่อ"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/security/notifications.py
+msgid "Hello,"
+msgstr "เรียน ท่านผู้ใช้"
+
+# key: security.email_code.mail_intro
+#: ninefruits/security/notifications.py
+msgid "Use this code to finish signing in:"
+msgstr "ใช้รหัสนี้เพื่อเข้าสู่ระบบให้เสร็จสิ้น:"
+
+# key: security.email_code.mail_expiry
+#: ninefruits/security/notifications.py
+#, python-format
+msgid "The code expires in %(minutes)s minutes and can be used once."
+msgstr "รหัสจะหมดอายุใน %(minutes)s นาที และใช้ได้เพียงครั้งเดียว"
+
+# key: security.email_code.mail_ignore
+#: ninefruits/security/notifications.py
+msgid "If you did not try to sign in, change your password."
+msgstr "หากท่านไม่ได้พยายามเข้าสู่ระบบ กรุณาเปลี่ยนรหัสผ่าน"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/security/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ขอแสดงความนับถือ\n"
+"%(app)s"
+
+# key: security.email_code.mail_subject
+#: ninefruits/security/notifications.py
+msgid "Your sign-in code"
+msgstr "รหัสเข้าสู่ระบบของท่าน"
+
+# key: admin.settings.security.mfa_enforcement
+#: ninefruits/security/settings_pages.py
+msgid "Policy"
+msgstr "นโยบาย"
+
+# key: admin.settings.security.mfa_required_roles
+#: ninefruits/security/settings_pages.py
+msgid "Roles that must use two-factor authentication"
+msgstr "บทบาทที่ต้องใช้การยืนยันตัวตนแบบสองขั้นตอน"
+
+#: ninefruits/security/settings_pages.py
+msgid "Used when the policy is Required for selected roles."
+msgstr "ใช้เมื่อนโยบายเป็น 'บังคับสำหรับบทบาทที่เลือก'"
+
+# key: admin.settings.security.mfa_grace_period_days
+#: ninefruits/security/settings_pages.py
+msgid "Grace period (days)"
+msgstr "ระยะผ่อนผัน (วัน)"
+
+# key: admin.settings.security.mfa_grace_period_help
+#: ninefruits/security/settings_pages.py
+msgid "Days a user can keep working after the requirement first applies to them. 0 means immediately."
+msgstr "จำนวนวันที่ผู้ใช้ยังทำงานต่อได้หลังจากข้อกำหนดเริ่มมีผลกับผู้ใช้นั้น 0 หมายถึงมีผลทันที"
+
+# key: admin.settings.security.mfa_remember_device_days
+#: ninefruits/security/settings_pages.py
+msgid "Remember devices for (days)"
+msgstr "จดจำอุปกรณ์เป็นเวลา (วัน)"
+
+# key: admin.settings.security.mfa_remember_device_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can skip the code on a trusted device for this many days. 0 turns this off."
+msgstr "ผู้ใช้ไม่ต้องกรอกรหัสบนอุปกรณ์ที่เชื่อถือได้ตามจำนวนวันนี้ 0 หมายถึงปิดใช้งาน"
+
+# key: admin.settings.security.mfa_email_code_enabled
+#: ninefruits/security/settings_pages.py
+msgid "Allow email codes"
+msgstr "อนุญาตรหัสทางอีเมล"
+
+# key: admin.settings.security.mfa_email_code_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can choose one-time codes by email instead of an authenticator app. Turning this off stops email codes from counting as two-factor authentication."
+msgstr "ผู้ใช้เลือกรับรหัสใช้ครั้งเดียวทางอีเมลแทนแอปยืนยันตัวตนได้ หากปิดใช้งาน รหัสทางอีเมลจะไม่นับเป็นการยืนยันตัวตนแบบสองขั้นตอน"
+
+#: ninefruits/security/settings_pages.py
+msgid "Choose at least one role."
+msgstr "เลือกอย่างน้อยหนึ่งบทบาท"
+
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: ninefruits/security/settings_pages.py
+msgid "Security"
+msgstr "ความปลอดภัย"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/security/settings_pages.py ninefruits/security/views.py
+msgid "Two-factor authentication"
+msgstr "การยืนยันตัวตนแบบสองขั้นตอน"
+
+# key: admin.settings.security.mfa_description
+#: ninefruits/security/settings_pages.py
+msgid "Changes apply to every user immediately."
+msgstr "การเปลี่ยนแปลงมีผลกับผู้ใช้ทุกคนทันที"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
+msgstr "%(key)s: คีย์ใช้ได้เฉพาะอักษรตัวพิมพ์เล็ก ตัวเลข และขีดกลาง"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: each provider needs its own key."
+msgstr "%(key)s: ผู้ให้บริการแต่ละรายต้องมีคีย์ของตนเอง"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the button label is required (64 characters at most)."
+msgstr "%(key)s: ต้องระบุข้อความบนปุ่ม (ไม่เกิน 64 ตัวอักษร)"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the issuer must be a URL."
+msgstr "%(key)s: ผู้ออก (issuer) ต้องเป็น URL"
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the client ID is required."
+msgstr "%(key)s: ต้องระบุ Client ID"
+
+# key: admin.settings.authentication.student_number_login
+#: ninefruits/security/settings_pages.py
+msgid "Sign in with student number"
+msgstr "เข้าสู่ระบบด้วยรหัสนักศึกษา"
+
+# key: admin.settings.authentication.password_login_for_sso_users
+#: ninefruits/security/settings_pages.py
+msgid "Allow passwords for users with school sign-in"
+msgstr "อนุญาตรหัสผ่านสำหรับผู้ใช้ที่เข้าสู่ระบบด้วยบัญชีสถาบัน"
+
+# key: admin.settings.authentication.password_login_for_sso_users_help
+#: ninefruits/security/settings_pages.py
+msgid "When off, users who have linked a school account must use it to sign in."
+msgstr "หากปิดใช้งาน ผู้ใช้ที่เชื่อมโยงบัญชีสถาบันแล้วต้องเข้าสู่ระบบด้วยบัญชีนั้น"
+
+# key: admin.settings.authentication.lockout_threshold
+#: ninefruits/security/settings_pages.py
+msgid "Lock after failed attempts"
+msgstr "ล็อกหลังพยายามไม่สำเร็จ (ครั้ง)"
+
+# key: admin.settings.authentication.lockout_threshold_help
+#: ninefruits/security/settings_pages.py
+msgid "Failed passwords in a row before the account is locked. 0 turns locking off."
+msgstr "จำนวนครั้งที่กรอกรหัสผ่านผิดติดต่อกันก่อนล็อกบัญชี 0 หมายถึงปิดการล็อก"
+
+# key: admin.settings.authentication.lockout_minutes
+#: ninefruits/security/settings_pages.py
+msgid "Lock duration (minutes)"
+msgstr "ระยะเวลาล็อก (นาที)"
+
+# key: admin.settings.authentication.sso_link_mode
+#: ninefruits/security/settings_pages.py
+msgid "Account linking"
+msgstr "การเชื่อมโยงบัญชี"
+
+# key: admin.settings.authentication.sso_providers
+#: ninefruits/security/settings_pages.py
+msgid "Providers"
+msgstr "ผู้ให้บริการ"
+
+# key: admin.settings.authentication.title
+#: ninefruits/security/settings_pages.py
+msgid "Sign-in methods"
+msgstr "วิธีเข้าสู่ระบบ"
+
+# key: admin.settings.authentication.password_section
+#: ninefruits/security/settings_pages.py
+msgid "Passwords"
+msgstr "รหัสผ่าน"
+
+# key: admin.settings.authentication.sso_section
+#: ninefruits/security/settings_pages.py
+msgid "School sign-in (SSO)"
+msgstr "เข้าสู่ระบบด้วยบัญชีสถาบัน (SSO)"
+
+# key: assessment.portal.cancel
+#: ninefruits/security/templates/security/admin/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+# key: admin.settings.authentication.provider_key
+# key: lms.fields.credential_key
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgctxt "security"
+msgid "Key"
+msgstr "คีย์"
+
+# key: admin.settings.authentication.provider_label
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Button label"
+msgstr "ข้อความบนปุ่ม"
+
+# key: admin.settings.authentication.issuer
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Issuer URL"
+msgstr "URL ของผู้ออก (Issuer)"
+
+# key: admin.settings.authentication.client_id
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client ID"
+msgstr "Client ID"
+
+# key: admin.settings.authentication.client_secret
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client secret"
+msgstr "Client secret"
+
+# key: admin.settings.authentication.client_secret_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Stored encrypted. Leave empty to keep the stored value."
+msgstr "จัดเก็บแบบเข้ารหัส เว้นว่างไว้เพื่อคงค่าเดิม"
+
+# key: admin.settings.authentication.scopes
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Scopes"
+msgstr "Scopes"
+
+# key: admin.settings.authentication.trusts_mfa
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Counts as two-factor authentication"
+msgstr "นับเป็นการยืนยันตัวตนแบบสองขั้นตอน"
+
+# key: admin.settings.authentication.trusts_mfa_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Turn on only if the school's sign-in itself requires two-factor authentication."
+msgstr "เปิดใช้เฉพาะเมื่อการเข้าสู่ระบบของสถาบันกำหนดให้ยืนยันตัวตนแบบสองขั้นตอนอยู่แล้ว"
+
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Remove this provider"
+msgstr "ลบผู้ให้บริการนี้"
+
+# key: admin.settings.authentication.redirect_uri
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Redirect URI to register with the provider"
+msgstr "Redirect URI ที่ต้องลงทะเบียนกับผู้ให้บริการ"
+
+#: ninefruits/security/views.py
+msgid "The email code must be 6 digits."
+msgstr "รหัสทางอีเมลต้องเป็นตัวเลข 6 หลัก"
+
+# key: security.email_code.sent
+#: ninefruits/security/views.py
+msgid "A new code has been sent to your email."
+msgstr "ส่งรหัสใหม่ไปยังอีเมลของท่านแล้ว"
+
+# key: security.email_code.wait
+#: ninefruits/security/views.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "กรุณารอ %(seconds)s วินาทีก่อนขอรหัสใหม่"
+
+# key: security.sso.failed
+#: ninefruits/security/views_sso.py
+msgid "School sign-in failed. Try again or sign in with your password."
+msgstr "เข้าสู่ระบบด้วยบัญชีสถาบันไม่สำเร็จ กรุณาลองอีกครั้งหรือเข้าสู่ระบบด้วยรหัสผ่าน"
+
+# key: security.sso.expired
+#: ninefruits/security/views_sso.py
+msgid "The sign-in attempt expired. Try again."
+msgstr "การเข้าสู่ระบบหมดเวลา กรุณาลองอีกครั้ง"
+
+# key: security.sso.cancelled
+#: ninefruits/security/views_sso.py
+msgid "Sign-in was cancelled."
+msgstr "ยกเลิกการเข้าสู่ระบบแล้ว"
+
+# key: security.sso.linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "%(provider)s account linked."
+msgstr "เชื่อมโยงบัญชี %(provider)s แล้ว"
+
+# key: security.sso.not_linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
+msgstr "บัญชี %(provider)s ของท่านยังไม่ได้เชื่อมโยงกับบัญชีในระบบนี้ กรุณาเข้าสู่ระบบด้วยรหัสผ่านแล้วเชื่อมโยงที่เมนูความปลอดภัย"
+
+#: models/user.py
+msgid "user"
+msgstr "ผู้ใช้"
+
+#: models/user.py
+msgid "users"
+msgstr "ผู้ใช้"
+
+#: models/role.py
+msgid "role"
+msgstr "บทบาท"
+
+#: models/role.py
+msgid "roles"
+msgstr "บทบาท"

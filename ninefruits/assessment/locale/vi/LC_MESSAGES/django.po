@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/assessment/actions/_support.py
+msgid "Enter a reason."
+msgstr "Hãy nhập lý do."
+
+# key: assessment.errors.pass_score_published
+#: ninefruits/assessment/actions/change_session_pass_score.py
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "Kết quả đã được công bố: không thể thay đổi điểm đạt. Hãy dùng yêu cầu đính chính."
+
+# key: assessment.errors.not_locked
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "This result is not published; enter it directly."
+msgstr "Kết quả này chưa được công bố; hãy nhập trực tiếp."
+
+# key: assessment.errors.correction_pending
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "A correction request is already pending for this result."
+msgstr "Đã có một yêu cầu đính chính đang chờ duyệt cho kết quả này."
+
+# key: grading.errors.request_decided
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "The request is already decided."
+msgstr "Yêu cầu đã được xử lý."
+
+# key: assessment.errors.own_correction
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "You cannot decide your own correction request."
+msgstr "Bạn không thể tự duyệt yêu cầu đính chính của mình."
+
+# key: assessment.errors.not_registered
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/actions/register_for_assessment.py
+msgid "The student is not registered for this session."
+msgstr "Sinh viên chưa đăng ký đợt thi này."
+
+# key: assessment.errors.published_locked
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are published: request a correction instead."
+msgstr "Kết quả của đợt thi này đã được công bố: hãy yêu cầu đính chính."
+
+# key: assessment.errors.no_external
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind does not take external results."
+msgstr "Loại kỳ thi này không nhận kết quả bên ngoài."
+
+# key: assessment.errors.future_date
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/admin/forms.py
+msgid "The date cannot be in the future."
+msgstr "Ngày không được ở tương lai."
+
+# key: assessment.errors.already_published
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are already published."
+msgstr "Kết quả của đợt thi này đã được công bố."
+
+# key: assessment.errors.score_missing
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "Thiếu điểm của %(component)s."
+
+# key: assessment.errors.score_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "Điểm của %(component)s phải từ 0 đến %(max)s."
+
+# key: assessment.errors.total_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "Tổng điểm phải từ 0 đến %(max)s."
+
+# key: assessment.errors.decision_required
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "Choose passed or not passed."
+msgstr "Hãy chọn đạt hoặc không đạt."
+
+# key: assessment.errors.no_pass_score
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "Loại kỳ thi này không có điểm đạt: hãy chọn đạt hoặc không đạt."
+
+# key: assessment.errors.type_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This kind of examination is no longer held."
+msgstr "Loại kỳ thi này không còn được tổ chức."
+
+# key: assessment.errors.record_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Only current students can register."
+msgstr "Chỉ sinh viên đang học mới có thể đăng ký."
+
+# key: assessment.errors.registration_closed
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Registration for this session is closed."
+msgstr "Đã đóng đăng ký đợt thi này."
+
+# key: assessment.errors.session_past
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session has already been held."
+msgstr "Đợt thi này đã diễn ra."
+
+# key: assessment.errors.already_registered
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Already registered for this session."
+msgstr "Đã đăng ký đợt thi này."
+
+# key: assessment.errors.full
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session is full."
+msgstr "Đợt thi này đã đủ chỗ."
+
+# key: assessment.errors.already_cancelled
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This registration is already cancelled."
+msgstr "Đăng ký này đã bị hủy."
+
+# key: assessment.errors.has_result
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "Đã có kết quả; không thể hủy đăng ký."
+
+# key: assessment.fields.type
+#: ninefruits/assessment/admin/common.py ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Kind"
+msgstr "Loại"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Passed"
+msgstr "Đạt"
+
+# key: assessment.passed.no
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "Không đạt"
+
+# key: registration.fields.status
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Trạng thái"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Student number"
+msgstr "Mã số sinh viên"
+
+# key: assessment.fields.previous
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Current values"
+msgstr "Giá trị hiện tại"
+
+# key: assessment.fields.proposed
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Proposed values"
+msgstr "Giá trị đề xuất"
+
+# key: common.reason
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Lý do"
+
+# key: grading.fields.requested_by
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Người yêu cầu"
+
+# key: grading.fields.decision_note
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Ghi chú"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/assessment/admin/corrections.py
+msgid "Approve"
+msgstr "Phê duyệt"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Approved"
+msgstr "Đã duyệt"
+
+# key: grading.actions.reject
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Từ chối"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Rejected"
+msgstr "Bị từ chối"
+
+# key: grading.actions.cancel_request
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Hủy yêu cầu"
+
+# key: validation.alpha_dash
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Trường %(attribute)s chỉ được chứa chữ cái, chữ số, dấu gạch ngang và dấu gạch dưới."
+
+# key: assessment.fields.note
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Note"
+msgstr "Ghi chú"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/assessment/admin/forms.py
+msgid "Code"
+msgstr "Mã"
+
+# key: validation.unique
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s đã được sử dụng."
+
+# key: assessment.fields.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Reason for changing the pass score"
+msgstr "Lý do thay đổi điểm đạt"
+
+# key: assessment.help.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "Được ghi vào nhật ký kiểm toán cùng danh sách sinh viên có kết quả thay đổi."
+
+# key: validation.after
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "Trường %(attribute)s phải là một ngày sau %(date)s."
+
+# key: assessment.fields.registration_closes_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registration closes"
+msgstr "Đóng đăng ký"
+
+# key: assessment.fields.registration_opens_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/sessions.py
+msgid "Registration opens"
+msgstr "Mở đăng ký"
+
+# key: assessment.fields.file
+#: ninefruits/assessment/admin/forms.py
+msgid "CSV file"
+msgstr "Tệp CSV"
+
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "Tệp quá lớn (%(size)s byte, tối đa %(limit)s)."
+
+# key: assessment.fields.total_score
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Total"
+msgstr "Tổng điểm"
+
+# key: assessment.help.decision_automatic
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "Xác định theo điểm: tổng điểm từ %(score)s trở lên và mọi phần thi đạt mức tối thiểu."
+
+# key: assessment.fields.taken_date
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Taken on"
+msgstr "Ngày dự thi"
+
+# key: assessment.fields.level
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Level"
+msgstr "Cấp độ"
+
+# key: assessment.fields.certificate_number
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgid "Certificate number"
+msgstr "Số chứng chỉ"
+
+# key: assessment.fields.evidence
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Evidence"
+msgstr "Minh chứng"
+
+# key: assessment.fields.source
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Source"
+msgstr "Nguồn"
+
+# key: common.yes
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "Yes"
+msgstr "Có"
+
+# upstream: Django/allauth catalog
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "No"
+msgstr "Không"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "people"
+msgid "Name"
+msgstr "Họ tên"
+
+# key: assessment.actions.record_external
+#: ninefruits/assessment/admin/results.py
+msgid "Record an external result"
+msgstr "Ghi nhận kết quả bên ngoài"
+
+# key: assessment.actions.remove
+#: ninefruits/assessment/admin/results.py
+msgctxt "assessment"
+msgid "Remove"
+msgstr "Xóa"
+
+# key: assessment.fields.published_at
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Results published"
+msgstr "Ngày công bố kết quả"
+
+# key: assessment.fields.venue
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Venue"
+msgstr "Địa điểm"
+
+# key: assessment.fields.registrants
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registrants"
+msgstr "Người đăng ký"
+
+# key: assessment.fields.results
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Results"
+msgstr "Kết quả"
+
+# key: assessment.notifications.rejudged
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "Đã xét lại %(count)s kết quả: %(passed)s chuyển thành đạt, %(failed)s chuyển thành không đạt."
+
+# key: security.scope_types.global
+#: ninefruits/assessment/admin/sessions.py
+msgid "All"
+msgstr "Toàn bộ"
+
+# key: assessment.actions.publish
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "Công bố kết quả"
+
+# key: assessment.help.publish
+#: ninefruits/assessment/admin/sessions.py
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "Từ bây giờ sinh viên xem được kết quả. Kết quả nhập sau sẽ hiển thị ngay."
+
+#: ninefruits/assessment/admin/sessions.py
+msgid "The file is not UTF-8 text."
+msgstr "Tệp không phải văn bản UTF-8."
+
+# key: assessment.notifications.imported
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "Đã ghi nhận %(recorded)s, vắng thi %(absent)s, lỗi %(errors)s."
+
+# key: assessment.actions.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "Import results (CSV)"
+msgstr "Nhập kết quả (CSV)"
+
+# key: assessment.help.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "Tệp CSV có dòng tiêu đề: student_number, một cột cho mỗi mã phần thi (hoặc total), tùy chọn passed (Y/N), absent (Y) và note. Các dòng của sinh viên chưa đăng ký sẽ bị bỏ qua."
+
+# key: assessment.actions.register_student
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "Đăng ký cho sinh viên"
+
+# key: assessment.registration_statuses.registered
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "Đã đăng ký"
+
+# key: assessment.actions.enter_result
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Enter result"
+msgstr "Nhập kết quả"
+
+# key: assessment.actions.request_correction
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Request a correction"
+msgstr "Yêu cầu đính chính"
+
+# key: assessment.help.correction
+#: ninefruits/assessment/admin/sessions.py
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "Kết quả của đợt thi này đã được công bố. Hãy đề xuất giá trị mới kèm lý do; một người khác có quyền quản lý sẽ phê duyệt và thay đổi được áp dụng."
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment"
+msgid "Absent"
+msgstr "Vắng thi"
+
+# key: assessment.actions.cancel
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Cancel registration"
+msgstr "Hủy đăng ký"
+
+# key: assessment.fields.components
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Areas"
+msgstr "Phần thi"
+
+# key: reference.fields.name
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: assessment.fields.category
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Category"
+msgstr "Nhóm"
+
+# key: assessment.fields.scoring
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Scoring"
+msgstr "Cách chấm"
+
+# key: assessment.fields.pass_score
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py
+msgid "Pass score"
+msgstr "Điểm đạt"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/apps.py
+msgctxt "portal"
+msgid "Examinations"
+msgstr "Kỳ thi"
+
+# key: assessment.categories.language
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Language"
+msgstr "Ngoại ngữ"
+
+# key: assessment.categories.comprehensive
+#: ninefruits/assessment/enums.py
+msgid "Comprehensive"
+msgstr "Thi tổng hợp"
+
+# key: assessment.categories.thesis
+#: ninefruits/assessment/enums.py
+msgid "Thesis"
+msgstr "Luận văn"
+
+# key: assessment.categories.external
+#: ninefruits/assessment/enums.py
+msgid "External test"
+msgstr "Kỳ thi bên ngoài"
+
+# key: assessment.scoring_methods.score
+#: ninefruits/assessment/enums.py ninefruits/assessment/models/results.py
+msgid "Score"
+msgstr "Điểm số"
+
+# key: assessment.scoring_methods.pass_fail
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "Đạt/không đạt"
+
+# key: assessment.correction_statuses.cancelled
+# key: assessment.registration_statuses.cancelled
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "Đã hủy"
+
+# key: assessment.correction_statuses.pending
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pending"
+msgstr "Chờ duyệt"
+
+# key: assessment.sources.session
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Session"
+msgstr "Đợt thi"
+
+# key: assessment.sources.external
+#: ninefruits/assessment/enums.py
+msgid "External"
+msgstr "Bên ngoài"
+
+# key: people.resources.student_records.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "student record"
+msgstr "hồ sơ sinh viên"
+
+# key: assessment.resources.sessions.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "Examination session"
+msgstr "Đợt thi"
+
+# key: assessment.resources.results.label
+#: ninefruits/assessment/models/results.py
+msgid "Examination result"
+msgstr "Kết quả thi"
+
+# key: assessment.resources.results.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Examination results"
+msgstr "Kết quả thi"
+
+# key: grading.fields.requested_at
+#: ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Ngày yêu cầu"
+
+# key: assessment.resources.corrections.label
+#: ninefruits/assessment/models/results.py
+msgid "Result correction"
+msgstr "Đính chính kết quả"
+
+# key: assessment.resources.corrections.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Result corrections"
+msgstr "Đính chính kết quả"
+
+# key: assessment.fields.held_date
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Date"
+msgstr "Ngày thi"
+
+# key: assessment.fields.capacity
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "Sức chứa"
+
+# key: assessment.help.session_pass_score
+#: ninefruits/assessment/models/sessions.py
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "Để trống để dùng điểm đạt của loại kỳ thi. Thay đổi trước khi công bố sẽ xét lại mọi kết quả đã nhập; sau khi công bố thì cố định."
+
+# key: assessment.resources.sessions.plural_label
+#: ninefruits/assessment/models/sessions.py
+msgid "Examination sessions"
+msgstr "Đợt thi"
+
+# key: assessment.fields.registered_at
+#: ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "Ngày đăng ký"
+
+# key: reference.fields.code
+#: ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: assessment.help.scoring
+#: ninefruits/assessment/models/types.py
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "Điểm số: so các phần thi (hoặc một tổng điểm) với điểm đạt, mỗi phần phải đạt mức tối thiểu. Đạt/không đạt: cán bộ quyết định cho từng sinh viên."
+
+# key: assessment.fields.max_score
+#: ninefruits/assessment/models/types.py
+msgid "Maximum score"
+msgstr "Điểm tối đa"
+
+# key: assessment.help.max_score
+#: ninefruits/assessment/models/types.py
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "Dành cho loại kỳ thi không có phần thi. Nếu có phần thi, điểm tối đa là tổng các phần."
+
+# key: assessment.help.pass_score
+#: ninefruits/assessment/models/types.py
+msgid "Total needed to pass. A session can override it."
+msgstr "Tổng điểm cần để đạt. Mỗi đợt thi có thể đặt giá trị riêng."
+
+# key: assessment.fields.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "External results"
+msgstr "Kết quả bên ngoài"
+
+# key: assessment.help.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "Có thể ghi nhận kết quả từ tổ chức bên ngoài (TOPIK, HSK, ...) kèm tệp minh chứng."
+
+# key: reference.fields.is_active
+#: ninefruits/assessment/models/types.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: reference.fields.sort_order
+#: ninefruits/assessment/models/types.py
+msgid "Order"
+msgstr "Thứ tự"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/assessment/models/types.py
+msgid "Examination kind"
+msgstr "Loại kỳ thi"
+
+# key: assessment.resources.types.plural_label
+#: ninefruits/assessment/models/types.py
+msgid "Examination kinds"
+msgstr "Loại kỳ thi"
+
+# key: assessment.help.component_code
+#: ninefruits/assessment/models/types.py
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "Tên cột trong tệp CSV kết quả, ví dụ LISTENING."
+
+# key: assessment.fields.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Minimum to pass"
+msgstr "Điểm tối thiểu để đạt"
+
+# key: assessment.help.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Below this the student fails whatever the total."
+msgstr "Dưới mức này sinh viên không đạt bất kể tổng điểm."
+
+# key: common.none
+#: ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "common"
+msgid "None"
+msgstr "Không có"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html ninefruits/assessment/views/portal.py
+msgid "Examinations"
+msgstr "Kỳ thi"
+
+# key: assessment.portal.intro
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "Đăng ký các đợt thi và xem kết quả sau khi được công bố."
+
+# key: assessment.portal.required
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Required by your curriculum"
+msgstr "Bắt buộc theo chương trình đào tạo"
+
+# key: assessment.portal.not_yet
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Not yet"
+msgstr "Chưa có"
+
+# key: assessment.portal.open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Open for registration"
+msgstr "Đang mở đăng ký"
+
+# key: assessment.portal.closes
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "Đóng đăng ký lúc %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Cancel this registration?"
+msgstr "Hủy đăng ký này?"
+
+# key: assessment.portal.cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "Hủy"
+
+# key: assessment.portal.register
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Register"
+msgstr "Đăng ký"
+
+# key: assessment.portal.no_open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No session is open for registration."
+msgstr "Không có đợt thi nào đang mở đăng ký."
+
+# key: assessment.portal.my_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "Đăng ký của tôi"
+
+# key: assessment.portal.no_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No registrations."
+msgstr "Không có đăng ký nào."
+
+# key: assessment.portal.my_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "My results"
+msgstr "Kết quả của tôi"
+
+# key: assessment.portal.no_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No results yet."
+msgstr "Chưa có kết quả."
+
+# key: assessment.portal.registered
+#: ninefruits/assessment/views/portal.py
+msgid "You are registered."
+msgstr "Bạn đã đăng ký."
+
+# key: assessment.portal.cancelled
+#: ninefruits/assessment/views/portal.py
+msgid "Your registration is cancelled."
+msgstr "Đã hủy đăng ký của bạn."

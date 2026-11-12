@@ -1,0 +1,441 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/graduation/actions/_support.py
+msgid "Enter a reason."
+msgstr "Geben Sie einen Grund ein."
+
+# key: graduation.errors.not_enrolled
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "Only an enrolled student can graduate."
+msgstr "Nur immatrikulierte Studierende können einen Abschluss erhalten."
+
+# key: graduation.errors.no_audit
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "No stored degree audit: run the audit first."
+msgstr "Keine gespeicherte Prüfung der Abschlussvoraussetzungen: Führen Sie zuerst die Prüfung durch."
+
+# key: graduation.errors.audit_not_satisfied
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "The latest degree audit is not satisfied."
+msgstr "Die letzte Prüfung der Abschlussvoraussetzungen ist nicht erfüllt."
+
+# key: graduation.errors.waiver_exists
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "A pending or approved waiver already exists for this requirement."
+msgstr "Für diese Anforderung gibt es bereits einen offenen oder genehmigten Erlass."
+
+# key: graduation.errors.waiver_not_approved
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "Only an approved waiver can be lifted."
+msgstr "Nur ein genehmigter Erlass kann aufgehoben werden."
+
+# key: grading.errors.request_decided
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "The request is already decided."
+msgstr "Über den Antrag wurde bereits entschieden."
+
+# key: graduation.errors.own_waiver
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "You cannot decide your own waiver request."
+msgstr "Sie können nicht über Ihren eigenen Antrag auf Erlass entscheiden."
+
+# key: curriculum.fields.program_role
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgid "Program role"
+msgstr "Rolle im Studium"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Satisfied"
+msgstr "Erfüllt"
+
+# key: graduation.satisfied.no
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Not satisfied"
+msgstr "Nicht erfüllt"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "Studiengang"
+
+# key: registration.fields.status
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgctxt "registration"
+msgid "Status"
+msgstr "Status"
+
+# key: security.scope_types.global
+#: ninefruits/graduation/admin/audits.py
+msgid "All"
+msgstr "Alle"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgid "Student number"
+msgstr "Matrikelnummer"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Name"
+msgstr "Name"
+
+# key: people.fields.year_level
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Year"
+msgstr "Studienjahr"
+
+# key: graduation.fields.earned_credits
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Earned credits"
+msgstr "Erworbene Leistungspunkte"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Gesamtdurchschnitt"
+
+# key: graduation.actions.run_audits
+#: ninefruits/graduation/admin/audits.py
+msgid "Run audits"
+msgstr "Prüfungen durchführen"
+
+# key: graduation.notifications.audits_run
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(students)s student(s) audited, %(satisfied)s satisfied."
+msgstr "%(students)s Studierende geprüft, %(satisfied)s erfüllt."
+
+# key: graduation.actions.open
+#: ninefruits/graduation/admin/audits.py
+msgctxt "graduation"
+msgid "Open"
+msgstr "Öffnen"
+
+# key: graduation.actions.rerun
+#: ninefruits/graduation/admin/audits.py
+msgid "Audit again"
+msgstr "Erneut prüfen"
+
+# key: graduation.notifications.audit_saved
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/student_record.py
+msgid "Degree audit saved."
+msgstr "Prüfung der Abschlussvoraussetzungen gespeichert."
+
+# key: graduation.actions.graduate
+#: ninefruits/graduation/admin/audits.py
+msgid "Graduate"
+msgstr "Abschluss erteilen"
+
+# key: graduation.notifications.graduated
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(count)s student(s) graduated, %(errors)s not processed."
+msgstr "%(count)s Studierende haben den Abschluss erhalten, %(errors)s nicht verarbeitet."
+
+# key: common.reason
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Grund"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/models.py
+msgid "Term"
+msgstr "Semester"
+
+# key: graduation.fields.min_year_level
+#: ninefruits/graduation/admin/forms.py
+msgid "From year level"
+msgstr "Ab Studienjahr"
+
+# key: people.fields.graduation_date
+#: ninefruits/graduation/admin/forms.py
+msgid "Graduation date"
+msgstr "Abschlussdatum"
+
+# key: curriculum.sections.requirements
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Requirements"
+msgstr "Anforderungen"
+
+# key: graduation.actions.audit_now
+#: ninefruits/graduation/admin/student_record.py
+msgctxt "graduation.actions"
+msgid "Degree audit"
+msgstr "Voraussetzungen prüfen"
+
+# key: graduation.actions.waive
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waive a requirement"
+msgstr "Anforderung erlassen"
+
+# key: graduation.notifications.waiver_requested
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waiver requested; it counts once another person approves it."
+msgstr "Erlass beantragt; er zählt, sobald eine andere Person ihn genehmigt."
+
+# key: graduation.help.waiver
+#: ninefruits/graduation/admin/student_record.py
+msgid "Another person with the graduation permission must approve the waiver before it counts."
+msgstr "Eine andere Person mit der Berechtigung für Studienabschlüsse muss den Erlass genehmigen, bevor er zählt."
+
+# key: grading.fields.requested_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Beantragt von"
+
+# key: grading.fields.decided_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "Entschieden von"
+
+# key: grading.fields.decision_note
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Anmerkung"
+
+# key: graduation.fields.lift_reason
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Lift reason"
+msgstr "Grund der Aufhebung"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/graduation/admin/waivers.py
+msgid "Approve"
+msgstr "Genehmigen"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Approved"
+msgstr "Genehmigt"
+
+# key: grading.actions.reject
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Ablehnen"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Rejected"
+msgstr "Abgelehnt"
+
+# key: graduation.actions.lift
+#: ninefruits/graduation/admin/waivers.py
+msgid "Lift the waiver"
+msgstr "Erlass aufheben"
+
+# key: graduation.waiver_statuses.lifted
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Lifted"
+msgstr "Aufgehoben"
+
+# key: portal.navigation.graduation
+#: ninefruits/graduation/apps.py
+msgctxt "portal"
+msgid "Graduation"
+msgstr "Studienabschluss"
+
+# key: graduation.waiver_statuses.pending
+#: ninefruits/graduation/enums.py
+msgctxt "graduation"
+msgid "Pending"
+msgstr "Offen"
+
+# key: people.sections.record
+#: ninefruits/graduation/models.py
+msgid "Student record"
+msgstr "Studierendenakte"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/graduation/models.py
+msgid "graduation requirements"
+msgstr "Abschlussvoraussetzungen"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "Erforderlich"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Audited"
+msgstr "Geprüft"
+
+# key: graduation.actions.audit_now
+#: ninefruits/graduation/models.py
+msgid "Degree audit"
+msgstr "Voraussetzungen prüfen"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/graduation/models.py
+msgid "Degree audits"
+msgstr "Prüfungen der Abschlussvoraussetzungen"
+
+# key: graduation.report_columns.status
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "Status"
+
+# key: grading.fields.requested_at
+#: ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Beantragt"
+
+# key: graduation.resources.waivers.label
+#: ninefruits/graduation/models.py
+msgid "Requirement waiver"
+msgstr "Erlass einer Anforderung"
+
+# key: graduation.resources.waivers.plural_label
+#: ninefruits/graduation/models.py
+msgid "Requirement waivers"
+msgstr "Erlasse von Anforderungen"
+
+# key: graduation.issues.no_requirement_set
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "No graduation requirements are defined for catalog year %(year)s."
+msgstr "Für das Studienordnungsjahr %(year)s sind keine Abschlussvoraussetzungen festgelegt."
+
+# key: graduation.issues.requirement
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Requirement not met: %(name)s"
+msgstr "Anforderung nicht erfüllt: %(name)s"
+
+# key: graduation.issues.total_credits
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Total credits %(earned)s of %(required)s required."
+msgstr "Leistungspunkte gesamt %(earned)s von %(required)s erforderlichen."
+
+# key: graduation.issues.gpa
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Cumulative GPA %(gpa)s below the minimum %(minimum)s."
+msgstr "Gesamtdurchschnitt %(gpa)s unter dem Mindestwert %(minimum)s."
+
+# key: graduation.settings.degree_number_pattern
+#: ninefruits/graduation/settings_pages.py
+msgid "Degree number pattern"
+msgstr "Muster der Abschlussnummer"
+
+# key: graduation.settings.degree_number_pattern_help
+#: ninefruits/graduation/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {PROGRAM} program code, {YYYY} or {YY} graduation year, {SEQ:5} sequence per distinct prefix (required). Default {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+msgstr "Platzhalter: {PROGRAM} Code des Studiengangs, {YYYY} oder {YY} Abschlussjahr, {SEQ:5} laufende Nummer je unterschiedlichem Präfix (Pflicht). Standard {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+
+# key: graduation.settings.minimum_cumulative_gpa
+#: ninefruits/graduation/settings_pages.py
+msgid "Minimum cumulative GPA"
+msgstr "Mindest-Gesamtdurchschnitt"
+
+# key: graduation.settings.minimum_cumulative_gpa_help
+#: ninefruits/graduation/settings_pages.py
+msgid "Required to graduate (primary program). Leave empty for none."
+msgstr "Für den Abschluss erforderlich (Hauptstudiengang). Leer lassen für keinen."
+
+# key: graduation.settings.title
+#: ninefruits/graduation/settings_pages.py
+msgid "Graduation settings"
+msgstr "Einstellungen zum Studienabschluss"
+
+# key: evaluation.portal.back
+#: ninefruits/graduation/templates/graduation/admin/audit_detail.html
+msgid "Back"
+msgstr "Zurück"
+
+# key: graduation.actions.save_audit
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html
+msgid "Save this audit"
+msgstr "Diese Prüfung speichern"
+
+# key: assessment.portal.cancel
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html ninefruits/graduation/templates/graduation/admin/graduate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Stornieren"
+
+# key: graduation.fields.waived
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Waived"
+msgstr "Erlassen"
+
+# key: curriculum.fields.credits
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Leistungspunkte"
+
+# key: graduation.fields.courses
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "courses"
+msgstr "Lehrveranstaltungen"
+
+# key: graduation.fields.missing
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Not passed"
+msgstr "Nicht bestanden"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+msgid "Graduation requirements"
+msgstr "Abschlussvoraussetzungen"
+
+# key: graduation.portal.intro
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+#, python-format
+msgid "Your progress against the requirements of catalog year %(year)s, evaluated now. Ask your department about waivers."
+msgstr "Ihr Fortschritt gegenüber den Anforderungen des Studienordnungsjahrs %(year)s, jetzt ausgewertet. Zu Erlassen wenden Sie sich an Ihren Fachbereich."

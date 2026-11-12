@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: reference.errors.term_status_transition
+#: ninefruits/term/actions/change_term_status.py
+#, python-format
+msgid "A term cannot move from %(from)s to %(to)s."
+msgstr "सेमेस्टर %(from)s बाट %(to)s मा जान सक्दैन।"
+
+# key: reference.errors.invalid_session_copy
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "Choose another session of the same term."
+msgstr "उही सेमेस्टरको अर्को सत्र रोज्नुहोस्।"
+
+# key: reference.errors.session_has_windows
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "This session already has windows."
+msgstr "यस सत्रमा पहिले नै कार्य अवधिहरू छन्।"
+
+# key: reference.fields.name
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Name"
+msgstr "नाम"
+
+# key: validation.after
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s %(date)s पछिको मिति हुनुपर्छ।"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "End date"
+msgstr "अन्त्य मिति"
+
+# key: reference.fields.start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Start date"
+msgstr "सुरु मिति"
+
+# key: validation.after_or_equal
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s %(date)s वा त्यसपछिको मिति हुनुपर्छ।"
+
+# key: reference.fields.instruction_end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes end"
+msgstr "कक्षा अन्त्य"
+
+# key: reference.fields.instruction_start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes start"
+msgstr "कक्षा सुरु"
+
+# key: reference.errors.sessions_outside_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Some sessions would fall outside the new dates. Change them first."
+msgstr "केही सत्र नयाँ मितिभन्दा बाहिर पर्छन्। पहिले तिनलाई परिवर्तन गर्नुहोस्।"
+
+# key: validation.alpha_dash
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s मा अक्षर, अङ्क, ड्यास र अन्डरस्कोर मात्र हुनुपर्छ।"
+
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The session must lie within its term (%(start)s - %(end)s)."
+msgstr "सत्र आफ्नो सेमेस्टरभित्र (%(start)s - %(end)s) हुनुपर्छ।"
+
+#: ninefruits/term/admin.py
+msgid "The full-term session belongs to the term and cannot be deleted."
+msgstr "पूर्ण सेमेस्टर सत्र सेमेस्टरको अंश हो र मेटाउन सकिँदैन।"
+
+# key: reference.resources.term_sessions.label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "session"
+msgstr "सत्र"
+
+# key: reference.resources.term_sessions.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "sessions"
+msgstr "सत्रहरू"
+
+# key: reference.resources.term_windows.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term windows"
+msgstr "सेमेस्टर कार्य अवधिहरू"
+
+# key: reference.actions.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copy windows"
+msgstr "कार्य अवधि प्रतिलिपि गर्नुहोस्"
+
+# key: reference.fields.is_full_term
+# key: reference.term_sessions.full_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Full term"
+msgstr "पूरा सेमेस्टर"
+
+# key: reference.fields.closes_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Closes"
+msgstr "बन्द हुने"
+
+# key: reference.fields.opens_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Opens"
+msgstr "खुल्ने"
+
+# key: reference.resources.term_windows.label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term window"
+msgstr "सेमेस्टर कार्य अवधि"
+
+# key: reference.fields.eligibility
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "Eligibility"
+msgstr "योग्यता"
+
+# key: reference.help.eligibility
+#: ninefruits/term/admin.py
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
+msgstr "सबैका लागि खाली छोड्नुहोस्। फरक सर्त भएका एउटै प्रकारका धेरै कार्य अवधि चरणबद्ध रूपमा खुल्छन्।"
+
+# key: reference.eligibility.everyone
+#: ninefruits/term/admin.py
+msgid "Everyone"
+msgstr "सबै"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "सीमित"
+
+# key: reference.fields.status
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgctxt "reference"
+msgid "Status"
+msgstr "स्थिति"
+
+# key: common.reason
+#: ninefruits/term/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "कारण"
+
+# key: reference.fields.source_session
+#: ninefruits/term/admin.py
+msgid "Copy from session"
+msgstr "यस सत्रबाट प्रतिलिपि"
+
+# key: reference.fields.academic_year
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Academic year"
+msgstr "शैक्षिक वर्ष"
+
+# key: reference.fields.term_type
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Term type"
+msgstr "सेमेस्टरको प्रकार"
+
+# key: reference.fields.windows_count
+#: ninefruits/term/admin.py
+msgid "Windows"
+msgstr "कार्य अवधिहरू"
+
+# key: reference.actions.change_status
+#: ninefruits/term/admin.py
+msgid "Change status"
+msgstr "स्थिति परिवर्तन गर्नुहोस्"
+
+# key: reference.notifications.term_status_changed
+#: ninefruits/term/admin.py
+msgid "Term status changed."
+msgstr "सेमेस्टरको स्थिति परिवर्तन गरियो।"
+
+#: ninefruits/term/admin.py
+msgid "No windows to copy."
+msgstr "प्रतिलिपि गर्ने कुनै कार्य अवधि छैन।"
+
+# key: reference.notifications.session_windows_copied
+#: ninefruits/term/admin.py
+#, python-format
+msgid "One window copied."
+msgid_plural "%(count)s windows copied."
+msgstr[0] "%(count)s कार्य अवधि प्रतिलिपि गरिए।"
+msgstr[1] "%(count)s कार्य अवधि प्रतिलिपि गरिए।"
+
+# key: reference.help.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "अर्को सत्रका विषय कार्य अवधिहरू (थप/हटाउने, परित्याग, ग्रेडिङ, मूल्याङ्कन) यस सत्रको मितिमा सारेर प्रतिलिपि गर्छ: सुरुतिरका अवधिले सुरुदेखिको दूरी, अन्त्यतिरकाले अन्त्यदेखिको दूरी कायम राख्छन्। प्रतिलिपिपछि मिलाउनुहोस्।"
+
+# key: reference.fields.weekdays
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "Days"
+msgstr "बारहरू"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "End"
+msgstr "अन्त्य"
+
+# key: reference.fields.start_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Start"
+msgstr "सुरु"
+
+# key: reference.term_statuses.planned
+#: ninefruits/term/enums.py
+msgid "Planned"
+msgstr "योजनाबद्ध"
+
+# key: reference.term_statuses.published
+#: ninefruits/term/enums.py
+msgctxt "reference.term_statuses"
+msgid "Published"
+msgstr "प्रकाशित"
+
+# key: reference.term_statuses.grades_closed
+#: ninefruits/term/enums.py
+msgid "Grades closed"
+msgstr "ग्रेड बन्द"
+
+# key: reference.term_statuses.archived
+#: ninefruits/term/enums.py
+msgid "Archived"
+msgstr "संग्रहित"
+
+# key: reference.term_window_types.registration_cart
+#: ninefruits/term/enums.py
+msgid "Registration cart"
+msgstr "दर्ता कार्ट"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/term/enums.py
+msgid "Registration"
+msgstr "विषय दर्ता"
+
+# key: reference.term_window_types.add_drop
+#: ninefruits/term/enums.py
+msgid "Add/drop"
+msgstr "थप/हटाउने"
+
+# key: reference.term_window_types.withdrawal
+#: ninefruits/term/enums.py
+msgid "Withdrawal"
+msgstr "विषय परित्याग"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/term/enums.py
+msgid "Grade entry"
+msgstr "ग्रेड प्रविष्टि"
+
+# key: reference.term_window_types.grade_appeal
+#: ninefruits/term/enums.py
+msgid "Grade appeal"
+msgstr "ग्रेड पुनरावेदन"
+
+# key: reference.term_window_types.course_evaluation
+#: ninefruits/term/enums.py
+msgctxt "reference.term_window_types"
+msgid "Course evaluation"
+msgstr "विषय मूल्याङ्कन"
+
+# key: reference.term_window_types.graduation_application
+#: ninefruits/term/enums.py
+msgid "Graduation application"
+msgstr "स्नातक आवेदन"
+
+# key: reference.term_window_types.additional_program_application
+#: ninefruits/term/enums.py
+msgid "Second major and minor applications"
+msgstr "दोस्रो मुख्य विषय र माइनर आवेदन"
+
+# key: reference.fields.code
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Code"
+msgstr "कोड"
+
+# key: reference.resources.academic_years.label
+#: ninefruits/term/models/term.py
+msgid "academic year"
+msgstr "शैक्षिक वर्ष"
+
+# key: reference.resources.academic_years.plural_label
+#: ninefruits/term/models/term.py
+msgid "academic years"
+msgstr "शैक्षिक वर्षहरू"
+
+# key: reference.fields.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular term"
+msgstr "नियमित सेमेस्टर"
+
+# key: reference.help.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
+msgstr "नियमित सेमेस्टर (जस्तै वसन्त, शरद) र छोटो अवधिका सत्रमा पछि फरक नियम लागू हुन्छन्, जस्तै क्रेडिट सीमा।"
+
+# key: reference.fields.sort_order
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgid "Order"
+msgstr "क्रम"
+
+# key: reference.resources.term_types.label
+#: ninefruits/term/models/term.py
+msgid "term type"
+msgstr "सेमेस्टरको प्रकार"
+
+# key: reference.resources.term_types.plural_label
+#: ninefruits/term/models/term.py
+msgid "term types"
+msgstr "सेमेस्टरका प्रकारहरू"
+
+# key: reference.help.term_code
+#: ninefruits/term/models/term.py
+msgid "For display only, e.g. 2026-FA. The code carries no business meaning."
+msgstr "देखाउनका लागि मात्र, जस्तै 2026-FA। कोडको कुनै व्यावसायिक अर्थ हुँदैन।"
+
+# key: reference.resources.terms.label
+#: ninefruits/term/models/term.py
+msgid "term"
+msgstr "सेमेस्टर"
+
+# key: reference.resources.terms.plural_label
+#: ninefruits/term/models/term.py
+msgid "terms"
+msgstr "सेमेस्टरहरू"
+
+# key: reference.fields.is_active
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "सक्रिय"
+
+# key: reference.resources.time_slots.label
+#: ninefruits/term/models/time_slot.py
+msgid "class period"
+msgstr "कक्षा पिरियड"
+
+# key: reference.resources.time_slots.plural_label
+#: ninefruits/term/models/time_slot.py
+msgid "class periods"
+msgstr "कक्षा पिरियडहरू"
+
+# key: reference.fields.term_session
+#: ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Session"
+msgstr "सत्र"
+
+# key: reference.help.term_session
+#: ninefruits/term/models/window.py
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
+msgstr "विषयका अन्तिम मिति विषयको सत्रअनुसार हुन्छन्: कार्य अवधि छोटो सत्रका लागि नभएसम्म पूरा सेमेस्टर।"
+
+# key: reference.fields.window_type
+#: ninefruits/term/models/window.py
+msgid "Window"
+msgstr "कार्य अवधि"
+
+# key: reference.fields.window_name
+#: ninefruits/term/models/window.py
+msgid "Name (optional)"
+msgstr "नाम (वैकल्पिक)"

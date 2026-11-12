@@ -103,8 +103,7 @@ msgid "The %(attribute)s field is required."
 msgstr "ຈຳເປັນຕ້ອງປ້ອນຊ່ອງ %(attribute)s."
 
 # key: validation.max.string
-#: actions/update_syllabus.py:27 actions/update_syllabus.py:40
-#: actions/update_syllabus.py:60 actions/update_syllabus.py:104
+#: actions/update_syllabus.py:27 actions/update_syllabus.py:40 actions/update_syllabus.py:60 actions/update_syllabus.py:104
 #, python-format
 msgid "The %(attribute)s field must not be greater than %(max)s characters."
 msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີບໍ່ເກີນ %(max)s ຕົວອັກສອນ."
@@ -142,23 +141,15 @@ msgstr "ຕາຕະລາງຮຽນ"
 #: admin/sections.py:140
 #, python-format
 msgctxt "offering"
-msgid ""
-"Preview: %(created)s section(s) would be copied, %(skipped)s skipped, "
-"%(with_notes)s with notes."
-msgstr ""
-"ຕົວຢ່າງ: ຈະສຳເນົາກຸ່ມຮຽນ %(created)s ກຸ່ມ, ຂ້າມ %(skipped)s ກຸ່ມ, ມີໝາຍເຫດ "
-"%(with_notes)s ກຸ່ມ."
+msgid "Preview: %(created)s section(s) would be copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "ຕົວຢ່າງ: ຈະສຳເນົາກຸ່ມຮຽນ %(created)s ກຸ່ມ, ຂ້າມ %(skipped)s ກຸ່ມ, ມີໝາຍເຫດ %(with_notes)s ກຸ່ມ."
 
 # key: offering.notifications.copied
 #: admin/sections.py:142
 #, python-format
 msgctxt "offering"
-msgid ""
-"%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with "
-"notes."
-msgstr ""
-"ສຳເນົາກຸ່ມຮຽນ %(created)s ກຸ່ມ, ຂ້າມ %(skipped)s ກຸ່ມ, ມີໝາຍເຫດ "
-"%(with_notes)s ກຸ່ມ."
+msgid "%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "ສຳເນົາກຸ່ມຮຽນ %(created)s ກຸ່ມ, ຂ້າມ %(skipped)s ກຸ່ມ, ມີໝາຍເຫດ %(with_notes)s ກຸ່ມ."
 
 # key: validation.gte.numeric
 #: admin/sections.py:178
@@ -177,8 +168,7 @@ msgid "Admitted from (year)"
 msgstr "ຮັບເຂົ້າຕັ້ງແຕ່ (ປີ)"
 
 # key: offering.fields.session
-#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660
-#: models/section.py:98
+#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660 models/section.py:98
 msgctxt "offering"
 msgid "Session"
 msgstr "ຊ່ວງຮຽນ"
@@ -195,15 +185,8 @@ msgstr "ໜ່ວຍງານທີ່ພະນັກງານຈັດການ
 
 # key: grading.help.evaluation_method
 #: admin/sections.py:216
-msgid ""
-"Absolute (default): instructors enter scores and the grades follow. Relative:"
-" instructors give grades within the institution's grade caps. Instructors ask"
-" for a change from the grade entry screen; it cannot change once grades are "
-"submitted."
-msgstr ""
-"ອິງເກນ (ຄ່າເລີ່ມຕົ້ນ): ອາຈານປ້ອນຄະແນນ ແລະ ເກຣດຈະຕາມມາ. ອິງກຸ່ມ: "
-"ອາຈານໃຫ້ເກຣດພາຍໃນເພດານເກຣດຂອງສະຖາບັນ. ອາຈານຂໍປ່ຽນຈາກໜ້າປ້ອນເກຣດ; "
-"ປ່ຽນບໍ່ໄດ້ຫຼັງຈາກສົ່ງເກຣດແລ້ວ."
+msgid "Absolute (default): instructors enter scores and the grades follow. Relative: instructors give grades within the institution's grade caps. Instructors ask for a change from the grade entry screen; it cannot change once grades are submitted."
+msgstr "ອິງເກນ (ຄ່າເລີ່ມຕົ້ນ): ອາຈານປ້ອນຄະແນນ ແລະ ເກຣດຈະຕາມມາ. ອິງກຸ່ມ: ອາຈານໃຫ້ເກຣດພາຍໃນເພດານເກຣດຂອງສະຖາບັນ. ອາຈານຂໍປ່ຽນຈາກໜ້າປ້ອນເກຣດ; ປ່ຽນບໍ່ໄດ້ຫຼັງຈາກສົ່ງເກຣດແລ້ວ."
 
 # key: offering.fields.section_code
 #: admin/sections.py:226 admin/sections.py:271 models/section.py:114
@@ -213,20 +196,13 @@ msgstr "ເລກກຸ່ມຮຽນ"
 # key: validation.alpha_dash
 #: admin/sections.py:236
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
-msgstr ""
-"ຊ່ອງ %(attribute)s ຕ້ອງມີແຕ່ຕົວອັກສອນ, ຕົວເລກ, ຂີດກາງ ແລະ ຂີດລຸ່ມເທົ່ານັ້ນ."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີແຕ່ຕົວອັກສອນ, ຕົວເລກ, ຂີດກາງ ແລະ ຂີດລຸ່ມເທົ່ານັ້ນ."
 
 # key: offering.help.change_session
 #: admin/sections.py:247 models/section.py:100
-msgid ""
-"Moving to another session takes its dates and the course version in effect "
-"when it starts."
-msgstr ""
-"ການຍ້າຍໄປຊ່ວງຮຽນອື່ນຈະໃຊ້ວັນທີຂອງຊ່ວງຮຽນນັ້ນ ແລະ "
-"ສະບັບວິຊາທີ່ມີຜົນເມື່ອຊ່ວງຮຽນເລີ່ມ."
+msgid "Moving to another session takes its dates and the course version in effect when it starts."
+msgstr "ການຍ້າຍໄປຊ່ວງຮຽນອື່ນຈະໃຊ້ວັນທີຂອງຊ່ວງຮຽນນັ້ນ ແລະ ສະບັບວິຊາທີ່ມີຜົນເມື່ອຊ່ວງຮຽນເລີ່ມ."
 
 # key: offering.fields.time_slot
 #: admin/sections.py:292
@@ -269,8 +245,7 @@ msgid "The %(attribute)s field must be at least %(min)s."
 msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າຢ່າງໜ້ອຍ %(min)s."
 
 # key: offering.fields.capacity
-#: admin/sections.py:379 admin/sections.py:673 models/section.py:122
-#: models/section.py:317 templates/offering/portal/section_detail.html:23
+#: admin/sections.py:379 admin/sections.py:673 models/section.py:122 models/section.py:317 templates/offering/portal/section_detail.html:23
 msgctxt "offering"
 msgid "Capacity"
 msgstr "ຄວາມຈຸ"
@@ -292,9 +267,7 @@ msgid "meeting times"
 msgstr "ເວລາຄາບຮຽນ"
 
 # key: offering.fields.instructors
-#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664
-#: models/section.py:246 models/section.py:247
-#: templates/offering/portal/section_detail.html:19
+#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664 models/section.py:246 models/section.py:247 templates/offering/portal/section_detail.html:19
 msgctxt "offering"
 msgid "Instructors"
 msgstr "ອາຈານ"
@@ -315,9 +288,7 @@ msgid "Students the seats are for"
 msgstr "ນັກສຶກສາທີ່ບ່ອນນັ່ງສະຫງວນໃຫ້"
 
 # key: reference.resources.terms.label
-#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90
-#: templates/offering/portal/catalog.html:14
-#: templates/offering/portal/teaching.html:11
+#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90 templates/offering/portal/catalog.html:14 templates/offering/portal/teaching.html:11
 msgid "term"
 msgstr "ພາກຮຽນ"
 
@@ -327,14 +298,12 @@ msgid "All"
 msgstr "ທັງໝົດ"
 
 # key: offering.fields.offering_unit
-#: admin/sections.py:507 models/section.py:119
-#: templates/offering/portal/catalog.html:22
+#: admin/sections.py:507 models/section.py:119 templates/offering/portal/catalog.html:22
 msgid "Offering unit"
 msgstr "ໜ່ວຍງານທີ່ເປີດສອນ"
 
 # key: offering.fields.status
-#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765
-#: models/section.py:124
+#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765 models/section.py:124
 msgctxt "offering"
 msgid "Status"
 msgstr "ສະຖານະ"
@@ -385,8 +354,7 @@ msgid "Credits"
 msgstr "ໜ່ວຍກິດ"
 
 # key: offering.fields.schedule
-#: admin/sections.py:668 templates/offering/portal/section_detail.html:21
-#: templates/offering/portal/teaching.html:30
+#: admin/sections.py:668 templates/offering/portal/section_detail.html:21 templates/offering/portal/teaching.html:30
 msgid "Schedule"
 msgstr "ຕາຕະລາງ"
 
@@ -407,12 +375,8 @@ msgstr "ຜູ້ທີ່ລົງທະບຽນບໍ່ໄດ້"
 
 # key: offering.help.exclusion
 #: admin/sections.py:748 models/section.py:133
-msgid ""
-"Students matching this cannot register, e.g. the course's own majors for a "
-"general course."
-msgstr ""
-"ນັກສຶກສາທີ່ກົງກັບເງື່ອນໄຂນີ້ບໍ່ສາມາດລົງທະບຽນໄດ້, ເຊັ່ນ "
-"ນັກສຶກສາສາຂາຂອງວິຊາເອງສຳລັບວິຊາທົ່ວໄປ."
+msgid "Students matching this cannot register, e.g. the course's own majors for a general course."
+msgstr "ນັກສຶກສາທີ່ກົງກັບເງື່ອນໄຂນີ້ບໍ່ສາມາດລົງທະບຽນໄດ້, ເຊັ່ນ ນັກສຶກສາສາຂາຂອງວິຊາເອງສຳລັບວິຊາທົ່ວໄປ."
 
 # key: offering.notifications.status_changed
 #: admin/sections.py:881
@@ -443,9 +407,7 @@ msgstr "ເປີດຄືນ"
 
 # key: offering.actions.syllabus
 # key: offering.syllabus.title
-#: admin/sections.py:911 models/section.py:370 models/section.py:371
-#: templates/offering/portal/section_detail.html:39
-#: templates/offering/portal/teaching.html:31
+#: admin/sections.py:911 models/section.py:370 models/section.py:371 templates/offering/portal/section_detail.html:39 templates/offering/portal/teaching.html:31
 msgid "Syllabus"
 msgstr "ປະມວນວິຊາ"
 
@@ -456,18 +418,11 @@ msgstr "ສຳເນົາຈາກພາກຮຽນອື່ນ"
 
 # key: offering.help.copy_sections
 #: admin/sections.py:946
-msgid ""
-"Copies sections that were not cancelled, in your scope, as drafts: "
-"instructors still employed, meetings with rooms (left out if the room is now "
-"taken), reserved seats and syllabus drafts. Sessions are matched by code."
-msgstr ""
-"ສຳເນົາກຸ່ມຮຽນທີ່ບໍ່ໄດ້ຍົກເລີກ ພາຍໃນຂອບເຂດຂອງທ່ານ ເປັນສະບັບຮ່າງ: "
-"ອາຈານທີ່ຍັງເຮັດວຽກຢູ່, ຄາບຮຽນພ້ອມຫ້ອງ (ຖ້າຫ້ອງຖືກໃຊ້ແລ້ວຈະເວັ້ນໄວ້), "
-"ບ່ອນນັ່ງສະຫງວນ ແລະ ສະບັບຮ່າງຂອງປະມວນວິຊາ. ຊ່ວງຮຽນຈັບຄູ່ຕາມລະຫັດ."
+msgid "Copies sections that were not cancelled, in your scope, as drafts: instructors still employed, meetings with rooms (left out if the room is now taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr "ສຳເນົາກຸ່ມຮຽນທີ່ບໍ່ໄດ້ຍົກເລີກ ພາຍໃນຂອບເຂດຂອງທ່ານ ເປັນສະບັບຮ່າງ: ອາຈານທີ່ຍັງເຮັດວຽກຢູ່, ຄາບຮຽນພ້ອມຫ້ອງ (ຖ້າຫ້ອງຖືກໃຊ້ແລ້ວຈະເວັ້ນໄວ້), ບ່ອນນັ່ງສະຫງວນ ແລະ ສະບັບຮ່າງຂອງປະມວນວິຊາ. ຊ່ວງຮຽນຈັບຄູ່ຕາມລະຫັດ."
 
 # key: offering.timetable.mode
-#: admin/timetables.py:33 templates/offering/admin/timetables.html:15
-#: templates/offering/portal/teaching.html:15
+#: admin/timetables.py:33 templates/offering/admin/timetables.html:15 templates/offering/portal/teaching.html:15
 msgid "Show"
 msgstr "ສະແດງ"
 
@@ -551,13 +506,8 @@ msgstr "ຂະໜາດລາຍຊື່ລໍຖ້າ"
 
 # key: registration.help.waitlist_capacity
 #: models/section.py:147
-msgid ""
-"0 means no waitlist. Freed seats go to waiting students in order, after all "
-"rules are checked again."
-msgstr ""
-"0 ໝາຍຄວາມວ່າບໍ່ມີລາຍຊື່ລໍຖ້າ. "
-"ບ່ອນນັ່ງທີ່ວ່າງຈະມອບໃຫ້ນັກສຶກສາທີ່ລໍຖ້າຕາມລຳດັບ, "
-"ຫຼັງຈາກກວດກົດລະບຽບທັງໝົດອີກຄັ້ງ."
+msgid "0 means no waitlist. Freed seats go to waiting students in order, after all rules are checked again."
+msgstr "0 ໝາຍຄວາມວ່າບໍ່ມີລາຍຊື່ລໍຖ້າ. ບ່ອນນັ່ງທີ່ວ່າງຈະມອບໃຫ້ນັກສຶກສາທີ່ລໍຖ້າຕາມລຳດັບ, ຫຼັງຈາກກວດກົດລະບຽບທັງໝົດອີກຄັ້ງ."
 
 # key: grading.fields.evaluation_method
 #: models/section.py:151
@@ -686,8 +636,7 @@ msgid "All units"
 msgstr "ທຸກໜ່ວຍງານ"
 
 # key: offering.catalog.search
-#: templates/offering/portal/catalog.html:31
-#: templates/offering/portal/catalog.html:34
+#: templates/offering/portal/catalog.html:31 templates/offering/portal/catalog.html:34
 msgid "Search"
 msgstr "ຄົ້ນຫາ"
 
@@ -703,14 +652,12 @@ msgid "%(credits)s credits"
 msgstr "%(credits)s ໜ່ວຍກິດ"
 
 # key: offering.catalog.instructor_tba
-#: templates/offering/portal/catalog.html:46
-#: templates/offering/portal/section_detail.html:20
+#: templates/offering/portal/catalog.html:46 templates/offering/portal/section_detail.html:20
 msgid "Instructor to be announced"
 msgstr "ອາຈານຈະແຈ້ງພາຍຫຼັງ"
 
 # key: offering.catalog.time_tba
-#: templates/offering/portal/catalog.html:47
-#: templates/offering/portal/section_detail.html:22
+#: templates/offering/portal/catalog.html:47 templates/offering/portal/section_detail.html:22
 msgid "Time to be announced"
 msgstr "ເວລາຈະແຈ້ງພາຍຫຼັງ"
 
@@ -770,8 +717,7 @@ msgid "Description"
 msgstr "ຄຳອະທິບາຍ"
 
 # key: offering.syllabus.edit
-#: templates/offering/portal/section_detail.html:40
-#: templates/offering/portal/syllabus_editor.html:10
+#: templates/offering/portal/section_detail.html:40 templates/offering/portal/syllabus_editor.html:10
 msgid "Edit syllabus"
 msgstr "ແກ້ໄຂປະມວນວິຊາ"
 
@@ -786,21 +732,17 @@ msgid "Draft: students do not see it until it is published."
 msgstr "ສະບັບຮ່າງ: ນັກສຶກສາຈະບໍ່ເຫັນຈົນກວ່າຈະເຜີຍແຜ່."
 
 # key: offering.syllabus.assessment
-#: templates/offering/portal/section_detail.html:54
-#: templates/offering/portal/syllabus_editor.html:35
+#: templates/offering/portal/section_detail.html:54 templates/offering/portal/syllabus_editor.html:35
 msgid "Assessment"
 msgstr "ການວັດຜົນ"
 
 # key: offering.syllabus.weekly_plan
-#: templates/offering/portal/section_detail.html:62
-#: templates/offering/portal/syllabus_editor.html:48
+#: templates/offering/portal/section_detail.html:62 templates/offering/portal/syllabus_editor.html:48
 msgid "Weekly plan"
 msgstr "ແຜນການສອນລາຍອາທິດ"
 
 # key: offering.syllabus.week
-#: templates/offering/portal/section_detail.html:65
-#: templates/offering/portal/syllabus_editor.html:52
-#: templates/offering/portal/syllabus_editor.html:53
+#: templates/offering/portal/section_detail.html:65 templates/offering/portal/syllabus_editor.html:52 templates/offering/portal/syllabus_editor.html:53
 #, python-format
 msgid "Week %(week)s"
 msgstr "ອາທິດທີ %(week)s"
@@ -876,3 +818,8 @@ msgstr "ເຜີຍແຜ່ແລ້ວ"
 #: views/portal.py:322
 msgid "Write"
 msgstr "ຂຽນ"
+
+# key: curriculum.or
+#: ninefruits/offering/views/portal.py
+msgid "or"
+msgstr "ຫຼື"

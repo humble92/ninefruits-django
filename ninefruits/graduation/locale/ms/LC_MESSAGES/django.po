@@ -1,0 +1,443 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/graduation/actions/_support.py
+msgid "Enter a reason."
+msgstr "Masukkan sebab."
+
+# key: graduation.errors.not_enrolled
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "Only an enrolled student can graduate."
+msgstr "Hanya pelajar aktif boleh bergraduat."
+
+# key: graduation.errors.no_audit
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "No stored degree audit: run the audit first."
+msgstr "Tiada semakan bergraduat yang disimpan: jalankan semakan dahulu."
+
+# key: graduation.errors.audit_not_satisfied
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "The latest degree audit is not satisfied."
+msgstr "Semakan bergraduat terkini tidak dipenuhi."
+
+# key: graduation.errors.waiver_exists
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "A pending or approved waiver already exists for this requirement."
+msgstr "Pengecualian yang menunggu atau diluluskan sudah wujud bagi syarat ini."
+
+# key: graduation.errors.waiver_not_approved
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "Only an approved waiver can be lifted."
+msgstr "Hanya pengecualian yang diluluskan boleh ditarik balik."
+
+# key: grading.errors.request_decided
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "The request is already decided."
+msgstr "Permohonan ini telah pun diputuskan."
+
+# key: graduation.errors.own_waiver
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "You cannot decide your own waiver request."
+msgstr "Anda tidak boleh memutuskan permohonan pengecualian anda sendiri."
+
+# key: curriculum.fields.program_role
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgid "Program role"
+msgstr "Peranan program"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Satisfied"
+msgstr "Dipenuhi"
+
+# key: graduation.satisfied.no
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Not satisfied"
+msgstr "Tidak dipenuhi"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "Program"
+
+# key: registration.fields.status
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgctxt "registration"
+msgid "Status"
+msgstr "Status"
+
+# key: security.scope_types.global
+#: ninefruits/graduation/admin/audits.py
+msgid "All"
+msgstr "Semua"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgid "Student number"
+msgstr "Nombor matrik"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Name"
+msgstr "Nama"
+
+# key: people.fields.year_level
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Year"
+msgstr "Tahun"
+
+# key: graduation.fields.earned_credits
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Earned credits"
+msgstr "Kredit diperoleh"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "PNGK"
+
+# key: graduation.actions.run_audits
+#: ninefruits/graduation/admin/audits.py
+msgid "Run audits"
+msgstr "Jalankan semakan"
+
+# key: graduation.notifications.audits_run
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(students)s student(s) audited, %(satisfied)s satisfied."
+msgstr "%(students)s pelajar disemak, %(satisfied)s memenuhi syarat."
+
+# key: graduation.actions.open
+#: ninefruits/graduation/admin/audits.py
+msgctxt "graduation"
+msgid "Open"
+msgstr "Buka"
+
+# key: graduation.actions.rerun
+#: ninefruits/graduation/admin/audits.py
+msgid "Audit again"
+msgstr "Semak semula"
+
+# key: graduation.notifications.audit_saved
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/student_record.py
+msgid "Degree audit saved."
+msgstr "Semakan bergraduat disimpan."
+
+# key: graduation.actions.graduate
+#: ninefruits/graduation/admin/audits.py
+msgid "Graduate"
+msgstr "Luluskan bergraduat"
+
+# key: graduation.notifications.graduated
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(count)s student(s) graduated, %(errors)s not processed."
+msgstr "%(count)s pelajar bergraduat, %(errors)s tidak diproses."
+
+# key: common.reason
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Sebab"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/models.py
+msgid "Term"
+msgstr "Semester"
+
+# key: graduation.fields.min_year_level
+#: ninefruits/graduation/admin/forms.py
+msgid "From year level"
+msgstr "Mulai tahun pengajian"
+
+# key: people.fields.graduation_date
+#: ninefruits/graduation/admin/forms.py
+msgid "Graduation date"
+msgstr "Tarikh bergraduat"
+
+# key: curriculum.sections.requirements
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Requirements"
+msgstr "Syarat"
+
+# key: graduation.actions.audit_now
+#: ninefruits/graduation/admin/student_record.py
+msgctxt "graduation.actions"
+msgid "Degree audit"
+msgstr "Semakan bergraduat"
+
+# key: graduation.actions.waive
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waive a requirement"
+msgstr "Kecualikan syarat"
+
+# key: graduation.notifications.waiver_requested
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waiver requested; it counts once another person approves it."
+msgstr "Pengecualian telah dipohon; ia dikira setelah diluluskan oleh individu lain."
+
+# key: graduation.help.waiver
+#: ninefruits/graduation/admin/student_record.py
+msgid "Another person with the graduation permission must approve the waiver before it counts."
+msgstr "Individu lain yang mempunyai kebenaran pengijazahan mesti meluluskan pengecualian sebelum ia dikira."
+
+# key: grading.fields.requested_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Dipohon oleh"
+
+# key: grading.fields.decided_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "Diputuskan oleh"
+
+# key: grading.fields.decision_note
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Catatan"
+
+# key: graduation.fields.lift_reason
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Lift reason"
+msgstr "Sebab penarikan balik"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/graduation/admin/waivers.py
+msgid "Approve"
+msgstr "Luluskan"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Approved"
+msgstr "Diluluskan"
+
+# key: grading.actions.reject
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Tolak"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Rejected"
+msgstr "Ditolak"
+
+# key: graduation.actions.lift
+#: ninefruits/graduation/admin/waivers.py
+msgid "Lift the waiver"
+msgstr "Tarik balik pengecualian"
+
+# key: graduation.waiver_statuses.lifted
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Lifted"
+msgstr "Ditarik balik"
+
+# key: portal.navigation.graduation
+#: ninefruits/graduation/apps.py
+msgctxt "portal"
+msgid "Graduation"
+msgstr "Pengijazahan"
+
+# key: graduation.waiver_statuses.pending
+#: ninefruits/graduation/enums.py
+msgctxt "graduation"
+msgid "Pending"
+msgstr "Menunggu"
+
+# key: people.sections.record
+#: ninefruits/graduation/models.py
+msgid "Student record"
+msgstr "Rekod pelajar"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/graduation/models.py
+msgid "graduation requirements"
+msgstr "syarat bergraduat"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "Diperlukan"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Audited"
+msgstr "Disemak"
+
+# key: graduation.actions.audit_now
+# key: graduation.resources.audits.label
+#: ninefruits/graduation/models.py
+msgid "Degree audit"
+msgstr "Semakan bergraduat"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/graduation/models.py
+msgid "Degree audits"
+msgstr "Semakan bergraduat"
+
+# key: graduation.report_columns.status
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "Status"
+
+# key: grading.fields.requested_at
+#: ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Dipohon"
+
+# key: graduation.resources.waivers.label
+#: ninefruits/graduation/models.py
+msgid "Requirement waiver"
+msgstr "Pengecualian syarat"
+
+# key: graduation.resources.waivers.plural_label
+#: ninefruits/graduation/models.py
+msgid "Requirement waivers"
+msgstr "Pengecualian syarat"
+
+# key: graduation.issues.no_requirement_set
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "No graduation requirements are defined for catalog year %(year)s."
+msgstr "Tiada syarat bergraduat ditetapkan bagi tahun kurikulum %(year)s."
+
+# key: graduation.issues.requirement
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Requirement not met: %(name)s"
+msgstr "Syarat tidak dipenuhi: %(name)s"
+
+# key: graduation.issues.total_credits
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Total credits %(earned)s of %(required)s required."
+msgstr "Jumlah kredit %(earned)s daripada %(required)s yang diperlukan."
+
+# key: graduation.issues.gpa
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Cumulative GPA %(gpa)s below the minimum %(minimum)s."
+msgstr "PNGK %(gpa)s di bawah minimum %(minimum)s."
+
+# key: graduation.settings.degree_number_pattern
+#: ninefruits/graduation/settings_pages.py
+msgid "Degree number pattern"
+msgstr "Corak nombor ijazah"
+
+# key: graduation.settings.degree_number_pattern_help
+#: ninefruits/graduation/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {PROGRAM} program code, {YYYY} or {YY} graduation year, {SEQ:5} sequence per distinct prefix (required). Default {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+msgstr "Token: {PROGRAM} kod program, {YYYY} atau {YY} tahun bergraduat, {SEQ:5} nombor siri bagi setiap awalan berbeza (wajib). Lalai {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+
+# key: graduation.settings.minimum_cumulative_gpa
+#: ninefruits/graduation/settings_pages.py
+msgid "Minimum cumulative GPA"
+msgstr "PNGK minimum"
+
+# key: graduation.settings.minimum_cumulative_gpa_help
+#: ninefruits/graduation/settings_pages.py
+msgid "Required to graduate (primary program). Leave empty for none."
+msgstr "Diperlukan untuk bergraduat (program utama). Biarkan kosong jika tiada."
+
+# key: graduation.settings.title
+#: ninefruits/graduation/settings_pages.py
+msgid "Graduation settings"
+msgstr "Tetapan pengijazahan"
+
+# key: evaluation.portal.back
+#: ninefruits/graduation/templates/graduation/admin/audit_detail.html
+msgid "Back"
+msgstr "Kembali"
+
+# key: graduation.actions.save_audit
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html
+msgid "Save this audit"
+msgstr "Simpan semakan ini"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html ninefruits/graduation/templates/graduation/admin/graduate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Batal"
+
+# key: graduation.fields.waived
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Waived"
+msgstr "Dikecualikan"
+
+# key: curriculum.fields.credits
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Kredit"
+
+# key: graduation.fields.courses
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "courses"
+msgstr "kursus"
+
+# key: graduation.fields.missing
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Not passed"
+msgstr "Belum lulus"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+msgid "Graduation requirements"
+msgstr "Syarat bergraduat"
+
+# key: graduation.portal.intro
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+#, python-format
+msgid "Your progress against the requirements of catalog year %(year)s, evaluated now. Ask your department about waivers."
+msgstr "Kemajuan anda berbanding syarat tahun kurikulum %(year)s, dinilai pada masa ini. Hubungi jabatan anda mengenai pengecualian."

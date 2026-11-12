@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# key: admin.audit.fields.log
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Log"
+msgstr "Журнал"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Table"
+msgstr "Таблица"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Time"
+msgstr "Время"
+
+# key: admin.audit.fields.subject
+#: ninefruits/audit/admin.py
+msgid "Record"
+msgstr "Запись"
+
+# key: admin.audit.fields.actor
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "User"
+msgstr "Пользователь"
+
+# key: common.reason
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Reason"
+msgstr "Причина"
+
+# key: admin.audit.fields.properties
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Details"
+msgstr "Подробности"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Operation"
+msgstr "Операция"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Changed columns"
+msgstr "Изменённые столбцы"
+
+#: ninefruits/audit/admin.py
+msgid "Changes"
+msgstr "Изменения"
+
+#: ninefruits/audit/admin.py
+msgid "Column"
+msgstr "Столбец"
+
+# key: admin.record_changes.fields.old_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Before"
+msgstr "До"
+
+# key: admin.record_changes.fields.new_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "After"
+msgstr "После"
+
+# key: admin.audit.fields.event
+# key: admin.security_events.fields.type
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Event"
+msgstr "Событие"
+
+# key: admin.audit.fields.request_id
+#: ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Request ID"
+msgstr "ID запроса"
+
+# key: admin.audit.fields.ip_address
+#: ninefruits/audit/models.py
+msgid "IP address"
+msgstr "IP-адрес"
+
+# key: admin.activities.label
+#: ninefruits/audit/models.py
+msgid "activity"
+msgstr "действие"
+
+# key: admin.activities.plural_label
+#: ninefruits/audit/models.py
+msgid "activity log"
+msgstr "журнал действий"
+
+# key: admin.record_changes.fields.transaction_id
+#: ninefruits/audit/models.py
+msgid "Transaction"
+msgstr "Транзакция"
+
+# key: admin.record_changes.fields.record_id
+#: ninefruits/audit/models.py
+msgid "Record ID"
+msgstr "ID записи"
+
+# key: admin.record_changes.fields.database_user
+#: ninefruits/audit/models.py
+msgid "Database user"
+msgstr "Пользователь БД"
+
+# key: admin.record_changes.label
+#: ninefruits/audit/models.py
+msgid "data change"
+msgstr "изменение данных"
+
+# key: admin.record_changes.plural_label
+#: ninefruits/audit/models.py
+msgid "data changes"
+msgstr "изменения данных"
+
+# key: admin.security_events.fields.identifier
+#: ninefruits/audit/models.py
+msgid "Sign-in name"
+msgstr "Имя для входа"
+
+# key: admin.security_events.label
+#: ninefruits/audit/models.py
+msgid "security event"
+msgstr "событие безопасности"
+
+# key: admin.security_events.plural_label
+#: ninefruits/audit/models.py
+msgid "security events"
+msgstr "события безопасности"
+
+# key: security.event_types.login_succeeded
+#: ninefruits/audit/security_events.py
+msgid "Signed in"
+msgstr "Вход выполнен"
+
+# key: security.event_types.login_failed
+#: ninefruits/audit/security_events.py
+msgid "Sign-in failed"
+msgstr "Неудачный вход"
+
+# key: security.event_types.login_locked_out
+#: ninefruits/audit/security_events.py
+msgid "Sign-in locked"
+msgstr "Вход заблокирован"
+
+# key: security.event_types.account_unlocked
+#: ninefruits/audit/security_events.py
+msgid "Account unlocked"
+msgstr "Учётная запись разблокирована"
+
+# key: security.event_types.logout
+#: ninefruits/audit/security_events.py
+msgid "Signed out"
+msgstr "Выход выполнен"
+
+# key: security.event_types.password_reset
+#: ninefruits/audit/security_events.py
+msgid "Password reset"
+msgstr "Пароль сброшен"
+
+# key: security.event_types.mfa_enabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor enabled"
+msgstr "Двухфакторная аутентификация включена"
+
+# key: security.event_types.mfa_confirmed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor confirmed"
+msgstr "Двухфакторная аутентификация подтверждена"
+
+# key: security.event_types.mfa_disabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor disabled"
+msgstr "Двухфакторная аутентификация отключена"
+
+# key: security.event_types.mfa_challenge_failed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor code rejected"
+msgstr "Код двухфакторной аутентификации отклонён"
+
+# key: security.event_types.mfa_recovery_code_used
+#: ninefruits/audit/security_events.py
+msgid "Recovery code used"
+msgstr "Использован код восстановления"
+
+# key: security.event_types.mfa_recovery_codes_regenerated
+#: ninefruits/audit/security_events.py
+msgid "Recovery codes regenerated"
+msgstr "Коды восстановления созданы заново"
+
+# key: security.event_types.mfa_reset
+#: ninefruits/audit/security_events.py
+msgid "Two-factor reset by administrator"
+msgstr "Двухфакторная аутентификация сброшена администратором"
+
+# key: security.event_types.mfa_email_code_sent
+#: ninefruits/audit/security_events.py
+msgid "Email code sent"
+msgstr "Код по эл. почте отправлен"
+
+# key: security.event_types.mfa_email_enabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned on"
+msgstr "Коды по эл. почте включены"
+
+# key: security.event_types.mfa_email_disabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned off"
+msgstr "Коды по эл. почте отключены"
+
+# key: security.event_types.role_assigned
+#: ninefruits/audit/security_events.py
+msgid "Role assigned"
+msgstr "Роль назначена"
+
+# key: security.event_types.role_assignment_revoked
+#: ninefruits/audit/security_events.py
+msgid "Role assignment ended"
+msgstr "Назначение роли завершено"
+
+# key: security.event_types.role_permissions_changed
+#: ninefruits/audit/security_events.py
+msgid "Role permissions changed"
+msgstr "Разрешения роли изменены"
+
+# key: security.event_types.sensitive_data_revealed
+#: ninefruits/audit/security_events.py
+msgid "Sensitive data revealed"
+msgstr "Просмотрены конфиденциальные данные"
+
+# key: security.event_types.data_exported
+#: ninefruits/audit/security_events.py
+msgid "Data exported"
+msgstr "Данные выгружены"
+
+# key: security.event_types.audit_pruned
+#: ninefruits/audit/security_events.py
+msgid "Audit records pruned"
+msgstr "Записи аудита очищены"
+
+# key: security.event_types.password_changed
+#: ninefruits/audit/security_events.py
+msgid "Password changed"
+msgstr "Пароль изменён"
+
+# key: security.event_types.email_changed
+#: ninefruits/audit/security_events.py
+msgid "Email changed"
+msgstr "Эл. почта изменена"

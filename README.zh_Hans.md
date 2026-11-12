@@ -1,6 +1,6 @@
 # Ninefruits — 高校教务管理系统（Django）
 
-**언어 / Languages / 语言 / ພາສາ**
+**Languages / 언어 / 语言 / ພາສາ**
 
 | 语言 | README | 手册 |
 |---|---|---|
@@ -8,10 +8,22 @@
 | 한국어 | [README.ko.md](README.ko.md) | [docs/manual/ko/](docs/manual/ko/README.md) |
 | 简体中文 | [README.zh_Hans.md](README.zh_Hans.md)（本文） | [docs/manual/zh_Hans/](docs/manual/zh_Hans/README.md) |
 | ລາວ | [README.lo.md](README.lo.md) | [docs/manual/lo/](docs/manual/lo/README.md) |
+| Deutsch | [README.de.md](README.de.md) | [docs/manual/de/](docs/manual/de/README.md) |
+| Filipino | [README.fil.md](README.fil.md) | [docs/manual/fil/](docs/manual/fil/README.md) |
+| Français | [README.fr.md](README.fr.md) | [docs/manual/fr/](docs/manual/fr/README.md) |
+| 日本語 | [README.ja.md](README.ja.md) | [docs/manual/ja/](docs/manual/ja/README.md) |
+| Монгол | [README.mn.md](README.mn.md) | [docs/manual/mn/](docs/manual/mn/README.md) |
+| Bahasa Melayu | [README.ms.md](README.ms.md) | [docs/manual/ms/](docs/manual/ms/README.md) |
+| नेपाली | [README.ne.md](README.ne.md) | [docs/manual/ne/](docs/manual/ne/README.md) |
+| Русский | [README.ru.md](README.ru.md) | [docs/manual/ru/](docs/manual/ru/README.md) |
+| ไทย | [README.th.md](README.th.md) | [docs/manual/th/](docs/manual/th/README.md) |
+| Türkçe | [README.tr.md](README.tr.md) | [docs/manual/tr/](docs/manual/tr/README.md) |
+| Oʻzbek | [README.uz.md](README.uz.md) | [docs/manual/uz/](docs/manual/uz/README.md) |
+| Tiếng Việt | [README.vi.md](README.vi.md) | [docs/manual/vi/](docs/manual/vi/README.md) |
 
 要添加其他语言，请参阅[添加语言指南](docs/development/adding-a-language.md)（英文，[한국어](docs/development/adding-a-language.ko.md)）。
 
-Ninefruits 是一套可在多所高校部署的教务管理系统（Student Information System）。它覆盖教务工作的核心——招生、学籍、培养方案与开课、选课、成绩、课程评价、证明、语言/综合考试、考勤、毕业资格审核、报表以及 LMS 对接基础——界面和文档支持韩语、英语、简体中文和老挝语。
+Ninefruits 是一套可在多所高校部署的教务管理系统（Student Information System）。它覆盖教务工作的核心——招生、学籍、培养方案与开课、选课、成绩、课程评价、证明、语言/综合考试、考勤、毕业资格审核、报表以及 LMS 对接基础——界面和文档支持上表所列的 16 种语言。
 
 本仓库是 [Ninefruits Laravel 版](https://github.com/humble92/ninefruits-laravel) v1.0.0（Laravel 13、Filament、Livewire）移植到 Python 3.14 / Django 6.1 / PostgreSQL 18 的版本。移植完整保留了原版的行为和数据库结构：Django 迁移原样重放原版的 DDL，并与原版的 `pg_dump` 逐个对象比较（`tests/db/test_schema_equivalence.py`、`tools/schema_dump_diff.py`）。因此任一版本的安装都可以用标准 PostgreSQL 工具迁移到另一版本。移植的过程和原因记录在 [porting/](porting/README.md)（计划、各阶段报告、设计决策、测试对照表）。
 

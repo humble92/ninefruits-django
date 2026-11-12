@@ -2,7 +2,7 @@
 
 For the staff who administer the system day to day and for the IT operators who install, deploy and maintain it. The screens are available in English (language menu).
 
-Other languages: [한국어](../ko/README.md), [简体中文](../zh_Hans/README.md), [ລາວ](../lo/README.md). Korean is the source; the other editions are translations awaiting native review.
+Other languages: [한국어](../ko/README.md), [简体中文](../zh_Hans/README.md), [ລາວ](../lo/README.md), [Deutsch](../de/README.md), [Filipino](../fil/README.md), [Français](../fr/README.md), [日本語](../ja/README.md), [Монгол](../mn/README.md), [Bahasa Melayu](../ms/README.md), [नेपाली](../ne/README.md), [Русский](../ru/README.md), [ไทย](../th/README.md), [Türkçe](../tr/README.md), [Oʻzbek](../uz/README.md), [Tiếng Việt](../vi/README.md). Korean is the source; the other editions are translations awaiting native review.
 
 ## Administrator manual
 

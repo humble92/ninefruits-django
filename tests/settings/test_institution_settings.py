@@ -73,14 +73,23 @@ PAGE = "/admin/settings/institution/"
 
 
 # -- settings migrations ---------------------------------------------------------------------------
-def test_migrations_create_the_institution_settings_with_lao() -> None:
+SHIPPED_LOCALES = [
+    "en",
+    "ko",
+    "zh-hans",
+    "lo",
+    *["de", "ru", "ms", "fil", "fr", "ja", "mn", "ne", "th", "tr", "uz", "vi"],
+]
+
+
+def test_migrations_create_the_institution_settings_with_every_shipped_language() -> None:
     rows = {row.name: row.payload for row in SettingValue.objects.filter(group="institution")}
-    assert rows["supported_locales"] == ["en", "ko", "zh-hans", "lo"]
+    assert rows["supported_locales"] == SHIPPED_LOCALES
     assert rows["default_locale"] == "en"
     assert rows["name"] == {"en": django_settings.APP_NAME}
     assert rows["timezone"]
     loaded = InstitutionSettings.load()
-    assert loaded.supported_locales == ["en", "ko", "zh-hans", "lo"]
+    assert loaded.supported_locales == SHIPPED_LOCALES
 
 
 class _Apps:
@@ -107,6 +116,33 @@ def test_lao_migration_only_extends_the_shipped_default() -> None:
     lao.forwards(_Apps(), None)
     row.refresh_from_db()
     assert row.payload == ["en", "ko"]
+
+
+def test_twelve_locales_migration_only_extends_the_shipped_default() -> None:
+    twelve = importlib.import_module("ninefruits.settings.migrations.0017_twelve_locales")
+    row = SettingValue.objects.get(group="institution", name="supported_locales")
+
+    row.payload = ["zh-hans", "en", "ko", "lo"]
+    row.save()
+    twelve.forwards(_Apps(), None)
+    row.refresh_from_db()
+    assert row.payload == [
+        "zh-hans",
+        "en",
+        "ko",
+        "lo",
+        *["de", "ru", "ms", "fil", "fr", "ja", "mn", "ne", "th", "tr", "uz", "vi"],
+    ]
+
+    twelve.backwards(_Apps(), None)
+    row.refresh_from_db()
+    assert row.payload == ["zh-hans", "en", "ko", "lo"]
+
+    row.payload = ["en", "ko", "lo"]  # changed on purpose: kept
+    row.save()
+    twelve.forwards(_Apps(), None)
+    row.refresh_from_db()
+    assert row.payload == ["en", "ko", "lo"]
 
 
 def test_rejects_unknown_time_zones() -> None:

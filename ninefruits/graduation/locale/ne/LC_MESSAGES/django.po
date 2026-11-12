@@ -1,0 +1,442 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/graduation/actions/_support.py
+msgid "Enter a reason."
+msgstr "कारण प्रविष्ट गर्नुहोस्।"
+
+# key: graduation.errors.not_enrolled
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "Only an enrolled student can graduate."
+msgstr "अध्ययनरत विद्यार्थी मात्र स्नातक हुन सक्छन्।"
+
+# key: graduation.errors.no_audit
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "No stored degree audit: run the audit first."
+msgstr "सुरक्षित स्नातक योग्यता जाँच छैन: पहिले जाँच चलाउनुहोस्।"
+
+# key: graduation.errors.audit_not_satisfied
+#: ninefruits/graduation/actions/graduate_students.py
+msgid "The latest degree audit is not satisfied."
+msgstr "पछिल्लो स्नातक योग्यता जाँच पूरा भएको छैन।"
+
+# key: graduation.errors.waiver_exists
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "A pending or approved waiver already exists for this requirement."
+msgstr "यस आवश्यकताका लागि विचाराधीन वा स्वीकृत छुट पहिले नै छ।"
+
+# key: graduation.errors.waiver_not_approved
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "Only an approved waiver can be lifted."
+msgstr "स्वीकृत छुट मात्र हटाउन सकिन्छ।"
+
+# key: grading.errors.request_decided
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "The request is already decided."
+msgstr "अनुरोधको निर्णय भइसकेको छ।"
+
+# key: graduation.errors.own_waiver
+#: ninefruits/graduation/actions/waive_requirement.py
+msgid "You cannot decide your own waiver request."
+msgstr "तपाईं आफ्नै छुट अनुरोधको निर्णय गर्न सक्नुहुन्न।"
+
+# key: curriculum.fields.program_role
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgid "Program role"
+msgstr "कार्यक्रमको भूमिका"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Satisfied"
+msgstr "पूरा भएको"
+
+# key: graduation.satisfied.no
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Not satisfied"
+msgstr "पूरा नभएको"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "कार्यक्रम"
+
+# key: registration.fields.status
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgctxt "registration"
+msgid "Status"
+msgstr "स्थिति"
+
+# key: security.scope_types.global
+#: ninefruits/graduation/admin/audits.py
+msgid "All"
+msgstr "सबै"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/waivers.py
+msgid "Student number"
+msgstr "विद्यार्थी नम्बर"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Name"
+msgstr "नाम"
+
+# key: people.fields.year_level
+#: ninefruits/graduation/admin/audits.py
+msgctxt "people"
+msgid "Year"
+msgstr "वर्ष"
+
+# key: graduation.fields.earned_credits
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Earned credits"
+msgstr "प्राप्त क्रेडिट"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "सञ्चित GPA"
+
+# key: graduation.actions.run_audits
+#: ninefruits/graduation/admin/audits.py
+msgid "Run audits"
+msgstr "जाँच चलाउनुहोस्"
+
+# key: graduation.notifications.audits_run
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(students)s student(s) audited, %(satisfied)s satisfied."
+msgstr "%(students)s विद्यार्थी जाँचियो, %(satisfied)s पूरा भएको।"
+
+# key: graduation.actions.open
+#: ninefruits/graduation/admin/audits.py
+msgctxt "graduation"
+msgid "Open"
+msgstr "खोल्नुहोस्"
+
+# key: graduation.actions.rerun
+#: ninefruits/graduation/admin/audits.py
+msgid "Audit again"
+msgstr "फेरि जाँच गर्नुहोस्"
+
+# key: graduation.notifications.audit_saved
+#: ninefruits/graduation/admin/audits.py ninefruits/graduation/admin/student_record.py
+msgid "Degree audit saved."
+msgstr "स्नातक योग्यता जाँच सुरक्षित गरियो।"
+
+# key: graduation.actions.graduate
+#: ninefruits/graduation/admin/audits.py
+msgid "Graduate"
+msgstr "स्नातक गराउनुहोस्"
+
+# key: graduation.notifications.graduated
+#: ninefruits/graduation/admin/audits.py
+#, python-format
+msgid "%(count)s student(s) graduated, %(errors)s not processed."
+msgstr "%(count)s विद्यार्थी स्नातक भए, %(errors)s प्रक्रिया भएनन्।"
+
+# key: common.reason
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "common"
+msgid "Reason"
+msgstr "कारण"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/models.py
+msgid "Term"
+msgstr "सेमेस्टर"
+
+# key: graduation.fields.min_year_level
+#: ninefruits/graduation/admin/forms.py
+msgid "From year level"
+msgstr "यस वर्षदेखि"
+
+# key: people.fields.graduation_date
+#: ninefruits/graduation/admin/forms.py
+msgid "Graduation date"
+msgstr "स्नातक मिति"
+
+# key: curriculum.sections.requirements
+#: ninefruits/graduation/admin/forms.py ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Requirements"
+msgstr "आवश्यकताहरू"
+
+# key: graduation.actions.audit_now
+#: ninefruits/graduation/admin/student_record.py
+msgctxt "graduation.actions"
+msgid "Degree audit"
+msgstr "स्नातक योग्यता जाँच"
+
+# key: graduation.actions.waive
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waive a requirement"
+msgstr "आवश्यकता छुट दिनुहोस्"
+
+# key: graduation.notifications.waiver_requested
+#: ninefruits/graduation/admin/student_record.py
+msgid "Waiver requested; it counts once another person approves it."
+msgstr "छुट अनुरोध गरियो; अर्को व्यक्तिले स्वीकृत गरेपछि गनिन्छ।"
+
+# key: graduation.help.waiver
+#: ninefruits/graduation/admin/student_record.py
+msgid "Another person with the graduation permission must approve the waiver before it counts."
+msgstr "छुट गनिनुअघि स्नातक अनुमति भएका अर्को व्यक्तिले स्वीकृत गर्नुपर्छ।"
+
+# key: grading.fields.requested_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "अनुरोधकर्ता"
+
+# key: grading.fields.decided_by
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "निर्णयकर्ता"
+
+# key: grading.fields.decision_note
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Note"
+msgstr "टिप्पणी"
+
+# key: graduation.fields.lift_reason
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/models.py
+msgid "Lift reason"
+msgstr "छुट हटाउने कारण"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/graduation/admin/waivers.py
+msgid "Approve"
+msgstr "स्वीकृत गर्नुहोस्"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Approved"
+msgstr "स्वीकृत"
+
+# key: grading.actions.reject
+#: ninefruits/graduation/admin/waivers.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "अस्वीकार गर्नुहोस्"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Rejected"
+msgstr "अस्वीकृत"
+
+# key: graduation.actions.lift
+#: ninefruits/graduation/admin/waivers.py
+msgid "Lift the waiver"
+msgstr "छुट हटाउनुहोस्"
+
+# key: graduation.waiver_statuses.lifted
+#: ninefruits/graduation/admin/waivers.py ninefruits/graduation/enums.py
+msgid "Lifted"
+msgstr "हटाइएको"
+
+# key: portal.navigation.graduation
+#: ninefruits/graduation/apps.py
+msgctxt "portal"
+msgid "Graduation"
+msgstr "स्नातक"
+
+# key: graduation.waiver_statuses.pending
+#: ninefruits/graduation/enums.py
+msgctxt "graduation"
+msgid "Pending"
+msgstr "विचाराधीन"
+
+# key: people.sections.record
+#: ninefruits/graduation/models.py
+msgid "Student record"
+msgstr "विद्यार्थी अभिलेख"
+
+# key: curriculum.resources.requirement_sets.label
+#: ninefruits/graduation/models.py
+msgid "graduation requirements"
+msgstr "स्नातक आवश्यकता"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "आवश्यक"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/graduation/models.py ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Audited"
+msgstr "जाँच मिति"
+
+# key: graduation.actions.audit_now
+# key: graduation.resources.audits.label
+#: ninefruits/graduation/models.py
+msgid "Degree audit"
+msgstr "स्नातक योग्यता जाँच"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/graduation/models.py
+msgid "Degree audits"
+msgstr "स्नातक योग्यता जाँचहरू"
+
+# key: graduation.report_columns.status
+#: ninefruits/graduation/models.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "स्थिति"
+
+# key: grading.fields.requested_at
+#: ninefruits/graduation/models.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "अनुरोध मिति"
+
+# key: graduation.resources.waivers.label
+#: ninefruits/graduation/models.py
+msgid "Requirement waiver"
+msgstr "आवश्यकता छुट"
+
+# key: graduation.resources.waivers.plural_label
+#: ninefruits/graduation/models.py
+msgid "Requirement waivers"
+msgstr "आवश्यकता छुटहरू"
+
+# key: graduation.issues.no_requirement_set
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "No graduation requirements are defined for catalog year %(year)s."
+msgstr "पाठ्यक्रम वर्ष %(year)s का लागि स्नातक आवश्यकता तोकिएको छैन।"
+
+# key: graduation.issues.requirement
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Requirement not met: %(name)s"
+msgstr "आवश्यकता पूरा भएन: %(name)s"
+
+# key: graduation.issues.total_credits
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Total credits %(earned)s of %(required)s required."
+msgstr "जम्मा क्रेडिट %(required)s आवश्यकमध्ये %(earned)s।"
+
+# key: graduation.issues.gpa
+#: ninefruits/graduation/services/degree_audit.py
+#, python-format
+msgid "Cumulative GPA %(gpa)s below the minimum %(minimum)s."
+msgstr "सञ्चित GPA %(gpa)s न्यूनतम %(minimum)s भन्दा कम।"
+
+# key: graduation.settings.degree_number_pattern
+#: ninefruits/graduation/settings_pages.py
+msgid "Degree number pattern"
+msgstr "उपाधि नम्बरको ढाँचा"
+
+# key: graduation.settings.degree_number_pattern_help
+#: ninefruits/graduation/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {PROGRAM} program code, {YYYY} or {YY} graduation year, {SEQ:5} sequence per distinct prefix (required). Default {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001."
+msgstr "टोकनहरू: {PROGRAM} कार्यक्रम कोड, {YYYY} वा {YY} स्नातक वर्ष, {SEQ:5} प्रत्येक फरक उपसर्गका लागि क्रम (अनिवार्य)। पूर्वनिर्धारित {PROGRAM}-{YYYY}-{SEQ:5} → CS-2026-00001।"
+
+# key: graduation.settings.minimum_cumulative_gpa
+#: ninefruits/graduation/settings_pages.py
+msgid "Minimum cumulative GPA"
+msgstr "न्यूनतम सञ्चित GPA"
+
+# key: graduation.settings.minimum_cumulative_gpa_help
+#: ninefruits/graduation/settings_pages.py
+msgid "Required to graduate (primary program). Leave empty for none."
+msgstr "स्नातक हुन आवश्यक (मुख्य कार्यक्रम)। नचाहिए खाली छोड्नुहोस्।"
+
+# key: graduation.settings.title
+#: ninefruits/graduation/settings_pages.py
+msgid "Graduation settings"
+msgstr "स्नातक सेटिङ"
+
+# key: evaluation.portal.back
+#: ninefruits/graduation/templates/graduation/admin/audit_detail.html
+msgid "Back"
+msgstr "पछाडि"
+
+# key: graduation.actions.save_audit
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html
+msgid "Save this audit"
+msgstr "यो जाँच सुरक्षित गर्नुहोस्"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/graduation/templates/graduation/admin/audit_now.html ninefruits/graduation/templates/graduation/admin/graduate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "रद्द गर्नुहोस्"
+
+# key: graduation.fields.waived
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgid "Waived"
+msgstr "छुट दिइएको"
+
+# key: curriculum.fields.credits
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "क्रेडिट"
+
+# key: graduation.fields.courses
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "courses"
+msgstr "विषयहरू"
+
+# key: graduation.fields.missing
+#: ninefruits/graduation/templates/graduation/partials/degree_audit.html
+msgctxt "graduation"
+msgid "Not passed"
+msgstr "उत्तीर्ण नभएको"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+msgid "Graduation requirements"
+msgstr "स्नातक आवश्यकताहरू"
+
+# key: graduation.portal.intro
+#: ninefruits/graduation/templates/graduation/portal/my_graduation.html
+#, python-format
+msgid "Your progress against the requirements of catalog year %(year)s, evaluated now. Ask your department about waivers."
+msgstr "पाठ्यक्रम वर्ष %(year)s का आवश्यकताअनुसार तपाईंको प्रगति, अहिले मूल्याङ्कन गरिएको। छुटबारे आफ्नो विभागमा सोध्नुहोस्।"

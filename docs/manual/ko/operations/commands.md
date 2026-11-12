@@ -1,7 +1,7 @@
 # 관리 명령 레퍼런스
 
 - 대상: IT 운영자
-- 기준: 이 저장소의 Ninefruits 앱(`ninefruits/*/management/commands/`)에 등록된 명령 전체와 운영에 쓰는 Django 내장 명령. 명령을 추가하면 이 문서(4개 언어)에도 `### \`명령\`` 항목을 추가해야 CI가 통과한다(`tests/tooling/test_command_documentation.py`).
+- 기준: 이 저장소의 Ninefruits 앱(`ninefruits/*/management/commands/`)에 등록된 명령 전체와 운영에 쓰는 Django 내장 명령. 명령을 추가하면 이 문서(16개 언어)에도 `### \`명령\`` 항목을 추가해야 CI가 통과한다(`tests/tooling/test_command_documentation.py`).
 
 ## 공통 사항
 
@@ -509,7 +509,7 @@
 
 ### `pdf_sample`
 
-- 용도: 한국어, 중국어, 라오어, 영어가 섞인 표를 PDF로 렌더링해 글꼴과 PDF 서비스(Gotenberg) 연결을 점검한다.
+- 용도: 한글, 한자·가나, 라오 문자, 태국 문자, 데바나가리, 키릴 문자, 라틴 문자가 섞인 표를 PDF로 렌더링해 글꼴과 PDF 서비스(Gotenberg) 연결을 점검한다.
 - 인수: `[path]`(기본 `pdf-sample.pdf`, 비공개 파일 저장소 `PRIVATE_MEDIA_ROOT` 기준).
 - 감사: 기록 안 함
 - 실패 시: 종료 코드 1. 연결 오류면 `GOTENBERG_URL`, `GOTENBERG_TIMEOUT`과 Gotenberg 컨테이너 상태를 확인한다.

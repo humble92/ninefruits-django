@@ -1,0 +1,1428 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: security.errors.cannot_deactivate_self
+#: ninefruits/security/actions/accounts.py
+msgid "You cannot deactivate your own account."
+msgstr "Bạn không thể vô hiệu hóa tài khoản của chính mình."
+
+# key: security.errors.target_more_privileged
+#: ninefruits/security/actions/accounts.py
+#, python-format
+msgid "This account holds permissions you do not have (%(permissions)s); only an administrator with those permissions can change it."
+msgstr "Tài khoản này có các quyền mà bạn không có (%(permissions)s); chỉ quản trị viên có các quyền đó mới có thể thay đổi."
+
+# key: json.The provided password does not match your current password.
+#: ninefruits/security/actions/accounts.py
+msgid "The provided password does not match your current password."
+msgstr "Mật khẩu đã nhập không khớp với mật khẩu hiện tại."
+
+#: ninefruits/security/actions/accounts.py
+msgid "The password field confirmation does not match."
+msgstr "Xác nhận mật khẩu không khớp."
+
+#: ninefruits/security/actions/accounts.py ninefruits/security/admin.py
+msgid "The email has already been taken."
+msgstr "Email này đã được sử dụng."
+
+# key: security.errors.persona_role_not_assignable
+#: ninefruits/security/actions/assign_role.py
+msgid "Persona roles are granted automatically and cannot be assigned."
+msgstr "Vai trò theo đối tượng được cấp tự động và không thể gán."
+
+# key: security.errors.scope_id_mismatch
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "Choose a scope target for scoped assignments, and none for global assignments."
+msgstr "Hãy chọn đối tượng phạm vi cho lượt gán có phạm vi, và không chọn cho lượt gán toàn bộ."
+
+# key: offering.errors.meeting_time_order
+#: ninefruits/security/actions/assign_role.py ninefruits/security/admin.py
+msgid "The end must be after the start."
+msgstr "Giờ kết thúc phải sau giờ bắt đầu."
+
+# key: security.errors.self_assignment
+#: ninefruits/security/actions/assign_role.py
+msgid "You cannot assign a role to yourself."
+msgstr "Bạn không thể tự gán vai trò cho mình."
+
+# key: security.errors.role_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+#, python-format
+msgid "This role carries permissions you do not hold (%(permissions)s)."
+msgstr "Vai trò này có các quyền mà bạn không có (%(permissions)s)."
+
+# key: security.errors.scope_exceeds_actor
+#: ninefruits/security/actions/assign_role.py
+msgid "This scope is wider than the one you manage role assignments for."
+msgstr "Phạm vi này rộng hơn phạm vi bạn được quản lý việc gán vai trò."
+
+# key: security.sso.linked_to_another_account
+#: ninefruits/security/actions/identities.py
+msgid "This school account is linked to another user."
+msgstr "Tài khoản của trường này đã được liên kết với người dùng khác."
+
+# key: security.sso.already_linked
+#: ninefruits/security/actions/identities.py
+msgid "Your account is already linked to another account of this provider."
+msgstr "Tài khoản của bạn đã được liên kết với một tài khoản khác của nhà cung cấp này."
+
+# key: json.The provided two factor authentication code was invalid.
+#: ninefruits/security/actions/mfa.py
+msgid "The provided two factor authentication code was invalid."
+msgstr "Mã xác thực hai yếu tố đã nhập không hợp lệ."
+
+#: ninefruits/security/actions/mfa.py
+msgid "Recovery codes need an authenticator app. Set one up first."
+msgstr "Mã khôi phục cần có ứng dụng xác thực. Hãy thiết lập ứng dụng xác thực trước."
+
+# key: security.email_code.not_allowed
+#: ninefruits/security/actions/mfa.py
+msgid "Email codes are not available at this institution."
+msgstr "Cơ sở đào tạo này không hỗ trợ mã qua email."
+
+# key: security.email_code.invalid
+#: ninefruits/security/actions/mfa.py ninefruits/security/views.py
+msgid "The code is invalid or has expired."
+msgstr "Mã không hợp lệ hoặc đã hết hạn."
+
+# key: security.mfa.cannot_disable_required
+#: ninefruits/security/actions/mfa.py
+msgid "Two-factor authentication is required for your account and cannot be disabled."
+msgstr "Tài khoản của bạn bắt buộc dùng xác thực hai yếu tố và không thể tắt."
+
+# key: auth.failed
+#: ninefruits/security/adapters.py ninefruits/security/views_sso.py
+msgid "These credentials do not match our records."
+msgstr "Thông tin đăng nhập không chính xác."
+
+#: ninefruits/security/adapters.py
+msgid "Too many login attempts. Please try again later."
+msgstr "Đăng nhập quá nhiều lần. Vui lòng thử lại sau."
+
+# key: common.reason
+#: ninefruits/security/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Lý do"
+
+# key: admin.users.fields.locale
+# key: common.language
+# key: offering.syllabus.language
+#: ninefruits/security/admin.py
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/security/admin.py
+msgid "Name"
+msgstr "Họ tên"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/security/admin.py ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Email"
+msgstr "Email"
+
+# key: admin.users.fields.is_active
+# key: reference.fields.is_active
+# key: registration.fields.is_active
+#: ninefruits/security/admin.py ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: admin.users.help.name
+#: ninefruits/security/admin.py
+msgid "Used only for accounts without a person (e.g. service accounts). Linked accounts show the person's name."
+msgstr "Chỉ dùng cho tài khoản không gắn với cá nhân (ví dụ tài khoản dịch vụ). Tài khoản đã liên kết hiển thị họ tên của cá nhân."
+
+# key: admin.role_assignments.fields.role
+# key: graduation.report_columns.program_role
+# key: offering.fields.instructor_role
+#: ninefruits/security/admin.py
+msgid "Role"
+msgstr "Vai trò"
+
+# key: admin.role_assignments.fields.scope
+#: ninefruits/security/admin.py
+msgid "Scope"
+msgstr "Phạm vi"
+
+# key: admin.role_assignments.fields.scope_target
+#: ninefruits/security/admin.py
+msgid "Scope target"
+msgstr "Đối tượng phạm vi"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/security/admin.py
+msgid "Includes all units below the selected ones."
+msgstr "Bao gồm tất cả đơn vị trực thuộc các đơn vị đã chọn."
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: ninefruits/security/admin.py
+msgid "Starts"
+msgstr "Bắt đầu"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/security/admin.py
+msgid "Ends"
+msgstr "Kết thúc"
+
+#: ninefruits/security/admin.py
+msgid "Role assignment"
+msgstr "Phân công vai trò"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/admin.py
+msgid "Role assignments"
+msgstr "Gán vai trò"
+
+# key: admin.role_assignments.actions.revoke
+#: ninefruits/security/admin.py
+msgid "End assignment"
+msgstr "Kết thúc gán"
+
+# key: permissions.resources.users
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Users"
+msgstr "Người dùng"
+
+# key: admin.users.fields.mfa_enrolled
+#: ninefruits/security/admin.py
+msgid "Two-factor"
+msgstr "Hai yếu tố"
+
+# key: admin.users.fields.linked_person
+#: ninefruits/security/admin.py
+msgid "Linked person"
+msgstr "Cá nhân liên kết"
+
+# key: common.yes
+#: ninefruits/security/admin.py
+msgid "Yes"
+msgstr "Có"
+
+# key: common.none
+#: ninefruits/security/admin.py
+msgid "None"
+msgstr "Không có"
+
+# key: admin.users.actions.reset_mfa
+# key: permissions.users.reset_mfa
+#: ninefruits/security/admin.py
+msgid "Reset two-factor authentication"
+msgstr "Đặt lại xác thực hai yếu tố"
+
+# key: admin.users.notifications.mfa_reset
+#: ninefruits/security/admin.py
+msgid "Two-factor authentication was reset."
+msgstr "Đã đặt lại xác thực hai yếu tố."
+
+# key: admin.users.actions.unlock
+#: ninefruits/security/admin.py
+msgid "Unlock sign-in"
+msgstr "Mở khóa đăng nhập"
+
+# key: admin.users.notifications.unlocked
+#: ninefruits/security/admin.py
+msgid "Sign-in unlocked."
+msgstr "Đã mở khóa đăng nhập."
+
+# key: admin.role_assignments.actions.assign
+#: ninefruits/security/admin.py
+msgid "Assign role"
+msgstr "Gán vai trò"
+
+# key: admin.role_assignments.notifications.assigned
+#: ninefruits/security/admin.py
+msgid "Role assigned."
+msgstr "Đã gán vai trò."
+
+# key: admin.role_assignments.notifications.revoked
+#: ninefruits/security/admin.py
+msgid "Assignment ended."
+msgstr "Đã kết thúc gán vai trò."
+
+# key: admin.roles.fields.name
+#: ninefruits/security/admin.py
+msgid "Internal name"
+msgstr "Tên nội bộ"
+
+# key: admin.roles.fields.display_name
+#: ninefruits/security/admin.py
+msgid "Display name"
+msgstr "Tên hiển thị"
+
+# key: admin.roles.fields.description
+# key: admissions.fields.description
+# key: curriculum.fields.description
+# key: evaluation.fields.description
+# key: reference.fields.description
+#: ninefruits/security/admin.py
+msgid "Description"
+msgstr "Mô tả"
+
+# key: admin.roles.fields.name_help
+#: ninefruits/security/admin.py
+msgid "Lowercase letters, digits and underscores, e.g. registrar."
+msgstr "Chữ thường, chữ số và dấu gạch dưới, ví dụ registrar."
+
+#: ninefruits/security/admin.py
+msgid "The name has already been taken."
+msgstr "Tên này đã được sử dụng."
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/admin.py
+msgctxt "admin"
+msgid "Roles"
+msgstr "Vai trò"
+
+# key: admin.roles.system_role_permissions
+#: ninefruits/security/admin.py
+msgid "System roles always have every permission."
+msgstr "Vai trò hệ thống luôn có tất cả các quyền."
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/security/admin.py
+msgid "General"
+msgstr "Thông tin chung"
+
+# key: admin.roles.fields.permissions_count
+# key: admin.roles.sections.permissions
+#: ninefruits/security/admin.py
+msgid "Permissions"
+msgstr "Quyền"
+
+# key: admin.roles.fields.persona
+#: ninefruits/security/admin.py
+msgid "Persona"
+msgstr "Đối tượng"
+
+# key: admin.roles.fields.active_assignments_count
+#: ninefruits/security/admin.py
+msgid "Active assignments"
+msgstr "Lượt gán đang hiệu lực"
+
+# key: permissions.resources.people
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "People"
+msgstr "Cá nhân"
+
+# key: permissions.resources.accounts
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Accounts"
+msgstr "Tài khoản"
+
+# key: permissions.resources.student_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Student records"
+msgstr "Hồ sơ sinh viên"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Status changes"
+msgstr "Biến động sinh viên"
+
+# key: permissions.resources.instructors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Instructors"
+msgstr "Giảng viên"
+
+# key: permissions.resources.advisors
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Advisors"
+msgstr "Cố vấn học tập"
+
+# key: permissions.resources.authentication_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sign-in settings"
+msgstr "Cài đặt đăng nhập"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reference data"
+msgstr "Dữ liệu danh mục"
+
+# key: permissions.resources.lookup_values
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Code data"
+msgstr "Danh mục mã"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Org units"
+msgstr "Đơn vị tổ chức"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Programs"
+msgstr "Chương trình đào tạo"
+
+# key: permissions.resources.facilities
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Buildings and rooms"
+msgstr "Tòa nhà và phòng học"
+
+# key: permissions.resources.terms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Academic years and terms"
+msgstr "Năm học và học kỳ"
+
+# key: permissions.resources.term_windows
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Term windows"
+msgstr "Khung thời gian"
+
+# key: permissions.resources.course_categories
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course categories"
+msgstr "Loại học phần"
+
+# key: permissions.resources.grade_scales
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade scales"
+msgstr "Thang điểm"
+
+# key: permissions.resources.admin_panel
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Administration panel"
+msgstr "Trang quản trị"
+
+# key: permissions.resources.users
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Users"
+msgstr "Người dùng"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Roles"
+msgstr "Vai trò"
+
+# key: admin.role_assignments.title
+# key: permissions.resources.role_assignments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Role assignments"
+msgstr "Gán vai trò"
+
+# key: permissions.resources.audit_records
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Audit records"
+msgstr "Bản ghi kiểm toán"
+
+# key: permissions.resources.security_events
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security events"
+msgstr "Sự kiện bảo mật"
+
+# key: permissions.resources.security_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Security settings"
+msgstr "Cài đặt bảo mật"
+
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Queue monitor (Flower)"
+msgstr "Giám sát hàng đợi tác vụ (Flower)"
+
+# key: permissions.resources.institution_settings
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Institution settings"
+msgstr "Cài đặt cơ sở đào tạo"
+
+# key: permissions.resources.admission_cycles
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Admission cycles"
+msgstr "Đợt tuyển sinh"
+
+# key: permissions.resources.applications
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Applications"
+msgstr "Hồ sơ xét tuyển"
+
+# key: permissions.resources.courses
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Courses"
+msgstr "Học phần"
+
+# key: graduation.portal.title
+# key: permissions.resources.curriculum
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation requirements"
+msgstr "Điều kiện tốt nghiệp"
+
+# key: permissions.resources.sections
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Sections"
+msgstr "Lớp học phần"
+
+# key: permissions.resources.additional_programs
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Second majors and minors"
+msgstr "Ngành thứ hai và ngành phụ"
+
+# key: permissions.resources.enrollments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registrations"
+msgstr "Đăng ký học phần"
+
+# key: permissions.resources.registration
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration adjustments"
+msgstr "Điều chỉnh đăng ký"
+
+# key: permissions.resources.registration_rules
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration rules"
+msgstr "Quy tắc đăng ký"
+
+# key: permissions.resources.registration_holds
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Registration holds and overrides"
+msgstr "Chặn và ngoại lệ đăng ký"
+
+# key: permissions.resources.grades
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grades"
+msgstr "Điểm"
+
+# key: permissions.resources.grade_changes
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade changes"
+msgstr "Sửa điểm"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grading policy"
+msgstr "Quy chế đánh giá"
+
+# key: permissions.resources.grade_exceptions
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Grade exceptions"
+msgstr "Ngoại lệ điểm"
+
+# key: permissions.resources.evaluations
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Course evaluation"
+msgstr "Đánh giá học phần"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Examinations"
+msgstr "Kỳ thi"
+
+# key: permissions.resources.graduation
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Graduation"
+msgstr "Tốt nghiệp"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reports"
+msgstr "Báo cáo"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "LMS integration"
+msgstr "Tích hợp LMS"
+
+# key: permissions.resources.certificates
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Certificates"
+msgstr "Giấy chứng nhận"
+
+# key: permissions.admin_panel.access
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Open the administration panel"
+msgstr "Mở trang quản trị"
+
+# key: permissions.users.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View users"
+msgstr "Xem người dùng"
+
+# key: permissions.users.create
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create users"
+msgstr "Tạo người dùng"
+
+# key: permissions.users.update
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Edit users"
+msgstr "Sửa người dùng"
+
+# key: permissions.users.reset_mfa
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reset two-factor authentication"
+msgstr "Đặt lại xác thực hai yếu tố"
+
+# key: permissions.roles.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View roles"
+msgstr "Xem vai trò"
+
+# key: permissions.roles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit roles"
+msgstr "Tạo và sửa vai trò"
+
+# key: permissions.role_assignments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign and end roles"
+msgstr "Gán và kết thúc vai trò"
+
+# key: permissions.audit_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View audit records"
+msgstr "Xem bản ghi kiểm toán"
+
+# key: permissions.security_events.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View security events"
+msgstr "Xem sự kiện bảo mật"
+
+# key: permissions.security_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage security settings"
+msgstr "Quản lý cài đặt bảo mật"
+
+# key: permissions.institution_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage institution settings"
+msgstr "Quản lý cài đặt cơ sở đào tạo"
+
+# key: permissions.queue_monitor.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View the queue monitor"
+msgstr "Xem giám sát hàng đợi"
+
+# key: permissions.reference_data.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View reference data"
+msgstr "Xem dữ liệu danh mục"
+
+# key: permissions.reference_data.import
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Import reference data from CSV"
+msgstr "Nhập dữ liệu danh mục từ CSV"
+
+# key: permissions.lookup_values.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage code data, countries and languages"
+msgstr "Quản lý danh mục mã, quốc gia và ngôn ngữ"
+
+# key: permissions.org_units.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage org units and reorganizations"
+msgstr "Quản lý đơn vị tổ chức và tái cơ cấu"
+
+# key: permissions.programs.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage programs"
+msgstr "Quản lý chương trình đào tạo"
+
+# key: permissions.facilities.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage buildings and rooms"
+msgstr "Quản lý tòa nhà và phòng học"
+
+# key: permissions.terms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage academic years, terms, term types and time slots"
+msgstr "Quản lý năm học, học kỳ, loại học kỳ và tiết học"
+
+# key: permissions.term_windows.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage term windows"
+msgstr "Quản lý khung thời gian"
+
+# key: permissions.course_categories.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage course categories"
+msgstr "Quản lý loại học phần"
+
+# key: permissions.grade_scales.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage grade scales"
+msgstr "Quản lý thang điểm"
+
+# key: permissions.people.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View all people"
+msgstr "Xem tất cả cá nhân"
+
+# key: permissions.people.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit people"
+msgstr "Tạo và sửa cá nhân"
+
+# key: permissions.people.view_sensitive
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Reveal national ID and passport numbers"
+msgstr "Xem số định danh cá nhân và số hộ chiếu"
+
+# key: permissions.people.merge
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Merge duplicate people"
+msgstr "Gộp cá nhân trùng lặp"
+
+# key: permissions.accounts.invite
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Invite people to create an account"
+msgstr "Mời cá nhân tạo tài khoản"
+
+# key: permissions.student_records.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View student records"
+msgstr "Xem hồ sơ sinh viên"
+
+# key: permissions.student_records.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create and edit student records"
+msgstr "Tạo và sửa hồ sơ sinh viên"
+
+# key: permissions.student_status_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve and record status changes"
+msgstr "Phê duyệt và ghi nhận biến động sinh viên"
+
+# key: permissions.instructors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage instructors"
+msgstr "Quản lý giảng viên"
+
+# key: permissions.advisors.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Assign advisors"
+msgstr "Phân công cố vấn học tập"
+
+# key: permissions.authentication_settings.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage sign-in methods and SSO"
+msgstr "Quản lý phương thức đăng nhập và SSO"
+
+# key: permissions.admission_cycles.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage admission cycles and admission settings"
+msgstr "Quản lý đợt tuyển sinh và cài đặt tuyển sinh"
+
+# key: permissions.applications.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View applications"
+msgstr "Xem hồ sơ xét tuyển"
+
+# key: permissions.applications.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Review and decide applications"
+msgstr "Xét duyệt và quyết định hồ sơ xét tuyển"
+
+# key: permissions.applications.matriculate
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Create student records for admitted applicants"
+msgstr "Tạo hồ sơ sinh viên cho thí sinh trúng tuyển"
+
+# key: permissions.courses.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage courses, versions and requisites"
+msgstr "Quản lý học phần, phiên bản và điều kiện học phần"
+
+# key: permissions.curriculum.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage graduation requirements"
+msgstr "Quản lý điều kiện tốt nghiệp"
+
+# key: permissions.sections.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View sections"
+msgstr "Xem lớp học phần"
+
+# key: permissions.sections.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Plan sections (instructors, times, rooms)"
+msgstr "Lập kế hoạch lớp học phần (giảng viên, thời gian, phòng)"
+
+# key: permissions.additional_programs.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Decide second major and minor applications"
+msgstr "Quyết định đơn đăng ký ngành thứ hai và ngành phụ"
+
+# key: permissions.enrollments.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View registrations and rosters"
+msgstr "Xem đăng ký học phần và danh sách lớp"
+
+# key: permissions.registration.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register, drop and withdraw students for them (with a reason)"
+msgstr "Đăng ký, hủy và rút học phần thay cho sinh viên (kèm lý do)"
+
+# key: permissions.registration_rules.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage registration rule sets and credit limits"
+msgstr "Quản lý bộ quy tắc đăng ký và giới hạn tín chỉ"
+
+# key: permissions.registration_holds.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Place and release holds, grant rule overrides"
+msgstr "Đặt và gỡ chặn, cấp ngoại lệ quy tắc"
+
+# key: permissions.grades.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View grades, grade progress and term records"
+msgstr "Xem điểm, tiến độ nhập điểm và kết quả học kỳ"
+
+# key: permissions.grades.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Finalize and return grades, enter grades for instructors, close terms"
+msgstr "Chốt và trả lại điểm, nhập điểm thay giảng viên, khóa điểm học kỳ"
+
+# key: permissions.grade_changes.request
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Request a change to a finalized grade"
+msgstr "Yêu cầu sửa điểm chính thức"
+
+# key: permissions.grade_changes.approve
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Approve or reject grade changes (not your own requests)"
+msgstr "Phê duyệt hoặc từ chối yêu cầu sửa điểm (không phải yêu cầu của chính mình)"
+
+# key: permissions.grading_policies.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage GPA, retake, academic standing and honors policy"
+msgstr "Quản lý quy chế điểm trung bình, học lại, tình trạng học tập và khen thưởng"
+
+# key: permissions.grade_exceptions.review
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Be told when staff submit grades outside the grade caps (department heads, academic office)"
+msgstr "Nhận thông báo khi cán bộ nộp điểm vượt mức trần (trưởng khoa, phòng đào tạo)"
+
+# key: permissions.evaluations.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View course evaluation response rates and results"
+msgstr "Xem tỷ lệ phản hồi và kết quả đánh giá học phần"
+
+# key: permissions.evaluations.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage evaluation forms, term evaluations and publication"
+msgstr "Quản lý phiếu đánh giá, đánh giá học kỳ và công bố"
+
+# key: permissions.certificates.issue
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Issue, re-render and revoke certificates"
+msgstr "Cấp, tạo lại và thu hồi giấy chứng nhận"
+
+# key: permissions.certificates.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage certificate kinds, templates and settings"
+msgstr "Quản lý loại giấy chứng nhận, mẫu và cài đặt"
+
+# key: permissions.assessments.record
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Register students, enter and publish results, record external results"
+msgstr "Đăng ký cho sinh viên, nhập và công bố kết quả, ghi nhận kết quả bên ngoài"
+
+# key: permissions.assessments.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage examination kinds, areas and sessions"
+msgstr "Quản lý loại kỳ thi, phần thi và đợt thi"
+
+# key: permissions.graduation.audit
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Run and view degree audits"
+msgstr "Chạy và xem kết quả xét tốt nghiệp"
+
+# key: permissions.graduation.process
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Process graduations, grant requirement waivers"
+msgstr "Xử lý tốt nghiệp, miễn điều kiện tốt nghiệp"
+
+# key: permissions.reports.view
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "View standard reports and download them"
+msgstr "Xem và tải báo cáo chuẩn"
+
+# key: permissions.lms.manage
+#: ninefruits/security/enums.py
+msgctxt "permissions"
+msgid "Manage LMS platforms, links and synchronization"
+msgstr "Quản lý nền tảng LMS, liên kết và đồng bộ"
+
+# key: security.mfa_enforcement.disabled
+#: ninefruits/security/enums.py
+msgid "Not used"
+msgstr "Không sử dụng"
+
+# key: security.mfa_enforcement.recommended
+#: ninefruits/security/enums.py
+msgid "Recommended (optional)"
+msgstr "Khuyến nghị (không bắt buộc)"
+
+# key: security.mfa_enforcement.required_for_roles
+#: ninefruits/security/enums.py
+msgid "Required for selected roles"
+msgstr "Bắt buộc với các vai trò đã chọn"
+
+# key: security.mfa_enforcement.required_for_all
+#: ninefruits/security/enums.py
+msgid "Required for everyone"
+msgstr "Bắt buộc với mọi người"
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/security/enums.py
+msgid "Authenticator app"
+msgstr "Ứng dụng xác thực"
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/security/enums.py
+msgid "Email code"
+msgstr "Mã qua email"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Applicant"
+msgstr "Thí sinh"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Student"
+msgstr "Sinh viên"
+
+# key: security.personas.alumni
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Alumni"
+msgstr "Cựu sinh viên"
+
+# key: security.personas.instructor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Instructor"
+msgstr "Giảng viên"
+
+# key: security.personas.advisor
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Advisor"
+msgstr "Cố vấn học tập"
+
+# key: security.scope_types.global
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "All"
+msgstr "Toàn bộ"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Org unit"
+msgstr "Đơn vị tổ chức"
+
+# key: security.scope_types.program
+#: ninefruits/security/enums.py
+msgctxt "security"
+msgid "Program"
+msgstr "Chương trình đào tạo"
+
+# key: security.sso_link_modes.manual
+#: ninefruits/security/enums.py
+msgid "Users link their own accounts"
+msgstr "Người dùng tự liên kết tài khoản"
+
+# key: security.sso_link_modes.institutional_email
+#: ninefruits/security/enums.py
+msgid "Link automatically by verified school email"
+msgstr "Tự động liên kết theo email của trường đã xác minh"
+
+# key: security.student_number_login.disabled
+#: ninefruits/security/enums.py
+msgid "Not allowed"
+msgstr "Không cho phép"
+
+# key: security.student_number_login.active_records
+#: ninefruits/security/enums.py
+msgid "Current students only"
+msgstr "Chỉ sinh viên đang học"
+
+# key: security.student_number_login.all_records
+#: ninefruits/security/enums.py
+msgid "Current students and graduates"
+msgstr "Sinh viên đang học và đã tốt nghiệp"
+
+# key: authentication.fields.email_or_student_number
+#: ninefruits/security/forms.py
+msgid "Email or student number"
+msgstr "Email hoặc mã số sinh viên"
+
+# key: authentication.fields.password
+#: ninefruits/security/forms.py
+msgctxt "authentication"
+msgid "Password"
+msgstr "Mật khẩu"
+
+# key: authentication.login.remember_me
+#: ninefruits/security/forms.py
+msgid "Keep me signed in"
+msgstr "Duy trì đăng nhập"
+
+# key: auth.inactive
+#: ninefruits/security/middleware.py
+msgid "This account has been deactivated. Contact the administrator."
+msgstr "Tài khoản này đã bị vô hiệu hóa. Vui lòng liên hệ quản trị viên."
+
+# key: security.mfa.enrollment_required
+#: ninefruits/security/middleware.py
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "Tài khoản của bạn bắt buộc dùng xác thực hai yếu tố. Vui lòng thiết lập để tiếp tục."
+
+# key: security.email_code.mail_greeting
+#: ninefruits/security/notifications.py
+msgid "Hello,"
+msgstr "Xin chào,"
+
+# key: security.email_code.mail_intro
+#: ninefruits/security/notifications.py
+msgid "Use this code to finish signing in:"
+msgstr "Dùng mã này để hoàn tất đăng nhập:"
+
+# key: security.email_code.mail_expiry
+#: ninefruits/security/notifications.py
+#, python-format
+msgid "The code expires in %(minutes)s minutes and can be used once."
+msgstr "Mã hết hạn sau %(minutes)s phút và chỉ dùng được một lần."
+
+# key: security.email_code.mail_ignore
+#: ninefruits/security/notifications.py
+msgid "If you did not try to sign in, change your password."
+msgstr "Nếu bạn không thực hiện đăng nhập, hãy đổi mật khẩu."
+
+# key: security.email_code.mail_salutation
+#: ninefruits/security/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Trân trọng,\n"
+"%(app)s"
+
+# key: security.email_code.mail_subject
+#: ninefruits/security/notifications.py
+msgid "Your sign-in code"
+msgstr "Mã đăng nhập của bạn"
+
+# key: admin.settings.security.mfa_enforcement
+#: ninefruits/security/settings_pages.py
+msgid "Policy"
+msgstr "Chính sách"
+
+# key: admin.settings.security.mfa_required_roles
+#: ninefruits/security/settings_pages.py
+msgid "Roles that must use two-factor authentication"
+msgstr "Vai trò bắt buộc dùng xác thực hai yếu tố"
+
+#: ninefruits/security/settings_pages.py
+msgid "Used when the policy is Required for selected roles."
+msgstr "Áp dụng khi chính sách là Bắt buộc với các vai trò đã chọn."
+
+# key: admin.settings.security.mfa_grace_period_days
+#: ninefruits/security/settings_pages.py
+msgid "Grace period (days)"
+msgstr "Thời gian gia hạn (ngày)"
+
+# key: admin.settings.security.mfa_grace_period_help
+#: ninefruits/security/settings_pages.py
+msgid "Days a user can keep working after the requirement first applies to them. 0 means immediately."
+msgstr "Số ngày người dùng vẫn có thể làm việc kể từ khi yêu cầu bắt đầu áp dụng với họ. 0 nghĩa là áp dụng ngay."
+
+# key: admin.settings.security.mfa_remember_device_days
+#: ninefruits/security/settings_pages.py
+msgid "Remember devices for (days)"
+msgstr "Ghi nhớ thiết bị trong (ngày)"
+
+# key: admin.settings.security.mfa_remember_device_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can skip the code on a trusted device for this many days. 0 turns this off."
+msgstr "Người dùng có thể bỏ qua mã trên thiết bị tin cậy trong số ngày này. 0 để tắt."
+
+# key: admin.settings.security.mfa_email_code_enabled
+#: ninefruits/security/settings_pages.py
+msgid "Allow email codes"
+msgstr "Cho phép mã qua email"
+
+# key: admin.settings.security.mfa_email_code_help
+#: ninefruits/security/settings_pages.py
+msgid "Users can choose one-time codes by email instead of an authenticator app. Turning this off stops email codes from counting as two-factor authentication."
+msgstr "Người dùng có thể chọn nhận mã dùng một lần qua email thay cho ứng dụng xác thực. Khi tắt, mã qua email không còn được tính là xác thực hai yếu tố."
+
+#: ninefruits/security/settings_pages.py
+msgid "Choose at least one role."
+msgstr "Hãy chọn ít nhất một vai trò."
+
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: ninefruits/security/settings_pages.py
+msgid "Security"
+msgstr "Bảo mật"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/security/settings_pages.py ninefruits/security/views.py
+msgid "Two-factor authentication"
+msgstr "Xác thực hai yếu tố"
+
+# key: admin.settings.security.mfa_description
+#: ninefruits/security/settings_pages.py
+msgid "Changes apply to every user immediately."
+msgstr "Thay đổi được áp dụng ngay cho mọi người dùng."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the key uses lowercase letters, digits and hyphens."
+msgstr "%(key)s: khóa chỉ dùng chữ thường, chữ số và dấu gạch ngang."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: each provider needs its own key."
+msgstr "%(key)s: mỗi nhà cung cấp cần một khóa riêng."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the button label is required (64 characters at most)."
+msgstr "%(key)s: bắt buộc nhập nhãn nút (tối đa 64 ký tự)."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the issuer must be a URL."
+msgstr "%(key)s: bên phát hành phải là một URL."
+
+#: ninefruits/security/settings_pages.py
+#, python-format
+msgid "%(key)s: the client ID is required."
+msgstr "%(key)s: bắt buộc nhập Client ID."
+
+# key: admin.settings.authentication.student_number_login
+#: ninefruits/security/settings_pages.py
+msgid "Sign in with student number"
+msgstr "Đăng nhập bằng mã số sinh viên"
+
+# key: admin.settings.authentication.password_login_for_sso_users
+#: ninefruits/security/settings_pages.py
+msgid "Allow passwords for users with school sign-in"
+msgstr "Cho phép mật khẩu với người dùng có đăng nhập của trường"
+
+# key: admin.settings.authentication.password_login_for_sso_users_help
+#: ninefruits/security/settings_pages.py
+msgid "When off, users who have linked a school account must use it to sign in."
+msgstr "Khi tắt, người dùng đã liên kết tài khoản của trường phải dùng tài khoản đó để đăng nhập."
+
+# key: admin.settings.authentication.lockout_threshold
+#: ninefruits/security/settings_pages.py
+msgid "Lock after failed attempts"
+msgstr "Khóa sau số lần thất bại"
+
+# key: admin.settings.authentication.lockout_threshold_help
+#: ninefruits/security/settings_pages.py
+msgid "Failed passwords in a row before the account is locked. 0 turns locking off."
+msgstr "Số lần nhập sai mật khẩu liên tiếp trước khi tài khoản bị khóa. 0 để tắt khóa."
+
+# key: admin.settings.authentication.lockout_minutes
+#: ninefruits/security/settings_pages.py
+msgid "Lock duration (minutes)"
+msgstr "Thời gian khóa (phút)"
+
+# key: admin.settings.authentication.sso_link_mode
+#: ninefruits/security/settings_pages.py
+msgid "Account linking"
+msgstr "Liên kết tài khoản"
+
+# key: admin.settings.authentication.sso_providers
+#: ninefruits/security/settings_pages.py
+msgid "Providers"
+msgstr "Nhà cung cấp"
+
+# key: admin.settings.authentication.title
+#: ninefruits/security/settings_pages.py
+msgid "Sign-in methods"
+msgstr "Phương thức đăng nhập"
+
+# key: admin.settings.authentication.password_section
+#: ninefruits/security/settings_pages.py
+msgid "Passwords"
+msgstr "Mật khẩu"
+
+# key: admin.settings.authentication.sso_section
+#: ninefruits/security/settings_pages.py
+msgid "School sign-in (SSO)"
+msgstr "Đăng nhập của trường (SSO)"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/security/templates/security/admin/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Hủy"
+
+# key: admin.settings.authentication.provider_key
+# key: lms.fields.credential_key
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgctxt "security"
+msgid "Key"
+msgstr "Khóa"
+
+# key: admin.settings.authentication.provider_label
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Button label"
+msgstr "Nhãn nút"
+
+# key: admin.settings.authentication.issuer
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Issuer URL"
+msgstr "URL nhà phát hành (issuer)"
+
+# key: admin.settings.authentication.client_id
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client ID"
+msgstr "Client ID"
+
+# key: admin.settings.authentication.client_secret
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Client secret"
+msgstr "Client secret"
+
+# key: admin.settings.authentication.client_secret_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Stored encrypted. Leave empty to keep the stored value."
+msgstr "Được lưu dưới dạng mã hóa. Để trống để giữ giá trị đã lưu."
+
+# key: admin.settings.authentication.scopes
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Scopes"
+msgstr "Scope"
+
+# key: admin.settings.authentication.trusts_mfa
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Counts as two-factor authentication"
+msgstr "Được tính là xác thực hai yếu tố"
+
+# key: admin.settings.authentication.trusts_mfa_help
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Turn on only if the school's sign-in itself requires two-factor authentication."
+msgstr "Chỉ bật khi bản thân hệ thống đăng nhập của trường đã yêu cầu xác thực hai yếu tố."
+
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Remove this provider"
+msgstr "Xóa nhà cung cấp này"
+
+# key: admin.settings.authentication.redirect_uri
+#: ninefruits/security/templates/security/widgets/sso_providers.html
+msgid "Redirect URI to register with the provider"
+msgstr "Redirect URI cần đăng ký với nhà cung cấp"
+
+#: ninefruits/security/views.py
+msgid "The email code must be 6 digits."
+msgstr "Mã email phải gồm 6 chữ số."
+
+# key: security.email_code.sent
+#: ninefruits/security/views.py
+msgid "A new code has been sent to your email."
+msgstr "Đã gửi mã mới đến email của bạn."
+
+# key: security.email_code.wait
+#: ninefruits/security/views.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "Vui lòng đợi %(seconds)s giây trước khi yêu cầu mã khác."
+
+# key: security.sso.failed
+#: ninefruits/security/views_sso.py
+msgid "School sign-in failed. Try again or sign in with your password."
+msgstr "Đăng nhập của trường thất bại. Hãy thử lại hoặc đăng nhập bằng mật khẩu."
+
+# key: security.sso.expired
+#: ninefruits/security/views_sso.py
+msgid "The sign-in attempt expired. Try again."
+msgstr "Phiên đăng nhập đã hết hạn. Vui lòng thử lại."
+
+# key: security.sso.cancelled
+#: ninefruits/security/views_sso.py
+msgid "Sign-in was cancelled."
+msgstr "Đã hủy đăng nhập."
+
+# key: security.sso.linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "%(provider)s account linked."
+msgstr "Đã liên kết tài khoản %(provider)s."
+
+# key: security.sso.not_linked
+#: ninefruits/security/views_sso.py
+#, python-format
+msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
+msgstr "Tài khoản %(provider)s của bạn chưa được liên kết với tài khoản nào tại đây. Hãy đăng nhập bằng mật khẩu và liên kết trong mục Bảo mật."
+
+#: models/user.py
+msgid "user"
+msgstr "người dùng"
+
+#: models/user.py
+msgid "users"
+msgstr "người dùng"
+
+#: models/role.py
+msgid "role"
+msgstr "vai trò"
+
+#: models/role.py
+msgid "roles"
+msgstr "vai trò"

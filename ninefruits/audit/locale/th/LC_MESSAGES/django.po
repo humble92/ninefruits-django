@@ -1,0 +1,271 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.audit.fields.log
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Log"
+msgstr "บันทึก"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Table"
+msgstr "ตาราง"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Time"
+msgstr "เวลา"
+
+# key: admin.audit.fields.subject
+#: ninefruits/audit/admin.py
+msgid "Record"
+msgstr "รายการข้อมูล"
+
+# key: admin.audit.fields.actor
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "User"
+msgstr "ผู้ใช้"
+
+# key: common.reason
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: admin.audit.fields.properties
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Details"
+msgstr "รายละเอียด"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Operation"
+msgstr "การดำเนินการ"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Changed columns"
+msgstr "คอลัมน์ที่เปลี่ยนแปลง"
+
+#: ninefruits/audit/admin.py
+msgid "Changes"
+msgstr "การเปลี่ยนแปลง"
+
+#: ninefruits/audit/admin.py
+msgid "Column"
+msgstr "คอลัมน์"
+
+# key: admin.record_changes.fields.old_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Before"
+msgstr "ก่อนเปลี่ยน"
+
+# key: admin.record_changes.fields.new_values
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "After"
+msgstr "หลังเปลี่ยน"
+
+# key: admin.audit.fields.event
+# key: admin.security_events.fields.type
+#: ninefruits/audit/admin.py ninefruits/audit/models.py
+msgid "Event"
+msgstr "เหตุการณ์"
+
+# key: admin.audit.fields.request_id
+#: ninefruits/audit/models.py
+msgctxt "admin"
+msgid "Request ID"
+msgstr "รหัสคำขอ"
+
+# key: admin.audit.fields.ip_address
+#: ninefruits/audit/models.py
+msgid "IP address"
+msgstr "ที่อยู่ IP"
+
+# key: admin.activities.label
+#: ninefruits/audit/models.py
+msgid "activity"
+msgstr "บันทึกการดำเนินงาน"
+
+# key: admin.activities.plural_label
+#: ninefruits/audit/models.py
+msgid "activity log"
+msgstr "บันทึกการดำเนินงาน"
+
+# key: admin.record_changes.fields.transaction_id
+#: ninefruits/audit/models.py
+msgid "Transaction"
+msgstr "ธุรกรรม"
+
+# key: admin.record_changes.fields.record_id
+#: ninefruits/audit/models.py
+msgid "Record ID"
+msgstr "รหัสรายการ"
+
+# key: admin.record_changes.fields.database_user
+#: ninefruits/audit/models.py
+msgid "Database user"
+msgstr "ผู้ใช้ฐานข้อมูล"
+
+# key: admin.record_changes.label
+#: ninefruits/audit/models.py
+msgid "data change"
+msgstr "การเปลี่ยนแปลงข้อมูล"
+
+# key: admin.record_changes.plural_label
+#: ninefruits/audit/models.py
+msgid "data changes"
+msgstr "การเปลี่ยนแปลงข้อมูล"
+
+# key: admin.security_events.fields.identifier
+#: ninefruits/audit/models.py
+msgid "Sign-in name"
+msgstr "ชื่อที่ใช้เข้าสู่ระบบ"
+
+# key: admin.security_events.label
+#: ninefruits/audit/models.py
+msgid "security event"
+msgstr "เหตุการณ์ด้านความปลอดภัย"
+
+# key: admin.security_events.plural_label
+#: ninefruits/audit/models.py
+msgid "security events"
+msgstr "เหตุการณ์ด้านความปลอดภัย"
+
+# key: security.event_types.login_succeeded
+#: ninefruits/audit/security_events.py
+msgid "Signed in"
+msgstr "เข้าสู่ระบบ"
+
+# key: security.event_types.login_failed
+#: ninefruits/audit/security_events.py
+msgid "Sign-in failed"
+msgstr "เข้าสู่ระบบไม่สำเร็จ"
+
+# key: security.event_types.login_locked_out
+#: ninefruits/audit/security_events.py
+msgid "Sign-in locked"
+msgstr "ล็อกการเข้าสู่ระบบ"
+
+# key: security.event_types.account_unlocked
+#: ninefruits/audit/security_events.py
+msgid "Account unlocked"
+msgstr "ปลดล็อกบัญชี"
+
+# key: security.event_types.logout
+#: ninefruits/audit/security_events.py
+msgid "Signed out"
+msgstr "ออกจากระบบ"
+
+# key: security.event_types.password_reset
+#: ninefruits/audit/security_events.py
+msgid "Password reset"
+msgstr "รีเซ็ตรหัสผ่าน"
+
+# key: security.event_types.mfa_enabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor enabled"
+msgstr "เปิดใช้สองขั้นตอน"
+
+# key: security.event_types.mfa_confirmed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor confirmed"
+msgstr "ยืนยันสองขั้นตอน"
+
+# key: security.event_types.mfa_disabled
+#: ninefruits/audit/security_events.py
+msgid "Two-factor disabled"
+msgstr "ปิดใช้สองขั้นตอน"
+
+# key: security.event_types.mfa_challenge_failed
+#: ninefruits/audit/security_events.py
+msgid "Two-factor code rejected"
+msgstr "รหัสสองขั้นตอนไม่ถูกต้อง"
+
+# key: security.event_types.mfa_recovery_code_used
+#: ninefruits/audit/security_events.py
+msgid "Recovery code used"
+msgstr "ใช้รหัสกู้คืน"
+
+# key: security.event_types.mfa_recovery_codes_regenerated
+#: ninefruits/audit/security_events.py
+msgid "Recovery codes regenerated"
+msgstr "สร้างรหัสกู้คืนใหม่"
+
+# key: security.event_types.mfa_reset
+#: ninefruits/audit/security_events.py
+msgid "Two-factor reset by administrator"
+msgstr "ผู้ดูแลระบบรีเซ็ตสองขั้นตอน"
+
+# key: security.event_types.mfa_email_code_sent
+#: ninefruits/audit/security_events.py
+msgid "Email code sent"
+msgstr "ส่งรหัสทางอีเมล"
+
+# key: security.event_types.mfa_email_enabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned on"
+msgstr "เปิดใช้รหัสทางอีเมล"
+
+# key: security.event_types.mfa_email_disabled
+#: ninefruits/audit/security_events.py
+msgid "Email codes turned off"
+msgstr "ปิดใช้รหัสทางอีเมล"
+
+# key: security.event_types.role_assigned
+#: ninefruits/audit/security_events.py
+msgid "Role assigned"
+msgstr "กำหนดบทบาท"
+
+# key: security.event_types.role_assignment_revoked
+#: ninefruits/audit/security_events.py
+msgid "Role assignment ended"
+msgstr "สิ้นสุดการกำหนดบทบาท"
+
+# key: security.event_types.role_permissions_changed
+#: ninefruits/audit/security_events.py
+msgid "Role permissions changed"
+msgstr "เปลี่ยนสิทธิ์ของบทบาท"
+
+# key: security.event_types.sensitive_data_revealed
+#: ninefruits/audit/security_events.py
+msgid "Sensitive data revealed"
+msgstr "แสดงข้อมูลอ่อนไหว"
+
+# key: security.event_types.data_exported
+#: ninefruits/audit/security_events.py
+msgid "Data exported"
+msgstr "ส่งออกข้อมูล"
+
+# key: security.event_types.audit_pruned
+#: ninefruits/audit/security_events.py
+msgid "Audit records pruned"
+msgstr "ลบบันทึกการตรวจสอบเก่า"
+
+# key: security.event_types.password_changed
+#: ninefruits/audit/security_events.py
+msgid "Password changed"
+msgstr "เปลี่ยนรหัสผ่าน"
+
+# key: security.event_types.email_changed
+#: ninefruits/audit/security_events.py
+msgid "Email changed"
+msgstr "เปลี่ยนอีเมล"

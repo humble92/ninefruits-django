@@ -229,3 +229,9 @@ msgstr "ຊ່ອງ %(attribute)s ຕ້ອງມີຄ່າຫຼາຍກວ
 #, python-format
 msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
 msgstr "ໄຟລ໌ໃຫຍ່ເກີນໄປ (%(size)s ໄບຕ໌, ສູງສຸດ %(limit)s)."
+
+# key: reference.fields.admission_years
+#: ninefruits/institution/target_criteria_fields.py
+msgctxt "reference"
+msgid "Admitted"
+msgstr "ເຂົ້າຮຽນ"

@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: evaluation.errors.form_in_use
+#: ninefruits/evaluation/actions/manage_term_evaluation.py
+msgid "The term already has responses with its form."
+msgstr "Semester ini sudah mempunyai respons menggunakan borangnya."
+
+# key: evaluation.errors.not_open
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "The course evaluation is not open for this course."
+msgstr "Penilaian kursus tidak dibuka untuk kursus ini."
+
+# key: evaluation.errors.already_done
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "You have already evaluated this course."
+msgstr "Anda telah pun menilai kursus ini."
+
+# key: evaluation.errors.invalid_answer
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "An answer is not valid."
+msgstr "Satu jawapan tidak sah."
+
+# key: evaluation.errors.missing_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "Jawab setiap soalan wajib (%(count)s belum dijawab)."
+
+# key: evaluation.errors.uniform_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "Every answer is the same. Please answer each question."
+msgstr "Semua jawapan adalah sama. Sila jawab setiap soalan."
+
+# key: validation.alpha_dash
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Medan %(attribute)s hanya boleh mengandungi huruf, nombor, sengkang dan garis bawah."
+
+# key: reference.fields.code
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: validation.unique
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s telah pun digunakan."
+
+# key: evaluation.fields.question
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Question"
+msgstr "Soalan"
+
+# key: evaluation.fields.questions
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgid "Questions"
+msgstr "Soalan"
+
+# key: reference.fields.name
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nama"
+
+# key: evaluation.actions.copy_form
+#: ninefruits/evaluation/admin/forms.py
+msgid "Copy form"
+msgstr "Salin borang"
+
+# key: security.scope_types.global
+#: ninefruits/evaluation/admin/sections.py
+msgid "All"
+msgstr "Semua"
+
+# key: offering.fields.offering_unit
+#: ninefruits/evaluation/admin/sections.py
+msgid "Offering unit"
+msgstr "Unit penawar"
+
+# key: offering.fields.section
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Seksyen"
+
+# key: curriculum.fields.title
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Nama kursus"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/evaluation/admin/sections.py
+msgid "Instructors"
+msgstr "Pensyarah"
+
+# key: evaluation.fields.responses
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/admin/terms.py
+msgid "Responses"
+msgstr "Respons"
+
+# key: evaluation.fields.response_rate
+#: ninefruits/evaluation/admin/sections.py
+msgid "Response rate"
+msgstr "Kadar respons"
+
+# key: evaluation.results.open
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/views/portal.py
+msgctxt "evaluation"
+msgid "Results"
+msgstr "Keputusan"
+
+# key: reference.resources.terms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "term"
+msgstr "semester"
+
+# key: evaluation.resources.forms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/models/term.py
+msgid "evaluation form"
+msgstr "borang penilaian"
+
+# key: evaluation.fields.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum responses"
+msgstr "Respons minimum"
+
+# key: evaluation.help.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
+msgstr "Keputusan sesuatu seksyen hanya dipaparkan jika terdapat sekurang-kurangnya bilangan respons dan kadar respons ini, supaya jawapan yang sedikit tidak dapat dikaitkan dengan pelajar tertentu."
+
+# key: evaluation.fields.minimum_response_percent
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum response rate (%)"
+msgstr "Kadar respons minimum (%)"
+
+# key: common.saved
+#: ninefruits/evaluation/admin/terms.py
+msgid "Saved"
+msgstr "Disimpan"
+
+# key: evaluation.actions.prepare
+#: ninefruits/evaluation/admin/terms.py
+msgid "Set up a term"
+msgstr "Sediakan semester"
+
+# key: evaluation.actions.change
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Change"
+msgstr "Ubah"
+
+# key: evaluation.actions.publish
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "Terbitkan keputusan"
+
+#: ninefruits/evaluation/admin/terms.py
+msgid "Already published."
+msgstr "Sudah diterbitkan."
+
+# key: evaluation.help.publish
+#: ninefruits/evaluation/admin/terms.py
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
+msgstr "Pensyarah dapat melihat keputusan seksyen mereka mulai sekarang (seksyen yang mempunyai respons mencukupi)."
+
+# key: evaluation.portal.title
+#: ninefruits/evaluation/apps.py ninefruits/evaluation/templates/evaluation/portal/evaluations.html ninefruits/evaluation/views/portal.py
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "Penilaian kursus"
+
+# key: evaluation.question_types.scale
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "Skala"
+
+# key: evaluation.question_types.text
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "Ulasan"
+
+# key: evaluation.fields.description
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Description"
+msgstr "Keterangan"
+
+# key: evaluation.fields.scale_points
+#: ninefruits/evaluation/models/forms.py
+msgid "Scale points"
+msgstr "Mata skala"
+
+# key: evaluation.fields.scale_low_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of 1"
+msgstr "Label bagi 1"
+
+# key: evaluation.fields.scale_high_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of the highest point"
+msgstr "Label bagi mata tertinggi"
+
+# key: reference.fields.is_active
+#: ninefruits/evaluation/models/forms.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Aktif"
+
+# key: evaluation.resources.forms.plural_label
+#: ninefruits/evaluation/models/forms.py
+msgid "evaluation forms"
+msgstr "borang penilaian"
+
+# key: reference.fields.sort_order
+#: ninefruits/evaluation/models/forms.py
+msgid "Order"
+msgstr "Susunan"
+
+# key: evaluation.fields.category
+#: ninefruits/evaluation/models/forms.py
+msgid "Area"
+msgstr "Bidang"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/evaluation/models/forms.py
+msgid "Type"
+msgstr "Jenis"
+
+# key: evaluation.fields.is_required
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Required"
+msgstr "Wajib"
+
+# key: evaluation.fields.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "Reversed"
+msgstr "Terbalik"
+
+# key: evaluation.help.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
+msgstr "Untuk soalan berbentuk negatif: jawapan diterbalikkan dalam purata (5 dikira sebagai 1)."
+
+# key: evaluation.resources.sections.label
+#: ninefruits/evaluation/models/section.py
+msgid "section response"
+msgstr "respons seksyen"
+
+# key: evaluation.resources.sections.plural_label
+#: ninefruits/evaluation/models/section.py
+msgid "responses by section"
+msgstr "respons mengikut seksyen"
+
+# key: evaluation.fields.published_at
+#: ninefruits/evaluation/models/term.py
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "Keputusan diterbitkan"
+
+# key: evaluation.resources.terms.label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluation"
+msgstr "penilaian semester"
+
+# key: evaluation.resources.terms.plural_label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluations"
+msgstr "penilaian semester"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/evaluation/notifications.py
+msgid "Hello,"
+msgstr "Salam sejahtera,"
+
+# key: evaluation.mail.reminder_intro
+#: ninefruits/evaluation/notifications.py
+msgid "Please evaluate these courses:"
+msgstr "Sila nilai kursus berikut:"
+
+# key: evaluation.mail.reminder_anonymous
+#: ninefruits/evaluation/notifications.py
+msgid "Your answers are anonymous."
+msgstr "Jawapan anda tanpa nama."
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "Buka penilaian kursus"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/evaluation/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Terima kasih,\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: ninefruits/evaluation/notifications.py
+msgid "Course evaluation is open"
+msgstr "Penilaian kursus telah dibuka"
+
+# key: evaluation.settings.grades_require_evaluation
+#: ninefruits/evaluation/settings_pages.py
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "Sembunyikan gred semester sehingga penilaiannya selesai"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "Hanya semasa penilaian dibuka; gred dipaparkan apabila penilaian ditutup."
+
+# key: evaluation.settings.reject_uniform_answers
+#: ninefruits/evaluation/settings_pages.py
+msgid "Refuse the same answer to every question"
+msgstr "Tolak jawapan yang sama bagi semua soalan"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "Seperti sistem lama yang menolak jawapan semua 1 atau semua 5."
+
+# key: evaluation.settings.minimum_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Defaults for a new term's evaluation."
+msgstr "Nilai lalai bagi penilaian semester baharu."
+
+# key: evaluation.settings.title
+#: ninefruits/evaluation/settings_pages.py
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "Penilaian kursus"
+
+# key: evaluation.portal.anonymous
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
+msgstr "Jawapan anda tanpa nama. Pensyarah hanya melihat jumlah keseluruhan, selepas keputusan diterbitkan."
+
+# key: evaluation.portal.submit_confirm
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "Hantar penilaian? Anda tidak boleh mengubahnya selepas ini."
+
+# key: evaluation.portal.back
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Back"
+msgstr "Kembali"
+
+# key: evaluation.portal.optional
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "optional"
+msgstr "pilihan"
+
+# key: evaluation.portal.submit
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit"
+msgstr "Hantar"
+
+# key: evaluation.portal.done
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Done"
+msgstr "Selesai"
+
+# key: evaluation.portal.evaluate
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Evaluate"
+msgstr "Nilai"
+
+# key: evaluation.portal.none_open
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "No course evaluation is open for you."
+msgstr "Tiada penilaian kursus yang dibuka untuk anda."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "My teaching"
+msgstr "Pengajaran saya"
+
+# key: evaluation.results.title
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html ninefruits/evaluation/views/portal.py
+msgid "Course evaluation results"
+msgstr "Keputusan penilaian kursus"
+
+# key: evaluation.results.responses
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(responses)s daripada %(expected)s memberi respons (%(rate)s%%)"
+
+# key: evaluation.results.overall
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "overall %(mean)s"
+msgstr "keseluruhan %(mean)s"
+
+# key: evaluation.results.not_published
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "The results are not published yet."
+msgstr "Keputusan belum diterbitkan."
+
+# key: evaluation.results.too_few
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
+msgstr "Respons terlalu sedikit untuk memaparkan keputusan (sekurang-kurangnya %(minimum)s dan %(percent)s%% diperlukan)."
+
+# key: evaluation.results.mean
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Mean"
+msgstr "Min"
+
+# key: evaluation.results.reversed
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "reversed"
+msgstr "terbalik"
+
+# key: common.none
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgctxt "common"
+msgid "None"
+msgstr "Tiada"
+
+# key: evaluation.results.not_yet
+#: ninefruits/evaluation/views/portal.py
+msgid "Not published"
+msgstr "Belum diterbitkan"
+
+# key: evaluation.grades_hidden
+#: ninefruits/evaluation/views/portal.py
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "Gred bagi %(term)s akan dipaparkan selepas anda melengkapkan penilaian kursusnya."
+
+# key: evaluation.portal.submitted
+#: ninefruits/evaluation/views/portal.py
+msgid "Thank you. Your evaluation was submitted."
+msgstr "Terima kasih. Penilaian anda telah dihantar."

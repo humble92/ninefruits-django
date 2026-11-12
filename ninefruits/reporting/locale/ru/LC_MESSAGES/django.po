@@ -1,0 +1,400 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/reporting/admin/__init__.py ninefruits/reporting/admin/reports.py
+msgid "Reports"
+msgstr "Отчёты"
+
+# key: graduation.reports.report
+#: ninefruits/reporting/admin/reports.py
+msgid "Report"
+msgstr "Отчёт"
+
+# key: reference.resources.terms.label
+#: ninefruits/reporting/admin/reports.py
+msgid "term"
+msgstr "семестр"
+
+# key: reference.resources.org_units.label
+#: ninefruits/reporting/admin/reports.py
+msgid "org unit"
+msgstr "подразделение"
+
+# key: registration.fields.status
+#: ninefruits/reporting/admin/reports.py
+msgctxt "registration"
+msgid "Status"
+msgstr "Статус"
+
+# key: people.fields.year_level
+#: ninefruits/reporting/admin/reports.py
+msgctxt "people"
+msgid "Year"
+msgstr "Курс"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/reporting/admin/reports.py
+msgid "Academic standing"
+msgstr "Академический статус"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/reporting/admin/reports.py ninefruits/reporting/services/catalog.py
+msgid "Satisfied"
+msgstr "Выполнено"
+
+# key: reference.fields.start_date
+#: ninefruits/reporting/admin/reports.py
+msgid "Start date"
+msgstr "Дата начала"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/reporting/admin/reports.py
+msgid "End date"
+msgstr "Дата окончания"
+
+# key: graduation.satisfied.no
+#: ninefruits/reporting/admin/reports.py
+msgid "Not satisfied"
+msgstr "Не выполнено"
+
+# key: people.sections.record
+#: ninefruits/reporting/models.py
+msgid "Student record"
+msgstr "Личное дело студента"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/reporting/models.py ninefruits/reporting/services/catalog.py
+msgid "Student number"
+msgstr "Студенческий номер"
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/reporting/models.py
+msgid "Person"
+msgstr "Лицо"
+
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+#: ninefruits/reporting/models.py
+msgid "Name"
+msgstr "ФИО"
+
+# key: grading.fields.count
+# key: graduation.report_columns.students
+# key: registration.fields.applies_to
+#: ninefruits/reporting/models.py
+msgid "Students"
+msgstr "Студенты"
+
+#: ninefruits/reporting/models.py
+msgid "Headcount"
+msgstr "Контингент"
+
+#: ninefruits/reporting/models.py
+msgid "Term records"
+msgstr "Итоги семестра"
+
+#: ninefruits/reporting/models.py
+msgid "Course grades"
+msgstr "Оценки по дисциплинам"
+
+#: ninefruits/reporting/models.py
+msgid "Section enrollments"
+msgstr "Записавшиеся по группам"
+
+#: ninefruits/reporting/models.py
+msgid "Section meetings"
+msgstr "Занятия групп"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/reporting/models.py ninefruits/reporting/services/catalog.py
+msgid "Status changes"
+msgstr "Изменения статуса"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/reporting/models.py
+msgid "Degree audits"
+msgstr "Проверки требований к выпуску"
+
+# key: graduation.reports.names.students
+#: ninefruits/reporting/services/catalog.py
+msgid "Student list"
+msgstr "Список студентов"
+
+# key: graduation.reports.names.headcount
+#: ninefruits/reporting/services/catalog.py
+msgid "Headcount by unit, program, year and status"
+msgstr "Контингент по подразделениям, программам, курсам и статусам"
+
+# key: graduation.reports.names.term_records
+#: ninefruits/reporting/services/catalog.py
+msgid "Term grade summary (warnings, honors)"
+msgstr "Сводка оценок за семестр (предупреждения, отличие)"
+
+# key: graduation.reports.names.graduation_candidates
+#: ninefruits/reporting/services/catalog.py
+msgid "Graduation candidates (latest audit)"
+msgstr "Кандидаты на выпуск (последняя проверка)"
+
+# key: graduation.reports.names.section_enrollments
+#: ninefruits/reporting/services/catalog.py
+msgid "Enrollment per section"
+msgstr "Записавшиеся по группам"
+
+# key: graduation.reports.names.not_registered
+#: ninefruits/reporting/services/catalog.py
+msgid "Students not registered in a term"
+msgstr "Студенты, не записавшиеся на дисциплины в семестре"
+
+# key: graduation.report_columns.student_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Name"
+msgstr "ФИО"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "Программа"
+
+# key: graduation.report_columns.program_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Program code"
+msgstr "Код программы"
+
+# key: graduation.report_columns.program_role
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Role"
+msgstr "Роль"
+
+# key: graduation.report_columns.org_unit_name
+#: ninefruits/reporting/services/catalog.py
+msgid "Unit"
+msgstr "Подразделение"
+
+# key: graduation.report_columns.org_unit_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Unit code"
+msgstr "Код подразделения"
+
+# key: graduation.report_columns.year_level
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Year"
+msgstr "Курс"
+
+# key: graduation.report_columns.status
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "Статус"
+
+# key: graduation.report_columns.admission_date
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Admitted"
+msgstr "Дата зачисления"
+
+# key: graduation.report_columns.graduation_date
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Graduated"
+msgstr "Дата выпуска"
+
+# key: graduation.report_columns.degree_number
+#: ninefruits/reporting/services/catalog.py
+msgid "Degree number"
+msgstr "Номер диплома"
+
+# key: graduation.report_columns.students
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Students"
+msgstr "Студенты"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Term"
+msgstr "Семестр"
+
+# key: graduation.report_columns.attempted_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Attempted"
+msgstr "Записано"
+
+# key: graduation.report_columns.earned_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Earned"
+msgstr "Получено"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: ninefruits/reporting/services/catalog.py
+msgid "Term GPA"
+msgstr "Средний балл за семестр"
+
+# key: graduation.report_columns.cumulative_earned_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Cumulative earned"
+msgstr "Получено всего"
+
+# key: graduation.report_columns.cumulative_gpa
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Cumulative GPA"
+msgstr "Накопленный средний балл"
+
+# key: graduation.report_columns.academic_standing
+#: ninefruits/reporting/services/catalog.py
+msgid "Standing"
+msgstr "Академический статус"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: ninefruits/reporting/services/catalog.py
+msgid "Warnings"
+msgstr "Предупреждения"
+
+# key: graduation.report_columns.is_honors
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Honors"
+msgstr "Отличие"
+
+# key: graduation.report_columns.honors_rank
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Honors rank"
+msgstr "Место среди отличников"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "Требуется"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/reporting/services/catalog.py
+msgid "Audited"
+msgstr "Дата проверки"
+
+# key: graduation.report_columns.type_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Change"
+msgstr "Изменение"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/reporting/services/catalog.py
+msgid "From"
+msgstr "Из"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/reporting/services/catalog.py
+msgid "To"
+msgstr "В"
+
+# key: graduation.report_columns.effective_date
+#: ninefruits/reporting/services/catalog.py
+msgid "Effective"
+msgstr "Дата вступления в силу"
+
+# key: graduation.report_columns.decided_at
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Decided"
+msgstr "Дата решения"
+
+# key: graduation.report_columns.course_code
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation.report_columns"
+msgid "Course"
+msgstr "Дисциплина"
+
+# key: graduation.report_columns.course_title
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Title"
+msgstr "Название"
+
+# key: graduation.report_columns.section_code
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Section"
+msgstr "Группа"
+
+# key: graduation.report_columns.instructors
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Instructors"
+msgstr "Преподаватели"
+
+# key: graduation.report_columns.capacity
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Capacity"
+msgstr "Число мест"
+
+# key: graduation.report_columns.enrolled
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Enrolled"
+msgstr "Записано"
+
+# key: graduation.report_columns.waiting
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Waiting"
+msgstr "В ожидании"
+
+# key: offering.timetable.mode
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "Show"
+msgstr "Показать"
+
+# key: graduation.reports.rows
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+#, python-format
+msgid "%(count)s row(s) (first 500 on screen; the CSV has them all)"
+msgstr "Строк: %(count)s (на экране первые 500; в CSV — все)"
+
+# key: graduation.reports.download_csv
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "Download CSV"
+msgstr "Скачать CSV"
+
+# key: graduation.reports.empty
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "No rows. Choose the filters above."
+msgstr "Нет строк. Выберите фильтры выше."

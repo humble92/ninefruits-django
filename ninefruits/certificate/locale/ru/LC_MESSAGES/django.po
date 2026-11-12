@@ -1,0 +1,518 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# key: certificate.errors.type_inactive
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "Справки этого вида больше не выдаются."
+
+# key: certificate.errors.hold
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "Для этого студента действует ограничение на выдачу справок. Сначала снимите его."
+
+# key: certificate.errors.no_template
+#: ninefruits/certificate/actions/issue_certificate.py ninefruits/certificate/services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "Для этого вида нет шаблона на языке «%(locale)s»."
+
+# key: certificate.errors.already_revoked
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "Эта справка уже аннулирована."
+
+# key: registration.errors.reason_required
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "Укажите причину."
+
+# key: certificate.errors.audience
+#: ninefruits/certificate/actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "Эта справка выдаётся только для: %(audience)s."
+
+# key: certificate.fields.type
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "Вид"
+
+# key: common.language
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "common"
+msgid "Language"
+msgstr "Язык"
+
+# key: certificate.fields.purpose
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Purpose"
+msgstr "Цель"
+
+# key: certificate.fields.copies
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/models.py
+msgid "Copies"
+msgstr "Экземпляров"
+
+# key: common.reason
+#: ninefruits/certificate/admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Причина"
+
+# key: registration.fields.status
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Статус"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/services/renderer.py
+msgid "Student number"
+msgstr "Студенческий номер"
+
+# key: people.fields.name
+#: ninefruits/certificate/admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "ФИО"
+
+# key: certificate.fields.issued_by
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Issued by"
+msgstr "Кем выдана"
+
+# key: certificate.actions.download
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: ninefruits/certificate/admin/issues.py
+msgid "Verification page"
+msgstr "Страница проверки"
+
+# key: certificate.actions.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Render again"
+msgstr "Сформировать заново"
+
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Не удалось создать PDF. Повторите попытку позже."
+
+# key: common.saved
+#: ninefruits/certificate/admin/issues.py
+msgid "Saved"
+msgstr "Сохранено"
+
+# key: certificate.help.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Renders the PDF again from the current data and template. The serial number and verification code stay."
+msgstr "Заново формирует PDF по текущим данным и шаблону. Регистрационный номер и код проверки сохраняются."
+
+# key: certificate.actions.revoke
+#: ninefruits/certificate/admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "Аннулировать"
+
+# key: certificate.actions.issue
+#: ninefruits/certificate/admin/student_record.py
+msgid "Issue certificate"
+msgstr "Выдать справку"
+
+# key: certificate.notifications.issued
+#: ninefruits/certificate/admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "Справка %(serial)s выдана."
+
+# key: reference.fields.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Код"
+
+# key: certificate.help.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "Используется в регистрационных номерах, например ENR, GRD, TRN."
+
+# key: certificate.help.body
+#: ninefruits/certificate/admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "Абзацы разделяются пустой строкой. Подстановки: %(placeholders)s"
+
+# key: certificate.fields.templates
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Templates"
+msgstr "Шаблоны"
+
+# key: reference.fields.name
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Название"
+
+# key: certificate.fields.audience
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "Для кого"
+
+# key: portal.navigation.certificates
+#: ninefruits/certificate/apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "Справки"
+
+# key: certificate.audiences.any
+#: ninefruits/certificate/enums.py
+msgid "Any student record"
+msgstr "Любое личное дело"
+
+# key: certificate.audiences.enrolled
+#: ninefruits/certificate/enums.py
+msgid "Students (not graduated)"
+msgstr "Студенты (не выпускники)"
+
+# key: certificate.audiences.graduated
+#: ninefruits/certificate/enums.py
+msgid "Graduates"
+msgstr "Выпускники"
+
+# key: certificate.statuses.issued
+#: ninefruits/certificate/enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "Выдана"
+
+# key: certificate.statuses.revoked
+#: ninefruits/certificate/enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "Аннулирована"
+
+# key: certificate.verify.invalid_unknown
+#: ninefruits/certificate/enums.py
+msgid "No certificate matches this code."
+msgstr "Справка с таким кодом не найдена."
+
+# key: certificate.verify.invalid_revoked
+#: ninefruits/certificate/enums.py
+msgid "This certificate has been revoked."
+msgstr "Эта справка аннулирована."
+
+# key: certificate.verify.invalid_expired
+#: ninefruits/certificate/enums.py
+msgid "The verification period for this certificate has ended. Ask the holder for a current one."
+msgstr "Срок проверки этой справки истёк. Попросите владельца предоставить актуальную справку."
+
+# key: certificate.fields.has_grades
+#: ninefruits/certificate/models.py
+msgid "Includes grades"
+msgstr "С оценками"
+
+# key: certificate.help.has_grades
+#: ninefruits/certificate/models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "Добавляет таблицу итоговых оценок по семестрам (академическая справка)."
+
+# key: certificate.fields.has_photo
+#: ninefruits/certificate/models.py
+msgid "Includes photo"
+msgstr "С фотографией"
+
+# key: reference.fields.is_active
+#: ninefruits/certificate/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Активен"
+
+# key: reference.fields.sort_order
+#: ninefruits/certificate/models.py
+msgid "Order"
+msgstr "Порядок"
+
+# key: certificate.resources.types.label
+#: ninefruits/certificate/models.py
+msgid "Certificate kind"
+msgstr "Вид справки"
+
+# key: certificate.resources.types.plural_label
+#: ninefruits/certificate/models.py
+msgid "Certificate kinds"
+msgstr "Виды справок"
+
+# key: certificate.fields.title
+#: ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "Заголовок"
+
+# key: certificate.fields.body
+#: ninefruits/certificate/models.py
+msgid "Body"
+msgstr "Текст"
+
+# key: certificate.fields.footer
+#: ninefruits/certificate/models.py
+msgid "Footer"
+msgstr "Нижний колонтитул"
+
+# key: certificate.fields.signer
+#: ninefruits/certificate/models.py
+msgid "Signer"
+msgstr "Подписант"
+
+# key: certificate.help.signer
+#: ninefruits/certificate/models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "Заменяет подписанта из настроек справок для этого языка."
+
+# key: people.resources.student_records.label
+#: ninefruits/certificate/models.py
+msgid "student record"
+msgstr "личное дело студента"
+
+# key: certificate.fields.serial_number
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgid "Serial number"
+msgstr "Регистрационный номер"
+
+# key: certificate.verify.code
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/verify.html
+msgid "Verification code"
+msgstr "Код проверки"
+
+# key: certificate.fields.issued_at
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "Дата выдачи"
+
+# key: certificate.resources.issues.label
+#: ninefruits/certificate/models.py
+msgid "Issued certificate"
+msgstr "Выданная справка"
+
+# key: certificate.resources.issues.plural_label
+#: ninefruits/certificate/models.py
+msgid "Issued certificates"
+msgstr "Выданные справки"
+
+# key: certificate.facts.student_name
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "ФИО"
+
+# key: certificate.facts.birth_date
+#: ninefruits/certificate/services/renderer.py
+msgid "Date of birth"
+msgstr "Дата рождения"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/certificate/services/renderer.py
+msgid "Gender"
+msgstr "Пол"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/certificate/services/renderer.py
+msgid "Nationality"
+msgstr "Гражданство"
+
+# key: certificate.facts.program
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "Программа"
+
+# key: certificate.facts.admission_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "Дата зачисления"
+
+# key: certificate.facts.graduation_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "Дата выпуска"
+
+# key: certificate.facts.status
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "Статус"
+
+# key: certificate.facts.year_level
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "Курс"
+
+# key: certificate.settings.serial_pattern
+#: ninefruits/certificate/settings_pages.py
+msgid "Serial number pattern"
+msgstr "Шаблон регистрационного номера"
+
+# key: certificate.settings.serial_pattern_help
+#: ninefruits/certificate/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 digits (required). The sequence restarts for each distinct prefix, so {TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr "Метки: {TYPE} — код вида, {YYYY} или {YY} — год, {SEQ:6} — порядковый номер, дополненный до 6 цифр (обязательно). Нумерация начинается заново для каждого отдельного префикса, поэтому {TYPE}-{YYYY}-{SEQ:6} ведёт счёт по виду и году."
+
+# key: certificate.settings.verification_valid_days
+#: ninefruits/certificate/settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "Срок проверки (дней)"
+
+# key: certificate.settings.verification_valid_days_help
+#: ninefruits/certificate/settings_pages.py
+msgid "0 = always. After this many days the verification page reports the certificate as expired."
+msgstr "0 — бессрочно. По истечении указанного числа дней страница проверки сообщает, что срок справки истёк."
+
+# key: certificate.settings.signer
+#: ninefruits/certificate/settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "Подписант (%(locale)s)"
+
+# key: certificate.settings.title
+#: ninefruits/certificate/settings_pages.py
+msgid "Certificate settings"
+msgstr "Настройки справок"
+
+# key: certificate.settings.signers
+#: ninefruits/certificate/settings_pages.py
+msgid "Signer by language"
+msgstr "Подписант по языкам"
+
+# key: certificate.settings.signers_help
+#: ninefruits/certificate/settings_pages.py
+msgid "Printed above the seal, e.g. \"President, Ninefruits University\". A template can override it."
+msgstr "Печатается над печатью, например «Ректор Университета Ninefruits». Шаблон может это переопределить."
+
+# key: certificate.pdf.serial
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "№"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Код"
+
+# key: curriculum.fields.title
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Название"
+
+# key: curriculum.fields.credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Кредиты"
+
+# key: grading.fields.grade
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Оценка"
+
+# key: grading.grades.term_summary
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "Средний балл %(gpa)s · получено %(earned)s из %(attempted)s кредитов"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Накопленный средний балл"
+
+# key: grading.fields.earned_credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Полученные кредиты"
+
+# key: certificate.pdf.verify
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "Проверить подлинность справки: %(url)s"
+
+# key: certificate.portal.title
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/views/portal.py
+msgid "My certificates"
+msgstr "Мои справки"
+
+# key: certificate.portal.intro
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "Certificates issued to you by the registrar. Ask the registrar for a new one."
+msgstr "Справки, выданные вам учебным отделом. Чтобы получить новую, обратитесь в учебный отдел."
+
+# key: certificate.portal.none
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "Справки пока не выдавались."
+
+# key: certificate.verify.title
+#: ninefruits/certificate/templates/certificate/verify.html ninefruits/certificate/views/public.py
+msgid "Certificate verification"
+msgstr "Проверка справки"
+
+# key: certificate.verify.intro
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "Введите код проверки, напечатанный на справке, или отсканируйте её QR-код."
+
+# key: certificate.verify.check
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Check"
+msgstr "Проверить"
+
+# key: certificate.verify.valid
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "Эта справка выдана учебным заведением и действительна."
+
+# key: certificate.verify.holder
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Holder"
+msgstr "Владелец"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/certificate/views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "Слишком много запросов. Подождите минуту и повторите попытку."

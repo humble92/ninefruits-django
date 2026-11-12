@@ -1,0 +1,1237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# key: registration.errors.not_enrolled
+#: ninefruits/registration/actions/drop_enrollment.py
+msgid "This registration is not active."
+msgstr "Эта запись не действует."
+
+# key: registration.errors.reason_required
+#: ninefruits/registration/actions/enroll_student.py
+msgid "Enter a reason."
+msgstr "Укажите причину."
+
+# key: registration.capacity.full_waitlist_open
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full. You can join the waitlist."
+msgstr "Мест в группе нет. Вы можете встать в лист ожидания."
+
+# key: registration.capacity.full
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full."
+msgstr "Мест в группе нет."
+
+# key: registration.capacity.waitlisted
+#: ninefruits/registration/actions/enroll_student.py
+#, python-format
+msgid "You are on the waitlist (position %(position)s)."
+msgstr "Вы в листе ожидания (позиция %(position)s)."
+
+# key: registration.errors.not_waiting
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "This waitlist entry is no longer waiting."
+msgstr "Эта позиция в листе ожидания больше не активна."
+
+# key: registration.waitlist.left
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "You left the waitlist."
+msgstr "Вы покинули лист ожидания."
+
+# key: validation.after
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "Поле %(attribute)s должно содержать дату после %(date)s."
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Ends"
+msgstr "Окончание"
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Starts"
+msgstr "Начало"
+
+# key: registration.errors.hold_released
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This hold is already released."
+msgstr "Это ограничение уже снято."
+
+# key: registration.errors.rule_not_overridable
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This rule cannot be overridden."
+msgstr "Для этого правила исключения не допускаются."
+
+# key: registration.errors.rule_set_exists
+#: ninefruits/registration/actions/prepare_rule_set.py
+msgid "The term already has a rule set."
+msgstr "Для семестра уже есть набор правил."
+
+# key: registration.waitlist.window_closed
+#: ninefruits/registration/actions/promote_waitlist.py
+msgid "Registration closed before a seat became free."
+msgstr "Запись закрылась раньше, чем освободилось место."
+
+# key: registration.fields.outcome
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Outcome"
+msgstr "Результат"
+
+# key: registration.fields.action
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Action"
+msgstr "Действие"
+
+# key: registration.fields.attempted_at
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Time"
+msgstr "Время"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgid "Student number"
+msgstr "Студенческий номер"
+
+# key: offering.fields.section
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Группа"
+
+# key: registration.fields.failed_rules
+#: ninefruits/registration/admin/attempts.py
+msgid "Rules not met"
+msgstr "Невыполненные правила"
+
+# key: registration.fields.actor
+#: ninefruits/registration/admin/attempts.py
+msgid "By"
+msgstr "Кем"
+
+# key: common.reason
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Причина"
+
+# key: registration.import.unknown_student
+#: ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "No student record with number %(number)s."
+msgstr "Личное дело с номером %(number)s не найдено."
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "Неизвестная группа %(section)s."
+
+# key: registration.fields.waive
+#: ninefruits/registration/admin/common.py
+msgid "Waive rules"
+msgstr "Не применять правила"
+
+# key: registration.fields.waitlist_if_full
+#: ninefruits/registration/admin/common.py
+msgid "Add to the waitlist if full"
+msgstr "Добавить в лист ожидания, если мест нет"
+
+# key: registration.fields.hold_type
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgid "Hold type"
+msgstr "Вид ограничения"
+
+# key: registration.fields.blocks_registration
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks registration"
+msgstr "Запрещает запись на дисциплины"
+
+# key: registration.fields.blocks_grades
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks grade viewing"
+msgstr "Запрещает просмотр оценок"
+
+# key: registration.fields.blocks_certificates
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks certificates"
+msgstr "Запрещает выдачу справок"
+
+# key: reference.resources.terms.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "term"
+msgstr "семестр"
+
+# key: registration.fields.rule
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py
+msgid "Rule"
+msgstr "Правило"
+
+# key: registration.help.override_section
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty to apply to every section of the term."
+msgstr "Оставьте пустым, чтобы применить ко всем группам семестра."
+
+# key: curriculum.resources.courses.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "course"
+msgstr "дисциплина"
+
+# key: registration.help.override_course
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty for any course. Ignored when a section is chosen."
+msgstr "Оставьте пустым для любой дисциплины. Не учитывается, если выбрана группа."
+
+# key: registration.fields.expires_at
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Expires"
+msgstr "Истекает"
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "Неизвестная дисциплина %(course)s."
+
+# key: security.scope_types.global
+#: ninefruits/registration/admin/common.py
+msgid "All"
+msgstr "Все"
+
+# key: registration.fields.in_force
+#: ninefruits/registration/admin/common.py
+msgid "In force"
+msgstr "Действует"
+
+# key: common.yes
+#: ninefruits/registration/admin/common.py
+msgid "Yes"
+msgstr "Да"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/common.py
+msgid "No"
+msgstr "Нет"
+
+# key: registration.fields.status
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Статус"
+
+# key: registration.actions.staff_enroll
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/roster.py
+msgctxt "registration"
+msgid "Register a student"
+msgstr "Записать студента"
+
+# key: registration.portal.dropped
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Dropped."
+msgstr "Запись отменена."
+
+# key: registration.portal.withdrawn
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Withdrawn."
+msgstr "Выход из дисциплины оформлен."
+
+# key: registration.actions.drop
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Drop"
+msgstr "Отменить запись"
+
+# key: registration.actions.withdraw
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Withdraw"
+msgstr "Выход из дисциплины"
+
+# key: people.fields.name
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "people"
+msgid "Name"
+msgstr "ФИО"
+
+# key: curriculum.fields.title
+#: ninefruits/registration/admin/enrollments.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Название"
+
+# key: registration.fields.source
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration"
+msgid "Source"
+msgstr "Источник"
+
+# key: registration.actions.place_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Place a hold"
+msgstr "Установить ограничение"
+
+# key: registration.actions.release_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Release"
+msgstr "Снять"
+
+# key: registration.fields.override_limit
+#: ninefruits/registration/admin/holds.py
+msgid "Applies to"
+msgstr "Применяется к"
+
+# key: registration.fields.whole_term
+#: ninefruits/registration/admin/holds.py
+msgid "Whole term"
+msgstr "Весь семестр"
+
+# key: registration.fields.granted_at
+#: ninefruits/registration/admin/holds.py
+msgid "Granted"
+msgstr "Предоставлено"
+
+# key: registration.actions.grant_override
+#: ninefruits/registration/admin/holds.py
+msgid "Grant an override"
+msgstr "Предоставить исключение"
+
+# key: registration.actions.revoke_override
+#: ninefruits/registration/admin/holds.py
+msgctxt "registration"
+msgid "Revoke"
+msgstr "Отозвать"
+
+# key: registration.resources.roster.title
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgctxt "registration"
+msgid "Roster (%(count)s / %(capacity)s)"
+msgstr "Список группы (%(count)s / %(capacity)s)"
+
+# key: registration.resources.waitlist.plural_label
+#: ninefruits/registration/admin/roster.py ninefruits/registration/models/enrollment.py
+msgctxt "registration.resources.waitlist"
+msgid "Waitlist"
+msgstr "Лист ожидания"
+
+# key: registration.actions.promote_waitlist
+#: ninefruits/registration/admin/roster.py
+msgid "Promote now"
+msgstr "Перевести сейчас"
+
+# key: registration.notifications.promoted
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "Переведено: %(promoted)s, удалено: %(removed)s, истёк срок: %(expired)s."
+
+# key: registration.actions.remove_from_waitlist
+#: ninefruits/registration/admin/roster.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Remove"
+msgstr "Удалить"
+
+# key: registration.fields.copy_from
+#: ninefruits/registration/admin/rules.py
+msgctxt "registration"
+msgid "Copy from"
+msgstr "Копировать из"
+
+# key: registration.resources.rules.plural_label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Rules"
+msgstr "Правила"
+
+# key: registration.fields.severity
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "When not met"
+msgstr "При невыполнении"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/rules.py
+msgid "Edit"
+msgstr "Редактировать"
+
+# key: reference.fields.code
+#: ninefruits/registration/admin/rules.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Код"
+
+# key: registration.fields.enabled_rules
+#: ninefruits/registration/admin/rules.py
+msgid "Rules on"
+msgstr "Включённые правила"
+
+# key: registration.fields.copied_from
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Copied from"
+msgstr "Скопировано из"
+
+# key: registration.actions.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "Prepare rules for a term"
+msgstr "Подготовить правила для семестра"
+
+# key: registration.help.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "The rules are copied from the chosen term, or start from the defaults. Review them before registration opens."
+msgstr "Правила копируются из выбранного семестра или создаются по умолчанию. Проверьте их до начала записи."
+
+# key: registration.parameters.statuses
+#: ninefruits/registration/admin/rules.py
+msgid "Student statuses that may register"
+msgstr "Статусы студентов, которым разрешена запись"
+
+# key: registration.parameters.allowed_overlap_minutes
+#: ninefruits/registration/admin/rules.py
+msgid "Allowed overlap (minutes)"
+msgstr "Допустимое пересечение (минут)"
+
+# key: registration.parameters.repeat_allowed
+#: ninefruits/registration/admin/rules.py
+msgid "Retakes allowed"
+msgstr "Повторное изучение разрешено"
+
+# key: registration.parameters.max_attempts
+#: ninefruits/registration/admin/rules.py
+msgid "Maximum attempts per course"
+msgstr "Максимум попыток по дисциплине"
+
+# key: registration.parameters.max_attempts_help
+#: ninefruits/registration/admin/rules.py
+msgid "Including the first attempt. Empty means no limit."
+msgstr "Включая первую попытку. Пусто — без ограничения."
+
+# key: registration.parameters.below_grade
+#: ninefruits/registration/admin/rules.py
+msgid "Only below grade"
+msgstr "Только при оценке ниже"
+
+# key: registration.parameters.below_grade_help
+#: ninefruits/registration/admin/rules.py
+msgid "Retake only when the earlier grade is below this grade (e.g. C+). Empty means any grade."
+msgstr "Повторное изучение возможно, только если прежняя оценка ниже указанной (например, C+). Пусто — при любой оценке."
+
+# key: registration.fields.all_term_types
+#: ninefruits/registration/admin/rules.py
+msgid "All term types"
+msgstr "Все виды семестров"
+
+# key: validation.lte.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be less than or equal to %(value)s."
+msgstr "Значение поля %(attribute)s должно быть не больше %(value)s."
+
+# key: curriculum.fields.min_credits
+# key: registration.fields.min_credits
+#: ninefruits/registration/admin/rules.py
+msgid "Minimum credits"
+msgstr "Минимум кредитов"
+
+# key: registration.fields.max_credits
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Maximum credits"
+msgstr "Максимум кредитов"
+
+# key: validation.between.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "Значение поля %(attribute)s должно быть от %(min)s до %(max)s."
+
+# key: registration.fields.applies_to
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Students"
+msgstr "Студенты"
+
+# key: registration.help.credit_policy_eligibility
+#: ninefruits/registration/admin/rules.py
+msgid "Leave empty for every student."
+msgstr "Оставьте пустым для всех студентов."
+
+# key: reference.fields.name
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Название"
+
+# key: reference.resources.term_types.label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "term type"
+msgstr "вид семестра"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/registration/apps.py ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "Registration"
+msgstr "Запись на дисциплины"
+
+# key: registration.attempt_actions.enroll
+#: ninefruits/registration/enums.py ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration"
+msgid "Register"
+msgstr "Запись"
+
+# key: registration.attempt_actions.drop
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Drop"
+msgstr "Отмена записи"
+
+# key: registration.attempt_actions.withdraw
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Withdraw"
+msgstr "Выход из дисциплины"
+
+# key: registration.attempt_actions.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Waitlist"
+msgstr "Лист ожидания"
+
+# key: registration.attempt_actions.promote
+#: ninefruits/registration/enums.py
+msgid "Waitlist promotion"
+msgstr "Перевод из листа ожидания"
+
+# key: registration.attempt_actions.cart
+# key: registration.portal.cart
+#: ninefruits/registration/enums.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart"
+msgstr "Корзина"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/registration/enums.py
+msgid "Succeeded"
+msgstr "Успешно"
+
+# key: registration.attempt_outcomes.waitlisted
+#: ninefruits/registration/enums.py
+msgid "Waitlisted"
+msgstr "В листе ожидания"
+
+# key: registration.attempt_outcomes.refused
+#: ninefruits/registration/enums.py
+msgid "Refused"
+msgstr "Отказано"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/registration/enums.py
+msgid "Student"
+msgstr "Студент"
+
+# key: registration.enrollment_sources.staff
+#: ninefruits/registration/enums.py
+msgid "Staff"
+msgstr "Сотрудник"
+
+# key: registration.enrollment_sources.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_sources"
+msgid "Waitlist"
+msgstr "Лист ожидания"
+
+# key: registration.enrollment_sources.import
+#: ninefruits/registration/enums.py
+msgid "Import"
+msgstr "Импорт"
+
+# key: registration.enrollment_statuses.enrolled
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_statuses"
+msgid "Registered"
+msgstr "Записан"
+
+# key: registration.enrollment_statuses.dropped
+#: ninefruits/registration/enums.py
+msgid "Dropped"
+msgstr "Запись отменена"
+
+# key: registration.enrollment_statuses.withdrawn
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Withdrawn"
+msgstr "Выход из дисциплины"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/registration/enums.py
+msgid "Completed"
+msgstr "Завершено"
+
+# key: registration.hold_types.unregistered
+#: ninefruits/registration/enums.py
+msgid "Not registered for the term"
+msgstr "Не записан на дисциплины в семестре"
+
+# key: registration.hold_types.financial
+#: ninefruits/registration/enums.py
+msgid "Financial"
+msgstr "Финансовое"
+
+# key: registration.hold_types.academic
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Academic"
+msgstr "Академическое"
+
+# key: registration.hold_types.administrative
+#: ninefruits/registration/enums.py
+msgid "Administrative"
+msgstr "Административное"
+
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: ninefruits/registration/enums.py
+msgid "Other"
+msgstr "Другое"
+
+# key: registration.rules.window.label
+#: ninefruits/registration/enums.py
+msgctxt "registration.rules.window"
+msgid "Registration period"
+msgstr "Период записи"
+
+# key: registration.rules.section_open.label
+#: ninefruits/registration/enums.py
+msgid "Section open"
+msgstr "Группа открыта"
+
+# key: registration.rules.hold.label
+#: ninefruits/registration/enums.py
+msgid "Holds"
+msgstr "Ограничения"
+
+# key: registration.rules.student_status.label
+#: ninefruits/registration/enums.py
+msgid "Student status"
+msgstr "Статус студента"
+
+# key: registration.rules.eligibility.label
+#: ninefruits/registration/enums.py
+msgid "Section eligibility"
+msgstr "Условия допуска в группу"
+
+# key: registration.rules.duplicate_course.label
+#: ninefruits/registration/enums.py
+msgid "Same course twice"
+msgstr "Повторная запись на дисциплину"
+
+# key: registration.rules.time_conflict.label
+#: ninefruits/registration/enums.py
+msgid "Time conflict"
+msgstr "Пересечение по времени"
+
+# key: registration.rules.credit_limit.label
+#: ninefruits/registration/enums.py
+msgid "Credit limit"
+msgstr "Лимит кредитов"
+
+# key: registration.rules.requisites.label
+#: ninefruits/registration/enums.py
+msgid "Prerequisites"
+msgstr "Пререквизиты"
+
+# key: registration.rules.repeat_course.label
+#: ninefruits/registration/enums.py
+msgid "Retakes"
+msgstr "Повторное изучение"
+
+# key: registration.rules.capacity.label
+#: ninefruits/registration/enums.py
+msgid "Seats"
+msgstr "Места"
+
+# key: registration.rules.window.description
+#: ninefruits/registration/enums.py
+msgid "A registration, add/drop or withdrawal period must be open for the student."
+msgstr "Для студента должен быть открыт период записи, добавления/отказа или выхода из дисциплины."
+
+# key: registration.rules.section_open.description
+#: ninefruits/registration/enums.py
+msgid "The section must be published."
+msgstr "Группа должна быть опубликована."
+
+# key: registration.rules.hold.description
+#: ninefruits/registration/enums.py
+msgid "Students with a hold that blocks registration cannot register."
+msgstr "Студенты с ограничением, запрещающим запись, не могут записаться."
+
+# key: registration.rules.student_status.description
+#: ninefruits/registration/enums.py
+msgid "Only students with the chosen statuses may register."
+msgstr "Записываться могут только студенты с выбранными статусами."
+
+# key: registration.rules.eligibility.description
+#: ninefruits/registration/enums.py
+msgid "The student must match the section's eligibility and not its exclusions."
+msgstr "Студент должен соответствовать условиям допуска группы и не подпадать под её исключения."
+
+# key: registration.rules.duplicate_course.description
+#: ninefruits/registration/enums.py
+msgid "A course can be registered only once per term."
+msgstr "На дисциплину можно записаться только один раз за семестр."
+
+# key: registration.rules.time_conflict.description
+#: ninefruits/registration/enums.py
+msgid "Meeting times must not overlap with other registered sections."
+msgstr "Время занятий не должно пересекаться с другими группами, в которые записан студент."
+
+# key: registration.rules.credit_limit.description
+#: ninefruits/registration/enums.py
+msgid "Total credits must not exceed the credit limit that applies to the student."
+msgstr "Сумма кредитов не должна превышать лимит, действующий для студента."
+
+# key: registration.rules.requisites.description
+#: ninefruits/registration/enums.py
+msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
+msgstr "Пререквизиты должны быть сданы (эквивалентные дисциплины засчитываются); кореквизиты можно изучать в том же семестре."
+
+# key: registration.rules.repeat_course.description
+#: ninefruits/registration/enums.py
+msgid "Whether and how often a passed course may be taken again."
+msgstr "Можно ли и сколько раз повторно изучать сданную дисциплину."
+
+# key: registration.rules.capacity.description
+#: ninefruits/registration/enums.py
+msgid "A seat must be free (reserved seats count only for their students until released)."
+msgstr "Должно быть свободное место (зарезервированные места доступны только своим студентам, пока не освобождены)."
+
+# key: registration.rule_severities.block
+#: ninefruits/registration/enums.py
+msgid "Block"
+msgstr "Запретить"
+
+# key: registration.rule_severities.warn
+#: ninefruits/registration/enums.py
+msgid "Warn only"
+msgstr "Только предупредить"
+
+# key: registration.waitlist_statuses.waiting
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Waiting"
+msgstr "Ожидает"
+
+# key: registration.waitlist_statuses.promoted
+#: ninefruits/registration/enums.py
+msgctxt "registration.waitlist_statuses"
+msgid "Registered"
+msgstr "Записан"
+
+# key: registration.waitlist_statuses.removed
+#: ninefruits/registration/enums.py
+msgid "Removed"
+msgstr "Удалён"
+
+# key: registration.waitlist_statuses.expired
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Expired"
+msgstr "Истёк срок"
+
+# key: validation.date
+#: ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "Поле %(attribute)s должно содержать действительную дату."
+
+# key: registration.resources.holds.plural_label
+#: ninefruits/registration/importers.py ninefruits/registration/models/holds.py
+msgid "holds"
+msgstr "ограничения"
+
+# key: people.resources.student_records.label
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgid "student record"
+msgstr "личное дело студента"
+
+# key: registration.portal.credits
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Credits"
+msgstr "Кредиты"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/portal/registration.html
+msgid "Retake"
+msgstr "Повторное изучение"
+
+# key: registration.fields.enrolled_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html
+msgid "Registered at"
+msgstr "Дата записи"
+
+# key: registration.resources.enrollments.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration"
+msgstr "запись на дисциплину"
+
+# key: registration.resources.enrollments.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registrations"
+msgstr "записи на дисциплины"
+
+# key: registration.fields.requested_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Requested"
+msgstr "Дата запроса"
+
+# key: registration.fields.outcome_note
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Note"
+msgstr "Примечание"
+
+# key: registration.fields.request_id
+#: ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Request ID"
+msgstr "ID запроса"
+
+# key: registration.resources.attempts.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempt"
+msgstr "попытка записи"
+
+# key: registration.resources.attempts.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempts"
+msgstr "попытки записи"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "исключение"
+
+# key: registration.fields.released_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Released"
+msgstr "Снято"
+
+# key: registration.resources.holds.label
+#: ninefruits/registration/models/holds.py
+msgid "hold"
+msgstr "ограничение"
+
+# key: registration.fields.revoked_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Revoked"
+msgstr "Отозвано"
+
+# key: registration.resources.overrides.label
+#: ninefruits/registration/models/holds.py
+msgid "rule override"
+msgstr "исключение из правила"
+
+# key: registration.resources.overrides.plural_label
+#: ninefruits/registration/models/holds.py
+msgid "rule overrides"
+msgstr "исключения из правил"
+
+# key: offering.fields.note
+#: ninefruits/registration/models/rules.py
+msgctxt "offering"
+msgid "Note"
+msgstr "Примечание"
+
+# key: registration.resources.rule_sets.label
+#: ninefruits/registration/models/rules.py
+msgid "rule set"
+msgstr "набор правил"
+
+# key: registration.resources.rule_sets.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "registration rules"
+msgstr "правила записи"
+
+# key: registration.fields.is_enabled
+#: ninefruits/registration/models/rules.py
+msgid "On"
+msgstr "Включено"
+
+# key: registration.fields.allows_override
+#: ninefruits/registration/models/rules.py
+msgid "Overrides allowed"
+msgstr "Исключения допускаются"
+
+# key: registration.fields.min_credits
+#: ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Minimum credits"
+msgstr "Минимум кредитов"
+
+# key: registration.fields.priority
+#: ninefruits/registration/models/rules.py
+msgid "Priority"
+msgstr "Приоритет"
+
+# key: registration.help.priority
+#: ninefruits/registration/models/rules.py
+msgid "When several limits match a student, the highest priority applies."
+msgstr "Если студенту соответствует несколько лимитов, применяется лимит с наивысшим приоритетом."
+
+# key: registration.fields.is_active
+#: ninefruits/registration/models/rules.py
+msgctxt "registration.fields"
+msgid "Active"
+msgstr "Активен"
+
+# key: registration.resources.credit_limit_policies.label
+#: ninefruits/registration/models/rules.py
+msgid "credit limit"
+msgstr "лимит кредитов"
+
+# key: registration.resources.credit_limit_policies.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "credit limits"
+msgstr "лимиты кредитов"
+
+# key: registration.mail.waitlist_promoted_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You are registered in %(section)s"
+msgstr "Вы записаны в группу %(section)s"
+
+# key: registration.mail.waitlist_removed_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s"
+msgstr "Лист ожидания группы %(section)s"
+
+# key: registration.mail.waitlist_expired_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s closed"
+msgstr "Лист ожидания группы %(section)s закрыт"
+
+# key: registration.mail.waitlist_promoted_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "A seat became free in %(section)s and you have been registered from the waitlist."
+msgstr "В группе %(section)s освободилось место, и вы записаны из листа ожидания."
+
+# key: registration.mail.waitlist_removed_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You were removed from the waitlist for %(section)s."
+msgstr "Вы удалены из листа ожидания группы %(section)s."
+
+# key: registration.mail.waitlist_expired_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Registration closed before a seat became free in %(section)s."
+msgstr "Запись закрылась раньше, чем освободилось место в группе %(section)s."
+
+# key: security.email_code.mail_greeting
+#: ninefruits/registration/notifications.py
+msgid "Hello,"
+msgstr "Здравствуйте!"
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "Перейти к записи"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"С уважением,\n"
+"%(app)s"
+
+# key: registration.rules.credit_limit.failed
+#: ninefruits/registration/rules/credit_limit.py
+#, python-format
+msgid "This would make %(total)s credits; your limit is %(limit)s."
+msgstr "Итого получится кредитов: %(total)s; ваш лимит: %(limit)s."
+
+# key: registration.rules.duplicate_course.failed
+#: ninefruits/registration/rules/duplicate_course.py
+#, python-format
+msgid "You are already registered in %(section)s."
+msgstr "Вы уже записаны в группу %(section)s."
+
+# key: registration.rules.eligibility.failed
+#: ninefruits/registration/rules/eligibility.py
+msgid "This section is not open to you."
+msgstr "Эта группа для вас недоступна."
+
+# key: registration.rules.hold.failed
+#: ninefruits/registration/rules/hold.py
+#, python-format
+msgid "You have a hold (%(type)s). Contact the office that placed it."
+msgstr "На вас наложено ограничение (%(type)s). Обратитесь в подразделение, которое его установило."
+
+# key: registration.rules.repeat_course.retake
+#: ninefruits/registration/rules/repeat_course.py
+msgid "This registration is a retake."
+msgstr "Эта запись — повторное изучение."
+
+# key: registration.rules.repeat_course.not_allowed
+#: ninefruits/registration/rules/repeat_course.py
+msgid "You have already taken this course and retakes are not allowed."
+msgstr "Вы уже изучали эту дисциплину, а повторное изучение не разрешено."
+
+# key: registration.rules.repeat_course.too_many
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "You have reached the maximum of %(max)s attempts for this course."
+msgstr "Вы достигли максимального числа попыток по этой дисциплине (%(max)s)."
+
+# key: registration.rules.repeat_course.grade_too_high
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "Retakes are allowed only for grades below %(grade)s."
+msgstr "Повторное изучение разрешено только при оценке ниже %(grade)s."
+
+# key: registration.rules.requisites.failed
+#: ninefruits/registration/rules/requisites.py
+#, python-format
+msgid "Prerequisites not met: %(courses)s."
+msgstr "Пререквизиты не выполнены: %(courses)s."
+
+# key: registration.rules.section_open.failed
+#: ninefruits/registration/rules/section_open.py
+msgid "This section is not open for registration."
+msgstr "Запись в эту группу не открыта."
+
+# key: registration.rules.student_status.failed
+#: ninefruits/registration/rules/student_status.py
+#, python-format
+msgid "Your status (%(status)s) does not allow registration."
+msgstr "Ваш статус (%(status)s) не позволяет записаться."
+
+# key: registration.rules.time_conflict.failed
+#: ninefruits/registration/rules/time_conflict.py
+#, python-format
+msgid "The time overlaps with %(section)s."
+msgstr "Время пересекается с группой %(section)s."
+
+# key: registration.rules.window.failed.enroll
+# key: registration.rules.window.failed.waitlist
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for you now."
+msgstr "Запись на дисциплины для вас сейчас закрыта."
+
+# key: registration.rules.window.failed.drop
+#: ninefruits/registration/rules/window.py
+msgid "Dropping is not open for this course now."
+msgstr "Отмена записи на эту дисциплину сейчас невозможна."
+
+# key: registration.rules.window.failed.withdraw
+#: ninefruits/registration/rules/window.py
+msgid "Withdrawal is not open for this course now."
+msgstr "Выход из этой дисциплины сейчас невозможен."
+
+# key: registration.rules.window.failed.promote
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for this course now."
+msgstr "Запись на эту дисциплину сейчас закрыта."
+
+# key: registration.rules.window.failed.cart
+#: ninefruits/registration/rules/window.py
+msgid "The cart is not open for you now."
+msgstr "Корзина для вас сейчас закрыта."
+
+# key: security.scope_types.program
+#: ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "security"
+msgid "Program"
+msgstr "Программа"
+
+# key: common.none
+#: ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "common"
+msgid "None"
+msgstr "Нет"
+
+# key: registration.portal.drop
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Drop"
+msgstr "Отменить запись"
+
+# key: registration.portal.withdraw
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Withdraw"
+msgstr "Выйти"
+
+# key: registration.portal.leave_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Leave waitlist"
+msgstr "Покинуть лист ожидания"
+
+# key: registration.portal.submit_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Register all"
+msgstr "Записаться на все"
+
+# key: portal.profile.remove
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "Удалить"
+
+# key: registration.portal.add_to_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Add to cart"
+msgstr "В корзину"
+
+# key: registration.portal.join_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Join waitlist"
+msgstr "Встать в лист ожидания"
+
+# key: offering.timetable.mode
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Show"
+msgstr "Показать"
+
+# key: registration.portal.no_term
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "No term is open for registration."
+msgstr "Нет семестра с открытой записью."
+
+# key: registration.portal.window
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration.portal"
+msgid "Registration period"
+msgstr "Период записи"
+
+# key: registration.portal.registration_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Open"
+msgstr "Открыта"
+
+# key: registration.portal.cart_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart only"
+msgstr "Только корзина"
+
+# key: registration.portal.opens_at
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Opens %(date)s"
+msgstr "Открывается %(date)s"
+
+# key: registration.portal.closed
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Closed"
+msgstr "Закрыта"
+
+# key: registration.portal.sections_count
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Courses"
+msgstr "Дисциплины"
+
+# key: registration.portal.timetable
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Timetable"
+msgstr "Расписание"
+
+# key: registration.portal.my_registrations
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "My registrations"
+msgstr "Мои записи"
+
+# key: registration.portal.drop_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Drop this course?"
+msgstr "Отменить запись на эту дисциплину?"
+
+# key: registration.portal.withdraw_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Withdraw from this course? A W is recorded."
+msgstr "Выйти из этой дисциплины? Будет проставлена отметка W."
+
+# key: registration.portal.waiting
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Waitlist position %(position)s"
+msgstr "Позиция в листе ожидания: %(position)s"
+
+# key: registration.portal.cart_empty
+#: ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "The cart is empty."
+msgstr "Корзина пуста."
+
+# key: offering.catalog.search
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Search"
+msgstr "Поиск"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Course code or title"
+msgstr "Код или название дисциплины"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Instructor to be announced"
+msgstr "Преподаватель будет объявлен"
+
+# key: offering.catalog.time_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Time to be announced"
+msgstr "Время будет объявлено"
+
+# key: registration.portal.seats
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
+msgstr "Места: свободно %(general)s, зарезервировано %(reserved)s, всего %(capacity)s"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/registration/views/portal.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "Слишком много запросов. Подождите минуту и повторите попытку."
+
+# key: registration.portal.registered
+#: ninefruits/registration/views/portal.py
+msgid "Registered."
+msgstr "Вы записаны."
+
+# key: registration.portal.added_to_cart
+#: ninefruits/registration/views/portal.py
+msgid "Added to the cart."
+msgstr "Добавлено в корзину."

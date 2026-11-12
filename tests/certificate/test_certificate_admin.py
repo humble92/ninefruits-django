@@ -9,6 +9,7 @@ from __future__ import annotations
 from collections.abc import Iterator
 
 import pytest
+from django.conf import settings
 from django.core.cache import cache
 
 from ninefruits.certificate.enums import CertificateIssueStatus
@@ -57,7 +58,7 @@ def test_seeds_demo_issues_and_renders_every_certificate_page(demo: None, manage
     assert {issue.certificate_type.code for issue in issues} == {"ENR", "GRD", "TRN"}
     assert sum(issue.status == CertificateIssueStatus.REVOKED for issue in issues) == 1
     assert all(issue.pdf() is not None and len(issue.pdf_checksum or "") == 64 for issue in issues)
-    assert CertificateTemplate.objects.count() == 12
+    assert CertificateTemplate.objects.count() == 3 * len(settings.LANGUAGES)  # every shipped language
 
     issue = issues[0]
     kind = CertificateType.objects.get(code="TRN")
@@ -170,7 +171,7 @@ def test_edits_a_kind_and_its_templates(kinds: dict[str, CertificateType], manag
     }
     response = client.post(f"/admin/certificate/certificatetype/{kind.pk}/change/", data)
     assert response.status_code == 200
-    assert kind.templates.count() == 4
+    assert kind.templates.count() == len(templates)  # the duplicate language was not saved
 
     data[f"templates-{new}-locale"] = ""
     data["templates-TOTAL_FORMS"] = len(templates)

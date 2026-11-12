@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "Import %(type)s terminé"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "%(count)s ligne(s) importée(s)."
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s ligne(s) en échec ; téléchargez les lignes en échec pour les corriger."
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "ligne en échec"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "lignes en échec"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "Ligne"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "Type d’import"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "Lignes en échec"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "Statut"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "En file d’attente"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "Télécharger les lignes en échec"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "unités organisationnelles"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "formations"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "bâtiments"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "salles"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "codes"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "Terminé"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "Fichier"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "Lignes traitées"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "Lignes"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "Lignes importées"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "Importé par"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "Début"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "Import CSV"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "Imports CSV"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "Erreur"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Le champ %(attribute)s est obligatoire."
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Le champ %(attribute)s doit être une date postérieure ou égale au %(date)s."
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "Le champ %(attribute)s ne doit pas dépasser %(max)s caractères."
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "La valeur sélectionnée pour %(attribute)s n’est pas valide."
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "Le champ %(attribute)s doit être un entier."
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "Le champ %(attribute)s doit être un nombre."
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "Le champ %(attribute)s doit être vrai ou faux."
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "Le champ %(attribute)s doit être une date valide."
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "La valeur de %(attribute)s doit être comprise entre %(min)s et %(max)s."
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "La valeur de %(attribute)s doit être d’au moins %(min)s."
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "Code %(column)s inconnu « %(code)s »."
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "Rejetée par la base de données : %(message)s"

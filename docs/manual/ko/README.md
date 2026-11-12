@@ -1,7 +1,7 @@
 # 학사 행정 시스템 매뉴얼 (한국어)
 
 - 대상: 학사 업무 관리자(학적, 교무, 증명서, 입학 담당), 시스템 관리자, 서버 운영자
-- 다른 언어: [English](../en/README.md), [简体中文](../zh_Hans/README.md), [ລາວ](../lo/README.md)
+- 다른 언어: [English](../en/README.md), [简体中文](../zh_Hans/README.md), [ລາວ](../lo/README.md), [Deutsch](../de/README.md), [Filipino](../fil/README.md), [Français](../fr/README.md), [日本語](../ja/README.md), [Монгол](../mn/README.md), [Bahasa Melayu](../ms/README.md), [नेपाली](../ne/README.md), [Русский](../ru/README.md), [ไทย](../th/README.md), [Türkçe](../tr/README.md), [Oʻzbek](../uz/README.md), [Tiếng Việt](../vi/README.md)
 - 한국어가 원본이다. Phase마다 한국어를 먼저 고치고 3개 언어를 맞춘다.
 
 ## 관리자 매뉴얼

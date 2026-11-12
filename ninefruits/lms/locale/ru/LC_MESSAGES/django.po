@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "Каждый балл должен быть числом от 0 до 100."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown operation."
+msgstr "Неизвестная операция."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown status."
+msgstr "Неизвестный статус."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "Неизвестная запись журнала синхронизации."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "This step is already finished."
+msgstr "Этот шаг уже завершён."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "Операция не соответствует записи журнала синхронизации."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "Группа не связана с этой платформой."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "Отправьте объект вида «ID пользователя — балл»."
+
+#: ninefruits/lms/actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "С этим курсом не связана ни одна группа."
+
+# key: lms.resources.platforms.label
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "LMS platform"
+msgstr "Платформа LMS"
+
+# key: registration.fields.status
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "Статус"
+
+# key: reference.resources.terms.label
+#: ninefruits/lms/admin/course_links.py
+msgid "term"
+msgstr "семестр"
+
+# key: offering.fields.section
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Группа"
+
+# key: lms.fields.external_course_id
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course id on the platform"
+msgstr "ID курса на платформе"
+
+# key: lms.fields.external_url
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course URL"
+msgstr "URL курса"
+
+# key: lms.fields.last_error
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Last error"
+msgstr "Последняя ошибка"
+
+# key: lms.actions.resync
+#: ninefruits/lms/admin/course_links.py
+msgid "Synchronize again"
+msgstr "Синхронизировать снова"
+
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "Ошибка синхронизации: %(error)s"
+
+# key: lms.notifications.synced
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "Синхронизировано участников: %(members)s."
+
+#: ninefruits/lms/admin/course_links.py
+msgid "Pushes the course, its instructors and its enrolled students to the platform again."
+msgstr "Повторно передаёт на платформу курс, его преподавателей и записанных студентов."
+
+# key: lms.fields.not_implemented
+#: ninefruits/lms/admin/platforms.py
+msgid "not implemented yet"
+msgstr "пока не реализован"
+
+#: ninefruits/lms/admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "Строка %(number)s: укажите в виде ключ=значение."
+
+# key: reference.fields.code
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Код"
+
+# key: lms.fields.driver
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Driver"
+msgstr "Драйвер"
+
+# key: lms.help.driver
+#: ninefruits/lms/admin/platforms.py
+msgid "The connector that talks to the platform. \"null\" records what would be sent without calling anything; use it to prepare and test."
+msgstr "Коннектор, взаимодействующий с платформой. «null» записывает, что было бы отправлено, ничего не вызывая; используйте его для подготовки и тестирования."
+
+# key: lms.fields.base_url
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Base URL"
+msgstr "Базовый URL"
+
+# key: lms.fields.credentials
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Credentials"
+msgstr "Учётные данные"
+
+# key: lms.help.credentials
+#: ninefruits/lms/admin/platforms.py
+msgid "Tokens and secrets the driver needs (see docs/lms-integration-guide.md). Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr "Токены и секреты, необходимые драйверу (см. docs/lms-integration-guide.md). Хранятся в зашифрованном виде; при редактировании оставьте пустыми, чтобы сохранить текущие."
+
+#: ninefruits/lms/admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "По одной паре ключ=значение в строке, например token=..."
+
+# key: lms.help.is_active
+#: ninefruits/lms/admin/platforms.py
+msgid "Active platforms receive published sections and roster changes as they happen, and the nightly reconcile."
+msgstr "Активные платформы получают опубликованные группы и изменения списков сразу, а также при ночной сверке."
+
+# key: lms.help.should_pull_grades
+#: ninefruits/lms/admin/platforms.py
+msgid "Lets instructors load the platform's final scores into the grade entry screen as a draft."
+msgstr "Позволяет преподавателям загружать итоговые баллы с платформы на экран ввода оценок в виде черновика."
+
+#: ninefruits/lms/admin/platforms.py
+msgid "This code is already used."
+msgstr "Этот код уже используется."
+
+# key: reference.fields.name
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Название"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Course links"
+msgstr "Связи с курсами"
+
+# key: admin.record_changes.fields.operation
+# key: lms.fields.operation
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Operation"
+msgstr "Операция"
+
+# key: admin.audit.fields.actor
+#: ninefruits/lms/admin/sync_logs.py
+msgid "User"
+msgstr "Пользователь"
+
+# key: lms.fields.message
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Message"
+msgstr "Сообщение"
+
+#: ninefruits/lms/admin/sync_logs.py
+msgid "Payload"
+msgstr "Содержимое"
+
+# key: lms.link_statuses.pending
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "Ожидает"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/lms/enums.py
+msgid "Linked"
+msgstr "Связано"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "Ошибка"
+
+# key: lms.drivers.null
+#: ninefruits/lms/enums.py
+msgid "None (records only)"
+msgstr "Нет (только запись)"
+
+# key: lms.operations.course.sync
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "Курс"
+
+# key: lms.operations.enrollment.add
+#: ninefruits/lms/enums.py
+msgid "Add member"
+msgstr "Добавить участника"
+
+# key: lms.operations.enrollment.remove
+#: ninefruits/lms/enums.py
+msgid "Remove member"
+msgstr "Удалить участника"
+
+# key: lms.operations.grades.pull
+#: ninefruits/lms/enums.py
+msgid "Pull scores"
+msgstr "Загрузить баллы"
+
+#: ninefruits/lms/enums.py
+msgid "Scores delivered"
+msgstr "Баллы переданы"
+
+# key: lms.operations.reconcile
+#: ninefruits/lms/enums.py
+msgid "Reconcile"
+msgstr "Сверка"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/lms/enums.py
+msgid "Queued"
+msgstr "В очереди"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/lms/enums.py
+msgid "Succeeded"
+msgstr "Успешно"
+
+# key: lms.sync_statuses.skipped
+#: ninefruits/lms/enums.py
+msgid "Skipped"
+msgstr "Пропущено"
+
+#: ninefruits/lms/models.py
+msgid "Options"
+msgstr "Параметры"
+
+# key: reference.fields.is_active
+#: ninefruits/lms/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Активен"
+
+# key: lms.fields.should_sync_enrollments
+#: ninefruits/lms/models.py
+msgid "Synchronize rosters"
+msgstr "Синхронизировать списки групп"
+
+# key: lms.fields.should_pull_grades
+#: ninefruits/lms/models.py
+msgid "Pull final scores"
+msgstr "Загружать итоговые баллы"
+
+# key: lms.resources.platforms.plural_label
+#: ninefruits/lms/models.py
+msgid "LMS platforms"
+msgstr "Платформы LMS"
+
+# key: lms.fields.last_synced_at
+#: ninefruits/lms/models.py
+msgid "Last synced"
+msgstr "Последняя синхронизация"
+
+# key: lms.resources.course_links.label
+#: ninefruits/lms/models.py
+msgid "Course link"
+msgstr "Связь с курсом"
+
+#: ninefruits/lms/models.py
+msgid "User id on the platform"
+msgstr "ID пользователя на платформе"
+
+#: ninefruits/lms/models.py
+msgid "User link"
+msgstr "Связь пользователя"
+
+#: ninefruits/lms/models.py
+msgid "User links"
+msgstr "Связи пользователей"
+
+# key: lms.fields.started_at
+#: ninefruits/lms/models.py
+msgid "Started"
+msgstr "Начало"
+
+#: ninefruits/lms/models.py
+msgid "Finished"
+msgstr "Завершено"
+
+# key: lms.resources.sync_logs.label
+#: ninefruits/lms/models.py
+msgid "Sync log"
+msgstr "Журнал синхронизации"
+
+# key: lms.resources.sync_logs.plural_label
+#: ninefruits/lms/models.py
+msgid "Sync logs"
+msgstr "Журналы синхронизации"
+
+# key: grading.entry.import_lms
+#: ninefruits/lms/services/grades.py
+msgid "Load scores from the LMS"
+msgstr "Загрузить баллы из LMS"
+
+# key: grading.entry.lms_imported
+#: ninefruits/lms/services/grades.py
+#, python-format
+msgid "%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "Баллов загружено из LMS в черновик: %(count)s. Проверьте их и сохраните."
+
+# key: lms.portal.open_course
+#: ninefruits/lms/services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "Открыть курс в %(platform)s"

@@ -1,7 +1,7 @@
 # Management command reference
 
 - Audience: IT operators
-- Scope: every command registered by the Ninefruits apps in this repository (`ninefruits/*/management/commands/`) and the Django built-in commands used in operations. When a command is added, a `### \`command\`` entry must also be added to this document (all 4 languages), or CI fails (`tests/tooling/test_command_documentation.py`).
+- Scope: every command registered by the Ninefruits apps in this repository (`ninefruits/*/management/commands/`) and the Django built-in commands used in operations. When a command is added, a `### \`command\`` entry must also be added to this document (all 16 languages), or CI fails (`tests/tooling/test_command_documentation.py`).
 
 ## Common conventions
 
@@ -509,7 +509,7 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
 
 ### `pdf_sample`
 
-- Purpose: renders a table mixing Korean, Chinese, Lao and English to PDF to check the fonts and the connection to the PDF service (Gotenberg).
+- Purpose: renders a table mixing Hangul, CJK, Lao, Thai, Devanagari, Cyrillic and Latin script to PDF to check the fonts and the connection to the PDF service (Gotenberg).
 - Argument: `[path]` (default `pdf-sample.pdf`, relative to the private file storage `PRIVATE_MEDIA_ROOT`).
 - Audit: not recorded
 - On failure: exit code 1. For connection errors check `GOTENBERG_URL`, `GOTENBERG_TIMEOUT` and the Gotenberg container.

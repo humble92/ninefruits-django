@@ -1,0 +1,401 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/reporting/admin/__init__.py ninefruits/reporting/admin/reports.py
+msgid "Reports"
+msgstr "รายงาน"
+
+# key: graduation.reports.report
+#: ninefruits/reporting/admin/reports.py
+msgid "Report"
+msgstr "รายงาน"
+
+# key: reference.resources.terms.label
+#: ninefruits/reporting/admin/reports.py
+msgid "term"
+msgstr "ภาคการศึกษา"
+
+# key: reference.resources.org_units.label
+#: ninefruits/reporting/admin/reports.py
+msgid "org unit"
+msgstr "หน่วยงาน"
+
+# key: registration.fields.status
+#: ninefruits/reporting/admin/reports.py
+msgctxt "registration"
+msgid "Status"
+msgstr "สถานะ"
+
+# key: people.fields.year_level
+#: ninefruits/reporting/admin/reports.py
+msgctxt "people"
+msgid "Year"
+msgstr "ชั้นปี"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/reporting/admin/reports.py
+msgid "Academic standing"
+msgstr "สถานภาพทางวิชาการ"
+
+# key: graduation.fields.is_satisfied
+# key: graduation.satisfied.yes
+# key: graduation.report_columns.is_satisfied
+#: ninefruits/reporting/admin/reports.py ninefruits/reporting/services/catalog.py
+msgid "Satisfied"
+msgstr "ครบตามเกณฑ์"
+
+# key: reference.fields.start_date
+#: ninefruits/reporting/admin/reports.py
+msgid "Start date"
+msgstr "วันที่เริ่ม"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/reporting/admin/reports.py
+msgid "End date"
+msgstr "วันที่สิ้นสุด"
+
+# key: graduation.satisfied.no
+#: ninefruits/reporting/admin/reports.py
+msgid "Not satisfied"
+msgstr "ไม่ครบตามเกณฑ์"
+
+# key: people.sections.record
+#: ninefruits/reporting/models.py
+msgid "Student record"
+msgstr "ระเบียนนักศึกษา"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/reporting/models.py ninefruits/reporting/services/catalog.py
+msgid "Student number"
+msgstr "รหัสนักศึกษา"
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/reporting/models.py
+msgid "Person"
+msgstr "บุคคล"
+
+# key: admin.users.fields.name
+# key: certificate.facts.student_name
+# key: graduation.report_columns.student_name
+# key: people.fields.name
+# key: people.sections.name
+# key: reference.fields.name
+#: ninefruits/reporting/models.py
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: grading.fields.count
+# key: graduation.report_columns.students
+# key: registration.fields.applies_to
+#: ninefruits/reporting/models.py
+msgid "Students"
+msgstr "นักศึกษา"
+
+#: ninefruits/reporting/models.py
+msgid "Headcount"
+msgstr "จำนวนบุคคล"
+
+#: ninefruits/reporting/models.py
+msgid "Term records"
+msgstr "บันทึกผลรายภาคการศึกษา"
+
+#: ninefruits/reporting/models.py
+msgid "Course grades"
+msgstr "ผลการเรียนรายวิชา"
+
+#: ninefruits/reporting/models.py
+msgid "Section enrollments"
+msgstr "การลงทะเบียนรายกลุ่มเรียน"
+
+#: ninefruits/reporting/models.py
+msgid "Section meetings"
+msgstr "ตารางเรียนของกลุ่มเรียน"
+
+# key: graduation.reports.names.status_changes
+# key: permissions.resources.student_status_changes
+#: ninefruits/reporting/models.py ninefruits/reporting/services/catalog.py
+msgid "Status changes"
+msgstr "การเปลี่ยนสถานภาพ"
+
+# key: graduation.resources.audits.plural_label
+#: ninefruits/reporting/models.py
+msgid "Degree audits"
+msgstr "การตรวจสอบการสำเร็จการศึกษา"
+
+# key: graduation.reports.names.students
+#: ninefruits/reporting/services/catalog.py
+msgid "Student list"
+msgstr "รายชื่อนักศึกษา"
+
+# key: graduation.reports.names.headcount
+#: ninefruits/reporting/services/catalog.py
+msgid "Headcount by unit, program, year and status"
+msgstr "จำนวนนักศึกษาตามหน่วยงาน หลักสูตร ชั้นปี และสถานภาพ"
+
+# key: graduation.reports.names.term_records
+#: ninefruits/reporting/services/catalog.py
+msgid "Term grade summary (warnings, honors)"
+msgstr "สรุปผลการเรียนรายภาคการศึกษา (รอพินิจ เกียรตินิยม)"
+
+# key: graduation.reports.names.graduation_candidates
+#: ninefruits/reporting/services/catalog.py
+msgid "Graduation candidates (latest audit)"
+msgstr "ผู้มีสิทธิ์สำเร็จการศึกษา (ผลตรวจสอบล่าสุด)"
+
+# key: graduation.reports.names.section_enrollments
+#: ninefruits/reporting/services/catalog.py
+msgid "Enrollment per section"
+msgstr "จำนวนผู้ลงทะเบียนต่อกลุ่มเรียน"
+
+# key: graduation.reports.names.not_registered
+#: ninefruits/reporting/services/catalog.py
+msgid "Students not registered in a term"
+msgstr "นักศึกษาที่ไม่ได้ลงทะเบียนในภาคการศึกษา"
+
+# key: graduation.report_columns.student_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: graduation.report_columns.program_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Program"
+msgstr "หลักสูตร"
+
+# key: graduation.report_columns.program_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Program code"
+msgstr "รหัสหลักสูตร"
+
+# key: graduation.report_columns.program_role
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Role"
+msgstr "บทบาท"
+
+# key: graduation.report_columns.org_unit_name
+#: ninefruits/reporting/services/catalog.py
+msgid "Unit"
+msgstr "หน่วยงาน"
+
+# key: graduation.report_columns.org_unit_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Unit code"
+msgstr "รหัสหน่วยงาน"
+
+# key: graduation.report_columns.year_level
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Year"
+msgstr "ชั้นปี"
+
+# key: graduation.report_columns.status
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Status"
+msgstr "สถานภาพ"
+
+# key: graduation.report_columns.admission_date
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Admitted"
+msgstr "วันที่เข้าศึกษา"
+
+# key: graduation.report_columns.graduation_date
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Graduated"
+msgstr "วันที่สำเร็จการศึกษา"
+
+# key: graduation.report_columns.degree_number
+#: ninefruits/reporting/services/catalog.py
+msgid "Degree number"
+msgstr "เลขที่ปริญญาบัตร"
+
+# key: graduation.report_columns.students
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Students"
+msgstr "นักศึกษา"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/reporting/services/catalog.py
+msgid "Term"
+msgstr "ภาคการศึกษา"
+
+# key: graduation.report_columns.attempted_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Attempted"
+msgstr "หน่วยกิตที่ลง"
+
+# key: graduation.report_columns.earned_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Earned"
+msgstr "หน่วยกิตที่ได้"
+
+# key: grading.fields.term_gpa
+#: ninefruits/reporting/services/catalog.py
+msgid "Term GPA"
+msgstr "เกรดเฉลี่ยภาคการศึกษา"
+
+# key: graduation.report_columns.cumulative_earned_credits
+#: ninefruits/reporting/services/catalog.py
+msgid "Cumulative earned"
+msgstr "หน่วยกิตสะสม"
+
+# key: graduation.report_columns.cumulative_gpa
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Cumulative GPA"
+msgstr "เกรดเฉลี่ยสะสม"
+
+# key: graduation.report_columns.academic_standing
+#: ninefruits/reporting/services/catalog.py
+msgid "Standing"
+msgstr "สถานภาพทางวิชาการ"
+
+# key: grading.fields.warning_count
+#: ninefruits/reporting/services/catalog.py
+msgid "Warnings"
+msgstr "จำนวนครั้งที่รอพินิจ"
+
+# key: graduation.report_columns.is_honors
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Honors"
+msgstr "เกียรตินิยม"
+
+# key: graduation.report_columns.honors_rank
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Honors rank"
+msgstr "อันดับเกียรตินิยม"
+
+# key: graduation.report_columns.required_credits
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Required"
+msgstr "หน่วยกิตที่ต้องการ"
+
+# key: graduation.fields.audited_at
+# key: graduation.report_columns.audited_at
+#: ninefruits/reporting/services/catalog.py
+msgid "Audited"
+msgstr "ตรวจสอบเมื่อ"
+
+# key: graduation.report_columns.type_name
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Change"
+msgstr "การเปลี่ยนแปลง"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/reporting/services/catalog.py
+msgid "From"
+msgstr "จาก"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/reporting/services/catalog.py
+msgid "To"
+msgstr "เป็น"
+
+# key: graduation.report_columns.effective_date
+#: ninefruits/reporting/services/catalog.py
+msgid "Effective"
+msgstr "วันที่มีผล"
+
+# key: graduation.report_columns.decided_at
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Decided"
+msgstr "พิจารณาเมื่อ"
+
+# key: graduation.report_columns.course_code
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation.report_columns"
+msgid "Course"
+msgstr "รหัสวิชา"
+
+# key: graduation.report_columns.course_title
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Title"
+msgstr "ชื่อวิชา"
+
+# key: graduation.report_columns.section_code
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Section"
+msgstr "กลุ่มเรียน"
+
+# key: graduation.report_columns.instructors
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Instructors"
+msgstr "อาจารย์ผู้สอน"
+
+# key: graduation.report_columns.capacity
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Capacity"
+msgstr "จำนวนรับ"
+
+# key: graduation.report_columns.enrolled
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Enrolled"
+msgstr "ลงทะเบียนแล้ว"
+
+# key: graduation.report_columns.waiting
+#: ninefruits/reporting/services/catalog.py
+msgctxt "graduation"
+msgid "Waiting"
+msgstr "รายชื่อสำรอง"
+
+# key: offering.timetable.mode
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "Show"
+msgstr "แสดง"
+
+# key: graduation.reports.rows
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+#, python-format
+msgid "%(count)s row(s) (first 500 on screen; the CSV has them all)"
+msgstr "%(count)s แถว (แสดงบนหน้าจอ 500 แถวแรก ไฟล์ CSV มีครบทุกแถว)"
+
+# key: graduation.reports.download_csv
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "Download CSV"
+msgstr "ดาวน์โหลด CSV"
+
+# key: graduation.reports.empty
+#: ninefruits/reporting/templates/reporting/admin/reports.html
+msgid "No rows. Choose the filters above."
+msgstr "ไม่มีข้อมูล กรุณาเลือกตัวกรองด้านบน"

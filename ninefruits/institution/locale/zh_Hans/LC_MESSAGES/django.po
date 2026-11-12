@@ -229,3 +229,9 @@ msgstr "%(attribute)s 必须大于或等于 %(value)s。"
 #, python-format
 msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
 msgstr "文件过大（%(size)s 字节，最多 %(limit)s）。"
+
+# key: reference.fields.admission_years
+#: ninefruits/institution/target_criteria_fields.py
+msgctxt "reference"
+msgid "Admitted"
+msgstr "入学"

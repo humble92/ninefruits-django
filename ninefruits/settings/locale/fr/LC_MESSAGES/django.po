@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: common.saved
+#: ninefruits/settings/admin_views.py
+msgid "Saved"
+msgstr "Enregistré"
+
+# key: admin.navigation.settings
+#: ninefruits/settings/admin_views.py ninefruits/settings/templates/settings/page.html
+msgid "Settings"
+msgstr "Paramètres"
+
+# key: admin.settings.institution.name
+#: ninefruits/settings/pages/institution.py
+msgid "Institution name"
+msgstr "Nom de l’établissement"
+
+# key: admin.settings.institution.timezone
+#: ninefruits/settings/pages/institution.py
+msgid "Time zone"
+msgstr "Fuseau horaire"
+
+# key: admin.settings.institution.supported_locales
+#: ninefruits/settings/pages/institution.py
+msgid "Offered languages"
+msgstr "Langues proposées"
+
+# key: admin.settings.institution.default_locale
+#: ninefruits/settings/pages/institution.py
+msgid "Default language"
+msgstr "Langue par défaut"
+
+# key: admin.settings.institution.title
+#: ninefruits/settings/pages/institution.py
+msgid "Institution"
+msgstr "Établissement"
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/settings/pages/institution.py
+msgctxt "admin"
+msgid "General"
+msgstr "Général"
+
+# key: admin.settings.institution.languages
+#: ninefruits/settings/pages/institution.py
+msgid "Languages"
+msgstr "Langues"
+
+# key: admin.settings.institution.languages_help
+#: ninefruits/settings/pages/institution.py
+msgid "Languages offered to users. A language appears here when its translation folder exists."
+msgstr "Langues proposées aux utilisateurs. Une langue apparaît ici lorsque son dossier de traduction existe."
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/settings/templates/settings/index.html ninefruits/settings/templates/settings/page.html
+msgid "Home"
+msgstr "Accueil"
+
+# key: common.save
+#: ninefruits/settings/templates/settings/page.html
+msgid "Save"
+msgstr "Enregistrer"

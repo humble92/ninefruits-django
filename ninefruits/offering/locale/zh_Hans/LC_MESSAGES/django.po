@@ -104,8 +104,7 @@ msgid "The %(attribute)s field is required."
 msgstr "%(attribute)s 不能为空。"
 
 # key: validation.max.string
-#: actions/update_syllabus.py:27 actions/update_syllabus.py:40
-#: actions/update_syllabus.py:60 actions/update_syllabus.py:104
+#: actions/update_syllabus.py:27 actions/update_syllabus.py:40 actions/update_syllabus.py:60 actions/update_syllabus.py:104
 #, python-format
 msgid "The %(attribute)s field must not be greater than %(max)s characters."
 msgstr "%(attribute)s 不能大于 %(max)s 个字符。"
@@ -143,18 +142,14 @@ msgstr "课表"
 #: admin/sections.py:140
 #, python-format
 msgctxt "offering"
-msgid ""
-"Preview: %(created)s section(s) would be copied, %(skipped)s skipped, "
-"%(with_notes)s with notes."
+msgid "Preview: %(created)s section(s) would be copied, %(skipped)s skipped, %(with_notes)s with notes."
 msgstr "预览：将复制 %(created)s 个，跳过 %(skipped)s 个，%(with_notes)s 个需确认。"
 
 # key: offering.notifications.copied
 #: admin/sections.py:142
 #, python-format
 msgctxt "offering"
-msgid ""
-"%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with "
-"notes."
+msgid "%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with notes."
 msgstr "已复制 %(created)s 个，跳过 %(skipped)s 个，%(with_notes)s 个需确认。"
 
 # key: validation.gte.numeric
@@ -174,8 +169,7 @@ msgid "Admitted from (year)"
 msgstr "入学年份起"
 
 # key: offering.fields.session
-#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660
-#: models/section.py:98
+#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660 models/section.py:98
 msgctxt "offering"
 msgid "Session"
 msgstr "时段"
@@ -192,11 +186,7 @@ msgstr "管理该课程班的单位，默认为课程的管理单位。"
 
 # key: grading.help.evaluation_method
 #: admin/sections.py:216
-msgid ""
-"Absolute (default): instructors enter scores and the grades follow. Relative:"
-" instructors give grades within the institution's grade caps. Instructors ask"
-" for a change from the grade entry screen; it cannot change once grades are "
-"submitted."
+msgid "Absolute (default): instructors enter scores and the grades follow. Relative: instructors give grades within the institution's grade caps. Instructors ask for a change from the grade entry screen; it cannot change once grades are submitted."
 msgstr "绝对评价（默认）：教师录入分数，成绩自动计算。相对评价：教师在学校的等级比例内给出成绩。更改由教师在成绩录入页面申请，提交成绩后不能更改。"
 
 # key: offering.fields.section_code
@@ -207,16 +197,12 @@ msgstr "班号"
 # key: validation.alpha_dash
 #: admin/sections.py:236
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
 msgstr "%(attribute)s 只能由字母、数字、短划线(-)和下划线(_)组成。"
 
 # key: offering.help.change_session
 #: admin/sections.py:247 models/section.py:100
-msgid ""
-"Moving to another session takes its dates and the course version in effect "
-"when it starts."
+msgid "Moving to another session takes its dates and the course version in effect when it starts."
 msgstr "移到其他时段时使用该时段的日期，以及该时段开始时生效的课程版本。"
 
 # key: offering.fields.time_slot
@@ -260,8 +246,7 @@ msgid "The %(attribute)s field must be at least %(min)s."
 msgstr "%(attribute)s 必须大于等于 %(min)s。"
 
 # key: offering.fields.capacity
-#: admin/sections.py:379 admin/sections.py:673 models/section.py:122
-#: models/section.py:317 templates/offering/portal/section_detail.html:23
+#: admin/sections.py:379 admin/sections.py:673 models/section.py:122 models/section.py:317 templates/offering/portal/section_detail.html:23
 msgctxt "offering"
 msgid "Capacity"
 msgstr "容量"
@@ -283,9 +268,7 @@ msgid "meeting times"
 msgstr "上课时间"
 
 # key: offering.fields.instructors
-#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664
-#: models/section.py:246 models/section.py:247
-#: templates/offering/portal/section_detail.html:19
+#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664 models/section.py:246 models/section.py:247 templates/offering/portal/section_detail.html:19
 msgctxt "offering"
 msgid "Instructors"
 msgstr "任课教师"
@@ -306,9 +289,7 @@ msgid "Students the seats are for"
 msgstr "名额对象学生"
 
 # key: reference.resources.terms.label
-#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90
-#: templates/offering/portal/catalog.html:14
-#: templates/offering/portal/teaching.html:11
+#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90 templates/offering/portal/catalog.html:14 templates/offering/portal/teaching.html:11
 msgid "term"
 msgstr "学期"
 
@@ -318,14 +299,12 @@ msgid "All"
 msgstr "全部"
 
 # key: offering.fields.offering_unit
-#: admin/sections.py:507 models/section.py:119
-#: templates/offering/portal/catalog.html:22
+#: admin/sections.py:507 models/section.py:119 templates/offering/portal/catalog.html:22
 msgid "Offering unit"
 msgstr "开课单位"
 
 # key: offering.fields.status
-#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765
-#: models/section.py:124
+#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765 models/section.py:124
 msgctxt "offering"
 msgid "Status"
 msgstr "状态"
@@ -376,8 +355,7 @@ msgid "Credits"
 msgstr "学分"
 
 # key: offering.fields.schedule
-#: admin/sections.py:668 templates/offering/portal/section_detail.html:21
-#: templates/offering/portal/teaching.html:30
+#: admin/sections.py:668 templates/offering/portal/section_detail.html:21 templates/offering/portal/teaching.html:30
 msgid "Schedule"
 msgstr "上课时间"
 
@@ -398,9 +376,7 @@ msgstr "排除对象"
 
 # key: offering.help.exclusion
 #: admin/sections.py:748 models/section.py:133
-msgid ""
-"Students matching this cannot register, e.g. the course's own majors for a "
-"general course."
+msgid "Students matching this cannot register, e.g. the course's own majors for a general course."
 msgstr "符合条件的学生不能选课，例如通识课排除本专业学生。"
 
 # key: offering.notifications.status_changed
@@ -432,9 +408,7 @@ msgstr "重新开放"
 
 # key: offering.actions.syllabus
 # key: offering.syllabus.title
-#: admin/sections.py:911 models/section.py:370 models/section.py:371
-#: templates/offering/portal/section_detail.html:39
-#: templates/offering/portal/teaching.html:31
+#: admin/sections.py:911 models/section.py:370 models/section.py:371 templates/offering/portal/section_detail.html:39 templates/offering/portal/teaching.html:31
 msgid "Syllabus"
 msgstr "教学大纲"
 
@@ -445,16 +419,11 @@ msgstr "从其他学期复制"
 
 # key: offering.help.copy_sections
 #: admin/sections.py:946
-msgid ""
-"Copies sections that were not cancelled, in your scope, as drafts: "
-"instructors still employed, meetings with rooms (left out if the room is now "
-"taken), reserved seats and syllabus drafts. Sessions are matched by code."
-msgstr ""
-"将未停开且在您权限范围内的课程班复制为草稿：在职任课教师、含教室的上课时间（教室已被占用则不含教室）、预留名额和教学大纲草稿。时段按代码匹配。"
+msgid "Copies sections that were not cancelled, in your scope, as drafts: instructors still employed, meetings with rooms (left out if the room is now taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr "将未停开且在您权限范围内的课程班复制为草稿：在职任课教师、含教室的上课时间（教室已被占用则不含教室）、预留名额和教学大纲草稿。时段按代码匹配。"
 
 # key: offering.timetable.mode
-#: admin/timetables.py:33 templates/offering/admin/timetables.html:15
-#: templates/offering/portal/teaching.html:15
+#: admin/timetables.py:33 templates/offering/admin/timetables.html:15 templates/offering/portal/teaching.html:15
 msgid "Show"
 msgstr "查看"
 
@@ -538,9 +507,7 @@ msgstr "候补人数"
 
 # key: registration.help.waitlist_capacity
 #: models/section.py:147
-msgid ""
-"0 means no waitlist. Freed seats go to waiting students in order, after all "
-"rules are checked again."
+msgid "0 means no waitlist. Freed seats go to waiting students in order, after all rules are checked again."
 msgstr "0 表示不设候补。有空位时，重新检查所有规则后按顺序选入。"
 
 # key: grading.fields.evaluation_method
@@ -670,8 +637,7 @@ msgid "All units"
 msgstr "全部单位"
 
 # key: offering.catalog.search
-#: templates/offering/portal/catalog.html:31
-#: templates/offering/portal/catalog.html:34
+#: templates/offering/portal/catalog.html:31 templates/offering/portal/catalog.html:34
 msgid "Search"
 msgstr "搜索"
 
@@ -687,14 +653,12 @@ msgid "%(credits)s credits"
 msgstr "%(credits)s学分"
 
 # key: offering.catalog.instructor_tba
-#: templates/offering/portal/catalog.html:46
-#: templates/offering/portal/section_detail.html:20
+#: templates/offering/portal/catalog.html:46 templates/offering/portal/section_detail.html:20
 msgid "Instructor to be announced"
 msgstr "任课教师待定"
 
 # key: offering.catalog.time_tba
-#: templates/offering/portal/catalog.html:47
-#: templates/offering/portal/section_detail.html:22
+#: templates/offering/portal/catalog.html:47 templates/offering/portal/section_detail.html:22
 msgid "Time to be announced"
 msgstr "时间待定"
 
@@ -754,8 +718,7 @@ msgid "Description"
 msgstr "课程简介"
 
 # key: offering.syllabus.edit
-#: templates/offering/portal/section_detail.html:40
-#: templates/offering/portal/syllabus_editor.html:10
+#: templates/offering/portal/section_detail.html:40 templates/offering/portal/syllabus_editor.html:10
 msgid "Edit syllabus"
 msgstr "编写教学大纲"
 
@@ -770,21 +733,17 @@ msgid "Draft: students do not see it until it is published."
 msgstr "草稿：发布前学生看不到。"
 
 # key: offering.syllabus.assessment
-#: templates/offering/portal/section_detail.html:54
-#: templates/offering/portal/syllabus_editor.html:35
+#: templates/offering/portal/section_detail.html:54 templates/offering/portal/syllabus_editor.html:35
 msgid "Assessment"
 msgstr "考核方式"
 
 # key: offering.syllabus.weekly_plan
-#: templates/offering/portal/section_detail.html:62
-#: templates/offering/portal/syllabus_editor.html:48
+#: templates/offering/portal/section_detail.html:62 templates/offering/portal/syllabus_editor.html:48
 msgid "Weekly plan"
 msgstr "每周安排"
 
 # key: offering.syllabus.week
-#: templates/offering/portal/section_detail.html:65
-#: templates/offering/portal/syllabus_editor.html:52
-#: templates/offering/portal/syllabus_editor.html:53
+#: templates/offering/portal/section_detail.html:65 templates/offering/portal/syllabus_editor.html:52 templates/offering/portal/syllabus_editor.html:53
 #, python-format
 msgid "Week %(week)s"
 msgstr "第%(week)s周"
@@ -860,3 +819,8 @@ msgstr "已发布"
 #: views/portal.py:322
 msgid "Write"
 msgstr "编写"
+
+# key: curriculum.or
+#: ninefruits/offering/views/portal.py
+msgid "or"
+msgstr "或"

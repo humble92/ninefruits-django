@@ -8,10 +8,22 @@
 | 한국어 | [README.ko.md](README.ko.md) (이 문서) | [docs/manual/ko/](docs/manual/ko/README.md) |
 | 简体中文 | [README.zh_Hans.md](README.zh_Hans.md) | [docs/manual/zh_Hans/](docs/manual/zh_Hans/README.md) |
 | ລາວ | [README.lo.md](README.lo.md) | [docs/manual/lo/](docs/manual/lo/README.md) |
+| Deutsch | [README.de.md](README.de.md) | [docs/manual/de/](docs/manual/de/README.md) |
+| Filipino | [README.fil.md](README.fil.md) | [docs/manual/fil/](docs/manual/fil/README.md) |
+| Français | [README.fr.md](README.fr.md) | [docs/manual/fr/](docs/manual/fr/README.md) |
+| 日本語 | [README.ja.md](README.ja.md) | [docs/manual/ja/](docs/manual/ja/README.md) |
+| Монгол | [README.mn.md](README.mn.md) | [docs/manual/mn/](docs/manual/mn/README.md) |
+| Bahasa Melayu | [README.ms.md](README.ms.md) | [docs/manual/ms/](docs/manual/ms/README.md) |
+| नेपाली | [README.ne.md](README.ne.md) | [docs/manual/ne/](docs/manual/ne/README.md) |
+| Русский | [README.ru.md](README.ru.md) | [docs/manual/ru/](docs/manual/ru/README.md) |
+| ไทย | [README.th.md](README.th.md) | [docs/manual/th/](docs/manual/th/README.md) |
+| Türkçe | [README.tr.md](README.tr.md) | [docs/manual/tr/](docs/manual/tr/README.md) |
+| Oʻzbek | [README.uz.md](README.uz.md) | [docs/manual/uz/](docs/manual/uz/README.md) |
+| Tiếng Việt | [README.vi.md](README.vi.md) | [docs/manual/vi/](docs/manual/vi/README.md) |
 
 다른 언어를 추가하려면 [언어 추가 가이드](docs/development/adding-a-language.ko.md)([English](docs/development/adding-a-language.md))를 보세요.
 
-Ninefruits는 여러 대학에 설치해 쓸 수 있는 학사 행정 시스템(Student Information System)입니다. 입학 지원부터 학적, 교육과정과 개설강좌, 수강신청, 성적, 강의평가, 증명서, 어학·종합시험, 출석, 졸업 사정, 보고서, LMS 연동 기반까지 학사 업무의 핵심을 다루며, 화면과 문서는 한국어·영어·중국어·라오스어를 지원합니다.
+Ninefruits는 여러 대학에 설치해 쓸 수 있는 학사 행정 시스템(Student Information System)입니다. 입학 지원부터 학적, 교육과정과 개설강좌, 수강신청, 성적, 강의평가, 증명서, 어학·종합시험, 출석, 졸업 사정, 보고서, LMS 연동 기반까지 학사 업무의 핵심을 다루며, 화면과 문서는 위 표의 16개 언어를 지원합니다.
 
 이 저장소는 [Ninefruits Laravel판](https://github.com/humble92/ninefruits-laravel) v1.0.0(Laravel 13, Filament, Livewire)을 Python 3.14 / Django 6.1 / PostgreSQL 18로 옮긴 것입니다. 원본의 동작과 DB 스키마를 그대로 유지합니다. Django 마이그레이션이 원본의 DDL을 그대로 재생하고, 스키마는 원본 `pg_dump`와 객체 단위로 비교합니다(`tests/db/test_schema_equivalence.py`, `tools/schema_dump_diff.py`). 그래서 어느 쪽 설치본이든 표준 PostgreSQL 도구로 다른 쪽에 옮길 수 있습니다. 이식 과정과 이유는 [porting/](porting/README.md)(계획, 단계별 보고, 설계 결정, 테스트 대응표)에 있습니다.
 

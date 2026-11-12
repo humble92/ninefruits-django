@@ -1,0 +1,398 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.errors.term_status_transition
+#: ninefruits/term/actions/change_term_status.py
+#, python-format
+msgid "A term cannot move from %(from)s to %(to)s."
+msgstr "学期を %(from)s から %(to)s に変更することはできません。"
+
+# key: reference.errors.invalid_session_copy
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "Choose another session of the same term."
+msgstr "同じ学期の別の授業期間を選択してください。"
+
+# key: reference.errors.session_has_windows
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "This session already has windows."
+msgstr "この授業期間にはすでに業務期間があります。"
+
+# key: reference.fields.name
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: validation.after
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s には %(date)s より後の日付を指定してください。"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "End date"
+msgstr "終了日"
+
+# key: reference.fields.start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Start date"
+msgstr "開始日"
+
+# key: validation.after_or_equal
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s には %(date)s 以降の日付を指定してください。"
+
+# key: reference.fields.instruction_end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes end"
+msgstr "授業終了日"
+
+# key: reference.fields.instruction_start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes start"
+msgstr "授業開始日"
+
+# key: reference.errors.sessions_outside_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Some sessions would fall outside the new dates. Change them first."
+msgstr "新しい日付の範囲外になる授業期間があります。先に授業期間を変更してください。"
+
+# key: validation.alpha_dash
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s には英数字、ハイフン、アンダースコアのみ使用できます。"
+
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The session must lie within its term (%(start)s - %(end)s)."
+msgstr "授業期間は学期の期間(%(start)s - %(end)s)内にしてください。"
+
+#: ninefruits/term/admin.py
+msgid "The full-term session belongs to the term and cannot be deleted."
+msgstr "全学期の授業期間は学期に属しているため削除できません。"
+
+# key: reference.resources.term_sessions.label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "session"
+msgstr "授業期間"
+
+# key: reference.resources.term_sessions.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "sessions"
+msgstr "授業期間"
+
+# key: reference.resources.term_windows.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term windows"
+msgstr "業務期間"
+
+# key: reference.actions.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copy windows"
+msgstr "業務期間をコピー"
+
+# key: reference.fields.is_full_term
+# key: reference.term_sessions.full_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Full term"
+msgstr "全学期"
+
+# key: reference.fields.closes_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Closes"
+msgstr "終了"
+
+# key: reference.fields.opens_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Opens"
+msgstr "開始"
+
+# key: reference.resources.term_windows.label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term window"
+msgstr "業務期間"
+
+# key: reference.fields.eligibility
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "Eligibility"
+msgstr "対象条件"
+
+# key: reference.help.eligibility
+#: ninefruits/term/admin.py
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
+msgstr "全員を対象とする場合は空欄にします。同じ種類の業務期間を条件を変えて複数設定すると、段階的に開始できます。"
+
+# key: reference.eligibility.everyone
+#: ninefruits/term/admin.py
+msgid "Everyone"
+msgstr "全員"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "制限あり"
+
+# key: reference.fields.status
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgctxt "reference"
+msgid "Status"
+msgstr "状態"
+
+# key: common.reason
+#: ninefruits/term/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: reference.fields.source_session
+#: ninefruits/term/admin.py
+msgid "Copy from session"
+msgstr "コピー元の授業期間"
+
+# key: reference.fields.academic_year
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Academic year"
+msgstr "年度"
+
+# key: reference.fields.term_type
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Term type"
+msgstr "学期種別"
+
+# key: reference.fields.windows_count
+#: ninefruits/term/admin.py
+msgid "Windows"
+msgstr "業務期間数"
+
+# key: reference.actions.change_status
+#: ninefruits/term/admin.py
+msgid "Change status"
+msgstr "状態を変更"
+
+# key: reference.notifications.term_status_changed
+#: ninefruits/term/admin.py
+msgid "Term status changed."
+msgstr "学期の状態を変更しました。"
+
+#: ninefruits/term/admin.py
+msgid "No windows to copy."
+msgstr "コピーする業務期間がありません。"
+
+# key: reference.notifications.session_windows_copied
+#: ninefruits/term/admin.py
+#, python-format
+msgid "One window copied."
+msgid_plural "%(count)s windows copied."
+msgstr[0] "%(count)s 件の業務期間をコピーしました。"
+
+# key: reference.help.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "別の授業期間の科目関連の業務期間(履修追加・削除、履修中止、成績入力、授業評価)を、この授業期間の日付に合わせてコピーします。前半の業務期間は開始日からの間隔を、後半の業務期間は終了日からの間隔を保ちます。コピー後に調整してください。"
+
+# key: reference.fields.weekdays
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "Days"
+msgstr "曜日"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "End"
+msgstr "終了"
+
+# key: reference.fields.start_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Start"
+msgstr "開始"
+
+# key: reference.term_statuses.planned
+#: ninefruits/term/enums.py
+msgid "Planned"
+msgstr "計画中"
+
+# key: reference.term_statuses.published
+#: ninefruits/term/enums.py
+msgctxt "reference.term_statuses"
+msgid "Published"
+msgstr "公開"
+
+# key: reference.term_statuses.grades_closed
+#: ninefruits/term/enums.py
+msgid "Grades closed"
+msgstr "成績締め済み"
+
+# key: reference.term_statuses.archived
+#: ninefruits/term/enums.py
+msgid "Archived"
+msgstr "アーカイブ"
+
+# key: reference.term_window_types.registration_cart
+#: ninefruits/term/enums.py
+msgid "Registration cart"
+msgstr "履修カート"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/term/enums.py
+msgid "Registration"
+msgstr "履修登録"
+
+# key: reference.term_window_types.add_drop
+#: ninefruits/term/enums.py
+msgid "Add/drop"
+msgstr "履修追加・削除"
+
+# key: reference.term_window_types.withdrawal
+#: ninefruits/term/enums.py
+msgid "Withdrawal"
+msgstr "履修中止"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/term/enums.py
+msgid "Grade entry"
+msgstr "成績入力"
+
+# key: reference.term_window_types.grade_appeal
+#: ninefruits/term/enums.py
+msgid "Grade appeal"
+msgstr "成績異議申立て"
+
+# key: reference.term_window_types.course_evaluation
+#: ninefruits/term/enums.py
+msgctxt "reference.term_window_types"
+msgid "Course evaluation"
+msgstr "授業評価"
+
+# key: reference.term_window_types.graduation_application
+#: ninefruits/term/enums.py
+msgid "Graduation application"
+msgstr "卒業申請"
+
+# key: reference.term_window_types.additional_program_application
+#: ninefruits/term/enums.py
+msgid "Second major and minor applications"
+msgstr "第二専攻・副専攻の申請"
+
+# key: reference.fields.code
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: reference.resources.academic_years.label
+#: ninefruits/term/models/term.py
+msgid "academic year"
+msgstr "年度"
+
+# key: reference.resources.academic_years.plural_label
+#: ninefruits/term/models/term.py
+msgid "academic years"
+msgstr "年度"
+
+# key: reference.fields.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular term"
+msgstr "正規学期"
+
+# key: reference.help.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
+msgstr "正規学期(春学期、秋学期など)と集中授業期間とでは、履修単位上限などのルールが異なります。"
+
+# key: reference.fields.sort_order
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgid "Order"
+msgstr "表示順"
+
+# key: reference.resources.term_types.label
+#: ninefruits/term/models/term.py
+msgid "term type"
+msgstr "学期種別"
+
+# key: reference.resources.term_types.plural_label
+#: ninefruits/term/models/term.py
+msgid "term types"
+msgstr "学期種別"
+
+# key: reference.help.term_code
+#: ninefruits/term/models/term.py
+msgid "For display only, e.g. 2026-FA. The code carries no business meaning."
+msgstr "表示専用です。例: 2026-FA。コード自体に業務上の意味はありません。"
+
+# key: reference.resources.terms.label
+#: ninefruits/term/models/term.py
+msgid "term"
+msgstr "学期"
+
+# key: reference.resources.terms.plural_label
+#: ninefruits/term/models/term.py
+msgid "terms"
+msgstr "学期"
+
+# key: reference.fields.is_active
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: reference.resources.time_slots.label
+#: ninefruits/term/models/time_slot.py
+msgid "class period"
+msgstr "時限"
+
+# key: reference.resources.time_slots.plural_label
+#: ninefruits/term/models/time_slot.py
+msgid "class periods"
+msgstr "時限"
+
+# key: reference.fields.term_session
+#: ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Session"
+msgstr "授業期間"
+
+# key: reference.help.term_session
+#: ninefruits/term/models/window.py
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
+msgstr "科目の各期限は、その科目の授業期間に従います。業務期間がより短い授業期間用でない限り、全学期が基準です。"
+
+# key: reference.fields.window_type
+#: ninefruits/term/models/window.py
+msgid "Window"
+msgstr "業務期間"
+
+# key: reference.fields.window_name
+#: ninefruits/term/models/window.py
+msgid "Name (optional)"
+msgstr "名称(任意)"

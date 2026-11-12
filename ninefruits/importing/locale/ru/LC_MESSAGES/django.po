@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "Импорт «%(type)s» завершён"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "Импортировано строк: %(count)s."
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "Строк с ошибками: %(count)s; скачайте их, чтобы исправить."
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "строка с ошибкой"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "строки с ошибками"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "Строка"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "Тип импорта"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "Строки с ошибками"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "Статус"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "В очереди"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "Скачать строки с ошибками"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "подразделения"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "программы"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "здания"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "аудитории"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "значения справочника"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "Завершено"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "Файл"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "Обработано строк"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "Строк"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "Импортировано строк"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "Кто импортировал"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "Начало"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "Импорт CSV"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "Импорты CSV"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "Ошибка"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Поле %(attribute)s обязательно."
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Поле %(attribute)s должно содержать дату не ранее %(date)s."
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "Количество символов в поле %(attribute)s не может превышать %(max)s."
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "Выбранное значение для %(attribute)s недопустимо."
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "Поле %(attribute)s должно быть целым числом."
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "Поле %(attribute)s должно быть числом."
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "Поле %(attribute)s должно иметь значение логического типа."
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "Поле %(attribute)s должно содержать действительную дату."
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "Значение поля %(attribute)s должно быть от %(min)s до %(max)s."
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "Значение поля %(attribute)s должно быть не меньше %(min)s."
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "Неизвестный код %(column)s «%(code)s»."
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "Отклонено базой данных: %(message)s"

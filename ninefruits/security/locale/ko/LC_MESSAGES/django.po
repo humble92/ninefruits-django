@@ -1421,5 +1421,21 @@ msgstr "%(provider)s 계정을 연결했습니다."
 msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
 msgstr "%(provider)s 계정이 이곳 계정과 연결되어 있지 않습니다. 비밀번호로 로그인한 뒤 보안 화면에서 연결하세요."
 
+#: models/user.py
+msgid "user"
+msgstr "사용자"
+
+#: models/user.py
+msgid "users"
+msgstr "사용자"
+
+#: models/role.py
+msgid "role"
+msgstr "역할"
+
+#: models/role.py
+msgid "roles"
+msgstr "역할"
+
 #~ msgid "Org unit or program id. An org unit also covers every unit below it."
 #~ msgstr "조직 단위 또는 프로그램 ID. 조직 단위는 하위 단위를 모두 포함합니다."

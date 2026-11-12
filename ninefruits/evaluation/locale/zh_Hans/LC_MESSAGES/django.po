@@ -52,9 +52,7 @@ msgstr "所有回答都相同，请逐题作答。"
 # key: validation.alpha_dash
 #: admin/forms.py:36
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
 msgstr "%(attribute)s 只能由字母、数字、短划线(-)和下划线(_)组成。"
 
 # key: reference.fields.code
@@ -70,8 +68,7 @@ msgid "The %(attribute)s has already been taken."
 msgstr "%(attribute)s 已经存在。"
 
 # key: evaluation.fields.question
-#: admin/forms.py:81 models/forms.py:75 models/forms.py:91
-#: templates/evaluation/portal/section_evaluation.html:33
+#: admin/forms.py:81 models/forms.py:75 models/forms.py:91 templates/evaluation/portal/section_evaluation.html:33
 msgid "Question"
 msgstr "题目"
 
@@ -141,8 +138,7 @@ msgid "term"
 msgstr "学期"
 
 # key: evaluation.resources.forms.label
-#: admin/terms.py:48 admin/terms.py:129 models/forms.py:51 models/forms.py:71
-#: models/term.py:26
+#: admin/terms.py:48 admin/terms.py:129 models/forms.py:51 models/forms.py:71 models/term.py:26
 msgid "evaluation form"
 msgstr "评价表"
 
@@ -153,9 +149,7 @@ msgstr "最少回答数"
 
 # key: evaluation.help.minimum_responses
 #: admin/terms.py:57 models/term.py:33
-msgid ""
-"A section's results show only with at least this many responses and this "
-"response rate, so few answers cannot point to a student."
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
 msgstr "回答数和回答率达到此值的课程班才显示结果，以免回答太少时推测出学生。"
 
 # key: evaluation.fields.minimum_response_percent
@@ -192,14 +186,11 @@ msgstr "已经公布。"
 
 # key: evaluation.help.publish
 #: admin/terms.py:208 admin/terms.py:218
-msgid ""
-"Instructors see their sections' results from now on (sections with enough "
-"responses)."
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
 msgstr "从现在起教师可以看到其课程班的结果（回答足够的课程班）。"
 
 # key: evaluation.portal.title
-#: apps.py:24 templates/evaluation/portal/evaluations.html:9
-#: views/portal.py:92 views/portal.py:167
+#: apps.py:24 templates/evaluation/portal/evaluations.html:9 views/portal.py:92 views/portal.py:167
 msgctxt "evaluation.portal"
 msgid "Course evaluation"
 msgstr "课程评价"
@@ -277,9 +268,7 @@ msgstr "反向题"
 
 # key: evaluation.help.is_reversed
 #: models/forms.py:83
-msgid ""
-"For negatively worded questions: the answer is reversed in averages (5 "
-"counts as 1)."
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
 msgstr "否定表述的题目：计算平均分时反转（5 分按 1 分计）。"
 
 # key: evaluation.resources.sections.label
@@ -371,9 +360,7 @@ msgstr "课程评价"
 
 # key: evaluation.portal.anonymous
 #: templates/evaluation/portal/evaluations.html:10
-msgid ""
-"Your answers are anonymous. Instructors see only totals, after the results "
-"are published."
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
 msgstr "回答为匿名。教师只能在结果公布后看到汇总。"
 
 # key: evaluation.portal.submit_confirm
@@ -442,9 +429,7 @@ msgstr "结果尚未公布。"
 # key: evaluation.results.too_few
 #: templates/evaluation/portal/section_evaluation.html:25
 #, python-format
-msgid ""
-"Too few responses to show results (at least %(minimum)s and %(percent)s%% "
-"are needed)."
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
 msgstr "回答太少，不显示结果（至少需要 %(minimum)s 人、%(percent)s%%）。"
 
 # key: evaluation.results.mean
@@ -478,6 +463,11 @@ msgstr "完成 %(term)s 的课程评价后可以查看该学期成绩。"
 #: views/portal.py:131
 msgid "Thank you. Your evaluation was submitted."
 msgstr "已提交，谢谢。"
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "打开课程评价"
 
 # key: reference.resources.lookup_values.label
 #~ msgid "code"

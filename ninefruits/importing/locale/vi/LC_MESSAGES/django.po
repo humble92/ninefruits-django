@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "Đã nhập xong %(type)s"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "Đã nhập %(count)s dòng."
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s dòng bị lỗi; hãy tải các dòng lỗi xuống để sửa."
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "dòng lỗi"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "dòng lỗi"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "Dòng"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "Loại dữ liệu nhập"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "Dòng lỗi"
+
+# key: admissions.fields.status
+# key: offering.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "Trạng thái"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "Trong hàng đợi"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "Tải xuống các dòng lỗi"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "đơn vị tổ chức"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "chương trình đào tạo"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "tòa nhà"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "phòng học"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "mã"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "Đã hoàn thành"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "File"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "Số dòng đã xử lý"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "Số dòng"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "Số dòng đã nhập"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "Người nhập"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "Bắt đầu"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "Nhập CSV"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "Lịch sử nhập CSV"
+
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "Lỗi"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Trường %(attribute)s là bắt buộc."
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Trường %(attribute)s phải là một ngày sau hoặc bằng %(date)s."
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "Trường %(attribute)s không được nhiều hơn %(max)s ký tự."
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "Giá trị đã chọn của %(attribute)s không hợp lệ."
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "Trường %(attribute)s phải là một số nguyên."
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "Trường %(attribute)s phải là một số."
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "Trường %(attribute)s phải là đúng hoặc sai."
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "Trường %(attribute)s phải là một ngày hợp lệ."
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "Trường %(attribute)s phải nằm trong khoảng %(min)s đến %(max)s."
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "Trường %(attribute)s phải có giá trị ít nhất là %(min)s."
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "Mã %(column)s không xác định \"%(code)s\"."
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "Bị cơ sở dữ liệu từ chối: %(message)s"

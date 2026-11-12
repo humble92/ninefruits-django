@@ -1,0 +1,1237 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.not_enrolled
+#: ninefruits/registration/actions/drop_enrollment.py
+msgid "This registration is not active."
+msgstr "รายการลงทะเบียนนี้ไม่มีผลอยู่"
+
+# key: registration.errors.reason_required
+#: ninefruits/registration/actions/enroll_student.py
+msgid "Enter a reason."
+msgstr "กรุณาระบุเหตุผล"
+
+# key: registration.capacity.full_waitlist_open
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full. You can join the waitlist."
+msgstr "กลุ่มเรียนเต็มแล้ว ท่านลงชื่อในรายชื่อสำรองได้"
+
+# key: registration.capacity.full
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full."
+msgstr "กลุ่มเรียนเต็มแล้ว"
+
+# key: registration.capacity.waitlisted
+#: ninefruits/registration/actions/enroll_student.py
+#, python-format
+msgid "You are on the waitlist (position %(position)s)."
+msgstr "ท่านอยู่ในรายชื่อสำรอง (ลำดับที่ %(position)s)"
+
+# key: registration.errors.not_waiting
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "This waitlist entry is no longer waiting."
+msgstr "รายการนี้ไม่ได้รอที่นั่งแล้ว"
+
+# key: registration.waitlist.left
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "You left the waitlist."
+msgstr "ท่านออกจากรายชื่อสำรองแล้ว"
+
+# key: validation.after
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s ต้องเป็นวันที่หลังจาก %(date)s"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Ends"
+msgstr "สิ้นสุด"
+
+# key: admin.role_assignments.fields.starts_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Starts"
+msgstr "เริ่มต้น"
+
+# key: registration.errors.hold_released
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This hold is already released."
+msgstr "ยกเลิกการระงับนี้แล้ว"
+
+# key: registration.errors.rule_not_overridable
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This rule cannot be overridden."
+msgstr "กฎนี้อนุญาตพิเศษไม่ได้"
+
+# key: registration.errors.rule_set_exists
+#: ninefruits/registration/actions/prepare_rule_set.py
+msgid "The term already has a rule set."
+msgstr "ภาคการศึกษานี้มีชุดกฎอยู่แล้ว"
+
+# key: registration.waitlist.window_closed
+#: ninefruits/registration/actions/promote_waitlist.py
+msgid "Registration closed before a seat became free."
+msgstr "ปิดลงทะเบียนก่อนมีที่นั่งว่าง"
+
+# key: registration.fields.outcome
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Outcome"
+msgstr "ผลลัพธ์"
+
+# key: registration.fields.action
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Action"
+msgstr "การดำเนินการ"
+
+# key: registration.fields.attempted_at
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Time"
+msgstr "เวลา"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgid "Student number"
+msgstr "รหัสนักศึกษา"
+
+# key: offering.fields.section
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgctxt "offering"
+msgid "Section"
+msgstr "กลุ่มเรียน"
+
+# key: registration.fields.failed_rules
+#: ninefruits/registration/admin/attempts.py
+msgid "Rules not met"
+msgstr "กฎที่ไม่ผ่าน"
+
+# key: registration.fields.actor
+#: ninefruits/registration/admin/attempts.py
+msgid "By"
+msgstr "โดย"
+
+# key: common.reason
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgctxt "common"
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: registration.import.unknown_student
+#: ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "No student record with number %(number)s."
+msgstr "ไม่มีระเบียนนักศึกษารหัส %(number)s"
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "ไม่รู้จักกลุ่มเรียน %(section)s"
+
+# key: registration.fields.waive
+#: ninefruits/registration/admin/common.py
+msgid "Waive rules"
+msgstr "ยกเว้นกฎ"
+
+# key: registration.fields.waitlist_if_full
+#: ninefruits/registration/admin/common.py
+msgid "Add to the waitlist if full"
+msgstr "เพิ่มในรายชื่อสำรองหากเต็ม"
+
+# key: registration.fields.hold_type
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgid "Hold type"
+msgstr "ประเภทการระงับ"
+
+# key: registration.fields.blocks_registration
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks registration"
+msgstr "ระงับการลงทะเบียน"
+
+# key: registration.fields.blocks_grades
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks grade viewing"
+msgstr "ระงับการดูผลการเรียน"
+
+# key: registration.fields.blocks_certificates
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks certificates"
+msgstr "ระงับการออกหนังสือรับรอง"
+
+# key: reference.resources.terms.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "term"
+msgstr "ภาคการศึกษา"
+
+# key: registration.fields.rule
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py
+msgid "Rule"
+msgstr "กฎ"
+
+# key: registration.help.override_section
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty to apply to every section of the term."
+msgstr "เว้นว่างไว้เพื่อใช้กับทุกกลุ่มเรียนของภาคการศึกษา"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "course"
+msgstr "รายวิชา"
+
+# key: registration.help.override_course
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty for any course. Ignored when a section is chosen."
+msgstr "เว้นว่างไว้สำหรับทุกรายวิชา ไม่มีผลเมื่อเลือกกลุ่มเรียนแล้ว"
+
+# key: registration.fields.expires_at
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Expires"
+msgstr "หมดอายุ"
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "ไม่รู้จักรายวิชา %(course)s"
+
+# key: security.scope_types.global
+#: ninefruits/registration/admin/common.py
+msgid "All"
+msgstr "ทั้งหมด"
+
+# key: registration.fields.in_force
+#: ninefruits/registration/admin/common.py
+msgid "In force"
+msgstr "มีผลอยู่"
+
+# key: common.yes
+#: ninefruits/registration/admin/common.py
+msgid "Yes"
+msgstr "ใช่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/common.py
+msgid "No"
+msgstr "ไม่ใช่"
+
+# key: registration.fields.status
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Status"
+msgstr "สถานะ"
+
+# key: registration.actions.staff_enroll
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/roster.py
+msgctxt "registration"
+msgid "Register a student"
+msgstr "ลงทะเบียนให้นักศึกษา"
+
+# key: registration.portal.dropped
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Dropped."
+msgstr "ลดรายวิชาแล้ว"
+
+# key: registration.portal.withdrawn
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Withdrawn."
+msgstr "ถอนรายวิชาแล้ว"
+
+# key: registration.actions.drop
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Drop"
+msgstr "ลดรายวิชา"
+
+# key: registration.actions.withdraw
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Withdraw"
+msgstr "ถอนรายวิชา"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "people"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: curriculum.fields.title
+#: ninefruits/registration/admin/enrollments.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "ชื่อวิชา"
+
+# key: registration.fields.source
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration"
+msgid "Source"
+msgstr "ที่มา"
+
+# key: registration.actions.place_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Place a hold"
+msgstr "ระงับ"
+
+# key: registration.actions.release_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Release"
+msgstr "ยกเลิกการระงับ"
+
+# key: registration.fields.override_limit
+#: ninefruits/registration/admin/holds.py
+msgid "Applies to"
+msgstr "ใช้กับ"
+
+# key: registration.fields.whole_term
+#: ninefruits/registration/admin/holds.py
+msgid "Whole term"
+msgstr "ทั้งภาคการศึกษา"
+
+# key: registration.fields.granted_at
+#: ninefruits/registration/admin/holds.py
+msgid "Granted"
+msgstr "อนุญาตเมื่อ"
+
+# key: registration.actions.grant_override
+#: ninefruits/registration/admin/holds.py
+msgid "Grant an override"
+msgstr "อนุญาตพิเศษ"
+
+# key: registration.actions.revoke_override
+#: ninefruits/registration/admin/holds.py
+msgctxt "registration"
+msgid "Revoke"
+msgstr "เพิกถอน"
+
+# key: registration.resources.roster.title
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgctxt "registration"
+msgid "Roster (%(count)s / %(capacity)s)"
+msgstr "รายชื่อนักศึกษา (%(count)s / %(capacity)s)"
+
+# key: registration.resources.waitlist.plural_label
+#: ninefruits/registration/admin/roster.py ninefruits/registration/models/enrollment.py
+msgctxt "registration.resources.waitlist"
+msgid "Waitlist"
+msgstr "รายชื่อสำรอง"
+
+# key: registration.actions.promote_waitlist
+#: ninefruits/registration/admin/roster.py
+msgid "Promote now"
+msgstr "เลื่อนจากรายชื่อสำรองทันที"
+
+# key: registration.notifications.promoted
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "เลื่อนขึ้น %(promoted)s ราย นำออก %(removed)s ราย หมดอายุ %(expired)s ราย"
+
+# key: registration.actions.remove_from_waitlist
+#: ninefruits/registration/admin/roster.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Remove"
+msgstr "นำออก"
+
+# key: registration.fields.copy_from
+#: ninefruits/registration/admin/rules.py
+msgctxt "registration"
+msgid "Copy from"
+msgstr "คัดลอกจาก"
+
+# key: registration.resources.rules.plural_label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Rules"
+msgstr "กฎ"
+
+# key: registration.fields.severity
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "When not met"
+msgstr "เมื่อไม่ผ่านเงื่อนไข"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/rules.py
+msgid "Edit"
+msgstr "แก้ไข"
+
+# key: reference.fields.code
+#: ninefruits/registration/admin/rules.py
+msgctxt "reference"
+msgid "Code"
+msgstr "รหัส"
+
+# key: registration.fields.enabled_rules
+#: ninefruits/registration/admin/rules.py
+msgid "Rules on"
+msgstr "กฎที่เปิดใช้"
+
+# key: registration.fields.copied_from
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Copied from"
+msgstr "คัดลอกจาก"
+
+# key: registration.actions.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "Prepare rules for a term"
+msgstr "เตรียมกฎสำหรับภาคการศึกษา"
+
+# key: registration.help.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "The rules are copied from the chosen term, or start from the defaults. Review them before registration opens."
+msgstr "กฎจะถูกคัดลอกจากภาคการศึกษาที่เลือก หรือเริ่มจากค่าเริ่มต้น กรุณาตรวจสอบก่อนเปิดลงทะเบียน"
+
+# key: registration.parameters.statuses
+#: ninefruits/registration/admin/rules.py
+msgid "Student statuses that may register"
+msgstr "สถานภาพนักศึกษาที่ลงทะเบียนได้"
+
+# key: registration.parameters.allowed_overlap_minutes
+#: ninefruits/registration/admin/rules.py
+msgid "Allowed overlap (minutes)"
+msgstr "เวลาทับซ้อนที่อนุญาต (นาที)"
+
+# key: registration.parameters.repeat_allowed
+#: ninefruits/registration/admin/rules.py
+msgid "Retakes allowed"
+msgstr "อนุญาตให้เรียนซ้ำ"
+
+# key: registration.parameters.max_attempts
+#: ninefruits/registration/admin/rules.py
+msgid "Maximum attempts per course"
+msgstr "จำนวนครั้งสูงสุดต่อรายวิชา"
+
+# key: registration.parameters.max_attempts_help
+#: ninefruits/registration/admin/rules.py
+msgid "Including the first attempt. Empty means no limit."
+msgstr "รวมครั้งแรก เว้นว่างหมายถึงไม่จำกัด"
+
+# key: registration.parameters.below_grade
+#: ninefruits/registration/admin/rules.py
+msgid "Only below grade"
+msgstr "เฉพาะเกรดต่ำกว่า"
+
+# key: registration.parameters.below_grade_help
+#: ninefruits/registration/admin/rules.py
+msgid "Retake only when the earlier grade is below this grade (e.g. C+). Empty means any grade."
+msgstr "เรียนซ้ำได้เฉพาะเมื่อเกรดเดิมต่ำกว่าเกรดนี้ (เช่น C+) เว้นว่างหมายถึงทุกเกรด"
+
+# key: registration.fields.all_term_types
+#: ninefruits/registration/admin/rules.py
+msgid "All term types"
+msgstr "ทุกประเภทภาคการศึกษา"
+
+# key: validation.lte.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be less than or equal to %(value)s."
+msgstr "%(attribute)s ต้องน้อยกว่าหรือเท่ากับ %(value)s"
+
+# key: curriculum.fields.min_credits
+#: ninefruits/registration/admin/rules.py
+msgid "Minimum credits"
+msgstr "หน่วยกิตขั้นต่ำ"
+
+# key: registration.fields.max_credits
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Maximum credits"
+msgstr "หน่วยกิตสูงสุด"
+
+# key: validation.between.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s ต้องอยู่ระหว่าง %(min)s ถึง %(max)s"
+
+# key: registration.fields.applies_to
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Students"
+msgstr "นักศึกษา"
+
+# key: registration.help.credit_policy_eligibility
+#: ninefruits/registration/admin/rules.py
+msgid "Leave empty for every student."
+msgstr "เว้นว่างไว้สำหรับนักศึกษาทุกคน"
+
+# key: reference.fields.name
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: reference.resources.term_types.label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "term type"
+msgstr "ประเภทภาคการศึกษา"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: registration.portal.title
+#: ninefruits/registration/apps.py ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "Registration"
+msgstr "การลงทะเบียนเรียน"
+
+# key: registration.attempt_actions.enroll
+# key: registration.portal.register
+#: ninefruits/registration/enums.py ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration"
+msgid "Register"
+msgstr "ลงทะเบียน"
+
+# key: registration.attempt_actions.drop
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Drop"
+msgstr "ลดรายวิชา"
+
+# key: registration.attempt_actions.withdraw
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Withdraw"
+msgstr "ถอนรายวิชา"
+
+# key: registration.attempt_actions.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Waitlist"
+msgstr "รายชื่อสำรอง"
+
+# key: registration.attempt_actions.promote
+#: ninefruits/registration/enums.py
+msgid "Waitlist promotion"
+msgstr "เลื่อนจากรายชื่อสำรอง"
+
+# key: registration.attempt_actions.cart
+# key: registration.portal.cart
+#: ninefruits/registration/enums.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart"
+msgstr "ตะกร้า"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/registration/enums.py
+msgid "Succeeded"
+msgstr "สำเร็จ"
+
+# key: registration.attempt_outcomes.waitlisted
+#: ninefruits/registration/enums.py
+msgid "Waitlisted"
+msgstr "อยู่ในรายชื่อสำรอง"
+
+# key: registration.attempt_outcomes.refused
+#: ninefruits/registration/enums.py
+msgid "Refused"
+msgstr "ถูกปฏิเสธ"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/registration/enums.py
+msgid "Student"
+msgstr "นักศึกษา"
+
+# key: registration.enrollment_sources.staff
+#: ninefruits/registration/enums.py
+msgid "Staff"
+msgstr "เจ้าหน้าที่"
+
+# key: registration.enrollment_sources.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_sources"
+msgid "Waitlist"
+msgstr "รายชื่อสำรอง"
+
+# key: registration.enrollment_sources.import
+#: ninefruits/registration/enums.py
+msgid "Import"
+msgstr "นำเข้า"
+
+# key: registration.enrollment_statuses.enrolled
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_statuses"
+msgid "Registered"
+msgstr "ลงทะเบียนแล้ว"
+
+# key: registration.enrollment_statuses.dropped
+#: ninefruits/registration/enums.py
+msgid "Dropped"
+msgstr "ลดรายวิชาแล้ว"
+
+# key: registration.enrollment_statuses.withdrawn
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Withdrawn"
+msgstr "ถอนรายวิชาแล้ว"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/registration/enums.py
+msgid "Completed"
+msgstr "เรียนครบแล้ว"
+
+# key: registration.hold_types.unregistered
+#: ninefruits/registration/enums.py
+msgid "Not registered for the term"
+msgstr "ไม่ได้ลงทะเบียนในภาคการศึกษา"
+
+# key: registration.hold_types.financial
+#: ninefruits/registration/enums.py
+msgid "Financial"
+msgstr "การเงิน"
+
+# key: registration.hold_types.academic
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Academic"
+msgstr "วิชาการ"
+
+# key: registration.hold_types.administrative
+#: ninefruits/registration/enums.py
+msgid "Administrative"
+msgstr "ธุรการ"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: ninefruits/registration/enums.py
+msgid "Other"
+msgstr "อื่น ๆ"
+
+# key: registration.rules.window.label
+#: ninefruits/registration/enums.py
+msgctxt "registration.rules.window"
+msgid "Registration period"
+msgstr "ช่วงเวลาลงทะเบียน"
+
+# key: registration.rules.section_open.label
+#: ninefruits/registration/enums.py
+msgid "Section open"
+msgstr "กลุ่มเรียนเปิดอยู่"
+
+# key: registration.rules.hold.label
+#: ninefruits/registration/enums.py
+msgid "Holds"
+msgstr "การระงับ"
+
+# key: registration.rules.student_status.label
+#: ninefruits/registration/enums.py
+msgid "Student status"
+msgstr "สถานภาพนักศึกษา"
+
+# key: registration.rules.eligibility.label
+#: ninefruits/registration/enums.py
+msgid "Section eligibility"
+msgstr "สิทธิ์ลงทะเบียนกลุ่มเรียน"
+
+# key: registration.rules.duplicate_course.label
+#: ninefruits/registration/enums.py
+msgid "Same course twice"
+msgstr "รายวิชาซ้ำ"
+
+# key: registration.rules.time_conflict.label
+#: ninefruits/registration/enums.py
+msgid "Time conflict"
+msgstr "เวลาเรียนชน"
+
+# key: registration.rules.credit_limit.label
+#: ninefruits/registration/enums.py
+msgid "Credit limit"
+msgstr "หน่วยกิตสูงสุด"
+
+# key: registration.rules.requisites.label
+#: ninefruits/registration/enums.py
+msgid "Prerequisites"
+msgstr "วิชาบังคับก่อน"
+
+# key: registration.rules.repeat_course.label
+#: ninefruits/registration/enums.py
+msgid "Retakes"
+msgstr "การเรียนซ้ำ"
+
+# key: registration.rules.capacity.label
+#: ninefruits/registration/enums.py
+msgid "Seats"
+msgstr "ที่นั่ง"
+
+# key: registration.rules.window.description
+#: ninefruits/registration/enums.py
+msgid "A registration, add/drop or withdrawal period must be open for the student."
+msgstr "ต้องอยู่ในช่วงเวลาลงทะเบียน เพิ่ม/ลด หรือถอนรายวิชาที่เปิดให้นักศึกษา"
+
+# key: registration.rules.section_open.description
+#: ninefruits/registration/enums.py
+msgid "The section must be published."
+msgstr "กลุ่มเรียนต้องเผยแพร่แล้ว"
+
+# key: registration.rules.hold.description
+#: ninefruits/registration/enums.py
+msgid "Students with a hold that blocks registration cannot register."
+msgstr "นักศึกษาที่ถูกระงับการลงทะเบียนจะลงทะเบียนไม่ได้"
+
+# key: registration.rules.student_status.description
+#: ninefruits/registration/enums.py
+msgid "Only students with the chosen statuses may register."
+msgstr "ลงทะเบียนได้เฉพาะนักศึกษาที่มีสถานภาพตามที่เลือก"
+
+# key: registration.rules.eligibility.description
+#: ninefruits/registration/enums.py
+msgid "The student must match the section's eligibility and not its exclusions."
+msgstr "นักศึกษาต้องตรงตามเงื่อนไขผู้มีสิทธิ์ของกลุ่มเรียนและไม่อยู่ในเงื่อนไขยกเว้น"
+
+# key: registration.rules.duplicate_course.description
+#: ninefruits/registration/enums.py
+msgid "A course can be registered only once per term."
+msgstr "ลงทะเบียนรายวิชาหนึ่งได้เพียงครั้งเดียวต่อภาคการศึกษา"
+
+# key: registration.rules.time_conflict.description
+#: ninefruits/registration/enums.py
+msgid "Meeting times must not overlap with other registered sections."
+msgstr "เวลาเรียนต้องไม่ทับซ้อนกับกลุ่มเรียนอื่นที่ลงทะเบียนแล้ว"
+
+# key: registration.rules.credit_limit.description
+#: ninefruits/registration/enums.py
+msgid "Total credits must not exceed the credit limit that applies to the student."
+msgstr "หน่วยกิตรวมต้องไม่เกินหน่วยกิตสูงสุดที่ใช้กับนักศึกษา"
+
+# key: registration.rules.requisites.description
+#: ninefruits/registration/enums.py
+msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
+msgstr "ต้องผ่านวิชาบังคับก่อน (นับรายวิชาเทียบเท่า) วิชาเรียนควบคู่เรียนในภาคการศึกษาเดียวกันได้"
+
+# key: registration.rules.repeat_course.description
+#: ninefruits/registration/enums.py
+msgid "Whether and how often a passed course may be taken again."
+msgstr "กำหนดว่ารายวิชาที่ผ่านแล้วเรียนซ้ำได้หรือไม่และได้กี่ครั้ง"
+
+# key: registration.rules.capacity.description
+#: ninefruits/registration/enums.py
+msgid "A seat must be free (reserved seats count only for their students until released)."
+msgstr "ต้องมีที่นั่งว่าง (ที่นั่งสำรองนับเฉพาะนักศึกษาที่ได้รับสิทธิ์จนกว่าจะเปิดให้ทุกคน)"
+
+# key: registration.rule_severities.block
+#: ninefruits/registration/enums.py
+msgid "Block"
+msgstr "ไม่อนุญาต"
+
+# key: registration.rule_severities.warn
+#: ninefruits/registration/enums.py
+msgid "Warn only"
+msgstr "แจ้งเตือนเท่านั้น"
+
+# key: registration.waitlist_statuses.waiting
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Waiting"
+msgstr "รอที่นั่ง"
+
+# key: registration.waitlist_statuses.promoted
+#: ninefruits/registration/enums.py
+msgctxt "registration.waitlist_statuses"
+msgid "Registered"
+msgstr "ลงทะเบียนแล้ว"
+
+# key: registration.waitlist_statuses.removed
+#: ninefruits/registration/enums.py
+msgid "Removed"
+msgstr "นำออกแล้ว"
+
+# key: registration.waitlist_statuses.expired
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Expired"
+msgstr "หมดอายุ"
+
+# key: validation.date
+#: ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s ต้องเป็นวันที่ที่ถูกต้อง"
+
+# key: registration.resources.holds.plural_label
+#: ninefruits/registration/importers.py ninefruits/registration/models/holds.py
+msgid "holds"
+msgstr "การระงับ"
+
+# key: people.resources.student_records.label
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgid "student record"
+msgstr "ระเบียนนักศึกษา"
+
+# key: registration.portal.credits
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Credits"
+msgstr "หน่วยกิต"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/portal/registration.html
+msgid "Retake"
+msgstr "เรียนซ้ำ"
+
+# key: registration.fields.enrolled_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html
+msgid "Registered at"
+msgstr "ลงทะเบียนเมื่อ"
+
+# key: registration.resources.enrollments.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration"
+msgstr "รายการลงทะเบียน"
+
+# key: registration.resources.enrollments.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registrations"
+msgstr "รายการลงทะเบียน"
+
+# key: registration.fields.requested_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Requested"
+msgstr "ขอเมื่อ"
+
+# key: registration.fields.outcome_note
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Note"
+msgstr "หมายเหตุ"
+
+# key: registration.fields.request_id
+#: ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Request ID"
+msgstr "รหัสคำขอ"
+
+# key: registration.resources.attempts.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempt"
+msgstr "ประวัติการลงทะเบียน"
+
+# key: registration.resources.attempts.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempts"
+msgstr "ประวัติการลงทะเบียน"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "อนุญาตพิเศษแล้ว"
+
+# key: registration.fields.released_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Released"
+msgstr "ยกเลิกการระงับเมื่อ"
+
+# key: registration.resources.holds.label
+#: ninefruits/registration/models/holds.py
+msgid "hold"
+msgstr "การระงับ"
+
+# key: registration.fields.revoked_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Revoked"
+msgstr "เพิกถอนเมื่อ"
+
+# key: registration.resources.overrides.label
+#: ninefruits/registration/models/holds.py
+msgid "rule override"
+msgstr "การอนุญาตพิเศษ"
+
+# key: registration.resources.overrides.plural_label
+#: ninefruits/registration/models/holds.py
+msgid "rule overrides"
+msgstr "การอนุญาตพิเศษ"
+
+# key: offering.fields.note
+#: ninefruits/registration/models/rules.py
+msgctxt "offering"
+msgid "Note"
+msgstr "หมายเหตุ"
+
+# key: registration.resources.rule_sets.label
+#: ninefruits/registration/models/rules.py
+msgid "rule set"
+msgstr "ชุดกฎ"
+
+# key: registration.resources.rule_sets.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "registration rules"
+msgstr "กฎการลงทะเบียน"
+
+# key: registration.fields.is_enabled
+#: ninefruits/registration/models/rules.py
+msgid "On"
+msgstr "เปิดใช้"
+
+# key: registration.fields.allows_override
+#: ninefruits/registration/models/rules.py
+msgid "Overrides allowed"
+msgstr "อนุญาตพิเศษได้"
+
+# key: registration.fields.min_credits
+#: ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Minimum credits"
+msgstr "หน่วยกิตต่ำสุด"
+
+# key: registration.fields.priority
+#: ninefruits/registration/models/rules.py
+msgid "Priority"
+msgstr "ลำดับความสำคัญ"
+
+# key: registration.help.priority
+#: ninefruits/registration/models/rules.py
+msgid "When several limits match a student, the highest priority applies."
+msgstr "เมื่อมีเกณฑ์หลายรายการตรงกับนักศึกษา จะใช้รายการที่มีลำดับความสำคัญสูงสุด"
+
+# key: registration.fields.is_active
+#: ninefruits/registration/models/rules.py
+msgctxt "registration.fields"
+msgid "Active"
+msgstr "ใช้งาน"
+
+# key: registration.resources.credit_limit_policies.label
+#: ninefruits/registration/models/rules.py
+msgid "credit limit"
+msgstr "เกณฑ์หน่วยกิต"
+
+# key: registration.resources.credit_limit_policies.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "credit limits"
+msgstr "เกณฑ์หน่วยกิต"
+
+# key: registration.mail.waitlist_promoted_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You are registered in %(section)s"
+msgstr "ท่านลงทะเบียน %(section)s แล้ว"
+
+# key: registration.mail.waitlist_removed_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s"
+msgstr "รายชื่อสำรองของ %(section)s"
+
+# key: registration.mail.waitlist_expired_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s closed"
+msgstr "ปิดรายชื่อสำรองของ %(section)s แล้ว"
+
+# key: registration.mail.waitlist_promoted_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "A seat became free in %(section)s and you have been registered from the waitlist."
+msgstr "มีที่นั่งว่างใน %(section)s และท่านได้รับการลงทะเบียนจากรายชื่อสำรองแล้ว"
+
+# key: registration.mail.waitlist_removed_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You were removed from the waitlist for %(section)s."
+msgstr "ท่านถูกนำออกจากรายชื่อสำรองของ %(section)s"
+
+# key: registration.mail.waitlist_expired_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Registration closed before a seat became free in %(section)s."
+msgstr "ปิดลงทะเบียนก่อนมีที่นั่งว่างใน %(section)s"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/registration/notifications.py
+msgid "Hello,"
+msgstr "เรียน ท่านผู้ใช้"
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "เปิดหน้าลงทะเบียนเรียน"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ขอแสดงความนับถือ\n"
+"%(app)s"
+
+# key: registration.rules.credit_limit.failed
+#: ninefruits/registration/rules/credit_limit.py
+#, python-format
+msgid "This would make %(total)s credits; your limit is %(limit)s."
+msgstr "หน่วยกิตรวมจะเป็น %(total)s หน่วยกิต เกินกว่าที่กำหนด %(limit)s หน่วยกิต"
+
+# key: registration.rules.duplicate_course.failed
+#: ninefruits/registration/rules/duplicate_course.py
+#, python-format
+msgid "You are already registered in %(section)s."
+msgstr "ท่านลงทะเบียน %(section)s อยู่แล้ว"
+
+# key: registration.rules.eligibility.failed
+#: ninefruits/registration/rules/eligibility.py
+msgid "This section is not open to you."
+msgstr "กลุ่มเรียนนี้ไม่เปิดให้ท่าน"
+
+# key: registration.rules.hold.failed
+#: ninefruits/registration/rules/hold.py
+#, python-format
+msgid "You have a hold (%(type)s). Contact the office that placed it."
+msgstr "ท่านถูกระงับ (%(type)s) กรุณาติดต่อหน่วยงานที่ระงับ"
+
+# key: registration.rules.repeat_course.retake
+#: ninefruits/registration/rules/repeat_course.py
+msgid "This registration is a retake."
+msgstr "การลงทะเบียนนี้เป็นการเรียนซ้ำ"
+
+# key: registration.rules.repeat_course.not_allowed
+#: ninefruits/registration/rules/repeat_course.py
+msgid "You have already taken this course and retakes are not allowed."
+msgstr "ท่านเรียนรายวิชานี้แล้วและไม่อนุญาตให้เรียนซ้ำ"
+
+# key: registration.rules.repeat_course.too_many
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "You have reached the maximum of %(max)s attempts for this course."
+msgstr "ท่านเรียนรายวิชานี้ครบจำนวนสูงสุด %(max)s ครั้งแล้ว"
+
+# key: registration.rules.repeat_course.grade_too_high
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "Retakes are allowed only for grades below %(grade)s."
+msgstr "เรียนซ้ำได้เฉพาะเกรดต่ำกว่า %(grade)s"
+
+# key: registration.rules.requisites.failed
+#: ninefruits/registration/rules/requisites.py
+#, python-format
+msgid "Prerequisites not met: %(courses)s."
+msgstr "ยังไม่ผ่านวิชาบังคับก่อน: %(courses)s"
+
+# key: registration.rules.section_open.failed
+#: ninefruits/registration/rules/section_open.py
+msgid "This section is not open for registration."
+msgstr "กลุ่มเรียนนี้ไม่เปิดให้ลงทะเบียน"
+
+# key: registration.rules.student_status.failed
+#: ninefruits/registration/rules/student_status.py
+#, python-format
+msgid "Your status (%(status)s) does not allow registration."
+msgstr "สถานภาพของท่าน (%(status)s) ไม่สามารถลงทะเบียนได้"
+
+# key: registration.rules.time_conflict.failed
+#: ninefruits/registration/rules/time_conflict.py
+#, python-format
+msgid "The time overlaps with %(section)s."
+msgstr "เวลาเรียนทับซ้อนกับ %(section)s"
+
+# key: registration.rules.window.failed.enroll
+# key: registration.rules.window.failed.waitlist
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for you now."
+msgstr "ขณะนี้ยังไม่เปิดให้ท่านลงทะเบียน"
+
+# key: registration.rules.window.failed.drop
+#: ninefruits/registration/rules/window.py
+msgid "Dropping is not open for this course now."
+msgstr "ขณะนี้ยังไม่เปิดให้ลดรายวิชานี้"
+
+# key: registration.rules.window.failed.withdraw
+#: ninefruits/registration/rules/window.py
+msgid "Withdrawal is not open for this course now."
+msgstr "ขณะนี้ยังไม่เปิดให้ถอนรายวิชานี้"
+
+# key: registration.rules.window.failed.promote
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for this course now."
+msgstr "ขณะนี้ยังไม่เปิดลงทะเบียนรายวิชานี้"
+
+# key: registration.rules.window.failed.cart
+#: ninefruits/registration/rules/window.py
+msgid "The cart is not open for you now."
+msgstr "ขณะนี้ยังไม่เปิดตะกร้าให้ท่าน"
+
+# key: security.scope_types.program
+#: ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "security"
+msgid "Program"
+msgstr "หลักสูตร"
+
+# key: common.none
+#: ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "common"
+msgid "None"
+msgstr "ไม่มี"
+
+# key: registration.portal.drop
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Drop"
+msgstr "ลดรายวิชา"
+
+# key: registration.portal.withdraw
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Withdraw"
+msgstr "ถอนรายวิชา"
+
+# key: registration.portal.leave_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Leave waitlist"
+msgstr "ออกจากรายชื่อสำรอง"
+
+# key: registration.portal.submit_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Register all"
+msgstr "ลงทะเบียนทั้งหมด"
+
+# key: portal.profile.remove
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "ลบ"
+
+# key: registration.portal.add_to_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Add to cart"
+msgstr "เพิ่มลงตะกร้า"
+
+# key: registration.portal.join_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Join waitlist"
+msgstr "ลงชื่อสำรอง"
+
+# key: offering.timetable.mode
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Show"
+msgstr "แสดง"
+
+# key: registration.portal.no_term
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "No term is open for registration."
+msgstr "ไม่มีภาคการศึกษาที่เปิดลงทะเบียน"
+
+# key: registration.portal.window
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration.portal"
+msgid "Registration period"
+msgstr "ช่วงเวลาลงทะเบียน"
+
+# key: registration.portal.registration_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Open"
+msgstr "เปิด"
+
+# key: registration.portal.cart_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart only"
+msgstr "ตะกร้าเท่านั้น"
+
+# key: registration.portal.opens_at
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Opens %(date)s"
+msgstr "เปิด %(date)s"
+
+# key: registration.portal.closed
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Closed"
+msgstr "ปิด"
+
+# key: registration.portal.sections_count
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Courses"
+msgstr "รายวิชา"
+
+# key: registration.portal.timetable
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Timetable"
+msgstr "ตารางเรียน"
+
+# key: registration.portal.my_registrations
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "My registrations"
+msgstr "รายวิชาที่ลงทะเบียน"
+
+# key: registration.portal.drop_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Drop this course?"
+msgstr "ลดรายวิชานี้?"
+
+# key: registration.portal.withdraw_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Withdraw from this course? A W is recorded."
+msgstr "ถอนรายวิชานี้? ระบบจะบันทึกเป็น W"
+
+# key: registration.portal.waiting
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Waitlist position %(position)s"
+msgstr "รายชื่อสำรองลำดับที่ %(position)s"
+
+# key: registration.portal.cart_empty
+#: ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "The cart is empty."
+msgstr "ตะกร้าว่าง"
+
+# key: offering.catalog.search
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Search"
+msgstr "ค้นหา"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Course code or title"
+msgstr "รหัสวิชาหรือชื่อวิชา"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Instructor to be announced"
+msgstr "จะประกาศอาจารย์ผู้สอนภายหลัง"
+
+# key: offering.catalog.time_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Time to be announced"
+msgstr "จะประกาศเวลาภายหลัง"
+
+# key: registration.portal.seats
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
+msgstr "ที่นั่ง: ว่าง %(general)s สำรอง %(reserved)s ทั้งหมด %(capacity)s"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/registration/views/portal.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "มีคำขอมากเกินไป กรุณารอสักครู่แล้วลองอีกครั้ง"
+
+# key: registration.portal.registered
+#: ninefruits/registration/views/portal.py
+msgid "Registered."
+msgstr "ลงทะเบียนแล้ว"
+
+# key: registration.portal.added_to_cart
+#: ninefruits/registration/views/portal.py
+msgid "Added to the cart."
+msgstr "เพิ่มลงตะกร้าแล้ว"

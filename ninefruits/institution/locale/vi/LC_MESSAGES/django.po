@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.fields.iso_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
+msgid "ISO code"
+msgstr "Mã ISO"
+
+# key: reference.fields.alpha3_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
+msgid "Three-letter code"
+msgstr "Mã ba chữ cái"
+
+# key: reference.fields.numeric_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
+msgid "Numeric code"
+msgstr "Mã số"
+
+# key: validation.size.string
+#: ninefruits/institution/admin.py
+#, python-format
+msgid "The %(attribute)s field must be %(size)s characters."
+msgstr "Trường %(attribute)s phải có %(size)s ký tự."
+
+# key: reference.fields.name
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: validation.not_regex
+# key: validation.regex
+#: ninefruits/institution/admin.py
+#, python-format
+msgid "The %(attribute)s field format is invalid."
+msgstr "Định dạng của trường %(attribute)s không hợp lệ."
+
+# key: reference.resources.lookup_values.label
+#: ninefruits/institution/admin.py ninefruits/institution/models/lookup.py
+msgid "code"
+msgstr "mã"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/institution/admin.py ninefruits/institution/models/lookup.py
+msgid "codes"
+msgstr "mã"
+
+# key: reference.fields.values_count
+#: ninefruits/institution/admin.py
+msgid "Codes"
+msgstr "Số mã"
+
+# key: reference.errors.in_use_title
+#: ninefruits/institution/admin_support.py
+msgid "Still in use"
+msgstr "Đang được sử dụng"
+
+# key: reference.errors.in_use_body
+#: ninefruits/institution/admin_support.py
+msgid "Other records refer to this one. Deactivate it or end its validity instead."
+msgstr "Các bản ghi khác đang tham chiếu đến bản ghi này. Hãy ngừng kích hoạt hoặc kết thúc hiệu lực thay vì xóa."
+
+# key: assessment.fields.file
+#: ninefruits/institution/admin_support.py
+msgid "CSV file"
+msgstr "Tệp CSV"
+
+#: ninefruits/institution/admin_support.py
+msgid "UTF-8 with a header row."
+msgstr "UTF-8 có dòng tiêu đề."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "Tệp quá lớn (%(size)s byte, tối đa %(limit)s)."
+
+# key: reference.actions.import_csv
+#: ninefruits/institution/admin_support.py
+msgid "Import CSV"
+msgstr "Nhập CSV"
+
+#: ninefruits/institution/admin_support.py
+msgid "The file is not UTF-8 text."
+msgstr "Tệp không phải văn bản UTF-8."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Missing required columns: %(columns)s."
+msgstr "Thiếu các cột bắt buộc: %(columns)s."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Columns: %(columns)s"
+msgstr "Các cột: %(columns)s"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Required columns: %(columns)s"
+msgstr "Cột bắt buộc: %(columns)s"
+
+#: ninefruits/institution/admin_support.py
+msgid "Rows are matched by code: importing the same file again updates instead of duplicating. Empty translation cells keep existing translations."
+msgstr "Các dòng được đối chiếu theo mã: nhập lại cùng một tệp sẽ cập nhật thay vì tạo bản trùng. Ô bản dịch để trống sẽ giữ nguyên bản dịch hiện có."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Import #%(id)s queued (%(rows)s rows). This page shows the result when it is finished."
+msgstr "Đã đưa lần nhập #%(id)s (%(rows)s dòng) vào hàng đợi. Trang này sẽ hiển thị kết quả khi hoàn tất."
+
+# key: reference.fields.is_active
+#: ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: reference.resources.countries.label
+#: ninefruits/institution/models/country.py
+msgid "country"
+msgstr "quốc gia"
+
+# key: reference.resources.countries.plural_label
+#: ninefruits/institution/models/country.py
+msgid "countries"
+msgstr "quốc gia"
+
+# key: reference.resources.languages.label
+#: ninefruits/institution/models/language.py
+msgid "language"
+msgstr "ngôn ngữ"
+
+# key: reference.resources.languages.plural_label
+#: ninefruits/institution/models/language.py
+msgid "languages"
+msgstr "ngôn ngữ"
+
+# key: reference.fields.code
+#: ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: reference.fields.description
+#: ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Description"
+msgstr "Mô tả"
+
+# key: reference.fields.is_system
+#: ninefruits/institution/models/lookup.py
+msgid "System"
+msgstr "Hệ thống"
+
+# key: reference.resources.lookup_types.label
+#: ninefruits/institution/models/lookup.py
+msgid "code list"
+msgstr "danh mục mã"
+
+# key: reference.resources.lookup_types.plural_label
+#: ninefruits/institution/models/lookup.py
+msgid "code lists"
+msgstr "danh mục mã"
+
+# key: reference.fields.sort_order
+#: ninefruits/institution/models/lookup.py
+msgid "Order"
+msgstr "Thứ tự"
+
+# key: reference.fields.year_levels
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Year levels"
+msgstr "Năm học thứ"
+
+# key: reference.fields.admission_year_from
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Admitted from (year)"
+msgstr "Nhập học từ (năm)"
+
+# key: reference.fields.admission_year_to
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Admitted until (year)"
+msgstr "Nhập học đến (năm)"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Programs"
+msgstr "Chương trình đào tạo"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Org units"
+msgstr "Đơn vị tổ chức"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Includes all units below the selected ones."
+msgstr "Bao gồm tất cả đơn vị trực thuộc các đơn vị đã chọn."
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Academic standing"
+msgstr "Tình trạng học tập"
+
+# key: grading.help.standing_criteria
+#: ninefruits/institution/target_criteria_fields.py
+msgid "The standing from the latest term close. Leave empty for any."
+msgstr "Tình trạng học tập theo lần khóa điểm học kỳ gần nhất. Để trống để áp dụng cho tất cả."
+
+# key: validation.gte.numeric
+#: ninefruits/institution/target_criteria_fields.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Trường %(attribute)s phải lớn hơn hoặc bằng %(value)s."
+
+# key: reference.fields.admission_years
+#: ninefruits/institution/target_criteria_fields.py
+msgctxt "reference"
+msgid "Admitted"
+msgstr "Năm nhập học"

@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: evaluation.errors.form_in_use
+#: ninefruits/evaluation/actions/manage_term_evaluation.py
+msgid "The term already has responses with its form."
+msgstr "यस सेमेस्टरमा यसको फारमबाट पहिले नै प्रतिक्रियाहरू छन्।"
+
+# key: evaluation.errors.not_open
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "The course evaluation is not open for this course."
+msgstr "यस विषयका लागि विषय मूल्याङ्कन खुला छैन।"
+
+# key: evaluation.errors.already_done
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "You have already evaluated this course."
+msgstr "तपाईंले यस विषयको मूल्याङ्कन पहिले नै गर्नुभएको छ।"
+
+# key: evaluation.errors.invalid_answer
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "An answer is not valid."
+msgstr "एउटा उत्तर मान्य छैन।"
+
+# key: evaluation.errors.missing_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "सबै अनिवार्य प्रश्नको उत्तर दिनुहोस् (%(count)s बाँकी)।"
+
+# key: evaluation.errors.uniform_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "Every answer is the same. Please answer each question."
+msgstr "सबै उत्तर एउटै छन्। कृपया प्रत्येक प्रश्नको उत्तर दिनुहोस्।"
+
+# key: validation.alpha_dash
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s मा अक्षर, अङ्क, ड्यास र अन्डरस्कोर मात्र हुनुपर्छ।"
+
+# key: reference.fields.code
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Code"
+msgstr "कोड"
+
+# key: validation.unique
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s पहिले नै प्रयोग भइसकेको छ।"
+
+# key: evaluation.fields.question
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Question"
+msgstr "प्रश्न"
+
+# key: evaluation.fields.questions
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgid "Questions"
+msgstr "प्रश्नहरू"
+
+# key: reference.fields.name
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Name"
+msgstr "नाम"
+
+# key: evaluation.actions.copy_form
+#: ninefruits/evaluation/admin/forms.py
+msgid "Copy form"
+msgstr "फारम प्रतिलिपि गर्नुहोस्"
+
+# key: security.scope_types.global
+#: ninefruits/evaluation/admin/sections.py
+msgid "All"
+msgstr "सबै"
+
+# key: offering.fields.offering_unit
+#: ninefruits/evaluation/admin/sections.py
+msgid "Offering unit"
+msgstr "सञ्चालन गर्ने एकाइ"
+
+# key: offering.fields.section
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "offering"
+msgid "Section"
+msgstr "सेक्सन"
+
+# key: curriculum.fields.title
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "शीर्षक"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/evaluation/admin/sections.py
+msgid "Instructors"
+msgstr "प्राध्यापकहरू"
+
+# key: evaluation.fields.responses
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/admin/terms.py
+msgid "Responses"
+msgstr "प्रतिक्रियाहरू"
+
+# key: evaluation.fields.response_rate
+#: ninefruits/evaluation/admin/sections.py
+msgid "Response rate"
+msgstr "प्रतिक्रिया दर"
+
+# key: evaluation.results.open
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/views/portal.py
+msgctxt "evaluation"
+msgid "Results"
+msgstr "नतिजा"
+
+# key: reference.resources.terms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "term"
+msgstr "सेमेस्टर"
+
+# key: evaluation.resources.forms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/models/term.py
+msgid "evaluation form"
+msgstr "मूल्याङ्कन फारम"
+
+# key: evaluation.fields.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum responses"
+msgstr "न्यूनतम प्रतिक्रिया"
+
+# key: evaluation.help.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
+msgstr "कम्तीमा यति प्रतिक्रिया र यो प्रतिक्रिया दर भएमा मात्र सेक्सनको नतिजा देखिन्छ, ताकि थोरै उत्तरले कुनै विद्यार्थीलाई चिनाउन नसकोस्।"
+
+# key: evaluation.fields.minimum_response_percent
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum response rate (%)"
+msgstr "न्यूनतम प्रतिक्रिया दर (%)"
+
+# key: common.saved
+#: ninefruits/evaluation/admin/terms.py
+msgid "Saved"
+msgstr "सुरक्षित गरियो"
+
+# key: evaluation.actions.prepare
+#: ninefruits/evaluation/admin/terms.py
+msgid "Set up a term"
+msgstr "सेमेस्टर तयार गर्नुहोस्"
+
+# key: evaluation.actions.change
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Change"
+msgstr "परिवर्तन गर्नुहोस्"
+
+# key: evaluation.actions.publish
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "नतिजा प्रकाशित गर्नुहोस्"
+
+#: ninefruits/evaluation/admin/terms.py
+msgid "Already published."
+msgstr "पहिले नै प्रकाशित गरिसकिएको छ।"
+
+# key: evaluation.help.publish
+#: ninefruits/evaluation/admin/terms.py
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
+msgstr "अबदेखि प्राध्यापकले आफ्ना सेक्सनका नतिजा देख्छन् (पर्याप्त प्रतिक्रिया भएका सेक्सन)।"
+
+# key: evaluation.portal.title
+#: ninefruits/evaluation/apps.py ninefruits/evaluation/templates/evaluation/portal/evaluations.html ninefruits/evaluation/views/portal.py
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "विषय मूल्याङ्कन"
+
+# key: evaluation.question_types.scale
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "स्केल"
+
+# key: evaluation.question_types.text
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "टिप्पणी"
+
+# key: evaluation.fields.description
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Description"
+msgstr "विवरण"
+
+# key: evaluation.fields.scale_points
+#: ninefruits/evaluation/models/forms.py
+msgid "Scale points"
+msgstr "स्केलका बिन्दु"
+
+# key: evaluation.fields.scale_low_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of 1"
+msgstr "1 को लेबल"
+
+# key: evaluation.fields.scale_high_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of the highest point"
+msgstr "उच्चतम बिन्दुको लेबल"
+
+# key: reference.fields.is_active
+#: ninefruits/evaluation/models/forms.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "सक्रिय"
+
+# key: evaluation.resources.forms.plural_label
+#: ninefruits/evaluation/models/forms.py
+msgid "evaluation forms"
+msgstr "मूल्याङ्कन फारमहरू"
+
+# key: reference.fields.sort_order
+#: ninefruits/evaluation/models/forms.py
+msgid "Order"
+msgstr "क्रम"
+
+# key: evaluation.fields.category
+#: ninefruits/evaluation/models/forms.py
+msgid "Area"
+msgstr "क्षेत्र"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/evaluation/models/forms.py
+msgid "Type"
+msgstr "प्रकार"
+
+# key: evaluation.fields.is_required
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Required"
+msgstr "अनिवार्य"
+
+# key: evaluation.fields.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "Reversed"
+msgstr "उल्टो"
+
+# key: evaluation.help.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
+msgstr "नकारात्मक रूपमा लेखिएका प्रश्नका लागि: औसतमा उत्तर उल्टो गनिन्छ (5 लाई 1 मानिन्छ)।"
+
+# key: evaluation.resources.sections.label
+#: ninefruits/evaluation/models/section.py
+msgid "section response"
+msgstr "सेक्सन प्रतिक्रिया"
+
+# key: evaluation.resources.sections.plural_label
+#: ninefruits/evaluation/models/section.py
+msgid "responses by section"
+msgstr "सेक्सनअनुसार प्रतिक्रियाहरू"
+
+# key: evaluation.fields.published_at
+#: ninefruits/evaluation/models/term.py
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "नतिजा प्रकाशित"
+
+# key: evaluation.resources.terms.label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluation"
+msgstr "सेमेस्टर मूल्याङ्कन"
+
+# key: evaluation.resources.terms.plural_label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluations"
+msgstr "सेमेस्टर मूल्याङ्कनहरू"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/evaluation/notifications.py
+msgid "Hello,"
+msgstr "नमस्ते,"
+
+# key: evaluation.mail.reminder_intro
+#: ninefruits/evaluation/notifications.py
+msgid "Please evaluate these courses:"
+msgstr "कृपया यी विषयहरूको मूल्याङ्कन गर्नुहोस्:"
+
+# key: evaluation.mail.reminder_anonymous
+#: ninefruits/evaluation/notifications.py
+msgid "Your answers are anonymous."
+msgstr "तपाईंका उत्तरहरू गोप्य रहन्छन्।"
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "विषय मूल्याङ्कन खोल्नुहोस्"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/evaluation/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"धन्यवाद,\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: ninefruits/evaluation/notifications.py
+msgid "Course evaluation is open"
+msgstr "विषय मूल्याङ्कन खुला छ"
+
+# key: evaluation.settings.grades_require_evaluation
+#: ninefruits/evaluation/settings_pages.py
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "मूल्याङ्कन पूरा नभएसम्म सेमेस्टरका ग्रेड लुकाउनुहोस्"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "मूल्याङ्कन खुला रहँदा मात्र; बन्द भएपछि ग्रेड देखिन्छन्।"
+
+# key: evaluation.settings.reject_uniform_answers
+#: ninefruits/evaluation/settings_pages.py
+msgid "Refuse the same answer to every question"
+msgstr "सबै प्रश्नमा एउटै उत्तर अस्वीकार गर्नुहोस्"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "पुरानो प्रणालीले सबै 1 वा सबै 5 अस्वीकार गरेझैँ।"
+
+# key: evaluation.settings.minimum_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Defaults for a new term's evaluation."
+msgstr "नयाँ सेमेस्टरको मूल्याङ्कनका लागि पूर्वनिर्धारित मान।"
+
+# key: evaluation.settings.title
+#: ninefruits/evaluation/settings_pages.py
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "विषय मूल्याङ्कन"
+
+# key: evaluation.portal.anonymous
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
+msgstr "तपाईंका उत्तरहरू गोप्य रहन्छन्। नतिजा प्रकाशित भएपछि प्राध्यापकले जम्मा मात्र देख्छन्।"
+
+# key: evaluation.portal.submit_confirm
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "मूल्याङ्कन पेस गर्ने? त्यसपछि तपाईं यसलाई परिवर्तन गर्न सक्नुहुन्न।"
+
+# key: evaluation.portal.back
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Back"
+msgstr "पछाडि"
+
+# key: evaluation.portal.optional
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "optional"
+msgstr "वैकल्पिक"
+
+# key: evaluation.portal.submit
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit"
+msgstr "पेस गर्नुहोस्"
+
+# key: evaluation.portal.done
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Done"
+msgstr "सम्पन्न"
+
+# key: evaluation.portal.evaluate
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Evaluate"
+msgstr "मूल्याङ्कन गर्नुहोस्"
+
+# key: evaluation.portal.none_open
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "No course evaluation is open for you."
+msgstr "तपाईंका लागि कुनै विषय मूल्याङ्कन खुला छैन।"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "My teaching"
+msgstr "मेरो अध्यापन"
+
+# key: evaluation.results.title
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html ninefruits/evaluation/views/portal.py
+msgid "Course evaluation results"
+msgstr "विषय मूल्याङ्कनका नतिजा"
+
+# key: evaluation.results.responses
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(expected)s मध्ये %(responses)s ले प्रतिक्रिया दिए (%(rate)s%%)"
+
+# key: evaluation.results.overall
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "overall %(mean)s"
+msgstr "समग्र %(mean)s"
+
+# key: evaluation.results.not_published
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "The results are not published yet."
+msgstr "नतिजा अहिलेसम्म प्रकाशित भएको छैन।"
+
+# key: evaluation.results.too_few
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
+msgstr "नतिजा देखाउन प्रतिक्रिया अपर्याप्त (कम्तीमा %(minimum)s र %(percent)s%% चाहिन्छ)।"
+
+# key: evaluation.results.mean
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Mean"
+msgstr "औसत"
+
+# key: evaluation.results.reversed
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "reversed"
+msgstr "उल्टो"
+
+# key: common.none
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgctxt "common"
+msgid "None"
+msgstr "छैन"
+
+# key: evaluation.results.not_yet
+#: ninefruits/evaluation/views/portal.py
+msgid "Not published"
+msgstr "प्रकाशित छैन"
+
+# key: evaluation.grades_hidden
+#: ninefruits/evaluation/views/portal.py
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "%(term)s को विषय मूल्याङ्कन पूरा गरेपछि त्यसका ग्रेड देखिन्छन्।"
+
+# key: evaluation.portal.submitted
+#: ninefruits/evaluation/views/portal.py
+msgid "Thank you. Your evaluation was submitted."
+msgstr "धन्यवाद। तपाईंको मूल्याङ्कन पेस भयो।"

@@ -1,6 +1,6 @@
 # Ninefruits — ລະບົບບໍລິຫານການສຶກສາຂອງມະຫາວິທະຍາໄລ (Django)
 
-**언어 / Languages / 语言 / ພາສາ**
+**Languages / 언어 / 语言 / ພາສາ**
 
 | ພາສາ | README | ຄູ່ມື |
 |---|---|---|
@@ -8,10 +8,22 @@
 | 한국어 | [README.ko.md](README.ko.md) | [docs/manual/ko/](docs/manual/ko/README.md) |
 | 简体中文 | [README.zh_Hans.md](README.zh_Hans.md) | [docs/manual/zh_Hans/](docs/manual/zh_Hans/README.md) |
 | ລາວ | [README.lo.md](README.lo.md) (ເອກະສານນີ້) | [docs/manual/lo/](docs/manual/lo/README.md) |
+| Deutsch | [README.de.md](README.de.md) | [docs/manual/de/](docs/manual/de/README.md) |
+| Filipino | [README.fil.md](README.fil.md) | [docs/manual/fil/](docs/manual/fil/README.md) |
+| Français | [README.fr.md](README.fr.md) | [docs/manual/fr/](docs/manual/fr/README.md) |
+| 日本語 | [README.ja.md](README.ja.md) | [docs/manual/ja/](docs/manual/ja/README.md) |
+| Монгол | [README.mn.md](README.mn.md) | [docs/manual/mn/](docs/manual/mn/README.md) |
+| Bahasa Melayu | [README.ms.md](README.ms.md) | [docs/manual/ms/](docs/manual/ms/README.md) |
+| नेपाली | [README.ne.md](README.ne.md) | [docs/manual/ne/](docs/manual/ne/README.md) |
+| Русский | [README.ru.md](README.ru.md) | [docs/manual/ru/](docs/manual/ru/README.md) |
+| ไทย | [README.th.md](README.th.md) | [docs/manual/th/](docs/manual/th/README.md) |
+| Türkçe | [README.tr.md](README.tr.md) | [docs/manual/tr/](docs/manual/tr/README.md) |
+| Oʻzbek | [README.uz.md](README.uz.md) | [docs/manual/uz/](docs/manual/uz/README.md) |
+| Tiếng Việt | [README.vi.md](README.vi.md) | [docs/manual/vi/](docs/manual/vi/README.md) |
 
 ຖ້າຕ້ອງການເພີ່ມພາສາອື່ນ ໃຫ້ເບິ່ງ [ຄູ່ມືການເພີ່ມພາສາ](docs/development/adding-a-language.md) (English, [한국어](docs/development/adding-a-language.ko.md)).
 
-Ninefruits ແມ່ນລະບົບບໍລິຫານການສຶກສາ (Student Information System) ທີ່ສາມາດຕິດຕັ້ງ ແລະ ໃຊ້ໄດ້ໃນຫຼາຍມະຫາວິທະຍາໄລ. ມັນຄວບຄຸມແກ່ນຂອງວຽກງານບໍລິຫານການສຶກສາ ຕັ້ງແຕ່ການສະໝັກເຂົ້າຮຽນ, ບັນທຶກນັກສຶກສາ, ຫຼັກສູດ ແລະ ກຸ່ມຮຽນ, ການລົງທະບຽນຮຽນ, ເກຣດ, ການປະເມີນການສອນ, ໃບຢັ້ງຢືນ, ການສອບເສັງພາສາ ແລະ ການສອບເສັງລວມ, ການເຂົ້າຮຽນ, ການພິຈາລະນາຈົບການສຶກສາ, ບົດລາຍງານ ຈົນເຖິງພື້ນຖານການເຊື່ອມຕໍ່ LMS ແລະ ໜ້າຈໍກັບເອກະສານຮອງຮັບພາສາເກົາຫຼີ, ອັງກິດ, ຈີນ ແລະ ລາວ.
+Ninefruits ແມ່ນລະບົບບໍລິຫານການສຶກສາ (Student Information System) ທີ່ສາມາດຕິດຕັ້ງ ແລະ ໃຊ້ໄດ້ໃນຫຼາຍມະຫາວິທະຍາໄລ. ມັນຄວບຄຸມແກ່ນຂອງວຽກງານບໍລິຫານການສຶກສາ ຕັ້ງແຕ່ການສະໝັກເຂົ້າຮຽນ, ບັນທຶກນັກສຶກສາ, ຫຼັກສູດ ແລະ ກຸ່ມຮຽນ, ການລົງທະບຽນຮຽນ, ເກຣດ, ການປະເມີນການສອນ, ໃບຢັ້ງຢືນ, ການສອບເສັງພາສາ ແລະ ການສອບເສັງລວມ, ການເຂົ້າຮຽນ, ການພິຈາລະນາຈົບການສຶກສາ, ບົດລາຍງານ ຈົນເຖິງພື້ນຖານການເຊື່ອມຕໍ່ LMS ແລະ ໜ້າຈໍກັບເອກະສານຮອງຮັບ 16 ພາສາຕາມຕາຕະລາງຂ້າງເທິງ.
 
 ບ່ອນເກັບໂຄດນີ້ແມ່ນການຍ້າຍ [Ninefruits ສະບັບ Laravel](https://github.com/humble92/ninefruits-laravel) v1.0.0 (Laravel 13, Filament, Livewire) ມາເປັນ Python 3.14 / Django 6.1 / PostgreSQL 18. ການຍ້າຍນີ້ຮັກສາພຶດຕິກຳ ແລະ ໂຄງສ້າງຖານຂໍ້ມູນຂອງຕົ້ນສະບັບໄວ້ທັງໝົດ: migration ຂອງ Django ແລ່ນ DDL ຂອງຕົ້ນສະບັບຄືນຕາມເດີມ ແລະ ໂຄງສ້າງຖືກປຽບທຽບກັບ `pg_dump` ຂອງຕົ້ນສະບັບເທື່ອລະວັດຖຸ (`tests/db/test_schema_equivalence.py`, `tools/schema_dump_diff.py`). ດັ່ງນັ້ນ ການຕິດຕັ້ງຂອງສະບັບໃດກໍ່ສາມາດຍ້າຍໄປອີກສະບັບໜຶ່ງໄດ້ດ້ວຍເຄື່ອງມືມາດຕະຖານຂອງ PostgreSQL. ຂັ້ນຕອນ ແລະ ເຫດຜົນຂອງການຍ້າຍຖືກບັນທຶກໄວ້ໃນ [porting/](porting/README.md) (ແຜນ, ບົດລາຍງານແຕ່ລະໄລຍະ, ການຕັດສິນໃຈດ້ານການອອກແບບ, ຕາຕະລາງທຽບການທົດສອບ).
 

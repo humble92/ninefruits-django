@@ -4,6 +4,7 @@ from django.apps import AppConfig
 #: ``get_language_info()`` and the ``{% get_language_info %}`` tags fail for the code.
 EXTRA_LANG_INFO = {
     "lo": {"bidi": False, "code": "lo", "name": "Lao", "name_local": "ລາວ"},
+    "fil": {"bidi": False, "code": "fil", "name": "Filipino", "name_local": "Filipino"},
 }
 
 

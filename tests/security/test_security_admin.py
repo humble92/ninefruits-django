@@ -8,7 +8,7 @@ from datetime import timedelta
 
 import pytest
 from django.core import mail
-from django.utils import timezone
+from django.utils import timezone, translation
 
 from ninefruits.audit.models import ActivityLog
 from ninefruits.security.enums import MfaEnforcement, Permission
@@ -42,6 +42,22 @@ def test_lists_users_and_creates_an_account_with_a_reset_link() -> None:
     user = User.objects.get(email="new@example.test")
     assert user.has_usable_password()
     assert any("new@example.test" in message.to for message in mail.outbox)
+
+
+@pytest.mark.parametrize(
+    ("language", "add_user", "add_role"),
+    [("ko", "사용자 추가", "역할 추가"), ("de", "Benutzer hinzufügen", "Rolle hinzufügen")],
+)
+def test_add_buttons_name_the_model_in_the_screen_language(language: str, add_user: str, add_role: str) -> None:
+    # User and Role carry translated verbose names, so Django's "Add %(name)s" is not half English.
+    client = signed_in(administrator())
+    with translation.override(language):
+        assert str(User._meta.verbose_name) != "user"
+        assert str(Role._meta.verbose_name) != "role"
+    client.post("/i18n/locale/", {"language": language})
+
+    assert add_user in client.get("/admin/security/user/").content.decode()
+    assert add_role in client.get("/admin/security/role/").content.decode()
 
 
 def test_edits_go_through_update_user_account() -> None:

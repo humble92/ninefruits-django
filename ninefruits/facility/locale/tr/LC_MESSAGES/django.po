@@ -1,0 +1,111 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: reference.fields.name
+#: ninefruits/facility/admin.py ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Ad"
+
+# key: reference.fields.rooms_count
+#: ninefruits/facility/admin.py
+msgid "Rooms"
+msgstr "Derslikler"
+
+# key: reference.fields.building
+#: ninefruits/facility/admin.py ninefruits/facility/models/building.py
+msgid "Building"
+msgstr "Bina"
+
+# key: reference.fields.room_type
+#: ninefruits/facility/admin.py ninefruits/facility/models/building.py
+msgid "Room type"
+msgstr "Derslik türü"
+
+# key: reference.fields.code
+#: ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/facility/models/building.py
+msgid "Address"
+msgstr "Adres"
+
+# key: reference.fields.is_active
+#: ninefruits/facility/models/building.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Etkin"
+
+# key: reference.resources.buildings.label
+#: ninefruits/facility/models/building.py
+msgid "building"
+msgstr "bina"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/facility/models/building.py
+msgid "buildings"
+msgstr "binalar"
+
+# key: reference.fields.room_number
+#: ninefruits/facility/models/building.py
+msgid "Room number"
+msgstr "Derslik numarası"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/facility/models/building.py
+msgid "Org unit"
+msgstr "Birim"
+
+# key: reference.fields.capacity
+#: ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Capacity"
+msgstr "Kapasite"
+
+# key: reference.fields.is_schedulable
+#: ninefruits/facility/models/building.py
+msgid "Used for timetables"
+msgstr "Ders programında kullanılır"
+
+# key: reference.help.is_schedulable
+#: ninefruits/facility/models/building.py
+msgid "Offered when timetables are made."
+msgstr "Ders programları hazırlanırken sunulur."
+
+# key: reference.fields.note
+#: ninefruits/facility/models/building.py
+msgctxt "reference"
+msgid "Note"
+msgstr "Not"
+
+# key: reference.resources.rooms.label
+#: ninefruits/facility/models/building.py
+msgid "room"
+msgstr "derslik"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/facility/models/building.py
+msgid "rooms"
+msgstr "derslikler"

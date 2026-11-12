@@ -1,0 +1,1321 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/grading/actions/_support.py
+msgid "Enter a reason."
+msgstr "Gerekçe girin."
+
+# key: grading.errors.term_not_published
+#: ninefruits/grading/actions/close_term.py
+msgid "Only a published term closes."
+msgstr "Yalnızca yayımlanmış bir dönem kapatılabilir."
+
+# key: grading.errors.term_not_ready
+#: ninefruits/grading/actions/close_term.py
+#, python-format
+msgid "%(count)s section(s) have grades that are not final."
+msgstr "%(count)s şubede kesinleşmemiş notlar var."
+
+# key: grading.errors.not_all_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+#, python-format
+msgid "Not all grades are submitted (%(count)s missing)."
+msgstr "Tüm notlar gönderilmedi (%(count)s eksik)."
+
+# key: grading.errors.nothing_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+msgid "There are no submitted grades."
+msgstr "Gönderilmiş not yok."
+
+# key: grading.errors.not_finalized
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "Only a final grade needs a change request."
+msgstr "Değişiklik talebi yalnızca kesinleşmiş bir not için gerekir."
+
+# key: grading.errors.new_grade_required
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/views/portal.py
+msgid "Enter the new score or grade."
+msgstr "Yeni puanı veya notu girin."
+
+# key: grading.errors.same_grade
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "The new grade is the current grade."
+msgstr "Yeni not mevcut notla aynı."
+
+# key: grading.errors.request_pending
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "A change request for this grade is already open."
+msgstr "Bu not için açık bir değişiklik talebi zaten var."
+
+# key: grading.errors.request_decided
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/actions/manage_method_requests.py
+msgid "The request is already decided."
+msgstr "Talep hakkında zaten karar verildi."
+
+# key: grading.errors.own_request
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "You cannot decide your own request."
+msgstr "Kendi talebiniz hakkında karar veremezsiniz."
+
+# key: grading.errors.same_method
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "The section already uses that evaluation method."
+msgstr "Şube zaten bu değerlendirme yöntemini kullanıyor."
+
+# key: grading.errors.method_request_pending
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "A change request for this section is already waiting."
+msgstr "Bu şube için bekleyen bir değişiklik talebi zaten var."
+
+# key: grading.errors.method_has_grades
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "Notlar zaten girildi; değerlendirme yöntemi değiştirilemez."
+
+# key: grading.errors.scale_fixed
+#: ninefruits/grading/actions/save_grade_scale.py
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "Not ölçeği kurulumda sabitlenir ve değiştirilemez."
+
+# key: grading.errors.not_editable
+#: ninefruits/grading/actions/save_grades.py
+msgid "Some grades can no longer be changed here."
+msgstr "Bazı notlar artık burada değiştirilemez."
+
+# key: grading.errors.over_caps
+#: ninefruits/grading/actions/save_grades.py
+msgid "The grades are outside the institution's grade caps. Adjust them, or ask the office."
+msgstr "Notlar kurumun not üst sınırlarının dışında. Notları düzeltin veya birimden isteyin."
+
+# key: grading.errors.exception_reason_required
+#: ninefruits/grading/actions/save_grades.py
+msgid "Submitting outside the grade caps needs a reason."
+msgstr "Not üst sınırları dışında göndermek için gerekçe gerekir."
+
+# key: grading.errors.missing_grades
+#: ninefruits/grading/actions/save_grades.py
+#, python-format
+msgid "%(count)s student(s) have no grade yet."
+msgstr "%(count)s öğrencinin henüz notu yok."
+
+# key: grading.errors.entry_closed
+#: ninefruits/grading/actions/save_grades.py
+msgid "Grade entry is not open for this section."
+msgstr "Bu şube için not girişi açık değil."
+
+# key: grading.fields.decision_note
+#: ninefruits/grading/admin/common.py ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Not"
+
+# key: reference.resources.terms.label
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgid "term"
+msgstr "dönem"
+
+# key: offering.fields.dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Preview only"
+msgstr "Yalnızca önizleme"
+
+# key: grading.help.close_dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Only check whether the term can close."
+msgstr "Yalnızca dönemin kapatılıp kapatılamayacağını kontrol et."
+
+# key: common.reason
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/notifications.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Gerekçe"
+
+# key: common.yes
+#: ninefruits/grading/admin/common.py
+msgid "Yes"
+msgstr "Evet"
+
+# upstream: Django/allauth catalog
+#: ninefruits/grading/admin/common.py
+msgid "No"
+msgstr "Hayır"
+
+# key: registration.fields.status
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Durum"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "Student number"
+msgstr "Öğrenci numarası"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "people"
+msgid "Name"
+msgstr "Ad"
+
+# key: offering.fields.section
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Şube"
+
+# key: grading.fields.change
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Change"
+msgstr "Değişiklik"
+
+# key: grading.fields.requested_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Talep eden"
+
+# key: grading.fields.decided_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "Karar veren"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgid "Approve"
+msgstr "Onayla"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/enums.py
+msgid "Approved"
+msgstr "Onaylandı"
+
+# key: grading.help.approve
+#: ninefruits/grading/admin/grade_changes.py
+#, python-format
+msgid "The grade changes from %(from)s to %(to)s now, and the student's GPA is recalculated."
+msgstr "Not şimdi %(from)s notundan %(to)s notuna değişir ve öğrencinin not ortalaması yeniden hesaplanır."
+
+# key: grading.actions.reject
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Reddet"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/enums.py
+msgid "Rejected"
+msgstr "Reddedildi"
+
+# key: grading.actions.cancel_request
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Talebi iptal et"
+
+# key: grading.help.scale_fixed
+#: ninefruits/grading/admin/grade_scales.py
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "Not ölçeği kurulumda sabitlenir: notlar ve not ortalamaları bu ölçeğe göredir. Başka bir ölçeğe geçirilemez."
+
+# key: validation.required
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s alanı zorunludur."
+
+# key: reference.fields.grade_points
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "Grade points"
+msgstr "Not katsayısı"
+
+# key: validation.max.numeric
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/settings_pages.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "%(attribute)s %(max)s değerinden büyük olmamalıdır."
+
+# key: validation.gte.numeric
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s %(value)s veya daha büyük olmalıdır."
+
+# key: reference.fields.max_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "To (%)"
+msgstr "Bitiş (%)"
+
+# key: reference.fields.min_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "From (%)"
+msgstr "Başlangıç (%)"
+
+# key: reference.resources.grade_scale_items.label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grade"
+msgstr "not"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grades"
+msgstr "notlar"
+
+# key: reference.fields.name
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Ad"
+
+# key: reference.fields.items_count
+#: ninefruits/grading/admin/grade_scales.py
+msgctxt "reference"
+msgid "Grades"
+msgstr "Notlar"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgid "Evaluation"
+msgstr "Değerlendirme"
+
+# key: grading.notifications.method_approved
+#: ninefruits/grading/admin/method_requests.py
+#, python-format
+msgid "Approved. %(count)s draft grade(s) cleared."
+msgstr "Onaylandı. %(count)s taslak not silindi."
+
+# key: grading.help.approve_method
+#: ninefruits/grading/admin/method_requests.py
+msgid "The section's evaluation method changes now. Draft grades entered under the old method are cleared; the instructor is told by email."
+msgstr "Şubenin değerlendirme yöntemi şimdi değişir. Eski yöntemle girilmiş taslak notlar silinir; öğretim elemanına e-postayla bildirilir."
+
+# key: offering.fields.offering_unit
+#: ninefruits/grading/admin/section_grades.py
+msgid "Offering unit"
+msgstr "Açan birim"
+
+# key: grading.fields.exception_submitted
+#: ninefruits/grading/admin/section_grades.py
+msgid "Submitted as an exception"
+msgstr "İstisna olarak gönderildi"
+
+# key: grading.fields.ready_to_finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Ready to finalize"
+msgstr "Kesinleştirmeye hazır"
+
+# key: curriculum.fields.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Ders adı"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/grading/admin/section_grades.py
+msgid "Instructors"
+msgstr "Öğretim elemanları"
+
+# key: grading.fields.pending
+#: ninefruits/grading/admin/section_grades.py
+msgid "Not submitted"
+msgstr "Gönderilmedi"
+
+# key: grading.fields.submitted
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading.fields"
+msgid "Submitted"
+msgstr "Gönderildi"
+
+# key: grading.fields.finalized
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading"
+msgid "Final"
+msgstr "Kesinleşti"
+
+# key: grading.fields.exception
+#: ninefruits/grading/admin/section_grades.py
+msgid "Exception"
+msgstr "İstisna"
+
+# key: grading.actions.open_entry
+# key: grading.grades.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/apps.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Grades"
+msgstr "Notlar"
+
+# key: grading.actions.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize"
+msgstr "Kesinleştir"
+
+# key: grading.notifications.finalized
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) finalized."
+msgstr "%(count)s not kesinleştirildi."
+
+# key: grading.help.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalized grades are final: they change only through an approved grade change request. Students see them from now on."
+msgstr "Kesinleşen notlar nihaidir: yalnızca onaylanmış bir not değişikliği talebiyle değişir. Öğrenciler notları bundan sonra görür."
+
+# key: grading.actions.return
+#: ninefruits/grading/admin/section_grades.py
+msgid "Return to instructor"
+msgstr "Öğretim elemanına iade et"
+
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) returned."
+msgstr "%(count)s not iade edildi."
+
+# key: grading.actions.finalize_selected
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize selected"
+msgstr "Seçilenleri kesinleştir"
+
+# key: grading.notifications.skipped
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "Not finalized: %(sections)s"
+msgstr "Kesinleştirilmedi: %(sections)s"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Academic standing"
+msgstr "Akademik durum"
+
+# key: grading.fields.honors
+# key: grading.settings.honors
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Honors"
+msgstr "Onur derecesi"
+
+# key: reference.resources.programs.label
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "program"
+msgstr "program"
+
+# key: grading.fields.earned_credits
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Kazanılan kredi"
+
+# key: grading.fields.closed
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Closed"
+msgstr "Kapatıldı"
+
+# key: grading.transcript.title
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/transcript.html ninefruits/grading/views/transcript.py
+msgid "Grade report"
+msgstr "Not dökümü"
+
+# key: grading.actions.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Close term"
+msgstr "Dönemi kapat"
+
+# key: grading.help.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Every grade of the term must be final. Closing calculates term records, academic standing and honors, and moves the term to grades closed."
+msgstr "Dönemin tüm notları kesinleşmiş olmalıdır. Kapatma işlemi dönem kayıtlarını, akademik durumu ve onur derecelerini hesaplar ve dönemi notları kapatılmış durumuna geçirir."
+
+# key: grading.notifications.close_ready
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Ready to close: %(students)s student(s)."
+msgstr "Kapatmaya hazır: %(students)s öğrenci."
+
+# key: grading.notifications.close_blocked
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Cannot close yet: %(sections)s section(s) have grades that are not final."
+msgstr "Henüz kapatılamaz: %(sections)s şubede kesinleşmemiş notlar var."
+
+# key: grading.notifications.open_section
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(section)s: %(count)s not final"
+msgstr "%(section)s: %(count)s kesinleşmedi"
+
+# key: grading.notifications.close_started
+#: ninefruits/grading/admin/term_records.py
+msgid "Term close started. The term moves to grades closed when it finishes."
+msgstr "Dönem kapatma başladı. Tamamlandığında dönem notları kapatılmış durumuna geçer."
+
+# key: grading.actions.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculate"
+msgstr "Yeniden hesapla"
+
+# key: grading.notifications.recalculated
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(count)s student(s) recalculated."
+msgstr "%(count)s öğrenci yeniden hesaplandı."
+
+# key: grading.help.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculates credits and GPA from final grades, e.g. after a policy change. Standing and honors stay as decided at term close."
+msgstr "Kredileri ve not ortalamalarını kesinleşmiş notlardan yeniden hesaplar, ör. bir politika değişikliğinden sonra. Akademik durum ve onur dereceleri dönem kapatılırken verildiği gibi kalır."
+
+# key: grading.applies_to.graded
+#: ninefruits/grading/enums.py
+msgid "Graded courses"
+msgstr "Notlu dersler"
+
+# key: grading.applies_to.pass_fail
+#: ninefruits/grading/enums.py
+msgid "Pass/fail courses"
+msgstr "Başarılı/başarısız dersler"
+
+# key: grading.applies_to.both
+#: ninefruits/grading/enums.py
+msgid "Both"
+msgstr "Her ikisi"
+
+# key: grading.evaluation_methods.absolute
+#: ninefruits/grading/enums.py
+msgid "Absolute evaluation"
+msgstr "Mutlak değerlendirme"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: ninefruits/grading/enums.py ninefruits/grading/settings_pages.py
+msgid "Relative evaluation"
+msgstr "Bağıl değerlendirme"
+
+# key: grading.standings.good
+#: ninefruits/grading/enums.py
+msgid "Good standing"
+msgstr "Normal durum"
+
+# key: grading.standings.warning
+#: ninefruits/grading/enums.py
+msgid "Academic warning"
+msgstr "Akademik uyarı"
+
+# key: grading.standings.dismissal_review
+#: ninefruits/grading/enums.py
+msgid "Dismissal review"
+msgstr "İlişik kesme incelemesi"
+
+# key: registration.grade_statuses.none
+#: ninefruits/grading/enums.py
+msgid "No grade"
+msgstr "Not yok"
+
+# key: registration.grade_statuses.draft
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Draft"
+msgstr "Taslak"
+
+# key: registration.grade_statuses.submitted
+#: ninefruits/grading/enums.py
+msgctxt "registration.grade_statuses"
+msgid "Submitted"
+msgstr "Gönderildi"
+
+# key: registration.grade_statuses.finalized
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Final"
+msgstr "Kesinleşti"
+
+# key: grading.gpa_roundings.round
+#: ninefruits/grading/enums.py
+msgid "Round half up"
+msgstr "Yukarı yuvarla (yarım ve üzeri)"
+
+# key: grading.gpa_roundings.floor
+#: ninefruits/grading/enums.py
+msgid "Cut off"
+msgstr "Kes"
+
+# key: grading.retake_policies.latest
+#: ninefruits/grading/enums.py
+msgid "Latest attempt"
+msgstr "Son deneme"
+
+# key: grading.retake_policies.best
+#: ninefruits/grading/enums.py
+msgid "Best attempt"
+msgstr "En iyi deneme"
+
+# key: grading.change_statuses.pending
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Pending"
+msgstr "Beklemede"
+
+# key: grading.change_statuses.cancelled
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Cancelled"
+msgstr "İptal edildi"
+
+# key: reference.fields.code
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: reference.fields.max_grade_points
+#: ninefruits/grading/models/grade_scale.py
+msgid "Maximum grade points"
+msgstr "En yüksek not katsayısı"
+
+# key: reference.fields.is_default
+#: ninefruits/grading/models/grade_scale.py
+msgid "Default"
+msgstr "Varsayılan"
+
+# key: reference.resources.grade_scales.label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scale"
+msgstr "not ölçeği"
+
+# key: reference.resources.grade_scales.plural_label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scales"
+msgstr "not ölçekleri"
+
+# key: reference.fields.grade
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Grade"
+msgstr "Not"
+
+# key: reference.fields.counts_in_gpa
+#: ninefruits/grading/models/grade_scale.py
+msgid "Counts in GPA"
+msgstr "Ortalamaya katılır"
+
+# key: reference.fields.is_passing
+#: ninefruits/grading/models/grade_scale.py
+msgid "Passing"
+msgstr "Geçer not"
+
+# key: certificate.fields.audience
+#: ninefruits/grading/models/grade_scale.py
+msgid "For"
+msgstr "Kimler için"
+
+# key: grading.help.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "Harf notları notlu dersler, P/NP başarılı/başarısız dersler içindir; \"her ikisi\" ör. I (eksik) için."
+
+# key: reference.fields.sort_order
+#: ninefruits/grading/models/grade_scale.py
+msgid "Order"
+msgstr "Sıra"
+
+# key: grading.fields.new_grade
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "New grade"
+msgstr "Yeni not"
+
+# key: grading.fields.new_score
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "New score"
+msgstr "Yeni puan"
+
+# key: grading.fields.requested_at
+#: ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Talep tarihi"
+
+# key: grading.resources.grade_changes.label
+#: ninefruits/grading/models/requests.py
+msgid "grade change"
+msgstr "not değişikliği"
+
+# key: grading.resources.grade_changes.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "grade changes"
+msgstr "not değişiklikleri"
+
+# key: grading.resources.method_requests.label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method request"
+msgstr "değerlendirme yöntemi talebi"
+
+# key: grading.resources.method_requests.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method requests"
+msgstr "değerlendirme yöntemi talepleri"
+
+# key: grading.resources.section_grades.label
+# key: grading.resources.section_grades.plural_label
+#: ninefruits/grading/models/section_grade.py
+msgid "grade progress"
+msgstr "not girişi durumu"
+
+# key: people.resources.student_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "student record"
+msgstr "öğrenci kaydı"
+
+# key: grading.fields.attempted_credits
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Attempted credits"
+msgstr "Alınan kredi"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: ninefruits/grading/models/term_record.py
+msgid "Term GPA"
+msgstr "Dönem not ortalaması"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Genel not ortalaması"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: ninefruits/grading/models/term_record.py
+msgid "Warnings"
+msgstr "Uyarılar"
+
+# key: grading.fields.honors_rank
+#: ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Honors rank"
+msgstr "Onur sıralaması"
+
+# key: grading.resources.term_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "term record"
+msgstr "dönem kaydı"
+
+# key: grading.resources.term_records.plural_label
+#: ninefruits/grading/models/term_record.py
+msgid "term records"
+msgstr "dönem kayıtları"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/grading/notifications.py
+msgid "Hello,"
+msgstr "Merhaba,"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Teşekkürler,\n"
+"%(app)s"
+
+# key: grading.mail.returned_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades returned: %(section)s"
+msgstr "Notlar iade edildi: %(section)s"
+
+# key: grading.mail.returned_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The grades of %(section)s were returned to you. Please check them and submit again."
+msgstr "%(section)s notları size iade edildi. Lütfen kontrol edip yeniden gönderin."
+
+# key: grading.mail.open_grade_entry
+#: ninefruits/grading/notifications.py
+msgid "Open grade entry"
+msgstr "Not girişini aç"
+
+# key: grading.mail.missing_subject
+#: ninefruits/grading/notifications.py
+msgid "Grades not submitted yet"
+msgstr "Henüz gönderilmemiş notlar"
+
+# key: grading.mail.missing_intro
+#: ninefruits/grading/notifications.py
+msgid "These sections still have grades that are not submitted:"
+msgstr "Şu şubelerde henüz gönderilmemiş notlar var:"
+
+# key: grading.mail.open_teaching
+#: ninefruits/grading/notifications.py
+msgid "Open my teaching"
+msgstr "Verdiğim dersleri aç"
+
+# key: grading.mail.method_approved_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method changed: %(section)s"
+msgstr "Değerlendirme yöntemi değişti: %(section)s"
+
+# key: grading.mail.method_approved_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(section)s is now evaluated by %(method)s."
+msgstr "%(section)s artık şu yöntemle değerlendiriliyor: %(method)s."
+
+# key: grading.mail.method_rejected_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method request rejected: %(section)s"
+msgstr "Değerlendirme yöntemi talebi reddedildi: %(section)s"
+
+# key: grading.mail.method_rejected_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The request to evaluate %(section)s by %(method)s was rejected."
+msgstr "%(section)s şubesinin %(method)s ile değerlendirilmesi talebi reddedildi."
+
+# key: grading.mail.method_drafts_cleared
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(count)s draft grade(s) entered under the old method were cleared; please enter them again."
+msgstr "Eski yöntemle girilmiş %(count)s taslak not silindi; lütfen yeniden girin."
+
+# key: grading.mail.exception_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades submitted outside the caps: %(section)s"
+msgstr "Üst sınırlar dışında gönderilen notlar: %(section)s"
+
+# key: grading.mail.exception_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(user)s submitted the grades of %(section)s outside the institution's grade caps."
+msgstr "%(user)s, %(section)s notlarını kurumun not üst sınırları dışında gönderdi."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Term closed: %(term)s"
+msgstr "Dönem kapatıldı: %(term)s"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The term close of %(term)s finished. The term is now grades closed."
+msgstr "%(term)s dönem kapanışı tamamlandı. Dönem artık notları kapatılmış durumda."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(records)s term record(s), %(warnings)s academic warning(s), %(dismissal_reviews)s dismissal review(s), %(honors)s honors student(s)."
+msgstr "%(records)s dönem kaydı, %(warnings)s akademik uyarı, %(dismissal_reviews)s ilişik kesme incelemesi, %(honors)s onur öğrencisi."
+
+#: ninefruits/grading/notifications.py
+msgid "Open term records"
+msgstr "Dönem kayıtlarını aç"
+
+# key: grading.distribution.over
+#: ninefruits/grading/services/distribution.py
+#, python-format
+msgid "%(group)s: %(percent)s%% of the students, cap %(cap)s%% (up to %(limit)s%% allowed)"
+msgstr "%(group)s: öğrencilerin %%%(percent)s kadarı, üst sınır %%%(cap)s (en fazla %%%(limit)s izinli)"
+
+# key: validation.numeric
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s bir sayı olmalıdır."
+
+# key: grading.fields.score
+#: ninefruits/grading/services/options.py
+msgid "Score (%)"
+msgstr "Puan (%)"
+
+# key: grading.errors.no_default_scale
+#: ninefruits/grading/services/options.py
+msgid "There is no default grade scale."
+msgstr "Varsayılan not ölçeği yok."
+
+# key: grading.errors.no_score_here
+#: ninefruits/grading/services/options.py
+msgid "This section takes grades only (relative evaluation or a pass/fail course): leave the score empty."
+msgstr "Bu şubede yalnızca not verilir (bağıl değerlendirme veya başarılı/başarısız ders): puanı boş bırakın."
+
+# key: grading.errors.score_without_grade
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "No grade covers the score %(score)s."
+msgstr "%(score)s puanını karşılayan bir not yok."
+
+# key: grading.errors.grade_not_allowed
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The grade %(grade)s is not allowed for this course."
+msgstr "%(grade)s notu bu ders için kullanılamaz."
+
+# key: grading.errors.above_retake_cap
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "A retake can receive at most %(grade)s."
+msgstr "Tekrar alınan derse en fazla %(grade)s verilebilir."
+
+#: ninefruits/grading/settings_pages.py
+msgid "Write each cap as a letter and a percentage, e.g. A=30, B=40."
+msgstr "Her üst sınırı bir harf ve bir yüzde olarak yazın, ör. A=30, B=40."
+
+# key: grading.fields.cap
+#: ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cap"
+msgstr "Üst sınır"
+
+# key: grading.settings.no_cap
+#: ninefruits/grading/settings_pages.py
+msgid "No cap"
+msgstr "Sınır yok"
+
+# key: grading.settings.gpa_decimals
+#: ninefruits/grading/settings_pages.py
+msgid "Decimals"
+msgstr "Ondalık basamak"
+
+# key: grading.settings.gpa_rounding
+#: ninefruits/grading/settings_pages.py
+msgid "Rounding"
+msgstr "Yuvarlama"
+
+# key: grading.settings.retake_policy
+#: ninefruits/grading/settings_pages.py
+msgid "Retakes in the cumulative GPA"
+msgstr "Genel not ortalamasında tekrar alınan dersler"
+
+# key: grading.settings.retake_policy_help
+#: ninefruits/grading/settings_pages.py
+msgid "Term GPAs always keep every grade of their term."
+msgstr "Dönem not ortalamaları her zaman o dönemin tüm notlarını içerir."
+
+# key: grading.settings.retake_max_grade
+#: ninefruits/grading/settings_pages.py
+msgid "Highest grade for a retake"
+msgstr "Tekrar alınan derste en yüksek not"
+
+# key: grading.settings.retake_max_grade_help
+#: ninefruits/grading/settings_pages.py
+msgid "Grades above it cannot be given to a retake."
+msgstr "Bunun üzerindeki notlar tekrar alınan derse verilemez."
+
+# key: grading.settings.relative_grade_caps
+#: ninefruits/grading/settings_pages.py
+msgid "Grade caps"
+msgstr "Not üst sınırları"
+
+# key: grading.settings.relative_grade_caps_help
+#: ninefruits/grading/settings_pages.py
+msgid "The most a grade group (the letter: A for A+, A0, A-) may take of a section's graded students. Groups without a cap are free."
+msgstr "Bir not grubunun (harf: A+, A0, A- için A) bir şubenin notlandırılmış öğrencileri içinde alabileceği en yüksek pay. Üst sınırı olmayan gruplar serbesttir."
+
+# key: grading.settings.relative_cap_tolerance_percent
+#: ninefruits/grading/settings_pages.py
+msgid "Tolerance above the cap"
+msgstr "Üst sınırın üzerindeki tolerans"
+
+# key: grading.settings.relative_minimum_students
+#: ninefruits/grading/settings_pages.py
+msgid "Check from this many graded students"
+msgstr "Bu kadar notlandırılmış öğrenciden itibaren kontrol et"
+
+# key: grading.settings.relative_minimum_students_help
+#: ninefruits/grading/settings_pages.py
+msgid "Smaller sections are not checked against the caps."
+msgstr "Daha küçük şubeler üst sınırlara göre kontrol edilmez."
+
+# key: grading.settings.warning_gpa_below
+#: ninefruits/grading/settings_pages.py
+msgid "Warning when the term GPA is below"
+msgstr "Dönem not ortalaması şunun altındaysa uyarı"
+
+# key: grading.settings.warning_gpa_below_help
+#: ninefruits/grading/settings_pages.py
+msgid "A term with only pass/fail courses gives no warning."
+msgstr "Yalnızca başarılı/başarısız derslerden oluşan bir dönem uyarı vermez."
+
+# key: grading.settings.standing_regular_terms_only
+#: ninefruits/grading/settings_pages.py
+msgid "Judge only regular terms (not summer or winter)"
+msgstr "Yalnızca normal dönemleri değerlendir (yaz veya kış okulu hariç)"
+
+# key: grading.settings.dismissal_warning_count
+#: ninefruits/grading/settings_pages.py
+msgid "Warnings for dismissal review"
+msgstr "İlişik kesme incelemesi için uyarı sayısı"
+
+# key: grading.settings.dismissal_warning_count_help
+#: ninefruits/grading/settings_pages.py
+msgid "0 turns it off. The student is flagged for review; dismissal is a status change."
+msgstr "0 kapatır. Öğrenci incelemeye işaretlenir; ilişik kesme bir durum değişikliğidir."
+
+# key: grading.settings.dismissal_consecutive_only
+#: ninefruits/grading/settings_pages.py
+msgid "Count only consecutive warnings"
+msgstr "Yalnızca art arda gelen uyarıları say"
+
+# key: grading.settings.honors_min_gpa
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum term GPA"
+msgstr "En düşük dönem not ortalaması"
+
+# key: grading.settings.honors_min_credits
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum GPA credits in the term"
+msgstr "Dönemde ortalamaya giren en az kredi"
+
+# key: grading.settings.honors_exclude_failing
+#: ninefruits/grading/settings_pages.py
+msgid "No honors with a failed course"
+msgstr "Başarısız ders varsa onur derecesi yok"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/grading/settings_pages.py
+msgid "Grading policy"
+msgstr "Notlandırma politikası"
+
+# key: grading.settings.scale
+#: ninefruits/grading/settings_pages.py
+msgid "Grade scale"
+msgstr "Not ölçeği"
+
+# key: grading.settings.scale_fixed
+#: ninefruits/grading/settings_pages.py
+#, python-format
+msgid "Grade scale: %(scale)s (fixed at installation)."
+msgstr "Not ölçeği: %(scale)s (kurulumda sabitlendi)."
+
+# key: grading.settings.gpa
+#: ninefruits/grading/settings_pages.py
+msgid "GPA"
+msgstr "Not ortalaması"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "Term close %(term)s is running."
+msgstr "%(term)s dönem kapanışı sürüyor."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "%(processed)s of %(total)s student group(s) done (%(progress)s%%)."
+msgstr "%(total)s öğrenci grubundan %(processed)s tanesi tamamlandı (%%%(progress)s)."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+msgid "A part failed: start the close again after fixing the cause."
+msgstr "Bir bölüm başarısız oldu: nedeni giderdikten sonra kapanışı yeniden başlatın."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "My teaching"
+msgstr "Verdiğim dersler"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/views/portal.py
+msgid "Grade entry"
+msgstr "Not girişi"
+
+# key: grading.entry.counts
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(none)s not entered, %(draft)s draft, %(submitted)s submitted, %(finalized)s final"
+msgstr "%(none)s girilmedi, %(draft)s taslak, %(submitted)s gönderildi, %(finalized)s kesinleşti"
+
+# key: grading.entry.window_open
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is open."
+msgstr "Not girişi açık."
+
+# key: grading.entry.window_closed
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is closed."
+msgstr "Not girişi kapalı."
+
+# key: grading.entry.absolute_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Enter each student's score (0–100). The grade follows from the score on %(scale)s. Choose a grade directly only for one without a score (e.g. I)."
+msgstr "Her öğrencinin puanını (0–100) girin. Not, puana göre %(scale)s üzerinden belirlenir. Yalnızca puanı olmayan bir not için (ör. I) notu doğrudan seçin."
+
+# key: grading.entry.relative_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Do not enter scores: give each student a grade."
+msgstr "Puan girmeyin: her öğrenciye bir not verin."
+
+# key: grading.entry.method_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change to %(method)s requested and waiting for the scheduling staff."
+msgstr "%(method)s yöntemine geçiş istendi; ders programı personelinin onayı bekleniyor."
+
+# key: grading.entry.method_request_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "To change to %(method)s, ask the scheduling staff with a reason (possible until grades are submitted)."
+msgstr "%(method)s yöntemine geçmek için ders programı personelinden gerekçeyle isteyin (notlar gönderilene kadar mümkündür)."
+
+# key: grading.actions.request_method
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Request %(method)s"
+msgstr "%(method)s iste"
+
+# key: grading.entry.exception_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submitted as an exception."
+msgstr "İstisna olarak gönderildi."
+
+# key: grading.entry.exception_detail
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "By %(user)s on %(date)s, outside the grade caps."
+msgstr "%(user)s tarafından %(date)s tarihinde, not üst sınırları dışında."
+
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Score (%%)"
+msgstr "Puan (%%)"
+
+# key: grading.fields.grade
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Not"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "Retake"
+msgstr "Ders tekrarı"
+
+# key: grading.entry.by_score
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "By score"
+msgstr "Puana göre"
+
+# key: grading.entry.change_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change %(from)s → %(to)s requested"
+msgstr "%(from)s → %(to)s değişikliği istendi"
+
+# key: grading.actions.request_change
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Request change"
+msgstr "Değişiklik iste"
+
+# key: grading.entry.no_students
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "No students."
+msgstr "Öğrenci yok."
+
+# key: grading.entry.distribution_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grades against the caps"
+msgstr "Notlar ve üst sınırlar"
+
+# key: grading.entry.distribution_checked
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: each grade group must stay within its cap."
+msgstr "%(graded)s notlandırılmış öğrenci: her not grubu kendi üst sınırı içinde kalmalıdır."
+
+# key: grading.entry.distribution_exempt
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: sections under %(minimum)s are not checked against the caps."
+msgstr "%(graded)s notlandırılmış öğrenci: %(minimum)s öğrencinin altındaki şubeler üst sınırlara göre kontrol edilmez."
+
+# key: grading.fields.grade_group
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade group"
+msgstr "Not grubu"
+
+# key: grading.fields.count
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Students"
+msgstr "Öğrenci"
+
+# key: grading.entry.exception_reason_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)."
+msgstr "Notlar üst sınırların dışında. Personel yine de kayıtlı bir istisna olarak gönderebilir: gerekçeyi belirtin (inceleyenlere bildirilir ve şubede gösterilir)."
+
+# key: grading.fields.exception_reason
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Reason for the exception"
+msgstr "İstisna gerekçesi"
+
+# key: grading.actions.save_draft
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Save draft"
+msgstr "Taslağı kaydet"
+
+# key: grading.actions.validate_distribution
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Check grade caps"
+msgstr "Not üst sınırlarını kontrol et"
+
+# key: grading.entry.submit_confirm
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit the grades? You cannot change them afterwards; ask the office if one is wrong."
+msgstr "Notlar gönderilsin mi? Sonradan değiştiremezsiniz; yanlış bir not varsa birimden isteyin."
+
+# key: grading.actions.submit
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit grades"
+msgstr "Notları gönder"
+
+# key: grading.entry.help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Save drafts any time; submit once every student has a grade."
+msgstr "Taslakları istediğiniz zaman kaydedin; her öğrencinin notu olduğunda gönderin."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cancel"
+msgstr "İptal et"
+
+# key: grading.transcript.print
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Print"
+msgstr "Yazdır"
+
+# key: grading.grades.blocked
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+#, python-format
+msgid "Your grades are not available: you have a hold (%(type)s). Contact the office that placed it."
+msgstr "Notlarınız görüntülenemiyor: bir kısıtlamanız var (%(type)s). Kısıtlamayı koyan birimle iletişime geçin."
+
+# key: grading.grades.term_summary
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "Not ortalaması %(gpa)s · %(attempted)s krediden %(earned)s kredi kazanıldı"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Kod"
+
+# key: curriculum.fields.credits
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Kredi"
+
+# key: grading.grades.superseded
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "replaced by a retake in the cumulative GPA"
+msgstr "genel not ortalamasında tekrar alınan dersle değiştirildi"
+
+# key: grading.grades.none
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "No final grades yet."
+msgstr "Henüz kesinleşmiş not yok."
+
+# key: grading.transcript.unofficial
+#: ninefruits/grading/templates/grading/transcript.html
+msgid "Unofficial grade report. Request an official transcript from the registrar."
+msgstr "Resmî olmayan not dökümü. Resmî transkripti öğrenci işlerinden isteyin."
+
+# key: grading.transcript.printed_at
+#: ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgctxt "grading"
+msgid "Printed %(date)s"
+msgstr "Yazdırılma: %(date)s"
+
+# key: grading.entry.open
+#: ninefruits/grading/views/portal.py
+msgid "Enter grades"
+msgstr "Not gir"
+
+# key: grading.entry.saved
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) saved."
+msgstr "%(count)s not kaydedildi."
+
+# key: grading.entry.distribution_ok
+#: ninefruits/grading/views/portal.py
+msgid "The grades are within the caps."
+msgstr "Notlar üst sınırlar içinde."
+
+# key: grading.entry.submitted
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) submitted."
+msgstr "%(count)s not gönderildi."
+
+#: ninefruits/grading/views/portal.py
+msgid "The reason is too long."
+msgstr "Gerekçe çok uzun."
+
+# key: grading.entry.method_requested
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "Change to %(method)s requested. You will be told by email."
+msgstr "%(method)s yöntemine geçiş istendi. Size e-postayla bildirilecek."
+
+# key: grading.entry.change_requested
+#: ninefruits/grading/views/portal.py
+msgid "Grade change requested."
+msgstr "Not değişikliği istendi."
+
+# key: admin.navigation.grading
+# key: grading.actions.open_entry
+# key: grading.grades.title
+# key: permissions.resources.grades
+# key: portal.navigation.grades
+# key: reference.fields.items_count
+#: ninefruits/grading/views/portal.py
+msgid "Grades"
+msgstr "Notlar"
+
+#: ninefruits/grading/views/transcript.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF oluşturulamadı. Daha sonra tekrar deneyin."

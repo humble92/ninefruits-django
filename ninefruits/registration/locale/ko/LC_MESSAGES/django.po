@@ -1226,3 +1226,13 @@ msgstr "신청했습니다."
 #: views/portal.py:334
 msgid "Added to the cart."
 msgstr "장바구니에 담았습니다."
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "수강신청 열기"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "예외 적용"

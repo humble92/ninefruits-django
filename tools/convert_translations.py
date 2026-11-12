@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""Converts the original Laravel translations (``lang/{en,ko,zh_CN,lo}/*.php`` and
-``lang/{ko,zh_CN,lo}.json``) into gettext catalogs (porting-plan 6.1).
+"""Converts the original Laravel translations (``lang/<lang>/*.php`` and ``lang/<lang>.json``
+for the languages in ``LANGUAGES``) into gettext catalogs (porting-plan 6.1).
 
 msgid is the English value, msgstr the translated value. Each entry carries a translator comment
 ``# key: <group>.<path>`` naming the original key(s) (a translator comment, not ``#.``, because
@@ -28,6 +28,9 @@ Two modes, both merging into existing catalogs (existing translations are kept u
       cd ninefruits/settings && uv run ../../manage.py makemessages -l ko -l zh_Hans -l lo
       uv run python tools/convert_translations.py --fill --app settings
 
+The original ``lang/`` directory is ``--source`` (default: ``$NINEFRUITS_LARAVEL_LANG`` or
+``/home/user/src-laravel/lang``).
+
 ``--app NAME`` writes ``ninefruits/NAME/locale/<lang>/LC_MESSAGES/django.po``; without it the
 global ``locale/`` is used. ``--output DIR`` names any locale directory. ``--dry-run`` only reports.
 """
@@ -37,6 +40,7 @@ from __future__ import annotations
 import argparse
 import fnmatch
 import json
+import os
 import re
 import sys
 from collections import Counter, defaultdict
@@ -47,12 +51,46 @@ from pathlib import Path
 import polib
 
 REPO = Path(__file__).resolve().parent.parent
-DEFAULT_SOURCE = Path("/home/user/src-laravel/lang")
+DEFAULT_SOURCE = Path(os.environ.get("NINEFRUITS_LARAVEL_LANG", "/home/user/src-laravel/lang"))
 #: original directory -> Django locale directory
-LANGUAGES = {"ko": "ko", "zh_CN": "zh_Hans", "lo": "lo"}
+LANGUAGES = {
+    "ko": "ko",
+    "zh_CN": "zh_Hans",
+    "lo": "lo",
+    "de": "de",
+    "ru": "ru",
+    "ms": "ms",
+    "fil": "fil",
+    "fr": "fr",
+    "ja": "ja",
+    "mn": "mn",
+    "ne": "ne",
+    "th": "th",
+    "tr": "tr",
+    "uz": "uz",
+    "vi": "vi",
+}
 #: locale directory -> language code (for the catalog header)
-LANGUAGE_CODES = {"ko": "ko", "zh_Hans": "zh-hans", "lo": "lo"}
-PLURAL_FORMS = {"ko": "nplurals=1; plural=0;", "zh_Hans": "nplurals=1; plural=0;", "lo": "nplurals=1; plural=0;"}
+LANGUAGE_CODES = {directory: directory.replace("_", "-").lower() for directory in LANGUAGES.values()}
+_ONE_FORM = "nplurals=1; plural=0;"
+#: Plural rules of the catalog headers (Django's own catalogs, gettext's rules for fr and ru).
+PLURAL_FORMS = {
+    "ko": _ONE_FORM,
+    "zh_Hans": _ONE_FORM,
+    "lo": _ONE_FORM,
+    "ja": _ONE_FORM,
+    "ms": _ONE_FORM,
+    "th": _ONE_FORM,
+    "uz": _ONE_FORM,
+    "vi": _ONE_FORM,
+    "de": "nplurals=2; plural=(n != 1);",
+    "mn": "nplurals=2; plural=(n != 1);",
+    "ne": "nplurals=2; plural=(n != 1);",
+    "fil": "nplurals=2; plural=(n > 1);",
+    "fr": "nplurals=2; plural=(n > 1);",
+    "tr": "nplurals=2; plural=(n > 1);",
+    "ru": "nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);",
+}
 JSON_GROUP = "json"
 
 

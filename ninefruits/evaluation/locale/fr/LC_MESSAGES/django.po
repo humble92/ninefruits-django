@@ -1,0 +1,470 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: evaluation.errors.form_in_use
+#: ninefruits/evaluation/actions/manage_term_evaluation.py
+msgid "The term already has responses with its form."
+msgstr "Le semestre a déjà des réponses avec ce questionnaire."
+
+# key: evaluation.errors.not_open
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "The course evaluation is not open for this course."
+msgstr "L’évaluation des enseignements n’est pas ouverte pour ce cours."
+
+# key: evaluation.errors.already_done
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "You have already evaluated this course."
+msgstr "Vous avez déjà évalué ce cours."
+
+# key: evaluation.errors.invalid_answer
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "An answer is not valid."
+msgstr "Une réponse n’est pas valide."
+
+# key: evaluation.errors.missing_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+#, python-format
+msgid "Answer every required question (%(count)s missing)."
+msgstr "Répondez à toutes les questions obligatoires (%(count)s manquante(s))."
+
+# key: evaluation.errors.uniform_answers
+#: ninefruits/evaluation/actions/submit_evaluation.py
+msgid "Every answer is the same. Please answer each question."
+msgstr "Toutes les réponses sont identiques. Veuillez répondre à chaque question."
+
+# key: validation.alpha_dash
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Le champ %(attribute)s ne doit contenir que des lettres, des chiffres, des tirets et des tirets bas."
+
+# key: reference.fields.code
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: validation.unique
+#: ninefruits/evaluation/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "La valeur du champ %(attribute)s est déjà utilisée."
+
+# key: evaluation.fields.question
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Question"
+msgstr "Question"
+
+# key: evaluation.fields.questions
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgid "Questions"
+msgstr "Questions"
+
+# key: reference.fields.name
+#: ninefruits/evaluation/admin/forms.py ninefruits/evaluation/models/forms.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nom"
+
+# key: evaluation.actions.copy_form
+#: ninefruits/evaluation/admin/forms.py
+msgid "Copy form"
+msgstr "Copier le questionnaire"
+
+# key: security.scope_types.global
+#: ninefruits/evaluation/admin/sections.py
+msgid "All"
+msgstr "Tout"
+
+# key: offering.fields.offering_unit
+#: ninefruits/evaluation/admin/sections.py
+msgid "Offering unit"
+msgstr "Unité responsable"
+
+# key: offering.fields.section
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Groupe"
+
+# key: curriculum.fields.title
+#: ninefruits/evaluation/admin/sections.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Intitulé"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/evaluation/admin/sections.py
+msgid "Instructors"
+msgstr "Enseignants"
+
+# key: evaluation.fields.responses
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/admin/terms.py
+msgid "Responses"
+msgstr "Réponses"
+
+# key: evaluation.fields.response_rate
+#: ninefruits/evaluation/admin/sections.py
+msgid "Response rate"
+msgstr "Taux de réponse"
+
+# key: evaluation.results.open
+#: ninefruits/evaluation/admin/sections.py ninefruits/evaluation/views/portal.py
+msgctxt "evaluation"
+msgid "Results"
+msgstr "Résultats"
+
+# key: reference.resources.terms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "term"
+msgstr "semestre"
+
+# key: evaluation.resources.forms.label
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/forms.py ninefruits/evaluation/models/term.py
+msgid "evaluation form"
+msgstr "questionnaire d’évaluation"
+
+# key: evaluation.fields.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum responses"
+msgstr "Nombre minimum de réponses"
+
+# key: evaluation.help.minimum_responses
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
+msgstr "Les résultats d’un groupe ne s’affichent qu’à partir de ce nombre de réponses et de ce taux de réponse, afin que peu de réponses ne permettent pas d’identifier un étudiant."
+
+# key: evaluation.fields.minimum_response_percent
+#: ninefruits/evaluation/admin/terms.py ninefruits/evaluation/models/term.py ninefruits/evaluation/settings_pages.py
+msgid "Minimum response rate (%)"
+msgstr "Taux de réponse minimum (%)"
+
+# key: common.saved
+#: ninefruits/evaluation/admin/terms.py
+msgid "Saved"
+msgstr "Enregistré"
+
+# key: evaluation.actions.prepare
+#: ninefruits/evaluation/admin/terms.py
+msgid "Set up a term"
+msgstr "Préparer un semestre"
+
+# key: evaluation.actions.change
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Change"
+msgstr "Modifier"
+
+# key: evaluation.actions.publish
+#: ninefruits/evaluation/admin/terms.py
+msgctxt "evaluation"
+msgid "Publish results"
+msgstr "Publier les résultats"
+
+#: ninefruits/evaluation/admin/terms.py
+msgid "Already published."
+msgstr "Déjà publié."
+
+# key: evaluation.help.publish
+#: ninefruits/evaluation/admin/terms.py
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
+msgstr "Les enseignants voient désormais les résultats de leurs groupes (groupes ayant suffisamment de réponses)."
+
+# key: evaluation.portal.title
+#: ninefruits/evaluation/apps.py ninefruits/evaluation/templates/evaluation/portal/evaluations.html ninefruits/evaluation/views/portal.py
+msgctxt "evaluation.portal"
+msgid "Course evaluation"
+msgstr "Évaluation des enseignements"
+
+# key: evaluation.question_types.scale
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Scale"
+msgstr "Échelle"
+
+# key: evaluation.question_types.text
+#: ninefruits/evaluation/enums.py
+msgctxt "evaluation.question_types"
+msgid "Comment"
+msgstr "Commentaire"
+
+# key: evaluation.fields.description
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Description"
+msgstr "Description"
+
+# key: evaluation.fields.scale_points
+#: ninefruits/evaluation/models/forms.py
+msgid "Scale points"
+msgstr "Nombre de points de l’échelle"
+
+# key: evaluation.fields.scale_low_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of 1"
+msgstr "Libellé de 1"
+
+# key: evaluation.fields.scale_high_label
+#: ninefruits/evaluation/models/forms.py
+msgid "Label of the highest point"
+msgstr "Libellé du point le plus élevé"
+
+# key: reference.fields.is_active
+#: ninefruits/evaluation/models/forms.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Actif"
+
+# key: evaluation.resources.forms.plural_label
+#: ninefruits/evaluation/models/forms.py
+msgid "evaluation forms"
+msgstr "questionnaires d’évaluation"
+
+# key: reference.fields.sort_order
+#: ninefruits/evaluation/models/forms.py
+msgid "Order"
+msgstr "Ordre"
+
+# key: evaluation.fields.category
+#: ninefruits/evaluation/models/forms.py
+msgid "Area"
+msgstr "Domaine"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/evaluation/models/forms.py
+msgid "Type"
+msgstr "Type"
+
+# key: evaluation.fields.is_required
+#: ninefruits/evaluation/models/forms.py
+msgctxt "evaluation"
+msgid "Required"
+msgstr "Obligatoire"
+
+# key: evaluation.fields.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "Reversed"
+msgstr "Inversée"
+
+# key: evaluation.help.is_reversed
+#: ninefruits/evaluation/models/forms.py
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
+msgstr "Pour les questions formulées négativement : la réponse est inversée dans les moyennes (5 compte comme 1)."
+
+# key: evaluation.resources.sections.label
+#: ninefruits/evaluation/models/section.py
+msgid "section response"
+msgstr "réponses du groupe"
+
+# key: evaluation.resources.sections.plural_label
+#: ninefruits/evaluation/models/section.py
+msgid "responses by section"
+msgstr "réponses par groupe"
+
+# key: evaluation.fields.published_at
+#: ninefruits/evaluation/models/term.py
+msgctxt "evaluation"
+msgid "Results published"
+msgstr "Résultats publiés"
+
+# key: evaluation.resources.terms.label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluation"
+msgstr "évaluation du semestre"
+
+# key: evaluation.resources.terms.plural_label
+#: ninefruits/evaluation/models/term.py
+msgid "term evaluations"
+msgstr "évaluations par semestre"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/evaluation/notifications.py
+msgid "Hello,"
+msgstr "Bonjour,"
+
+# key: evaluation.mail.reminder_intro
+#: ninefruits/evaluation/notifications.py
+msgid "Please evaluate these courses:"
+msgstr "Merci d’évaluer les cours suivants :"
+
+# key: evaluation.mail.reminder_anonymous
+#: ninefruits/evaluation/notifications.py
+msgid "Your answers are anonymous."
+msgstr "Vos réponses sont anonymes."
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "Ouvrir l’évaluation des enseignements"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/evaluation/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Merci,\n"
+"%(app)s"
+
+# key: evaluation.mail.reminder_subject
+#: ninefruits/evaluation/notifications.py
+msgid "Course evaluation is open"
+msgstr "L’évaluation des enseignements est ouverte"
+
+# key: evaluation.settings.grades_require_evaluation
+#: ninefruits/evaluation/settings_pages.py
+msgid "Hide a term's grades until its evaluation is done"
+msgstr "Masquer les notes d’un semestre jusqu’à ce que son évaluation soit faite"
+
+# key: evaluation.settings.grades_require_evaluation_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Only while the evaluation is open; the grades show when it closes."
+msgstr "Uniquement tant que l’évaluation est ouverte ; les notes s’affichent à sa clôture."
+
+# key: evaluation.settings.reject_uniform_answers
+#: ninefruits/evaluation/settings_pages.py
+msgid "Refuse the same answer to every question"
+msgstr "Refuser une réponse identique à toutes les questions"
+
+# key: evaluation.settings.reject_uniform_answers_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "As the legacy refused all 1s or all 5s."
+msgstr "Comme l’ancien système refusait les réponses toutes à 1 ou toutes à 5."
+
+# key: evaluation.settings.minimum_help
+#: ninefruits/evaluation/settings_pages.py
+msgid "Defaults for a new term's evaluation."
+msgstr "Valeurs par défaut pour l’évaluation d’un nouveau semestre."
+
+# key: evaluation.settings.title
+#: ninefruits/evaluation/settings_pages.py
+msgctxt "evaluation.settings"
+msgid "Course evaluation"
+msgstr "Évaluation des enseignements"
+
+# key: evaluation.portal.anonymous
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
+msgstr "Vos réponses sont anonymes. Les enseignants ne voient que les totaux, après la publication des résultats."
+
+# key: evaluation.portal.submit_confirm
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit the evaluation? You cannot change it afterwards."
+msgstr "Envoyer l’évaluation ? Vous ne pourrez plus la modifier ensuite."
+
+# key: evaluation.portal.back
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Back"
+msgstr "Retour"
+
+# key: evaluation.portal.optional
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "optional"
+msgstr "facultatif"
+
+# key: evaluation.portal.submit
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Submit"
+msgstr "Envoyer"
+
+# key: evaluation.portal.done
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Done"
+msgstr "Terminé"
+
+# key: evaluation.portal.evaluate
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "Evaluate"
+msgstr "Évaluer"
+
+# key: evaluation.portal.none_open
+#: ninefruits/evaluation/templates/evaluation/portal/evaluations.html
+msgid "No course evaluation is open for you."
+msgstr "Aucune évaluation des enseignements ne vous est ouverte."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "My teaching"
+msgstr "Mes enseignements"
+
+# key: evaluation.results.title
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html ninefruits/evaluation/views/portal.py
+msgid "Course evaluation results"
+msgstr "Résultats de l’évaluation des enseignements"
+
+# key: evaluation.results.responses
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "%(responses)s of %(expected)s responded (%(rate)s%%)"
+msgstr "%(responses)s réponse(s) sur %(expected)s (%(rate)s %%)"
+
+# key: evaluation.results.overall
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "overall %(mean)s"
+msgstr "global %(mean)s"
+
+# key: evaluation.results.not_published
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "The results are not published yet."
+msgstr "Les résultats ne sont pas encore publiés."
+
+# key: evaluation.results.too_few
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+#, python-format
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
+msgstr "Trop peu de réponses pour afficher les résultats (au moins %(minimum)s et %(percent)s %% sont nécessaires)."
+
+# key: evaluation.results.mean
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "Mean"
+msgstr "Moyenne"
+
+# key: evaluation.results.reversed
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgid "reversed"
+msgstr "inversée"
+
+# key: common.none
+#: ninefruits/evaluation/templates/evaluation/portal/section_evaluation.html
+msgctxt "common"
+msgid "None"
+msgstr "Aucun"
+
+# key: evaluation.results.not_yet
+#: ninefruits/evaluation/views/portal.py
+msgid "Not published"
+msgstr "Non publiés"
+
+# key: evaluation.grades_hidden
+#: ninefruits/evaluation/views/portal.py
+#, python-format
+msgid "The grades of %(term)s show after you finish its course evaluation."
+msgstr "Les notes de %(term)s s’afficheront lorsque vous aurez terminé l’évaluation des enseignements de ce semestre."
+
+# key: evaluation.portal.submitted
+#: ninefruits/evaluation/views/portal.py
+msgid "Thank you. Your evaluation was submitted."
+msgstr "Merci. Votre évaluation a été envoyée."

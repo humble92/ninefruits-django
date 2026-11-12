@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.errors.successor_required
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "Choose the successor unit."
+msgstr "Hãy chọn đơn vị kế thừa."
+
+# key: reference.errors.single_successor
+#: ninefruits/organization/actions/reorganize_org_unit.py ninefruits/organization/admin.py
+msgid "Only a split can have several successors."
+msgstr "Chỉ chia tách mới có thể có nhiều đơn vị kế thừa."
+
+# key: reference.errors.reorganization_before_start
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "The effective date must be after the unit started."
+msgstr "Ngày hiệu lực phải sau ngày đơn vị bắt đầu."
+
+# key: reference.errors.successor_is_self
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "A unit cannot succeed itself."
+msgstr "Đơn vị không thể tự kế thừa chính mình."
+
+# key: validation.after_or_equal
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Trường %(attribute)s phải là một ngày sau hoặc bằng %(date)s."
+
+# key: reference.fields.effective_end_date
+#: ninefruits/organization/admin.py
+msgid "Valid until"
+msgstr "Hiệu lực đến"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/organization/admin.py
+msgid "Valid from"
+msgstr "Hiệu lực từ"
+
+# key: reference.fields.name
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: reference.filters.current_only
+#: ninefruits/organization/admin.py
+msgid "Currently valid only"
+msgstr "Chỉ còn hiệu lực"
+
+# key: security.scope_types.global
+#: ninefruits/organization/admin.py
+msgid "All"
+msgstr "Toàn bộ"
+
+# key: reference.resources.org_unit_successions.label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successor"
+msgstr "đơn vị kế thừa"
+
+# key: reference.resources.org_unit_successions.plural_label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successors"
+msgstr "đơn vị kế thừa"
+
+# key: reference.fields.successors
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Successor"
+msgstr "Đơn vị kế thừa"
+
+# key: reference.fields.change_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Change"
+msgstr "Thay đổi"
+
+# key: reference.fields.reorganization_date
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Effective date"
+msgstr "Ngày hiệu lực"
+
+# key: reference.help.reorganization_date
+#: ninefruits/organization/admin.py
+msgid "The unit ends the day before this date; the successor takes over from this date."
+msgstr "Đơn vị kết thúc vào ngày trước ngày này; đơn vị kế thừa tiếp nhận từ ngày này."
+
+# key: common.reason
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Lý do"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Type"
+msgstr "Loại"
+
+# key: reference.fields.parent
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Parent"
+msgstr "Cấp trên"
+
+# key: reference.actions.reorganize
+#: ninefruits/organization/admin.py
+msgid "Reorganize"
+msgstr "Tái cơ cấu"
+
+# key: reference.notifications.reorganized
+#: ninefruits/organization/admin.py
+msgid "Reorganization recorded."
+msgstr "Đã ghi nhận tái cơ cấu."
+
+# key: validation.between.numeric
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "Trường %(attribute)s phải nằm trong khoảng %(min)s đến %(max)s."
+
+# key: reference.fields.standard_duration_years
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Standard duration (years)"
+msgstr "Thời gian đào tạo chuẩn (năm)"
+
+# key: reference.fields.degree_level
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Degree level"
+msgstr "Trình độ đào tạo"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Org unit"
+msgstr "Đơn vị tổ chức"
+
+# key: reference.degree_levels.associate
+#: ninefruits/organization/enums.py
+msgid "Associate"
+msgstr "Cao đẳng"
+
+# key: reference.degree_levels.bachelor
+#: ninefruits/organization/enums.py
+msgid "Bachelor"
+msgstr "Đại học"
+
+# key: reference.degree_levels.master
+#: ninefruits/organization/enums.py
+msgid "Master"
+msgstr "Thạc sĩ"
+
+# key: reference.degree_levels.doctorate
+#: ninefruits/organization/enums.py
+msgid "Doctorate"
+msgstr "Tiến sĩ"
+
+# key: reference.degree_levels.certificate
+#: ninefruits/organization/enums.py
+msgid "Certificate"
+msgstr "Chứng chỉ"
+
+# key: reference.degree_levels.non_degree
+#: ninefruits/organization/enums.py
+msgid "Non-degree"
+msgstr "Không cấp bằng"
+
+# key: reference.org_unit_change_types.renamed
+#: ninefruits/organization/enums.py
+msgid "Renamed"
+msgstr "Đổi tên"
+
+# key: reference.org_unit_change_types.merged
+#: ninefruits/organization/enums.py
+msgctxt "reference"
+msgid "Merged"
+msgstr "Sáp nhập"
+
+# key: reference.org_unit_change_types.split
+#: ninefruits/organization/enums.py
+msgid "Split"
+msgstr "Chia tách"
+
+# key: reference.org_unit_change_types.moved
+#: ninefruits/organization/enums.py
+msgid "Moved"
+msgstr "Chuyển trực thuộc"
+
+# key: reference.fields.code
+#: ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: reference.fields.is_academic
+#: ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Academic"
+msgstr "Đơn vị đào tạo"
+
+# key: reference.fields.sort_order
+#: ninefruits/organization/models/org_unit.py
+msgid "Order"
+msgstr "Thứ tự"
+
+# key: reference.resources.org_unit_types.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit type"
+msgstr "loại đơn vị"
+
+# key: reference.resources.org_unit_types.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit types"
+msgstr "loại đơn vị"
+
+# key: reference.fields.short_name
+#: ninefruits/organization/models/org_unit.py
+msgid "Short name"
+msgstr "Tên viết tắt"
+
+# key: reference.resources.org_units.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit"
+msgstr "đơn vị tổ chức"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org units"
+msgstr "đơn vị tổ chức"
+
+# key: reference.fields.degree_title
+#: ninefruits/organization/models/program.py
+msgid "Degree title"
+msgstr "Tên văn bằng"
+
+# key: reference.fields.allows_second_major
+#: ninefruits/organization/models/program.py
+msgid "Accepts second majors"
+msgstr "Nhận ngành thứ hai"
+
+# key: reference.fields.allows_minor
+#: ninefruits/organization/models/program.py
+msgid "Accepts minors"
+msgstr "Nhận ngành phụ"
+
+# key: reference.resources.programs.label
+#: ninefruits/organization/models/program.py
+msgid "program"
+msgstr "chương trình đào tạo"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/organization/models/program.py
+msgid "programs"
+msgstr "chương trình đào tạo"

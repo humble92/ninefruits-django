@@ -44,6 +44,18 @@ REQUIREMENT_NAME = {
     "ko": "영어종합시험 합격",
     "zh-hans": "英语综合考试合格",
     "lo": "ຜ່ານການສອບເສັງພາສາອັງກິດລວມ",
+    "de": "Englisch-Gesamtprüfung",
+    "ru": "Комплексный экзамен по английскому языку",
+    "ms": "Peperiksaan komprehensif bahasa Inggeris",
+    "fil": "Komprehensibong pagsusulit sa Ingles",
+    "fr": "Examen général d’anglais",
+    "ja": "英語総合試験",
+    "mn": "Англи хэлний иж бүрэн шалгалт",
+    "ne": "अङ्ग्रेजी व्यापक परीक्षा",
+    "th": "การสอบประมวลความรู้ภาษาอังกฤษ",
+    "tr": "İngilizce yeterlik sınavı",
+    "uz": "Ingliz tili boʻyicha kompleks imtihon",
+    "vi": "Kỳ thi tổng hợp tiếng Anh",
 }
 
 

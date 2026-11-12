@@ -52,9 +52,7 @@ msgstr "모든 응답이 같습니다. 문항마다 답해 주세요."
 # key: validation.alpha_dash
 #: admin/forms.py:36
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
 msgstr "%(attribute)s은(는) 문자, 숫자, 대쉬(-), 밑줄(_)만 포함할 수 있습니다."
 
 # key: reference.fields.code
@@ -70,8 +68,7 @@ msgid "The %(attribute)s has already been taken."
 msgstr "%(attribute)s은(는) 이미 사용 중입니다."
 
 # key: evaluation.fields.question
-#: admin/forms.py:81 models/forms.py:75 models/forms.py:91
-#: templates/evaluation/portal/section_evaluation.html:33
+#: admin/forms.py:81 models/forms.py:75 models/forms.py:91 templates/evaluation/portal/section_evaluation.html:33
 msgid "Question"
 msgstr "문항"
 
@@ -141,8 +138,7 @@ msgid "term"
 msgstr "학기"
 
 # key: evaluation.resources.forms.label
-#: admin/terms.py:48 admin/terms.py:129 models/forms.py:51 models/forms.py:71
-#: models/term.py:26
+#: admin/terms.py:48 admin/terms.py:129 models/forms.py:51 models/forms.py:71 models/term.py:26
 msgid "evaluation form"
 msgstr "강의평가 양식"
 
@@ -153,9 +149,7 @@ msgstr "최소 응답 수"
 
 # key: evaluation.help.minimum_responses
 #: admin/terms.py:57 models/term.py:33
-msgid ""
-"A section's results show only with at least this many responses and this "
-"response rate, so few answers cannot point to a student."
+msgid "A section's results show only with at least this many responses and this response rate, so few answers cannot point to a student."
 msgstr "응답 수와 응답률이 이 값 이상인 강좌만 결과를 보여 준다. 응답이 적으면 학생을 짐작할 수 있기 때문이다."
 
 # key: evaluation.fields.minimum_response_percent
@@ -192,14 +186,11 @@ msgstr "이미 공개했습니다."
 
 # key: evaluation.help.publish
 #: admin/terms.py:208 admin/terms.py:218
-msgid ""
-"Instructors see their sections' results from now on (sections with enough "
-"responses)."
+msgid "Instructors see their sections' results from now on (sections with enough responses)."
 msgstr "지금부터 교원이 담당 강좌의 결과를 본다(응답이 충분한 강좌)."
 
 # key: evaluation.portal.title
-#: apps.py:24 templates/evaluation/portal/evaluations.html:9
-#: views/portal.py:92 views/portal.py:167
+#: apps.py:24 templates/evaluation/portal/evaluations.html:9 views/portal.py:92 views/portal.py:167
 msgctxt "evaluation.portal"
 msgid "Course evaluation"
 msgstr "강의평가"
@@ -277,9 +268,7 @@ msgstr "역문항"
 
 # key: evaluation.help.is_reversed
 #: models/forms.py:83
-msgid ""
-"For negatively worded questions: the answer is reversed in averages (5 "
-"counts as 1)."
+msgid "For negatively worded questions: the answer is reversed in averages (5 counts as 1)."
 msgstr "부정형 문항. 평균을 낼 때 응답을 뒤집는다(5점은 1점으로)."
 
 # key: evaluation.resources.sections.label
@@ -371,9 +360,7 @@ msgstr "강의평가"
 
 # key: evaluation.portal.anonymous
 #: templates/evaluation/portal/evaluations.html:10
-msgid ""
-"Your answers are anonymous. Instructors see only totals, after the results "
-"are published."
+msgid "Your answers are anonymous. Instructors see only totals, after the results are published."
 msgstr "응답은 익명입니다. 교원은 결과 공개 후 집계만 봅니다."
 
 # key: evaluation.portal.submit_confirm
@@ -442,9 +429,7 @@ msgstr "아직 결과가 공개되지 않았습니다."
 # key: evaluation.results.too_few
 #: templates/evaluation/portal/section_evaluation.html:25
 #, python-format
-msgid ""
-"Too few responses to show results (at least %(minimum)s and %(percent)s%% "
-"are needed)."
+msgid "Too few responses to show results (at least %(minimum)s and %(percent)s%% are needed)."
 msgstr "응답이 적어 결과를 보여 주지 않습니다(최소 %(minimum)s명, %(percent)s%% 필요)."
 
 # key: evaluation.results.mean
@@ -478,6 +463,11 @@ msgstr "%(term)s 성적은 그 학기 강의평가를 마치면 볼 수 있습�
 #: views/portal.py:131
 msgid "Thank you. Your evaluation was submitted."
 msgstr "제출했습니다. 감사합니다."
+
+# key: evaluation.mail.open_evaluations
+#: ninefruits/evaluation/notifications.py
+msgid "Open course evaluation"
+msgstr "강의평가 열기"
 
 # key: reference.resources.lookup_values.label
 #~ msgid "code"

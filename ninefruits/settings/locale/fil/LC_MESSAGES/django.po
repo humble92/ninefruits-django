@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: common.saved
+#: ninefruits/settings/admin_views.py
+msgid "Saved"
+msgstr "Na-save"
+
+# key: admin.navigation.settings
+#: ninefruits/settings/admin_views.py ninefruits/settings/templates/settings/page.html
+msgid "Settings"
+msgstr "Mga setting"
+
+# key: admin.settings.institution.name
+#: ninefruits/settings/pages/institution.py
+msgid "Institution name"
+msgstr "Pangalan ng institusyon"
+
+# key: admin.settings.institution.timezone
+#: ninefruits/settings/pages/institution.py
+msgid "Time zone"
+msgstr "Time zone"
+
+# key: admin.settings.institution.supported_locales
+#: ninefruits/settings/pages/institution.py
+msgid "Offered languages"
+msgstr "Mga iniaalok na wika"
+
+# key: admin.settings.institution.default_locale
+#: ninefruits/settings/pages/institution.py
+msgid "Default language"
+msgstr "Default na wika"
+
+# key: admin.settings.institution.title
+#: ninefruits/settings/pages/institution.py
+msgid "Institution"
+msgstr "Institusyon"
+
+# key: admin.roles.sections.general
+# key: admin.settings.institution.general
+#: ninefruits/settings/pages/institution.py
+msgctxt "admin"
+msgid "General"
+msgstr "Pangkalahatan"
+
+# key: admin.settings.institution.languages
+#: ninefruits/settings/pages/institution.py
+msgid "Languages"
+msgstr "Mga wika"
+
+# key: admin.settings.institution.languages_help
+#: ninefruits/settings/pages/institution.py
+msgid "Languages offered to users. A language appears here when its translation folder exists."
+msgstr "Mga wikang iniaalok sa mga user. Lumalabas dito ang isang wika kapag may folder ito ng salin."
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/settings/templates/settings/index.html ninefruits/settings/templates/settings/page.html
+msgid "Home"
+msgstr "Home"
+
+# key: common.save
+#: ninefruits/settings/templates/settings/page.html
+msgid "Save"
+msgstr "I-save"

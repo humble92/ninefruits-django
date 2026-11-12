@@ -1,0 +1,221 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "%(type)s आयात सकियो"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "%(count)s पङ्क्ति आयात गरियो।"
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s पङ्क्ति असफल; सच्याउन असफल पङ्क्तिहरू डाउनलोड गर्नुहोस्।"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "असफल पङ्क्ति"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "असफल पङ्क्तिहरू"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "पङ्क्ति"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "आयातको प्रकार"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "असफल पङ्क्तिहरू"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "स्थिति"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "लाइनमा"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "असफल पङ्क्तिहरू डाउनलोड गर्नुहोस्"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "संगठन एकाइहरू"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "कार्यक्रमहरू"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "भवनहरू"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "कोठाहरू"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "कोडहरू"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "पूरा भएको"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "फाइल"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "प्रशोधित पङ्क्तिहरू"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "पङ्क्तिहरू"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "आयात गरिएका पङ्क्तिहरू"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "आयात गर्ने व्यक्ति"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "सुरु"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "CSV आयात"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "CSV आयातहरू"
+
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "त्रुटि"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s अनिवार्य छ।"
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s %(date)s वा त्यसपछिको मिति हुनुपर्छ।"
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s %(max)s अक्षरभन्दा लामो हुनु हुँदैन।"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "छानिएको %(attribute)s अमान्य छ।"
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s पूर्णाङ्क हुनुपर्छ।"
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s सङ्ख्या हुनुपर्छ।"
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "%(attribute)s सत्य वा असत्य हुनुपर्छ।"
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s मान्य मिति हुनुपर्छ।"
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s %(min)s देखि %(max)s बीच हुनुपर्छ।"
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s कम्तीमा %(min)s हुनुपर्छ।"
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "अज्ञात %(column)s कोड \"%(code)s\"।"
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "डेटाबेसले अस्वीकार गर्‍यो: %(message)s"

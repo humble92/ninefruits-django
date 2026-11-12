@@ -1,0 +1,1319 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/grading/actions/_support.py
+msgid "Enter a reason."
+msgstr "Укажите причину."
+
+# key: grading.errors.term_not_published
+#: ninefruits/grading/actions/close_term.py
+msgid "Only a published term closes."
+msgstr "Закрыть можно только опубликованный семестр."
+
+# key: grading.errors.term_not_ready
+#: ninefruits/grading/actions/close_term.py
+#, python-format
+msgid "%(count)s section(s) have grades that are not final."
+msgstr "Групп с неитоговыми оценками: %(count)s."
+
+# key: grading.errors.not_all_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+#, python-format
+msgid "Not all grades are submitted (%(count)s missing)."
+msgstr "Отправлены не все оценки (не хватает: %(count)s)."
+
+# key: grading.errors.nothing_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+msgid "There are no submitted grades."
+msgstr "Отправленных оценок нет."
+
+# key: grading.errors.not_finalized
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "Only a final grade needs a change request."
+msgstr "Запрос на изменение нужен только для итоговой оценки."
+
+# key: grading.errors.new_grade_required
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/views/portal.py
+msgid "Enter the new score or grade."
+msgstr "Введите новый балл или оценку."
+
+# key: grading.errors.same_grade
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "The new grade is the current grade."
+msgstr "Новая оценка совпадает с текущей."
+
+# key: grading.errors.request_pending
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "A change request for this grade is already open."
+msgstr "Запрос на изменение этой оценки уже открыт."
+
+# key: grading.errors.request_decided
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/actions/manage_method_requests.py
+msgid "The request is already decided."
+msgstr "По запросу уже принято решение."
+
+# key: grading.errors.own_request
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "You cannot decide your own request."
+msgstr "Вы не можете принимать решение по собственному запросу."
+
+# key: grading.errors.same_method
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "The section already uses that evaluation method."
+msgstr "Группа уже использует этот способ оценивания."
+
+# key: grading.errors.method_request_pending
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "A change request for this section is already waiting."
+msgstr "Запрос на смену для этой группы уже ожидает решения."
+
+# key: grading.errors.method_has_grades
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "Оценки уже введены; способ оценивания изменить нельзя."
+
+# key: grading.errors.scale_fixed
+#: ninefruits/grading/actions/save_grade_scale.py
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "Шкала оценок фиксируется при установке и не может быть изменена."
+
+# key: grading.errors.not_editable
+#: ninefruits/grading/actions/save_grades.py
+msgid "Some grades can no longer be changed here."
+msgstr "Некоторые оценки здесь больше изменить нельзя."
+
+# key: grading.errors.over_caps
+#: ninefruits/grading/actions/save_grades.py
+msgid "The grades are outside the institution's grade caps. Adjust them, or ask the office."
+msgstr "Оценки выходят за пределы квот учебного заведения. Скорректируйте их или обратитесь в учебный отдел."
+
+# key: grading.errors.exception_reason_required
+#: ninefruits/grading/actions/save_grades.py
+msgid "Submitting outside the grade caps needs a reason."
+msgstr "Для отправки с превышением квот нужна причина."
+
+# key: grading.errors.missing_grades
+#: ninefruits/grading/actions/save_grades.py
+#, python-format
+msgid "%(count)s student(s) have no grade yet."
+msgstr "Студентов без оценки: %(count)s."
+
+# key: grading.errors.entry_closed
+#: ninefruits/grading/actions/save_grades.py
+msgid "Grade entry is not open for this section."
+msgstr "Ввод оценок для этой группы не открыт."
+
+# key: grading.fields.decision_note
+#: ninefruits/grading/admin/common.py ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Примечание"
+
+# key: reference.resources.terms.label
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgid "term"
+msgstr "семестр"
+
+# key: offering.fields.dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Preview only"
+msgstr "Только предпросмотр"
+
+# key: grading.help.close_dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Only check whether the term can close."
+msgstr "Только проверить, можно ли закрыть семестр."
+
+# key: common.reason
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/notifications.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Причина"
+
+# key: common.yes
+#: ninefruits/grading/admin/common.py
+msgid "Yes"
+msgstr "Да"
+
+# upstream: Django/allauth catalog
+#: ninefruits/grading/admin/common.py
+msgid "No"
+msgstr "Нет"
+
+# key: registration.fields.status
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Статус"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "Student number"
+msgstr "Студенческий номер"
+
+# key: people.fields.name
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "people"
+msgid "Name"
+msgstr "ФИО"
+
+# key: offering.fields.section
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Группа"
+
+# key: grading.fields.change
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Change"
+msgstr "Изменение"
+
+# key: grading.fields.requested_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Кем запрошено"
+
+# key: grading.fields.decided_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "Кем принято решение"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgid "Approve"
+msgstr "Одобрить"
+
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/enums.py
+msgid "Approved"
+msgstr "Одобрено"
+
+# key: grading.help.approve
+#: ninefruits/grading/admin/grade_changes.py
+#, python-format
+msgid "The grade changes from %(from)s to %(to)s now, and the student's GPA is recalculated."
+msgstr "Оценка сразу меняется с %(from)s на %(to)s, и средний балл студента пересчитывается."
+
+# key: grading.actions.reject
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Отклонить"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/enums.py
+msgid "Rejected"
+msgstr "Отклонено"
+
+# key: grading.actions.cancel_request
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Отменить запрос"
+
+# key: grading.help.scale_fixed
+#: ninefruits/grading/admin/grade_scales.py
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "Шкала оценок фиксируется при установке: по ней выставлены оценки и рассчитан средний балл. Перейти на другую шкалу нельзя."
+
+# key: validation.required
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Поле %(attribute)s обязательно."
+
+# key: reference.fields.grade_points
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "Grade points"
+msgstr "Баллы оценки"
+
+# key: validation.max.numeric
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/settings_pages.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "Значение поля %(attribute)s не может быть больше %(max)s."
+
+# key: validation.gte.numeric
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Значение поля %(attribute)s должно быть не меньше %(value)s."
+
+# key: reference.fields.max_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "To (%)"
+msgstr "До (%)"
+
+# key: reference.fields.min_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "From (%)"
+msgstr "От (%)"
+
+# key: reference.resources.grade_scale_items.label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grade"
+msgstr "оценка"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grades"
+msgstr "оценки"
+
+# key: reference.fields.name
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Название"
+
+# key: reference.fields.items_count
+#: ninefruits/grading/admin/grade_scales.py
+msgctxt "reference"
+msgid "Grades"
+msgstr "Оценки"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgid "Evaluation"
+msgstr "Способ оценивания"
+
+# key: grading.notifications.method_approved
+#: ninefruits/grading/admin/method_requests.py
+#, python-format
+msgid "Approved. %(count)s draft grade(s) cleared."
+msgstr "Одобрено. Удалено черновых оценок: %(count)s."
+
+# key: grading.help.approve_method
+#: ninefruits/grading/admin/method_requests.py
+msgid "The section's evaluation method changes now. Draft grades entered under the old method are cleared; the instructor is told by email."
+msgstr "Способ оценивания группы меняется сразу. Черновые оценки, введённые по прежнему способу, удаляются; преподаватель получает уведомление по эл. почте."
+
+# key: offering.fields.offering_unit
+#: ninefruits/grading/admin/section_grades.py
+msgid "Offering unit"
+msgstr "Подразделение, открывающее группу"
+
+# key: grading.fields.exception_submitted
+#: ninefruits/grading/admin/section_grades.py
+msgid "Submitted as an exception"
+msgstr "Отправлено как исключение"
+
+# key: grading.fields.ready_to_finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Ready to finalize"
+msgstr "Готово к утверждению"
+
+# key: curriculum.fields.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Название"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/grading/admin/section_grades.py
+msgid "Instructors"
+msgstr "Преподаватели"
+
+# key: grading.fields.pending
+#: ninefruits/grading/admin/section_grades.py
+msgid "Not submitted"
+msgstr "Не отправлено"
+
+# key: grading.fields.submitted
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading.fields"
+msgid "Submitted"
+msgstr "Отправлено"
+
+# key: grading.fields.finalized
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading"
+msgid "Final"
+msgstr "Итоговая"
+
+# key: grading.fields.exception
+#: ninefruits/grading/admin/section_grades.py
+msgid "Exception"
+msgstr "Исключение"
+
+# key: grading.actions.open_entry
+# key: grading.grades.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/apps.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Grades"
+msgstr "Оценки"
+
+# key: grading.actions.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize"
+msgstr "Утвердить"
+
+# key: grading.notifications.finalized
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) finalized."
+msgstr "Утверждено оценок: %(count)s."
+
+# key: grading.help.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalized grades are final: they change only through an approved grade change request. Students see them from now on."
+msgstr "Утверждённые оценки являются итоговыми: изменить их можно только через одобренный запрос на изменение оценки. С этого момента студенты их видят."
+
+# key: grading.actions.return
+#: ninefruits/grading/admin/section_grades.py
+msgid "Return to instructor"
+msgstr "Вернуть преподавателю"
+
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) returned."
+msgstr "Возвращено оценок: %(count)s."
+
+# key: grading.actions.finalize_selected
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize selected"
+msgstr "Утвердить выбранные"
+
+# key: grading.notifications.skipped
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "Not finalized: %(sections)s"
+msgstr "Не утверждено: %(sections)s"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Academic standing"
+msgstr "Академический статус"
+
+# key: grading.fields.honors
+# key: grading.settings.honors
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Honors"
+msgstr "Отличие"
+
+# key: reference.resources.programs.label
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "program"
+msgstr "программа"
+
+# key: grading.fields.earned_credits
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Полученные кредиты"
+
+# key: grading.fields.closed
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Closed"
+msgstr "Закрыт"
+
+# key: grading.transcript.title
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/transcript.html ninefruits/grading/views/transcript.py
+msgid "Grade report"
+msgstr "Ведомость оценок"
+
+# key: grading.actions.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Close term"
+msgstr "Закрыть семестр"
+
+# key: grading.help.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Every grade of the term must be final. Closing calculates term records, academic standing and honors, and moves the term to grades closed."
+msgstr "Все оценки семестра должны быть итоговыми. При закрытии рассчитываются итоги семестра, академический статус и отличия, а семестр переходит в статус «оценки закрыты»."
+
+# key: grading.notifications.close_ready
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Ready to close: %(students)s student(s)."
+msgstr "Готово к закрытию, студентов: %(students)s."
+
+# key: grading.notifications.close_blocked
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Cannot close yet: %(sections)s section(s) have grades that are not final."
+msgstr "Закрыть пока нельзя: в группах (%(sections)s) есть неитоговые оценки."
+
+# key: grading.notifications.open_section
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(section)s: %(count)s not final"
+msgstr "%(section)s: неитоговых: %(count)s"
+
+# key: grading.notifications.close_started
+#: ninefruits/grading/admin/term_records.py
+msgid "Term close started. The term moves to grades closed when it finishes."
+msgstr "Закрытие семестра начато. По завершении семестр перейдёт в статус «оценки закрыты»."
+
+# key: grading.actions.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculate"
+msgstr "Пересчитать"
+
+# key: grading.notifications.recalculated
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(count)s student(s) recalculated."
+msgstr "Пересчитано студентов: %(count)s."
+
+# key: grading.help.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculates credits and GPA from final grades, e.g. after a policy change. Standing and honors stay as decided at term close."
+msgstr "Пересчитывает кредиты и средний балл по итоговым оценкам, например после изменения правил. Академический статус и отличия остаются такими, какими были определены при закрытии семестра."
+
+# key: grading.applies_to.graded
+#: ninefruits/grading/enums.py
+msgid "Graded courses"
+msgstr "Дисциплины с дифференцированной оценкой"
+
+# key: grading.applies_to.pass_fail
+#: ninefruits/grading/enums.py
+msgid "Pass/fail courses"
+msgstr "Дисциплины с зачётом/незачётом"
+
+# key: grading.applies_to.both
+#: ninefruits/grading/enums.py
+msgid "Both"
+msgstr "Оба"
+
+# key: grading.evaluation_methods.absolute
+#: ninefruits/grading/enums.py
+msgid "Absolute evaluation"
+msgstr "Абсолютное оценивание"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: ninefruits/grading/enums.py ninefruits/grading/settings_pages.py
+msgid "Relative evaluation"
+msgstr "Относительное оценивание"
+
+# key: grading.standings.good
+#: ninefruits/grading/enums.py
+msgid "Good standing"
+msgstr "Без замечаний"
+
+# key: grading.standings.warning
+#: ninefruits/grading/enums.py
+msgid "Academic warning"
+msgstr "Академическое предупреждение"
+
+# key: grading.standings.dismissal_review
+#: ninefruits/grading/enums.py
+msgid "Dismissal review"
+msgstr "Рассмотрение отчисления"
+
+# key: registration.grade_statuses.none
+#: ninefruits/grading/enums.py
+msgid "No grade"
+msgstr "Нет оценки"
+
+# key: registration.grade_statuses.draft
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Draft"
+msgstr "Черновик"
+
+# key: registration.grade_statuses.submitted
+#: ninefruits/grading/enums.py
+msgctxt "registration.grade_statuses"
+msgid "Submitted"
+msgstr "Отправлено"
+
+# key: registration.grade_statuses.finalized
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Final"
+msgstr "Итоговая"
+
+# key: grading.gpa_roundings.round
+#: ninefruits/grading/enums.py
+msgid "Round half up"
+msgstr "Округление (половина вверх)"
+
+# key: grading.gpa_roundings.floor
+#: ninefruits/grading/enums.py
+msgid "Cut off"
+msgstr "Отбрасывание"
+
+# key: grading.retake_policies.latest
+#: ninefruits/grading/enums.py
+msgid "Latest attempt"
+msgstr "Последняя попытка"
+
+# key: grading.retake_policies.best
+#: ninefruits/grading/enums.py
+msgid "Best attempt"
+msgstr "Лучшая попытка"
+
+# key: grading.change_statuses.pending
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Pending"
+msgstr "Ожидает"
+
+# key: grading.change_statuses.cancelled
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Cancelled"
+msgstr "Отменено"
+
+# key: reference.fields.code
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Код"
+
+# key: reference.fields.max_grade_points
+#: ninefruits/grading/models/grade_scale.py
+msgid "Maximum grade points"
+msgstr "Максимальный балл"
+
+# key: reference.fields.is_default
+#: ninefruits/grading/models/grade_scale.py
+msgid "Default"
+msgstr "По умолчанию"
+
+# key: reference.resources.grade_scales.label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scale"
+msgstr "шкала оценок"
+
+# key: reference.resources.grade_scales.plural_label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scales"
+msgstr "шкалы оценок"
+
+# key: reference.fields.grade
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Grade"
+msgstr "Оценка"
+
+# key: reference.fields.counts_in_gpa
+#: ninefruits/grading/models/grade_scale.py
+msgid "Counts in GPA"
+msgstr "Учитывается в среднем балле"
+
+# key: reference.fields.is_passing
+#: ninefruits/grading/models/grade_scale.py
+msgid "Passing"
+msgstr "Положительная"
+
+# key: certificate.fields.audience
+#: ninefruits/grading/models/grade_scale.py
+msgid "For"
+msgstr "Для кого"
+
+# key: grading.help.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "Буквенные оценки — для дисциплин с дифференцированной оценкой, P/NP — для дисциплин с зачётом/незачётом; «оба» — например, для I (не завершено)."
+
+# key: reference.fields.sort_order
+#: ninefruits/grading/models/grade_scale.py
+msgid "Order"
+msgstr "Порядок"
+
+# key: grading.fields.new_grade
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "New grade"
+msgstr "Новая оценка"
+
+# key: grading.fields.new_score
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "New score"
+msgstr "Новый балл"
+
+# key: grading.fields.requested_at
+#: ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Дата запроса"
+
+# key: grading.resources.grade_changes.label
+#: ninefruits/grading/models/requests.py
+msgid "grade change"
+msgstr "изменение оценки"
+
+# key: grading.resources.grade_changes.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "grade changes"
+msgstr "изменения оценок"
+
+# key: grading.resources.method_requests.label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method request"
+msgstr "запрос на смену способа оценивания"
+
+# key: grading.resources.method_requests.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method requests"
+msgstr "запросы на смену способа оценивания"
+
+# key: grading.resources.section_grades.label
+# key: grading.resources.section_grades.plural_label
+#: ninefruits/grading/models/section_grade.py
+msgid "grade progress"
+msgstr "ход выставления оценок"
+
+# key: people.resources.student_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "student record"
+msgstr "личное дело студента"
+
+# key: grading.fields.attempted_credits
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Attempted credits"
+msgstr "Записанные кредиты"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: ninefruits/grading/models/term_record.py
+msgid "Term GPA"
+msgstr "Средний балл за семестр"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Накопленный средний балл"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: ninefruits/grading/models/term_record.py
+msgid "Warnings"
+msgstr "Предупреждения"
+
+# key: grading.fields.honors_rank
+#: ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Honors rank"
+msgstr "Место среди отличников"
+
+# key: grading.resources.term_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "term record"
+msgstr "итоги семестра"
+
+# key: grading.resources.term_records.plural_label
+#: ninefruits/grading/models/term_record.py
+msgid "term records"
+msgstr "итоги семестров"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/grading/notifications.py
+msgid "Hello,"
+msgstr "Здравствуйте!"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"С уважением,\n"
+"%(app)s"
+
+# key: grading.mail.returned_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades returned: %(section)s"
+msgstr "Оценки возвращены: %(section)s"
+
+# key: grading.mail.returned_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The grades of %(section)s were returned to you. Please check them and submit again."
+msgstr "Оценки группы %(section)s возвращены вам. Пожалуйста, проверьте их и отправьте снова."
+
+# key: grading.mail.open_grade_entry
+#: ninefruits/grading/notifications.py
+msgid "Open grade entry"
+msgstr "Открыть ввод оценок"
+
+# key: grading.mail.missing_subject
+#: ninefruits/grading/notifications.py
+msgid "Grades not submitted yet"
+msgstr "Оценки ещё не отправлены"
+
+# key: grading.mail.missing_intro
+#: ninefruits/grading/notifications.py
+msgid "These sections still have grades that are not submitted:"
+msgstr "В этих группах есть неотправленные оценки:"
+
+# key: grading.mail.open_teaching
+#: ninefruits/grading/notifications.py
+msgid "Open my teaching"
+msgstr "Открыть «Мои дисциплины»"
+
+# key: grading.mail.method_approved_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method changed: %(section)s"
+msgstr "Способ оценивания изменён: %(section)s"
+
+# key: grading.mail.method_approved_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(section)s is now evaluated by %(method)s."
+msgstr "Группа %(section)s теперь оценивается так: %(method)s."
+
+# key: grading.mail.method_rejected_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method request rejected: %(section)s"
+msgstr "Запрос на смену способа оценивания отклонён: %(section)s"
+
+# key: grading.mail.method_rejected_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The request to evaluate %(section)s by %(method)s was rejected."
+msgstr "Запрос на оценивание группы %(section)s способом «%(method)s» отклонён."
+
+# key: grading.mail.method_drafts_cleared
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(count)s draft grade(s) entered under the old method were cleared; please enter them again."
+msgstr "Удалено черновых оценок, введённых по прежнему способу: %(count)s; пожалуйста, введите их снова."
+
+# key: grading.mail.exception_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades submitted outside the caps: %(section)s"
+msgstr "Оценки отправлены с превышением квот: %(section)s"
+
+# key: grading.mail.exception_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(user)s submitted the grades of %(section)s outside the institution's grade caps."
+msgstr "%(user)s отправил(а) оценки группы %(section)s с превышением квот оценок учебного заведения."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Term closed: %(term)s"
+msgstr "Семестр закрыт: %(term)s"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The term close of %(term)s finished. The term is now grades closed."
+msgstr "Закрытие семестра %(term)s завершено. Оценки за семестр закрыты."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(records)s term record(s), %(warnings)s academic warning(s), %(dismissal_reviews)s dismissal review(s), %(honors)s honors student(s)."
+msgstr "Итоги семестра: %(records)s, академических предупреждений: %(warnings)s, рассмотрений отчисления: %(dismissal_reviews)s, студентов с отличием: %(honors)s."
+
+#: ninefruits/grading/notifications.py
+msgid "Open term records"
+msgstr "Открыть итоги семестра"
+
+# key: grading.distribution.over
+#: ninefruits/grading/services/distribution.py
+#, python-format
+msgid "%(group)s: %(percent)s%% of the students, cap %(cap)s%% (up to %(limit)s%% allowed)"
+msgstr "%(group)s: %(percent)s%% студентов, квота %(cap)s%% (допускается до %(limit)s%%)"
+
+# key: validation.numeric
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "Поле %(attribute)s должно быть числом."
+
+# key: grading.fields.score
+#: ninefruits/grading/services/options.py
+msgid "Score (%)"
+msgstr "Балл (%)"
+
+# key: grading.errors.no_default_scale
+#: ninefruits/grading/services/options.py
+msgid "There is no default grade scale."
+msgstr "Нет шкалы оценок по умолчанию."
+
+# key: grading.errors.no_score_here
+#: ninefruits/grading/services/options.py
+msgid "This section takes grades only (relative evaluation or a pass/fail course): leave the score empty."
+msgstr "В этой группе выставляются только оценки (относительное оценивание или дисциплина с зачётом/незачётом): оставьте балл пустым."
+
+# key: grading.errors.score_without_grade
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "No grade covers the score %(score)s."
+msgstr "Нет оценки, соответствующей баллу %(score)s."
+
+# key: grading.errors.grade_not_allowed
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The grade %(grade)s is not allowed for this course."
+msgstr "Оценка %(grade)s недопустима для этой дисциплины."
+
+# key: grading.errors.above_retake_cap
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "A retake can receive at most %(grade)s."
+msgstr "При повторном изучении можно получить не выше %(grade)s."
+
+#: ninefruits/grading/settings_pages.py
+msgid "Write each cap as a letter and a percentage, e.g. A=30, B=40."
+msgstr "Укажите каждое ограничение как букву оценки и процент, например A=30, B=40."
+
+# key: grading.fields.cap
+#: ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cap"
+msgstr "Квота"
+
+# key: grading.settings.no_cap
+#: ninefruits/grading/settings_pages.py
+msgid "No cap"
+msgstr "Без ограничения"
+
+# key: grading.settings.gpa_decimals
+#: ninefruits/grading/settings_pages.py
+msgid "Decimals"
+msgstr "Знаков после запятой"
+
+# key: grading.settings.gpa_rounding
+#: ninefruits/grading/settings_pages.py
+msgid "Rounding"
+msgstr "Округление"
+
+# key: grading.settings.retake_policy
+#: ninefruits/grading/settings_pages.py
+msgid "Retakes in the cumulative GPA"
+msgstr "Повторное изучение в накопленном среднем балле"
+
+# key: grading.settings.retake_policy_help
+#: ninefruits/grading/settings_pages.py
+msgid "Term GPAs always keep every grade of their term."
+msgstr "Средний балл за семестр всегда учитывает все оценки этого семестра."
+
+# key: grading.settings.retake_max_grade
+#: ninefruits/grading/settings_pages.py
+msgid "Highest grade for a retake"
+msgstr "Наивысшая оценка при повторном изучении"
+
+# key: grading.settings.retake_max_grade_help
+#: ninefruits/grading/settings_pages.py
+msgid "Grades above it cannot be given to a retake."
+msgstr "Оценки выше этой нельзя выставить при повторном изучении."
+
+# key: grading.settings.relative_grade_caps
+#: ninefruits/grading/settings_pages.py
+msgid "Grade caps"
+msgstr "Квоты оценок"
+
+# key: grading.settings.relative_grade_caps_help
+#: ninefruits/grading/settings_pages.py
+msgid "The most a grade group (the letter: A for A+, A0, A-) may take of a section's graded students. Groups without a cap are free."
+msgstr "Наибольшая доля студентов группы с оценками, которая может приходиться на группу оценок (буква: A для A+, A0, A-). Группы оценок без квоты не ограничены."
+
+# key: grading.settings.relative_cap_tolerance_percent
+#: ninefruits/grading/settings_pages.py
+msgid "Tolerance above the cap"
+msgstr "Допуск сверх квоты"
+
+# key: grading.settings.relative_minimum_students
+#: ninefruits/grading/settings_pages.py
+msgid "Check from this many graded students"
+msgstr "Проверять, начиная с этого числа студентов с оценками"
+
+# key: grading.settings.relative_minimum_students_help
+#: ninefruits/grading/settings_pages.py
+msgid "Smaller sections are not checked against the caps."
+msgstr "Группы меньшего размера на соответствие квотам не проверяются."
+
+# key: grading.settings.warning_gpa_below
+#: ninefruits/grading/settings_pages.py
+msgid "Warning when the term GPA is below"
+msgstr "Предупреждение, если средний балл за семестр ниже"
+
+# key: grading.settings.warning_gpa_below_help
+#: ninefruits/grading/settings_pages.py
+msgid "A term with only pass/fail courses gives no warning."
+msgstr "Семестр, в котором только дисциплины с зачётом/незачётом, предупреждения не даёт."
+
+# key: grading.settings.standing_regular_terms_only
+#: ninefruits/grading/settings_pages.py
+msgid "Judge only regular terms (not summer or winter)"
+msgstr "Учитывать только основные семестры (не летние и не зимние)"
+
+# key: grading.settings.dismissal_warning_count
+#: ninefruits/grading/settings_pages.py
+msgid "Warnings for dismissal review"
+msgstr "Число предупреждений для рассмотрения отчисления"
+
+# key: grading.settings.dismissal_warning_count_help
+#: ninefruits/grading/settings_pages.py
+msgid "0 turns it off. The student is flagged for review; dismissal is a status change."
+msgstr "0 отключает. Студент отмечается для рассмотрения; само отчисление оформляется как изменение статуса."
+
+# key: grading.settings.dismissal_consecutive_only
+#: ninefruits/grading/settings_pages.py
+msgid "Count only consecutive warnings"
+msgstr "Учитывать только предупреждения подряд"
+
+# key: grading.settings.honors_min_gpa
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum term GPA"
+msgstr "Минимальный средний балл за семестр"
+
+# key: grading.settings.honors_min_credits
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum GPA credits in the term"
+msgstr "Минимум кредитов в среднем балле за семестр"
+
+# key: grading.settings.honors_exclude_failing
+#: ninefruits/grading/settings_pages.py
+msgid "No honors with a failed course"
+msgstr "Без отличия при несданной дисциплине"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/grading/settings_pages.py
+msgid "Grading policy"
+msgstr "Правила оценивания"
+
+# key: grading.settings.scale
+#: ninefruits/grading/settings_pages.py
+msgid "Grade scale"
+msgstr "Шкала оценок"
+
+# key: grading.settings.scale_fixed
+#: ninefruits/grading/settings_pages.py
+#, python-format
+msgid "Grade scale: %(scale)s (fixed at installation)."
+msgstr "Шкала оценок: %(scale)s (фиксируется при установке)."
+
+# key: grading.settings.gpa
+#: ninefruits/grading/settings_pages.py
+msgid "GPA"
+msgstr "Средний балл"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "Term close %(term)s is running."
+msgstr "Выполняется закрытие семестра %(term)s."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "%(processed)s of %(total)s student group(s) done (%(progress)s%%)."
+msgstr "Обработано групп студентов: %(processed)s из %(total)s (%(progress)s%%)."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+msgid "A part failed: start the close again after fixing the cause."
+msgstr "Часть работы завершилась с ошибкой: устраните причину и запустите закрытие заново."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "My teaching"
+msgstr "Мои дисциплины"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/views/portal.py
+msgid "Grade entry"
+msgstr "Ввод оценок"
+
+# key: grading.entry.counts
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(none)s not entered, %(draft)s draft, %(submitted)s submitted, %(finalized)s final"
+msgstr "не введено: %(none)s, черновик: %(draft)s, отправлено: %(submitted)s, итоговых: %(finalized)s"
+
+# key: grading.entry.window_open
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is open."
+msgstr "Ввод оценок открыт."
+
+# key: grading.entry.window_closed
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is closed."
+msgstr "Ввод оценок закрыт."
+
+# key: grading.entry.absolute_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Enter each student's score (0–100). The grade follows from the score on %(scale)s. Choose a grade directly only for one without a score (e.g. I)."
+msgstr "Введите балл каждого студента (0–100). Оценка определяется по баллу по шкале %(scale)s. Выбирайте оценку напрямую только для оценок без балла (например, I)."
+
+# key: grading.entry.relative_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Do not enter scores: give each student a grade."
+msgstr "Не вводите баллы: выставьте каждому студенту оценку."
+
+# key: grading.entry.method_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change to %(method)s requested and waiting for the scheduling staff."
+msgstr "Запрошена смена на %(method)s; ожидается решение сотрудников, отвечающих за расписание."
+
+# key: grading.entry.method_request_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "To change to %(method)s, ask the scheduling staff with a reason (possible until grades are submitted)."
+msgstr "Чтобы перейти на %(method)s, обратитесь к сотрудникам, отвечающим за расписание, с указанием причины (возможно до отправки оценок)."
+
+# key: grading.actions.request_method
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Request %(method)s"
+msgstr "Запросить: %(method)s"
+
+# key: grading.entry.exception_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submitted as an exception."
+msgstr "Отправлено как исключение."
+
+# key: grading.entry.exception_detail
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "By %(user)s on %(date)s, outside the grade caps."
+msgstr "Пользователь %(user)s, %(date)s, с превышением квот оценок."
+
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Score (%%)"
+msgstr "Балл (%%)"
+
+# key: grading.fields.grade
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Оценка"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "Retake"
+msgstr "Повторное изучение"
+
+# key: grading.entry.by_score
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "By score"
+msgstr "По баллу"
+
+# key: grading.entry.change_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change %(from)s → %(to)s requested"
+msgstr "Запрошено изменение %(from)s → %(to)s"
+
+# key: grading.actions.request_change
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Request change"
+msgstr "Запросить изменение"
+
+# key: grading.entry.no_students
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "No students."
+msgstr "Студентов нет."
+
+# key: grading.entry.distribution_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grades against the caps"
+msgstr "Оценки в сравнении с квотами"
+
+# key: grading.entry.distribution_checked
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: each grade group must stay within its cap."
+msgstr "Студентов с оценками: %(graded)s; каждая группа оценок должна оставаться в пределах своей квоты."
+
+# key: grading.entry.distribution_exempt
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: sections under %(minimum)s are not checked against the caps."
+msgstr "Студентов с оценками: %(graded)s; группы с числом студентов меньше %(minimum)s на соответствие квотам не проверяются."
+
+# key: grading.fields.grade_group
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade group"
+msgstr "Группа оценок"
+
+# key: grading.fields.count
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Students"
+msgstr "Студенты"
+
+# key: grading.entry.exception_reason_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)."
+msgstr "Оценки выходят за пределы квот. Сотрудники могут всё же отправить их как зарегистрированное исключение: укажите причину (проверяющие получат уведомление, причина будет показана в группе)."
+
+# key: grading.fields.exception_reason
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Reason for the exception"
+msgstr "Причина исключения"
+
+# key: grading.actions.save_draft
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Save draft"
+msgstr "Сохранить черновик"
+
+# key: grading.actions.validate_distribution
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Check grade caps"
+msgstr "Проверить квоты оценок"
+
+# key: grading.entry.submit_confirm
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit the grades? You cannot change them afterwards; ask the office if one is wrong."
+msgstr "Отправить оценки? После этого изменить их нельзя; если какая-то оценка неверна, обратитесь в учебный отдел."
+
+# key: grading.actions.submit
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit grades"
+msgstr "Отправить оценки"
+
+# key: grading.entry.help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Save drafts any time; submit once every student has a grade."
+msgstr "Черновик можно сохранять в любое время; отправьте оценки, когда они будут выставлены всем студентам."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cancel"
+msgstr "Отменить"
+
+# key: grading.transcript.print
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Print"
+msgstr "Печать"
+
+# key: grading.grades.blocked
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+#, python-format
+msgid "Your grades are not available: you have a hold (%(type)s). Contact the office that placed it."
+msgstr "Ваши оценки недоступны: на вас наложено ограничение (%(type)s). Обратитесь в подразделение, которое его установило."
+
+# key: grading.grades.term_summary
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "Средний балл %(gpa)s · получено %(earned)s из %(attempted)s кредитов"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Код"
+
+# key: curriculum.fields.credits
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Кредиты"
+
+# key: grading.grades.superseded
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "replaced by a retake in the cumulative GPA"
+msgstr "заменено повторным изучением в накопленном среднем балле"
+
+# key: grading.grades.none
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "No final grades yet."
+msgstr "Итоговых оценок пока нет."
+
+# key: grading.transcript.unofficial
+#: ninefruits/grading/templates/grading/transcript.html
+msgid "Unofficial grade report. Request an official transcript from the registrar."
+msgstr "Неофициальная ведомость оценок. Официальную академическую справку запросите в учебном отделе."
+
+# key: grading.transcript.printed_at
+#: ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgctxt "grading"
+msgid "Printed %(date)s"
+msgstr "Напечатано %(date)s"
+
+# key: grading.entry.open
+#: ninefruits/grading/views/portal.py
+msgid "Enter grades"
+msgstr "Ввести оценки"
+
+# key: grading.entry.saved
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) saved."
+msgstr "Сохранено оценок: %(count)s."
+
+# key: grading.entry.distribution_ok
+#: ninefruits/grading/views/portal.py
+msgid "The grades are within the caps."
+msgstr "Оценки в пределах квот."
+
+# key: grading.entry.submitted
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) submitted."
+msgstr "Отправлено оценок: %(count)s."
+
+#: ninefruits/grading/views/portal.py
+msgid "The reason is too long."
+msgstr "Причина слишком длинная."
+
+# key: grading.entry.method_requested
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "Change to %(method)s requested. You will be told by email."
+msgstr "Запрошена смена на %(method)s. Вы получите уведомление по эл. почте."
+
+# key: grading.entry.change_requested
+#: ninefruits/grading/views/portal.py
+msgid "Grade change requested."
+msgstr "Запрос на изменение оценки отправлен."
+
+# key: admin.navigation.grading
+# key: grading.actions.open_entry
+# key: grading.grades.title
+# key: permissions.resources.grades
+# key: portal.navigation.grades
+# key: reference.fields.items_count
+#: ninefruits/grading/views/portal.py
+msgid "Grades"
+msgstr "Оценки"
+
+#: ninefruits/grading/views/transcript.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Не удалось создать PDF. Повторите попытку позже."

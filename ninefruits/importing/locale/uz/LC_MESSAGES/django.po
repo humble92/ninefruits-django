@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "%(type)s importi yakunlandi"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "%(count)s ta qator import qilindi."
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s ta qatorda xato; tuzatish uchun xatoli qatorlarni yuklab oling."
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "xatoli qator"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "xatoli qatorlar"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "Qator"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "Import turi"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "Xatoli qatorlar"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "Holat"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "Navbatda"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "Xatoli qatorlarni yuklab olish"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "tashkiliy birliklar"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "taʼlim dasturlari"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "binolar"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "auditoriyalar"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "kodlar"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "Yakunlangan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "Fayl"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "Qayta ishlangan qatorlar"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "Qatorlar"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "Import qilingan qatorlar"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "Import qilgan"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "Boshlangan"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "CSV import"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "CSV importlar"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "Xato"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s maydoni toʻldirilishi shart."
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s maydoni %(date)s yoki undan keyingi sana boʻlishi kerak."
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s maydoni %(max)s belgidan koʻp boʻlmasligi kerak."
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "Tanlangan %(attribute)s yaroqsiz."
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s maydoni butun son boʻlishi kerak."
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s maydoni son boʻlishi kerak."
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "%(attribute)s maydoni rost yoki yolgʻon boʻlishi kerak."
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s maydoni toʻgʻri sana boʻlishi kerak."
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s maydoni %(min)s va %(max)s oraligʻida boʻlishi kerak."
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s maydoni kamida %(min)s boʻlishi kerak."
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "Nomaʼlum %(column)s kodi \"%(code)s\"."
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "Maʼlumotlar bazasi rad etdi: %(message)s"

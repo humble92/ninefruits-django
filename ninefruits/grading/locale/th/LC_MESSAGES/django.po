@@ -1,0 +1,1313 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/grading/actions/_support.py
+msgid "Enter a reason."
+msgstr "กรุณาระบุเหตุผล"
+
+# key: grading.errors.term_not_published
+#: ninefruits/grading/actions/close_term.py
+msgid "Only a published term closes."
+msgstr "ปิดได้เฉพาะภาคการศึกษาที่เผยแพร่แล้ว"
+
+# key: grading.errors.term_not_ready
+#: ninefruits/grading/actions/close_term.py
+#, python-format
+msgid "%(count)s section(s) have grades that are not final."
+msgstr "มี %(count)s กลุ่มเรียนที่เกรดยังไม่ยืนยัน"
+
+# key: grading.errors.not_all_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+#, python-format
+msgid "Not all grades are submitted (%(count)s missing)."
+msgstr "ยังส่งเกรดไม่ครบ (ขาด %(count)s รายการ)"
+
+# key: grading.errors.nothing_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+msgid "There are no submitted grades."
+msgstr "ไม่มีเกรดที่ส่งแล้ว"
+
+# key: grading.errors.not_finalized
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "Only a final grade needs a change request."
+msgstr "ต้องใช้คำขอแก้ไขเฉพาะเกรดที่ยืนยันแล้ว"
+
+# key: grading.errors.new_grade_required
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/views/portal.py
+msgid "Enter the new score or grade."
+msgstr "กรุณากรอกคะแนนหรือเกรดใหม่"
+
+# key: grading.errors.same_grade
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "The new grade is the current grade."
+msgstr "เกรดใหม่ตรงกับเกรดปัจจุบัน"
+
+# key: grading.errors.request_pending
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "A change request for this grade is already open."
+msgstr "มีคำขอแก้ไขเกรดนี้ที่ยังดำเนินการอยู่แล้ว"
+
+# key: grading.errors.request_decided
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/actions/manage_method_requests.py
+msgid "The request is already decided."
+msgstr "คำขอนี้ได้รับการพิจารณาแล้ว"
+
+# key: grading.errors.own_request
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "You cannot decide your own request."
+msgstr "ท่านไม่สามารถพิจารณาคำขอของตนเองได้"
+
+# key: grading.errors.same_method
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "The section already uses that evaluation method."
+msgstr "กลุ่มเรียนนี้ใช้วิธีวัดผลนั้นอยู่แล้ว"
+
+# key: grading.errors.method_request_pending
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "A change request for this section is already waiting."
+msgstr "มีคำขอเปลี่ยนสำหรับกลุ่มเรียนนี้ที่รอพิจารณาอยู่แล้ว"
+
+# key: grading.errors.method_has_grades
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "มีการกรอกเกรดแล้ว จึงเปลี่ยนวิธีวัดผลไม่ได้"
+
+# key: grading.errors.scale_fixed
+#: ninefruits/grading/actions/save_grade_scale.py
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "เกณฑ์ระดับคะแนนถูกกำหนดตอนติดตั้งและเปลี่ยนไม่ได้"
+
+# key: grading.errors.not_editable
+#: ninefruits/grading/actions/save_grades.py
+msgid "Some grades can no longer be changed here."
+msgstr "บางเกรดไม่สามารถแก้ไขที่นี่ได้แล้ว"
+
+# key: grading.errors.over_caps
+#: ninefruits/grading/actions/save_grades.py
+msgid "The grades are outside the institution's grade caps. Adjust them, or ask the office."
+msgstr "เกรดเกินสัดส่วนสูงสุดที่สถาบันกำหนด กรุณาปรับแก้หรือติดต่อเจ้าหน้าที่"
+
+# key: grading.errors.exception_reason_required
+#: ninefruits/grading/actions/save_grades.py
+msgid "Submitting outside the grade caps needs a reason."
+msgstr "การส่งเกรดเกินสัดส่วนสูงสุดต้องระบุเหตุผล"
+
+# key: grading.errors.missing_grades
+#: ninefruits/grading/actions/save_grades.py
+#, python-format
+msgid "%(count)s student(s) have no grade yet."
+msgstr "นักศึกษา %(count)s คนยังไม่มีเกรด"
+
+# key: grading.errors.entry_closed
+#: ninefruits/grading/actions/save_grades.py
+msgid "Grade entry is not open for this section."
+msgstr "กลุ่มเรียนนี้ไม่ได้เปิดให้กรอกเกรด"
+
+# key: grading.fields.decision_note
+#: ninefruits/grading/admin/common.py ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Note"
+msgstr "หมายเหตุ"
+
+# key: reference.resources.terms.label
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgid "term"
+msgstr "ภาคการศึกษา"
+
+# key: offering.fields.dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Preview only"
+msgstr "แสดงตัวอย่างเท่านั้น"
+
+# key: grading.help.close_dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Only check whether the term can close."
+msgstr "ตรวจสอบเพียงว่าปิดภาคการศึกษาได้หรือไม่"
+
+# key: common.reason
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/notifications.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "common"
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: common.yes
+#: ninefruits/grading/admin/common.py
+msgid "Yes"
+msgstr "ใช่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/grading/admin/common.py
+msgid "No"
+msgstr "ไม่ใช่"
+
+# key: registration.fields.status
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "registration"
+msgid "Status"
+msgstr "สถานะ"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "Student number"
+msgstr "รหัสนักศึกษา"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "people"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: offering.fields.section
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgctxt "offering"
+msgid "Section"
+msgstr "กลุ่มเรียน"
+
+# key: grading.fields.change
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Change"
+msgstr "การเปลี่ยนแปลง"
+
+# key: grading.fields.requested_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "ขอโดย"
+
+# key: grading.fields.decided_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "พิจารณาโดย"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgid "Approve"
+msgstr "อนุมัติ"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/enums.py
+msgid "Approved"
+msgstr "อนุมัติแล้ว"
+
+# key: grading.help.approve
+#: ninefruits/grading/admin/grade_changes.py
+#, python-format
+msgid "The grade changes from %(from)s to %(to)s now, and the student's GPA is recalculated."
+msgstr "เกรดจะเปลี่ยนจาก %(from)s เป็น %(to)s ทันที และระบบจะคำนวณเกรดเฉลี่ยของนักศึกษาใหม่"
+
+# key: grading.actions.reject
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "ไม่อนุมัติ"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/enums.py
+msgid "Rejected"
+msgstr "ไม่อนุมัติ"
+
+# key: grading.actions.cancel_request
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "ยกเลิกคำขอ"
+
+# key: grading.help.scale_fixed
+#: ninefruits/grading/admin/grade_scales.py
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "เกณฑ์ระดับคะแนนถูกกำหนดตายตัวตอนติดตั้ง เกรดและเกรดเฉลี่ยทั้งหมดอิงเกณฑ์นี้ ย้ายไปใช้เกณฑ์อื่นไม่ได้"
+
+# key: validation.required
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "กรุณาระบุ %(attribute)s"
+
+# key: reference.fields.grade_points
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "Grade points"
+msgstr "ค่าระดับคะแนน"
+
+# key: validation.max.numeric
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/settings_pages.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "%(attribute)s ต้องไม่เกิน %(max)s"
+
+# key: validation.gte.numeric
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s ต้องมากกว่าหรือเท่ากับ %(value)s"
+
+# key: reference.fields.max_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "To (%)"
+msgstr "ถึง (%)"
+
+# key: reference.fields.min_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "From (%)"
+msgstr "ตั้งแต่ (%)"
+
+# key: reference.resources.grade_scale_items.label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grade"
+msgstr "เกรด"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grades"
+msgstr "เกรด"
+
+# key: reference.fields.name
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: reference.fields.items_count
+#: ninefruits/grading/admin/grade_scales.py
+msgctxt "reference"
+msgid "Grades"
+msgstr "เกรด"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgid "Evaluation"
+msgstr "วิธีวัดผล"
+
+# key: grading.notifications.method_approved
+#: ninefruits/grading/admin/method_requests.py
+#, python-format
+msgid "Approved. %(count)s draft grade(s) cleared."
+msgstr "อนุมัติแล้ว ล้างเกรดฉบับร่าง %(count)s รายการ"
+
+# key: grading.help.approve_method
+#: ninefruits/grading/admin/method_requests.py
+msgid "The section's evaluation method changes now. Draft grades entered under the old method are cleared; the instructor is told by email."
+msgstr "วิธีวัดผลของกลุ่มเรียนจะเปลี่ยนทันที เกรดฉบับร่างที่กรอกด้วยวิธีเดิมจะถูกล้าง และระบบจะแจ้งอาจารย์ผู้สอนทางอีเมล"
+
+# key: offering.fields.offering_unit
+#: ninefruits/grading/admin/section_grades.py
+msgid "Offering unit"
+msgstr "หน่วยงานที่เปิดสอน"
+
+# key: grading.fields.exception_submitted
+#: ninefruits/grading/admin/section_grades.py
+msgid "Submitted as an exception"
+msgstr "ส่งเป็นกรณียกเว้น"
+
+# key: grading.fields.ready_to_finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Ready to finalize"
+msgstr "พร้อมยืนยัน"
+
+# key: curriculum.fields.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "ชื่อวิชา"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: ninefruits/grading/admin/section_grades.py
+msgid "Instructors"
+msgstr "อาจารย์ผู้สอน"
+
+# key: grading.fields.pending
+#: ninefruits/grading/admin/section_grades.py
+msgid "Not submitted"
+msgstr "ยังไม่ส่ง"
+
+# key: grading.fields.submitted
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading.fields"
+msgid "Submitted"
+msgstr "ส่งแล้ว"
+
+# key: grading.fields.finalized
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading"
+msgid "Final"
+msgstr "ยืนยันแล้ว"
+
+# key: grading.fields.exception
+#: ninefruits/grading/admin/section_grades.py
+msgid "Exception"
+msgstr "กรณียกเว้น"
+
+# key: grading.actions.open_entry
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/apps.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Grades"
+msgstr "เกรด"
+
+# key: grading.actions.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize"
+msgstr "ยืนยันเกรด"
+
+# key: grading.notifications.finalized
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) finalized."
+msgstr "ยืนยันเกรดแล้ว %(count)s รายการ"
+
+# key: grading.help.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalized grades are final: they change only through an approved grade change request. Students see them from now on."
+msgstr "เกรดที่ยืนยันแล้วถือเป็นที่สิ้นสุด แก้ไขได้เฉพาะผ่านคำขอแก้ไขเกรดที่ได้รับอนุมัติ นักศึกษาจะเห็นเกรดตั้งแต่นี้ไป"
+
+# key: grading.actions.return
+#: ninefruits/grading/admin/section_grades.py
+msgid "Return to instructor"
+msgstr "ส่งคืนอาจารย์ผู้สอน"
+
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) returned."
+msgstr "ส่งคืนผลการเรียน %(count)s รายการ"
+
+# key: grading.actions.finalize_selected
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize selected"
+msgstr "ยืนยันรายการที่เลือก"
+
+# key: grading.notifications.skipped
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "Not finalized: %(sections)s"
+msgstr "ยังไม่ยืนยัน: %(sections)s"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Academic standing"
+msgstr "สถานภาพทางวิชาการ"
+
+# key: grading.fields.honors
+# key: grading.settings.honors
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Honors"
+msgstr "เกียรตินิยม"
+
+# key: reference.resources.programs.label
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "program"
+msgstr "หลักสูตร"
+
+# key: grading.fields.earned_credits
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "หน่วยกิตที่ได้"
+
+# key: grading.fields.closed
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Closed"
+msgstr "ปิดแล้ว"
+
+# key: grading.transcript.title
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/transcript.html ninefruits/grading/views/transcript.py
+msgid "Grade report"
+msgstr "รายงานผลการเรียน"
+
+# key: grading.actions.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Close term"
+msgstr "ปิดภาคการศึกษา"
+
+# key: grading.help.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Every grade of the term must be final. Closing calculates term records, academic standing and honors, and moves the term to grades closed."
+msgstr "เกรดทุกรายการของภาคการศึกษาต้องยืนยันแล้ว การปิดภาคจะคำนวณบันทึกผลรายภาคการศึกษา สถานภาพทางวิชาการ และเกียรตินิยม แล้วเปลี่ยนสถานะภาคการศึกษาเป็นปิดผลการเรียน"
+
+# key: grading.notifications.close_ready
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Ready to close: %(students)s student(s)."
+msgstr "พร้อมปิดภาค: นักศึกษา %(students)s คน"
+
+# key: grading.notifications.close_blocked
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Cannot close yet: %(sections)s section(s) have grades that are not final."
+msgstr "ยังปิดภาคไม่ได้: มี %(sections)s กลุ่มเรียนที่เกรดยังไม่ยืนยัน"
+
+# key: grading.notifications.open_section
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(section)s: %(count)s not final"
+msgstr "%(section)s: ยังไม่ยืนยัน %(count)s รายการ"
+
+# key: grading.notifications.close_started
+#: ninefruits/grading/admin/term_records.py
+msgid "Term close started. The term moves to grades closed when it finishes."
+msgstr "เริ่มปิดภาคการศึกษาแล้ว ภาคการศึกษาจะเปลี่ยนเป็นปิดผลการเรียนเมื่อเสร็จสิ้น"
+
+# key: grading.actions.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculate"
+msgstr "คำนวณใหม่"
+
+# key: grading.notifications.recalculated
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(count)s student(s) recalculated."
+msgstr "คำนวณใหม่แล้ว %(count)s คน"
+
+# key: grading.help.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculates credits and GPA from final grades, e.g. after a policy change. Standing and honors stay as decided at term close."
+msgstr "คำนวณหน่วยกิตและเกรดเฉลี่ยใหม่จากเกรดที่ยืนยันแล้ว เช่น หลังเปลี่ยนนโยบาย สถานภาพและเกียรตินิยมคงเดิมตามที่ตัดสินเมื่อปิดภาค"
+
+# key: grading.applies_to.graded
+#: ninefruits/grading/enums.py
+msgid "Graded courses"
+msgstr "รายวิชาที่วัดผลเป็นเกรด"
+
+# key: grading.applies_to.pass_fail
+#: ninefruits/grading/enums.py
+msgid "Pass/fail courses"
+msgstr "รายวิชาผ่าน/ไม่ผ่าน"
+
+# key: grading.applies_to.both
+#: ninefruits/grading/enums.py
+msgid "Both"
+msgstr "ทั้งสองแบบ"
+
+# key: grading.evaluation_methods.absolute
+#: ninefruits/grading/enums.py
+msgid "Absolute evaluation"
+msgstr "การวัดผลแบบอิงเกณฑ์"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: ninefruits/grading/enums.py ninefruits/grading/settings_pages.py
+msgid "Relative evaluation"
+msgstr "การวัดผลแบบอิงกลุ่ม"
+
+# key: grading.standings.good
+#: ninefruits/grading/enums.py
+msgid "Good standing"
+msgstr "สถานภาพปกติ"
+
+# key: grading.standings.warning
+#: ninefruits/grading/enums.py
+msgid "Academic warning"
+msgstr "รอพินิจ"
+
+# key: grading.standings.dismissal_review
+#: ninefruits/grading/enums.py
+msgid "Dismissal review"
+msgstr "พิจารณาพ้นสภาพ"
+
+# key: registration.grade_statuses.none
+#: ninefruits/grading/enums.py
+msgid "No grade"
+msgstr "ไม่มีเกรด"
+
+# key: registration.grade_statuses.draft
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Draft"
+msgstr "ฉบับร่าง"
+
+# key: registration.grade_statuses.submitted
+#: ninefruits/grading/enums.py
+msgctxt "registration.grade_statuses"
+msgid "Submitted"
+msgstr "ส่งแล้ว"
+
+# key: registration.grade_statuses.finalized
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Final"
+msgstr "ยืนยันแล้ว"
+
+# key: grading.gpa_roundings.round
+#: ninefruits/grading/enums.py
+msgid "Round half up"
+msgstr "ปัดเศษ (ครึ่งขึ้น)"
+
+# key: grading.gpa_roundings.floor
+#: ninefruits/grading/enums.py
+msgid "Cut off"
+msgstr "ตัดเศษทิ้ง"
+
+# key: grading.retake_policies.latest
+#: ninefruits/grading/enums.py
+msgid "Latest attempt"
+msgstr "ครั้งล่าสุด"
+
+# key: grading.retake_policies.best
+#: ninefruits/grading/enums.py
+msgid "Best attempt"
+msgstr "ครั้งที่ดีที่สุด"
+
+# key: grading.change_statuses.pending
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Pending"
+msgstr "รอพิจารณา"
+
+# key: grading.change_statuses.cancelled
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Cancelled"
+msgstr "ยกเลิกแล้ว"
+
+# key: reference.fields.code
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Code"
+msgstr "รหัส"
+
+# key: reference.fields.max_grade_points
+#: ninefruits/grading/models/grade_scale.py
+msgid "Maximum grade points"
+msgstr "ค่าระดับคะแนนสูงสุด"
+
+# key: reference.fields.is_default
+#: ninefruits/grading/models/grade_scale.py
+msgid "Default"
+msgstr "ค่าเริ่มต้น"
+
+# key: reference.resources.grade_scales.label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scale"
+msgstr "เกณฑ์ระดับคะแนน"
+
+# key: reference.resources.grade_scales.plural_label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scales"
+msgstr "เกณฑ์ระดับคะแนน"
+
+# key: reference.fields.grade
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Grade"
+msgstr "เกรด"
+
+# key: reference.fields.counts_in_gpa
+#: ninefruits/grading/models/grade_scale.py
+msgid "Counts in GPA"
+msgstr "นำมาคิดเกรดเฉลี่ย"
+
+# key: reference.fields.is_passing
+#: ninefruits/grading/models/grade_scale.py
+msgid "Passing"
+msgstr "ผ่าน"
+
+# key: certificate.fields.audience
+#: ninefruits/grading/models/grade_scale.py
+msgid "For"
+msgstr "สำหรับ"
+
+# key: grading.help.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "เกรดตัวอักษรสำหรับรายวิชาที่วัดผลเป็นเกรด P/NP สำหรับรายวิชาผ่าน/ไม่ผ่าน \"ทั้งสองแบบ\" เช่น I (ไม่สมบูรณ์)"
+
+# key: reference.fields.sort_order
+#: ninefruits/grading/models/grade_scale.py
+msgid "Order"
+msgstr "ลำดับ"
+
+# key: grading.fields.new_grade
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "New grade"
+msgstr "เกรดใหม่"
+
+# key: grading.fields.new_score
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "New score"
+msgstr "คะแนนใหม่"
+
+# key: grading.fields.requested_at
+#: ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "ขอเมื่อ"
+
+# key: grading.resources.grade_changes.label
+#: ninefruits/grading/models/requests.py
+msgid "grade change"
+msgstr "การแก้ไขเกรด"
+
+# key: grading.resources.grade_changes.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "grade changes"
+msgstr "การแก้ไขเกรด"
+
+# key: grading.resources.method_requests.label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method request"
+msgstr "คำขอเปลี่ยนวิธีวัดผล"
+
+# key: grading.resources.method_requests.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method requests"
+msgstr "คำขอเปลี่ยนวิธีวัดผล"
+
+# key: grading.resources.section_grades.label
+# key: grading.resources.section_grades.plural_label
+#: ninefruits/grading/models/section_grade.py
+msgid "grade progress"
+msgstr "ความคืบหน้าการส่งเกรด"
+
+# key: people.resources.student_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "student record"
+msgstr "ระเบียนนักศึกษา"
+
+# key: grading.fields.attempted_credits
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Attempted credits"
+msgstr "หน่วยกิตที่ลงทะเบียน"
+
+# key: grading.fields.term_gpa
+#: ninefruits/grading/models/term_record.py
+msgid "Term GPA"
+msgstr "เกรดเฉลี่ยภาคการศึกษา"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "เกรดเฉลี่ยสะสม"
+
+# key: grading.fields.warning_count
+#: ninefruits/grading/models/term_record.py
+msgid "Warnings"
+msgstr "จำนวนครั้งที่รอพินิจ"
+
+# key: grading.fields.honors_rank
+#: ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Honors rank"
+msgstr "อันดับเกียรตินิยม"
+
+# key: grading.resources.term_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "term record"
+msgstr "บันทึกผลรายภาคการศึกษา"
+
+# key: grading.resources.term_records.plural_label
+#: ninefruits/grading/models/term_record.py
+msgid "term records"
+msgstr "บันทึกผลรายภาคการศึกษา"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/grading/notifications.py
+msgid "Hello,"
+msgstr "เรียน ท่านผู้ใช้"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"ขอแสดงความนับถือ\n"
+"%(app)s"
+
+# key: grading.mail.returned_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades returned: %(section)s"
+msgstr "เกรดถูกส่งคืน: %(section)s"
+
+# key: grading.mail.returned_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The grades of %(section)s were returned to you. Please check them and submit again."
+msgstr "เกรดของ %(section)s ถูกส่งคืนให้ท่าน กรุณาตรวจสอบและส่งอีกครั้ง"
+
+# key: grading.mail.open_grade_entry
+#: ninefruits/grading/notifications.py
+msgid "Open grade entry"
+msgstr "เปิดหน้ากรอกเกรด"
+
+# key: grading.mail.missing_subject
+#: ninefruits/grading/notifications.py
+msgid "Grades not submitted yet"
+msgstr "ยังไม่ได้ส่งเกรด"
+
+# key: grading.mail.missing_intro
+#: ninefruits/grading/notifications.py
+msgid "These sections still have grades that are not submitted:"
+msgstr "กลุ่มเรียนต่อไปนี้ยังมีเกรดที่ยังไม่ได้ส่ง:"
+
+# key: grading.mail.open_teaching
+#: ninefruits/grading/notifications.py
+msgid "Open my teaching"
+msgstr "เปิดหน้ารายวิชาที่สอน"
+
+# key: grading.mail.method_approved_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method changed: %(section)s"
+msgstr "เปลี่ยนวิธีวัดผลแล้ว: %(section)s"
+
+# key: grading.mail.method_approved_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(section)s is now evaluated by %(method)s."
+msgstr "%(section)s วัดผลแบบ %(method)s แล้ว"
+
+# key: grading.mail.method_rejected_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method request rejected: %(section)s"
+msgstr "คำขอเปลี่ยนวิธีวัดผลไม่ได้รับอนุมัติ: %(section)s"
+
+# key: grading.mail.method_rejected_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The request to evaluate %(section)s by %(method)s was rejected."
+msgstr "คำขอให้ %(section)s วัดผลแบบ %(method)s ไม่ได้รับอนุมัติ"
+
+# key: grading.mail.method_drafts_cleared
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(count)s draft grade(s) entered under the old method were cleared; please enter them again."
+msgstr "เกรดฉบับร่าง %(count)s รายการที่กรอกด้วยวิธีเดิมถูกล้างแล้ว กรุณากรอกใหม่"
+
+# key: grading.mail.exception_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades submitted outside the caps: %(section)s"
+msgstr "ส่งเกรดเกินสัดส่วนสูงสุด: %(section)s"
+
+# key: grading.mail.exception_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(user)s submitted the grades of %(section)s outside the institution's grade caps."
+msgstr "%(user)s ส่งเกรดของ %(section)s เกินสัดส่วนสูงสุดที่สถาบันกำหนด"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Term closed: %(term)s"
+msgstr "ปิดภาคการศึกษาแล้ว: %(term)s"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The term close of %(term)s finished. The term is now grades closed."
+msgstr "การปิดภาคการศึกษา %(term)s เสร็จสิ้น ภาคการศึกษาอยู่ในสถานะปิดผลการเรียนแล้ว"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(records)s term record(s), %(warnings)s academic warning(s), %(dismissal_reviews)s dismissal review(s), %(honors)s honors student(s)."
+msgstr "บันทึกผลรายภาคการศึกษา %(records)s รายการ รอพินิจ %(warnings)s คน พิจารณาพ้นสภาพ %(dismissal_reviews)s คน เกียรตินิยม %(honors)s คน"
+
+#: ninefruits/grading/notifications.py
+msgid "Open term records"
+msgstr "เปิดบันทึกผลรายภาคการศึกษา"
+
+# key: grading.distribution.over
+#: ninefruits/grading/services/distribution.py
+#, python-format
+msgid "%(group)s: %(percent)s%% of the students, cap %(cap)s%% (up to %(limit)s%% allowed)"
+msgstr "%(group)s: %(percent)s%% ของนักศึกษา สัดส่วนสูงสุด %(cap)s%% (อนุญาตไม่เกิน %(limit)s%%)"
+
+# key: validation.numeric
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s ต้องเป็นตัวเลข"
+
+# key: grading.fields.score
+#: ninefruits/grading/services/options.py
+msgid "Score (%)"
+msgstr "คะแนน (%)"
+
+# key: grading.errors.no_default_scale
+#: ninefruits/grading/services/options.py
+msgid "There is no default grade scale."
+msgstr "ไม่มีเกณฑ์ระดับคะแนนเริ่มต้น"
+
+# key: grading.errors.no_score_here
+#: ninefruits/grading/services/options.py
+msgid "This section takes grades only (relative evaluation or a pass/fail course): leave the score empty."
+msgstr "กลุ่มเรียนนี้รับเฉพาะเกรด (การวัดผลแบบอิงกลุ่มหรือรายวิชาผ่าน/ไม่ผ่าน) กรุณาเว้นคะแนนว่างไว้"
+
+# key: grading.errors.score_without_grade
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "No grade covers the score %(score)s."
+msgstr "ไม่มีเกรดที่ครอบคลุมคะแนน %(score)s"
+
+# key: grading.errors.grade_not_allowed
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The grade %(grade)s is not allowed for this course."
+msgstr "ไม่อนุญาตให้ใช้เกรด %(grade)s กับรายวิชานี้"
+
+# key: grading.errors.above_retake_cap
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "A retake can receive at most %(grade)s."
+msgstr "การเรียนซ้ำได้เกรดสูงสุด %(grade)s"
+
+#: ninefruits/grading/settings_pages.py
+msgid "Write each cap as a letter and a percentage, e.g. A=30, B=40."
+msgstr "เขียนเพดานแต่ละรายการเป็นตัวอักษรเกรดและร้อยละ เช่น A=30, B=40"
+
+# key: grading.fields.cap
+#: ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cap"
+msgstr "สัดส่วนสูงสุด"
+
+# key: grading.settings.no_cap
+#: ninefruits/grading/settings_pages.py
+msgid "No cap"
+msgstr "ไม่จำกัด"
+
+# key: grading.settings.gpa_decimals
+#: ninefruits/grading/settings_pages.py
+msgid "Decimals"
+msgstr "ทศนิยม"
+
+# key: grading.settings.gpa_rounding
+#: ninefruits/grading/settings_pages.py
+msgid "Rounding"
+msgstr "การปัดเศษ"
+
+# key: grading.settings.retake_policy
+#: ninefruits/grading/settings_pages.py
+msgid "Retakes in the cumulative GPA"
+msgstr "การเรียนซ้ำในเกรดเฉลี่ยสะสม"
+
+# key: grading.settings.retake_policy_help
+#: ninefruits/grading/settings_pages.py
+msgid "Term GPAs always keep every grade of their term."
+msgstr "เกรดเฉลี่ยภาคการศึกษานับทุกเกรดของภาคนั้นเสมอ"
+
+# key: grading.settings.retake_max_grade
+#: ninefruits/grading/settings_pages.py
+msgid "Highest grade for a retake"
+msgstr "เกรดสูงสุดสำหรับการเรียนซ้ำ"
+
+# key: grading.settings.retake_max_grade_help
+#: ninefruits/grading/settings_pages.py
+msgid "Grades above it cannot be given to a retake."
+msgstr "ให้เกรดที่สูงกว่านี้แก่การเรียนซ้ำไม่ได้"
+
+# key: grading.settings.relative_grade_caps
+#: ninefruits/grading/settings_pages.py
+msgid "Grade caps"
+msgstr "สัดส่วนสูงสุดของเกรด"
+
+# key: grading.settings.relative_grade_caps_help
+#: ninefruits/grading/settings_pages.py
+msgid "The most a grade group (the letter: A for A+, A0, A-) may take of a section's graded students. Groups without a cap are free."
+msgstr "สัดส่วนสูงสุดที่กลุ่มเกรด (ตัวอักษร: A สำหรับ A+, A0, A-) มีได้จากนักศึกษาที่ได้รับเกรดในกลุ่มเรียน กลุ่มที่ไม่กำหนดสัดส่วนไม่มีข้อจำกัด"
+
+# key: grading.settings.relative_cap_tolerance_percent
+#: ninefruits/grading/settings_pages.py
+msgid "Tolerance above the cap"
+msgstr "ส่วนเผื่อเกินสัดส่วนสูงสุด"
+
+# key: grading.settings.relative_minimum_students
+#: ninefruits/grading/settings_pages.py
+msgid "Check from this many graded students"
+msgstr "ตรวจสอบเมื่อมีนักศึกษาที่ได้รับเกรดตั้งแต่"
+
+# key: grading.settings.relative_minimum_students_help
+#: ninefruits/grading/settings_pages.py
+msgid "Smaller sections are not checked against the caps."
+msgstr "กลุ่มเรียนที่เล็กกว่านี้จะไม่ตรวจสอบสัดส่วนสูงสุด"
+
+# key: grading.settings.warning_gpa_below
+#: ninefruits/grading/settings_pages.py
+msgid "Warning when the term GPA is below"
+msgstr "รอพินิจเมื่อเกรดเฉลี่ยภาคการศึกษาต่ำกว่า"
+
+# key: grading.settings.warning_gpa_below_help
+#: ninefruits/grading/settings_pages.py
+msgid "A term with only pass/fail courses gives no warning."
+msgstr "ภาคการศึกษาที่มีแต่รายวิชาผ่าน/ไม่ผ่านจะไม่มีการรอพินิจ"
+
+# key: grading.settings.standing_regular_terms_only
+#: ninefruits/grading/settings_pages.py
+msgid "Judge only regular terms (not summer or winter)"
+msgstr "พิจารณาเฉพาะภาคการศึกษาปกติ (ไม่รวมภาคฤดูร้อนหรือฤดูหนาว)"
+
+# key: grading.settings.dismissal_warning_count
+#: ninefruits/grading/settings_pages.py
+msgid "Warnings for dismissal review"
+msgstr "จำนวนครั้งที่รอพินิจเพื่อพิจารณาพ้นสภาพ"
+
+# key: grading.settings.dismissal_warning_count_help
+#: ninefruits/grading/settings_pages.py
+msgid "0 turns it off. The student is flagged for review; dismissal is a status change."
+msgstr "0 หมายถึงปิดใช้งาน นักศึกษาจะถูกทำเครื่องหมายเพื่อพิจารณา การพ้นสภาพดำเนินการผ่านการเปลี่ยนสถานภาพ"
+
+# key: grading.settings.dismissal_consecutive_only
+#: ninefruits/grading/settings_pages.py
+msgid "Count only consecutive warnings"
+msgstr "นับเฉพาะการรอพินิจติดต่อกัน"
+
+# key: grading.settings.honors_min_gpa
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum term GPA"
+msgstr "เกรดเฉลี่ยภาคการศึกษาขั้นต่ำ"
+
+# key: grading.settings.honors_min_credits
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum GPA credits in the term"
+msgstr "หน่วยกิตที่นำมาคิดเกรดเฉลี่ยขั้นต่ำในภาคการศึกษา"
+
+# key: grading.settings.honors_exclude_failing
+#: ninefruits/grading/settings_pages.py
+msgid "No honors with a failed course"
+msgstr "ไม่ให้เกียรตินิยมหากมีรายวิชาที่ไม่ผ่าน"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/grading/settings_pages.py
+msgid "Grading policy"
+msgstr "นโยบายการวัดผล"
+
+# key: grading.settings.scale
+#: ninefruits/grading/settings_pages.py
+msgid "Grade scale"
+msgstr "เกณฑ์ระดับคะแนน"
+
+# key: grading.settings.scale_fixed
+#: ninefruits/grading/settings_pages.py
+#, python-format
+msgid "Grade scale: %(scale)s (fixed at installation)."
+msgstr "เกณฑ์ระดับคะแนน: %(scale)s (กำหนดตอนติดตั้ง)"
+
+# key: grading.settings.gpa
+#: ninefruits/grading/settings_pages.py
+msgid "GPA"
+msgstr "เกรดเฉลี่ย"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "Term close %(term)s is running."
+msgstr "กำลังปิดภาคการศึกษา %(term)s"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "%(processed)s of %(total)s student group(s) done (%(progress)s%%)."
+msgstr "ดำเนินการกลุ่มนักศึกษาเสร็จ %(processed)s จาก %(total)s กลุ่ม (%(progress)s%%)"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+msgid "A part failed: start the close again after fixing the cause."
+msgstr "บางส่วนล้มเหลว: แก้ไขสาเหตุแล้วเริ่มปิดภาคการศึกษาใหม่อีกครั้ง"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "My teaching"
+msgstr "รายวิชาที่สอน"
+
+# key: grading.entry.title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/views/portal.py
+msgid "Grade entry"
+msgstr "การกรอกเกรด"
+
+# key: grading.entry.counts
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(none)s not entered, %(draft)s draft, %(submitted)s submitted, %(finalized)s final"
+msgstr "ยังไม่กรอก %(none)s ฉบับร่าง %(draft)s ส่งแล้ว %(submitted)s ยืนยันแล้ว %(finalized)s"
+
+# key: grading.entry.window_open
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is open."
+msgstr "เปิดให้กรอกเกรดแล้ว"
+
+# key: grading.entry.window_closed
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is closed."
+msgstr "ปิดการกรอกเกรดแล้ว"
+
+# key: grading.entry.absolute_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Enter each student's score (0–100). The grade follows from the score on %(scale)s. Choose a grade directly only for one without a score (e.g. I)."
+msgstr "กรอกคะแนนของนักศึกษาแต่ละคน (0–100) เกรดจะคำนวณจากคะแนนตาม %(scale)s เลือกเกรดโดยตรงเฉพาะเกรดที่ไม่มีคะแนน (เช่น I)"
+
+# key: grading.entry.relative_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Do not enter scores: give each student a grade."
+msgstr "ไม่ต้องกรอกคะแนน ให้เกรดแก่นักศึกษาแต่ละคน"
+
+# key: grading.entry.method_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change to %(method)s requested and waiting for the scheduling staff."
+msgstr "ขอเปลี่ยนเป็น %(method)s แล้ว รอเจ้าหน้าที่จัดตารางสอนพิจารณา"
+
+# key: grading.entry.method_request_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "To change to %(method)s, ask the scheduling staff with a reason (possible until grades are submitted)."
+msgstr "หากต้องการเปลี่ยนเป็น %(method)s กรุณาขอจากเจ้าหน้าที่จัดตารางสอนพร้อมเหตุผล (ทำได้จนกว่าจะส่งเกรด)"
+
+# key: grading.actions.request_method
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Request %(method)s"
+msgstr "ขอใช้ %(method)s"
+
+# key: grading.entry.exception_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submitted as an exception."
+msgstr "ส่งเป็นกรณียกเว้น"
+
+# key: grading.entry.exception_detail
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "By %(user)s on %(date)s, outside the grade caps."
+msgstr "โดย %(user)s เมื่อ %(date)s นอกสัดส่วนสูงสุดของเกรด"
+
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Score (%%)"
+msgstr "คะแนน (%%)"
+
+# key: grading.fields.grade
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "เกรด"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "Retake"
+msgstr "เรียนซ้ำ"
+
+# key: grading.entry.by_score
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "By score"
+msgstr "ตามคะแนน"
+
+# key: grading.entry.change_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change %(from)s → %(to)s requested"
+msgstr "ขอแก้ไข %(from)s → %(to)s แล้ว"
+
+# key: grading.actions.request_change
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Request change"
+msgstr "ขอแก้ไข"
+
+# key: grading.entry.no_students
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "No students."
+msgstr "ไม่มีนักศึกษา"
+
+# key: grading.entry.distribution_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grades against the caps"
+msgstr "เกรดเทียบกับสัดส่วนสูงสุด"
+
+# key: grading.entry.distribution_checked
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: each grade group must stay within its cap."
+msgstr "นักศึกษาที่ได้รับเกรด %(graded)s คน: แต่ละกลุ่มเกรดต้องไม่เกินสัดส่วนสูงสุด"
+
+# key: grading.entry.distribution_exempt
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: sections under %(minimum)s are not checked against the caps."
+msgstr "นักศึกษาที่ได้รับเกรด %(graded)s คน: กลุ่มเรียนที่มีน้อยกว่า %(minimum)s คนจะไม่ตรวจสอบสัดส่วนสูงสุด"
+
+# key: grading.fields.grade_group
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade group"
+msgstr "กลุ่มเกรด"
+
+# key: grading.fields.count
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Students"
+msgstr "นักศึกษา"
+
+# key: grading.entry.exception_reason_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)."
+msgstr "เกรดเกินสัดส่วนสูงสุด เจ้าหน้าที่ส่งได้โดยบันทึกเป็นกรณียกเว้น กรุณาระบุเหตุผล (ผู้ตรวจสอบจะได้รับแจ้ง และกลุ่มเรียนจะแสดงเหตุผลนี้)"
+
+# key: grading.fields.exception_reason
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Reason for the exception"
+msgstr "เหตุผลของกรณียกเว้น"
+
+# key: grading.actions.save_draft
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Save draft"
+msgstr "บันทึกฉบับร่าง"
+
+# key: grading.actions.validate_distribution
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Check grade caps"
+msgstr "ตรวจสอบสัดส่วนเกรด"
+
+# key: grading.entry.submit_confirm
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit the grades? You cannot change them afterwards; ask the office if one is wrong."
+msgstr "ยืนยันการส่งเกรด? หลังส่งแล้วจะแก้ไขไม่ได้ หากมีรายการผิดพลาดกรุณาติดต่อเจ้าหน้าที่"
+
+# key: grading.actions.submit
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit grades"
+msgstr "ส่งเกรด"
+
+# key: grading.entry.help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Save drafts any time; submit once every student has a grade."
+msgstr "บันทึกฉบับร่างได้ทุกเมื่อ และส่งเมื่อนักศึกษาทุกคนมีเกรดแล้ว"
+
+# key: assessment.portal.cancel
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+# key: grading.transcript.print
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Print"
+msgstr "พิมพ์"
+
+# key: grading.grades.blocked
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+#, python-format
+msgid "Your grades are not available: you have a hold (%(type)s). Contact the office that placed it."
+msgstr "ไม่สามารถดูผลการเรียนได้เนื่องจากท่านถูกระงับ (%(type)s) กรุณาติดต่อหน่วยงานที่ระงับ"
+
+# key: grading.grades.term_summary
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "เกรดเฉลี่ย %(gpa)s · ได้ %(earned)s จาก %(attempted)s หน่วยกิต"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "รหัส"
+
+# key: curriculum.fields.credits
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "หน่วยกิต"
+
+# key: grading.grades.superseded
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "replaced by a retake in the cumulative GPA"
+msgstr "ถูกแทนที่ด้วยการเรียนซ้ำในเกรดเฉลี่ยสะสม"
+
+# key: grading.grades.none
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "No final grades yet."
+msgstr "ยังไม่มีเกรดที่ยืนยันแล้ว"
+
+# key: grading.transcript.unofficial
+#: ninefruits/grading/templates/grading/transcript.html
+msgid "Unofficial grade report. Request an official transcript from the registrar."
+msgstr "รายงานผลการเรียนฉบับไม่เป็นทางการ หากต้องการใบแสดงผลการเรียนฉบับทางการ กรุณาติดต่อสำนักทะเบียน"
+
+# key: grading.transcript.printed_at
+#: ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgctxt "grading"
+msgid "Printed %(date)s"
+msgstr "พิมพ์เมื่อ %(date)s"
+
+# key: grading.entry.open
+#: ninefruits/grading/views/portal.py
+msgid "Enter grades"
+msgstr "กรอกเกรด"
+
+# key: grading.entry.saved
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) saved."
+msgstr "บันทึกเกรดแล้ว %(count)s รายการ"
+
+# key: grading.entry.distribution_ok
+#: ninefruits/grading/views/portal.py
+msgid "The grades are within the caps."
+msgstr "เกรดอยู่ภายในสัดส่วนสูงสุด"
+
+# key: grading.entry.submitted
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) submitted."
+msgstr "ส่งเกรดแล้ว %(count)s รายการ"
+
+#: ninefruits/grading/views/portal.py
+msgid "The reason is too long."
+msgstr "เหตุผลยาวเกินไป"
+
+# key: grading.entry.method_requested
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "Change to %(method)s requested. You will be told by email."
+msgstr "ขอเปลี่ยนเป็น %(method)s แล้ว ท่านจะได้รับแจ้งทางอีเมล"
+
+# key: grading.entry.change_requested
+#: ninefruits/grading/views/portal.py
+msgid "Grade change requested."
+msgstr "ส่งคำขอแก้ไขเกรดแล้ว"
+
+# key: admin.navigation.grading
+# key: grading.grades.title
+# key: permissions.resources.grades
+# key: portal.navigation.grades
+#: ninefruits/grading/views/portal.py
+msgid "Grades"
+msgstr "ผลการเรียน"
+
+#: ninefruits/grading/views/transcript.py
+msgid "The PDF could not be created. Try again later."
+msgstr "ไม่สามารถสร้าง PDF ได้ กรุณาลองใหม่ภายหลัง"

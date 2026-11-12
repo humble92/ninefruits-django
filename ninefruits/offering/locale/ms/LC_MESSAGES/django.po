@@ -1,0 +1,825 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: offering.errors.instructor_not_current
+#: ninefruits/offering/actions/assign_section_instructor.py
+msgid "This instructor is not employed when the session starts."
+msgstr "Pensyarah ini tidak berkhidmat semasa sesi bermula."
+
+# key: offering.errors.instructor_already_assigned
+#: ninefruits/offering/actions/assign_section_instructor.py
+msgid "This instructor is already assigned."
+msgstr "Pensyarah ini telah pun ditetapkan."
+
+# key: offering.errors.reason_required
+#: ninefruits/offering/actions/change_section_status.py
+msgid "Give a reason."
+msgstr "Nyatakan sebab."
+
+# key: offering.errors.copy_same_term
+#: ninefruits/offering/actions/copy_sections.py ninefruits/offering/admin/sections.py
+msgid "Choose two different terms."
+msgstr "Pilih dua semester yang berbeza."
+
+# key: offering.copy.exists
+#: ninefruits/offering/actions/copy_sections.py
+msgid "already offered in that term"
+msgstr "sudah ditawarkan dalam semester tersebut"
+
+# key: offering.copy.no_version
+#: ninefruits/offering/actions/copy_sections.py
+msgid "no course version in effect at the session start"
+msgstr "tiada versi kursus yang berkuat kuasa pada permulaan sesi"
+
+# key: offering.copy.instructor_left
+#: ninefruits/offering/actions/copy_sections.py
+#, python-format
+msgid "instructor %(instructor)s is no longer employed"
+msgstr "pensyarah %(instructor)s tidak lagi berkhidmat"
+
+# key: offering.copy.room_taken
+#: ninefruits/offering/actions/copy_sections.py
+#, python-format
+msgid "room taken at %(time)s, copied without a room"
+msgstr "bilik telah diambil pada %(time)s, disalin tanpa bilik"
+
+# key: offering.errors.no_course_version
+#: ninefruits/offering/actions/create_section.py
+#, python-format
+msgid "Course %(course)s has no version in effect on %(date)s."
+msgstr "Kursus %(course)s tiada versi yang berkuat kuasa pada %(date)s."
+
+# key: offering.errors.section_code_taken
+#: ninefruits/offering/actions/create_section.py
+msgid "This section number is already used for the course in this term."
+msgstr "Nombor seksyen ini sudah digunakan bagi kursus ini dalam semester ini."
+
+# key: offering.errors.meeting_outside_session
+#: ninefruits/offering/actions/save_section_meeting.py
+msgid "Meeting dates must be within the session."
+msgstr "Tarikh kelas mestilah dalam tempoh sesi."
+
+# key: offering.errors.meeting_time_order
+#: ninefruits/offering/actions/save_section_meeting.py ninefruits/offering/admin/sections.py
+msgctxt "offering"
+msgid "The end must be after the start."
+msgstr "Masa tamat mestilah selepas masa mula."
+
+#: ninefruits/offering/actions/update_section.py
+msgid "Choose a session of the section's term."
+msgstr "Pilih sesi dalam semester seksyen ini."
+
+# key: grading.errors.method_has_grades
+#: ninefruits/offering/actions/update_section.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "Gred sudah dimasukkan; kaedah penilaian tidak boleh diubah."
+
+# key: registration.errors.capacity_below_enrolled
+#: ninefruits/offering/actions/update_section.py
+#, python-format
+msgid "Capacity cannot be below the %(count)s students already registered."
+msgstr "Kapasiti tidak boleh kurang daripada %(count)s pelajar yang sudah berdaftar."
+
+# key: validation.required
+#: ninefruits/offering/actions/update_syllabus.py ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "Medan %(attribute)s diperlukan."
+
+# key: validation.max.string
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "Medan %(attribute)s tidak boleh melebihi %(max)s aksara."
+
+# key: validation.string
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be a string."
+msgstr "Medan %(attribute)s mestilah rentetan."
+
+# key: validation.max.array
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must not have more than %(max)s items."
+msgstr "Medan %(attribute)s tidak boleh mempunyai lebih daripada %(max)s item."
+
+# key: validation.between.numeric
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "Medan %(attribute)s mestilah antara %(min)s dan %(max)s."
+
+# key: validation.integer
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "Medan %(attribute)s mestilah integer."
+
+# key: offering.timetable.title
+#: ninefruits/offering/admin/__init__.py ninefruits/offering/admin/timetables.py
+msgid "Timetables"
+msgstr "Jadual waktu"
+
+# key: offering.notifications.copy_preview
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "Preview: %(created)s section(s) would be copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "Pratonton: %(created)s seksyen akan disalin, %(skipped)s dilangkau, %(with_notes)s dengan catatan."
+
+# key: offering.notifications.copied
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "%(created)s seksyen disalin, %(skipped)s dilangkau, %(with_notes)s dengan catatan."
+
+# key: validation.gte.numeric
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Medan %(attribute)s mestilah lebih besar daripada atau sama dengan %(value)s."
+
+# key: reference.fields.admission_year_to
+#: ninefruits/offering/admin/sections.py
+msgid "Admitted until (year)"
+msgstr "Kemasukan hingga (tahun)"
+
+# key: reference.fields.admission_year_from
+#: ninefruits/offering/admin/sections.py
+msgid "Admitted from (year)"
+msgstr "Kemasukan dari (tahun)"
+
+# key: offering.fields.session
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Session"
+msgstr "Sesi"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "course"
+msgstr "kursus"
+
+# key: offering.help.offering_unit
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Unit whose staff manage the section; the course's unit by default."
+msgstr "Unit yang kakitangannya mengurus seksyen; secara lalai unit kursus."
+
+# key: grading.help.evaluation_method
+#: ninefruits/offering/admin/sections.py
+msgid "Absolute (default): instructors enter scores and the grades follow. Relative: instructors give grades within the institution's grade caps. Instructors ask for a change from the grade entry screen; it cannot change once grades are submitted."
+msgstr "Mutlak (lalai): pensyarah memasukkan markah dan gred ditentukan daripadanya. Relatif: pensyarah memberi gred dalam had gred institusi. Pensyarah memohon perubahan daripada skrin kemasukan gred; ia tidak boleh diubah selepas gred dihantar."
+
+# key: offering.fields.section_code
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Section number"
+msgstr "Nombor seksyen"
+
+# key: validation.alpha_dash
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Medan %(attribute)s hanya boleh mengandungi huruf, nombor, sengkang dan garis bawah."
+
+# key: offering.help.change_session
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Moving to another session takes its dates and the course version in effect when it starts."
+msgstr "Memindahkan ke sesi lain mengambil tarikh sesi tersebut dan versi kursus yang berkuat kuasa semasa ia bermula."
+
+# key: offering.fields.time_slot
+#: ninefruits/offering/admin/sections.py
+msgid "Period"
+msgstr "Slot masa"
+
+# key: offering.help.time_slot
+#: ninefruits/offering/admin/sections.py
+msgid "Fills start and end from a period."
+msgstr "Mengisi masa mula dan tamat daripada slot masa."
+
+# key: offering.fields.weekday
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Day"
+msgstr "Hari"
+
+# key: offering.help.meeting_dates
+#: ninefruits/offering/admin/sections.py
+msgid "Empty: the session's dates."
+msgstr "Kosong: tarikh sesi."
+
+# key: offering.fields.start_time
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Start"
+msgstr "Mula"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "End"
+msgstr "Tamat"
+
+# key: validation.min.numeric
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "Medan %(attribute)s mestilah sekurang-kurangnya %(min)s."
+
+# key: offering.fields.capacity
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "offering"
+msgid "Capacity"
+msgstr "Kapasiti"
+
+# key: offering.errors.seat_groups_exceed_capacity
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "Reserved seats together exceed the section capacity (%(capacity)s)."
+msgstr "Jumlah tempat simpanan melebihi kapasiti seksyen (%(capacity)s)."
+
+# key: offering.resources.meetings.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "meeting"
+msgstr "waktu kelas"
+
+# key: offering.resources.meetings.plural_label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "meeting times"
+msgstr "waktu kelas"
+
+# key: offering.fields.instructors
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "offering"
+msgid "Instructors"
+msgstr "Pensyarah"
+
+# key: offering.resources.seat_groups.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "seat group"
+msgstr "kumpulan tempat"
+
+# key: offering.resources.seat_groups.plural_label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "reserved seats"
+msgstr "tempat simpanan"
+
+# key: offering.fields.seat_group_eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Students the seats are for"
+msgstr "Pelajar yang layak bagi tempat ini"
+
+# key: reference.resources.terms.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "term"
+msgstr "semester"
+
+# key: security.scope_types.global
+#: ninefruits/offering/admin/sections.py
+msgid "All"
+msgstr "Semua"
+
+# key: offering.fields.offering_unit
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Offering unit"
+msgstr "Unit penawar"
+
+# key: offering.fields.status
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Status"
+msgstr "Status"
+
+# key: common.reason
+#: ninefruits/offering/admin/sections.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Sebab"
+
+# key: offering.fields.from_term
+#: ninefruits/offering/admin/sections.py
+msgctxt "offering"
+msgid "Copy from"
+msgstr "Salin daripada"
+
+# key: offering.fields.to_term
+#: ninefruits/offering/admin/sections.py
+msgid "Copy into"
+msgstr "Salin ke"
+
+# key: offering.fields.dry_run
+#: ninefruits/offering/admin/sections.py
+msgid "Preview only"
+msgstr "Pratonton sahaja"
+
+# key: offering.help.dry_run
+#: ninefruits/offering/admin/sections.py
+msgid "Shows the result without saving."
+msgstr "Memaparkan hasil tanpa menyimpan."
+
+# key: offering.fields.section
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/teaching.html
+msgctxt "offering"
+msgid "Section"
+msgstr "Seksyen"
+
+# key: curriculum.fields.title
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/teaching.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Nama kursus"
+
+# key: curriculum.fields.credits
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Kredit"
+
+# key: offering.fields.schedule
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Schedule"
+msgstr "Jadual"
+
+# key: offering.fields.eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Who may register"
+msgstr "Siapa boleh mendaftar"
+
+# key: offering.help.eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Empty: everyone. Registration (Phase 5) checks it."
+msgstr "Kosong: semua orang. Pendaftaran kursus (Fasa 5) menyemaknya."
+
+# key: offering.fields.exclusion
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Who may not register"
+msgstr "Siapa tidak boleh mendaftar"
+
+# key: offering.help.exclusion
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Students matching this cannot register, e.g. the course's own majors for a general course."
+msgstr "Pelajar yang sepadan dengan syarat ini tidak boleh mendaftar, cth. pelajar major kursus itu sendiri bagi kursus umum."
+
+# key: offering.notifications.status_changed
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "Section is now %(status)s."
+msgstr "Seksyen kini %(status)s."
+
+# key: offering.actions.publish
+#: ninefruits/offering/admin/sections.py
+msgid "Publish"
+msgstr "Terbitkan"
+
+# key: offering.actions.unpublish
+#: ninefruits/offering/admin/sections.py
+msgid "Back to draft"
+msgstr "Kembali ke draf"
+
+# key: offering.actions.cancel
+#: ninefruits/offering/admin/sections.py
+msgid "Cancel section"
+msgstr "Batalkan seksyen"
+
+# key: offering.actions.reopen
+#: ninefruits/offering/admin/sections.py
+msgid "Reopen"
+msgstr "Buka semula"
+
+# key: offering.actions.syllabus
+# key: offering.syllabus.title
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Syllabus"
+msgstr "Rangka kursus"
+
+# key: offering.actions.copy_sections
+#: ninefruits/offering/admin/sections.py
+msgid "Copy from another term"
+msgstr "Salin daripada semester lain"
+
+# key: offering.help.copy_sections
+#: ninefruits/offering/admin/sections.py
+msgid "Copies sections that were not cancelled, in your scope, as drafts: instructors still employed, meetings with rooms (left out if the room is now taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr "Menyalin seksyen yang tidak dibatalkan, dalam skop anda, sebagai draf: pensyarah yang masih berkhidmat, waktu kelas beserta bilik (ditinggalkan jika bilik kini telah diambil), tempat simpanan dan draf rangka kursus. Sesi dipadankan mengikut kod."
+
+# key: offering.timetable.mode
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/templates/offering/admin/timetables.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Show"
+msgstr "Papar"
+
+# key: offering.fields.room
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py
+msgid "Room"
+msgstr "Bilik"
+
+# key: people.resources.instructors.label
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py
+msgid "instructor"
+msgstr "pensyarah"
+
+# key: portal.navigation.catalog
+#: ninefruits/offering/apps.py
+msgctxt "portal"
+msgid "Course catalog"
+msgstr "Katalog kursus"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/offering/apps.py ninefruits/offering/views/portal.py
+msgid "My teaching"
+msgstr "Pengajaran saya"
+
+# key: offering.section_statuses.draft
+# key: offering.syllabus.draft
+#: ninefruits/offering/enums.py ninefruits/offering/views/portal.py
+msgctxt "offering"
+msgid "Draft"
+msgstr "Draf"
+
+# key: offering.section_statuses.published
+#: ninefruits/offering/enums.py
+msgctxt "offering.section_statuses"
+msgid "Published"
+msgstr "Diterbitkan"
+
+# key: offering.section_statuses.cancelled
+#: ninefruits/offering/enums.py
+msgctxt "offering"
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+# key: offering.instructor_roles.primary
+#: ninefruits/offering/enums.py
+msgctxt "offering"
+msgid "Instructor"
+msgstr "Pensyarah"
+
+# key: offering.instructor_roles.co_instructor
+#: ninefruits/offering/enums.py
+msgid "Co-instructor"
+msgstr "Pensyarah bersama"
+
+# key: offering.instructor_roles.assistant
+#: ninefruits/offering/enums.py
+msgid "Teaching assistant"
+msgstr "Pembantu pengajar"
+
+# key: offering.fields.instruction_language
+#: ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Language of instruction"
+msgstr "Bahasa pengantar"
+
+# key: offering.help.instruction_language
+#: ninefruits/offering/models/section.py
+msgid "e.g. ko, en"
+msgstr "cth. ko, en"
+
+# key: offering.fields.note
+#: ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Note"
+msgstr "Catatan"
+
+# key: registration.fields.waitlist_capacity
+#: ninefruits/offering/models/section.py
+msgid "Waitlist size"
+msgstr "Saiz senarai menunggu"
+
+# key: registration.help.waitlist_capacity
+#: ninefruits/offering/models/section.py
+msgid "0 means no waitlist. Freed seats go to waiting students in order, after all rules are checked again."
+msgstr "0 bermaksud tiada senarai menunggu. Tempat kosong diberikan kepada pelajar yang menunggu mengikut giliran, selepas semua peraturan disemak semula."
+
+# key: grading.fields.evaluation_method
+#: ninefruits/offering/models/section.py
+msgid "Evaluation"
+msgstr "Penilaian"
+
+# key: offering.resources.sections.label
+#: ninefruits/offering/models/section.py
+msgid "section"
+msgstr "seksyen"
+
+# key: offering.resources.sections.plural_label
+#: ninefruits/offering/models/section.py
+msgid "sections"
+msgstr "seksyen"
+
+# key: offering.fields.instructor_role
+#: ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Role"
+msgstr "Peranan"
+
+# key: reference.fields.start_date
+#: ninefruits/offering/models/section.py
+msgid "Start date"
+msgstr "Tarikh mula"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/offering/models/section.py
+msgid "End date"
+msgstr "Tarikh tamat"
+
+# key: reference.fields.name
+#: ninefruits/offering/models/section.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nama"
+
+# key: offering.fields.releases_at
+#: ninefruits/offering/models/section.py
+msgid "Opens to everyone at"
+msgstr "Dibuka kepada semua pada"
+
+# key: offering.help.releases_at
+#: ninefruits/offering/models/section.py
+msgid "Unused reserved seats become open seats at this time."
+msgstr "Tempat simpanan yang tidak digunakan menjadi tempat terbuka pada masa ini."
+
+# key: reference.fields.sort_order
+#: ninefruits/offering/models/section.py
+msgid "Order"
+msgstr "Susunan"
+
+# key: offering.syllabus.language
+#: ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgctxt "offering"
+msgid "Language"
+msgstr "Bahasa"
+
+# key: offering.errors.instructor_conflict
+#: ninefruits/offering/services/schedule_conflicts.py
+#, python-format
+msgid "%(instructor)s already teaches %(section)s at this time."
+msgstr "%(instructor)s sudah mengajar %(section)s pada masa ini."
+
+# key: offering.errors.room_conflict
+#: ninefruits/offering/services/schedule_conflicts.py
+#, python-format
+msgid "The room is already booked at this time by %(section)s."
+msgstr "Bilik ini sudah ditempah pada masa ini oleh %(section)s."
+
+# key: offering.errors.meetings_overlap
+#: ninefruits/offering/services/schedule_conflicts.py
+msgid "This section already meets at an overlapping time."
+msgstr "Seksyen ini sudah mempunyai kelas pada masa yang bertindih."
+
+# key: offering.weekdays.1
+#: ninefruits/offering/services/timetable.py
+msgid "Mon"
+msgstr "Isn"
+
+# key: offering.weekdays.2
+#: ninefruits/offering/services/timetable.py
+msgid "Tue"
+msgstr "Sel"
+
+# key: offering.weekdays.3
+#: ninefruits/offering/services/timetable.py
+msgid "Wed"
+msgstr "Rab"
+
+# key: offering.weekdays.4
+#: ninefruits/offering/services/timetable.py
+msgid "Thu"
+msgstr "Kha"
+
+# key: offering.weekdays.5
+#: ninefruits/offering/services/timetable.py
+msgid "Fri"
+msgstr "Jum"
+
+# key: offering.weekdays.6
+#: ninefruits/offering/services/timetable.py
+msgid "Sat"
+msgstr "Sab"
+
+# key: offering.weekdays.7
+#: ninefruits/offering/services/timetable.py
+msgid "Sun"
+msgstr "Ahd"
+
+# key: offering.timetable.choose
+#: ninefruits/offering/templates/offering/admin/timetables.html
+msgid "Choose a term and a room or instructor."
+msgstr "Pilih semester dan bilik atau pensyarah."
+
+# key: offering.timetable.empty
+#: ninefruits/offering/templates/offering/partials/timetable.html
+msgid "Nothing scheduled."
+msgstr "Tiada jadual."
+
+# key: offering.catalog.all_units
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "All units"
+msgstr "Semua unit"
+
+# key: offering.catalog.search
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Search"
+msgstr "Cari"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Course code or title"
+msgstr "Kod atau nama kursus"
+
+# key: offering.catalog.credits
+#: ninefruits/offering/templates/offering/portal/catalog.html
+#, python-format
+msgid "%(credits)s credits"
+msgstr "%(credits)s kredit"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Instructor to be announced"
+msgstr "Pensyarah akan dimaklumkan"
+
+# key: offering.catalog.time_tba
+#: ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Time to be announced"
+msgstr "Masa akan dimaklumkan"
+
+# key: offering.syllabus.available
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Syllabus available"
+msgstr "Rangka kursus tersedia"
+
+# key: offering.catalog.none
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "No sections found."
+msgstr "Tiada seksyen ditemui."
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Pages"
+msgstr "Halaman"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Next"
+msgstr "Seterusnya"
+
+# key: offering.catalog.title
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/views/portal.py
+msgctxt "offering"
+msgid "Course catalog"
+msgstr "Katalog kursus"
+
+# key: offering.syllabus.hours
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+#, python-format
+msgid "lecture %(lecture)s h, lab %(lab)s h"
+msgstr "kuliah %(lecture)s j, amali %(lab)s j"
+
+# key: curriculum.fields.category
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Course category"
+msgstr "Kategori kursus"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Grading"
+msgstr "Penggredan"
+
+# key: curriculum.fields.requisites
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Requisites"
+msgstr "Syarat kursus"
+
+# key: curriculum.fields.description
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "curriculum"
+msgid "Description"
+msgstr "Keterangan"
+
+# key: offering.syllabus.edit
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html ninefruits/offering/views/portal.py
+msgid "Edit syllabus"
+msgstr "Sunting rangka kursus"
+
+# key: offering.syllabus.none
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "No syllabus yet."
+msgstr "Belum ada rangka kursus."
+
+# key: offering.syllabus.draft_notice
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Draft: students do not see it until it is published."
+msgstr "Draf: pelajar tidak dapat melihatnya sehingga diterbitkan."
+
+# key: offering.syllabus.assessment
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Assessment"
+msgstr "Penilaian"
+
+# key: offering.syllabus.weekly_plan
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Weekly plan"
+msgstr "Rancangan mingguan"
+
+# key: offering.syllabus.week
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+#, python-format
+msgid "Week %(week)s"
+msgstr "Minggu %(week)s"
+
+# key: offering.syllabus.publish
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Published (visible to students)"
+msgstr "Diterbitkan (dipaparkan kepada pelajar)"
+
+# key: offering.syllabus.assessment_item
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Item"
+msgstr "Item"
+
+# key: offering.syllabus.weight
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Weight"
+msgstr "Wajaran"
+
+# key: portal.profile.remove
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "Alih keluar"
+
+# key: offering.syllabus.add_assessment
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Add item"
+msgstr "Tambah item"
+
+# key: common.save
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Save"
+msgstr "Simpan"
+
+# key: offering.teaching.none
+#: ninefruits/offering/templates/offering/portal/teaching.html
+msgid "No sections in this term."
+msgstr "Tiada seksyen dalam semester ini."
+
+# key: curriculum.or
+#: ninefruits/offering/views/portal.py
+msgid "or"
+msgstr "atau"
+
+# key: offering.syllabus.overview
+#: ninefruits/offering/views/portal.py
+msgid "Overview"
+msgstr "Gambaran keseluruhan"
+
+# key: offering.syllabus.objectives
+#: ninefruits/offering/views/portal.py
+msgid "Learning objectives"
+msgstr "Hasil pembelajaran"
+
+# key: offering.syllabus.materials
+#: ninefruits/offering/views/portal.py
+msgid "Textbooks and materials"
+msgstr "Buku teks dan bahan"
+
+# key: offering.syllabus.policies
+#: ninefruits/offering/views/portal.py
+msgid "Course policies"
+msgstr "Peraturan kursus"
+
+# key: offering.syllabus.saved
+#: ninefruits/offering/views/portal.py
+msgid "Syllabus saved."
+msgstr "Rangka kursus disimpan."
+
+# key: offering.syllabus.published
+#: ninefruits/offering/views/portal.py
+msgctxt "offering.syllabus"
+msgid "Published"
+msgstr "Diterbitkan"
+
+# key: offering.syllabus.write
+#: ninefruits/offering/views/portal.py
+msgid "Write"
+msgstr "Tulis"

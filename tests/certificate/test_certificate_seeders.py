@@ -19,7 +19,10 @@ from ninefruits.setup.seeders.profiles.korean_university_certificates import see
 pytestmark = pytest.mark.django_db
 
 
-def test_seeds_three_kinds_with_templates_in_four_languages_once(essential_data: None) -> None:
+SHIPPED = {"en", "ko", "zh-hans", "lo", "de", "ru", "ms", "fil", "fr", "ja", "mn", "ne", "th", "tr", "uz", "vi"}
+
+
+def test_seeds_three_kinds_with_templates_in_every_shipped_language_once(essential_data: None) -> None:
     seed_certificate_types()
 
     kinds = {kind.code: kind for kind in CertificateType.objects.all()}
@@ -27,9 +30,9 @@ def test_seeds_three_kinds_with_templates_in_four_languages_once(essential_data:
     assert kinds["ENR"].audience == "enrolled"
     assert kinds["GRD"].audience == "graduated"
     assert kinds["TRN"].audience == "any" and kinds["TRN"].has_grades
-    assert set(kinds["ENR"].name_translations) == {"en", "ko", "zh-hans", "lo"}
+    assert set(kinds["ENR"].name_translations) == SHIPPED
     for kind in kinds.values():
-        assert set(kind.templates.values_list("locale", flat=True)) == {"en", "ko", "zh-hans", "lo"}
+        assert set(kind.templates.values_list("locale", flat=True)) == SHIPPED
     template = CertificateTemplate.objects.get(certificate_type=kinds["GRD"], locale="zh-hans")
     assert "{graduation_date}" in template.body
     assert template.footer == "可通过下方二维码或网址核验本证明。"
@@ -40,7 +43,7 @@ def test_seeds_three_kinds_with_templates_in_four_languages_once(essential_data:
     CertificateTemplate.objects.filter(certificate_type=kinds["TRN"], locale="lo").delete()
     seed_certificate_types()
     assert CertificateType.objects.count() == 3
-    assert CertificateTemplate.objects.count() == 11
+    assert CertificateTemplate.objects.count() == 3 * len(SHIPPED) - 1
     assert CertificateTemplate.objects.get(pk=template.pk).title == "毕业证明"
 
 
@@ -50,7 +53,7 @@ def test_the_korean_university_profile_includes_the_certificate_kinds(essential_
     KoreanUniversityProfileSeeder()()
     KoreanUniversityProfileSeeder()()
     assert CertificateType.objects.count() == 3
-    assert CertificateTemplate.objects.count() == 12
+    assert CertificateTemplate.objects.count() == 3 * len(SHIPPED)
 
 
 def _demo(seed: int) -> list[tuple[str, str, str]]:

@@ -1,0 +1,1320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/grading/actions/_support.py
+msgid "Enter a reason."
+msgstr "Sababini kiriting."
+
+# key: grading.errors.term_not_published
+#: ninefruits/grading/actions/close_term.py
+msgid "Only a published term closes."
+msgstr "Faqat eʼlon qilingan semestrni yopish mumkin."
+
+# key: grading.errors.term_not_ready
+#: ninefruits/grading/actions/close_term.py
+#, python-format
+msgid "%(count)s section(s) have grades that are not final."
+msgstr "%(count)s ta fan guruhida yakuniy boʻlmagan baholar bor."
+
+# key: grading.errors.not_all_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+#, python-format
+msgid "Not all grades are submitted (%(count)s missing)."
+msgstr "Hamma baholar topshirilmagan (%(count)s ta yetishmaydi)."
+
+# key: grading.errors.nothing_submitted
+#: ninefruits/grading/actions/finalize_grades.py
+msgid "There are no submitted grades."
+msgstr "Topshirilgan baholar yoʻq."
+
+# key: grading.errors.not_finalized
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "Only a final grade needs a change request."
+msgstr "Faqat yakuniy baho uchun oʻzgartirish soʻrovi kerak."
+
+# key: grading.errors.new_grade_required
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/views/portal.py
+msgid "Enter the new score or grade."
+msgstr "Yangi ball yoki bahoni kiriting."
+
+# key: grading.errors.same_grade
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "The new grade is the current grade."
+msgstr "Yangi baho joriy baho bilan bir xil."
+
+# key: grading.errors.request_pending
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "A change request for this grade is already open."
+msgstr "Bu baho boʻyicha oʻzgartirish soʻrovi allaqachon ochiq."
+
+# key: grading.errors.request_decided
+#: ninefruits/grading/actions/manage_grade_changes.py ninefruits/grading/actions/manage_method_requests.py
+msgid "The request is already decided."
+msgstr "Soʻrov boʻyicha qaror allaqachon qabul qilingan."
+
+# key: grading.errors.own_request
+#: ninefruits/grading/actions/manage_grade_changes.py
+msgid "You cannot decide your own request."
+msgstr "Oʻz soʻrovingiz boʻyicha qaror qabul qila olmaysiz."
+
+# key: grading.errors.same_method
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "The section already uses that evaluation method."
+msgstr "Fan guruhi allaqachon shu baholash usulidan foydalanadi."
+
+# key: grading.errors.method_request_pending
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "A change request for this section is already waiting."
+msgstr "Bu fan guruhi uchun oʻzgartirish soʻrovi allaqachon kutilmoqda."
+
+# key: grading.errors.method_has_grades
+#: ninefruits/grading/actions/manage_method_requests.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "Baholar allaqachon kiritilgan; baholash usulini oʻzgartirib boʻlmaydi."
+
+# key: grading.errors.scale_fixed
+#: ninefruits/grading/actions/save_grade_scale.py
+msgid "The grade scale is fixed at installation and cannot change."
+msgstr "Baholash shkalasi oʻrnatishda belgilangan va oʻzgarmaydi."
+
+# key: grading.errors.not_editable
+#: ninefruits/grading/actions/save_grades.py
+msgid "Some grades can no longer be changed here."
+msgstr "Baʼzi baholarni bu yerda endi oʻzgartirib boʻlmaydi."
+
+# key: grading.errors.over_caps
+#: ninefruits/grading/actions/save_grades.py
+msgid "The grades are outside the institution's grade caps. Adjust them, or ask the office."
+msgstr "Baholar muassasaning baho chegaralaridan tashqarida. Ularni tuzating yoki oʻquv boʻlimiga murojaat qiling."
+
+# key: grading.errors.exception_reason_required
+#: ninefruits/grading/actions/save_grades.py
+msgid "Submitting outside the grade caps needs a reason."
+msgstr "Baho chegaralaridan tashqari topshirish uchun sabab kerak."
+
+# key: grading.errors.missing_grades
+#: ninefruits/grading/actions/save_grades.py
+#, python-format
+msgid "%(count)s student(s) have no grade yet."
+msgstr "%(count)s ta talabaga hali baho qoʻyilmagan."
+
+# key: grading.errors.entry_closed
+#: ninefruits/grading/actions/save_grades.py
+msgid "Grade entry is not open for this section."
+msgstr "Bu fan guruhi uchun baho kiritish ochiq emas."
+
+# key: grading.fields.decision_note
+#: ninefruits/grading/admin/common.py ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Izoh"
+
+# key: reference.resources.terms.label
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgid "term"
+msgstr "semestr"
+
+# key: offering.fields.dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Preview only"
+msgstr "Faqat oldindan koʻrish"
+
+# key: grading.help.close_dry_run
+#: ninefruits/grading/admin/common.py
+msgid "Only check whether the term can close."
+msgstr "Faqat semestrni yopish mumkinligini tekshirish."
+
+# key: common.reason
+#: ninefruits/grading/admin/common.py ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/notifications.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Sabab"
+
+# key: common.yes
+#: ninefruits/grading/admin/common.py
+msgid "Yes"
+msgstr "Ha"
+
+# upstream: Django/allauth catalog
+#: ninefruits/grading/admin/common.py
+msgid "No"
+msgstr "Yo'q"
+
+# key: registration.fields.status
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Holat"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "Student number"
+msgstr "Talaba raqami"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "people"
+msgid "Name"
+msgstr "Ism"
+
+# key: offering.fields.section
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Fan guruhi"
+
+# key: grading.fields.change
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Change"
+msgstr "Oʻzgarish"
+
+# key: grading.fields.requested_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Soʻragan"
+
+# key: grading.fields.decided_by
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Decided by"
+msgstr "Qaror qabul qilgan"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgid "Approve"
+msgstr "Tasdiqlash"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/enums.py
+msgid "Approved"
+msgstr "Tasdiqlangan"
+
+# key: grading.help.approve
+#: ninefruits/grading/admin/grade_changes.py
+#, python-format
+msgid "The grade changes from %(from)s to %(to)s now, and the student's GPA is recalculated."
+msgstr "Baho hozir %(from)s dan %(to)s ga oʻzgaradi va talabaning GPA si qayta hisoblanadi."
+
+# key: grading.actions.reject
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Rad etish"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/admin/method_requests.py ninefruits/grading/enums.py
+msgid "Rejected"
+msgstr "Rad etilgan"
+
+# key: grading.actions.cancel_request
+#: ninefruits/grading/admin/grade_changes.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Soʻrovni bekor qilish"
+
+# key: grading.help.scale_fixed
+#: ninefruits/grading/admin/grade_scales.py
+msgid "The grade scale is fixed at installation: grades and GPAs are on it. It cannot be moved to another scale."
+msgstr "Baholash shkalasi oʻrnatishda belgilanadi: baholar va GPA lar unga asoslanadi. Uni boshqa shkalaga oʻtkazib boʻlmaydi."
+
+# key: validation.required
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s maydoni toʻldirilishi shart."
+
+# key: reference.fields.grade_points
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "Grade points"
+msgstr "Baho bali"
+
+# key: validation.max.numeric
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/settings_pages.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s."
+msgstr "%(attribute)s maydoni %(max)s dan katta boʻlmasligi kerak."
+
+# key: validation.gte.numeric
+#: ninefruits/grading/admin/grade_scales.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s maydoni %(value)s yoki undan katta boʻlishi kerak."
+
+# key: reference.fields.max_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "To (%)"
+msgstr "Gacha (%)"
+
+# key: reference.fields.min_percentage
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "From (%)"
+msgstr "Dan (%)"
+
+# key: reference.resources.grade_scale_items.label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grade"
+msgstr "baho"
+
+# key: reference.resources.grade_scale_items.plural_label
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgid "grades"
+msgstr "baholar"
+
+# key: reference.fields.name
+#: ninefruits/grading/admin/grade_scales.py ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nomi"
+
+# key: reference.fields.items_count
+#: ninefruits/grading/admin/grade_scales.py
+msgctxt "reference"
+msgid "Grades"
+msgstr "Baholar"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/grading/admin/method_requests.py ninefruits/grading/admin/section_grades.py ninefruits/grading/models/requests.py
+msgid "Evaluation"
+msgstr "Baholash usuli"
+
+# key: grading.notifications.method_approved
+#: ninefruits/grading/admin/method_requests.py
+#, python-format
+msgid "Approved. %(count)s draft grade(s) cleared."
+msgstr "Tasdiqlandi. %(count)s ta qoralama baho oʻchirildi."
+
+# key: grading.help.approve_method
+#: ninefruits/grading/admin/method_requests.py
+msgid "The section's evaluation method changes now. Draft grades entered under the old method are cleared; the instructor is told by email."
+msgstr "Fan guruhining baholash usuli hozir oʻzgaradi. Eski usulda kiritilgan qoralama baholar oʻchiriladi; oʻqituvchiga e-pochta orqali xabar beriladi."
+
+# key: offering.fields.offering_unit
+#: ninefruits/grading/admin/section_grades.py
+msgid "Offering unit"
+msgstr "Ochuvchi boʻlinma"
+
+# key: grading.fields.exception_submitted
+#: ninefruits/grading/admin/section_grades.py
+msgid "Submitted as an exception"
+msgstr "Istisno sifatida topshirilgan"
+
+# key: grading.fields.ready_to_finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Ready to finalize"
+msgstr "Yakunlashga tayyor"
+
+# key: curriculum.fields.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Nomi"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/grading/admin/section_grades.py
+msgid "Instructors"
+msgstr "Oʻqituvchilar"
+
+# key: grading.fields.pending
+#: ninefruits/grading/admin/section_grades.py
+msgid "Not submitted"
+msgstr "Topshirilmagan"
+
+# key: grading.fields.submitted
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading.fields"
+msgid "Submitted"
+msgstr "Topshirilgan"
+
+# key: grading.fields.finalized
+#: ninefruits/grading/admin/section_grades.py
+msgctxt "grading"
+msgid "Final"
+msgstr "Yakuniy"
+
+# key: grading.fields.exception
+#: ninefruits/grading/admin/section_grades.py
+msgid "Exception"
+msgstr "Istisno"
+
+# key: grading.actions.open_entry
+# key: grading.grades.title
+#: ninefruits/grading/admin/section_grades.py ninefruits/grading/apps.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Grades"
+msgstr "Baholar"
+
+# key: grading.actions.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize"
+msgstr "Yakunlash"
+
+# key: grading.notifications.finalized
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) finalized."
+msgstr "%(count)s ta baho yakunlandi."
+
+# key: grading.help.finalize
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalized grades are final: they change only through an approved grade change request. Students see them from now on."
+msgstr "Yakunlangan baholar qatʼiy: ular faqat tasdiqlangan baho oʻzgartirish soʻrovi orqali oʻzgaradi. Endi talabalar ularni koʻradi."
+
+# key: grading.actions.return
+#: ninefruits/grading/admin/section_grades.py
+msgid "Return to instructor"
+msgstr "Oʻqituvchiga qaytarish"
+
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "%(count)s grade(s) returned."
+msgstr "%(count)s ta baho qaytarildi."
+
+# key: grading.actions.finalize_selected
+#: ninefruits/grading/admin/section_grades.py
+msgid "Finalize selected"
+msgstr "Tanlanganlarni yakunlash"
+
+# key: grading.notifications.skipped
+#: ninefruits/grading/admin/section_grades.py
+#, python-format
+msgid "Not finalized: %(sections)s"
+msgstr "Yakunlanmadi: %(sections)s"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Academic standing"
+msgstr "Akademik holat"
+
+# key: grading.fields.honors
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgctxt "grading"
+msgid "Honors"
+msgstr "Imtiyozli (aʼlo)"
+
+# key: reference.resources.programs.label
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/transcript.html
+msgid "program"
+msgstr "taʼlim dasturi"
+
+# key: grading.fields.earned_credits
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Toʻplangan kreditlar"
+
+# key: grading.fields.closed
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Closed"
+msgstr "Yopilgan"
+
+# key: grading.transcript.title
+#: ninefruits/grading/admin/term_records.py ninefruits/grading/templates/grading/transcript.html ninefruits/grading/views/transcript.py
+msgid "Grade report"
+msgstr "Baholar hisoboti"
+
+# key: grading.actions.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Close term"
+msgstr "Semestrni yopish"
+
+# key: grading.help.close_term
+#: ninefruits/grading/admin/term_records.py
+msgid "Every grade of the term must be final. Closing calculates term records, academic standing and honors, and moves the term to grades closed."
+msgstr "Semestrning barcha baholari yakuniy boʻlishi kerak. Yopish semestr natijalari, akademik holat va imtiyozlarni hisoblaydi hamda semestrni baholar yopilgan holatiga oʻtkazadi."
+
+# key: grading.notifications.close_ready
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Ready to close: %(students)s student(s)."
+msgstr "Yopishga tayyor: %(students)s ta talaba."
+
+# key: grading.notifications.close_blocked
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "Cannot close yet: %(sections)s section(s) have grades that are not final."
+msgstr "Hali yopib boʻlmaydi: %(sections)s ta fan guruhida yakuniy boʻlmagan baholar bor."
+
+# key: grading.notifications.open_section
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(section)s: %(count)s not final"
+msgstr "%(section)s: %(count)s ta yakuniy emas"
+
+# key: grading.notifications.close_started
+#: ninefruits/grading/admin/term_records.py
+msgid "Term close started. The term moves to grades closed when it finishes."
+msgstr "Semestrni yopish boshlandi. Tugagach semestr baholar yopilgan holatiga oʻtadi."
+
+# key: grading.actions.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculate"
+msgstr "Qayta hisoblash"
+
+# key: grading.notifications.recalculated
+#: ninefruits/grading/admin/term_records.py
+#, python-format
+msgid "%(count)s student(s) recalculated."
+msgstr "%(count)s ta talaba qayta hisoblandi."
+
+# key: grading.help.recalculate
+#: ninefruits/grading/admin/term_records.py
+msgid "Recalculates credits and GPA from final grades, e.g. after a policy change. Standing and honors stay as decided at term close."
+msgstr "Kreditlar va GPA ni yakuniy baholardan qayta hisoblaydi, masalan siyosat oʻzgargandan keyin. Akademik holat va imtiyozlar semestr yopilganda qanday aniqlangan boʻlsa, shunday qoladi."
+
+# key: grading.applies_to.graded
+#: ninefruits/grading/enums.py
+msgid "Graded courses"
+msgstr "Baholanadigan fanlar"
+
+# key: grading.applies_to.pass_fail
+#: ninefruits/grading/enums.py
+msgid "Pass/fail courses"
+msgstr "Oʻtdi/oʻtmadi fanlari"
+
+# key: grading.applies_to.both
+#: ninefruits/grading/enums.py
+msgid "Both"
+msgstr "Ikkalasi"
+
+# key: grading.evaluation_methods.absolute
+#: ninefruits/grading/enums.py
+msgid "Absolute evaluation"
+msgstr "Mutlaq baholash"
+
+# key: grading.settings.relative
+# key: grading.evaluation_methods.relative
+#: ninefruits/grading/enums.py ninefruits/grading/settings_pages.py
+msgid "Relative evaluation"
+msgstr "Nisbiy baholash"
+
+# key: grading.standings.good
+#: ninefruits/grading/enums.py
+msgid "Good standing"
+msgstr "Yaxshi holat"
+
+# key: grading.standings.warning
+#: ninefruits/grading/enums.py
+msgid "Academic warning"
+msgstr "Akademik ogohlantirish"
+
+# key: grading.standings.dismissal_review
+#: ninefruits/grading/enums.py
+msgid "Dismissal review"
+msgstr "Chetlashtirishni koʻrib chiqish"
+
+# key: registration.grade_statuses.none
+#: ninefruits/grading/enums.py
+msgid "No grade"
+msgstr "Baho yoʻq"
+
+# key: registration.grade_statuses.draft
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Draft"
+msgstr "Qoralama"
+
+# key: registration.grade_statuses.submitted
+#: ninefruits/grading/enums.py
+msgctxt "registration.grade_statuses"
+msgid "Submitted"
+msgstr "Topshirilgan"
+
+# key: registration.grade_statuses.finalized
+#: ninefruits/grading/enums.py
+msgctxt "registration"
+msgid "Final"
+msgstr "Yakuniy"
+
+# key: grading.gpa_roundings.round
+#: ninefruits/grading/enums.py
+msgid "Round half up"
+msgstr "Matematik yaxlitlash"
+
+# key: grading.gpa_roundings.floor
+#: ninefruits/grading/enums.py
+msgid "Cut off"
+msgstr "Tashlab yuborish"
+
+# key: grading.retake_policies.latest
+#: ninefruits/grading/enums.py
+msgid "Latest attempt"
+msgstr "Oxirgi urinish"
+
+# key: grading.retake_policies.best
+#: ninefruits/grading/enums.py
+msgid "Best attempt"
+msgstr "Eng yaxshi urinish"
+
+# key: grading.change_statuses.pending
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Pending"
+msgstr "Kutilmoqda"
+
+# key: grading.change_statuses.cancelled
+#: ninefruits/grading/enums.py
+msgctxt "grading"
+msgid "Cancelled"
+msgstr "Bekor qilingan"
+
+# key: reference.fields.code
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: reference.fields.max_grade_points
+#: ninefruits/grading/models/grade_scale.py
+msgid "Maximum grade points"
+msgstr "Maksimal baho bali"
+
+# key: reference.fields.is_default
+#: ninefruits/grading/models/grade_scale.py
+msgid "Default"
+msgstr "Standart"
+
+# key: reference.resources.grade_scales.label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scale"
+msgstr "baholash shkalasi"
+
+# key: reference.resources.grade_scales.plural_label
+#: ninefruits/grading/models/grade_scale.py
+msgid "grade scales"
+msgstr "baholash shkalalari"
+
+# key: reference.fields.grade
+#: ninefruits/grading/models/grade_scale.py
+msgctxt "reference"
+msgid "Grade"
+msgstr "Baho"
+
+# key: reference.fields.counts_in_gpa
+#: ninefruits/grading/models/grade_scale.py
+msgid "Counts in GPA"
+msgstr "GPA ga hisoblanadi"
+
+# key: reference.fields.is_passing
+#: ninefruits/grading/models/grade_scale.py
+msgid "Passing"
+msgstr "Oʻtish bahosi"
+
+# key: certificate.fields.audience
+#: ninefruits/grading/models/grade_scale.py
+msgid "For"
+msgstr "Kim uchun"
+
+# key: grading.help.applies_to
+#: ninefruits/grading/models/grade_scale.py
+msgid "Letter grades are for graded courses, P/NP for pass/fail courses; \"both\" e.g. for I (incomplete)."
+msgstr "Harfli baholar baholanadigan fanlar uchun, P/NP oʻtdi/oʻtmadi fanlari uchun; \"ikkalasi\" masalan I (tugallanmagan) uchun."
+
+# key: reference.fields.sort_order
+#: ninefruits/grading/models/grade_scale.py
+msgid "Order"
+msgstr "Tartib"
+
+# key: grading.fields.new_grade
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "New grade"
+msgstr "Yangi baho"
+
+# key: grading.fields.new_score
+#: ninefruits/grading/models/requests.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "New score"
+msgstr "Yangi ball"
+
+# key: grading.fields.requested_at
+#: ninefruits/grading/models/requests.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Soʻralgan"
+
+# key: grading.resources.grade_changes.label
+#: ninefruits/grading/models/requests.py
+msgid "grade change"
+msgstr "bahoni oʻzgartirish"
+
+# key: grading.resources.grade_changes.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "grade changes"
+msgstr "baholarni oʻzgartirish"
+
+# key: grading.resources.method_requests.label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method request"
+msgstr "baholash usuli soʻrovi"
+
+# key: grading.resources.method_requests.plural_label
+#: ninefruits/grading/models/requests.py
+msgid "evaluation method requests"
+msgstr "baholash usuli soʻrovlari"
+
+# key: grading.resources.section_grades.label
+# key: grading.resources.section_grades.plural_label
+#: ninefruits/grading/models/section_grade.py
+msgid "grade progress"
+msgstr "baholash jarayoni"
+
+# key: people.resources.student_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "student record"
+msgstr "talaba yozuvi"
+
+# key: grading.fields.attempted_credits
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Attempted credits"
+msgstr "Olingan kreditlar"
+
+# key: grading.fields.term_gpa
+# key: graduation.report_columns.term_gpa
+#: ninefruits/grading/models/term_record.py
+msgid "Term GPA"
+msgstr "Semestr GPA"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/grading/models/term_record.py ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Umumiy GPA"
+
+# key: grading.fields.warning_count
+# key: graduation.report_columns.warning_count
+#: ninefruits/grading/models/term_record.py
+msgid "Warnings"
+msgstr "Ogohlantirishlar"
+
+# key: grading.fields.honors_rank
+#: ninefruits/grading/models/term_record.py
+msgctxt "grading"
+msgid "Honors rank"
+msgstr "Reyting oʻrni"
+
+# key: grading.resources.term_records.label
+#: ninefruits/grading/models/term_record.py
+msgid "term record"
+msgstr "semestr natijasi"
+
+# key: grading.resources.term_records.plural_label
+#: ninefruits/grading/models/term_record.py
+msgid "term records"
+msgstr "semestr natijalari"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/grading/notifications.py
+msgid "Hello,"
+msgstr "Assalomu alaykum,"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Rahmat,\n"
+"%(app)s"
+
+# key: grading.mail.returned_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades returned: %(section)s"
+msgstr "Baholar qaytarildi: %(section)s"
+
+# key: grading.mail.returned_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The grades of %(section)s were returned to you. Please check them and submit again."
+msgstr "%(section)s baholari sizga qaytarildi. Iltimos, ularni tekshirib, qayta topshiring."
+
+# key: grading.mail.open_grade_entry
+#: ninefruits/grading/notifications.py
+msgid "Open grade entry"
+msgstr "Baho kiritishni ochish"
+
+# key: grading.mail.missing_subject
+#: ninefruits/grading/notifications.py
+msgid "Grades not submitted yet"
+msgstr "Baholar hali topshirilmagan"
+
+# key: grading.mail.missing_intro
+#: ninefruits/grading/notifications.py
+msgid "These sections still have grades that are not submitted:"
+msgstr "Quyidagi fan guruhlarida hali topshirilmagan baholar bor:"
+
+# key: grading.mail.open_teaching
+#: ninefruits/grading/notifications.py
+msgid "Open my teaching"
+msgstr "Mening darslarimni ochish"
+
+# key: grading.mail.method_approved_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method changed: %(section)s"
+msgstr "Baholash usuli oʻzgartirildi: %(section)s"
+
+# key: grading.mail.method_approved_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(section)s is now evaluated by %(method)s."
+msgstr "%(section)s endi %(method)s bilan baholanadi."
+
+# key: grading.mail.method_rejected_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Evaluation method request rejected: %(section)s"
+msgstr "Baholash usuli soʻrovi rad etildi: %(section)s"
+
+# key: grading.mail.method_rejected_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The request to evaluate %(section)s by %(method)s was rejected."
+msgstr "%(section)s ni %(method)s bilan baholash soʻrovi rad etildi."
+
+# key: grading.mail.method_drafts_cleared
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(count)s draft grade(s) entered under the old method were cleared; please enter them again."
+msgstr "Eski usulda kiritilgan %(count)s ta qoralama baho oʻchirildi; iltimos, ularni qayta kiriting."
+
+# key: grading.mail.exception_subject
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Grades submitted outside the caps: %(section)s"
+msgstr "Baholar chegaralardan tashqari topshirildi: %(section)s"
+
+# key: grading.mail.exception_intro
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(user)s submitted the grades of %(section)s outside the institution's grade caps."
+msgstr "%(user)s %(section)s baholarini muassasaning baho chegaralaridan tashqari topshirdi."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "Term closed: %(term)s"
+msgstr "Semestr yopildi: %(term)s"
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "The term close of %(term)s finished. The term is now grades closed."
+msgstr "%(term)s semestrini yopish tugadi. Semestr endi baholar yopilgan holatida."
+
+#: ninefruits/grading/notifications.py
+#, python-format
+msgid "%(records)s term record(s), %(warnings)s academic warning(s), %(dismissal_reviews)s dismissal review(s), %(honors)s honors student(s)."
+msgstr "%(records)s ta semestr natijasi, %(warnings)s ta akademik ogohlantirish, %(dismissal_reviews)s ta chetlashtirishni koʻrib chiqish, %(honors)s ta aʼlochi talaba."
+
+#: ninefruits/grading/notifications.py
+msgid "Open term records"
+msgstr "Semestr natijalarini ochish"
+
+# key: grading.distribution.over
+#: ninefruits/grading/services/distribution.py
+#, python-format
+msgid "%(group)s: %(percent)s%% of the students, cap %(cap)s%% (up to %(limit)s%% allowed)"
+msgstr "%(group)s: talabalarning %(percent)s%% i, chegara %(cap)s%% (%(limit)s%% gacha ruxsat)"
+
+# key: validation.numeric
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s maydoni son boʻlishi kerak."
+
+# key: grading.fields.score
+#: ninefruits/grading/services/options.py
+msgid "Score (%)"
+msgstr "Ball (%)"
+
+# key: grading.errors.no_default_scale
+#: ninefruits/grading/services/options.py
+msgid "There is no default grade scale."
+msgstr "Standart baholash shkalasi yoʻq."
+
+# key: grading.errors.no_score_here
+#: ninefruits/grading/services/options.py
+msgid "This section takes grades only (relative evaluation or a pass/fail course): leave the score empty."
+msgstr "Bu fan guruhi faqat baho qabul qiladi (nisbiy baholash yoki oʻtdi/oʻtmadi fani): ballni boʻsh qoldiring."
+
+# key: grading.errors.score_without_grade
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "No grade covers the score %(score)s."
+msgstr "%(score)s bali uchun mos baho yoʻq."
+
+# key: grading.errors.grade_not_allowed
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "The grade %(grade)s is not allowed for this course."
+msgstr "%(grade)s bahosi bu fan uchun ruxsat etilmagan."
+
+# key: grading.errors.above_retake_cap
+#: ninefruits/grading/services/options.py
+#, python-format
+msgid "A retake can receive at most %(grade)s."
+msgstr "Qayta oʻqishga eng koʻpi bilan %(grade)s qoʻyish mumkin."
+
+#: ninefruits/grading/settings_pages.py
+msgid "Write each cap as a letter and a percentage, e.g. A=30, B=40."
+msgstr "Har bir chegarani harf va foiz bilan yozing, masalan A=30, B=40."
+
+# key: grading.fields.cap
+#: ninefruits/grading/settings_pages.py ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cap"
+msgstr "Chegara"
+
+# key: grading.settings.no_cap
+#: ninefruits/grading/settings_pages.py
+msgid "No cap"
+msgstr "Chegarasiz"
+
+# key: grading.settings.gpa_decimals
+#: ninefruits/grading/settings_pages.py
+msgid "Decimals"
+msgstr "Kasr xonalari"
+
+# key: grading.settings.gpa_rounding
+#: ninefruits/grading/settings_pages.py
+msgid "Rounding"
+msgstr "Yaxlitlash"
+
+# key: grading.settings.retake_policy
+#: ninefruits/grading/settings_pages.py
+msgid "Retakes in the cumulative GPA"
+msgstr "Umumiy GPA da qayta oʻqishlar"
+
+# key: grading.settings.retake_policy_help
+#: ninefruits/grading/settings_pages.py
+msgid "Term GPAs always keep every grade of their term."
+msgstr "Semestr GPA si har doim oʻsha semestrning barcha baholarini saqlaydi."
+
+# key: grading.settings.retake_max_grade
+#: ninefruits/grading/settings_pages.py
+msgid "Highest grade for a retake"
+msgstr "Qayta oʻqish uchun eng yuqori baho"
+
+# key: grading.settings.retake_max_grade_help
+#: ninefruits/grading/settings_pages.py
+msgid "Grades above it cannot be given to a retake."
+msgstr "Qayta oʻqishga bundan yuqori baho qoʻyib boʻlmaydi."
+
+# key: grading.settings.relative_grade_caps
+#: ninefruits/grading/settings_pages.py
+msgid "Grade caps"
+msgstr "Baho chegaralari"
+
+# key: grading.settings.relative_grade_caps_help
+#: ninefruits/grading/settings_pages.py
+msgid "The most a grade group (the letter: A for A+, A0, A-) may take of a section's graded students. Groups without a cap are free."
+msgstr "Baho guruhi (harf: A+, A0, A- uchun A) fan guruhidagi baholangan talabalarning eng koʻpi bilan qancha ulushini olishi mumkin. Chegarasiz guruhlar erkin."
+
+# key: grading.settings.relative_cap_tolerance_percent
+#: ninefruits/grading/settings_pages.py
+msgid "Tolerance above the cap"
+msgstr "Chegaradan yuqori ruxsat etilgan ogʻish"
+
+# key: grading.settings.relative_minimum_students
+#: ninefruits/grading/settings_pages.py
+msgid "Check from this many graded students"
+msgstr "Shuncha baholangan talabadan boshlab tekshirish"
+
+# key: grading.settings.relative_minimum_students_help
+#: ninefruits/grading/settings_pages.py
+msgid "Smaller sections are not checked against the caps."
+msgstr "Kichikroq fan guruhlari chegaralar boʻyicha tekshirilmaydi."
+
+# key: grading.settings.warning_gpa_below
+#: ninefruits/grading/settings_pages.py
+msgid "Warning when the term GPA is below"
+msgstr "Semestr GPA si quyidagidan past boʻlsa ogohlantirish"
+
+# key: grading.settings.warning_gpa_below_help
+#: ninefruits/grading/settings_pages.py
+msgid "A term with only pass/fail courses gives no warning."
+msgstr "Faqat oʻtdi/oʻtmadi fanlaridan iborat semestr ogohlantirish bermaydi."
+
+# key: grading.settings.standing_regular_terms_only
+#: ninefruits/grading/settings_pages.py
+msgid "Judge only regular terms (not summer or winter)"
+msgstr "Faqat asosiy semestrlarni hisobga olish (yozgi yoki qishki emas)"
+
+# key: grading.settings.dismissal_warning_count
+#: ninefruits/grading/settings_pages.py
+msgid "Warnings for dismissal review"
+msgstr "Chetlashtirishni koʻrib chiqish uchun ogohlantirishlar soni"
+
+# key: grading.settings.dismissal_warning_count_help
+#: ninefruits/grading/settings_pages.py
+msgid "0 turns it off. The student is flagged for review; dismissal is a status change."
+msgstr "0 — oʻchirilgan. Talaba koʻrib chiqish uchun belgilanadi; chetlashtirish — maqom oʻzgarishi."
+
+# key: grading.settings.dismissal_consecutive_only
+#: ninefruits/grading/settings_pages.py
+msgid "Count only consecutive warnings"
+msgstr "Faqat ketma-ket ogohlantirishlarni hisoblash"
+
+# key: grading.settings.honors_min_gpa
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum term GPA"
+msgstr "Minimal semestr GPA si"
+
+# key: grading.settings.honors_min_credits
+#: ninefruits/grading/settings_pages.py
+msgid "Minimum GPA credits in the term"
+msgstr "Semestrdagi minimal GPA kreditlari"
+
+# key: grading.settings.honors_exclude_failing
+#: ninefruits/grading/settings_pages.py
+msgid "No honors with a failed course"
+msgstr "Oʻzlashtirilmagan fan boʻlsa imtiyoz berilmaydi"
+
+# key: grading.settings.title
+# key: permissions.resources.grading_policies
+#: ninefruits/grading/settings_pages.py
+msgid "Grading policy"
+msgstr "Baholash siyosati"
+
+# key: grading.settings.scale
+#: ninefruits/grading/settings_pages.py
+msgid "Grade scale"
+msgstr "Baholash shkalasi"
+
+# key: grading.settings.scale_fixed
+#: ninefruits/grading/settings_pages.py
+#, python-format
+msgid "Grade scale: %(scale)s (fixed at installation)."
+msgstr "Baholash shkalasi: %(scale)s (oʻrnatishda belgilangan)."
+
+# key: grading.settings.gpa
+#: ninefruits/grading/settings_pages.py
+msgid "GPA"
+msgstr "GPA"
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "Term close %(term)s is running."
+msgstr "%(term)s semestrini yopish bajarilmoqda."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+#, python-format
+msgid "%(processed)s of %(total)s student group(s) done (%(progress)s%%)."
+msgstr "%(total)s ta talabalar guruhidan %(processed)s tasi bajarildi (%(progress)s%%)."
+
+#: ninefruits/grading/templates/grading/admin/term_close_progress.html
+msgid "A part failed: start the close again after fixing the cause."
+msgstr "Bir qismi bajarilmadi: sababini bartaraf etib, yopishni qaytadan boshlang."
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "My teaching"
+msgstr "Mening darslarim"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/views/portal.py
+msgid "Grade entry"
+msgstr "Baho kiritish"
+
+# key: grading.entry.counts
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(none)s not entered, %(draft)s draft, %(submitted)s submitted, %(finalized)s final"
+msgstr "%(none)s ta kiritilmagan, %(draft)s ta qoralama, %(submitted)s ta topshirilgan, %(finalized)s ta yakuniy"
+
+# key: grading.entry.window_open
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is open."
+msgstr "Baho kiritish ochiq."
+
+# key: grading.entry.window_closed
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade entry is closed."
+msgstr "Baho kiritish yopiq."
+
+# key: grading.entry.absolute_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Enter each student's score (0–100). The grade follows from the score on %(scale)s. Choose a grade directly only for one without a score (e.g. I)."
+msgstr "Har bir talabaning balini kiriting (0–100). Baho %(scale)s boʻyicha baldan kelib chiqadi. Faqat balsiz baho (masalan, I) uchun bahoni bevosita tanlang."
+
+# key: grading.entry.relative_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Do not enter scores: give each student a grade."
+msgstr "Ball kiritmang: har bir talabaga baho qoʻying."
+
+# key: grading.entry.method_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change to %(method)s requested and waiting for the scheduling staff."
+msgstr "%(method)s ga oʻzgartirish soʻralgan va dars jadvali xodimlarini kutmoqda."
+
+# key: grading.entry.method_request_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "To change to %(method)s, ask the scheduling staff with a reason (possible until grades are submitted)."
+msgstr "%(method)s ga oʻtish uchun dars jadvali xodimlaridan sababini koʻrsatib soʻrang (baholar topshirilguncha mumkin)."
+
+# key: grading.actions.request_method
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Request %(method)s"
+msgstr "%(method)s ni soʻrash"
+
+# key: grading.entry.exception_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submitted as an exception."
+msgstr "Istisno sifatida topshirilgan."
+
+# key: grading.entry.exception_detail
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "By %(user)s on %(date)s, outside the grade caps."
+msgstr "%(user)s tomonidan %(date)s da, baho chegaralaridan tashqari."
+
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Score (%%)"
+msgstr "Ball (%%)"
+
+# key: grading.fields.grade
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Baho"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/grading/templates/grading/portal/grade_entry.html ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "Retake"
+msgstr "Qayta oʻqish"
+
+# key: grading.entry.by_score
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "By score"
+msgstr "Ball boʻyicha"
+
+# key: grading.entry.change_pending
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "Change %(from)s → %(to)s requested"
+msgstr "%(from)s → %(to)s oʻzgartirish soʻralgan"
+
+# key: grading.actions.request_change
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Request change"
+msgstr "Oʻzgartirishni soʻrash"
+
+# key: grading.entry.no_students
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "No students."
+msgstr "Talabalar yoʻq."
+
+# key: grading.entry.distribution_title
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grades against the caps"
+msgstr "Baholar va chegaralar"
+
+# key: grading.entry.distribution_checked
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: each grade group must stay within its cap."
+msgstr "%(graded)s ta baholangan talaba: har bir baho guruhi oʻz chegarasidan oshmasligi kerak."
+
+# key: grading.entry.distribution_exempt
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+#, python-format
+msgid "%(graded)s graded students: sections under %(minimum)s are not checked against the caps."
+msgstr "%(graded)s ta baholangan talaba: %(minimum)s tadan kam fan guruhlari chegaralar boʻyicha tekshirilmaydi."
+
+# key: grading.fields.grade_group
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Grade group"
+msgstr "Baho guruhi"
+
+# key: grading.fields.count
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Students"
+msgstr "Talabalar"
+
+# key: grading.entry.exception_reason_help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "The grades are outside the caps. Staff may submit anyway as a recorded exception: give the reason (reviewers are told, and the section shows it)."
+msgstr "Baholar chegaralardan tashqarida. Xodimlar baribir qayd etiladigan istisno sifatida topshirishi mumkin: sababini koʻrsating (tekshiruvchilarga xabar beriladi va fan guruhida koʻrsatiladi)."
+
+# key: grading.fields.exception_reason
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Reason for the exception"
+msgstr "Istisno sababi"
+
+# key: grading.actions.save_draft
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgctxt "grading"
+msgid "Save draft"
+msgstr "Qoralamani saqlash"
+
+# key: grading.actions.validate_distribution
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Check grade caps"
+msgstr "Baho chegaralarini tekshirish"
+
+# key: grading.entry.submit_confirm
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit the grades? You cannot change them afterwards; ask the office if one is wrong."
+msgstr "Baholarni topshirasizmi? Keyin ularni oʻzgartirib boʻlmaydi; xato boʻlsa, oʻquv boʻlimiga murojaat qiling."
+
+# key: grading.actions.submit
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Submit grades"
+msgstr "Baholarni topshirish"
+
+# key: grading.entry.help
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Save drafts any time; submit once every student has a grade."
+msgstr "Qoralamalarni istalgan vaqtda saqlang; har bir talabaga baho qoʻyilgach topshiring."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/grading/templates/grading/portal/grade_entry.html
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+# key: grading.transcript.print
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "Print"
+msgstr "Chop etish"
+
+# key: grading.grades.blocked
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+#, python-format
+msgid "Your grades are not available: you have a hold (%(type)s). Contact the office that placed it."
+msgstr "Baholaringiz mavjud emas: sizda cheklov bor (%(type)s). Uni qoʻygan boʻlimga murojaat qiling."
+
+# key: grading.grades.term_summary
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "GPA %(gpa)s · %(attempted)s kreditdan %(earned)s tasi toʻplandi"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Kod"
+
+# key: curriculum.fields.credits
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Kreditlar"
+
+# key: grading.grades.superseded
+#: ninefruits/grading/templates/grading/portal/my_grades.html ninefruits/grading/templates/grading/transcript.html
+msgid "replaced by a retake in the cumulative GPA"
+msgstr "umumiy GPA da qayta oʻqish bilan almashtirilgan"
+
+# key: grading.grades.none
+#: ninefruits/grading/templates/grading/portal/my_grades.html
+msgid "No final grades yet."
+msgstr "Hali yakuniy baholar yoʻq."
+
+# key: grading.transcript.unofficial
+#: ninefruits/grading/templates/grading/transcript.html
+msgid "Unofficial grade report. Request an official transcript from the registrar."
+msgstr "Norasmiy baholar hisoboti. Rasmiy akademik maʼlumotnomani oʻquv boʻlimidan soʻrang."
+
+# key: grading.transcript.printed_at
+#: ninefruits/grading/templates/grading/transcript.html
+#, python-format
+msgctxt "grading"
+msgid "Printed %(date)s"
+msgstr "Chop etilgan: %(date)s"
+
+# key: grading.entry.open
+#: ninefruits/grading/views/portal.py
+msgid "Enter grades"
+msgstr "Baholarni kiritish"
+
+# key: grading.entry.saved
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) saved."
+msgstr "%(count)s ta baho saqlandi."
+
+# key: grading.entry.distribution_ok
+#: ninefruits/grading/views/portal.py
+msgid "The grades are within the caps."
+msgstr "Baholar chegaralar doirasida."
+
+# key: grading.entry.submitted
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "%(count)s grade(s) submitted."
+msgstr "%(count)s ta baho topshirildi."
+
+#: ninefruits/grading/views/portal.py
+msgid "The reason is too long."
+msgstr "Sabab juda uzun."
+
+# key: grading.entry.method_requested
+#: ninefruits/grading/views/portal.py
+#, python-format
+msgid "Change to %(method)s requested. You will be told by email."
+msgstr "%(method)s ga oʻzgartirish soʻraldi. Sizga e-pochta orqali xabar beriladi."
+
+# key: grading.entry.change_requested
+#: ninefruits/grading/views/portal.py
+msgid "Grade change requested."
+msgstr "Bahoni oʻzgartirish soʻraldi."
+
+# key: admin.navigation.grading
+# key: grading.actions.open_entry
+# key: grading.grades.title
+# key: permissions.resources.grades
+# key: portal.navigation.grades
+# key: reference.fields.items_count
+#: ninefruits/grading/views/portal.py
+msgid "Grades"
+msgstr "Baholar"
+
+#: ninefruits/grading/views/transcript.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF yaratib boʻlmadi. Keyinroq qayta urinib koʻring."

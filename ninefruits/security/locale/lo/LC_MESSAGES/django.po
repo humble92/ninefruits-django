@@ -1428,5 +1428,21 @@ msgstr "ເຊື່ອມຕໍ່ບັນຊີ %(provider)s ແລ້ວ."
 msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
 msgstr "ບັນຊີ %(provider)s ຂອງທ່ານບໍ່ໄດ້ເຊື່ອມຕໍ່ກັບບັນຊີໃນລະບົບນີ້. ກະລຸນາເຂົ້າສູ່ລະບົບດ້ວຍລະຫັດຜ່ານ ແລະ ເຊື່ອມຕໍ່ໃນໜ້າຄວາມປອດໄພ."
 
+#: models/user.py
+msgid "user"
+msgstr "ຜູ້ໃຊ້"
+
+#: models/user.py
+msgid "users"
+msgstr "ຜູ້ໃຊ້"
+
+#: models/role.py
+msgid "role"
+msgstr "ບົດບາດ"
+
+#: models/role.py
+msgid "roles"
+msgstr "ບົດບາດ"
+
 #~ msgid "Org unit or program id. An org unit also covers every unit below it."
 #~ msgstr "ID ຂອງຫົວໜ່ວຍ ຫຼື ຫຼັກສູດ. ຫົວໜ່ວຍລວມເອົາທຸກຫົວໜ່ວຍຂ້າງລຸ່ມ."

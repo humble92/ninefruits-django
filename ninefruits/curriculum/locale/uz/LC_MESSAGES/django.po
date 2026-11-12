@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: curriculum.errors.no_version_to_revise
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "There is no version in effect on that date."
+msgstr "Bu sanada amaldagi versiya yoʻq."
+
+# key: curriculum.errors.revise_same_start
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "A version already starts on that date. Edit it instead."
+msgstr "Bu sanada boshlanadigan versiya allaqachon mavjud. Oʻrniga uni tahrirlang."
+
+# key: reference.fields.name
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nomi"
+
+# key: reference.fields.parent
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/models/course_category.py
+msgid "Parent"
+msgstr "Yuqori"
+
+# key: validation.after_or_equal
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s maydoni %(date)s yoki undan keyingi sana boʻlishi kerak."
+
+# key: reference.fields.effective_end_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid until"
+msgstr "Amal qilish tugashi"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid from"
+msgstr "Amal qilish boshlanishi"
+
+# key: curriculum.errors.version_overlap
+#: ninefruits/curriculum/admin/courses.py
+msgid "This period overlaps another version of the course."
+msgstr "Bu davr fanning boshqa versiyasi bilan ustma-ust tushadi."
+
+# key: validation.alpha_dash
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s maydoni faqat harflar, raqamlar, chiziqcha va pastki chiziqdan iborat boʻlishi kerak."
+
+# key: curriculum.fields.code
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Course code"
+msgstr "Fan kodi"
+
+# key: curriculum.resources.course_versions.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "course version"
+msgstr "fan versiyasi"
+
+# key: curriculum.resources.course_versions.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "versions"
+msgstr "versiyalar"
+
+# key: curriculum.fields.title
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Nomi"
+
+# key: curriculum.fields.requisites
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Requisites"
+msgstr "Rekvizitlar"
+
+# key: curriculum.actions.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "Revise from a date"
+msgstr "Sanadan boshlab qayta koʻrib chiqish"
+
+# key: curriculum.resources.course_equivalencies.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalency"
+msgstr "muqobillik"
+
+# key: curriculum.resources.course_equivalencies.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalent courses"
+msgstr "muqobil fanlar"
+
+# key: curriculum.fields.managing_unit
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Managing unit"
+msgstr "Masʼul boʻlinma"
+
+# key: curriculum.fields.effective_from
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version from"
+msgstr "Yangi versiya boshlanishi"
+
+# key: common.reason
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Sabab"
+
+# key: validation.after
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s maydoni %(date)s dan keyingi sana boʻlishi kerak."
+
+# key: curriculum.sections.course
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "curriculum.sections"
+msgid "Course"
+msgstr "Fan"
+
+# key: curriculum.sections.first_version
+#: ninefruits/curriculum/admin/courses.py
+msgid "First version"
+msgstr "Birinchi versiya"
+
+#: ninefruits/curriculum/admin/courses.py
+msgid "Add course version"
+msgstr "Fan versiyasini qoʻshish"
+
+# key: curriculum.fields.credits
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Kreditlar"
+
+# key: curriculum.notifications.revised
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version created."
+msgstr "Yangi versiya yaratildi."
+
+# key: curriculum.help.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "The current version ends the day before; the new version starts with a copy of it and its requisites. Sections already offered keep their version."
+msgstr "Joriy versiya bir kun oldin tugaydi; yangi versiya uning va rekvizitlarining nusxasi bilan boshlanadi. Allaqachon ochilgan fan guruhlari oʻz versiyasini saqlaydi."
+
+# key: validation.gte.numeric
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s maydoni %(value)s yoki undan katta boʻlishi kerak."
+
+# key: curriculum.fields.catalog_year_to
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year to"
+msgstr "Oʻquv reja yiligacha"
+
+# key: curriculum.fields.catalog_year_from
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year from"
+msgstr "Oʻquv reja yilidan"
+
+# key: curriculum.errors.requirement_set_overlap
+#: ninefruits/curriculum/admin/requirements.py
+msgid "These catalog years overlap another requirement set of the program and role."
+msgstr "Bu oʻquv reja yillari dastur va oʻrin uchun boshqa talablar toʻplami bilan ustma-ust tushadi."
+
+# key: curriculum.resources.courses.plural_label
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/importers.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "courses"
+msgstr "fanlar"
+
+# key: validation.required
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s maydoni toʻldirilishi shart."
+
+# key: curriculum.fields.category
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgid "Course category"
+msgstr "Fan toifasi"
+
+# key: curriculum.fields.min_credits
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Minimum credits"
+msgstr "Minimal kreditlar"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Examination kind"
+msgstr "Imtihon turi"
+
+# key: curriculum.sections.requirements
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Requirements"
+msgstr "Talablar"
+
+# key: curriculum.fields.program_role
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Program role"
+msgstr "Dasturdagi oʻrni"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Programs"
+msgstr "Taʼlim dasturlari"
+
+# key: curriculum.grading_bases.graded
+#: ninefruits/curriculum/enums.py
+msgid "Letter grade"
+msgstr "Harfli baho"
+
+# key: curriculum.grading_bases.pass_fail
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Pass/fail"
+msgstr "Oʻtdi/oʻtmadi"
+
+# key: curriculum.program_roles.primary
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Primary program"
+msgstr "Asosiy dastur"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/curriculum/enums.py
+msgid "Second major"
+msgstr "Ikkinchi mutaxassislik"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/curriculum/enums.py
+msgid "Minor"
+msgstr "Qoʻshimcha yoʻnalish"
+
+# key: curriculum.requirement_kinds.category_credits
+#: ninefruits/curriculum/enums.py
+msgid "Credits in a category"
+msgstr "Toifa boʻyicha kreditlar"
+
+# key: curriculum.requirement_kinds.required_courses
+#: ninefruits/curriculum/enums.py
+msgid "Required courses"
+msgstr "Majburiy fanlar"
+
+# key: curriculum.requirement_kinds.course_group
+#: ninefruits/curriculum/enums.py
+msgid "Choice from courses"
+msgstr "Fanlardan tanlash"
+
+# key: curriculum.requirement_kinds.assessment_pass
+#: ninefruits/curriculum/enums.py
+msgid "Passed examination"
+msgstr "Topshirilgan imtihon"
+
+# key: curriculum.requisite_kinds.prerequisite
+#: ninefruits/curriculum/enums.py
+msgid "Prerequisite"
+msgstr "Prerekvizit"
+
+# key: curriculum.requisite_kinds.corequisite
+#: ninefruits/curriculum/enums.py
+msgid "Corequisite"
+msgstr "Korekvizit"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/curriculum/importers.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "Tanlangan %(attribute)s yaroqsiz."
+
+# key: curriculum.import.org_unit_required
+#: ninefruits/curriculum/importers.py
+msgid "New courses need an org_unit (code of the managing unit)."
+msgstr "Yangi fanlar uchun org_unit (masʼul boʻlinma kodi) kerak."
+
+# key: reference.fields.is_active
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/course_category.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Faol"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/curriculum/models/course.py
+msgid "course"
+msgstr "fan"
+
+# key: curriculum.fields.description
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Description"
+msgstr "Tavsif"
+
+# key: curriculum.fields.lecture_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lecture hours"
+msgstr "Maʼruza soatlari"
+
+# key: curriculum.fields.lab_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lab hours"
+msgstr "Laboratoriya soatlari"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/curriculum/models/course.py
+msgid "Grading"
+msgstr "Baholash"
+
+# key: curriculum.fields.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Counts toward the credit limit"
+msgstr "Kredit chegarasiga hisoblanadi"
+
+# key: curriculum.help.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Turn off for courses outside the term credit limit (e.g. credit bank courses)."
+msgstr "Semestr kredit chegarasidan tashqaridagi fanlar uchun oʻchiring (masalan, kredit banki fanlari)."
+
+# key: curriculum.fields.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken again for credit"
+msgstr "Kredit uchun qayta oʻqish mumkin"
+
+# key: curriculum.help.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "Taking it again earns credits again (e.g. seminars with changing topics) instead of being a retake."
+msgstr "Qayta oʻqilganda qayta oʻqish hisoblanmasdan yana kredit beradi (masalan, mavzusi oʻzgaruvchi seminarlar)."
+
+# key: evaluation.fields.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgctxt "evaluation.fields"
+msgid "Course evaluation"
+msgstr "Fan soʻrovnomasi"
+
+# key: evaluation.help.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgid "Off for internships or practica that are not evaluated."
+msgstr "Soʻrovnoma oʻtkazilmaydigan amaliyot yoki stajirovkalar uchun oʻchiring."
+
+# key: curriculum.fields.requisite_kind
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Kind"
+msgstr "Tur"
+
+# key: curriculum.fields.group_number
+#: ninefruits/curriculum/models/course.py
+msgid "Group"
+msgstr "Guruh"
+
+# key: curriculum.fields.required_course
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum.fields"
+msgid "Course"
+msgstr "Fan"
+
+# key: curriculum.fields.minimum_grade
+#: ninefruits/curriculum/models/course.py
+msgid "Minimum grade"
+msgstr "Minimal baho"
+
+# key: curriculum.fields.allows_concurrent
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken in the same term"
+msgstr "Shu semestrda birga oʻqish mumkin"
+
+# key: curriculum.fields.equivalent_course
+#: ninefruits/curriculum/models/course.py
+msgid "Equivalent course"
+msgstr "Muqobil fan"
+
+# key: curriculum.fields.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Mutual"
+msgstr "Oʻzaro"
+
+# key: curriculum.help.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Each counts for the other. Off: only the equivalent course counts for this one."
+msgstr "Har biri ikkinchisi oʻrniga hisoblanadi. Oʻchirilgan: faqat muqobil fan bu fan oʻrniga hisoblanadi."
+
+# key: curriculum.fields.note
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Note"
+msgstr "Izoh"
+
+# key: reference.fields.code
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: reference.fields.sort_order
+#: ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgid "Order"
+msgstr "Tartib"
+
+# key: reference.resources.course_categories.label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course category"
+msgstr "fan toifasi"
+
+# key: reference.resources.course_categories.plural_label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course categories"
+msgstr "fan toifalari"
+
+# key: curriculum.help.catalog_year_to
+#: ninefruits/curriculum/models/requirement.py
+msgid "Empty: also for later catalog years until another set starts."
+msgstr "Boʻsh: boshqa toʻplam boshlanguncha keyingi oʻquv reja yillari uchun ham."
+
+# key: curriculum.fields.total_credits
+#: ninefruits/curriculum/models/requirement.py
+msgid "Total credits"
+msgstr "Jami kreditlar"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/curriculum/models/requirement.py
+msgid "graduation requirements"
+msgstr "bitiruv talablari"
+
+# key: curriculum.fields.requirement_kind
+#: ninefruits/curriculum/models/requirement.py
+msgid "Requirement"
+msgstr "Talab"
+
+# key: curriculum.fields.min_courses
+#: ninefruits/curriculum/models/requirement.py
+msgid "Minimum courses"
+msgstr "Minimal fanlar soni"

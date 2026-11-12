@@ -1,0 +1,825 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: offering.errors.instructor_not_current
+#: ninefruits/offering/actions/assign_section_instructor.py
+msgid "This instructor is not employed when the session starts."
+msgstr "सत्र सुरु हुँदा यी प्राध्यापक कार्यरत हुनुहुन्न।"
+
+# key: offering.errors.instructor_already_assigned
+#: ninefruits/offering/actions/assign_section_instructor.py
+msgid "This instructor is already assigned."
+msgstr "यी प्राध्यापक पहिले नै तोकिनुभएको छ।"
+
+# key: offering.errors.reason_required
+#: ninefruits/offering/actions/change_section_status.py
+msgid "Give a reason."
+msgstr "कारण दिनुहोस्।"
+
+# key: offering.errors.copy_same_term
+#: ninefruits/offering/actions/copy_sections.py ninefruits/offering/admin/sections.py
+msgid "Choose two different terms."
+msgstr "दुई फरक सेमेस्टर रोज्नुहोस्।"
+
+# key: offering.copy.exists
+#: ninefruits/offering/actions/copy_sections.py
+msgid "already offered in that term"
+msgstr "त्यो सेमेस्टरमा पहिले नै सञ्चालित"
+
+# key: offering.copy.no_version
+#: ninefruits/offering/actions/copy_sections.py
+msgid "no course version in effect at the session start"
+msgstr "सत्र सुरु हुँदा लागू विषय संस्करण छैन"
+
+# key: offering.copy.instructor_left
+#: ninefruits/offering/actions/copy_sections.py
+#, python-format
+msgid "instructor %(instructor)s is no longer employed"
+msgstr "प्राध्यापक %(instructor)s अब कार्यरत हुनुहुन्न"
+
+# key: offering.copy.room_taken
+#: ninefruits/offering/actions/copy_sections.py
+#, python-format
+msgid "room taken at %(time)s, copied without a room"
+msgstr "%(time)s मा कोठा बुक भएको, कोठाबिना प्रतिलिपि गरियो"
+
+# key: offering.errors.no_course_version
+#: ninefruits/offering/actions/create_section.py
+#, python-format
+msgid "Course %(course)s has no version in effect on %(date)s."
+msgstr "विषय %(course)s को %(date)s मा लागू संस्करण छैन।"
+
+# key: offering.errors.section_code_taken
+#: ninefruits/offering/actions/create_section.py
+msgid "This section number is already used for the course in this term."
+msgstr "यो सेक्सन नम्बर यस सेमेस्टरमा यो विषयका लागि पहिले नै प्रयोग भएको छ।"
+
+# key: offering.errors.meeting_outside_session
+#: ninefruits/offering/actions/save_section_meeting.py
+msgid "Meeting dates must be within the session."
+msgstr "कक्षाका मितिहरू सत्रभित्र हुनुपर्छ।"
+
+# key: offering.errors.meeting_time_order
+#: ninefruits/offering/actions/save_section_meeting.py ninefruits/offering/admin/sections.py
+msgctxt "offering"
+msgid "The end must be after the start."
+msgstr "अन्त्य सुरुभन्दा पछि हुनुपर्छ।"
+
+#: ninefruits/offering/actions/update_section.py
+msgid "Choose a session of the section's term."
+msgstr "सेक्सनको सेमेस्टरको सत्र छान्नुहोस्।"
+
+# key: grading.errors.method_has_grades
+#: ninefruits/offering/actions/update_section.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "ग्रेड पहिले नै प्रविष्ट भइसके; मूल्याङ्कन विधि बदल्न सकिँदैन।"
+
+# key: registration.errors.capacity_below_enrolled
+#: ninefruits/offering/actions/update_section.py
+#, python-format
+msgid "Capacity cannot be below the %(count)s students already registered."
+msgstr "क्षमता पहिले नै दर्ता भएका %(count)s विद्यार्थीभन्दा कम हुन सक्दैन।"
+
+# key: validation.required
+#: ninefruits/offering/actions/update_syllabus.py ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s अनिवार्य छ।"
+
+# key: validation.max.string
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s %(max)s अक्षरभन्दा लामो हुनु हुँदैन।"
+
+# key: validation.string
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be a string."
+msgstr "%(attribute)s स्ट्रिङ हुनुपर्छ।"
+
+# key: validation.max.array
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must not have more than %(max)s items."
+msgstr "%(attribute)s मा %(max)s भन्दा बढी वस्तु हुनु हुँदैन।"
+
+# key: validation.between.numeric
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s %(min)s देखि %(max)s बीच हुनुपर्छ।"
+
+# key: validation.integer
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s पूर्णाङ्क हुनुपर्छ।"
+
+# key: offering.timetable.title
+#: ninefruits/offering/admin/__init__.py ninefruits/offering/admin/timetables.py
+msgid "Timetables"
+msgstr "समयतालिका"
+
+# key: offering.notifications.copy_preview
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "Preview: %(created)s section(s) would be copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "पूर्वावलोकन: %(created)s सेक्सन प्रतिलिपि हुनेछ, %(skipped)s छोडिनेछ, %(with_notes)s टिप्पणीसहित।"
+
+# key: offering.notifications.copied
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "%(created)s सेक्सन प्रतिलिपि गरियो, %(skipped)s छोडियो, %(with_notes)s टिप्पणीसहित।"
+
+# key: validation.gte.numeric
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s %(value)s वा बढी हुनुपर्छ।"
+
+# key: reference.fields.admission_year_to
+#: ninefruits/offering/admin/sections.py
+msgid "Admitted until (year)"
+msgstr "भर्ना वर्ष (सम्म)"
+
+# key: reference.fields.admission_year_from
+#: ninefruits/offering/admin/sections.py
+msgid "Admitted from (year)"
+msgstr "भर्ना वर्ष (देखि)"
+
+# key: offering.fields.session
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Session"
+msgstr "सत्र"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "course"
+msgstr "विषय"
+
+# key: offering.help.offering_unit
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Unit whose staff manage the section; the course's unit by default."
+msgstr "सेक्सन व्यवस्थापन गर्ने कर्मचारीको एकाइ; पूर्वनिर्धारित रूपमा विषयको एकाइ।"
+
+# key: grading.help.evaluation_method
+#: ninefruits/offering/admin/sections.py
+msgid "Absolute (default): instructors enter scores and the grades follow. Relative: instructors give grades within the institution's grade caps. Instructors ask for a change from the grade entry screen; it cannot change once grades are submitted."
+msgstr "निरपेक्ष (पूर्वनिर्धारित): प्राध्यापकले अङ्क प्रविष्ट गर्छन् र ग्रेड त्यसैअनुसार हुन्छ। सापेक्ष: प्राध्यापकले संस्थाको ग्रेड सीमाभित्र ग्रेड दिन्छन्। प्राध्यापकले ग्रेड प्रविष्टि स्क्रिनबाट परिवर्तन माग्छन्; ग्रेड पेस भएपछि यो बदलिँदैन।"
+
+# key: offering.fields.section_code
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Section number"
+msgstr "सेक्सन नम्बर"
+
+# key: validation.alpha_dash
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s मा अक्षर, अङ्क, ड्यास र अन्डरस्कोर मात्र हुनुपर्छ।"
+
+# key: offering.help.change_session
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Moving to another session takes its dates and the course version in effect when it starts."
+msgstr "अर्को सत्रमा सार्दा त्यसका मिति र त्यो सुरु हुँदा लागू विषय संस्करण लिइन्छ।"
+
+# key: offering.fields.time_slot
+#: ninefruits/offering/admin/sections.py
+msgid "Period"
+msgstr "पिरियड"
+
+# key: offering.help.time_slot
+#: ninefruits/offering/admin/sections.py
+msgid "Fills start and end from a period."
+msgstr "पिरियडबाट सुरु र अन्त्य भर्छ।"
+
+# key: offering.fields.weekday
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Day"
+msgstr "बार"
+
+# key: offering.help.meeting_dates
+#: ninefruits/offering/admin/sections.py
+msgid "Empty: the session's dates."
+msgstr "खाली: सत्रका मितिहरू।"
+
+# key: offering.fields.start_time
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Start"
+msgstr "सुरु"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "End"
+msgstr "अन्त्य"
+
+# key: validation.min.numeric
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s कम्तीमा %(min)s हुनुपर्छ।"
+
+# key: offering.fields.capacity
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "offering"
+msgid "Capacity"
+msgstr "क्षमता"
+
+# key: offering.errors.seat_groups_exceed_capacity
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "Reserved seats together exceed the section capacity (%(capacity)s)."
+msgstr "आरक्षित सिटहरू जम्मा गर्दा सेक्सनको क्षमता (%(capacity)s) भन्दा बढी हुन्छ।"
+
+# key: offering.resources.meetings.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "meeting"
+msgstr "कक्षा समय"
+
+# key: offering.resources.meetings.plural_label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "meeting times"
+msgstr "कक्षा समयहरू"
+
+# key: offering.fields.instructors
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "offering"
+msgid "Instructors"
+msgstr "प्राध्यापकहरू"
+
+# key: offering.resources.seat_groups.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "seat group"
+msgstr "सिट समूह"
+
+# key: offering.resources.seat_groups.plural_label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "reserved seats"
+msgstr "आरक्षित सिटहरू"
+
+# key: offering.fields.seat_group_eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Students the seats are for"
+msgstr "सिट पाउने विद्यार्थी"
+
+# key: reference.resources.terms.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "term"
+msgstr "सेमेस्टर"
+
+# key: security.scope_types.global
+#: ninefruits/offering/admin/sections.py
+msgid "All"
+msgstr "सबै"
+
+# key: offering.fields.offering_unit
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Offering unit"
+msgstr "सञ्चालन गर्ने एकाइ"
+
+# key: offering.fields.status
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Status"
+msgstr "स्थिति"
+
+# key: common.reason
+#: ninefruits/offering/admin/sections.py
+msgctxt "common"
+msgid "Reason"
+msgstr "कारण"
+
+# key: offering.fields.from_term
+#: ninefruits/offering/admin/sections.py
+msgctxt "offering"
+msgid "Copy from"
+msgstr "यहाँबाट प्रतिलिपि"
+
+# key: offering.fields.to_term
+#: ninefruits/offering/admin/sections.py
+msgid "Copy into"
+msgstr "यहाँमा प्रतिलिपि"
+
+# key: offering.fields.dry_run
+#: ninefruits/offering/admin/sections.py
+msgid "Preview only"
+msgstr "पूर्वावलोकन मात्र"
+
+# key: offering.help.dry_run
+#: ninefruits/offering/admin/sections.py
+msgid "Shows the result without saving."
+msgstr "सुरक्षित नगरी नतिजा देखाउँछ।"
+
+# key: offering.fields.section
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/teaching.html
+msgctxt "offering"
+msgid "Section"
+msgstr "सेक्सन"
+
+# key: curriculum.fields.title
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/teaching.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "शीर्षक"
+
+# key: curriculum.fields.credits
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "क्रेडिट"
+
+# key: offering.fields.schedule
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Schedule"
+msgstr "तालिका"
+
+# key: offering.fields.eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Who may register"
+msgstr "दर्ता गर्न पाउने"
+
+# key: offering.help.eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Empty: everyone. Registration (Phase 5) checks it."
+msgstr "खाली: सबै। विषय दर्ता (चरण 5) ले यो जाँच गर्छ।"
+
+# key: offering.fields.exclusion
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Who may not register"
+msgstr "दर्ता गर्न नपाउने"
+
+# key: offering.help.exclusion
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Students matching this cannot register, e.g. the course's own majors for a general course."
+msgstr "यससँग मेल खाने विद्यार्थी दर्ता गर्न सक्दैनन्, जस्तै सामान्य विषयका लागि त्यही विषयका मुख्य विद्यार्थी।"
+
+# key: offering.notifications.status_changed
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "Section is now %(status)s."
+msgstr "सेक्सन अब %(status)s छ।"
+
+# key: offering.actions.publish
+#: ninefruits/offering/admin/sections.py
+msgid "Publish"
+msgstr "प्रकाशित गर्नुहोस्"
+
+# key: offering.actions.unpublish
+#: ninefruits/offering/admin/sections.py
+msgid "Back to draft"
+msgstr "मस्यौदामा फर्काउनुहोस्"
+
+# key: offering.actions.cancel
+#: ninefruits/offering/admin/sections.py
+msgid "Cancel section"
+msgstr "सेक्सन रद्द गर्नुहोस्"
+
+# key: offering.actions.reopen
+#: ninefruits/offering/admin/sections.py
+msgid "Reopen"
+msgstr "फेरि खोल्नुहोस्"
+
+# key: offering.actions.syllabus
+# key: offering.syllabus.title
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Syllabus"
+msgstr "पाठ्यविवरण"
+
+# key: offering.actions.copy_sections
+#: ninefruits/offering/admin/sections.py
+msgid "Copy from another term"
+msgstr "अर्को सेमेस्टरबाट प्रतिलिपि गर्नुहोस्"
+
+# key: offering.help.copy_sections
+#: ninefruits/offering/admin/sections.py
+msgid "Copies sections that were not cancelled, in your scope, as drafts: instructors still employed, meetings with rooms (left out if the room is now taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr "तपाईंको दायराभित्र रद्द नभएका सेक्सनहरूलाई मस्यौदाका रूपमा प्रतिलिपि गर्छ: अझै कार्यरत प्राध्यापक, कोठासहितका कक्षा समय (कोठा अहिले बुक भए छोडिन्छ), आरक्षित सिट र पाठ्यविवरण मस्यौदा। सत्रहरू कोडअनुसार मिलाइन्छन्।"
+
+# key: offering.timetable.mode
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/templates/offering/admin/timetables.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Show"
+msgstr "देखाउनुहोस्"
+
+# key: offering.fields.room
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py
+msgid "Room"
+msgstr "कोठा"
+
+# key: people.resources.instructors.label
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py
+msgid "instructor"
+msgstr "प्राध्यापक"
+
+# key: portal.navigation.catalog
+#: ninefruits/offering/apps.py
+msgctxt "portal"
+msgid "Course catalog"
+msgstr "विषय सूची"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/offering/apps.py ninefruits/offering/views/portal.py
+msgid "My teaching"
+msgstr "मेरो अध्यापन"
+
+# key: offering.section_statuses.draft
+# key: offering.syllabus.draft
+#: ninefruits/offering/enums.py ninefruits/offering/views/portal.py
+msgctxt "offering"
+msgid "Draft"
+msgstr "मस्यौदा"
+
+# key: offering.section_statuses.published
+#: ninefruits/offering/enums.py
+msgctxt "offering.section_statuses"
+msgid "Published"
+msgstr "प्रकाशित"
+
+# key: offering.section_statuses.cancelled
+#: ninefruits/offering/enums.py
+msgctxt "offering"
+msgid "Cancelled"
+msgstr "रद्द"
+
+# key: offering.instructor_roles.primary
+#: ninefruits/offering/enums.py
+msgctxt "offering"
+msgid "Instructor"
+msgstr "प्राध्यापक"
+
+# key: offering.instructor_roles.co_instructor
+#: ninefruits/offering/enums.py
+msgid "Co-instructor"
+msgstr "सह-प्राध्यापक"
+
+# key: offering.instructor_roles.assistant
+#: ninefruits/offering/enums.py
+msgid "Teaching assistant"
+msgstr "शिक्षण सहायक"
+
+# key: offering.fields.instruction_language
+#: ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Language of instruction"
+msgstr "अध्यापनको भाषा"
+
+# key: offering.help.instruction_language
+#: ninefruits/offering/models/section.py
+msgid "e.g. ko, en"
+msgstr "जस्तै ko, en"
+
+# key: offering.fields.note
+#: ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Note"
+msgstr "टिप्पणी"
+
+# key: registration.fields.waitlist_capacity
+#: ninefruits/offering/models/section.py
+msgid "Waitlist size"
+msgstr "प्रतीक्षा सूचीको आकार"
+
+# key: registration.help.waitlist_capacity
+#: ninefruits/offering/models/section.py
+msgid "0 means no waitlist. Freed seats go to waiting students in order, after all rules are checked again."
+msgstr "0 भनेको प्रतीक्षा सूची छैन। खाली भएका सिट सबै नियम फेरि जाँचेपछि प्रतीक्षारत विद्यार्थीलाई क्रमशः दिइन्छ।"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/offering/models/section.py
+msgid "Evaluation"
+msgstr "मूल्याङ्कन"
+
+# key: offering.resources.sections.label
+#: ninefruits/offering/models/section.py
+msgid "section"
+msgstr "सेक्सन"
+
+# key: offering.resources.sections.plural_label
+#: ninefruits/offering/models/section.py
+msgid "sections"
+msgstr "सेक्सनहरू"
+
+# key: offering.fields.instructor_role
+#: ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Role"
+msgstr "भूमिका"
+
+# key: reference.fields.start_date
+#: ninefruits/offering/models/section.py
+msgid "Start date"
+msgstr "सुरु मिति"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/offering/models/section.py
+msgid "End date"
+msgstr "अन्त्य मिति"
+
+# key: reference.fields.name
+#: ninefruits/offering/models/section.py
+msgctxt "reference"
+msgid "Name"
+msgstr "नाम"
+
+# key: offering.fields.releases_at
+#: ninefruits/offering/models/section.py
+msgid "Opens to everyone at"
+msgstr "सबैका लागि खुल्ने समय"
+
+# key: offering.help.releases_at
+#: ninefruits/offering/models/section.py
+msgid "Unused reserved seats become open seats at this time."
+msgstr "प्रयोग नभएका आरक्षित सिट यस समयमा खुला सिट बन्छन्।"
+
+# key: reference.fields.sort_order
+#: ninefruits/offering/models/section.py
+msgid "Order"
+msgstr "क्रम"
+
+# key: offering.syllabus.language
+#: ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgctxt "offering"
+msgid "Language"
+msgstr "भाषा"
+
+# key: offering.errors.instructor_conflict
+#: ninefruits/offering/services/schedule_conflicts.py
+#, python-format
+msgid "%(instructor)s already teaches %(section)s at this time."
+msgstr "%(instructor)s ले यस समयमा पहिले नै %(section)s पढाउनुहुन्छ।"
+
+# key: offering.errors.room_conflict
+#: ninefruits/offering/services/schedule_conflicts.py
+#, python-format
+msgid "The room is already booked at this time by %(section)s."
+msgstr "यो कोठा यस समयमा %(section)s ले पहिले नै बुक गरेको छ।"
+
+# key: offering.errors.meetings_overlap
+#: ninefruits/offering/services/schedule_conflicts.py
+msgid "This section already meets at an overlapping time."
+msgstr "यो सेक्सन खप्टिने समयमा पहिले नै सञ्चालन हुन्छ।"
+
+# key: offering.weekdays.1
+#: ninefruits/offering/services/timetable.py
+msgid "Mon"
+msgstr "सोम"
+
+# key: offering.weekdays.2
+#: ninefruits/offering/services/timetable.py
+msgid "Tue"
+msgstr "मङ्गल"
+
+# key: offering.weekdays.3
+#: ninefruits/offering/services/timetable.py
+msgid "Wed"
+msgstr "बुध"
+
+# key: offering.weekdays.4
+#: ninefruits/offering/services/timetable.py
+msgid "Thu"
+msgstr "बिहि"
+
+# key: offering.weekdays.5
+#: ninefruits/offering/services/timetable.py
+msgid "Fri"
+msgstr "शुक्र"
+
+# key: offering.weekdays.6
+#: ninefruits/offering/services/timetable.py
+msgid "Sat"
+msgstr "शनि"
+
+# key: offering.weekdays.7
+#: ninefruits/offering/services/timetable.py
+msgid "Sun"
+msgstr "आइत"
+
+# key: offering.timetable.choose
+#: ninefruits/offering/templates/offering/admin/timetables.html
+msgid "Choose a term and a room or instructor."
+msgstr "सेमेस्टर र कोठा वा प्राध्यापक रोज्नुहोस्।"
+
+# key: offering.timetable.empty
+#: ninefruits/offering/templates/offering/partials/timetable.html
+msgid "Nothing scheduled."
+msgstr "केही तालिकाबद्ध छैन।"
+
+# key: offering.catalog.all_units
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "All units"
+msgstr "सबै एकाइ"
+
+# key: offering.catalog.search
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Search"
+msgstr "खोज्नुहोस्"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Course code or title"
+msgstr "विषय कोड वा शीर्षक"
+
+# key: offering.catalog.credits
+#: ninefruits/offering/templates/offering/portal/catalog.html
+#, python-format
+msgid "%(credits)s credits"
+msgstr "%(credits)s क्रेडिट"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Instructor to be announced"
+msgstr "प्राध्यापक पछि घोषणा हुनेछ"
+
+# key: offering.catalog.time_tba
+#: ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Time to be announced"
+msgstr "समय पछि घोषणा हुनेछ"
+
+# key: offering.syllabus.available
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Syllabus available"
+msgstr "पाठ्यविवरण उपलब्ध"
+
+# key: offering.catalog.none
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "No sections found."
+msgstr "कुनै सेक्सन भेटिएन।"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Pages"
+msgstr "पृष्ठहरू"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Previous"
+msgstr "अघिल्लो"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Next"
+msgstr "अर्को"
+
+# key: offering.catalog.title
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/views/portal.py
+msgctxt "offering"
+msgid "Course catalog"
+msgstr "विषय सूची"
+
+# key: offering.syllabus.hours
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+#, python-format
+msgid "lecture %(lecture)s h, lab %(lab)s h"
+msgstr "व्याख्यान %(lecture)s घण्टा, प्रयोगशाला %(lab)s घण्टा"
+
+# key: curriculum.fields.category
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Course category"
+msgstr "विषयको वर्ग"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Grading"
+msgstr "ग्रेडिङ"
+
+# key: curriculum.fields.requisites
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Requisites"
+msgstr "पूर्वशर्तहरू"
+
+# key: curriculum.fields.description
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "curriculum"
+msgid "Description"
+msgstr "विवरण"
+
+# key: offering.syllabus.edit
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html ninefruits/offering/views/portal.py
+msgid "Edit syllabus"
+msgstr "पाठ्यविवरण सम्पादन गर्नुहोस्"
+
+# key: offering.syllabus.none
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "No syllabus yet."
+msgstr "अहिलेसम्म पाठ्यविवरण छैन।"
+
+# key: offering.syllabus.draft_notice
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Draft: students do not see it until it is published."
+msgstr "मस्यौदा: प्रकाशित नभएसम्म विद्यार्थीले देख्दैनन्।"
+
+# key: offering.syllabus.assessment
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Assessment"
+msgstr "मूल्याङ्कन"
+
+# key: offering.syllabus.weekly_plan
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Weekly plan"
+msgstr "साप्ताहिक योजना"
+
+# key: offering.syllabus.week
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+#, python-format
+msgid "Week %(week)s"
+msgstr "हप्ता %(week)s"
+
+# key: offering.syllabus.publish
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Published (visible to students)"
+msgstr "प्रकाशित (विद्यार्थीले देख्ने)"
+
+# key: offering.syllabus.assessment_item
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Item"
+msgstr "शीर्षक"
+
+# key: offering.syllabus.weight
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Weight"
+msgstr "भार"
+
+# key: portal.profile.remove
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "हटाउनुहोस्"
+
+# key: offering.syllabus.add_assessment
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Add item"
+msgstr "शीर्षक थप्नुहोस्"
+
+# key: common.save
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Save"
+msgstr "सुरक्षित गर्नुहोस्"
+
+# key: offering.teaching.none
+#: ninefruits/offering/templates/offering/portal/teaching.html
+msgid "No sections in this term."
+msgstr "यस सेमेस्टरमा कुनै सेक्सन छैन।"
+
+# key: curriculum.or
+#: ninefruits/offering/views/portal.py
+msgid "or"
+msgstr "वा"
+
+# key: offering.syllabus.overview
+#: ninefruits/offering/views/portal.py
+msgid "Overview"
+msgstr "परिचय"
+
+# key: offering.syllabus.objectives
+#: ninefruits/offering/views/portal.py
+msgid "Learning objectives"
+msgstr "सिकाइ उद्देश्यहरू"
+
+# key: offering.syllabus.materials
+#: ninefruits/offering/views/portal.py
+msgid "Textbooks and materials"
+msgstr "पाठ्यपुस्तक र सामग्री"
+
+# key: offering.syllabus.policies
+#: ninefruits/offering/views/portal.py
+msgid "Course policies"
+msgstr "विषयका नीतिहरू"
+
+# key: offering.syllabus.saved
+#: ninefruits/offering/views/portal.py
+msgid "Syllabus saved."
+msgstr "पाठ्यविवरण सुरक्षित गरियो।"
+
+# key: offering.syllabus.published
+#: ninefruits/offering/views/portal.py
+msgctxt "offering.syllabus"
+msgid "Published"
+msgstr "प्रकाशित"
+
+# key: offering.syllabus.write
+#: ninefruits/offering/views/portal.py
+msgid "Write"
+msgstr "लेख्नुहोस्"

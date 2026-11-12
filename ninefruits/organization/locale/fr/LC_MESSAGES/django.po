@@ -1,0 +1,270 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: reference.errors.successor_required
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "Choose the successor unit."
+msgstr "Choisissez l’unité qui succède."
+
+# key: reference.errors.single_successor
+#: ninefruits/organization/actions/reorganize_org_unit.py ninefruits/organization/admin.py
+msgid "Only a split can have several successors."
+msgstr "Seule une scission peut avoir plusieurs successeurs."
+
+# key: reference.errors.reorganization_before_start
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "The effective date must be after the unit started."
+msgstr "La date d’effet doit être postérieure au début de l’unité."
+
+# key: reference.errors.successor_is_self
+#: ninefruits/organization/actions/reorganize_org_unit.py
+msgid "A unit cannot succeed itself."
+msgstr "Une unité ne peut pas se succéder à elle-même."
+
+# key: validation.after_or_equal
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Le champ %(attribute)s doit être une date postérieure ou égale au %(date)s."
+
+# key: reference.fields.effective_end_date
+#: ninefruits/organization/admin.py
+msgid "Valid until"
+msgstr "Valide jusqu’au"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/organization/admin.py
+msgid "Valid from"
+msgstr "Valide à partir du"
+
+# key: reference.fields.name
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nom"
+
+# key: reference.filters.current_only
+#: ninefruits/organization/admin.py
+msgid "Currently valid only"
+msgstr "Uniquement les éléments en vigueur"
+
+# key: security.scope_types.global
+#: ninefruits/organization/admin.py
+msgid "All"
+msgstr "Tout"
+
+# key: reference.resources.org_unit_successions.label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successor"
+msgstr "successeur"
+
+# key: reference.resources.org_unit_successions.plural_label
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "successors"
+msgstr "successeurs"
+
+# key: reference.fields.successors
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Successor"
+msgstr "Successeur"
+
+# key: reference.fields.change_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Change"
+msgstr "Changement"
+
+# key: reference.fields.reorganization_date
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Effective date"
+msgstr "Date d’effet"
+
+# key: reference.help.reorganization_date
+#: ninefruits/organization/admin.py
+msgid "The unit ends the day before this date; the successor takes over from this date."
+msgstr "L’unité prend fin la veille de cette date ; le successeur prend le relais à partir de cette date."
+
+# key: common.reason
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Motif"
+
+# key: evaluation.fields.question_type
+# key: reference.fields.org_unit_type
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Type"
+msgstr "Type"
+
+# key: reference.fields.parent
+#: ninefruits/organization/admin.py ninefruits/organization/models/org_unit.py
+msgid "Parent"
+msgstr "Parent"
+
+# key: reference.actions.reorganize
+#: ninefruits/organization/admin.py
+msgid "Reorganize"
+msgstr "Réorganiser"
+
+# key: reference.notifications.reorganized
+#: ninefruits/organization/admin.py
+msgid "Reorganization recorded."
+msgstr "Réorganisation enregistrée."
+
+# key: validation.between.numeric
+#: ninefruits/organization/admin.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "La valeur de %(attribute)s doit être comprise entre %(min)s et %(max)s."
+
+# key: reference.fields.standard_duration_years
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Standard duration (years)"
+msgstr "Durée normale (années)"
+
+# key: reference.fields.degree_level
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Degree level"
+msgstr "Niveau de diplôme"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/organization/admin.py ninefruits/organization/models/program.py
+msgid "Org unit"
+msgstr "Unité organisationnelle"
+
+# key: reference.degree_levels.associate
+#: ninefruits/organization/enums.py
+msgid "Associate"
+msgstr "Diplôme de premier cycle court"
+
+# key: reference.degree_levels.bachelor
+#: ninefruits/organization/enums.py
+msgid "Bachelor"
+msgstr "Licence"
+
+# key: reference.degree_levels.master
+#: ninefruits/organization/enums.py
+msgid "Master"
+msgstr "Master"
+
+# key: reference.degree_levels.doctorate
+#: ninefruits/organization/enums.py
+msgid "Doctorate"
+msgstr "Doctorat"
+
+# key: reference.degree_levels.certificate
+#: ninefruits/organization/enums.py
+msgid "Certificate"
+msgstr "Certificat"
+
+# key: reference.degree_levels.non_degree
+#: ninefruits/organization/enums.py
+msgid "Non-degree"
+msgstr "Hors diplôme"
+
+# key: reference.org_unit_change_types.renamed
+#: ninefruits/organization/enums.py
+msgid "Renamed"
+msgstr "Renommée"
+
+# key: reference.org_unit_change_types.merged
+#: ninefruits/organization/enums.py
+msgctxt "reference"
+msgid "Merged"
+msgstr "Fusionnée"
+
+# key: reference.org_unit_change_types.split
+#: ninefruits/organization/enums.py
+msgid "Split"
+msgstr "Scindée"
+
+# key: reference.org_unit_change_types.moved
+#: ninefruits/organization/enums.py
+msgid "Moved"
+msgstr "Rattachée ailleurs"
+
+# key: reference.fields.code
+#: ninefruits/organization/models/org_unit.py ninefruits/organization/models/program.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: reference.fields.is_academic
+#: ninefruits/organization/models/org_unit.py
+msgctxt "reference"
+msgid "Academic"
+msgstr "Pédagogique"
+
+# key: reference.fields.sort_order
+#: ninefruits/organization/models/org_unit.py
+msgid "Order"
+msgstr "Ordre"
+
+# key: reference.resources.org_unit_types.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit type"
+msgstr "type d’unité organisationnelle"
+
+# key: reference.resources.org_unit_types.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit types"
+msgstr "types d’unité organisationnelle"
+
+# key: reference.fields.short_name
+#: ninefruits/organization/models/org_unit.py
+msgid "Short name"
+msgstr "Nom court"
+
+# key: reference.resources.org_units.label
+#: ninefruits/organization/models/org_unit.py
+msgid "org unit"
+msgstr "unité organisationnelle"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/organization/models/org_unit.py
+msgid "org units"
+msgstr "unités organisationnelles"
+
+# key: reference.fields.degree_title
+#: ninefruits/organization/models/program.py
+msgid "Degree title"
+msgstr "Intitulé du diplôme"
+
+# key: reference.fields.allows_second_major
+#: ninefruits/organization/models/program.py
+msgid "Accepts second majors"
+msgstr "Accepte les doubles majeures"
+
+# key: reference.fields.allows_minor
+#: ninefruits/organization/models/program.py
+msgid "Accepts minors"
+msgstr "Accepte les mineures"
+
+# key: reference.resources.programs.label
+#: ninefruits/organization/models/program.py
+msgid "program"
+msgstr "formation"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/organization/models/program.py
+msgid "programs"
+msgstr "formations"

@@ -19,7 +19,7 @@ import polib
 
 DOMAIN = "django"
 #: Locale directory names of the shipped languages (English is the source language).
-TRANSLATED_LOCALES = ("ko", "zh_Hans", "lo")
+TRANSLATED_LOCALES = ("ko", "zh_Hans", "lo", "de", "ru", "ms", "fil", "fr", "ja", "mn", "ne", "th", "tr", "uz", "vi")
 #: Directories never scanned for translatable strings (relative to the project root).
 IGNORE_PATTERNS = [
     ".venv",

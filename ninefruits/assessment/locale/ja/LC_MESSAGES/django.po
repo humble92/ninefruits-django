@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/assessment/actions/_support.py
+msgid "Enter a reason."
+msgstr "理由を入力してください。"
+
+# key: assessment.errors.pass_score_published
+#: ninefruits/assessment/actions/change_session_pass_score.py
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "結果は公開済みのため、合格点は変更できません。訂正申請を使用してください。"
+
+# key: assessment.errors.not_locked
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "This result is not published; enter it directly."
+msgstr "この結果は公開されていません。直接入力してください。"
+
+# key: assessment.errors.correction_pending
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "A correction request is already pending for this result."
+msgstr "この結果にはすでに承認待ちの訂正申請があります。"
+
+# key: grading.errors.request_decided
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "The request is already decided."
+msgstr "この申請はすでに処理済みです。"
+
+# key: assessment.errors.own_correction
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "You cannot decide your own correction request."
+msgstr "自分の訂正申請は承認・却下できません。"
+
+# key: assessment.errors.not_registered
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/actions/register_for_assessment.py
+msgid "The student is not registered for this session."
+msgstr "この学生はこの実施回に申込していません。"
+
+# key: assessment.errors.published_locked
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are published: request a correction instead."
+msgstr "この実施回の結果は公開済みです。訂正を申請してください。"
+
+# key: assessment.errors.no_external
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind does not take external results."
+msgstr "この種別は外部試験の結果を受け付けません。"
+
+# key: assessment.errors.future_date
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/admin/forms.py
+msgid "The date cannot be in the future."
+msgstr "未来の日付は指定できません。"
+
+# key: assessment.errors.already_published
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are already published."
+msgstr "この実施回の結果はすでに公開されています。"
+
+# key: assessment.errors.score_missing
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "%(component)s の点数が入力されていません。"
+
+# key: assessment.errors.score_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "%(component)s の点数は 0 から %(max)s の間で入力してください。"
+
+# key: assessment.errors.total_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "合計は 0 から %(max)s の間で入力してください。"
+
+# key: assessment.errors.decision_required
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "Choose passed or not passed."
+msgstr "合格か不合格かを選択してください。"
+
+# key: assessment.errors.no_pass_score
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "この種別には合格点がありません。合格か不合格かを選択してください。"
+
+# key: assessment.errors.type_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This kind of examination is no longer held."
+msgstr "この種別の試験は現在実施されていません。"
+
+# key: assessment.errors.record_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Only current students can register."
+msgstr "申込できるのは在学生のみです。"
+
+# key: assessment.errors.registration_closed
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Registration for this session is closed."
+msgstr "この実施回の申込は締め切られました。"
+
+# key: assessment.errors.session_past
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session has already been held."
+msgstr "この実施回はすでに実施されました。"
+
+# key: assessment.errors.already_registered
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Already registered for this session."
+msgstr "この実施回にはすでに申込済みです。"
+
+# key: assessment.errors.full
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session is full."
+msgstr "この実施回は定員に達しています。"
+
+# key: assessment.errors.already_cancelled
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This registration is already cancelled."
+msgstr "この申込はすでに取り消されています。"
+
+# key: assessment.errors.has_result
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "結果が入力済みのため、申込を取り消せません。"
+
+# key: assessment.fields.type
+#: ninefruits/assessment/admin/common.py ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Kind"
+msgstr "種別"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Passed"
+msgstr "合格"
+
+# key: assessment.passed.no
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "不合格"
+
+# key: registration.fields.status
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "registration"
+msgid "Status"
+msgstr "状態"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Student number"
+msgstr "学籍番号"
+
+# key: assessment.fields.previous
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Current values"
+msgstr "現在の値"
+
+# key: assessment.fields.proposed
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Proposed values"
+msgstr "訂正後の値"
+
+# key: common.reason
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: grading.fields.requested_by
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "申請者"
+
+# key: grading.fields.decision_note
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Note"
+msgstr "備考"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/assessment/admin/corrections.py
+msgid "Approve"
+msgstr "承認"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Approved"
+msgstr "承認"
+
+# key: grading.actions.reject
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "却下"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Rejected"
+msgstr "却下"
+
+# key: grading.actions.cancel_request
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "申請を取消"
+
+# key: validation.alpha_dash
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s には英数字、ハイフン、アンダースコアのみ使用できます。"
+
+# key: assessment.fields.note
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Note"
+msgstr "備考"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/assessment/admin/forms.py
+msgid "Code"
+msgstr "コード"
+
+# key: validation.unique
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s はすでに使用されています。"
+
+# key: assessment.fields.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Reason for changing the pass score"
+msgstr "合格点を変更する理由"
+
+# key: assessment.help.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "結果が変わった学生とともに監査ログに記録されます。"
+
+# key: validation.after
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s には %(date)s より後の日付を指定してください。"
+
+# key: assessment.fields.registration_closes_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registration closes"
+msgstr "申込締切"
+
+# key: assessment.fields.registration_opens_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/sessions.py
+msgid "Registration opens"
+msgstr "申込開始"
+
+# key: assessment.fields.file
+#: ninefruits/assessment/admin/forms.py
+msgid "CSV file"
+msgstr "CSV ファイル"
+
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "ファイルが大きすぎます(%(size)s バイト、上限 %(limit)s)。"
+
+# key: assessment.fields.total_score
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Total"
+msgstr "合計"
+
+# key: assessment.help.decision_automatic
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "点数から判定: 合計 %(score)s 点以上かつ全領域が最低基準点以上。"
+
+# key: assessment.fields.taken_date
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Taken on"
+msgstr "受験日"
+
+# key: assessment.fields.level
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Level"
+msgstr "級・レベル"
+
+# key: assessment.fields.certificate_number
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgid "Certificate number"
+msgstr "証明書番号"
+
+# key: assessment.fields.evidence
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Evidence"
+msgstr "証拠書類"
+
+# key: assessment.fields.source
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Source"
+msgstr "出所"
+
+# key: common.yes
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "Yes"
+msgstr "はい"
+
+# upstream: Django/allauth catalog
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "No"
+msgstr "いいえ"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "people"
+msgid "Name"
+msgstr "氏名"
+
+# key: assessment.actions.record_external
+#: ninefruits/assessment/admin/results.py
+msgid "Record an external result"
+msgstr "外部試験の結果を記録"
+
+# key: assessment.actions.remove
+#: ninefruits/assessment/admin/results.py
+msgctxt "assessment"
+msgid "Remove"
+msgstr "削除"
+
+# key: assessment.fields.published_at
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Results published"
+msgstr "結果公開日時"
+
+# key: assessment.fields.venue
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Venue"
+msgstr "会場"
+
+# key: assessment.fields.registrants
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registrants"
+msgstr "申込者"
+
+# key: assessment.fields.results
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Results"
+msgstr "結果"
+
+# key: assessment.notifications.rejudged
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "%(count)s 件の結果を再判定しました: 合格 %(passed)s 件、不合格 %(failed)s 件。"
+
+# key: security.scope_types.global
+#: ninefruits/assessment/admin/sessions.py
+msgid "All"
+msgstr "全体"
+
+# key: assessment.actions.publish
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "結果を公開"
+
+# key: assessment.help.publish
+#: ninefruits/assessment/admin/sessions.py
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "今後、学生が自分の結果を確認できます。後から入力した結果も直ちに表示されます。"
+
+#: ninefruits/assessment/admin/sessions.py
+msgid "The file is not UTF-8 text."
+msgstr "ファイルが UTF-8 テキストではありません。"
+
+# key: assessment.notifications.imported
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "記録 %(recorded)s 件、欠席 %(absent)s 件、エラー %(errors)s 件。"
+
+# key: assessment.actions.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "Import results (CSV)"
+msgstr "結果を取り込み(CSV)"
+
+# key: assessment.help.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "ヘッダー行付きの CSV: student_number、領域コードごとの列(または total)、任意で passed (Y/N)、absent (Y)、note。申込のない学生の行はスキップされます。"
+
+# key: assessment.actions.register_student
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "学生を申込登録"
+
+# key: assessment.registration_statuses.registered
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "申込済み"
+
+# key: assessment.actions.enter_result
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Enter result"
+msgstr "結果を入力"
+
+# key: assessment.actions.request_correction
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Request a correction"
+msgstr "訂正を申請"
+
+# key: assessment.help.correction
+#: ninefruits/assessment/admin/sessions.py
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "この実施回の結果は公開済みです。理由を添えて訂正後の値を申請してください。管理権限を持つ別の担当者が承認すると変更が反映されます。"
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment"
+msgid "Absent"
+msgstr "欠席"
+
+# key: assessment.actions.cancel
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Cancel registration"
+msgstr "申込を取消"
+
+# key: assessment.fields.components
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Areas"
+msgstr "試験領域"
+
+# key: reference.fields.name
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: assessment.fields.category
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Category"
+msgstr "区分"
+
+# key: assessment.fields.scoring
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Scoring"
+msgstr "評価方法"
+
+# key: assessment.fields.pass_score
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py
+msgid "Pass score"
+msgstr "合格点"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/apps.py
+msgctxt "portal"
+msgid "Examinations"
+msgstr "試験"
+
+# key: assessment.categories.language
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Language"
+msgstr "語学"
+
+# key: assessment.categories.comprehensive
+#: ninefruits/assessment/enums.py
+msgid "Comprehensive"
+msgstr "総合"
+
+# key: assessment.categories.thesis
+#: ninefruits/assessment/enums.py
+msgid "Thesis"
+msgstr "論文"
+
+# key: assessment.categories.external
+#: ninefruits/assessment/enums.py
+msgid "External test"
+msgstr "外部試験"
+
+# key: assessment.scoring_methods.score
+#: ninefruits/assessment/enums.py ninefruits/assessment/models/results.py
+msgid "Score"
+msgstr "点数"
+
+# key: assessment.scoring_methods.pass_fail
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "合否"
+
+# key: assessment.correction_statuses.cancelled
+# key: assessment.registration_statuses.cancelled
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "取消"
+
+# key: assessment.correction_statuses.pending
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pending"
+msgstr "承認待ち"
+
+# key: assessment.sources.session
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Session"
+msgstr "実施回"
+
+# key: assessment.sources.external
+#: ninefruits/assessment/enums.py
+msgid "External"
+msgstr "外部"
+
+# key: people.resources.student_records.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "student record"
+msgstr "学籍"
+
+# key: assessment.resources.sessions.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "Examination session"
+msgstr "試験実施回"
+
+# key: assessment.resources.results.label
+#: ninefruits/assessment/models/results.py
+msgid "Examination result"
+msgstr "試験結果"
+
+# key: assessment.resources.results.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Examination results"
+msgstr "試験結果"
+
+# key: grading.fields.requested_at
+#: ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "申請日時"
+
+# key: assessment.resources.corrections.label
+#: ninefruits/assessment/models/results.py
+msgid "Result correction"
+msgstr "結果訂正"
+
+# key: assessment.resources.corrections.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Result corrections"
+msgstr "結果訂正"
+
+# key: assessment.fields.held_date
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Date"
+msgstr "実施日"
+
+# key: assessment.fields.capacity
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "定員"
+
+# key: assessment.help.session_pass_score
+#: ninefruits/assessment/models/sessions.py
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "空欄の場合は種別の合格点を使用します。公開前に変更すると入力済みの結果をすべて再判定し、公開後は固定されます。"
+
+# key: assessment.resources.sessions.plural_label
+#: ninefruits/assessment/models/sessions.py
+msgid "Examination sessions"
+msgstr "試験実施回"
+
+# key: assessment.fields.registered_at
+#: ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "申込日時"
+
+# key: reference.fields.code
+#: ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: assessment.help.scoring
+#: ninefruits/assessment/models/types.py
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "点数: 各領域(または合計)を合格点と比較し、各領域が最低基準点以上であることを確認します。合否: 担当者が学生ごとに判定します。"
+
+# key: assessment.fields.max_score
+#: ninefruits/assessment/models/types.py
+msgid "Maximum score"
+msgstr "満点"
+
+# key: assessment.help.max_score
+#: ninefruits/assessment/models/types.py
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "領域のない種別で使用します。領域がある場合、満点は各領域の合計です。"
+
+# key: assessment.help.pass_score
+#: ninefruits/assessment/models/types.py
+msgid "Total needed to pass. A session can override it."
+msgstr "合格に必要な合計点です。実施回ごとに変更できます。"
+
+# key: assessment.fields.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "External results"
+msgstr "外部試験の結果"
+
+# key: assessment.help.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "外部機関(TOPIK、HSK など)の結果を証拠書類とともに記録できます。"
+
+# key: reference.fields.is_active
+#: ninefruits/assessment/models/types.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: reference.fields.sort_order
+#: ninefruits/assessment/models/types.py
+msgid "Order"
+msgstr "表示順"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/assessment/models/types.py
+msgid "Examination kind"
+msgstr "試験種別"
+
+# key: assessment.resources.types.plural_label
+#: ninefruits/assessment/models/types.py
+msgid "Examination kinds"
+msgstr "試験種別"
+
+# key: assessment.help.component_code
+#: ninefruits/assessment/models/types.py
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "結果 CSV の列名です。例: LISTENING"
+
+# key: assessment.fields.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Minimum to pass"
+msgstr "最低基準点"
+
+# key: assessment.help.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Below this the student fails whatever the total."
+msgstr "この点数未満の場合、合計にかかわらず不合格になります。"
+
+# key: common.none
+#: ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "common"
+msgid "None"
+msgstr "なし"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html ninefruits/assessment/views/portal.py
+msgid "Examinations"
+msgstr "試験"
+
+# key: assessment.portal.intro
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "試験実施回に申込み、公開された結果を確認できます。"
+
+# key: assessment.portal.required
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Required by your curriculum"
+msgstr "教育課程で必須"
+
+# key: assessment.portal.not_yet
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Not yet"
+msgstr "未合格"
+
+# key: assessment.portal.open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Open for registration"
+msgstr "申込受付中"
+
+# key: assessment.portal.closes
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "申込締切: %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Cancel this registration?"
+msgstr "この申込を取り消しますか?"
+
+# key: assessment.portal.cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "取消"
+
+# key: assessment.portal.register
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Register"
+msgstr "申込"
+
+# key: assessment.portal.no_open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No session is open for registration."
+msgstr "申込を受け付けている実施回はありません。"
+
+# key: assessment.portal.my_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "自分の申込"
+
+# key: assessment.portal.no_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No registrations."
+msgstr "申込はありません。"
+
+# key: assessment.portal.my_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "My results"
+msgstr "自分の結果"
+
+# key: assessment.portal.no_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No results yet."
+msgstr "まだ結果はありません。"
+
+# key: assessment.portal.registered
+#: ninefruits/assessment/views/portal.py
+msgid "You are registered."
+msgstr "申込が完了しました。"
+
+# key: assessment.portal.cancelled
+#: ninefruits/assessment/views/portal.py
+msgid "Your registration is cancelled."
+msgstr "申込を取り消しました。"

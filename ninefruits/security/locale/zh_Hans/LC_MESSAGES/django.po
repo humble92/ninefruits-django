@@ -1425,5 +1425,21 @@ msgstr "已关联 %(provider)s 账户。"
 msgid "Your %(provider)s account is not linked to an account here. Sign in with your password and link it under Security."
 msgstr "您的 %(provider)s 账户尚未与此处账户关联。请用密码登录后在安全设置中关联。"
 
+#: models/user.py
+msgid "user"
+msgstr "用户"
+
+#: models/user.py
+msgid "users"
+msgstr "用户"
+
+#: models/role.py
+msgid "role"
+msgstr "角色"
+
+#: models/role.py
+msgid "roles"
+msgstr "角色"
+
 #~ msgid "Org unit or program id. An org unit also covers every unit below it."
 #~ msgstr "组织单位或专业的 ID。组织单位包括其下所有单位。"

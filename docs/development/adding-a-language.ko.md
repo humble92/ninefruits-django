@@ -2,13 +2,13 @@
 
 English: [adding-a-language.md](adding-a-language.md)
 
-Ninefruits는 한국어, 영어, 중국어(간체), 라오스어로 제공된다. 코드 어디에도 언어 목록은 없다. gettext 카탈로그(`locale/<locale>/`와 앱별 `ninefruits/<app>/locale/<locale>/`)가 있고 기관 설정에서 그 언어를 켜면 언어가 생긴다. 이 문서는 언어 하나를 더 추가하는 전체 절차다. 프로젝트를 처음 보는 개발자나 번역가를 대상으로 쓴다. 소요: 기계 번역을 보조로 쓰면 UI 문자열과 매뉴얼에 2~4일, 그리고 원어민 검수.
+Ninefruits는 16개 언어로 제공된다: 한국어, 영어, 중국어(간체), 라오스어, 독일어, 필리핀어, 프랑스어, 일본어, 몽골어, 말레이어, 네팔어, 러시아어, 태국어, 튀르키예어, 우즈베크어, 베트남어. 코드 어디에도 언어 목록은 없다. gettext 카탈로그(`locale/<locale>/`와 앱별 `ninefruits/<app>/locale/<locale>/`)가 있고 기관 설정에서 그 언어를 켜면 언어가 생긴다. 이 문서는 언어 하나를 더 추가하는 전체 절차다. 프로젝트를 처음 보는 개발자나 번역가를 대상으로 쓴다. 소요: 기계 번역을 보조로 쓰면 UI 문자열과 매뉴얼에 2~4일, 그리고 원어민 검수.
 
 ## 0. 언어 코드 정하기
 
 - ISO 639-1 두 글자 코드(`lo`, `vi`, `th`)를 쓰고, 문자나 표기가 다를 때만 문자·지역을 붙인다(`zh-hans`, `pt-br`). Django는 같은 코드를 두 가지로 쓴다. **언어 코드**(`zh-hans`: `users.locale`, 기관 설정, 번역 가능한 DB 값의 키)와 **로케일 이름**(`zh_Hans`: 카탈로그 디렉터리 이름). `django.utils.translation.to_locale()`이 변환한다.
 - CLDR이 아는 코드인지 확인한다(날짜, 숫자, 언어 메뉴가 Babel로 쓴다). `uv run python -c "from babel import Locale; print(Locale.parse('lo').get_display_name('lo'))"`가 그 언어로 쓴 언어 이름을 찍어야 한다.
-- `config/settings/base.py`의 `LANGUAGES`에 코드를, `ninefruits/i18n/catalogs.py`의 `TRANSLATED_LOCALES`에 로케일 이름을 넣는다(`i18n_makemessages`가 기본으로 갱신하는 언어). Django가 모르는 언어(라오스어가 그랬다)는 `ninefruits/i18n/apps.py`의 `EXTRA_LANG_INFO`(이름, 현지어 이름)와 형식 모듈 `ninefruits/i18n/formats/<locale>/formats.py`(날짜·숫자 형식. `lo`를 복사해 CLDR 값으로 고친다)를 추가한다.
+- `config/settings/base.py`의 `LANGUAGES`에 코드를, `ninefruits/i18n/catalogs.py`의 `TRANSLATED_LOCALES`에 로케일 이름을 넣는다(`i18n_makemessages`가 기본으로 갱신하는 언어). Django가 모르는 언어(라오스어, 필리핀어가 그랬다)는 `ninefruits/i18n/apps.py`의 `EXTRA_LANG_INFO`(이름, 현지어 이름)와 형식 모듈 `ninefruits/i18n/formats/<locale>/formats.py`(날짜·숫자 형식. `lo`를 복사해 CLDR 값으로 고친다)를 추가한다.
 
 ## 1. UI 문자열 (gettext 카탈로그)
 
@@ -32,14 +32,14 @@ uv run manage.py i18n_import vi storage/vi.xlsx   # .po에 쓰고 컴파일
 메모:
 
 - 자기 `locale/`이 없는 앱 디렉터리에서 그냥 `makemessages`를 돌리지 않는다. 전역 카탈로그를 그 앱 문자열만으로 다시 써 버린다. `i18n_makemessages`는 저장소 루트에서 알맞은 제외 목록으로 실행한다.
-- 복수형: 카탈로그 머리말의 `Plural-Forms`(한국어, 중국어, 라오스어는 한 가지: `nplurals=1; plural=0;`).
+- 복수형: 카탈로그 머리말의 `Plural-Forms`(한국어, 중국어, 라오스어, 일본어, 말레이어, 태국어, 우즈베크어, 베트남어는 한 가지: `nplurals=1; plural=0;`). 제공 언어별 규칙은 `tools/convert_translations.py`의 `PLURAL_FORMS`에 있다.
 - 같은 영어, 다른 뜻: 소스가 `pgettext("<그룹>", "...")`를 쓰고 번역가는 `context` 열에서 문맥을 본다.
-- Django, allauth, unfold는 많은 언어를 제공하지만 전부는 아니다(unfold는 번역이 없다). 새 언어에서 관리 화면이나 로그인 화면에 영어가 남으면 `ninefruits/i18n/vendor_strings.py`에 문자열을 넣고 `locale/<locale>/`에서 번역한다. 라오스어는 이미 들어 있다.
+- Django, allauth, unfold는 많은 언어를 제공하지만 전부는 아니다(unfold는 번역이 없다). 새 언어에서 관리 화면이나 로그인 화면에 영어가 남으면 `ninefruits/i18n/vendor_strings.py`에 문자열을 넣고 `locale/<locale>/`에서 번역한다. 라오스어는 이미 들어 있다. 2026-11-11에 추가한 12개 언어는 Django와 allauth가 번역한 문자열을 그 카탈로그에서 복사했고, 나머지(unfold 문자열, 그리고 Django와 allauth에 카탈로그가 없는 필리핀어는 전부)는 `locale/<locale>/`에서 번역했다.
 - 검사: `uv run manage.py i18n_missing vi --strict`가 `0 missing`이어야 한다. CI가 모든 언어에 `i18n_missing --strict`를 돌리므로 반쯤 된 언어는 병합되지 않는다.
 - 컴파일된 카탈로그(`.mo`)는 빌드 산출물이다. 테스트 실행이 오래된 것을 컴파일하고, Docker 이미지는 `compilemessages`를 실행한다. `i18n_makemessages`와 `i18n_missing`에는 GNU gettext(`xgettext`, `msguniq`, `msgmerge`)가 필요하다.
 - 용어집: `docs/development/naming.md` 6절에 도메인 용어(학적, 학기, 개설강좌, 수강 …)가 있다. 번역을 시작하기 전에 용어별 번역을 한 번 정해 적어 두고 매뉴얼에도 같은 말을 쓴다.
 
-원본 애플리케이션(ninefruits-laravel의 `lang/*.php`)에 있던 언어라면 `uv run python tools/convert_translations.py --fill --app <app>`이 빈 항목을 영어 원문 기준으로 채운다.
+원본 애플리케이션(ninefruits-laravel의 `lang/*.php`)에 있던 언어라면 `uv run python tools/convert_translations.py --fill --app <app>`이 빈 항목을 영어 원문 기준으로 채운다(원본 `lang/` 위치는 `--source` 또는 `NINEFRUITS_LARAVEL_LANG`, 언어 제한은 `--lang <locale>`).
 
 ## 2. 언어 켜기
 
@@ -74,7 +74,7 @@ uv run manage.py runserver 8765 &
 uv run python tools/screenshots.py vi --base-url=http://127.0.0.1:8765
 ```
 
-스크립트(Playwright, Chromium)가 데모 시스템 관리자·교원·학생으로 로그인해 계정 언어를 바꾸고(`POST /i18n/locale/`) `/admin/`과 `/portal/`을 1366×900으로 찍어 `docs/screenshots/<locale>/`에 저장한다. 처음 한 번 `uv run playwright install chromium`이 필요하다(이미 있는 Chromium은 `--chromium=/경로`). 새 언어가 기관 설정의 제공 언어에 켜져 있어야 한다(2단계). 인수 없이 실행하면 4개 언어를 모두 찍는다.
+스크립트(Playwright, Chromium)가 데모 시스템 관리자·교원·학생으로 로그인해 계정 언어를 바꾸고(`POST /i18n/locale/`) `/admin/`과 `/portal/`을 1366×900으로 찍어 `docs/screenshots/<locale>/`에 저장한다. 처음 한 번 `uv run playwright install chromium`이 필요하다(이미 있는 Chromium은 `--chromium=/경로`). 새 언어가 기관 설정의 제공 언어에 켜져 있어야 한다(2단계). 인수 없이 실행하면 제공 언어를 모두 찍는다.
 
 ## 5. PDF와 글꼴
 
@@ -95,4 +95,4 @@ uv run python tools/screenshots.py vi --base-url=http://127.0.0.1:8765
 - [ ] `uv run pytest`, `uv run ruff check`, `uv run manage.py check` 통과
 - [ ] 원어민이 UI 문자열과 최소한 매뉴얼 앞부분을 검수했고 풀 리퀘스트에 검수자를 적음
 
-라오스어는 원본에서 2026-10-23에 처음 세 언어 다음으로 추가됐다. 이식본은 처음부터 함께 제공한다.
+라오스어는 원본에서 2026-10-23에 처음 세 언어 다음으로 추가됐다. 이식본은 처음부터 함께 제공한다. 2026-11-11에는 12개 언어(독일어, 러시아어, 말레이어, 필리핀어, 프랑스어, 일본어, 몽골어, 네팔어, 태국어, 튀르키예어, 우즈베크어, 베트남어)가 한꺼번에 추가됐다(설정 마이그레이션 `ninefruits/settings/migrations/0017_twelve_locales.py`, 원본 커밋 67d653c). UI 문자열과 매뉴얼은 기계 번역 보조로 만들었으며 원어민 검수를 기다린다.

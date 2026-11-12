@@ -1,0 +1,1298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: people.errors.additional_program_not_offered
+#: ninefruits/person/actions/additional_programs.py
+msgid "This program does not accept that kind of application."
+msgstr "Program ini tidak menerima jenis permohonan tersebut."
+
+# key: people.errors.additional_program_already_held
+#: ninefruits/person/actions/additional_programs.py
+msgid "You already follow this program."
+msgstr "Anda sudah mengikuti program ini."
+
+# key: people.errors.additional_program_limit
+#: ninefruits/person/actions/additional_programs.py
+#, python-format
+msgid "You can have at most %(count)s at a time (including pending applications)."
+msgstr "Anda boleh mempunyai paling banyak %(count)s pada satu masa (termasuk permohonan yang menunggu)."
+
+# key: people.errors.not_own_record
+#: ninefruits/person/actions/additional_programs.py ninefruits/person/actions/status_changes.py
+msgid "You can only make requests for your own record."
+msgstr "Anda hanya boleh membuat permohonan bagi rekod anda sendiri."
+
+# key: people.errors.additional_program_inactive_record
+#: ninefruits/person/actions/additional_programs.py
+msgid "Only current students can apply."
+msgstr "Hanya pelajar semasa boleh memohon."
+
+# key: people.errors.additional_program_window_closed
+#: ninefruits/person/actions/additional_programs.py
+msgid "Applications for a second major or minor are not open for you now."
+msgstr "Permohonan major kedua atau minor tidak dibuka untuk anda pada masa ini."
+
+# key: people.errors.additional_program_pending
+#: ninefruits/person/actions/additional_programs.py
+msgid "There is already a pending application for this program."
+msgstr "Sudah ada permohonan yang menunggu bagi program ini."
+
+# key: people.errors.already_decided
+#: ninefruits/person/actions/additional_programs.py ninefruits/person/actions/status_changes.py
+msgid "This request has already been decided."
+msgstr "Permohonan ini telah pun diputuskan."
+
+# key: people.errors.own_request
+#: ninefruits/person/actions/additional_programs.py ninefruits/person/actions/status_changes.py
+msgid "You cannot decide a request you made yourself."
+msgstr "Anda tidak boleh memutuskan permohonan yang anda buat sendiri."
+
+# key: people.errors.additional_program_end_invalid
+#: ninefruits/person/actions/additional_programs.py
+msgid "This program has already ended, or the date is before it started."
+msgstr "Program ini telah pun tamat, atau tarikh adalah sebelum program bermula."
+
+# key: people.errors.instructor_not_current
+#: ninefruits/person/actions/advisors.py
+msgid "This instructor is not currently employed."
+msgstr "Pensyarah ini tidak berkhidmat pada masa ini."
+
+# key: people.errors.already_has_account
+#: ninefruits/person/actions/invitations.py
+msgid "This person already has an account."
+msgstr "Individu ini sudah mempunyai akaun."
+
+# key: people.errors.email_in_use
+#: ninefruits/person/actions/invitations.py
+msgid "Another account uses this email."
+msgstr "E-mel ini digunakan oleh akaun lain."
+
+# key: people.invitations.invalid
+#: ninefruits/person/actions/invitations.py ninefruits/person/templates/person/accept_invitation.html
+msgid "This invitation link is invalid or has expired. Ask the school office for a new one."
+msgstr "Pautan jemputan ini tidak sah atau telah luput. Minta pautan baharu daripada pejabat institusi."
+
+# key: people.errors.merge_invalid
+#: ninefruits/person/actions/merge.py
+msgid "Choose a different person who has not been merged."
+msgstr "Pilih individu lain yang belum digabungkan."
+
+# key: people.errors.merge_two_instructors
+#: ninefruits/person/actions/merge.py
+msgid "Both people have instructor records. Merge the instructor records first."
+msgstr "Kedua-dua individu mempunyai rekod pensyarah. Gabungkan rekod pensyarah dahulu."
+
+# key: people.errors.merge_two_open_applications
+#: ninefruits/person/actions/merge.py
+msgid "Both people have an open application in the same admission cycle. Withdraw one first."
+msgstr "Kedua-dua individu mempunyai permohonan terbuka dalam pengambilan yang sama. Tarik balik salah satu dahulu."
+
+# key: people.errors.type_not_applicable
+#: ninefruits/person/actions/status_changes.py
+#, python-format
+msgid "This change does not apply to a student who is %(status)s."
+msgstr "Perubahan ini tidak terpakai bagi pelajar yang berstatus %(status)s."
+
+# key: people.errors.not_requestable
+#: ninefruits/person/actions/status_changes.py
+msgid "Students cannot request this type of change."
+msgstr "Pelajar tidak boleh memohon jenis perubahan ini."
+
+# key: people.errors.request_pending
+#: ninefruits/person/actions/status_changes.py
+msgid "There is already a pending request for this record."
+msgstr "Sudah ada permohonan yang menunggu bagi rekod ini."
+
+# key: people.errors.status_changed_meanwhile
+#: ninefruits/person/actions/status_changes.py
+msgid "The student's status changed after the request was made. Reject it and ask for a new request."
+msgstr "Status pelajar telah berubah selepas permohonan dibuat. Tolak permohonan ini dan minta permohonan baharu."
+
+# key: people.errors.person_merged
+#: ninefruits/person/actions/students.py
+msgid "This person was merged into another person. Use that person instead."
+msgstr "Individu ini telah digabungkan ke dalam individu lain. Gunakan individu tersebut."
+
+# upstream: Django/allauth catalog
+#: ninefruits/person/actions/students.py
+msgid "Enter a valid date."
+msgstr "Masukkan tarikh yang sah."
+
+# key: people.errors.program_not_effective
+#: ninefruits/person/actions/students.py
+msgid "The program is not in effect on the admission date."
+msgstr "Program tidak berkuat kuasa pada tarikh kemasukan."
+
+# key: people.errors.student_number_taken
+#: ninefruits/person/actions/students.py
+msgid "This student number is already used."
+msgstr "Nombor matrik ini sudah digunakan."
+
+# key: common.reason
+#: ninefruits/person/admin/common.py ninefruits/person/templates/person/portal/records.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Sebab"
+
+# key: people.fields.decision_note
+#: ninefruits/person/admin/common.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgctxt "people"
+msgid "Decision note"
+msgstr "Catatan keputusan"
+
+# key: people.fields.employee_number
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Employee number"
+msgstr "Nombor pekerja"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "Org unit"
+msgstr "Unit organisasi"
+
+# key: people.fields.employment_type
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Employment type"
+msgstr "Jenis perkhidmatan"
+
+# key: people.fields.academic_title
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Academic title"
+msgstr "Jawatan akademik"
+
+# key: people.fields.hire_date
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Hire date"
+msgstr "Tarikh lantikan"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py ninefruits/person/models/instructor.py ninefruits/person/models/student_record.py
+msgid "End date"
+msgstr "Tarikh tamat"
+
+# key: validation.after_or_equal
+#: ninefruits/person/admin/instructors.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Medan %(attribute)s mestilah tarikh selepas atau sama dengan %(date)s."
+
+#: ninefruits/person/admin/instructors.py
+msgid "The employee number has already been taken."
+msgstr "Nombor pekerja ini telah digunakan."
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py ninefruits/person/models/instructor.py ninefruits/person/models/student_record.py
+msgid "Person"
+msgstr "Individu"
+
+# key: people.fields.new_person
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py
+msgid "New person"
+msgstr "Individu baharu"
+
+# key: people.fields.existing_person
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py
+msgid "Existing person"
+msgstr "Individu sedia ada"
+
+# upstream: Django/allauth catalog
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py
+msgid "This field is required."
+msgstr "Medan ini diperlukan."
+
+# key: people.filters.current_instructors
+#: ninefruits/person/admin/instructors.py
+msgid "Current instructors only"
+msgstr "Pensyarah semasa sahaja"
+
+# key: common.yes
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/people.py
+msgid "Yes"
+msgstr "Ya"
+
+# upstream: Django/allauth catalog
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/people.py
+msgid "No"
+msgstr "Tidak"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/people.py ninefruits/person/admin/requests.py ninefruits/person/admin/student_records.py ninefruits/person/models/person.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/profile.html
+msgctxt "people"
+msgid "Name"
+msgstr "Nama"
+
+#: ninefruits/person/admin/instructors.py
+msgid "Instructor created."
+msgstr "Pensyarah telah dicipta."
+
+#: ninefruits/person/admin/instructors.py
+msgid "New instructor"
+msgstr "Pensyarah baharu"
+
+# key: people.fields.from_statuses
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/status_change.py
+msgid "Allowed from statuses"
+msgstr "Dibenarkan daripada status"
+
+# key: validation.regex
+#: ninefruits/person/admin/instructors.py
+#, python-format
+msgctxt "validation.regex"
+msgid "The %(attribute)s field format is invalid."
+msgstr "Format medan %(attribute)s tidak sah."
+
+# key: reference.fields.code
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/status_change.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: people.fields.new_status
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/requests.py ninefruits/person/models/status_change.py
+msgid "New status"
+msgstr "Status baharu"
+
+# key: people.fields.family_name
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Family name"
+msgstr "Nama keluarga"
+
+# key: people.help.romanized
+#: ninefruits/person/admin/people.py
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "Nama sah dalam huruf Rumi, seperti dalam pasport. Tambah nama yang ditulis dalam bahasa lain di bawah."
+
+# key: people.fields.given_name
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Given name"
+msgstr "Nama diri"
+
+# key: people.help.national_id_keep
+#: ninefruits/person/admin/people.py
+msgid "Leave empty to keep the stored value. Enter a new value to replace it."
+msgstr "Biarkan kosong untuk mengekalkan nilai yang disimpan. Masukkan nilai baharu untuk menggantikannya."
+
+# key: people.help.encrypted
+#: ninefruits/person/admin/people.py
+msgid "Stored encrypted. Shown masked; revealing it is logged."
+msgstr "Disimpan dalam bentuk tersulit. Dipaparkan secara bertopeng; pendedahan direkodkan."
+
+# key: people.fields.birth_date
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "Birth date"
+msgstr "Tarikh lahir"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Gender"
+msgstr "Jantina"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Nationality"
+msgstr "Kewarganegaraan"
+
+# key: people.fields.ethnicity
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Ethnicity"
+msgstr "Bangsa"
+
+# key: people.fields.national_id
+#: ninefruits/person/admin/people.py
+msgid "National ID number"
+msgstr "Nombor kad pengenalan"
+
+# key: people.fields.passport_number
+#: ninefruits/person/admin/people.py
+msgid "Passport number"
+msgstr "Nombor pasport"
+
+# key: people.fields.contact_email
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/views/portal.py
+msgid "Contact email"
+msgstr "E-mel perhubungan"
+
+# key: people.fields.phone
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html ninefruits/person/views/portal.py
+msgid "Phone"
+msgstr "Telefon"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "Address"
+msgstr "Alamat"
+
+# key: people.fields.postal_code
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/views/portal.py
+msgid "Postal code"
+msgstr "Poskod"
+
+#: ninefruits/person/admin/people.py
+msgid "The birth date must not be in the future."
+msgstr "Tarikh lahir tidak boleh pada masa hadapan."
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/person/admin/people.py
+msgid "Photo"
+msgstr "Foto"
+
+#: ninefruits/person/admin/people.py
+msgid "JPEG, PNG or WebP, at most 2 MB."
+msgstr "JPEG, PNG atau WebP, paling besar 2 MB."
+
+#: ninefruits/person/admin/people.py
+msgid "The photo must not be larger than 2 MB."
+msgstr "Foto tidak boleh melebihi 2 MB."
+
+# key: people.resources.guardians.label
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "guardian"
+msgstr "penjaga"
+
+# key: people.resources.guardians.plural_label
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "guardians"
+msgstr "penjaga"
+
+# key: people.resources.student_records.label
+#: ninefruits/person/admin/people.py ninefruits/person/models/student_record.py
+msgid "student record"
+msgstr "rekod pelajar"
+
+# key: people.resources.student_records.plural_label
+#: ninefruits/person/admin/people.py ninefruits/person/importers.py ninefruits/person/models/student_record.py
+msgid "student records"
+msgstr "rekod pelajar"
+
+# key: people.fields.status
+#: ninefruits/person/admin/people.py ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Status"
+msgstr "Status"
+
+# key: people.fields.login_email
+#: ninefruits/person/admin/people.py ninefruits/person/models/invitation.py
+msgid "Sign-in email"
+msgstr "E-mel log masuk"
+
+# key: people.help.invitation_email
+#: ninefruits/person/admin/people.py
+msgid "The invitation link is sent here. This becomes the sign-in email."
+msgstr "Pautan jemputan dihantar ke sini. Ini akan menjadi e-mel log masuk."
+
+# key: people.fields.merge_target
+#: ninefruits/person/admin/people.py
+msgid "Keep this person"
+msgstr "Kekalkan individu ini"
+
+# key: people.filters.merged
+#: ninefruits/person/admin/people.py
+msgctxt "people"
+msgid "Merged"
+msgstr "Digabungkan"
+
+# key: security.scope_types.global
+#: ninefruits/person/admin/people.py
+msgid "All"
+msgstr "Semua"
+
+# key: admin.settings.student_records.title
+# key: people.fields.student_records_count
+# key: permissions.resources.student_records
+#: ninefruits/person/admin/people.py ninefruits/person/settings_pages.py
+msgid "Student records"
+msgstr "Rekod pelajar"
+
+# key: people.sections.account
+# key: people.fields.has_account
+#: ninefruits/person/admin/people.py
+msgid "Account"
+msgstr "Akaun"
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: ninefruits/person/admin/people.py
+msgid "Personal details"
+msgstr "Butiran peribadi"
+
+# key: people.sections.contact
+#: ninefruits/person/admin/people.py
+msgid "Contact"
+msgstr "Perhubungan"
+
+# key: people.fields.romanized_name
+#: ninefruits/person/admin/people.py
+msgid "Romanized name"
+msgstr "Nama dalam huruf Rumi"
+
+# key: people.fields.no_account
+#: ninefruits/person/admin/people.py
+msgid "No account"
+msgstr "Tiada akaun"
+
+# key: people.fields.merged_into
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Merged into"
+msgstr "Digabungkan ke dalam"
+
+# key: people.actions.reveal_national_id
+#: ninefruits/person/admin/people.py
+msgid "Show national ID number"
+msgstr "Papar nombor kad pengenalan"
+
+# key: people.help.reveal
+#: ninefruits/person/admin/people.py ninefruits/person/templates/person/admin/revealed.html
+msgid "The full value is shown once and the reveal is recorded in the security log."
+msgstr "Nilai penuh dipaparkan sekali dan pendedahan itu direkodkan dalam log keselamatan."
+
+# key: people.actions.reveal_passport_number
+#: ninefruits/person/admin/people.py
+msgid "Show passport number"
+msgstr "Papar nombor pasport"
+
+# key: people.actions.invite
+#: ninefruits/person/admin/people.py
+msgid "Invite to create an account"
+msgstr "Jemput untuk mencipta akaun"
+
+# key: people.notifications.invited
+#: ninefruits/person/admin/people.py
+msgid "Invitation sent."
+msgstr "Jemputan dihantar."
+
+# key: people.actions.merge
+#: ninefruits/person/admin/people.py
+msgid "Merge duplicate"
+msgstr "Gabungkan pendua"
+
+# key: people.notifications.merged
+#: ninefruits/person/admin/people.py
+msgid "People merged."
+msgstr "Individu telah digabungkan."
+
+# key: people.help.merge
+#: ninefruits/person/admin/people.py
+msgid "The other person's student records, instructor record, guardians and account move to the person you keep. The other person is marked as merged and cannot be used again. This cannot be undone."
+msgstr "Rekod pelajar, rekod pensyarah, penjaga dan akaun individu yang satu lagi dipindahkan kepada individu yang anda kekalkan. Individu yang satu lagi ditanda sebagai digabungkan dan tidak boleh digunakan lagi. Tindakan ini tidak boleh dibatalkan."
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/person/admin/requests.py ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgid "Student number"
+msgstr "Nombor matrik"
+
+# key: people.fields.request_status
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgid "Request status"
+msgstr "Status permohonan"
+
+# key: common.reason
+#: ninefruits/person/admin/requests.py ninefruits/person/models/status_change.py
+msgid "Reason"
+msgstr "Sebab"
+
+# key: people.fields.requested_by
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgctxt "people"
+msgid "Requested by"
+msgstr "Dipohon oleh"
+
+# key: people.fields.decided_by
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgctxt "people"
+msgid "Decided by"
+msgstr "Diputuskan oleh"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/person/admin/requests.py
+msgid "Approve"
+msgstr "Luluskan"
+
+# key: people.notifications.approved
+#: ninefruits/person/admin/requests.py
+msgid "Request approved."
+msgstr "Permohonan diluluskan."
+
+# key: people.actions.reject
+#: ninefruits/person/admin/requests.py
+msgctxt "people"
+msgid "Reject"
+msgstr "Tolak"
+
+# key: people.notifications.rejected
+#: ninefruits/person/admin/requests.py
+msgid "Request rejected."
+msgstr "Permohonan ditolak."
+
+# key: people.fields.primary_program
+#: ninefruits/person/admin/requests.py
+msgctxt "people"
+msgid "Primary program"
+msgstr "Program utama"
+
+# key: people.fields.program_role
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Kind"
+msgstr "Jenis"
+
+# key: people.fields.statement
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/templates/person/portal/records.html
+msgid "Statement"
+msgstr "Pernyataan"
+
+# key: people.fields.catalog_year
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Catalog year"
+msgstr "Tahun kurikulum"
+
+# key: people.help.catalog_year
+#: ninefruits/person/admin/student_records.py
+msgid "Year of the curriculum that applies to this student, usually the admission year."
+msgstr "Tahun kurikulum yang terpakai bagi pelajar ini, biasanya tahun kemasukan."
+
+# key: people.fields.year_level
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Year"
+msgstr "Tahun"
+
+# key: people.fields.admission_type
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Admission type"
+msgstr "Jenis kemasukan"
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Admission term"
+msgstr "Semester kemasukan"
+
+# key: people.fields.institutional_email
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "School email"
+msgstr "E-mel institusi"
+
+# key: people.help.institutional_email
+#: ninefruits/person/admin/student_records.py
+msgid "School email address. Used to link school sign-in (SSO) accounts automatically when enabled."
+msgstr "Alamat e-mel institusi. Digunakan untuk memautkan akaun log masuk institusi (SSO) secara automatik apabila diaktifkan."
+
+# key: people.fields.tags
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Tags"
+msgstr "Tag"
+
+# key: people.help.tags
+#: ninefruits/person/admin/student_records.py
+msgid "Free labels for grouping, e.g. scholarship programs."
+msgstr "Label bebas untuk pengelompokan, cth. program biasiswa."
+
+# key: security.scope_types.program
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "security"
+msgid "Program"
+msgstr "Program"
+
+# key: people.fields.admission_date
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "Admission date"
+msgstr "Tarikh kemasukan"
+
+# key: people.help.student_number_generated
+#: ninefruits/person/admin/student_records.py
+msgid "Leave empty to generate one with the student number pattern."
+msgstr "Biarkan kosong untuk menjana nombor menggunakan corak nombor matrik."
+
+# key: people.resources.status_changes.label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py
+msgid "status change"
+msgstr "perubahan status"
+
+# key: people.resources.status_changes.plural_label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/records.html
+msgid "status changes"
+msgstr "perubahan status"
+
+# key: people.resources.advisor_assignments.label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py
+msgid "advisor"
+msgstr "penasihat akademik"
+
+# key: people.resources.advisor_assignments.plural_label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py
+msgid "advisors"
+msgstr "penasihat akademik"
+
+# key: people.resources.additional_programs.label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "second major or minor"
+msgstr "major kedua atau minor"
+
+# key: people.resources.additional_programs.plural_label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "second majors and minors"
+msgstr "major kedua dan minor"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/person/admin/student_records.py
+msgid "End"
+msgstr "Tamat"
+
+# key: people.fields.status_change_type
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/records.html
+msgid "Change type"
+msgstr "Jenis perubahan"
+
+# key: people.fields.effective_date
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Effective date"
+msgstr "Tarikh berkuat kuasa"
+
+# key: people.fields.advisor
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Advisor"
+msgstr "Penasihat akademik"
+
+# key: people.fields.advisor_role
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py
+msgid "Advisor role"
+msgstr "Peranan penasihat"
+
+# key: reference.fields.start_date
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py ninefruits/person/models/student_record.py
+msgid "Start date"
+msgstr "Tarikh mula"
+
+# key: people.sections.record
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgid "Student record"
+msgstr "Rekod pelajar"
+
+# key: admin.audit.fields.properties
+#: ninefruits/person/admin/student_records.py
+msgid "Details"
+msgstr "Butiran"
+
+#: ninefruits/person/admin/student_records.py
+msgid "Student registered."
+msgstr "Pelajar telah didaftarkan."
+
+# key: people.actions.register_student
+#: ninefruits/person/admin/student_records.py
+msgid "Register student"
+msgstr "Daftar pelajar"
+
+# key: people.actions.record_status_change
+#: ninefruits/person/admin/student_records.py
+msgid "Record status change"
+msgstr "Rekod perubahan status"
+
+# key: people.notifications.status_changed
+#: ninefruits/person/admin/student_records.py
+msgid "Status change recorded."
+msgstr "Perubahan status direkodkan."
+
+# key: grading.transcript.title
+#: ninefruits/person/admin/student_records.py
+msgid "Grade report"
+msgstr "Laporan gred"
+
+# key: people.actions.assign_advisor
+#: ninefruits/person/admin/student_records.py
+msgid "Assign advisor"
+msgstr "Tetapkan penasihat akademik"
+
+# key: people.notifications.advisor_assigned
+#: ninefruits/person/admin/student_records.py
+msgid "Advisor assigned."
+msgstr "Penasihat akademik ditetapkan."
+
+# key: people.notifications.additional_program_ended
+#: ninefruits/person/admin/student_records.py
+msgid "Program ended."
+msgstr "Program ditamatkan."
+
+# key: people.student_statuses.enrolled
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Enrolled"
+msgstr "Aktif"
+
+# key: people.student_statuses.on_leave
+#: ninefruits/person/enums.py
+msgid "On leave"
+msgstr "Tangguh pengajian"
+
+# key: people.student_statuses.withdrawn
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Withdrawn"
+msgstr "Tarik diri"
+
+# key: people.student_statuses.dismissed
+#: ninefruits/person/enums.py
+msgid "Dismissed"
+msgstr "Diberhentikan"
+
+# key: people.student_statuses.graduated
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Graduated"
+msgstr "Bergraduat"
+
+# key: people.status_change_statuses.requested
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Requested"
+msgstr "Dipohon"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/person/enums.py
+msgid "Approved"
+msgstr "Diluluskan"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/person/enums.py
+msgid "Rejected"
+msgstr "Ditolak"
+
+# key: people.additional_program_request_statuses.cancelled
+# key: people.status_change_statuses.cancelled
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Cancelled"
+msgstr "Dibatalkan"
+
+# key: people.additional_program_request_statuses.requested
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Pending"
+msgstr "Menunggu"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/person/enums.py
+msgid "Second major"
+msgstr "Major kedua"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/person/enums.py
+msgid "Minor"
+msgstr "Minor"
+
+# key: people.advisor_roles.primary
+#: ninefruits/person/enums.py
+msgid "Primary advisor"
+msgstr "Penasihat akademik utama"
+
+# key: people.advisor_roles.co_advisor
+#: ninefruits/person/enums.py
+msgid "Co-advisor"
+msgstr "Penasihat akademik bersama"
+
+# key: people.employment_types.full_time
+#: ninefruits/person/enums.py
+msgid "Full-time"
+msgstr "Sepenuh masa"
+
+# key: people.employment_types.part_time
+#: ninefruits/person/enums.py
+msgid "Part-time"
+msgstr "Separuh masa"
+
+# key: people.employment_types.adjunct
+#: ninefruits/person/enums.py
+msgid "Adjunct"
+msgstr "Adjung"
+
+# key: people.employment_types.visiting
+#: ninefruits/person/enums.py
+msgid "Visiting"
+msgstr "Pelawat"
+
+# key: people.employment_types.emeritus
+#: ninefruits/person/enums.py
+msgid "Emeritus"
+msgstr "Emeritus"
+
+# key: people.genders.female
+#: ninefruits/person/enums.py
+msgid "Female"
+msgstr "Perempuan"
+
+# key: people.genders.male
+#: ninefruits/person/enums.py
+msgid "Male"
+msgstr "Lelaki"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: ninefruits/person/enums.py
+msgid "Other"
+msgstr "Lain-lain"
+
+# key: people.genders.undisclosed
+#: ninefruits/person/enums.py
+msgid "Not disclosed"
+msgstr "Tidak dinyatakan"
+
+# key: people.guardian_relationships.father
+#: ninefruits/person/enums.py
+msgid "Father"
+msgstr "Bapa"
+
+# key: people.guardian_relationships.mother
+#: ninefruits/person/enums.py
+msgid "Mother"
+msgstr "Ibu"
+
+# key: people.guardian_relationships.guardian
+#: ninefruits/person/enums.py
+msgid "Guardian"
+msgstr "Penjaga"
+
+# key: people.guardian_relationships.spouse
+#: ninefruits/person/enums.py
+msgid "Spouse"
+msgstr "Pasangan"
+
+# key: people.guardian_relationships.sibling
+#: ninefruits/person/enums.py
+msgid "Sibling"
+msgstr "Adik-beradik"
+
+# key: people.guardian_relationships.grandparent
+#: ninefruits/person/enums.py
+msgid "Grandparent"
+msgstr "Datuk/nenek"
+
+# key: validation.email
+#: ninefruits/person/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid email address."
+msgstr "Medan %(attribute)s mestilah alamat e-mel yang sah."
+
+# key: people.import.unknown_program
+#: ninefruits/person/importers.py
+#, python-format
+msgid "No program with the code %(code)s."
+msgstr "Tiada program dengan kod %(code)s."
+
+# key: people.resources.instructors.plural_label
+#: ninefruits/person/importers.py ninefruits/person/models/instructor.py
+msgid "instructors"
+msgstr "pensyarah"
+
+# key: people.fields.requested_program
+#: ninefruits/person/models/additional_program.py
+msgid "Applied program"
+msgstr "Program dipohon"
+
+# key: people.fields.start_term
+#: ninefruits/person/models/additional_program.py
+msgid "Starting term"
+msgstr "Semester mula"
+
+# key: people.fields.requested_at
+#: ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgid "Requested at"
+msgstr "Dipohon pada"
+
+# key: people.resources.additional_program_requests.label
+#: ninefruits/person/models/additional_program.py
+msgid "second major or minor application"
+msgstr "permohonan major kedua atau minor"
+
+# key: people.resources.additional_program_requests.plural_label
+#: ninefruits/person/models/additional_program.py
+msgid "second major and minor applications"
+msgstr "permohonan major kedua dan minor"
+
+# key: people.resources.instructors.label
+#: ninefruits/person/models/instructor.py
+msgid "instructor"
+msgstr "pensyarah"
+
+# key: people.fields.name_variants
+#: ninefruits/person/models/person.py
+msgid "Name in other languages"
+msgstr "Nama dalam bahasa lain"
+
+# key: people.resources.people.label
+#: ninefruits/person/models/person.py
+msgid "person"
+msgstr "individu"
+
+# key: people.resources.people.plural_label
+#: ninefruits/person/models/person.py
+msgid "people"
+msgstr "individu"
+
+# key: people.fields.relationship
+#: ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "Relationship"
+msgstr "Hubungan"
+
+# key: people.fields.is_primary_contact
+#: ninefruits/person/models/person.py
+msgid "Primary contact"
+msgstr "Perhubungan utama"
+
+# key: people.fields.can_student_request
+#: ninefruits/person/models/status_change.py
+msgid "Students can request"
+msgstr "Pelajar boleh memohon"
+
+# key: reference.fields.is_active
+#: ninefruits/person/models/status_change.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Aktif"
+
+# key: reference.fields.sort_order
+#: ninefruits/person/models/status_change.py
+msgid "Order"
+msgstr "Susunan"
+
+# key: people.resources.status_change_types.label
+#: ninefruits/person/models/status_change.py
+msgid "status change type"
+msgstr "jenis perubahan status"
+
+# key: people.resources.status_change_types.plural_label
+#: ninefruits/person/models/status_change.py
+msgid "status change types"
+msgstr "jenis perubahan status"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/person/models/status_change.py
+msgid "Term"
+msgstr "Semester"
+
+# key: people.fields.graduation_date
+#: ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "Graduation date"
+msgstr "Tarikh bergraduat"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/person/notifications.py
+msgid "Hello,"
+msgstr "Salam sejahtera,"
+
+# key: people.invitations.mail_intro
+#: ninefruits/person/notifications.py
+msgid "Your school has invited you to create an account."
+msgstr "Institusi anda telah menjemput anda untuk mencipta akaun."
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: ninefruits/person/notifications.py ninefruits/person/templates/person/accept_invitation.html
+msgid "Create account"
+msgstr "Cipta akaun"
+
+# key: people.invitations.mail_expiry
+#: ninefruits/person/notifications.py
+#, python-format
+msgid "This link works until %(date)s."
+msgstr "Pautan ini sah sehingga %(date)s."
+
+# key: security.email_code.mail_salutation
+#: ninefruits/person/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Terima kasih,\n"
+"%(app)s"
+
+# key: people.invitations.mail_subject
+#: ninefruits/person/notifications.py
+#, python-format
+msgid "Create your %(app)s account"
+msgstr "Cipta akaun %(app)s anda"
+
+# key: admin.settings.student_records.student_number_pattern
+#: ninefruits/person/settings_pages.py
+msgid "Student number pattern"
+msgstr "Corak nombor matrik"
+
+# key: admin.settings.student_records.student_number_pattern_help
+#: ninefruits/person/settings_pages.py
+#, python-brace-format
+msgid "{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n digits. Example: {YYYY}{SEQ:5} gives 202600001."
+msgstr "{YYYY} tahun kemasukan, {YY} dua digit terakhir, {SEQ:n} nombor siri diisi hingga n digit. Contoh: {YYYY}{SEQ:5} menghasilkan 202600001."
+
+# key: admin.settings.student_records.invitation_valid_days
+#: ninefruits/person/settings_pages.py
+msgid "Invitation links valid for (days)"
+msgstr "Pautan jemputan sah selama (hari)"
+
+# key: admin.settings.student_records.max_second_majors
+#: ninefruits/person/settings_pages.py
+msgid "Second majors at a time"
+msgstr "Major kedua serentak"
+
+# key: admin.settings.student_records.max_minors
+#: ninefruits/person/settings_pages.py
+msgid "Minors at a time"
+msgstr "Minor serentak"
+
+# key: people.invitations.title
+#: ninefruits/person/templates/person/accept_invitation.html
+msgid "Create your account"
+msgstr "Cipta akaun anda"
+
+# key: people.invitations.instructions
+#: ninefruits/person/templates/person/accept_invitation.html
+#, python-format
+msgid "Choose a password for %(email)s."
+msgstr "Pilih kata laluan untuk %(email)s."
+
+#: ninefruits/person/templates/person/admin/history.html
+msgid "Change history"
+msgstr "Sejarah perubahan"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/person/templates/person/admin/history.html
+msgctxt "admin"
+msgid "Time"
+msgstr "Masa"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/person/templates/person/admin/history.html
+msgid "Table"
+msgstr "Jadual"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/person/templates/person/admin/history.html
+msgctxt "admin"
+msgid "Operation"
+msgstr "Operasi"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/person/templates/person/admin/history.html
+msgid "Changed columns"
+msgstr "Lajur yang diubah"
+
+# key: admin.audit.fields.actor
+#: ninefruits/person/templates/person/admin/history.html
+msgid "User"
+msgstr "Pengguna"
+
+#: ninefruits/person/templates/person/admin/history.html
+msgid "No changes recorded yet."
+msgstr "Belum ada perubahan direkodkan."
+
+# key: evaluation.portal.back
+#: ninefruits/person/templates/person/admin/revealed.html
+msgid "Back"
+msgstr "Kembali"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: ninefruits/person/templates/person/portal/advisees.html ninefruits/person/views/portal.py
+msgid "Advisees"
+msgstr "Pelajar seliaan"
+
+# key: common.none
+#: ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "common"
+msgid "None"
+msgstr "Tiada"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/person/templates/person/portal/profile.html ninefruits/person/views/portal.py
+msgid "My details"
+msgstr "Butiran saya"
+
+# key: portal.profile.registrar_fields
+#: ninefruits/person/templates/person/portal/profile.html
+msgid "Contact the registrar's office to change your name, birth date or identity numbers."
+msgstr "Hubungi Pejabat Pendaftar untuk menukar nama, tarikh lahir atau nombor pengenalan anda."
+
+# key: common.save
+#: ninefruits/person/templates/person/portal/profile.html
+msgctxt "common"
+msgid "Save"
+msgstr "Simpan"
+
+# key: portal.profile.remove_confirm
+#: ninefruits/person/templates/person/portal/profile.html
+msgid "Remove this guardian?"
+msgstr "Alih keluar penjaga ini?"
+
+# key: portal.profile.remove
+#: ninefruits/person/templates/person/portal/profile.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "Alih keluar"
+
+# key: portal.profile.add_guardian
+#: ninefruits/person/templates/person/portal/profile.html
+msgid "Add guardian"
+msgstr "Tambah penjaga"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/person/templates/person/portal/records.html ninefruits/person/views/portal.py
+msgid "My records"
+msgstr "Rekod saya"
+
+# key: portal.records.choose
+#: ninefruits/person/templates/person/portal/records.html
+msgid "You have more than one student record. Choose one:"
+msgstr "Anda mempunyai lebih daripada satu rekod pelajar. Pilih satu:"
+
+# key: portal.records.none
+#: ninefruits/person/templates/person/portal/records.html
+msgid "You have no student record."
+msgstr "Anda tiada rekod pelajar."
+
+# key: portal.records.pending
+#: ninefruits/person/templates/person/portal/records.html
+#, python-format
+msgid "Pending request: %(type)s from %(date)s."
+msgstr "Permohonan menunggu: %(type)s sejak %(date)s."
+
+# key: portal.records.cancel_confirm
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Cancel this request?"
+msgstr "Batalkan permohonan ini?"
+
+# key: portal.records.cancel
+#: ninefruits/person/templates/person/portal/records.html
+msgctxt "portal"
+msgid "Cancel request"
+msgstr "Batalkan permohonan"
+
+# key: portal.records.request_title
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Request a status change"
+msgstr "Mohon perubahan status"
+
+# key: portal.records.submit_request
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Submit request"
+msgstr "Hantar permohonan"
+
+# key: portal.records.additional_program_request
+#: ninefruits/person/templates/person/portal/records.html
+#, python-format
+msgid "%(role)s application for %(program)s: %(status)s"
+msgstr "Permohonan %(role)s bagi %(program)s: %(status)s"
+
+# key: portal.records.additional_program_open
+#: ninefruits/person/templates/person/portal/records.html
+#, python-format
+msgid "Applications for a second major or minor are open (starting %(term)s)."
+msgstr "Permohonan major kedua atau minor dibuka (bermula %(term)s)."
+
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Show programs"
+msgstr "Tunjukkan program"
+
+# key: portal.records.apply_additional_program
+#: ninefruits/person/templates/person/portal/records.html
+msgctxt "portal"
+msgid "Apply"
+msgstr "Mohon"
+
+# key: authentication.fields.new_password
+#: ninefruits/person/views/invitations.py
+msgid "New password"
+msgstr "Kata laluan baharu"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/person/views/invitations.py
+msgid "Confirm password"
+msgstr "Sahkan kata laluan"
+
+#: ninefruits/person/views/invitations.py
+msgid "The password field confirmation does not match."
+msgstr "Pengesahan kata laluan tidak sepadan."
+
+# key: people.invitations.accepted
+#: ninefruits/person/views/invitations.py
+msgid "Your account is ready. Welcome."
+msgstr "Akaun anda telah sedia. Selamat datang."
+
+# key: portal.records.request_submitted
+#: ninefruits/person/views/portal.py
+msgid "Your request was submitted. The registrar's office will review it."
+msgstr "Permohonan anda telah dihantar. Pejabat Pendaftar akan menyemaknya."
+
+# key: portal.records.additional_program_requested
+#: ninefruits/person/views/portal.py
+msgid "Your application was submitted. The program's office will review it."
+msgstr "Permohonan anda telah dihantar. Pejabat program akan menyemaknya."
+
+# key: portal.profile.saved
+#: ninefruits/person/views/portal.py
+msgid "Your details were saved."
+msgstr "Butiran anda telah disimpan."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/person/views/portal.py
+msgctxt "portal"
+msgid "My records"
+msgstr "Rekod saya"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/person/views/portal.py
+msgctxt "portal"
+msgid "My details"
+msgstr "Butiran saya"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: ninefruits/person/views/portal.py
+msgctxt "portal"
+msgid "Advisees"
+msgstr "Pelajar seliaan"

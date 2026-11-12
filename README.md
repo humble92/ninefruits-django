@@ -8,10 +8,22 @@
 | 한국어 | [README.ko.md](README.ko.md) | [docs/manual/ko/](docs/manual/ko/README.md) |
 | 简体中文 | [README.zh_Hans.md](README.zh_Hans.md) | [docs/manual/zh_Hans/](docs/manual/zh_Hans/README.md) |
 | ລາວ | [README.lo.md](README.lo.md) | [docs/manual/lo/](docs/manual/lo/README.md) |
+| Deutsch | [README.de.md](README.de.md) | [docs/manual/de/](docs/manual/de/README.md) |
+| Filipino | [README.fil.md](README.fil.md) | [docs/manual/fil/](docs/manual/fil/README.md) |
+| Français | [README.fr.md](README.fr.md) | [docs/manual/fr/](docs/manual/fr/README.md) |
+| 日本語 | [README.ja.md](README.ja.md) | [docs/manual/ja/](docs/manual/ja/README.md) |
+| Монгол | [README.mn.md](README.mn.md) | [docs/manual/mn/](docs/manual/mn/README.md) |
+| Bahasa Melayu | [README.ms.md](README.ms.md) | [docs/manual/ms/](docs/manual/ms/README.md) |
+| नेपाली | [README.ne.md](README.ne.md) | [docs/manual/ne/](docs/manual/ne/README.md) |
+| Русский | [README.ru.md](README.ru.md) | [docs/manual/ru/](docs/manual/ru/README.md) |
+| ไทย | [README.th.md](README.th.md) | [docs/manual/th/](docs/manual/th/README.md) |
+| Türkçe | [README.tr.md](README.tr.md) | [docs/manual/tr/](docs/manual/tr/README.md) |
+| Oʻzbek | [README.uz.md](README.uz.md) | [docs/manual/uz/](docs/manual/uz/README.md) |
+| Tiếng Việt | [README.vi.md](README.vi.md) | [docs/manual/vi/](docs/manual/vi/README.md) |
 
 To add another language, see [Adding a language](docs/development/adding-a-language.md) ([한국어](docs/development/adding-a-language.ko.md)).
 
-Ninefruits is a student information system that any university can install and run. It covers the core of academic administration, from admission applications to student records, curricula and course sections, registration, grades, course evaluation, certificates, language and comprehensive examinations, attendance, graduation review, reports and the groundwork for LMS integration. Screens and documentation are available in Korean, English, Chinese and Lao.
+Ninefruits is a student information system that any university can install and run. It covers the core of academic administration, from admission applications to student records, curricula and course sections, registration, grades, course evaluation, certificates, language and comprehensive examinations, attendance, graduation review, reports and the groundwork for LMS integration. Screens and documentation are available in the 16 languages of the table above.
 
 This repository is the Python 3.14 / Django 6.1 / PostgreSQL 18 port of [Ninefruits for Laravel](https://github.com/humble92/ninefruits-laravel) v1.0.0 (Laravel 13, Filament, Livewire). The port keeps the original's behaviour and its database schema unchanged: the Django migrations replay the original's DDL, and the schema is compared object by object with the original's `pg_dump` (`tests/db/test_schema_equivalence.py`, `tools/schema_dump_diff.py`). An installation of either version can therefore be moved to the other with standard PostgreSQL tools. How and why it was ported is recorded in [porting/](porting/README.md) (plan, phase reports, design decisions, test mapping).
 

@@ -1,0 +1,1178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "Bản dịch phải là một đối tượng gồm mã ngôn ngữ và văn bản."
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "Mỗi bản dịch chỉ được có tối đa %(limit_value)d ký tự."
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "Bắt buộc phải nhập giá trị %(language)s."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "Trường này là bắt buộc."
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "Áp dụng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "Chọn bản ghi"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "Chọn thao tác"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "Chọn thao tác cần thực hiện"
+
+# key: common.save
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "Lưu"
+
+# key: security.scope_types.global
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "Toàn bộ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr "Bởi %(filter_title)s "
+
+# key: common.yes
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "Có"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "Không"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "Từ"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "Sang"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "Từ ngày"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "Đến ngày"
+
+# key: admin.audit.fields.occurred_at
+# key: registration.fields.attempted_at
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "Thời điểm"
+
+# key: assessment.fields.held_date
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "Ngày thi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "Bắt đầu hành động lựa chọn"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "Thực hiện"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "Click vào đây để lựa chọn các đối tượng trên tất cả các trang"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "Hãy chọn tất cả %(total_count)s %(module_name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "Xóa lựa chọn"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "Chọn tất cả đối tượng trên trang này để thực hiện thao tác"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "Mục tiêu phải được chọn mới có thể thực hiện hành động trên chúng. Không có mục tiêu nào đã được thay đổi."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "Các mô models trong %(name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "Bạn không có quyền xem hoặc chỉnh sửa bất cứ gì."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "Đổi mật khẩu"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "Bản ghi nhớ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "Xem trên trang web"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "Xóa %(object_name)s '%(escaped_object)s' sẽ làm mất những dữ liệu có liên quan. Tài khoản của bạn không được cấp quyển xóa những dữ liệu đi kèm theo."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "Xóa các %(object_name)s  ' %(escaped_object)s ' sẽ bắt buộc xóa các đối tượng được bảo vệ sau đây:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "Bạn có chắc là muốn xóa %(object_name)s \"%(escaped_object)s\"?Tất cả những dữ liệu đi kèm dưới đây cũng sẽ bị mất:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "Xóa các %(objects_name)s sẽ bắt buộc xóa các đối tượng liên quan, nhưng tài khoản của bạn không có quyền xóa các loại đối tượng sau đây:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "Xóa các %(objects_name)s sẽ bắt buộc xóa các đối tượng đã được bảo vệ sau đây:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "Bạn chắc chắn muốn xóa những lựa chọn %(objects_name)s? Tất cả những đối tượng sau và những đối tượng liên quan sẽ được xóa:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "Đối tượng"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "Tóm tắt"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "Chào mừng quay trở lại"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "Bạn đã xác thực bằng tài khoản %(username)s, nhưng không đủ quyền để truy cập trang này. Bạn có muốn đăng nhập bằng một tài khoản khác?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "Đăng nhập"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "Bạn quên mật khẩu hoặc tài khoản?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "Hiện tất cả"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "Nhập để tìm kiếm"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "Lưu và tiếp tục chỉnh sửa"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "Lưu lại và xem"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "Lưu và thêm mới"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "Lưu mới"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "Bạn đã đăng xuất khỏi trang quản trị thành công"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Cảm ơn bạn đã dành thời gian với trang web."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "Đăng nhập lại"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "Mật khẩu của bạn đã được thay đổi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Hãy nhập lại mật khẩu cũ và sau đó nhập mật khẩu mới hai lần để chúng tôi có thể kiểm tra lại xem bạn đã gõ chính xác hay chưa."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "Không có dữ liệu"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "Xem trang web"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "Thoát"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "Thêm vào %(name)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "Tất cả ứng dụng"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "Xem"
+
+# key: evaluation.actions.change
+# key: grading.fields.change
+# key: reference.fields.change_type
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "Thay đổi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "Thêm vào"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "Xóa"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "Chưa xác định"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "Có"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "Không"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "Áp dụng bộ lọc"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "Ẩn số lượng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "Hiện số lượng"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "Xóa tất cả bộ lọc"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "Bộ lọc"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "Hoán đổi sắp xếp"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "Bỏ khỏi sắp xếp"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "Sắp xếp theo:%(priority_number)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "Di chuyển"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "Chọn"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "Xóa"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "Tìm kiếm gần đây"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "Không có kết quả phù hợp"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "Không, đưa tôi trở lại"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "Có, tôi chắc chắn"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "Hủy"
+
+# key: evaluation.portal.submit
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "Gửi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "Đóng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "Sửa"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "Ảnh bản ghi"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "Mục này sẽ bị xóa."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "Nhấn để hủy"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "Không tìm thấy kết quả"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "Trang này không có kết quả nào."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "Đặt lại bộ lọc"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "Xem trước hình ảnh"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "Nhấn để tải xuống"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "Chọn tệp để tải lên"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "Quay lại"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "Hoạt động gần đây"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "Không biết nội dung"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "Trước"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "Sau"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "Tìm ứng dụng và mô hình..."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "Phím tắt khả dụng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "Phím tắt chung"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "Mở công cụ lệnh"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "Mở danh sách phím tắt"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "Ẩn/hiện thanh bên"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "Chuyển chế độ tối/sáng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "Phím tắt danh sách"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "Ẩn/hiện bộ lọc"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "Tạo bản ghi mới"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "Phím tắt công cụ lệnh"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "Mở mục đã chọn"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "Mở mục đã chọn trong thẻ mới"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "Trang quản trị cho Django"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "Trang web admin Django"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "Trang chủ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "Sáng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "Tối"
+
+# key: reference.fields.is_system
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "Hệ thống"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "Quay lại trang web"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s kết quả"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "tổng số %(full_result_count)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "Ẩn/hiện mật khẩu"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "Thay đổi %(model)s đã chọn"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "Thêm %(model)s khác"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "Xem %(model)s đã chọn"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "Xóa %(model)s đã chọn"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "Thêm dòng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Vui lòng sửa các lỗi bên dưới."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "Site quản trị hệ thống."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "Chọn %s để thay đổi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "Chọn %s để xem"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "Thêm %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "Thay đổi %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "Xem %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "Xóa các %(verbose_name_plural)s đã chọn"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "Đã xóa thành công %(count)d %(items)s ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "{name} “{obj}” được thêm vào thành công."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "{name} “{obj}” đã được thay đổi thành công."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "%(name)s “%(obj)s” đã được xóa thành công."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "Không có hoạt động nào được lựa chọn."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "Hoạt động:"
+
+# key: offering.catalog.search
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "Tìm kiếm"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "Bất kì ngày nào"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "Hôm nay"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "7 ngày trước"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "Tháng này"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "Năm nay"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "Không có ngày"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "Có ngày"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "Rỗng"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "Không rỗng"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "Không có sẵn"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "Hoạt động của tôi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "Bạn hãy nhập đúng %(username)s và mật khẩu. (Có phân biệt chữ hoa, thường)"
+
+# key: authentication.fields.password
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "Mật khẩu"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "Nhập một giá trị hợp lệ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "Nhập địa chỉ email."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "Nhập một số tổng thể."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "Nhập một số."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "Nhập một ngày hợp lệ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "Nhập một thời gian hợp lệ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "Nhập một ngày/thời gian hợp lệ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "Nhập một URL hợp lệ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "Nhập một danh sách giá trị."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Hãy chọn một lựa chọn hợp lệ. %(value)s không phải là một trong các lựa chọn khả thi."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Đảm bảo giá trị này là nhỏ hơn hoặc bằng với %(limit_value)s ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Đảm bảo giá trị này lớn hơn hoặc bằng với %(limit_value)s ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "Giá trị này chỉ có tối đa %(limit_value)d kí tự (hiện có %(show_value)d)"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "Giá trị này phải có ít nhất %(limit_value)d kí tự (hiện có %(show_value)d)"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "Tiếng Lào"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "Đăng nhập"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "Đăng xuất"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "Bạn có chắc chắn muốn đăng xuất không?"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py templates/account/signup.html
+msgid "Email"
+msgstr "Email"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "Ghi nhớ đăng nhập"
+
+# key: authentication.login.forgot_password
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "Quên mật khẩu?"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "Địa chỉ email và/hoặc mật khẩu bạn nhập không đúng."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "Đăng nhập thất bại quá nhiều lần. Vui lòng thử lại sau."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "Tài khoản này hiện không hoạt động."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "Đặt lại mật khẩu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "Bạn quên mật khẩu? Hãy nhập địa chỉ email bên dưới, chúng tôi sẽ gửi cho bạn email để đặt lại mật khẩu."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "Đặt lại mật khẩu của tôi"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Vui lòng liên hệ với chúng tôi nếu bạn gặp khó khăn khi đặt lại mật khẩu."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "Chúng tôi đã gửi email cho bạn. Nếu chưa nhận được, vui lòng kiểm tra thư mục thư rác. Nếu sau vài phút vẫn không nhận được, hãy liên hệ với chúng tôi."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "Mã thông báo không hợp lệ"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "Liên kết đặt lại mật khẩu không hợp lệ, có thể do đã được sử dụng.  Vui lòng yêu cầu <a href=\"%(passwd_reset_url)s\">đặt lại mật khẩu mới</a>."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "Mật khẩu của bạn đã được thay đổi."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "Đổi mật khẩu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "Mật khẩu hiện tại"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "Mật khẩu mới"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "Mật khẩu mới (nhập lại)"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "Bạn phải nhập cùng một mật khẩu mỗi lần."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "Vui lòng nhập mật khẩu hiện tại."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "Mật khẩu không đúng."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "Khóa không hợp lệ hoặc đã hết hạn."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "Mã đặt lại mật khẩu không hợp lệ."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "Vui lòng chờ, bạn đang gửi quá nhiều yêu cầu."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "Xác thực hai yếu tố"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "Tài khoản của bạn được bảo vệ bằng xác thực hai yếu tố. Vui lòng nhập mã từ ứng dụng xác thực:"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "Mã xác thực"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "Mã"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "Mã không đúng."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "Tùy chọn khác"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "Dùng ứng dụng xác thực hoặc mã"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: templates/account/login.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "Đăng nhập"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "Mật khẩu"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "Duy trì đăng nhập"
+
+# key: authentication.login.sso
+#: templates/account/login.html
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "Đăng nhập bằng %(provider)s"
+
+# key: admissions.register.prompt
+#: templates/account/login.html
+msgid "Want to apply?"
+msgstr "Bạn muốn nộp hồ sơ?"
+
+# key: admissions.register.see_cycles
+#: templates/account/login.html
+msgid "See open admissions"
+msgstr "Xem các đợt tuyển sinh đang mở"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "Xác nhận mật khẩu"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "Để bảo mật, vui lòng xác nhận mật khẩu để tiếp tục."
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "Xác nhận"
+
+# key: admissions.register.title
+#: templates/account/signup.html
+msgid "Create an account"
+msgstr "Tạo tài khoản"
+
+# key: admissions.register.instructions
+#: templates/account/signup.html
+msgid "For applicants. Staff and current students already have an account."
+msgstr "Dành cho thí sinh. Cán bộ và sinh viên hiện tại đã có tài khoản."
+
+# key: people.help.romanized
+#: templates/account/signup.html
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "Họ tên pháp lý bằng chữ Latinh, như trong hộ chiếu. Thêm họ tên viết bằng các ngôn ngữ khác ở bên dưới."
+
+# key: authentication.fields.password_confirmation
+#: templates/account/signup.html
+msgid "Confirm password"
+msgstr "Xác nhận mật khẩu"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/account/signup.html
+msgid "Create account"
+msgstr "Tạo tài khoản"
+
+# key: admissions.register.have_account
+#: templates/account/signup.html
+msgid "Already have an account?"
+msgstr "Đã có tài khoản?"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "Xác thực hai yếu tố"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "Nhập mã 6 chữ số từ ứng dụng xác thực của bạn."
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "Mã"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "Dùng mã khôi phục"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "Mã khôi phục"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "Ghi nhớ thiết bị này"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "Xác minh"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "Nhập mã 6 chữ số chúng tôi đã gửi đến email của bạn."
+
+# key: authentication.two_factor.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "Mã qua email"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "Gửi mã qua email"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "Gửi mã mới"
+
+# upstream: Django/allauth catalog
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "Đóng"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "Menu chính"
+
+# key: authentication.logout
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Đăng xuất"
+
+# key: security.mfa.set_up
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "Thiết lập ngay"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "người dùng"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "người dùng"

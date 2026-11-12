@@ -1,0 +1,918 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: admissions.errors.no_person
+#: ninefruits/admission/actions/applications.py
+msgid "This account is not linked to a person."
+msgstr "Энэ бүртгэл хувь хүнтэй холбогдоогүй байна."
+
+# key: admissions.errors.cycle_closed
+#: ninefruits/admission/actions/applications.py
+msgid "This cycle is not taking applications."
+msgstr "Энэ элсэлтийн үед өргөдөл хүлээн авахгүй байна."
+
+# key: admissions.errors.already_applied
+#: ninefruits/admission/actions/applications.py
+msgid "You already have an open application in this cycle."
+msgstr "Та энэ элсэлтийн үед шийдвэрлэгдээгүй өргөдөлтэй байна."
+
+# key: admissions.errors.program_not_offered
+#: ninefruits/admission/actions/applications.py
+msgid "This program is not offered in the cycle."
+msgstr "Энэ хөтөлбөрөөр тухайн элсэлтийн үед элсүүлэхгүй."
+
+# key: admissions.errors.not_draft
+#: ninefruits/admission/actions/applications.py
+msgid "Only applications that have not been submitted can be changed."
+msgstr "Зөвхөн илгээгээгүй өргөдлийг өөрчилж болно."
+
+#: ninefruits/admission/actions/applications.py
+msgid "Select a valid choice."
+msgstr "Зөв сонголт хийнэ үү."
+
+#: ninefruits/admission/actions/applications.py
+msgid "The birth date must be a date before today."
+msgstr "Төрсөн огноо өнөөдрөөс өмнөх огноо байх ёстой."
+
+# key: admissions.errors.identity_locked
+#: ninefruits/admission/actions/applications.py
+msgid "Your name and birth date are kept by the registrar's office."
+msgstr "Таны нэр, төрсөн огноог сургалтын алба хариуцна."
+
+# key: admissions.errors.document_type_not_requested
+#: ninefruits/admission/actions/applications.py
+msgid "This cycle does not ask for this document."
+msgstr "Энэ элсэлтийн үед энэ баримтыг шаарддаггүй."
+
+# key: admissions.errors.document_too_large
+#: ninefruits/admission/actions/applications.py
+#, python-format
+msgid "The file is larger than %(mb)s MB."
+msgstr "Файл %(mb)s MB-аас том байна."
+
+# key: admissions.errors.document_type_invalid
+#: ninefruits/admission/actions/applications.py
+msgid "Upload a PDF, JPEG or PNG file."
+msgstr "PDF, JPEG эсвэл PNG файл хавсаргана уу."
+
+# key: admissions.errors.required_field
+#: ninefruits/admission/actions/applications.py
+msgid "This field is required to submit."
+msgstr "Илгээхийн тулд энэ талбарыг заавал бөглөнө."
+
+# key: admissions.errors.documents_missing
+#: ninefruits/admission/actions/applications.py
+#, python-format
+msgid "Upload the required documents: %(documents)s."
+msgstr "Шаардлагатай баримтыг хавсаргана уу: %(documents)s."
+
+# key: admissions.errors.invalid_transition
+#: ninefruits/admission/actions/applications.py ninefruits/admission/actions/decisions.py
+msgid "This is not possible in the application's current status."
+msgstr "Өргөдлийн одоогийн төлөвт үүнийг хийх боломжгүй."
+
+# key: admissions.errors.reason_required
+#: ninefruits/admission/actions/decisions.py
+msgid "Give the reason when recording a response for the applicant."
+msgstr "Өргөдөл гаргагчийн өмнөөс хариу бүртгэхдээ шалтгааныг бичнэ үү."
+
+# key: admissions.errors.no_open_offer
+#: ninefruits/admission/actions/decisions.py
+msgid "There is no offer to answer."
+msgstr "Хариулах санал алга."
+
+# key: admissions.errors.offer_expired
+#: ninefruits/admission/actions/decisions.py
+msgid "The deadline to accept this offer has passed. Contact the admissions office."
+msgstr "Энэ саналыг хүлээн авах хугацаа дууссан. Элсэлтийн албатай холбогдоно уу."
+
+# key: admissions.errors.not_ready_to_matriculate
+#: ninefruits/admission/actions/matriculation.py
+msgid "Only accepted offers without a student record can be matriculated."
+msgstr "Зөвхөн хүлээн авсан, оюутны бүртгэлгүй саналаар оюутны бүртгэл үүсгэж болно."
+
+# key: admissions.errors.registration_closed
+#: ninefruits/admission/actions/registration.py ninefruits/admission/forms.py
+msgid "Creating an account is not available. Contact the admissions office."
+msgstr "Бүртгэл үүсгэх боломжгүй байна. Элсэлтийн албатай холбогдоно уу."
+
+#: ninefruits/admission/actions/registration.py
+msgid "The email has already been taken."
+msgstr "Энэ имэйл аль хэдийн бүртгэгдсэн байна."
+
+# key: admissions.fields.admission_term
+#: ninefruits/admission/admin/applications.py
+msgid "Admission term"
+msgstr "Элсэх улирал"
+
+# key: admissions.help.admission_term
+#: ninefruits/admission/admin/applications.py
+msgid "The term the new students start in. Their admission date is the term's first day."
+msgstr "Шинэ оюутнуудын суралцаж эхлэх улирал. Элссэн огноо нь тухайн улирлын эхний өдөр байна."
+
+# key: admissions.fields.decision_note
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decision note"
+msgstr "Шийдвэрийн тэмдэглэл"
+
+# key: admissions.fields.response
+#: ninefruits/admission/admin/applications.py
+msgid "Response"
+msgstr "Хариу"
+
+# key: admissions.portal.accept
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Accept the offer"
+msgstr "Саналыг хүлээн авах"
+
+# key: admissions.portal.decline
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Decline"
+msgstr "Татгалзах"
+
+# key: common.reason
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Шалтгаан"
+
+# key: admissions.sections.application
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Application"
+msgstr "Өргөдөл"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/admission/admin/applications.py
+msgid "Applicant"
+msgstr "Өргөдөл гаргагч"
+
+# key: admissions.sections.decision
+#: ninefruits/admission/admin/applications.py
+msgid "Decision"
+msgstr "Шийдвэр"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/admission/admin/applications.py
+msgctxt "people"
+msgid "Name"
+msgstr "Нэр"
+
+# key: security.scope_types.program
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "security"
+msgid "Program"
+msgstr "Хөтөлбөр"
+
+# key: admissions.fields.cycle
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/applications.html
+msgid "Admission cycle"
+msgstr "Элсэлтийн үе"
+
+# key: admissions.fields.status
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Status"
+msgstr "Төлөв"
+
+# key: admissions.fields.decision_released
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Released"
+msgstr "Мэдэгдсэн"
+
+# key: people.fields.admission_type
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgid "Admission type"
+msgstr "Элсэлтийн төрөл"
+
+# key: admissions.fields.previous_school_country
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Country of previous school"
+msgstr "Өмнөх сургуулийн улс"
+
+# key: people.fields.birth_date
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Birth date"
+msgstr "Төрсөн огноо"
+
+# key: people.fields.contact_email
+#: ninefruits/admission/admin/applications.py
+msgid "Contact email"
+msgstr "Холбоо барих и-мэйл"
+
+# key: people.fields.phone
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Phone"
+msgstr "Утас"
+
+# key: admissions.fields.earlier_records
+#: ninefruits/admission/admin/applications.py
+msgid "Earlier student records"
+msgstr "Өмнөх оюутны бүртгэлүүд"
+
+# key: common.none
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "None"
+msgstr "Байхгүй"
+
+# key: admissions.sections.documents
+#: ninefruits/admission/admin/applications.py ninefruits/admission/admin/cycles.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Documents"
+msgstr "Баримт бичиг"
+
+# key: admissions.fields.decided_by
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decided by"
+msgstr "Шийдвэрлэсэн"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/admission/admin/applications.py
+msgid "Student number"
+msgstr "Оюутны код"
+
+# key: admissions.actions.start_review
+#: ninefruits/admission/admin/applications.py
+msgid "Start review"
+msgstr "Хянаж эхлэх"
+
+# key: admissions.actions.admit
+#: ninefruits/admission/admin/applications.py
+msgid "Admit"
+msgstr "Тэнцүүлэх"
+
+# key: admissions.notifications.decided
+#: ninefruits/admission/admin/applications.py
+msgid "Decision saved. The applicant sees it once it is released."
+msgstr "Шийдвэрийг хадгаллаа. Мэдэгдсэний дараа өргөдөл гаргагч харна."
+
+# key: admissions.actions.reject
+#: ninefruits/admission/admin/applications.py
+msgctxt "admissions"
+msgid "Reject"
+msgstr "Татгалзах"
+
+# key: admissions.actions.release_decision
+#: ninefruits/admission/admin/applications.py
+msgid "Release decision"
+msgstr "Шийдвэр мэдэгдэх"
+
+# key: admissions.actions.matriculate
+#: ninefruits/admission/admin/applications.py
+msgid "Create student record"
+msgstr "Оюутны бүртгэл үүсгэх"
+
+# key: admissions.notifications.matriculated
+#: ninefruits/admission/admin/applications.py
+#, python-format
+msgid "Student record %(number)s created."
+msgstr "%(number)s оюутны бүртгэл үүслээ."
+
+# key: admissions.actions.record_response
+#: ninefruits/admission/admin/applications.py
+msgid "Record offer response"
+msgstr "Саналын хариуг бүртгэх"
+
+# key: admissions.actions.release_decisions
+#: ninefruits/admission/admin/applications.py ninefruits/admission/admin/cycles.py
+msgid "Release decisions"
+msgstr "Шийдвэрүүдийг мэдэгдэх"
+
+# key: admissions.notifications.matriculated_bulk
+#: ninefruits/admission/admin/applications.py
+#, python-format
+msgid "%(count)s student record(s) created, %(skipped)s skipped."
+msgstr "%(count)s оюутны бүртгэл үүсч, %(skipped)s алгаслаа."
+
+# key: admissions.help.release_decisions
+#: ninefruits/admission/admin/cycles.py
+msgid "Applicants see their decision and get an email. A released decision can no longer be changed."
+msgstr "Өргөдөл гаргагч шийдвэрээ харж, и-мэйл хүлээн авна. Мэдэгдсэн шийдвэрийг өөрчлөх боломжгүй."
+
+# key: admissions.fields.description
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Description"
+msgstr "Тайлбар"
+
+#: ninefruits/admission/admin/cycles.py
+msgid "Use only letters, numbers, dashes and underscores."
+msgstr "Зөвхөн үсэг, тоо, зураас (-), доогуур зураас (_) ашиглана уу."
+
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "program offered"
+msgstr "элсүүлэх хөтөлбөр"
+
+# key: admissions.sections.programs
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "Programs offered"
+msgstr "Элсүүлэх хөтөлбөрүүд"
+
+# key: admissions.resources.applications.plural_label
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "applications"
+msgstr "өргөдлүүд"
+
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "document"
+msgstr "баримт"
+
+# key: admissions.sections.cycle
+#: ninefruits/admission/admin/cycles.py
+msgid "Cycle"
+msgstr "Элсэлтийн үе"
+
+# key: admissions.fields.closes_at
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Closes"
+msgstr "Хаагдах"
+
+# key: admissions.fields.rolling
+#: ninefruits/admission/admin/cycles.py
+msgid "Rolling (no deadline)"
+msgstr "Тасралтгүй (эцсийн хугацаагүй)"
+
+#: ninefruits/admission/admin/cycles.py
+msgid "No decisions to release."
+msgstr "Зарлах шийдвэр алга."
+
+# key: admissions.notifications.released
+#: ninefruits/admission/admin/cycles.py
+#, python-format
+msgid "One decision released."
+msgid_plural "%(count)s decisions released."
+msgstr[0] "%(count)s шийдвэр мэдэгдлээ."
+msgstr[1] "%(count)s шийдвэр мэдэгдлээ."
+
+# key: admissions.application_statuses.draft
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Draft"
+msgstr "Ноорог"
+
+# key: admissions.application_statuses.submitted
+#: ninefruits/admission/enums.py
+msgctxt "admissions.application_statuses"
+msgid "Submitted"
+msgstr "Илгээсэн"
+
+# key: admissions.application_statuses.under_review
+#: ninefruits/admission/enums.py
+msgid "Under review"
+msgstr "Хянагдаж буй"
+
+# key: admissions.application_statuses.admitted
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Admitted"
+msgstr "Тэнцсэн"
+
+# key: admissions.application_statuses.rejected
+#: ninefruits/admission/enums.py
+msgid "Not admitted"
+msgstr "Тэнцээгүй"
+
+# key: admissions.application_statuses.confirmed
+#: ninefruits/admission/enums.py
+msgid "Enrollment confirmed"
+msgstr "Элсэлт баталгаажсан"
+
+# key: admissions.application_statuses.withdrawn
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Withdrawn"
+msgstr "Цуцалсан"
+
+# key: admissions.application_statuses.expired
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Expired"
+msgstr "Хугацаа дууссан"
+
+# key: people.fields.family_name
+#: ninefruits/admission/forms.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Family name"
+msgstr "Овог"
+
+# key: people.fields.given_name
+#: ninefruits/admission/forms.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Given name"
+msgstr "Нэр"
+
+# key: admissions.register.email_help
+#: ninefruits/admission/forms.py
+msgid "Your personal email. It stays your sign-in name after you graduate."
+msgstr "Таны хувийн и-мэйл. Төгссөний дараа ч нэвтрэх нэр хэвээр үлдэнэ."
+
+# key: reference.fields.code
+#: ninefruits/admission/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Код"
+
+# key: admissions.help.cycle_code
+#: ninefruits/admission/models.py
+msgid "Short identifier used in application numbers, e.g. 2027-SPRING."
+msgstr "Өргөдлийн дугаарт ашиглах богино таних тэмдэг. Жишээ нь: 2027-SPRING."
+
+# key: reference.fields.name
+#: ninefruits/admission/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Нэр"
+
+# key: admissions.fields.opens_at
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Opens"
+msgstr "Нээгдэх"
+
+# key: admissions.help.closes_at
+#: ninefruits/admission/models.py
+msgid "Leave empty for rolling admission without a deadline."
+msgstr "Эцсийн хугацаагүй тасралтгүй элсэлт бол хоосон орхино уу."
+
+# key: admissions.fields.is_published
+#: ninefruits/admission/models.py
+msgctxt "admissions.fields"
+msgid "Published"
+msgstr "Нийтэлсэн"
+
+# key: admissions.help.is_published
+#: ninefruits/admission/models.py
+msgid "Applicants can see and apply to published cycles between the opening and closing times."
+msgstr "Өргөдөл гаргагч нийтэлсэн элсэлтийн үеийг нээгдэх, хаагдах хугацааны хооронд харж, өргөдөл гаргана."
+
+# key: admissions.fields.should_release_decisions_immediately
+#: ninefruits/admission/models.py
+msgid "Release decisions immediately"
+msgstr "Шийдвэрийг нэн даруй мэдэгдэх"
+
+# key: admissions.help.should_release_decisions_immediately
+#: ninefruits/admission/models.py
+msgid "Tell each applicant as soon as they are decided. Otherwise decisions are released together with the release action."
+msgstr "Шийдвэр гармагц өргөдөл гаргагч бүрт мэдэгдэнэ. Эс бөгөөс шийдвэрүүдийг мэдэгдэх үйлдлээр нэг дор мэдэгдэнэ."
+
+# key: admissions.fields.offer_response_days
+#: ninefruits/admission/models.py
+msgid "Days to accept an offer"
+msgstr "Элсэлтийн саналыг хүлээн авах хугацаа (хоног)"
+
+# key: admissions.help.offer_response_days
+#: ninefruits/admission/models.py
+msgid "Admitted applicants must accept within this many days after the release. Empty: no deadline."
+msgstr "Тэнцсэн өргөдөл гаргагч мэдэгдсэнээс хойш энэ хугацаанд саналыг хүлээн авах ёстой. Хоосон бол хугацаагүй."
+
+# key: admissions.resources.cycles.label
+#: ninefruits/admission/models.py
+msgid "admission cycle"
+msgstr "элсэлтийн үе"
+
+# key: admissions.resources.cycles.plural_label
+#: ninefruits/admission/models.py
+msgid "admission cycles"
+msgstr "элсэлтийн үеүүд"
+
+#: ninefruits/admission/models.py
+msgid "The closing time must be after the opening time."
+msgstr "Хаах цаг нээх цагаас хойш байх ёстой."
+
+#: ninefruits/admission/models.py
+msgid "Enter a number between 1 and 365."
+msgstr "1-ээс 365 хүртэлх тоо оруулна уу."
+
+# key: admissions.fields.capacity
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Capacity"
+msgstr "Хяналтын тоо"
+
+# key: admissions.fields.document_type
+#: ninefruits/admission/models.py
+msgid "Document"
+msgstr "Баримт"
+
+# key: admissions.fields.is_required
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Required"
+msgstr "Заавал"
+
+# key: admissions.fields.application_number
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgid "Application number"
+msgstr "Өргөдлийн дугаар"
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/admission/models.py
+msgid "Person"
+msgstr "Хувь хүн"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/admission/models.py
+msgid "Org unit"
+msgstr "Бүтцийн нэгж"
+
+# key: admissions.fields.previous_school_name
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Previous school"
+msgstr "Өмнө суралцсан сургууль"
+
+# key: admissions.fields.previous_graduation_date
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Graduation date (previous school)"
+msgstr "Төгссөн огноо (өмнөх сургууль)"
+
+# key: admissions.fields.personal_statement
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Personal statement"
+msgstr "Хувийн эссэ"
+
+# key: admissions.fields.submitted_at
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "admissions.fields"
+msgid "Submitted"
+msgstr "Илгээсэн"
+
+# key: admissions.fields.decided_at
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decided"
+msgstr "Шийдвэрлэсэн огноо"
+
+# key: admissions.fields.offer_expires_at
+#: ninefruits/admission/models.py
+msgid "Offer deadline"
+msgstr "Саналын эцсийн хугацаа"
+
+# key: people.sections.record
+#: ninefruits/admission/models.py
+msgid "Student record"
+msgstr "Оюутны бүртгэл"
+
+# key: admissions.resources.applications.label
+#: ninefruits/admission/models.py
+msgid "application"
+msgstr "өргөдөл"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/admission/notifications.py
+msgid "Hello,"
+msgstr "Сайн байна уу,"
+
+# key: admissions.mail.submitted_intro
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "We received your application %(number)s for %(program)s (%(cycle)s)."
+msgstr "Таны %(program)s (%(cycle)s) хөтөлбөрт гаргасан %(number)s дугаартай өргөдлийг хүлээн авлаа."
+
+# key: admissions.mail.view_application
+#: ninefruits/admission/notifications.py
+msgid "View application"
+msgstr "Өргөдлийг харах"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Хүндэтгэсэн,\n"
+"%(app)s"
+
+# key: admissions.mail.submitted_subject
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "Application %(number)s received"
+msgstr "%(number)s дугаартай өргөдлийг хүлээн авлаа"
+
+# key: admissions.mail.decision_intro
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "A decision on your application for %(program)s (%(cycle)s) is available. Sign in to see it."
+msgstr "Таны %(program)s (%(cycle)s) хөтөлбөрт гаргасан өргөдлийн шийдвэр гарлаа. Нэвтэрч харна уу."
+
+# key: admissions.mail.respond_by
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "If you are admitted, please answer by %(date)s."
+msgstr "Тэнцсэн тохиолдолд хариулах эцсийн хугацаа: %(date)s."
+
+# key: admissions.mail.decision_subject
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "Decision on application %(number)s"
+msgstr "%(number)s дугаартай өргөдлийн шийдвэр"
+
+# key: admin.settings.admissions.applicant_registration_enabled
+#: ninefruits/admission/settings_pages.py
+msgid "Applicants can create an account"
+msgstr "Өргөдөл гаргагч бүртгэл үүсгэж болно"
+
+# key: admin.settings.admissions.applicant_registration_enabled_help
+#: ninefruits/admission/settings_pages.py
+msgid "Shows \"Create an account\" on the sign-in and admissions pages. Turn off when you do not take online applications."
+msgstr "Нэвтрэх болон элсэлтийн хуудсанд \"Бүртгэл үүсгэх\" харагдана. Цахимаар өргөдөл хүлээж авахгүй бол унтраана уу."
+
+# key: admin.settings.admissions.draft_expiry_days
+#: ninefruits/admission/settings_pages.py
+msgid "Expire untouched drafts after (days)"
+msgstr "Хөндөгдөөгүй ноорогийг хүчингүй болгох хугацаа (хоног)"
+
+# key: admin.settings.admissions.draft_expiry_days_help
+#: ninefruits/admission/settings_pages.py
+msgid "Drafts in closed cycles expire regardless."
+msgstr "Хаагдсан элсэлтийн үеийн ноорог ямар ч тохиолдолд хүчингүй болно."
+
+# key: admin.settings.admissions.max_document_size_mb
+#: ninefruits/admission/settings_pages.py
+msgid "Largest document (MB)"
+msgstr "Баримтын дээд хэмжээ (MB)"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: ninefruits/admission/settings_pages.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "Элсэлт"
+
+#: ninefruits/admission/templates/admission/admin/matriculate.html
+#, python-format
+msgid "%(counter)s application selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgid_plural "%(counter)s applications selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgstr[0] "%(counter)s өргөдөл сонгогдлоо. Баталгаажаагүй, аль хэдийн оюутны бүртгэлтэй эсвэл таны хамрах хүрээнээс гадуурх өргөдлийг алгасна."
+msgstr[1] "%(counter)s өргөдөл сонгогдлоо. Баталгаажаагүй, аль хэдийн оюутны бүртгэлтэй эсвэл таны хамрах хүрээнээс гадуурх өргөдлийг алгасна."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/admission/templates/admission/admin/matriculate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Цуцлах"
+
+# key: admissions.portal.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html ninefruits/admission/views/portal.py
+msgid "My applications"
+msgstr "Миний өргөдлүүд"
+
+# key: admissions.portal.matriculated
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "You are now a student. Your student number is %(number)s."
+msgstr "Та одоо оюутан боллоо. Таны оюутны код: %(number)s."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My records"
+msgstr "Миний бүртгэл"
+
+# key: admissions.portal.admitted
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "Congratulations! You are admitted to %(program)s."
+msgstr "Баяр хүргэе! Та %(program)s хөтөлбөрт тэнцлээ."
+
+# key: admissions.portal.respond_by
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "Please answer by %(date)s."
+msgstr "Хариулах эцсийн хугацаа: %(date)s."
+
+# key: admissions.portal.accept_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Accept the offer?"
+msgstr "Саналыг хүлээн авах уу?"
+
+# key: admissions.portal.decline_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Decline the offer? This cannot be undone."
+msgstr "Саналаас татгалзах уу? Үүнийг буцаах боломжгүй."
+
+# key: admissions.portal.confirmed
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "You accepted the offer. Your student record will be created before the term starts."
+msgstr "Та саналыг хүлээн авлаа. Улирал эхлэхээс өмнө таны оюутны бүртгэл үүснэ."
+
+# key: admissions.portal.rejected
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "We are sorry, we cannot offer you admission in this cycle."
+msgstr "Уучлаарай, энэ элсэлтийн үед бид танд элсэх санал өгөх боломжгүй байна."
+
+# key: admissions.portal.waiting
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Your application is being reviewed. You will get an email when the decision is available."
+msgstr "Таны өргөдлийг хянаж байна. Шийдвэр гармагц и-мэйлээр мэдэгдэнэ."
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Personal details"
+msgstr "Хувийн мэдээлэл"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Gender"
+msgstr "Хүйс"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Nationality"
+msgstr "Иргэншил"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Address"
+msgstr "Хаяг"
+
+# key: admissions.portal.identity_locked
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Your name and birth date are kept by the registrar's office. You can update contact details under"
+msgstr "Таны нэр, төрсөн огноог сургалтын алба хариуцна. Холбоо барих мэдээллээ дараах хэсэгт шинэчилж болно:"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My details"
+msgstr "Миний мэдээлэл"
+
+# key: admissions.portal.save_draft
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "admissions"
+msgid "Save draft"
+msgstr "Ноорог хадгалах"
+
+# key: admissions.portal.submit_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Submit the application? You cannot change it afterwards."
+msgstr "Өргөдлийг илгээх үү? Дараа нь өөрчлөх боломжгүй."
+
+# key: admissions.portal.submit
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Submit application"
+msgstr "Өргөдөл илгээх"
+
+# key: admissions.portal.withdraw
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Withdraw application"
+msgstr "Өргөдлөө цуцлах"
+
+# key: admissions.portal.withdraw_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Withdraw this application?"
+msgstr "Энэ өргөдлийг цуцлах уу?"
+
+# key: admissions.portal.no_applications
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgid "You have no applications yet."
+msgstr "Танд одоогоор өргөдөл алга."
+
+# key: admissions.portal.new_application
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgid "Start an application"
+msgstr "Өргөдөл гаргаж эхлэх"
+
+# key: admissions.public.none
+#: ninefruits/admission/templates/admission/portal/applications.html ninefruits/admission/templates/admission/public/index.html
+msgid "No cycle is taking applications right now."
+msgstr "Одоогоор өргөдөл хүлээн авч буй элсэлтийн үе алга."
+
+# key: admissions.portal.start
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Start"
+msgstr "Эхлэх"
+
+# key: admissions.public.title
+#: ninefruits/admission/templates/admission/public/index.html ninefruits/admission/views/public.py
+msgctxt "admissions"
+msgid "Admissions"
+msgstr "Элсэлт"
+
+# key: admissions.public.instructions
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate."
+msgstr "Одоо өргөдөл хүлээн авч буй элсэлтийн үеүүд. Өргөдөл гаргахын тулд хувийн и-мэйлээрээ бүртгэл үүсгэнэ үү. Оюутан, төгсөгч болсон хойноо ч ижил бүртгэлээ ашиглана."
+
+# key: admissions.public.rolling
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Applications accepted at any time."
+msgstr "Өргөдлийг хүссэн үедээ гаргаж болно."
+
+# key: admissions.public.closes
+#: ninefruits/admission/templates/admission/public/index.html
+#, python-format
+msgid "Applications close %(date)s."
+msgstr "Өргөдөл хүлээн авах эцсийн хугацаа: %(date)s."
+
+# key: admissions.public.go_to_applications
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Go to my applications"
+msgstr "Миний өргөдлүүд рүү"
+
+# key: admissions.public.register
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Create an account to apply"
+msgstr "Өргөдөл гаргахын тулд бүртгэл үүсгэх"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: ninefruits/admission/templates/admission/public/index.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "Нэвтрэх"
+
+# key: admissions.verify_email.title
+#: ninefruits/admission/templates/admission/public/verify_email.html ninefruits/admission/views/public.py
+msgid "Verify your email"
+msgstr "И-мэйлээ баталгаажуулна уу"
+
+# key: admissions.verify_email.instructions
+#: ninefruits/admission/templates/admission/public/verify_email.html
+#, python-format
+msgid "We sent a link to %(email)s. Open it to verify your address before applying."
+msgstr "%(email)s хаяг руу холбоос илгээлээ. Өргөдөл гаргахаас өмнө түүнийг нээж хаягаа баталгаажуулна уу."
+
+# key: admissions.verify_email.resend
+#: ninefruits/admission/templates/admission/public/verify_email.html
+msgid "Send the link again"
+msgstr "Холбоосыг дахин илгээх"
+
+# key: authentication.logout
+#: ninefruits/admission/templates/admission/public/verify_email.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Гарах"
+
+# upstream: Django/allauth catalog
+#: ninefruits/admission/views/portal.py
+msgid "This field is required."
+msgstr "Энэ талбарыг бөглөх шаардлагатай."
+
+# key: admissions.portal.offer_accepted
+#: ninefruits/admission/views/portal.py
+msgid "You accepted the offer. The registrar's office will create your student record."
+msgstr "Та саналыг хүлээн авлаа. Сургалтын алба таны оюутны бүртгэлийг үүсгэнэ."
+
+# key: admissions.portal.offer_declined
+#: ninefruits/admission/views/portal.py
+msgid "You declined the offer."
+msgstr "Та саналаас татгалзлаа."
+
+# key: admissions.portal.withdrawn
+#: ninefruits/admission/views/portal.py
+msgid "The application was withdrawn."
+msgstr "Өргөдлийг цуцаллаа."
+
+# key: admissions.portal.saved
+#: ninefruits/admission/views/portal.py
+msgid "Draft saved."
+msgstr "Ноорог хадгаллаа."
+
+# key: admissions.portal.submitted
+#: ninefruits/admission/views/portal.py
+msgid "Your application was submitted. We sent a confirmation to your email."
+msgstr "Таны өргөдөл илгээгдлээ. Баталгаажуулалтыг таны и-мэйл рүү илгээлээ."
+
+# key: portal.navigation.applications
+#: ninefruits/admission/views/portal.py
+msgctxt "portal"
+msgid "Admissions"
+msgstr "Элсэлт"
+
+# key: admissions.verify_email.sent
+#: ninefruits/admission/views/public.py
+msgid "A new link was sent."
+msgstr "Шинэ холбоос илгээлээ."

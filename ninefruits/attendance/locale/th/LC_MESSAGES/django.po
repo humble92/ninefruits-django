@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: attendance.errors.forbidden
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "เฉพาะอาจารย์ผู้สอนของกลุ่มเรียนและเจ้าหน้าที่ที่ดูแลเท่านั้นที่ดำเนินการนี้ได้"
+
+# key: attendance.errors.time_order
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "The end time must be after the start time."
+msgstr "เวลาสิ้นสุดต้องอยู่หลังเวลาเริ่ม"
+
+# key: attendance.errors.outside_session
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "The date is outside the session."
+msgstr "วันที่อยู่นอกช่วงการเรียน"
+
+# key: attendance.errors.duplicate_meeting
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "A meeting at that date and time already exists."
+msgstr "มีครั้งเรียนในวันและเวลานั้นอยู่แล้ว"
+
+# key: attendance.errors.already_cancelled
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "This meeting is already cancelled."
+msgstr "ครั้งเรียนนี้งดไปแล้ว"
+
+# key: registration.errors.reason_required
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "Enter a reason."
+msgstr "กรุณาระบุเหตุผล"
+
+# key: attendance.errors.meeting_cancelled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "This meeting is cancelled."
+msgstr "ครั้งเรียนนี้งดเรียน"
+
+# key: attendance.errors.meeting_future
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "กรอกการเข้าเรียนได้ตั้งแต่วันที่มีครั้งเรียน"
+
+# key: attendance.errors.not_enrolled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "A student is not enrolled in this section."
+msgstr "มีนักศึกษาที่ไม่ได้ลงทะเบียนในกลุ่มเรียนนี้"
+
+# key: attendance.errors.invalid_status
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Unknown attendance status."
+msgstr "สถานะการเข้าเรียนไม่ถูกต้อง"
+
+# key: common.reason
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "common"
+msgid "Reason"
+msgstr "เหตุผล"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Class meetings"
+msgstr "ครั้งเรียน"
+
+# key: attendance.actions.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Generate meetings"
+msgstr "สร้างครั้งเรียน"
+
+# key: attendance.portal.generated
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "สร้างครั้งเรียนแล้ว %(count)s ครั้ง"
+
+# key: attendance.help.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "สร้างครั้งเรียนตามเวลาเรียนรายสัปดาห์ทุกครั้งภายในช่วงวันที่กำหนด ครั้งเรียนเดิมและข้อมูลการเข้าเรียนจะยังคงอยู่"
+
+# key: attendance.portal.meeting_cancelled
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting cancelled."
+msgstr "งดครั้งเรียนแล้ว"
+
+# key: attendance.portal.cancel
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "งดเรียน"
+
+# key: attendance.portal.meeting_restored
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting restored."
+msgstr "คืนค่าครั้งเรียนแล้ว"
+
+# key: attendance.portal.restore
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Restore"
+msgstr "คืนค่า"
+
+# key: portal.navigation.attendance
+#: ninefruits/attendance/apps.py
+msgctxt "portal"
+msgid "Attendance"
+msgstr "การเข้าเรียน"
+
+# key: attendance.statuses.present
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Present"
+msgstr "มาเรียน"
+
+# key: attendance.statuses.late
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Late"
+msgstr "มาสาย"
+
+# key: attendance.statuses.absent
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Absent"
+msgstr "ขาดเรียน"
+
+# key: attendance.statuses.excused
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Excused"
+msgstr "ลา"
+
+# key: attendance.meeting_statuses.scheduled
+#: ninefruits/attendance/enums.py
+msgid "Scheduled"
+msgstr "ตามกำหนด"
+
+# key: attendance.meeting_statuses.cancelled
+#: ninefruits/attendance/enums.py
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "งดเรียน"
+
+# key: offering.fields.section
+#: ninefruits/attendance/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "กลุ่มเรียน"
+
+# key: attendance.fields.meeting_date
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Date"
+msgstr "วันที่"
+
+# key: attendance.fields.start_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Start"
+msgstr "เริ่ม"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "End"
+msgstr "สิ้นสุด"
+
+# key: offering.fields.room
+#: ninefruits/attendance/models.py
+msgid "Room"
+msgstr "ห้อง"
+
+# key: registration.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "registration"
+msgid "Status"
+msgstr "สถานะ"
+
+#: ninefruits/attendance/models.py
+msgid "class meeting"
+msgstr "ครั้งเรียน"
+
+# key: attendance.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "การเข้าเรียน"
+
+# key: attendance.fields.note
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Note"
+msgstr "หมายเหตุ"
+
+#: ninefruits/attendance/models.py
+msgid "attendance record"
+msgstr "บันทึกการเข้าเรียน"
+
+#: ninefruits/attendance/models.py
+msgid "attendance records"
+msgstr "บันทึกการเข้าเรียน"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Student number"
+msgstr "รหัสนักศึกษา"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: reference.resources.programs.label
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "program"
+msgstr "หลักสูตร"
+
+# key: people.fields.year_level
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Year"
+msgstr "ชั้นปี"
+
+# key: people.fields.contact_email
+#: ninefruits/attendance/services/roster.py
+msgid "Contact email"
+msgstr "อีเมลติดต่อ"
+
+# key: attendance.fields.time
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Time"
+msgstr "เวลา"
+
+# key: reference.resources.rooms.label
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "room"
+msgstr "ห้อง"
+
+# key: attendance.fields.recorded
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Recorded"
+msgstr "บันทึกแล้ว"
+
+# key: attendance.portal.no_meetings
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "ยังไม่มีครั้งเรียน กรุณาสร้างจากเวลาเรียนรายสัปดาห์"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "Instructors"
+msgstr "อาจารย์ผู้สอน"
+
+# key: attendance.sheet.printed
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "พิมพ์เมื่อ %(date)s"
+
+# key: attendance.sheet.present
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "P"
+msgstr "มา"
+
+# key: attendance.sheet.late
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "L"
+msgstr "สาย"
+
+# key: attendance.sheet.absent
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "A"
+msgstr "ขาด"
+
+# key: attendance.sheet.excused
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "ลา"
+
+# key: attendance.sheet.legend
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "O มาเรียน · △ มาสาย · X ขาดเรียน · E ลา · ว่าง ยังไม่บันทึก"
+
+# key: attendance.portal.my_intro
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Attendance recorded by your instructors, per course."
+msgstr "การเข้าเรียนที่อาจารย์ผู้สอนบันทึกไว้ แยกตามรายวิชา"
+
+# key: reference.resources.terms.label
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "term"
+msgstr "ภาคการศึกษา"
+
+# key: offering.timetable.mode
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Show"
+msgstr "แสดง"
+
+# key: attendance.fields.rate
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance rate"
+msgstr "อัตราการเข้าเรียน"
+
+# key: attendance.portal.not_recorded
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Not recorded"
+msgstr "ยังไม่บันทึก"
+
+# key: attendance.portal.no_courses
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "No courses in this term."
+msgstr "ไม่มีรายวิชาในภาคการศึกษานี้"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "My teaching"
+msgstr "รายวิชาที่สอน"
+
+# key: attendance.portal.intro
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "จัดการเรียนแล้ว %(held)s ครั้ง นักศึกษา %(students)s คน"
+
+# key: attendance.portal.roster_csv
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster (CSV)"
+msgstr "รายชื่อนักศึกษา (CSV)"
+
+# key: attendance.portal.sheet_pdf
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance sheet (PDF)"
+msgstr "ใบลงชื่อเข้าเรียน (PDF)"
+
+# key: attendance.portal.entry_for
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "การเข้าเรียนวันที่ %(date)s %(time)s"
+
+# key: attendance.portal.mark_all_present
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "All present"
+msgstr "มาเรียนทั้งหมด"
+
+# key: evaluation.portal.back
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Back"
+msgstr "กลับ"
+
+# key: attendance.portal.no_students
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No students are enrolled."
+msgstr "ไม่มีนักศึกษาลงทะเบียน"
+
+# key: attendance.portal.save
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Save attendance"
+msgstr "บันทึกการเข้าเรียน"
+
+# key: attendance.portal.roster
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster"
+msgstr "รายชื่อนักศึกษา"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Photo"
+msgstr "รูปถ่าย"
+
+# key: attendance.portal.generate
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Generate from meeting times"
+msgstr "สร้างจากเวลาเรียน"
+
+# key: attendance.portal.enter
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "การเข้าเรียน"
+
+# key: attendance.portal.cancel_reason
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "เหตุผลที่งดเรียน (วันหยุด อาจารย์ไม่อยู่ ...)"
+
+# key: attendance.portal.add_meeting
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Add a meeting"
+msgstr "เพิ่มครั้งเรียน"
+
+# key: attendance.sheet.marks.present
+#: ninefruits/attendance/views/downloads.py
+msgid "O"
+msgstr "O"
+
+# key: attendance.sheet.marks.late
+#: ninefruits/attendance/views/downloads.py
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: ninefruits/attendance/views/downloads.py
+msgid "X"
+msgstr "X"
+
+# key: attendance.sheet.marks.excused
+#: ninefruits/attendance/views/downloads.py
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "E"
+
+# key: attendance.sheet.title
+#: ninefruits/attendance/views/downloads.py
+msgid "Attendance sheet"
+msgstr "ใบลงชื่อเข้าเรียน"
+
+#: ninefruits/attendance/views/downloads.py
+msgid "The PDF could not be created. Try again later."
+msgstr "ไม่สามารถสร้าง PDF ได้ กรุณาลองใหม่ภายหลัง"
+
+# key: attendance.portal.open
+#: ninefruits/attendance/views/portal.py
+msgctxt "attendance"
+msgid "Open"
+msgstr "เปิด"
+
+# key: attendance.portal.title
+#: ninefruits/attendance/views/portal.py
+msgid "Roster and attendance"
+msgstr "รายชื่อนักศึกษาและการเข้าเรียน"
+
+# key: attendance.portal.saved
+#: ninefruits/attendance/views/portal.py
+msgid "Attendance saved."
+msgstr "บันทึกการเข้าเรียนแล้ว"
+
+# key: attendance.portal.meeting_added
+#: ninefruits/attendance/views/portal.py
+msgid "Meeting added."
+msgstr "เพิ่มครั้งเรียนแล้ว"
+
+# key: attendance.portal.my_title
+#: ninefruits/attendance/views/portal.py
+msgid "My attendance"
+msgstr "การเข้าเรียนของฉัน"

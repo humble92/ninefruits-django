@@ -908,3 +908,8 @@ msgstr "入学申请"
 #: views/public.py
 msgid "A new link was sent."
 msgstr "已发送新链接。"
+
+# key: admissions.mail.view_application
+#: ninefruits/admission/notifications.py
+msgid "View application"
+msgstr "查看申请"

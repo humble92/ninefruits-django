@@ -1,0 +1,918 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: admissions.errors.no_person
+#: ninefruits/admission/actions/applications.py
+msgid "This account is not linked to a person."
+msgstr "Ce compte n’est lié à aucune personne."
+
+# key: admissions.errors.cycle_closed
+#: ninefruits/admission/actions/applications.py
+msgid "This cycle is not taking applications."
+msgstr "Cette campagne n’accepte pas de candidatures."
+
+# key: admissions.errors.already_applied
+#: ninefruits/admission/actions/applications.py
+msgid "You already have an open application in this cycle."
+msgstr "Vous avez déjà une candidature en cours dans cette campagne."
+
+# key: admissions.errors.program_not_offered
+#: ninefruits/admission/actions/applications.py
+msgid "This program is not offered in the cycle."
+msgstr "Cette formation n’est pas proposée dans la campagne."
+
+# key: admissions.errors.not_draft
+#: ninefruits/admission/actions/applications.py
+msgid "Only applications that have not been submitted can be changed."
+msgstr "Seules les candidatures non soumises peuvent être modifiées."
+
+#: ninefruits/admission/actions/applications.py
+msgid "Select a valid choice."
+msgstr "Sélectionnez un choix valide."
+
+#: ninefruits/admission/actions/applications.py
+msgid "The birth date must be a date before today."
+msgstr "La date de naissance doit être antérieure à aujourd’hui."
+
+# key: admissions.errors.identity_locked
+#: ninefruits/admission/actions/applications.py
+msgid "Your name and birth date are kept by the registrar's office."
+msgstr "Vos nom et date de naissance sont gérés par le service de la scolarité."
+
+# key: admissions.errors.document_type_not_requested
+#: ninefruits/admission/actions/applications.py
+msgid "This cycle does not ask for this document."
+msgstr "Cette campagne ne demande pas cette pièce."
+
+# key: admissions.errors.document_too_large
+#: ninefruits/admission/actions/applications.py
+#, python-format
+msgid "The file is larger than %(mb)s MB."
+msgstr "Le fichier dépasse %(mb)s Mo."
+
+# key: admissions.errors.document_type_invalid
+#: ninefruits/admission/actions/applications.py
+msgid "Upload a PDF, JPEG or PNG file."
+msgstr "Déposez un fichier PDF, JPEG ou PNG."
+
+# key: admissions.errors.required_field
+#: ninefruits/admission/actions/applications.py
+msgid "This field is required to submit."
+msgstr "Ce champ est obligatoire pour soumettre."
+
+# key: admissions.errors.documents_missing
+#: ninefruits/admission/actions/applications.py
+#, python-format
+msgid "Upload the required documents: %(documents)s."
+msgstr "Déposez les pièces obligatoires : %(documents)s."
+
+# key: admissions.errors.invalid_transition
+#: ninefruits/admission/actions/applications.py ninefruits/admission/actions/decisions.py
+msgid "This is not possible in the application's current status."
+msgstr "Cette opération n’est pas possible dans le statut actuel de la candidature."
+
+# key: admissions.errors.reason_required
+#: ninefruits/admission/actions/decisions.py
+msgid "Give the reason when recording a response for the applicant."
+msgstr "Indiquez le motif lorsque vous enregistrez une réponse pour le candidat."
+
+# key: admissions.errors.no_open_offer
+#: ninefruits/admission/actions/decisions.py
+msgid "There is no offer to answer."
+msgstr "Il n’y a aucune offre à laquelle répondre."
+
+# key: admissions.errors.offer_expired
+#: ninefruits/admission/actions/decisions.py
+msgid "The deadline to accept this offer has passed. Contact the admissions office."
+msgstr "Le délai d’acceptation de cette offre est dépassé. Contactez le service des admissions."
+
+# key: admissions.errors.not_ready_to_matriculate
+#: ninefruits/admission/actions/matriculation.py
+msgid "Only accepted offers without a student record can be matriculated."
+msgstr "Seules les offres acceptées sans dossier étudiant peuvent faire l’objet d’une immatriculation."
+
+# key: admissions.errors.registration_closed
+#: ninefruits/admission/actions/registration.py ninefruits/admission/forms.py
+msgid "Creating an account is not available. Contact the admissions office."
+msgstr "La création de compte n’est pas disponible. Contactez le service des admissions."
+
+#: ninefruits/admission/actions/registration.py
+msgid "The email has already been taken."
+msgstr "Cette adresse e-mail est déjà utilisée."
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: ninefruits/admission/admin/applications.py
+msgid "Admission term"
+msgstr "Semestre d’admission"
+
+# key: admissions.help.admission_term
+#: ninefruits/admission/admin/applications.py
+msgid "The term the new students start in. Their admission date is the term's first day."
+msgstr "Le semestre où débutent les nouveaux étudiants. Leur date d’admission est le premier jour du semestre."
+
+# key: admissions.fields.decision_note
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decision note"
+msgstr "Note sur la décision"
+
+# key: admissions.fields.response
+#: ninefruits/admission/admin/applications.py
+msgid "Response"
+msgstr "Réponse"
+
+# key: admissions.portal.accept
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Accept the offer"
+msgstr "Accepter l’offre"
+
+# key: admissions.portal.decline
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Decline"
+msgstr "Refuser"
+
+# key: common.reason
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Motif"
+
+# key: admissions.sections.application
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Application"
+msgstr "Candidature"
+
+# key: admissions.sections.applicant
+# key: security.personas.applicant
+#: ninefruits/admission/admin/applications.py
+msgid "Applicant"
+msgstr "Candidat"
+
+# key: admissions.sections.decision
+#: ninefruits/admission/admin/applications.py
+msgid "Decision"
+msgstr "Décision"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/admission/admin/applications.py
+msgctxt "people"
+msgid "Name"
+msgstr "Nom"
+
+# key: security.scope_types.program
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "security"
+msgid "Program"
+msgstr "Formation"
+
+# key: admissions.fields.cycle
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/applications.html
+msgid "Admission cycle"
+msgstr "Campagne d’admission"
+
+# key: admissions.fields.status
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Status"
+msgstr "Statut"
+
+# key: admissions.fields.decision_released
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Released"
+msgstr "Communiquée"
+
+# key: people.fields.admission_type
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgid "Admission type"
+msgstr "Type d’admission"
+
+# key: admissions.fields.previous_school_country
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Country of previous school"
+msgstr "Pays de l’établissement précédent"
+
+# key: people.fields.birth_date
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Birth date"
+msgstr "Date de naissance"
+
+# key: people.fields.contact_email
+#: ninefruits/admission/admin/applications.py
+msgid "Contact email"
+msgstr "E-mail de contact"
+
+# key: people.fields.phone
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Phone"
+msgstr "Téléphone"
+
+# key: admissions.fields.earlier_records
+#: ninefruits/admission/admin/applications.py
+msgid "Earlier student records"
+msgstr "Dossiers étudiants antérieurs"
+
+# key: common.none
+#: ninefruits/admission/admin/applications.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "common"
+msgid "None"
+msgstr "Aucun"
+
+# key: admissions.sections.documents
+#: ninefruits/admission/admin/applications.py ninefruits/admission/admin/cycles.py ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Documents"
+msgstr "Pièces justificatives"
+
+# key: admissions.fields.decided_by
+#: ninefruits/admission/admin/applications.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decided by"
+msgstr "Décidée par"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/admission/admin/applications.py
+msgid "Student number"
+msgstr "Numéro d’étudiant"
+
+# key: admissions.actions.start_review
+#: ninefruits/admission/admin/applications.py
+msgid "Start review"
+msgstr "Commencer l’examen"
+
+# key: admissions.actions.admit
+#: ninefruits/admission/admin/applications.py
+msgid "Admit"
+msgstr "Admettre"
+
+# key: admissions.notifications.decided
+#: ninefruits/admission/admin/applications.py
+msgid "Decision saved. The applicant sees it once it is released."
+msgstr "Décision enregistrée. Le candidat la verra une fois communiquée."
+
+# key: admissions.actions.reject
+#: ninefruits/admission/admin/applications.py
+msgctxt "admissions"
+msgid "Reject"
+msgstr "Refuser"
+
+# key: admissions.actions.release_decision
+#: ninefruits/admission/admin/applications.py
+msgid "Release decision"
+msgstr "Communiquer la décision"
+
+# key: admissions.actions.matriculate
+#: ninefruits/admission/admin/applications.py
+msgid "Create student record"
+msgstr "Créer le dossier étudiant"
+
+# key: admissions.notifications.matriculated
+#: ninefruits/admission/admin/applications.py
+#, python-format
+msgid "Student record %(number)s created."
+msgstr "Dossier étudiant %(number)s créé."
+
+# key: admissions.actions.record_response
+#: ninefruits/admission/admin/applications.py
+msgid "Record offer response"
+msgstr "Enregistrer la réponse à l’offre"
+
+# key: admissions.actions.release_decisions
+#: ninefruits/admission/admin/applications.py ninefruits/admission/admin/cycles.py
+msgid "Release decisions"
+msgstr "Communiquer les décisions"
+
+# key: admissions.notifications.matriculated_bulk
+#: ninefruits/admission/admin/applications.py
+#, python-format
+msgid "%(count)s student record(s) created, %(skipped)s skipped."
+msgstr "%(count)s dossier(s) étudiant(s) créé(s), %(skipped)s ignoré(s)."
+
+# key: admissions.help.release_decisions
+#: ninefruits/admission/admin/cycles.py
+msgid "Applicants see their decision and get an email. A released decision can no longer be changed."
+msgstr "Les candidats voient leur décision et reçoivent un e-mail. Une décision communiquée ne peut plus être modifiée."
+
+# key: admissions.fields.description
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Description"
+msgstr "Description"
+
+#: ninefruits/admission/admin/cycles.py
+msgid "Use only letters, numbers, dashes and underscores."
+msgstr "Utilisez uniquement des lettres, des chiffres, des tirets et des tirets bas."
+
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "program offered"
+msgstr "formation proposée"
+
+# key: admissions.sections.programs
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "Programs offered"
+msgstr "Formations proposées"
+
+# key: admissions.resources.applications.plural_label
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "applications"
+msgstr "candidatures"
+
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgid "document"
+msgstr "pièce"
+
+# key: admissions.sections.cycle
+#: ninefruits/admission/admin/cycles.py
+msgid "Cycle"
+msgstr "Campagne"
+
+# key: admissions.fields.closes_at
+#: ninefruits/admission/admin/cycles.py ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Closes"
+msgstr "Clôture"
+
+# key: admissions.fields.rolling
+#: ninefruits/admission/admin/cycles.py
+msgid "Rolling (no deadline)"
+msgstr "Continue (sans date limite)"
+
+#: ninefruits/admission/admin/cycles.py
+msgid "No decisions to release."
+msgstr "Aucune décision à communiquer."
+
+# key: admissions.notifications.released
+#: ninefruits/admission/admin/cycles.py
+#, python-format
+msgid "One decision released."
+msgid_plural "%(count)s decisions released."
+msgstr[0] "%(count)s décisions communiquées."
+msgstr[1] "%(count)s décisions communiquées."
+
+# key: admissions.application_statuses.draft
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Draft"
+msgstr "Brouillon"
+
+# key: admissions.application_statuses.submitted
+#: ninefruits/admission/enums.py
+msgctxt "admissions.application_statuses"
+msgid "Submitted"
+msgstr "Soumise"
+
+# key: admissions.application_statuses.under_review
+#: ninefruits/admission/enums.py
+msgid "Under review"
+msgstr "En cours d’examen"
+
+# key: admissions.application_statuses.admitted
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Admitted"
+msgstr "Admis"
+
+# key: admissions.application_statuses.rejected
+#: ninefruits/admission/enums.py
+msgid "Not admitted"
+msgstr "Non admis"
+
+# key: admissions.application_statuses.confirmed
+#: ninefruits/admission/enums.py
+msgid "Enrollment confirmed"
+msgstr "Inscription confirmée"
+
+# key: admissions.application_statuses.withdrawn
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Withdrawn"
+msgstr "Retirée"
+
+# key: admissions.application_statuses.expired
+#: ninefruits/admission/enums.py
+msgctxt "admissions"
+msgid "Expired"
+msgstr "Expirée"
+
+# key: people.fields.family_name
+#: ninefruits/admission/forms.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Family name"
+msgstr "Nom de famille"
+
+# key: people.fields.given_name
+#: ninefruits/admission/forms.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Given name"
+msgstr "Prénom"
+
+# key: admissions.register.email_help
+#: ninefruits/admission/forms.py
+msgid "Your personal email. It stays your sign-in name after you graduate."
+msgstr "Votre adresse e-mail personnelle. Elle reste votre identifiant de connexion après l’obtention de votre diplôme."
+
+# key: reference.fields.code
+#: ninefruits/admission/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: admissions.help.cycle_code
+#: ninefruits/admission/models.py
+msgid "Short identifier used in application numbers, e.g. 2027-SPRING."
+msgstr "Identifiant court utilisé dans les numéros de candidature, p. ex. 2027-SPRING."
+
+# key: reference.fields.name
+#: ninefruits/admission/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nom"
+
+# key: admissions.fields.opens_at
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Opens"
+msgstr "Ouverture"
+
+# key: admissions.help.closes_at
+#: ninefruits/admission/models.py
+msgid "Leave empty for rolling admission without a deadline."
+msgstr "Laissez vide pour une admission continue sans date limite."
+
+# key: admissions.fields.is_published
+#: ninefruits/admission/models.py
+msgctxt "admissions.fields"
+msgid "Published"
+msgstr "Publiée"
+
+# key: admissions.help.is_published
+#: ninefruits/admission/models.py
+msgid "Applicants can see and apply to published cycles between the opening and closing times."
+msgstr "Les candidats peuvent consulter les campagnes publiées et y candidater entre l’ouverture et la clôture."
+
+# key: admissions.fields.should_release_decisions_immediately
+#: ninefruits/admission/models.py
+msgid "Release decisions immediately"
+msgstr "Communiquer les décisions immédiatement"
+
+# key: admissions.help.should_release_decisions_immediately
+#: ninefruits/admission/models.py
+msgid "Tell each applicant as soon as they are decided. Otherwise decisions are released together with the release action."
+msgstr "Informer chaque candidat dès que sa décision est prise. Sinon, les décisions sont communiquées ensemble avec l’action de communication."
+
+# key: admissions.fields.offer_response_days
+#: ninefruits/admission/models.py
+msgid "Days to accept an offer"
+msgstr "Délai d’acceptation de l’offre (jours)"
+
+# key: admissions.help.offer_response_days
+#: ninefruits/admission/models.py
+msgid "Admitted applicants must accept within this many days after the release. Empty: no deadline."
+msgstr "Les candidats admis doivent accepter dans ce nombre de jours après la communication. Vide : sans date limite."
+
+# key: admissions.resources.cycles.label
+#: ninefruits/admission/models.py
+msgid "admission cycle"
+msgstr "campagne d’admission"
+
+# key: admissions.resources.cycles.plural_label
+#: ninefruits/admission/models.py
+msgid "admission cycles"
+msgstr "campagnes d’admission"
+
+#: ninefruits/admission/models.py
+msgid "The closing time must be after the opening time."
+msgstr "L’heure de fermeture doit être postérieure à l’heure d’ouverture."
+
+#: ninefruits/admission/models.py
+msgid "Enter a number between 1 and 365."
+msgstr "Saisissez un nombre entre 1 et 365."
+
+# key: admissions.fields.capacity
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Capacity"
+msgstr "Capacité"
+
+# key: admissions.fields.document_type
+#: ninefruits/admission/models.py
+msgid "Document"
+msgstr "Pièce"
+
+# key: admissions.fields.is_required
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Required"
+msgstr "Obligatoire"
+
+# key: admissions.fields.application_number
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html
+msgid "Application number"
+msgstr "Numéro de candidature"
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/admission/models.py
+msgid "Person"
+msgstr "Personne"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/admission/models.py
+msgid "Org unit"
+msgstr "Unité organisationnelle"
+
+# key: admissions.fields.previous_school_name
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Previous school"
+msgstr "Établissement précédent"
+
+# key: admissions.fields.previous_graduation_date
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Graduation date (previous school)"
+msgstr "Date d’obtention du diplôme (établissement précédent)"
+
+# key: admissions.fields.personal_statement
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Personal statement"
+msgstr "Lettre de motivation"
+
+# key: admissions.fields.submitted_at
+#: ninefruits/admission/models.py ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "admissions.fields"
+msgid "Submitted"
+msgstr "Soumise le"
+
+# key: admissions.fields.decided_at
+#: ninefruits/admission/models.py
+msgctxt "admissions"
+msgid "Decided"
+msgstr "Décidée le"
+
+# key: admissions.fields.offer_expires_at
+#: ninefruits/admission/models.py
+msgid "Offer deadline"
+msgstr "Date limite de l’offre"
+
+# key: people.sections.record
+#: ninefruits/admission/models.py
+msgid "Student record"
+msgstr "Dossier étudiant"
+
+# key: admissions.resources.applications.label
+#: ninefruits/admission/models.py
+msgid "application"
+msgstr "candidature"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/admission/notifications.py
+msgid "Hello,"
+msgstr "Bonjour,"
+
+# key: admissions.mail.submitted_intro
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "We received your application %(number)s for %(program)s (%(cycle)s)."
+msgstr "Nous avons bien reçu votre candidature %(number)s pour %(program)s (%(cycle)s)."
+
+# key: admissions.mail.view_application
+#: ninefruits/admission/notifications.py
+msgid "View application"
+msgstr "Voir la candidature"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Merci,\n"
+"%(app)s"
+
+# key: admissions.mail.submitted_subject
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "Application %(number)s received"
+msgstr "Candidature %(number)s reçue"
+
+# key: admissions.mail.decision_intro
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "A decision on your application for %(program)s (%(cycle)s) is available. Sign in to see it."
+msgstr "Une décision concernant votre candidature pour %(program)s (%(cycle)s) est disponible. Connectez-vous pour la consulter."
+
+# key: admissions.mail.respond_by
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "If you are admitted, please answer by %(date)s."
+msgstr "Si vous êtes admis, merci de répondre avant le %(date)s."
+
+# key: admissions.mail.decision_subject
+#: ninefruits/admission/notifications.py
+#, python-format
+msgid "Decision on application %(number)s"
+msgstr "Décision concernant la candidature %(number)s"
+
+# key: admin.settings.admissions.applicant_registration_enabled
+#: ninefruits/admission/settings_pages.py
+msgid "Applicants can create an account"
+msgstr "Les candidats peuvent créer un compte"
+
+# key: admin.settings.admissions.applicant_registration_enabled_help
+#: ninefruits/admission/settings_pages.py
+msgid "Shows \"Create an account\" on the sign-in and admissions pages. Turn off when you do not take online applications."
+msgstr "Affiche « Créer un compte » sur les pages de connexion et d’admission. À désactiver si vous ne recevez pas de candidatures en ligne."
+
+# key: admin.settings.admissions.draft_expiry_days
+#: ninefruits/admission/settings_pages.py
+msgid "Expire untouched drafts after (days)"
+msgstr "Faire expirer les brouillons inactifs après (jours)"
+
+# key: admin.settings.admissions.draft_expiry_days_help
+#: ninefruits/admission/settings_pages.py
+msgid "Drafts in closed cycles expire regardless."
+msgstr "Les brouillons des campagnes clôturées expirent dans tous les cas."
+
+# key: admin.settings.admissions.max_document_size_mb
+#: ninefruits/admission/settings_pages.py
+msgid "Largest document (MB)"
+msgstr "Taille maximale d’un document (Mo)"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: ninefruits/admission/settings_pages.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "Admissions"
+
+#: ninefruits/admission/templates/admission/admin/matriculate.html
+#, python-format
+msgid "%(counter)s application selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgid_plural "%(counter)s applications selected. Applications that are not confirmed, already have a student record or are outside your scope are skipped."
+msgstr[0] "%(counter)s candidature sélectionnée. Les candidatures non confirmées, qui ont déjà un dossier étudiant ou qui sont hors de votre périmètre sont ignorées."
+msgstr[1] "%(counter)s candidatures sélectionnées. Les candidatures non confirmées, qui ont déjà un dossier étudiant ou qui sont hors de votre périmètre sont ignorées."
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/admission/templates/admission/admin/matriculate.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Annuler"
+
+# key: admissions.portal.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html ninefruits/admission/templates/admission/portal/applications.html ninefruits/admission/views/portal.py
+msgid "My applications"
+msgstr "Mes candidatures"
+
+# key: admissions.portal.matriculated
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "You are now a student. Your student number is %(number)s."
+msgstr "Vous êtes désormais étudiant. Votre numéro d’étudiant est %(number)s."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My records"
+msgstr "Mon dossier"
+
+# key: admissions.portal.admitted
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "Congratulations! You are admitted to %(program)s."
+msgstr "Félicitations ! Vous êtes admis en %(program)s."
+
+# key: admissions.portal.respond_by
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+#, python-format
+msgid "Please answer by %(date)s."
+msgstr "Merci de répondre avant le %(date)s."
+
+# key: admissions.portal.accept_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Accept the offer?"
+msgstr "Accepter l’offre ?"
+
+# key: admissions.portal.decline_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Decline the offer? This cannot be undone."
+msgstr "Refuser l’offre ? Cette action est irréversible."
+
+# key: admissions.portal.confirmed
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "You accepted the offer. Your student record will be created before the term starts."
+msgstr "Vous avez accepté l’offre. Votre dossier étudiant sera créé avant le début du semestre."
+
+# key: admissions.portal.rejected
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "We are sorry, we cannot offer you admission in this cycle."
+msgstr "Nous sommes au regret de ne pas pouvoir vous proposer une admission dans cette campagne."
+
+# key: admissions.portal.waiting
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Your application is being reviewed. You will get an email when the decision is available."
+msgstr "Votre candidature est en cours d’examen. Vous recevrez un e-mail lorsque la décision sera disponible."
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Personal details"
+msgstr "Informations personnelles"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Gender"
+msgstr "Genre"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Nationality"
+msgstr "Nationalité"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Address"
+msgstr "Adresse"
+
+# key: admissions.portal.identity_locked
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Your name and birth date are kept by the registrar's office. You can update contact details under"
+msgstr "Vos nom et date de naissance sont gérés par le service de la scolarité. Vous pouvez mettre à jour vos coordonnées sous"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "portal"
+msgid "My details"
+msgstr "Mes informations"
+
+# key: admissions.portal.save_draft
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgctxt "admissions"
+msgid "Save draft"
+msgstr "Enregistrer le brouillon"
+
+# key: admissions.portal.submit_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Submit the application? You cannot change it afterwards."
+msgstr "Soumettre la candidature ? Vous ne pourrez plus la modifier ensuite."
+
+# key: admissions.portal.submit
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Submit application"
+msgstr "Soumettre la candidature"
+
+# key: admissions.portal.withdraw
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Withdraw application"
+msgstr "Retirer la candidature"
+
+# key: admissions.portal.withdraw_confirm
+#: ninefruits/admission/templates/admission/portal/application_detail.html
+msgid "Withdraw this application?"
+msgstr "Retirer cette candidature ?"
+
+# key: admissions.portal.no_applications
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgid "You have no applications yet."
+msgstr "Vous n’avez encore aucune candidature."
+
+# key: admissions.portal.new_application
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgid "Start an application"
+msgstr "Commencer une candidature"
+
+# key: admissions.public.none
+#: ninefruits/admission/templates/admission/portal/applications.html ninefruits/admission/templates/admission/public/index.html
+msgid "No cycle is taking applications right now."
+msgstr "Aucune campagne n’accepte de candidatures pour le moment."
+
+# key: admissions.portal.start
+#: ninefruits/admission/templates/admission/portal/applications.html
+msgctxt "admissions"
+msgid "Start"
+msgstr "Commencer"
+
+# key: admissions.public.title
+#: ninefruits/admission/templates/admission/public/index.html ninefruits/admission/views/public.py
+msgctxt "admissions"
+msgid "Admissions"
+msgstr "Admissions"
+
+# key: admissions.public.instructions
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Cycles currently taking applications. Create an account with your personal email to apply; you keep the same account as a student and graduate."
+msgstr "Campagnes acceptant actuellement des candidatures. Créez un compte avec votre adresse e-mail personnelle pour candidater ; vous conserverez le même compte en tant qu’étudiant puis diplômé."
+
+# key: admissions.public.rolling
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Applications accepted at any time."
+msgstr "Candidatures acceptées à tout moment."
+
+# key: admissions.public.closes
+#: ninefruits/admission/templates/admission/public/index.html
+#, python-format
+msgid "Applications close %(date)s."
+msgstr "Clôture des candidatures : %(date)s."
+
+# key: admissions.public.go_to_applications
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Go to my applications"
+msgstr "Accéder à mes candidatures"
+
+# key: admissions.public.register
+#: ninefruits/admission/templates/admission/public/index.html
+msgid "Create an account to apply"
+msgstr "Créer un compte pour candidater"
+
+# key: authentication.login.submit
+#: ninefruits/admission/templates/admission/public/index.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "Se connecter"
+
+# key: admissions.verify_email.title
+#: ninefruits/admission/templates/admission/public/verify_email.html ninefruits/admission/views/public.py
+msgid "Verify your email"
+msgstr "Vérifiez votre adresse e-mail"
+
+# key: admissions.verify_email.instructions
+#: ninefruits/admission/templates/admission/public/verify_email.html
+#, python-format
+msgid "We sent a link to %(email)s. Open it to verify your address before applying."
+msgstr "Nous avons envoyé un lien à %(email)s. Ouvrez-le pour vérifier votre adresse avant de candidater."
+
+# key: admissions.verify_email.resend
+#: ninefruits/admission/templates/admission/public/verify_email.html
+msgid "Send the link again"
+msgstr "Renvoyer le lien"
+
+# key: authentication.logout
+#: ninefruits/admission/templates/admission/public/verify_email.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Se déconnecter"
+
+# upstream: Django/allauth catalog
+#: ninefruits/admission/views/portal.py
+msgid "This field is required."
+msgstr "Ce champ est obligatoire."
+
+# key: admissions.portal.offer_accepted
+#: ninefruits/admission/views/portal.py
+msgid "You accepted the offer. The registrar's office will create your student record."
+msgstr "Vous avez accepté l’offre. Le service de la scolarité va créer votre dossier étudiant."
+
+# key: admissions.portal.offer_declined
+#: ninefruits/admission/views/portal.py
+msgid "You declined the offer."
+msgstr "Vous avez refusé l’offre."
+
+# key: admissions.portal.withdrawn
+#: ninefruits/admission/views/portal.py
+msgid "The application was withdrawn."
+msgstr "La candidature a été retirée."
+
+# key: admissions.portal.saved
+#: ninefruits/admission/views/portal.py
+msgid "Draft saved."
+msgstr "Brouillon enregistré."
+
+# key: admissions.portal.submitted
+#: ninefruits/admission/views/portal.py
+msgid "Your application was submitted. We sent a confirmation to your email."
+msgstr "Votre candidature a été soumise. Nous avons envoyé une confirmation à votre adresse e-mail."
+
+# key: portal.navigation.applications
+#: ninefruits/admission/views/portal.py
+msgctxt "portal"
+msgid "Admissions"
+msgstr "Admissions"
+
+# key: admissions.verify_email.sent
+#: ninefruits/admission/views/public.py
+msgid "A new link was sent."
+msgstr "Un nouveau lien a été envoyé."

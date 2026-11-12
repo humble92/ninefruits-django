@@ -2,7 +2,7 @@
 
 面向使用本教务管理系统的业务管理员和负责安装、运维的 IT 人员。
 
-其他语言：[한국어](../ko/README.md)、[English](../en/README.md)、[ລາວ](../lo/README.md)。韩语版为原文，其余为译文，尚待母语审校。
+其他语言：[한국어](../ko/README.md)、[English](../en/README.md)、[ລາວ](../lo/README.md)、[Deutsch](../de/README.md)、[Filipino](../fil/README.md)、[Français](../fr/README.md)、[日本語](../ja/README.md)、[Монгол](../mn/README.md)、[Bahasa Melayu](../ms/README.md)、[नेपाली](../ne/README.md)、[Русский](../ru/README.md)、[ไทย](../th/README.md)、[Türkçe](../tr/README.md)、[Oʻzbek](../uz/README.md)、[Tiếng Việt](../vi/README.md)。韩语版为原文，其余为译文，尚待母语审校。
 
 ## 管理员手册
 

@@ -2,7 +2,7 @@
 
 ຄູ່ມືນີ້ສຳລັບພະນັກງານບໍລິຫານການສຶກສາທີ່ໃຊ້ໜ້າບໍລິຫານ ແລະ ຜູ້ປະຕິບັດງານ IT ທີ່ຕິດຕັ້ງ ແລະ ດູແລລະບົບ.
 
-ພາສາອື່ນ: [한국어](../ko/README.md), [English](../en/README.md), [简体中文](../zh_Hans/README.md). ສະບັບພາສາເກົາຫຼີແມ່ນຕົ້ນສະບັບ; ສະບັບອື່ນແມ່ນການແປທີ່ຍັງລໍຖ້າການກວດສອບຈາກເຈົ້າຂອງພາສາ.
+ພາສາອື່ນ: [한국어](../ko/README.md), [English](../en/README.md), [简体中文](../zh_Hans/README.md), [Deutsch](../de/README.md), [Filipino](../fil/README.md), [Français](../fr/README.md), [日本語](../ja/README.md), [Монгол](../mn/README.md), [Bahasa Melayu](../ms/README.md), [नेपाली](../ne/README.md), [Русский](../ru/README.md), [ไทย](../th/README.md), [Türkçe](../tr/README.md), [Oʻzbek](../uz/README.md), [Tiếng Việt](../vi/README.md). ສະບັບພາສາເກົາຫຼີແມ່ນຕົ້ນສະບັບ; ສະບັບອື່ນແມ່ນການແປທີ່ຍັງລໍຖ້າການກວດສອບຈາກເຈົ້າຂອງພາສາ.
 
 ## ຄູ່ມືຜູ້ບໍລິຫານ
 

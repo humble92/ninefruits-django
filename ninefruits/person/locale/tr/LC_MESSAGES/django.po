@@ -1,0 +1,1298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: people.errors.additional_program_not_offered
+#: ninefruits/person/actions/additional_programs.py
+msgid "This program does not accept that kind of application."
+msgstr "Bu program bu tür bir başvuru kabul etmiyor."
+
+# key: people.errors.additional_program_already_held
+#: ninefruits/person/actions/additional_programs.py
+msgid "You already follow this program."
+msgstr "Bu programa zaten devam ediyorsunuz."
+
+# key: people.errors.additional_program_limit
+#: ninefruits/person/actions/additional_programs.py
+#, python-format
+msgid "You can have at most %(count)s at a time (including pending applications)."
+msgstr "Aynı anda en fazla %(count)s programınız olabilir (bekleyen başvurular dahil)."
+
+# key: people.errors.not_own_record
+#: ninefruits/person/actions/additional_programs.py ninefruits/person/actions/status_changes.py
+msgid "You can only make requests for your own record."
+msgstr "Yalnızca kendi kaydınız için talepte bulunabilirsiniz."
+
+# key: people.errors.additional_program_inactive_record
+#: ninefruits/person/actions/additional_programs.py
+msgid "Only current students can apply."
+msgstr "Yalnızca kayıtlı öğrenciler başvurabilir."
+
+# key: people.errors.additional_program_window_closed
+#: ninefruits/person/actions/additional_programs.py
+msgid "Applications for a second major or minor are not open for you now."
+msgstr "Çift ana dal veya yan dal başvuruları şu anda size açık değil."
+
+# key: people.errors.additional_program_pending
+#: ninefruits/person/actions/additional_programs.py
+msgid "There is already a pending application for this program."
+msgstr "Bu program için bekleyen bir başvuru zaten var."
+
+# key: people.errors.already_decided
+#: ninefruits/person/actions/additional_programs.py ninefruits/person/actions/status_changes.py
+msgid "This request has already been decided."
+msgstr "Bu talep hakkında zaten karar verildi."
+
+# key: people.errors.own_request
+#: ninefruits/person/actions/additional_programs.py ninefruits/person/actions/status_changes.py
+msgid "You cannot decide a request you made yourself."
+msgstr "Kendi yaptığınız bir talep hakkında karar veremezsiniz."
+
+# key: people.errors.additional_program_end_invalid
+#: ninefruits/person/actions/additional_programs.py
+msgid "This program has already ended, or the date is before it started."
+msgstr "Bu program zaten sona erdi veya tarih programın başlangıcından önce."
+
+# key: people.errors.instructor_not_current
+#: ninefruits/person/actions/advisors.py
+msgid "This instructor is not currently employed."
+msgstr "Bu öğretim elemanı şu anda görevde değil."
+
+# key: people.errors.already_has_account
+#: ninefruits/person/actions/invitations.py
+msgid "This person already has an account."
+msgstr "Bu kişinin zaten bir hesabı var."
+
+# key: people.errors.email_in_use
+#: ninefruits/person/actions/invitations.py
+msgid "Another account uses this email."
+msgstr "Bu e-posta adresini başka bir hesap kullanıyor."
+
+# key: people.invitations.invalid
+#: ninefruits/person/actions/invitations.py ninefruits/person/templates/person/accept_invitation.html
+msgid "This invitation link is invalid or has expired. Ask the school office for a new one."
+msgstr "Bu davet bağlantısı geçersiz veya süresi dolmuş. Öğrenci işlerinden yeni bir bağlantı isteyin."
+
+# key: people.errors.merge_invalid
+#: ninefruits/person/actions/merge.py
+msgid "Choose a different person who has not been merged."
+msgstr "Birleştirilmemiş farklı bir kişi seçin."
+
+# key: people.errors.merge_two_instructors
+#: ninefruits/person/actions/merge.py
+msgid "Both people have instructor records. Merge the instructor records first."
+msgstr "Her iki kişinin de öğretim elemanı kaydı var. Önce öğretim elemanı kayıtlarını birleştirin."
+
+# key: people.errors.merge_two_open_applications
+#: ninefruits/person/actions/merge.py
+msgid "Both people have an open application in the same admission cycle. Withdraw one first."
+msgstr "Her iki kişinin de aynı başvuru döneminde açık bir başvurusu var. Önce birini geri çekin."
+
+# key: people.errors.type_not_applicable
+#: ninefruits/person/actions/status_changes.py
+#, python-format
+msgid "This change does not apply to a student who is %(status)s."
+msgstr "Bu değişiklik, durumu %(status)s olan bir öğrenciye uygulanamaz."
+
+# key: people.errors.not_requestable
+#: ninefruits/person/actions/status_changes.py
+msgid "Students cannot request this type of change."
+msgstr "Öğrenciler bu tür bir değişikliği talep edemez."
+
+# key: people.errors.request_pending
+#: ninefruits/person/actions/status_changes.py
+msgid "There is already a pending request for this record."
+msgstr "Bu kayıt için bekleyen bir talep zaten var."
+
+# key: people.errors.status_changed_meanwhile
+#: ninefruits/person/actions/status_changes.py
+msgid "The student's status changed after the request was made. Reject it and ask for a new request."
+msgstr "Talep yapıldıktan sonra öğrencinin durumu değişti. Talebi reddedin ve yeni bir talep isteyin."
+
+# key: people.errors.person_merged
+#: ninefruits/person/actions/students.py
+msgid "This person was merged into another person. Use that person instead."
+msgstr "Bu kişi başka bir kişiyle birleştirildi. Bunun yerine o kişiyi kullanın."
+
+# upstream: Django/allauth catalog
+#: ninefruits/person/actions/students.py
+msgid "Enter a valid date."
+msgstr "Geçerli bir tarih girin."
+
+# key: people.errors.program_not_effective
+#: ninefruits/person/actions/students.py
+msgid "The program is not in effect on the admission date."
+msgstr "Program giriş tarihinde geçerli değil."
+
+# key: people.errors.student_number_taken
+#: ninefruits/person/actions/students.py
+msgid "This student number is already used."
+msgstr "Bu öğrenci numarası zaten kullanılıyor."
+
+# key: common.reason
+#: ninefruits/person/admin/common.py ninefruits/person/templates/person/portal/records.html
+msgctxt "common"
+msgid "Reason"
+msgstr "Gerekçe"
+
+# key: people.fields.decision_note
+#: ninefruits/person/admin/common.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgctxt "people"
+msgid "Decision note"
+msgstr "Karar notu"
+
+# key: people.fields.employee_number
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Employee number"
+msgstr "Sicil numarası"
+
+# key: reference.fields.org_unit
+# key: security.scope_types.org_unit
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "Org unit"
+msgstr "Birim"
+
+# key: people.fields.employment_type
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Employment type"
+msgstr "Kadro türü"
+
+# key: people.fields.academic_title
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Academic title"
+msgstr "Akademik unvan"
+
+# key: people.fields.hire_date
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/instructor.py
+msgid "Hire date"
+msgstr "İşe başlama tarihi"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py ninefruits/person/models/instructor.py ninefruits/person/models/student_record.py
+msgid "End date"
+msgstr "Bitiş tarihi"
+
+# key: validation.after_or_equal
+#: ninefruits/person/admin/instructors.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s %(date)s tarihi veya sonrası bir tarih olmalıdır."
+
+#: ninefruits/person/admin/instructors.py
+msgid "The employee number has already been taken."
+msgstr "Bu sicil numarası zaten kullanılıyor."
+
+# key: people.sections.person
+# key: people.fields.person
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py ninefruits/person/models/instructor.py ninefruits/person/models/student_record.py
+msgid "Person"
+msgstr "Kişi"
+
+# key: people.fields.new_person
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py
+msgid "New person"
+msgstr "Yeni kişi"
+
+# key: people.fields.existing_person
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py
+msgid "Existing person"
+msgstr "Mevcut kişi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/student_records.py
+msgid "This field is required."
+msgstr "Bu alan zorunludur."
+
+# key: people.filters.current_instructors
+#: ninefruits/person/admin/instructors.py
+msgid "Current instructors only"
+msgstr "Yalnızca görevdeki öğretim elemanları"
+
+# key: common.yes
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/people.py
+msgid "Yes"
+msgstr "Evet"
+
+# upstream: Django/allauth catalog
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/people.py
+msgid "No"
+msgstr "Hayır"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/people.py ninefruits/person/admin/requests.py ninefruits/person/admin/student_records.py ninefruits/person/models/person.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/profile.html
+msgctxt "people"
+msgid "Name"
+msgstr "Ad"
+
+#: ninefruits/person/admin/instructors.py
+msgid "Instructor created."
+msgstr "Öğretim elemanı oluşturuldu."
+
+#: ninefruits/person/admin/instructors.py
+msgid "New instructor"
+msgstr "Yeni öğretim elemanı"
+
+# key: people.fields.from_statuses
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/status_change.py
+msgid "Allowed from statuses"
+msgstr "İzin verilen önceki durumlar"
+
+# key: validation.regex
+#: ninefruits/person/admin/instructors.py
+#, python-format
+msgctxt "validation.regex"
+msgid "The %(attribute)s field format is invalid."
+msgstr "%(attribute)s biçimi geçersiz."
+
+# key: reference.fields.code
+#: ninefruits/person/admin/instructors.py ninefruits/person/models/status_change.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: people.fields.new_status
+#: ninefruits/person/admin/instructors.py ninefruits/person/admin/requests.py ninefruits/person/models/status_change.py
+msgid "New status"
+msgstr "Yeni durum"
+
+# key: people.fields.family_name
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Family name"
+msgstr "Soyadı"
+
+# key: people.help.romanized
+#: ninefruits/person/admin/people.py
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "Pasaporttaki gibi Latin harfleriyle resmî ad. Diğer dillerde yazılışını aşağıya ekleyin."
+
+# key: people.fields.given_name
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Given name"
+msgstr "Adı"
+
+# key: people.help.national_id_keep
+#: ninefruits/person/admin/people.py
+msgid "Leave empty to keep the stored value. Enter a new value to replace it."
+msgstr "Kayıtlı değeri korumak için boş bırakın. Değiştirmek için yeni değeri girin."
+
+# key: people.help.encrypted
+#: ninefruits/person/admin/people.py
+msgid "Stored encrypted. Shown masked; revealing it is logged."
+msgstr "Şifrelenerek saklanır. Maskeli gösterilir; açık gösterilmesi kayda alınır."
+
+# key: people.fields.birth_date
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "Birth date"
+msgstr "Doğum tarihi"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Gender"
+msgstr "Cinsiyet"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Nationality"
+msgstr "Uyruk"
+
+# key: people.fields.ethnicity
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Ethnicity"
+msgstr "Etnik köken"
+
+# key: people.fields.national_id
+#: ninefruits/person/admin/people.py
+msgid "National ID number"
+msgstr "Kimlik numarası"
+
+# key: people.fields.passport_number
+#: ninefruits/person/admin/people.py
+msgid "Passport number"
+msgstr "Pasaport numarası"
+
+# key: people.fields.contact_email
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/views/portal.py
+msgid "Contact email"
+msgstr "İletişim e-postası"
+
+# key: people.fields.phone
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html ninefruits/person/views/portal.py
+msgid "Phone"
+msgstr "Telefon"
+
+# key: people.fields.address
+# key: reference.fields.address
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "Address"
+msgstr "Adres"
+
+# key: people.fields.postal_code
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/views/portal.py
+msgid "Postal code"
+msgstr "Posta kodu"
+
+#: ninefruits/person/admin/people.py
+msgid "The birth date must not be in the future."
+msgstr "Doğum tarihi gelecekte olamaz."
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/person/admin/people.py
+msgid "Photo"
+msgstr "Fotoğraf"
+
+#: ninefruits/person/admin/people.py
+msgid "JPEG, PNG or WebP, at most 2 MB."
+msgstr "JPEG, PNG veya WebP, en fazla 2 MB."
+
+#: ninefruits/person/admin/people.py
+msgid "The photo must not be larger than 2 MB."
+msgstr "Fotoğraf 2 MB'tan büyük olamaz."
+
+# key: people.resources.guardians.label
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "guardian"
+msgstr "veli"
+
+# key: people.resources.guardians.plural_label
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "guardians"
+msgstr "veliler"
+
+# key: people.resources.student_records.label
+#: ninefruits/person/admin/people.py ninefruits/person/models/student_record.py
+msgid "student record"
+msgstr "öğrenci kaydı"
+
+# key: people.resources.student_records.plural_label
+#: ninefruits/person/admin/people.py ninefruits/person/importers.py ninefruits/person/models/student_record.py
+msgid "student records"
+msgstr "öğrenci kayıtları"
+
+# key: people.fields.status
+#: ninefruits/person/admin/people.py ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Status"
+msgstr "Durum"
+
+# key: people.fields.login_email
+#: ninefruits/person/admin/people.py ninefruits/person/models/invitation.py
+msgid "Sign-in email"
+msgstr "Oturum açma e-postası"
+
+# key: people.help.invitation_email
+#: ninefruits/person/admin/people.py
+msgid "The invitation link is sent here. This becomes the sign-in email."
+msgstr "Davet bağlantısı bu adrese gönderilir. Bu adres oturum açma e-postası olur."
+
+# key: people.fields.merge_target
+#: ninefruits/person/admin/people.py
+msgid "Keep this person"
+msgstr "Bu kişiyi koru"
+
+# key: people.filters.merged
+#: ninefruits/person/admin/people.py
+msgctxt "people"
+msgid "Merged"
+msgstr "Birleştirilmiş"
+
+# key: security.scope_types.global
+#: ninefruits/person/admin/people.py
+msgid "All"
+msgstr "Tümü"
+
+# key: admin.settings.student_records.title
+# key: people.fields.student_records_count
+# key: permissions.resources.student_records
+#: ninefruits/person/admin/people.py ninefruits/person/settings_pages.py
+msgid "Student records"
+msgstr "Öğrenci kayıtları"
+
+# key: people.sections.account
+# key: people.fields.has_account
+#: ninefruits/person/admin/people.py
+msgid "Account"
+msgstr "Hesap"
+
+# key: admissions.sections.personal
+# key: people.sections.personal
+#: ninefruits/person/admin/people.py
+msgid "Personal details"
+msgstr "Kişisel bilgiler"
+
+# key: people.sections.contact
+#: ninefruits/person/admin/people.py
+msgid "Contact"
+msgstr "İletişim"
+
+# key: people.fields.romanized_name
+#: ninefruits/person/admin/people.py
+msgid "Romanized name"
+msgstr "Latin harfleriyle ad"
+
+# key: people.fields.no_account
+#: ninefruits/person/admin/people.py
+msgid "No account"
+msgstr "Hesap yok"
+
+# key: people.fields.merged_into
+#: ninefruits/person/admin/people.py ninefruits/person/models/person.py
+msgid "Merged into"
+msgstr "Birleştirildiği kişi"
+
+# key: people.actions.reveal_national_id
+#: ninefruits/person/admin/people.py
+msgid "Show national ID number"
+msgstr "Kimlik numarasını göster"
+
+# key: people.help.reveal
+#: ninefruits/person/admin/people.py ninefruits/person/templates/person/admin/revealed.html
+msgid "The full value is shown once and the reveal is recorded in the security log."
+msgstr "Tam değer bir kez gösterilir ve gösterim güvenlik günlüğüne kaydedilir."
+
+# key: people.actions.reveal_passport_number
+#: ninefruits/person/admin/people.py
+msgid "Show passport number"
+msgstr "Pasaport numarasını göster"
+
+# key: people.actions.invite
+#: ninefruits/person/admin/people.py
+msgid "Invite to create an account"
+msgstr "Hesap oluşturmaya davet et"
+
+# key: people.notifications.invited
+#: ninefruits/person/admin/people.py
+msgid "Invitation sent."
+msgstr "Davet gönderildi."
+
+# key: people.actions.merge
+#: ninefruits/person/admin/people.py
+msgid "Merge duplicate"
+msgstr "Mükerrer kaydı birleştir"
+
+# key: people.notifications.merged
+#: ninefruits/person/admin/people.py
+msgid "People merged."
+msgstr "Kişiler birleştirildi."
+
+# key: people.help.merge
+#: ninefruits/person/admin/people.py
+msgid "The other person's student records, instructor record, guardians and account move to the person you keep. The other person is marked as merged and cannot be used again. This cannot be undone."
+msgstr "Diğer kişinin öğrenci kayıtları, öğretim elemanı kaydı, velileri ve hesabı korunan kişiye taşınır. Diğer kişi birleştirildi olarak işaretlenir ve bir daha kullanılamaz. Bu işlem geri alınamaz."
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/person/admin/requests.py ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgid "Student number"
+msgstr "Öğrenci numarası"
+
+# key: people.fields.request_status
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgid "Request status"
+msgstr "Talep durumu"
+
+# key: common.reason
+#: ninefruits/person/admin/requests.py ninefruits/person/models/status_change.py
+msgid "Reason"
+msgstr "Gerekçe"
+
+# key: people.fields.requested_by
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgctxt "people"
+msgid "Requested by"
+msgstr "Talep eden"
+
+# key: people.fields.decided_by
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgctxt "people"
+msgid "Decided by"
+msgstr "Karar veren"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/person/admin/requests.py
+msgid "Approve"
+msgstr "Onayla"
+
+# key: people.notifications.approved
+#: ninefruits/person/admin/requests.py
+msgid "Request approved."
+msgstr "Talep onaylandı."
+
+# key: people.actions.reject
+#: ninefruits/person/admin/requests.py
+msgctxt "people"
+msgid "Reject"
+msgstr "Reddet"
+
+# key: people.notifications.rejected
+#: ninefruits/person/admin/requests.py
+msgid "Request rejected."
+msgstr "Talep reddedildi."
+
+# key: people.fields.primary_program
+#: ninefruits/person/admin/requests.py
+msgctxt "people"
+msgid "Primary program"
+msgstr "Ana program"
+
+# key: people.fields.program_role
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Kind"
+msgstr "Tür"
+
+# key: people.fields.statement
+#: ninefruits/person/admin/requests.py ninefruits/person/models/additional_program.py ninefruits/person/templates/person/portal/records.html
+msgid "Statement"
+msgstr "Açıklama"
+
+# key: people.fields.catalog_year
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Catalog year"
+msgstr "Müfredat yılı"
+
+# key: people.help.catalog_year
+#: ninefruits/person/admin/student_records.py
+msgid "Year of the curriculum that applies to this student, usually the admission year."
+msgstr "Bu öğrenciye uygulanan müfredatın yılı, genellikle giriş yılı."
+
+# key: people.fields.year_level
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Year"
+msgstr "Sınıf"
+
+# key: people.fields.admission_type
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Admission type"
+msgstr "Giriş türü"
+
+# key: admissions.fields.admission_term
+# key: people.fields.admission_term
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Admission term"
+msgstr "Giriş dönemi"
+
+# key: people.fields.institutional_email
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "School email"
+msgstr "Kurumsal e-posta"
+
+# key: people.help.institutional_email
+#: ninefruits/person/admin/student_records.py
+msgid "School email address. Used to link school sign-in (SSO) accounts automatically when enabled."
+msgstr "Kurumsal e-posta adresi. Etkinleştirildiğinde kurumsal oturum açma (SSO) hesaplarını otomatik olarak bağlamak için kullanılır."
+
+# key: people.fields.tags
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "Tags"
+msgstr "Etiketler"
+
+# key: people.help.tags
+#: ninefruits/person/admin/student_records.py
+msgid "Free labels for grouping, e.g. scholarship programs."
+msgstr "Gruplama için serbest etiketler, ör. burs programları."
+
+# key: security.scope_types.program
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "security"
+msgid "Program"
+msgstr "Program"
+
+# key: people.fields.admission_date
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "Admission date"
+msgstr "Giriş tarihi"
+
+# key: people.help.student_number_generated
+#: ninefruits/person/admin/student_records.py
+msgid "Leave empty to generate one with the student number pattern."
+msgstr "Öğrenci numarası biçimiyle otomatik oluşturmak için boş bırakın."
+
+# key: people.resources.status_changes.label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py
+msgid "status change"
+msgstr "durum değişikliği"
+
+# key: people.resources.status_changes.plural_label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/records.html
+msgid "status changes"
+msgstr "durum değişiklikleri"
+
+# key: people.resources.advisor_assignments.label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py
+msgid "advisor"
+msgstr "danışman"
+
+# key: people.resources.advisor_assignments.plural_label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py
+msgid "advisors"
+msgstr "danışmanlar"
+
+# key: people.resources.additional_programs.label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py
+msgid "second major or minor"
+msgstr "çift ana dal veya yan dal"
+
+# key: people.resources.additional_programs.plural_label
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "second majors and minors"
+msgstr "çift ana dallar ve yan dallar"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/person/admin/student_records.py
+msgid "End"
+msgstr "Bitiş"
+
+# key: people.fields.status_change_type
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/records.html
+msgid "Change type"
+msgstr "Değişiklik türü"
+
+# key: people.fields.effective_date
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/status_change.py ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Effective date"
+msgstr "Geçerlilik tarihi"
+
+# key: people.fields.advisor
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py ninefruits/person/templates/person/portal/records.html
+msgctxt "people"
+msgid "Advisor"
+msgstr "Danışman"
+
+# key: people.fields.advisor_role
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py
+msgid "Advisor role"
+msgstr "Danışmanlık türü"
+
+# key: reference.fields.start_date
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/advisor.py ninefruits/person/models/student_record.py
+msgid "Start date"
+msgstr "Başlangıç tarihi"
+
+# key: people.sections.record
+#: ninefruits/person/admin/student_records.py ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgid "Student record"
+msgstr "Öğrenci kaydı"
+
+# key: admin.audit.fields.properties
+#: ninefruits/person/admin/student_records.py
+msgid "Details"
+msgstr "Ayrıntılar"
+
+#: ninefruits/person/admin/student_records.py
+msgid "Student registered."
+msgstr "Öğrenci kaydedildi."
+
+# key: people.actions.register_student
+#: ninefruits/person/admin/student_records.py
+msgid "Register student"
+msgstr "Öğrenci kaydet"
+
+# key: people.actions.record_status_change
+#: ninefruits/person/admin/student_records.py
+msgid "Record status change"
+msgstr "Durum değişikliği kaydet"
+
+# key: people.notifications.status_changed
+#: ninefruits/person/admin/student_records.py
+msgid "Status change recorded."
+msgstr "Durum değişikliği kaydedildi."
+
+# key: grading.transcript.title
+#: ninefruits/person/admin/student_records.py
+msgid "Grade report"
+msgstr "Not dökümü"
+
+# key: people.actions.assign_advisor
+#: ninefruits/person/admin/student_records.py
+msgid "Assign advisor"
+msgstr "Danışman ata"
+
+# key: people.notifications.advisor_assigned
+#: ninefruits/person/admin/student_records.py
+msgid "Advisor assigned."
+msgstr "Danışman atandı."
+
+# key: people.notifications.additional_program_ended
+#: ninefruits/person/admin/student_records.py
+msgid "Program ended."
+msgstr "Program sonlandırıldı."
+
+# key: people.student_statuses.enrolled
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Enrolled"
+msgstr "Kayıtlı"
+
+# key: people.student_statuses.on_leave
+#: ninefruits/person/enums.py
+msgid "On leave"
+msgstr "Kayıt donduruldu"
+
+# key: people.student_statuses.withdrawn
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Withdrawn"
+msgstr "Kendi isteğiyle ayrıldı"
+
+# key: people.student_statuses.dismissed
+#: ninefruits/person/enums.py
+msgid "Dismissed"
+msgstr "İlişiği kesildi"
+
+# key: people.student_statuses.graduated
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Graduated"
+msgstr "Mezun"
+
+# key: people.status_change_statuses.requested
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Requested"
+msgstr "Talep edildi"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/person/enums.py
+msgid "Approved"
+msgstr "Onaylandı"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/person/enums.py
+msgid "Rejected"
+msgstr "Reddedildi"
+
+# key: people.additional_program_request_statuses.cancelled
+# key: people.status_change_statuses.cancelled
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Cancelled"
+msgstr "İptal edildi"
+
+# key: people.additional_program_request_statuses.requested
+#: ninefruits/person/enums.py
+msgctxt "people"
+msgid "Pending"
+msgstr "Beklemede"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/person/enums.py
+msgid "Second major"
+msgstr "Çift ana dal"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/person/enums.py
+msgid "Minor"
+msgstr "Yan dal"
+
+# key: people.advisor_roles.primary
+#: ninefruits/person/enums.py
+msgid "Primary advisor"
+msgstr "Birincil danışman"
+
+# key: people.advisor_roles.co_advisor
+#: ninefruits/person/enums.py
+msgid "Co-advisor"
+msgstr "Eş danışman"
+
+# key: people.employment_types.full_time
+#: ninefruits/person/enums.py
+msgid "Full-time"
+msgstr "Tam zamanlı"
+
+# key: people.employment_types.part_time
+#: ninefruits/person/enums.py
+msgid "Part-time"
+msgstr "Yarı zamanlı"
+
+# key: people.employment_types.adjunct
+#: ninefruits/person/enums.py
+msgid "Adjunct"
+msgstr "Ders ücretli"
+
+# key: people.employment_types.visiting
+#: ninefruits/person/enums.py
+msgid "Visiting"
+msgstr "Misafir"
+
+# key: people.employment_types.emeritus
+#: ninefruits/person/enums.py
+msgid "Emeritus"
+msgstr "Emekli (fahri)"
+
+# key: people.genders.female
+#: ninefruits/person/enums.py
+msgid "Female"
+msgstr "Kadın"
+
+# key: people.genders.male
+#: ninefruits/person/enums.py
+msgid "Male"
+msgstr "Erkek"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: ninefruits/person/enums.py
+msgid "Other"
+msgstr "Diğer"
+
+# key: people.genders.undisclosed
+#: ninefruits/person/enums.py
+msgid "Not disclosed"
+msgstr "Belirtilmemiş"
+
+# key: people.guardian_relationships.father
+#: ninefruits/person/enums.py
+msgid "Father"
+msgstr "Baba"
+
+# key: people.guardian_relationships.mother
+#: ninefruits/person/enums.py
+msgid "Mother"
+msgstr "Anne"
+
+# key: people.guardian_relationships.guardian
+#: ninefruits/person/enums.py
+msgid "Guardian"
+msgstr "Vasi"
+
+# key: people.guardian_relationships.spouse
+#: ninefruits/person/enums.py
+msgid "Spouse"
+msgstr "Eş"
+
+# key: people.guardian_relationships.sibling
+#: ninefruits/person/enums.py
+msgid "Sibling"
+msgstr "Kardeş"
+
+# key: people.guardian_relationships.grandparent
+#: ninefruits/person/enums.py
+msgid "Grandparent"
+msgstr "Büyükanne/büyükbaba"
+
+# key: validation.email
+#: ninefruits/person/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid email address."
+msgstr "%(attribute)s geçerli bir e-posta adresi olmalıdır."
+
+# key: people.import.unknown_program
+#: ninefruits/person/importers.py
+#, python-format
+msgid "No program with the code %(code)s."
+msgstr "%(code)s kodlu program yok."
+
+# key: people.resources.instructors.plural_label
+#: ninefruits/person/importers.py ninefruits/person/models/instructor.py
+msgid "instructors"
+msgstr "öğretim elemanları"
+
+# key: people.fields.requested_program
+#: ninefruits/person/models/additional_program.py
+msgid "Applied program"
+msgstr "Başvurulan program"
+
+# key: people.fields.start_term
+#: ninefruits/person/models/additional_program.py
+msgid "Starting term"
+msgstr "Başlangıç dönemi"
+
+# key: people.fields.requested_at
+#: ninefruits/person/models/additional_program.py ninefruits/person/models/status_change.py
+msgid "Requested at"
+msgstr "Talep tarihi"
+
+# key: people.resources.additional_program_requests.label
+#: ninefruits/person/models/additional_program.py
+msgid "second major or minor application"
+msgstr "çift ana dal veya yan dal başvurusu"
+
+# key: people.resources.additional_program_requests.plural_label
+#: ninefruits/person/models/additional_program.py
+msgid "second major and minor applications"
+msgstr "çift ana dal ve yan dal başvuruları"
+
+# key: people.resources.instructors.label
+#: ninefruits/person/models/instructor.py
+msgid "instructor"
+msgstr "öğretim elemanı"
+
+# key: people.fields.name_variants
+#: ninefruits/person/models/person.py
+msgid "Name in other languages"
+msgstr "Diğer dillerde ad"
+
+# key: people.resources.people.label
+#: ninefruits/person/models/person.py
+msgid "person"
+msgstr "kişi"
+
+# key: people.resources.people.plural_label
+#: ninefruits/person/models/person.py
+msgid "people"
+msgstr "kişiler"
+
+# key: people.fields.relationship
+#: ninefruits/person/models/person.py ninefruits/person/templates/person/portal/profile.html
+msgid "Relationship"
+msgstr "Yakınlık"
+
+# key: people.fields.is_primary_contact
+#: ninefruits/person/models/person.py
+msgid "Primary contact"
+msgstr "Birincil iletişim kişisi"
+
+# key: people.fields.can_student_request
+#: ninefruits/person/models/status_change.py
+msgid "Students can request"
+msgstr "Öğrenciler talep edebilir"
+
+# key: reference.fields.is_active
+#: ninefruits/person/models/status_change.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Etkin"
+
+# key: reference.fields.sort_order
+#: ninefruits/person/models/status_change.py
+msgid "Order"
+msgstr "Sıra"
+
+# key: people.resources.status_change_types.label
+#: ninefruits/person/models/status_change.py
+msgid "status change type"
+msgstr "durum değişikliği türü"
+
+# key: people.resources.status_change_types.plural_label
+#: ninefruits/person/models/status_change.py
+msgid "status change types"
+msgstr "durum değişikliği türleri"
+
+# key: graduation.report_columns.term_code
+#: ninefruits/person/models/status_change.py
+msgid "Term"
+msgstr "Dönem"
+
+# key: people.fields.graduation_date
+#: ninefruits/person/models/student_record.py ninefruits/person/templates/person/portal/records.html
+msgid "Graduation date"
+msgstr "Mezuniyet tarihi"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/person/notifications.py
+msgid "Hello,"
+msgstr "Merhaba,"
+
+# key: people.invitations.mail_intro
+#: ninefruits/person/notifications.py
+msgid "Your school has invited you to create an account."
+msgstr "Kurumunuz sizi bir hesap oluşturmaya davet etti."
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: ninefruits/person/notifications.py ninefruits/person/templates/person/accept_invitation.html
+msgid "Create account"
+msgstr "Hesap oluştur"
+
+# key: people.invitations.mail_expiry
+#: ninefruits/person/notifications.py
+#, python-format
+msgid "This link works until %(date)s."
+msgstr "Bu bağlantı %(date)s tarihine kadar geçerlidir."
+
+# key: security.email_code.mail_salutation
+#: ninefruits/person/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Teşekkürler,\n"
+"%(app)s"
+
+# key: people.invitations.mail_subject
+#: ninefruits/person/notifications.py
+#, python-format
+msgid "Create your %(app)s account"
+msgstr "%(app)s hesabınızı oluşturun"
+
+# key: admin.settings.student_records.student_number_pattern
+#: ninefruits/person/settings_pages.py
+msgid "Student number pattern"
+msgstr "Öğrenci numarası biçimi"
+
+# key: admin.settings.student_records.student_number_pattern_help
+#: ninefruits/person/settings_pages.py
+#, python-brace-format
+msgid "{YYYY} admission year, {YY} last two digits, {SEQ:n} sequence padded to n digits. Example: {YYYY}{SEQ:5} gives 202600001."
+msgstr "{YYYY} giriş yılı, {YY} son iki hanesi, {SEQ:n} n haneye tamamlanan sıra numarası. Örnek: {YYYY}{SEQ:5} sonucu 202600001 olur."
+
+# key: admin.settings.student_records.invitation_valid_days
+#: ninefruits/person/settings_pages.py
+msgid "Invitation links valid for (days)"
+msgstr "Davet bağlantılarının geçerlilik süresi (gün)"
+
+# key: admin.settings.student_records.max_second_majors
+#: ninefruits/person/settings_pages.py
+msgid "Second majors at a time"
+msgstr "Aynı anda en fazla çift ana dal"
+
+# key: admin.settings.student_records.max_minors
+#: ninefruits/person/settings_pages.py
+msgid "Minors at a time"
+msgstr "Aynı anda en fazla yan dal"
+
+# key: people.invitations.title
+#: ninefruits/person/templates/person/accept_invitation.html
+msgid "Create your account"
+msgstr "Hesabınızı oluşturun"
+
+# key: people.invitations.instructions
+#: ninefruits/person/templates/person/accept_invitation.html
+#, python-format
+msgid "Choose a password for %(email)s."
+msgstr "%(email)s için bir parola belirleyin."
+
+#: ninefruits/person/templates/person/admin/history.html
+msgid "Change history"
+msgstr "Değişiklik geçmişi"
+
+# key: admin.audit.fields.occurred_at
+#: ninefruits/person/templates/person/admin/history.html
+msgctxt "admin"
+msgid "Time"
+msgstr "Zaman"
+
+# key: admin.record_changes.fields.table
+#: ninefruits/person/templates/person/admin/history.html
+msgid "Table"
+msgstr "Tablo"
+
+# key: admin.record_changes.fields.operation
+#: ninefruits/person/templates/person/admin/history.html
+msgctxt "admin"
+msgid "Operation"
+msgstr "İşlem türü"
+
+# key: admin.record_changes.fields.changed_columns
+#: ninefruits/person/templates/person/admin/history.html
+msgid "Changed columns"
+msgstr "Değişen sütunlar"
+
+# key: admin.audit.fields.actor
+#: ninefruits/person/templates/person/admin/history.html
+msgid "User"
+msgstr "Kullanıcı"
+
+#: ninefruits/person/templates/person/admin/history.html
+msgid "No changes recorded yet."
+msgstr "Henüz kaydedilmiş değişiklik yok."
+
+# key: evaluation.portal.back
+#: ninefruits/person/templates/person/admin/revealed.html
+msgid "Back"
+msgstr "Geri"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: ninefruits/person/templates/person/portal/advisees.html ninefruits/person/views/portal.py
+msgid "Advisees"
+msgstr "Danışmanlık öğrencilerim"
+
+# key: common.none
+#: ninefruits/person/templates/person/portal/advisees.html ninefruits/person/templates/person/portal/records.html
+msgctxt "common"
+msgid "None"
+msgstr "Yok"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/person/templates/person/portal/profile.html ninefruits/person/views/portal.py
+msgid "My details"
+msgstr "Bilgilerim"
+
+# key: portal.profile.registrar_fields
+#: ninefruits/person/templates/person/portal/profile.html
+msgid "Contact the registrar's office to change your name, birth date or identity numbers."
+msgstr "Adınızı, doğum tarihinizi veya kimlik numaralarınızı değiştirmek için öğrenci işleriyle iletişime geçin."
+
+# key: common.save
+#: ninefruits/person/templates/person/portal/profile.html
+msgctxt "common"
+msgid "Save"
+msgstr "Kaydet"
+
+# key: portal.profile.remove_confirm
+#: ninefruits/person/templates/person/portal/profile.html
+msgid "Remove this guardian?"
+msgstr "Bu veli kaldırılsın mı?"
+
+# key: portal.profile.remove
+#: ninefruits/person/templates/person/portal/profile.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "Kaldır"
+
+# key: portal.profile.add_guardian
+#: ninefruits/person/templates/person/portal/profile.html
+msgid "Add guardian"
+msgstr "Veli ekle"
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/person/templates/person/portal/records.html ninefruits/person/views/portal.py
+msgid "My records"
+msgstr "Kayıtlarım"
+
+# key: portal.records.choose
+#: ninefruits/person/templates/person/portal/records.html
+msgid "You have more than one student record. Choose one:"
+msgstr "Birden fazla öğrenci kaydınız var. Birini seçin:"
+
+# key: portal.records.none
+#: ninefruits/person/templates/person/portal/records.html
+msgid "You have no student record."
+msgstr "Öğrenci kaydınız yok."
+
+# key: portal.records.pending
+#: ninefruits/person/templates/person/portal/records.html
+#, python-format
+msgid "Pending request: %(type)s from %(date)s."
+msgstr "Bekleyen talep: %(type)s (%(date)s)."
+
+# key: portal.records.cancel_confirm
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Cancel this request?"
+msgstr "Bu talep iptal edilsin mi?"
+
+# key: portal.records.cancel
+#: ninefruits/person/templates/person/portal/records.html
+msgctxt "portal"
+msgid "Cancel request"
+msgstr "Talebi iptal et"
+
+# key: portal.records.request_title
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Request a status change"
+msgstr "Durum değişikliği talep et"
+
+# key: portal.records.submit_request
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Submit request"
+msgstr "Talebi gönder"
+
+# key: portal.records.additional_program_request
+#: ninefruits/person/templates/person/portal/records.html
+#, python-format
+msgid "%(role)s application for %(program)s: %(status)s"
+msgstr "%(program)s için %(role)s başvurusu: %(status)s"
+
+# key: portal.records.additional_program_open
+#: ninefruits/person/templates/person/portal/records.html
+#, python-format
+msgid "Applications for a second major or minor are open (starting %(term)s)."
+msgstr "Çift ana dal veya yan dal başvuruları açık (başlangıç: %(term)s)."
+
+#: ninefruits/person/templates/person/portal/records.html
+msgid "Show programs"
+msgstr "Programları göster"
+
+# key: portal.records.apply_additional_program
+#: ninefruits/person/templates/person/portal/records.html
+msgctxt "portal"
+msgid "Apply"
+msgstr "Başvur"
+
+# key: authentication.fields.new_password
+#: ninefruits/person/views/invitations.py
+msgid "New password"
+msgstr "Yeni parola"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/person/views/invitations.py
+msgid "Confirm password"
+msgstr "Parolayı onayla"
+
+#: ninefruits/person/views/invitations.py
+msgid "The password field confirmation does not match."
+msgstr "Parola onayı eşleşmiyor."
+
+# key: people.invitations.accepted
+#: ninefruits/person/views/invitations.py
+msgid "Your account is ready. Welcome."
+msgstr "Hesabınız hazır. Hoş geldiniz."
+
+# key: portal.records.request_submitted
+#: ninefruits/person/views/portal.py
+msgid "Your request was submitted. The registrar's office will review it."
+msgstr "Talebiniz gönderildi. Öğrenci işleri talebinizi inceleyecektir."
+
+# key: portal.records.additional_program_requested
+#: ninefruits/person/views/portal.py
+msgid "Your application was submitted. The program's office will review it."
+msgstr "Başvurunuz gönderildi. Programın birimi başvurunuzu inceleyecektir."
+
+# key: portal.profile.saved
+#: ninefruits/person/views/portal.py
+msgid "Your details were saved."
+msgstr "Bilgileriniz kaydedildi."
+
+# key: portal.navigation.records
+# key: portal.records.title
+#: ninefruits/person/views/portal.py
+msgctxt "portal"
+msgid "My records"
+msgstr "Kayıtlarım"
+
+# key: portal.navigation.profile
+# key: portal.profile.title
+#: ninefruits/person/views/portal.py
+msgctxt "portal"
+msgid "My details"
+msgstr "Bilgilerim"
+
+# key: portal.navigation.advisees
+# key: portal.advisees.title
+#: ninefruits/person/views/portal.py
+msgctxt "portal"
+msgid "Advisees"
+msgstr "Danışmanlık öğrencilerim"

@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "คะแนนแต่ละรายการต้องเป็นตัวเลขตั้งแต่ 0 ถึง 100"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown operation."
+msgstr "ไม่รู้จักการดำเนินการนี้"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown status."
+msgstr "ไม่รู้จักสถานะนี้"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "ไม่รู้จักรายการบันทึกการซิงค์นี้"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "This step is already finished."
+msgstr "ขั้นตอนนี้เสร็จสิ้นแล้ว"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "การดำเนินการไม่ตรงกับรายการบันทึกการซิงค์"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "กลุ่มเรียนนี้ไม่ได้เชื่อมโยงกับแพลตฟอร์มนี้"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "ส่งอ็อบเจกต์ที่จับคู่รหัสผู้ใช้กับคะแนน"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "ไม่มีกลุ่มเรียนที่เชื่อมโยงกับรายวิชานี้"
+
+# key: lms.resources.platforms.label
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "LMS platform"
+msgstr "แพลตฟอร์ม LMS"
+
+# key: registration.fields.status
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "สถานะ"
+
+# key: reference.resources.terms.label
+#: ninefruits/lms/admin/course_links.py
+msgid "term"
+msgstr "ภาคการศึกษา"
+
+# key: offering.fields.section
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "กลุ่มเรียน"
+
+# key: lms.fields.external_course_id
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course id on the platform"
+msgstr "รหัสรายวิชาบนแพลตฟอร์ม"
+
+# key: lms.fields.external_url
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course URL"
+msgstr "URL ของรายวิชา"
+
+# key: lms.fields.last_error
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Last error"
+msgstr "ข้อผิดพลาดล่าสุด"
+
+# key: lms.actions.resync
+#: ninefruits/lms/admin/course_links.py
+msgid "Synchronize again"
+msgstr "ซิงค์อีกครั้ง"
+
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "การซิงค์ล้มเหลว: %(error)s"
+
+# key: lms.notifications.synced
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "ซิงค์แล้ว: สมาชิก %(members)s คน"
+
+#: ninefruits/lms/admin/course_links.py
+msgid "Pushes the course, its instructors and its enrolled students to the platform again."
+msgstr "ส่งรายวิชา อาจารย์ผู้สอน และนักศึกษาที่ลงทะเบียนไปยังแพลตฟอร์มอีกครั้ง"
+
+# key: lms.fields.not_implemented
+#: ninefruits/lms/admin/platforms.py
+msgid "not implemented yet"
+msgstr "ยังไม่รองรับ"
+
+#: ninefruits/lms/admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "บรรทัดที่ %(number)s: เขียนในรูปแบบ key=value"
+
+# key: reference.fields.code
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "รหัส"
+
+# key: lms.fields.driver
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Driver"
+msgstr "ไดรเวอร์"
+
+# key: lms.help.driver
+#: ninefruits/lms/admin/platforms.py
+msgid "The connector that talks to the platform. \"null\" records what would be sent without calling anything; use it to prepare and test."
+msgstr "ตัวเชื่อมต่อที่สื่อสารกับแพลตฟอร์ม \"null\" จะบันทึกสิ่งที่จะส่งโดยไม่เรียกใช้งานจริง ใช้สำหรับเตรียมการและทดสอบ"
+
+# key: lms.fields.base_url
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Base URL"
+msgstr "URL หลัก"
+
+# key: lms.fields.credentials
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Credentials"
+msgstr "ข้อมูลรับรอง"
+
+# key: lms.help.credentials
+#: ninefruits/lms/admin/platforms.py
+msgid "Tokens and secrets the driver needs (see docs/lms-integration-guide.md). Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr "โทเค็นและข้อมูลลับที่ไดรเวอร์ต้องใช้ (ดู docs/lms-integration-guide.md) จัดเก็บแบบเข้ารหัส เว้นว่างเมื่อแก้ไขเพื่อคงค่าเดิม"
+
+#: ninefruits/lms/admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "หนึ่ง key=value ต่อบรรทัด เช่น token=..."
+
+# key: lms.help.is_active
+#: ninefruits/lms/admin/platforms.py
+msgid "Active platforms receive published sections and roster changes as they happen, and the nightly reconcile."
+msgstr "แพลตฟอร์มที่ใช้งานอยู่จะได้รับกลุ่มเรียนที่เผยแพร่และการเปลี่ยนแปลงรายชื่อทันทีที่เกิดขึ้น รวมถึงการกระทบยอดทุกคืน"
+
+# key: lms.help.should_pull_grades
+#: ninefruits/lms/admin/platforms.py
+msgid "Lets instructors load the platform's final scores into the grade entry screen as a draft."
+msgstr "ให้อาจารย์ผู้สอนดึงคะแนนสุดท้ายจากแพลตฟอร์มเข้าหน้ากรอกเกรดเป็นฉบับร่างได้"
+
+#: ninefruits/lms/admin/platforms.py
+msgid "This code is already used."
+msgstr "รหัสนี้มีการใช้แล้ว"
+
+# key: reference.fields.name
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "ชื่อ"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Course links"
+msgstr "การเชื่อมโยงรายวิชา"
+
+# key: admin.record_changes.fields.operation
+# key: lms.fields.operation
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Operation"
+msgstr "การดำเนินการ"
+
+# key: admin.audit.fields.actor
+#: ninefruits/lms/admin/sync_logs.py
+msgid "User"
+msgstr "ผู้ใช้"
+
+# key: lms.fields.message
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Message"
+msgstr "ข้อความ"
+
+#: ninefruits/lms/admin/sync_logs.py
+msgid "Payload"
+msgstr "ข้อมูลที่ส่ง"
+
+# key: lms.link_statuses.pending
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "รอดำเนินการ"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/lms/enums.py
+msgid "Linked"
+msgstr "เชื่อมโยงแล้ว"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "ล้มเหลว"
+
+# key: lms.drivers.null
+#: ninefruits/lms/enums.py
+msgid "None (records only)"
+msgstr "ไม่มี (บันทึกเท่านั้น)"
+
+# key: lms.operations.course.sync
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "รายวิชา"
+
+# key: lms.operations.enrollment.add
+#: ninefruits/lms/enums.py
+msgid "Add member"
+msgstr "เพิ่มสมาชิก"
+
+# key: lms.operations.enrollment.remove
+#: ninefruits/lms/enums.py
+msgid "Remove member"
+msgstr "ลบสมาชิก"
+
+# key: lms.operations.grades.pull
+#: ninefruits/lms/enums.py
+msgid "Pull scores"
+msgstr "ดึงคะแนน"
+
+#: ninefruits/lms/enums.py
+msgid "Scores delivered"
+msgstr "ส่งคะแนนแล้ว"
+
+# key: lms.operations.reconcile
+#: ninefruits/lms/enums.py
+msgid "Reconcile"
+msgstr "กระทบยอด"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/lms/enums.py
+msgid "Queued"
+msgstr "อยู่ในคิว"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/lms/enums.py
+msgid "Succeeded"
+msgstr "สำเร็จ"
+
+# key: lms.sync_statuses.skipped
+#: ninefruits/lms/enums.py
+msgid "Skipped"
+msgstr "ข้าม"
+
+#: ninefruits/lms/models.py
+msgid "Options"
+msgstr "ตัวเลือก"
+
+# key: reference.fields.is_active
+#: ninefruits/lms/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "ใช้งาน"
+
+# key: lms.fields.should_sync_enrollments
+#: ninefruits/lms/models.py
+msgid "Synchronize rosters"
+msgstr "ซิงค์รายชื่อนักศึกษา"
+
+# key: lms.fields.should_pull_grades
+#: ninefruits/lms/models.py
+msgid "Pull final scores"
+msgstr "ดึงคะแนนสุดท้าย"
+
+# key: lms.resources.platforms.plural_label
+#: ninefruits/lms/models.py
+msgid "LMS platforms"
+msgstr "แพลตฟอร์ม LMS"
+
+# key: lms.fields.last_synced_at
+#: ninefruits/lms/models.py
+msgid "Last synced"
+msgstr "ซิงค์ล่าสุด"
+
+# key: lms.resources.course_links.label
+#: ninefruits/lms/models.py
+msgid "Course link"
+msgstr "การเชื่อมโยงรายวิชา"
+
+#: ninefruits/lms/models.py
+msgid "User id on the platform"
+msgstr "รหัสผู้ใช้บนแพลตฟอร์ม"
+
+#: ninefruits/lms/models.py
+msgid "User link"
+msgstr "การเชื่อมโยงผู้ใช้"
+
+#: ninefruits/lms/models.py
+msgid "User links"
+msgstr "การเชื่อมโยงผู้ใช้"
+
+# key: lms.fields.started_at
+#: ninefruits/lms/models.py
+msgid "Started"
+msgstr "เริ่มเมื่อ"
+
+#: ninefruits/lms/models.py
+msgid "Finished"
+msgstr "เสร็จสิ้น"
+
+# key: lms.resources.sync_logs.label
+#: ninefruits/lms/models.py
+msgid "Sync log"
+msgstr "บันทึกการซิงค์"
+
+# key: lms.resources.sync_logs.plural_label
+#: ninefruits/lms/models.py
+msgid "Sync logs"
+msgstr "บันทึกการซิงค์"
+
+# key: grading.entry.import_lms
+#: ninefruits/lms/services/grades.py
+msgid "Load scores from the LMS"
+msgstr "ดึงคะแนนจาก LMS"
+
+# key: grading.entry.lms_imported
+#: ninefruits/lms/services/grades.py
+#, python-format
+msgid "%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "ดึงคะแนนจาก LMS เป็นฉบับร่างแล้ว %(count)s รายการ กรุณาตรวจสอบแล้วบันทึก"
+
+# key: lms.portal.open_course
+#: ninefruits/lms/services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "เปิดรายวิชาบน %(platform)s"

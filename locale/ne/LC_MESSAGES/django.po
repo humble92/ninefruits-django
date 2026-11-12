@@ -1,0 +1,1157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "अनुवादहरू भाषा कोड र पाठको वस्तु (object) हुनुपर्छ।"
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "प्रत्येक अनुवादमा बढीमा %(limit_value)d अक्षर मात्र हुनुपर्छ।"
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "%(language)s मान आवश्यक छ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "यो फाँट अनिवार्य छ ।"
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "भाषा"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "लागू गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "रेकर्ड छान्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "कार्य छान्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "चलाउने कार्य छान्नुहोस्"
+
+# key: common.save
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "सुरक्षित गर्नुहोस्"
+
+# key: security.scope_types.global
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "सबै"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr " %(filter_title)s द्वारा"
+
+# key: common.yes
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "हो"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "होइन"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "देखि"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "सम्म"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "मिति देखि"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "मिति सम्म"
+
+# key: admin.audit.fields.occurred_at
+# key: attendance.fields.time
+# key: offering.fields.time
+# key: registration.fields.attempted_at
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "समय"
+
+# key: assessment.fields.held_date
+# key: attendance.fields.meeting_date
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "मिति"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "छानिएको कार्य गर्नुहोस् ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "चलाउनुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "सबै पृष्ठभरमा वस्तु छान्न यहाँ थिच्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "%(total_count)s %(module_name)s सबै छान्नुहोस् "
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "चुनेको कुरा हटाउनुहोस् ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "कार्यका लागि यस पृष्ठका सबै वस्तुहरू छान्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "कार्य गर्नका निम्ति वस्तु छान्नु पर्दछ । कुनैपनि छस्तु छानिएको छैन । "
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "%(name)s एप्लिकेसनमा भएको मोडेलहरु"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "तपाईंसँग केहि पनि हेर्न वा सम्पादन गर्न अनुमति छैन।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "पासवर्ड फेर्नुहोस् "
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "इतिहास"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "साइटमा हेर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "%(object_name)s '%(escaped_object)s' मेटाउँदा सम्बन्धित वस्तुहरू पनि मेटिन्छन्, तर तपाईंको खातालाई निम्न प्रकारका वस्तुहरू मेटाउने अनुमति छैन:"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "%(object_name)s '%(escaped_object)s' मेटाउन निम्न सुरक्षित सम्बन्धित वस्तुहरू पनि मेटाउनुपर्छ:"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "के तपाईं %(object_name)s \"%(escaped_object)s\" मेटाउन निश्चित हुनुहुन्छ? निम्न सबै सम्बन्धित वस्तुहरू मेटिनेछन्:"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "छानिएका %(objects_name)s मेटाउँदा सम्बन्धित वस्तुहरू पनि मेटिन्छन्, तर तपाईंको खातालाई निम्न प्रकारका वस्तुहरू मेटाउने अनुमति छैन:"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "छानिएका %(objects_name)s मेटाउन निम्न सुरक्षित सम्बन्धित वस्तुहरू पनि मेटाउनुपर्छ:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "%(objects_name)s "
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "वस्तुहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "सारांश"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "फेरि स्वागत छ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "तपाईं यस  %(username)s रूपमा प्रमाणिकरण हुनुहुन्छ, तर यस पृष्ठ पहुँच गर्न अधिकृत हुनुहुन्न। के तपाइँ बिभिन्न खातामा लगईन गर्न चाहानुहुन्छ?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "लगिन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "पासवर्ड अथवा प्रयोगकर्ता नाम भुल्नुभयो ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "सबै देखाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "खोज्न टाइप गर्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "बचत गरेर संशोधन जारी राख्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "सुरक्षित गरेर हेर्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "बचत गरेर अर्को थप्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "नयाँ रुपमा बचत गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "तपाईं प्रशासनबाट सफलतापूर्वक लग आउट हुनुभयो"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "आज वेबसाइटमा समय बिताउनुभएकोमा धन्यवाद।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "पुन: लगिन गर्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "तपाइको पासवर्ड फेरिएको छ ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "सुरक्षाका लागि आफ्नो पुरानो पासवर्ड प्रविष्ट गर्नुहोस्, त्यसपछि नयाँ पासवर्ड सही टाइप भयो कि भनी जाँच्न दुई पटक प्रविष्ट गर्नुहोस्।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "डेटा छैन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "साइट हेर्नु होस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "लग आउट"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "%(name)s थप्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "सबै एप्लिकेसनहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "हेर्नुहोस्"
+
+# key: grading.fields.change
+# key: graduation.report_columns.type_name
+# key: reference.fields.change_type
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "परिवर्तन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "थप्नुहोस् "
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "मेट्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "अज्ञात"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "हो"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "होइन"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "फिल्टर लागू गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "संख्या लुकाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "संख्या देखाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "सबै फिल्टर हटाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "फिल्टरहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "क्रमबद्धता बदल्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "क्रमबद्धताबाट हटाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "क्रमबद्धता प्राथमिकता: %(priority_number)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "जानुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "छान्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "सबै खाली गर्नु होस् ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "हालैका खोजहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "तपाईंको खोजसँग केही मेल खाएन"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "होइन, मलाई फर्काउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "हो, म निश्चित छु"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "रद्द गर्नुहोस्"
+
+# key: evaluation.portal.submit
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "पेस गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "बन्द गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "सम्पादन गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "रेकर्डको तस्बिर"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "यो वस्तु मेटिनेछ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "रद्द गर्न क्लिक गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "कुनै नतिजा भेटिएन"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "यस पृष्ठमा कुनै नतिजा छैन।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "फिल्टरहरू रिसेट गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "तस्बिरको पूर्वावलोकन"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "डाउनलोड गर्न क्लिक गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "अपलोड गर्ने फाइल छान्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "पछाडि जानुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "भर्खरका कार्यहरू"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "अज्ञात सामग्री"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "अघिल्लो"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "अर्को"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "एप र मोडेलहरू खोज्नुहोस्..."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "उपलब्ध सर्टकटहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "सामान्य सर्टकटहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "कमान्ड उपकरण खोल्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "सर्टकट सूची खोल्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "साइडबार देखाउनुहोस्/लुकाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "डार्क/लाइट मोड बदल्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "सूची सर्टकटहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "फिल्टर देखाउनुहोस्/लुकाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "नयाँ रेकर्ड बनाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "कमान्ड उपकरणका सर्टकटहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "छानिएको खोल्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "छानिएको नयाँ ट्याबमा खोल्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "ज्याङ्गो प्रशासन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "ज्याङ्गो साइट प्रशासन"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "गृहपृष्ठ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "लाइट"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "डार्क"
+
+# key: reference.fields.is_system
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "प्रणाली"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "साइटमा फर्कनुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s नतिजा"
+msgstr[1] "%(counter)s नतिजाहरु"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "जम्मा %(full_result_count)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "पासवर्ड देखाउनुहोस्/लुकाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "छानिएको %(model)s परिवर्तन गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "अर्को %(model)s थप्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "छानिएको %(model)s हेर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "छानिएको %(model)s मेटाउनुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "पङ्क्ति थप्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "कृपया तलको त्रुटि सच्याउनुहोस्।"
+msgstr[1] "कृपया तलका त्रुटिहरू सच्याउनुहोस्।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "साइट प्रशासन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "%s परिवर्तन गर्न छान्नुहोस् ।"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "हेर्न %s छान्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "%s थप्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "%s परिवर्तित ।"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "%s हेर्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "%(verbose_name_plural)s छानिएको मेट्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "सफलतापूर्वक मेटियो %(count)d %(items)s ।"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "{name} “{obj}” सफलतापूर्वक थपियो।"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "{name} “{obj}” सफलतापूर्वक परिवर्तन गरियो।"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "%(name)s “%(obj)s” सफलतापूर्वक मेटाइयो।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "कार्य छानिएको छैन ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "कार्य:"
+
+# key: offering.catalog.search
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "खोज्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "कुनै मिति"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "आज"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "पूर्व ७ दिन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "यो महिना"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "यो साल"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "मिति छैन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "मिति छ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "खाली"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "खाली छैन"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "कुनै पनि उपलब्ध छैन ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "मेरो कार्यहरू"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "कृपया स्टाफ खाताको लागि सही %(username)s र पासवर्ड राख्नु होस् । दुवै खाली ठाउँ केस सेन्सिटिव हुन सक्छन् ।"
+
+# key: authentication.fields.password
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "पासवर्ड"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "उपयुक्त मान राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "सही ई-मेल ठेगाना राख्नु होस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "संख्या राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "संख्या राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "उपयुक्त मिति राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "उपयुक्त समय राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "उपयुक्त मिति/समय राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "उपयुक्त URL राख्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "मानहरु राख्नुहोस्"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "उपयुक्त विकल्प छान्नुहोस् ।  %(value)s प्रस्तावित विकल्प होइन ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "यो मान %(limit_value)s भन्दा कम अथवा बराबर छ भन्ने निश्चित गर्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "यो मान %(limit_value)s भन्दा बढी अथवा बराबर छ भन्ने निशचित गर्नुहोस् ।"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "यो मान बढिमा पनि %(limit_value)d अक्षर छ भन्ने निश्चित गर्नुहोस् । (यसमा %(show_value)d छ ।)"
+msgstr[1] "यो मान बढिमा पनि %(limit_value)d अक्षरहरु छ भन्ने निश्चित गर्नुहोस् । (यसमा %(show_value)d छ ।)"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "यो मान कम्तिमा पनि %(limit_value)d अक्षर छ भन्ने निश्चित गर्नुहोस् । (यसमा %(show_value)d छ ।)"
+msgstr[1] "यो मान कम्तिमा पनि %(limit_value)d अक्षरहरु छ भन्ने निश्चित गर्नुहोस् । (यसमा %(show_value)d छ ।)"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "लाओ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "साइन इन"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "साइन आउट"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "के तपाईं साइन आउट गर्न निश्चित हुनुहुन्छ?"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py templates/account/signup.html
+msgid "Email"
+msgstr "इमेल"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "मलाई सम्झनुहोस्"
+
+# key: authentication.login.forgot_password
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "पासवर्ड बिर्सनुभयो?"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "तपाईंले दिएको इमेल ठेगाना र/वा पासवर्ड सही छैन।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "धेरै पटक लगइन असफल भयो। केही समयपछि फेरि प्रयास गर्नुहोस्।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "यो खाता हाल निष्क्रिय छ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "पासवर्ड रिसेट"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "पासवर्ड बिर्सनुभयो? तल आफ्नो इमेल ठेगाना प्रविष्ट गर्नुहोस्, हामी पासवर्ड रिसेट गर्न मिल्ने इमेल पठाउनेछौं।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "मेरो पासवर्ड रिसेट गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "पासवर्ड रिसेट गर्न कुनै समस्या भएमा हामीलाई सम्पर्क गर्नुहोस्।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "हामीले तपाईंलाई इमेल पठाएका छौं। प्राप्त नभएमा आफ्नो स्प्याम फोल्डर जाँच गर्नुहोस्। केही मिनेटभित्र पनि प्राप्त नभएमा हामीलाई सम्पर्क गर्नुहोस्।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "अमान्य टोकन"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "पासवर्ड रिसेट लिङ्क अमान्य छ, सम्भवतः यो पहिले नै प्रयोग भइसकेको छ।  कृपया <a href=\"%(passwd_reset_url)s\">नयाँ पासवर्ड रिसेट</a> अनुरोध गर्नुहोस्।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "तपाईंको पासवर्ड परिवर्तन भयो।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "पासवर्ड परिवर्तन गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "हालको पासवर्ड"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "नयाँ पासवर्ड"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "नयाँ पासवर्ड (फेरि)"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "तपाईंले प्रत्येक पटक उही पासवर्ड टाइप गर्नुपर्छ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "कृपया आफ्नो हालको पासवर्ड टाइप गर्नुहोस्।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "गलत पासवर्ड।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "अमान्य वा म्याद सकिएको कुञ्जी।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "पासवर्ड रिसेट टोकन अमान्य थियो।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "धैर्य गर्नुहोस्, तपाईंले धेरै अनुरोधहरू पठाउँदै हुनुहुन्छ।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "दुई-चरण प्रमाणीकरण"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "तपाईंको खाता दुई-चरण प्रमाणीकरणद्वारा सुरक्षित छ। कृपया प्रमाणीकरण कोड प्रविष्ट गर्नुहोस्:"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "प्रमाणीकरण कोड"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "कोड"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "गलत कोड।"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "वैकल्पिक विकल्पहरू"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "प्रमाणीकरण एप वा कोड प्रयोग गर्नुहोस्"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: templates/account/login.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "साइन इन"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "पासवर्ड"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "मलाई साइन इन गरिराख्नुहोस्"
+
+# key: authentication.login.sso
+#: templates/account/login.html
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "%(provider)s बाट साइन इन"
+
+# key: admissions.register.prompt
+#: templates/account/login.html
+msgid "Want to apply?"
+msgstr "आवेदन दिन चाहनुहुन्छ?"
+
+# key: admissions.register.see_cycles
+#: templates/account/login.html
+msgid "See open admissions"
+msgstr "खुला भर्ना हेर्नुहोस्"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "आफ्नो पासवर्ड पुष्टि गर्नुहोस्"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "तपाईंको सुरक्षाका लागि, जारी राख्न कृपया आफ्नो पासवर्ड पुष्टि गर्नुहोस्।"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "पुष्टि गर्नुहोस्"
+
+# key: admissions.register.title
+#: templates/account/signup.html
+msgid "Create an account"
+msgstr "खाता बनाउनुहोस्"
+
+# key: admissions.register.instructions
+#: templates/account/signup.html
+msgid "For applicants. Staff and current students already have an account."
+msgstr "आवेदकहरूका लागि। कर्मचारी र हालका विद्यार्थीसँग पहिले नै खाता छ।"
+
+# key: people.help.romanized
+#: templates/account/signup.html
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "राहदानीमा जस्तै ल्याटिन अक्षरमा कानुनी नाम। अन्य भाषामा लेखिएको नाम तल थप्नुहोस्।"
+
+# key: authentication.fields.password_confirmation
+#: templates/account/signup.html
+msgid "Confirm password"
+msgstr "पासवर्ड पुष्टि गर्नुहोस्"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/account/signup.html
+msgid "Create account"
+msgstr "खाता बनाउनुहोस्"
+
+# key: admissions.register.have_account
+#: templates/account/signup.html
+msgid "Already have an account?"
+msgstr "पहिले नै खाता छ?"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "दुई-चरण प्रमाणीकरण"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "आफ्नो प्रमाणीकरण एपबाट 6 अङ्कको कोड प्रविष्ट गर्नुहोस्।"
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "कोड"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "बरु रिकभरी कोड प्रयोग गर्नुहोस्"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "रिकभरी कोड"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "यो उपकरण सम्झनुहोस्"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "प्रमाणित गर्नुहोस्"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "हामीले तपाईंको इमेलमा पठाएको 6 अङ्कको कोड प्रविष्ट गर्नुहोस्।"
+
+# key: authentication.two_factor.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "इमेल कोड"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "बरु इमेलबाट कोड पठाउनुहोस्"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "नयाँ कोड पठाउनुहोस्"
+
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "बन्द गर्नुहोस्"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "मुख्य मेनु"
+
+# key: authentication.logout
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "साइन आउट"
+
+# key: security.mfa.set_up
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "अहिले सेटअप गर्नुहोस्"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "प्रयोगकर्ता"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "प्रयोगकर्ताहरू"

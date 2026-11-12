@@ -1,0 +1,519 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: certificate.errors.type_inactive
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "Hindi na inisyu ang uring ito ng sertipiko."
+
+# key: certificate.errors.hold
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "May hold na humaharang sa mga sertipiko para sa mag-aaral na ito. Alisin muna ito."
+
+# key: certificate.errors.no_template
+#: ninefruits/certificate/actions/issue_certificate.py ninefruits/certificate/services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "Walang template ang uring ito para sa wikang \"%(locale)s\"."
+
+# key: certificate.errors.already_revoked
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "Binawi na ang sertipikong ito."
+
+# key: registration.errors.reason_required
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "Maglagay ng dahilan."
+
+# key: certificate.errors.audience
+#: ninefruits/certificate/actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "Para lamang sa: %(audience)s ang sertipikong ito."
+
+# key: certificate.fields.type
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "Uri"
+
+# key: common.language
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "common"
+msgid "Language"
+msgstr "Wika"
+
+# key: certificate.fields.purpose
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Purpose"
+msgstr "Layunin"
+
+# key: certificate.fields.copies
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/models.py
+msgid "Copies"
+msgstr "Mga kopya"
+
+# key: common.reason
+#: ninefruits/certificate/admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Dahilan"
+
+# key: registration.fields.status
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Katayuan"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/services/renderer.py
+msgid "Student number"
+msgstr "Student number"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/certificate/admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: certificate.fields.issued_by
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Issued by"
+msgstr "Inisyu ni"
+
+# key: certificate.actions.download
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: ninefruits/certificate/admin/issues.py
+msgid "Verification page"
+msgstr "Pahina ng beripikasyon"
+
+# key: certificate.actions.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Render again"
+msgstr "Buuin muli"
+
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Hindi nagawa ang PDF. Subukang muli mamaya."
+
+# key: common.saved
+#: ninefruits/certificate/admin/issues.py
+msgid "Saved"
+msgstr "Na-save"
+
+# key: certificate.help.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Renders the PDF again from the current data and template. The serial number and verification code stay."
+msgstr "Muling binubuo ang PDF mula sa kasalukuyang datos at template. Nananatili ang serial number at verification code."
+
+# key: certificate.actions.revoke
+#: ninefruits/certificate/admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "Bawiin"
+
+# key: certificate.actions.issue
+#: ninefruits/certificate/admin/student_record.py
+msgid "Issue certificate"
+msgstr "Mag-isyu ng sertipiko"
+
+# key: certificate.notifications.issued
+#: ninefruits/certificate/admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "Naisyu ang sertipikong %(serial)s."
+
+# key: reference.fields.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: certificate.help.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "Ginagamit sa mga serial number, hal. ENR, GRD, TRN."
+
+# key: certificate.help.body
+#: ninefruits/certificate/admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "Mga talatang pinaghihiwalay ng blangkong linya. Mga placeholder: %(placeholders)s"
+
+# key: certificate.fields.templates
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Templates"
+msgstr "Mga template"
+
+# key: reference.fields.name
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: certificate.fields.audience
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "Para sa"
+
+# key: portal.navigation.certificates
+#: ninefruits/certificate/apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "Mga sertipiko"
+
+# key: certificate.audiences.any
+#: ninefruits/certificate/enums.py
+msgid "Any student record"
+msgstr "Anumang rekord ng mag-aaral"
+
+# key: certificate.audiences.enrolled
+#: ninefruits/certificate/enums.py
+msgid "Students (not graduated)"
+msgstr "Mga mag-aaral (hindi pa nagtapos)"
+
+# key: certificate.audiences.graduated
+#: ninefruits/certificate/enums.py
+msgid "Graduates"
+msgstr "Mga nagtapos"
+
+# key: certificate.statuses.issued
+#: ninefruits/certificate/enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "Inisyu"
+
+# key: certificate.statuses.revoked
+#: ninefruits/certificate/enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "Binawi"
+
+# key: certificate.verify.invalid_unknown
+#: ninefruits/certificate/enums.py
+msgid "No certificate matches this code."
+msgstr "Walang sertipikong tumutugma sa code na ito."
+
+# key: certificate.verify.invalid_revoked
+#: ninefruits/certificate/enums.py
+msgid "This certificate has been revoked."
+msgstr "Binawi na ang sertipikong ito."
+
+# key: certificate.verify.invalid_expired
+#: ninefruits/certificate/enums.py
+msgid "The verification period for this certificate has ended. Ask the holder for a current one."
+msgstr "Natapos na ang panahon ng beripikasyon para sa sertipikong ito. Humingi sa may-hawak ng bagong kopya."
+
+# key: certificate.fields.has_grades
+#: ninefruits/certificate/models.py
+msgid "Includes grades"
+msgstr "May kasamang mga marka"
+
+# key: certificate.help.has_grades
+#: ninefruits/certificate/models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "Nagdaragdag ng table ng mga pinal na marka ayon sa termino (transcript)."
+
+# key: certificate.fields.has_photo
+#: ninefruits/certificate/models.py
+msgid "Includes photo"
+msgstr "May kasamang larawan"
+
+# key: reference.fields.is_active
+#: ninefruits/certificate/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Aktibo"
+
+# key: reference.fields.sort_order
+#: ninefruits/certificate/models.py
+msgid "Order"
+msgstr "Pagkakasunod"
+
+# key: certificate.resources.types.label
+#: ninefruits/certificate/models.py
+msgid "Certificate kind"
+msgstr "Uri ng sertipiko"
+
+# key: certificate.resources.types.plural_label
+#: ninefruits/certificate/models.py
+msgid "Certificate kinds"
+msgstr "Mga uri ng sertipiko"
+
+# key: certificate.fields.title
+#: ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "Pamagat"
+
+# key: certificate.fields.body
+#: ninefruits/certificate/models.py
+msgid "Body"
+msgstr "Nilalaman"
+
+# key: certificate.fields.footer
+#: ninefruits/certificate/models.py
+msgid "Footer"
+msgstr "Footer"
+
+# key: certificate.fields.signer
+#: ninefruits/certificate/models.py
+msgid "Signer"
+msgstr "Lumagda"
+
+# key: certificate.help.signer
+#: ninefruits/certificate/models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "Pinapalitan ang lumagda mula sa mga setting ng sertipiko para sa wikang ito."
+
+# key: people.resources.student_records.label
+#: ninefruits/certificate/models.py
+msgid "student record"
+msgstr "rekord ng mag-aaral"
+
+# key: certificate.fields.serial_number
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgid "Serial number"
+msgstr "Serial number"
+
+# key: certificate.verify.code
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/verify.html
+msgid "Verification code"
+msgstr "Verification code"
+
+# key: certificate.fields.issued_at
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "Inisyu"
+
+# key: certificate.resources.issues.label
+#: ninefruits/certificate/models.py
+msgid "Issued certificate"
+msgstr "Inisyung sertipiko"
+
+# key: certificate.resources.issues.plural_label
+#: ninefruits/certificate/models.py
+msgid "Issued certificates"
+msgstr "Mga inisyung sertipiko"
+
+# key: certificate.facts.student_name
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: certificate.facts.birth_date
+#: ninefruits/certificate/services/renderer.py
+msgid "Date of birth"
+msgstr "Petsa ng kapanganakan"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/certificate/services/renderer.py
+msgid "Gender"
+msgstr "Kasarian"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/certificate/services/renderer.py
+msgid "Nationality"
+msgstr "Nasyonalidad"
+
+# key: certificate.facts.program
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "Programa"
+
+# key: certificate.facts.admission_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "Pinasok"
+
+# key: certificate.facts.graduation_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "Nagtapos"
+
+# key: certificate.facts.status
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "Katayuan"
+
+# key: certificate.facts.year_level
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "Year level"
+
+# key: certificate.settings.serial_pattern
+#: ninefruits/certificate/settings_pages.py
+msgid "Serial number pattern"
+msgstr "Pattern ng serial number"
+
+# key: certificate.settings.serial_pattern_help
+#: ninefruits/certificate/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 digits (required). The sequence restarts for each distinct prefix, so {TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr "Mga token: {TYPE} code ng uri, {YYYY} o {YY} taon, {SEQ:6} sunud-sunod na numerong may 6 na digit (kinakailangan). Nagsisimula muli ang pagkakasunod sa bawat natatanging prefix, kaya ang {TYPE}-{YYYY}-{SEQ:6} ay nagbibilang bawat uri at taon."
+
+# key: certificate.settings.verification_valid_days
+#: ninefruits/certificate/settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "Bisa ng beripikasyon (araw)"
+
+# key: certificate.settings.verification_valid_days_help
+#: ninefruits/certificate/settings_pages.py
+msgid "0 = always. After this many days the verification page reports the certificate as expired."
+msgstr "0 = palagi. Pagkatapos ng ganitong bilang ng araw, iuulat ng pahina ng beripikasyon na expired na ang sertipiko."
+
+# key: certificate.settings.signer
+#: ninefruits/certificate/settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "Lumagda (%(locale)s)"
+
+# key: certificate.settings.title
+#: ninefruits/certificate/settings_pages.py
+msgid "Certificate settings"
+msgstr "Mga setting ng sertipiko"
+
+# key: certificate.settings.signers
+#: ninefruits/certificate/settings_pages.py
+msgid "Signer by language"
+msgstr "Lumagda ayon sa wika"
+
+# key: certificate.settings.signers_help
+#: ninefruits/certificate/settings_pages.py
+msgid "Printed above the seal, e.g. \"President, Ninefruits University\". A template can override it."
+msgstr "Nakalimbag sa itaas ng selyo, hal. \"Pangulo, Ninefruits University\". Maaari itong palitan ng isang template."
+
+# key: certificate.pdf.serial
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "Blg."
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Code"
+
+# key: curriculum.fields.title
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Pamagat"
+
+# key: curriculum.fields.credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Units"
+
+# key: grading.fields.grade
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Marka"
+
+# key: grading.grades.term_summary
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "GPA %(gpa)s · %(earned)s sa %(attempted)s units ang nakuha"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Kabuuang GPA"
+
+# key: grading.fields.earned_credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Nakuhang units"
+
+# key: certificate.pdf.verify
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "I-verify ang sertipikong ito sa %(url)s"
+
+# key: certificate.portal.title
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/views/portal.py
+msgid "My certificates"
+msgstr "Aking mga sertipiko"
+
+# key: certificate.portal.intro
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "Certificates issued to you by the registrar. Ask the registrar for a new one."
+msgstr "Mga sertipikong inisyu sa iyo ng registrar. Humingi sa registrar ng bago."
+
+# key: certificate.portal.none
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "Wala pang naisyung sertipiko."
+
+# key: certificate.verify.title
+#: ninefruits/certificate/templates/certificate/verify.html ninefruits/certificate/views/public.py
+msgid "Certificate verification"
+msgstr "Beripikasyon ng sertipiko"
+
+# key: certificate.verify.intro
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "Ilagay ang verification code na nakalimbag sa sertipiko, o i-scan ang QR code nito."
+
+# key: certificate.verify.check
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Check"
+msgstr "Suriin"
+
+# key: certificate.verify.valid
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "Inisyu ng institusyon ang sertipikong ito at ito ay may bisa."
+
+# key: certificate.verify.holder
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Holder"
+msgstr "May-hawak"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/certificate/views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "Masyadong maraming kahilingan. Maghintay ng isang minuto at subukang muli."

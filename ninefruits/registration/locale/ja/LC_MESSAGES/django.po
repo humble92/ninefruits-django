@@ -1,0 +1,1240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.not_enrolled
+#: ninefruits/registration/actions/drop_enrollment.py
+msgid "This registration is not active."
+msgstr "この履修は有効ではありません。"
+
+# key: registration.errors.reason_required
+#: ninefruits/registration/actions/enroll_student.py
+msgid "Enter a reason."
+msgstr "理由を入力してください。"
+
+# key: registration.capacity.full_waitlist_open
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full. You can join the waitlist."
+msgstr "この開講科目は満員です。キャンセル待ちに登録できます。"
+
+# key: registration.capacity.full
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full."
+msgstr "この開講科目は満員です。"
+
+# key: registration.capacity.waitlisted
+#: ninefruits/registration/actions/enroll_student.py
+#, python-format
+msgid "You are on the waitlist (position %(position)s)."
+msgstr "キャンセル待ちに登録されています(%(position)s 番目)。"
+
+# key: registration.errors.not_waiting
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "This waitlist entry is no longer waiting."
+msgstr "このキャンセル待ちはすでに待機中ではありません。"
+
+# key: registration.waitlist.left
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "You left the waitlist."
+msgstr "キャンセル待ちを取り消しました。"
+
+# key: validation.after
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s には %(date)s より後の日付を指定してください。"
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Ends"
+msgstr "終了"
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Starts"
+msgstr "開始"
+
+# key: registration.errors.hold_released
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This hold is already released."
+msgstr "この制限措置はすでに解除されています。"
+
+# key: registration.errors.rule_not_overridable
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This rule cannot be overridden."
+msgstr "このルールには例外を設定できません。"
+
+# key: registration.errors.rule_set_exists
+#: ninefruits/registration/actions/prepare_rule_set.py
+msgid "The term already has a rule set."
+msgstr "この学期にはすでにルールセットがあります。"
+
+# key: registration.waitlist.window_closed
+#: ninefruits/registration/actions/promote_waitlist.py
+msgid "Registration closed before a seat became free."
+msgstr "空席が出る前に履修登録期間が終了しました。"
+
+# key: registration.fields.outcome
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Outcome"
+msgstr "結果"
+
+# key: registration.fields.action
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Action"
+msgstr "操作"
+
+# key: registration.fields.attempted_at
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Time"
+msgstr "日時"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgid "Student number"
+msgstr "学籍番号"
+
+# key: offering.fields.section
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgctxt "offering"
+msgid "Section"
+msgstr "開講科目"
+
+# key: registration.fields.failed_rules
+#: ninefruits/registration/admin/attempts.py
+msgid "Rules not met"
+msgstr "満たさなかったルール"
+
+# key: registration.fields.actor
+#: ninefruits/registration/admin/attempts.py
+msgid "By"
+msgstr "実行者"
+
+# key: common.reason
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: registration.import.unknown_student
+#: ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "No student record with number %(number)s."
+msgstr "学籍番号 %(number)s の学籍はありません。"
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "不明な開講科目です: %(section)s。"
+
+# key: registration.fields.waive
+#: ninefruits/registration/admin/common.py
+msgid "Waive rules"
+msgstr "ルールを適用しない"
+
+# key: registration.fields.waitlist_if_full
+#: ninefruits/registration/admin/common.py
+msgid "Add to the waitlist if full"
+msgstr "満員の場合はキャンセル待ちに追加"
+
+# key: registration.fields.hold_type
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgid "Hold type"
+msgstr "措置の種類"
+
+# key: registration.fields.blocks_registration
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks registration"
+msgstr "履修登録を制限"
+
+# key: registration.fields.blocks_grades
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks grade viewing"
+msgstr "成績閲覧を制限"
+
+# key: registration.fields.blocks_certificates
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks certificates"
+msgstr "証明書発行を制限"
+
+# key: reference.resources.terms.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "term"
+msgstr "学期"
+
+# key: registration.fields.rule
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py
+msgid "Rule"
+msgstr "ルール"
+
+# key: registration.help.override_section
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty to apply to every section of the term."
+msgstr "学期のすべての開講科目に適用する場合は空欄にします。"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "course"
+msgstr "科目"
+
+# key: registration.help.override_course
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty for any course. Ignored when a section is chosen."
+msgstr "すべての科目を対象にする場合は空欄にします。開講科目を選択した場合は無視されます。"
+
+# key: registration.fields.expires_at
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Expires"
+msgstr "有効期限"
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "不明な科目です: %(course)s。"
+
+# key: security.scope_types.global
+#: ninefruits/registration/admin/common.py
+msgid "All"
+msgstr "全体"
+
+# key: registration.fields.in_force
+#: ninefruits/registration/admin/common.py
+msgid "In force"
+msgstr "有効"
+
+# key: common.yes
+#: ninefruits/registration/admin/common.py
+msgid "Yes"
+msgstr "はい"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/common.py
+msgid "No"
+msgstr "いいえ"
+
+# key: registration.fields.status
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Status"
+msgstr "状態"
+
+# key: registration.actions.staff_enroll
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/roster.py
+msgctxt "registration"
+msgid "Register a student"
+msgstr "学生を履修登録"
+
+# key: registration.portal.dropped
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Dropped."
+msgstr "削除しました。"
+
+# key: registration.portal.withdrawn
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Withdrawn."
+msgstr "履修を中止しました。"
+
+# key: registration.actions.drop
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Drop"
+msgstr "削除"
+
+# key: registration.actions.withdraw
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Withdraw"
+msgstr "履修中止"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "people"
+msgid "Name"
+msgstr "氏名"
+
+# key: curriculum.fields.title
+#: ninefruits/registration/admin/enrollments.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "科目名"
+
+# key: registration.fields.source
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration"
+msgid "Source"
+msgstr "登録経路"
+
+# key: registration.actions.place_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Place a hold"
+msgstr "制限措置を設定"
+
+# key: registration.actions.release_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Release"
+msgstr "解除"
+
+# key: registration.fields.override_limit
+#: ninefruits/registration/admin/holds.py
+msgid "Applies to"
+msgstr "適用対象"
+
+# key: registration.fields.whole_term
+#: ninefruits/registration/admin/holds.py
+msgid "Whole term"
+msgstr "学期全体"
+
+# key: registration.fields.granted_at
+#: ninefruits/registration/admin/holds.py
+msgid "Granted"
+msgstr "付与日時"
+
+# key: registration.actions.grant_override
+#: ninefruits/registration/admin/holds.py
+msgid "Grant an override"
+msgstr "例外を付与"
+
+# key: registration.actions.revoke_override
+#: ninefruits/registration/admin/holds.py
+msgctxt "registration"
+msgid "Revoke"
+msgstr "取消"
+
+# key: registration.resources.roster.title
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgctxt "registration"
+msgid "Roster (%(count)s / %(capacity)s)"
+msgstr "履修者名簿(%(count)s / %(capacity)s)"
+
+# key: registration.resources.waitlist.plural_label
+#: ninefruits/registration/admin/roster.py ninefruits/registration/models/enrollment.py
+msgctxt "registration.resources.waitlist"
+msgid "Waitlist"
+msgstr "キャンセル待ち"
+
+# key: registration.actions.promote_waitlist
+#: ninefruits/registration/admin/roster.py
+msgid "Promote now"
+msgstr "今すぐ繰り上げ"
+
+# key: registration.notifications.promoted
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "繰り上げ %(promoted)s 件、削除 %(removed)s 件、期限切れ %(expired)s 件。"
+
+# key: registration.actions.remove_from_waitlist
+#: ninefruits/registration/admin/roster.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Remove"
+msgstr "削除"
+
+# key: registration.fields.copy_from
+#: ninefruits/registration/admin/rules.py
+msgctxt "registration"
+msgid "Copy from"
+msgstr "コピー元"
+
+# key: registration.resources.rules.plural_label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Rules"
+msgstr "ルール"
+
+# key: registration.fields.severity
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "When not met"
+msgstr "満たさない場合"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/rules.py
+msgid "Edit"
+msgstr "編集"
+
+# key: reference.fields.code
+#: ninefruits/registration/admin/rules.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: registration.fields.enabled_rules
+#: ninefruits/registration/admin/rules.py
+msgid "Rules on"
+msgstr "有効なルール"
+
+# key: registration.fields.copied_from
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Copied from"
+msgstr "コピー元"
+
+# key: registration.actions.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "Prepare rules for a term"
+msgstr "学期のルールを準備"
+
+# key: registration.help.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "The rules are copied from the chosen term, or start from the defaults. Review them before registration opens."
+msgstr "選択した学期のルールをコピーするか、既定値から開始します。履修登録の開始前に確認してください。"
+
+# key: registration.parameters.statuses
+#: ninefruits/registration/admin/rules.py
+msgid "Student statuses that may register"
+msgstr "履修登録できる学籍状態"
+
+# key: registration.parameters.allowed_overlap_minutes
+#: ninefruits/registration/admin/rules.py
+msgid "Allowed overlap (minutes)"
+msgstr "許容する重複時間(分)"
+
+# key: registration.parameters.repeat_allowed
+#: ninefruits/registration/admin/rules.py
+msgid "Retakes allowed"
+msgstr "再履修を許可"
+
+# key: registration.parameters.max_attempts
+#: ninefruits/registration/admin/rules.py
+msgid "Maximum attempts per course"
+msgstr "科目ごとの最大履修回数"
+
+# key: registration.parameters.max_attempts_help
+#: ninefruits/registration/admin/rules.py
+msgid "Including the first attempt. Empty means no limit."
+msgstr "初回の履修を含みます。空欄は制限なしです。"
+
+# key: registration.parameters.below_grade
+#: ninefruits/registration/admin/rules.py
+msgid "Only below grade"
+msgstr "基準成績未満のみ"
+
+# key: registration.parameters.below_grade_help
+#: ninefruits/registration/admin/rules.py
+msgid "Retake only when the earlier grade is below this grade (e.g. C+). Empty means any grade."
+msgstr "以前の成績がこの成績(例: C+)未満の場合のみ再履修できます。空欄はすべての成績が対象です。"
+
+# key: registration.fields.all_term_types
+#: ninefruits/registration/admin/rules.py
+msgid "All term types"
+msgstr "すべての学期種別"
+
+# key: validation.lte.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be less than or equal to %(value)s."
+msgstr "%(attribute)s には %(value)s 以下の値を指定してください。"
+
+# key: curriculum.fields.min_credits
+# key: registration.fields.min_credits
+#: ninefruits/registration/admin/rules.py
+msgid "Minimum credits"
+msgstr "最低単位数"
+
+# key: registration.fields.max_credits
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Maximum credits"
+msgstr "最高単位数"
+
+# key: validation.between.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s は %(min)s から %(max)s の間で指定してください。"
+
+# key: registration.fields.applies_to
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Students"
+msgstr "対象学生"
+
+# key: registration.help.credit_policy_eligibility
+#: ninefruits/registration/admin/rules.py
+msgid "Leave empty for every student."
+msgstr "すべての学生を対象にする場合は空欄にします。"
+
+# key: reference.fields.name
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: reference.resources.term_types.label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "term type"
+msgstr "学期種別"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/registration/apps.py ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "Registration"
+msgstr "履修登録"
+
+# key: registration.attempt_actions.enroll
+# key: registration.portal.register
+#: ninefruits/registration/enums.py ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration"
+msgid "Register"
+msgstr "登録"
+
+# key: registration.attempt_actions.drop
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Drop"
+msgstr "削除"
+
+# key: registration.attempt_actions.withdraw
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Withdraw"
+msgstr "履修中止"
+
+# key: registration.attempt_actions.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Waitlist"
+msgstr "キャンセル待ち"
+
+# key: registration.attempt_actions.promote
+#: ninefruits/registration/enums.py
+msgid "Waitlist promotion"
+msgstr "キャンセル待ち繰り上げ"
+
+# key: registration.attempt_actions.cart
+# key: registration.portal.cart
+#: ninefruits/registration/enums.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart"
+msgstr "カート"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/registration/enums.py
+msgid "Succeeded"
+msgstr "成功"
+
+# key: registration.attempt_outcomes.waitlisted
+#: ninefruits/registration/enums.py
+msgid "Waitlisted"
+msgstr "キャンセル待ち"
+
+# key: registration.attempt_outcomes.refused
+#: ninefruits/registration/enums.py
+msgid "Refused"
+msgstr "拒否"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/registration/enums.py
+msgid "Student"
+msgstr "学生"
+
+# key: registration.enrollment_sources.staff
+#: ninefruits/registration/enums.py
+msgid "Staff"
+msgstr "職員"
+
+# key: registration.enrollment_sources.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_sources"
+msgid "Waitlist"
+msgstr "キャンセル待ち"
+
+# key: registration.enrollment_sources.import
+#: ninefruits/registration/enums.py
+msgid "Import"
+msgstr "取り込み"
+
+# key: registration.enrollment_statuses.enrolled
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_statuses"
+msgid "Registered"
+msgstr "登録済み"
+
+# key: registration.enrollment_statuses.dropped
+#: ninefruits/registration/enums.py
+msgid "Dropped"
+msgstr "削除"
+
+# key: registration.enrollment_statuses.withdrawn
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Withdrawn"
+msgstr "履修中止"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/registration/enums.py
+msgid "Completed"
+msgstr "修了"
+
+# key: registration.hold_types.unregistered
+#: ninefruits/registration/enums.py
+msgid "Not registered for the term"
+msgstr "学期未登録"
+
+# key: registration.hold_types.financial
+#: ninefruits/registration/enums.py
+msgid "Financial"
+msgstr "財務"
+
+# key: registration.hold_types.academic
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Academic"
+msgstr "教学"
+
+# key: registration.hold_types.administrative
+#: ninefruits/registration/enums.py
+msgid "Administrative"
+msgstr "事務"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: ninefruits/registration/enums.py
+msgid "Other"
+msgstr "その他"
+
+# key: registration.rules.window.label
+#: ninefruits/registration/enums.py
+msgctxt "registration.rules.window"
+msgid "Registration period"
+msgstr "履修登録期間"
+
+# key: registration.rules.section_open.label
+#: ninefruits/registration/enums.py
+msgid "Section open"
+msgstr "開講科目の公開"
+
+# key: registration.rules.hold.label
+#: ninefruits/registration/enums.py
+msgid "Holds"
+msgstr "制限措置"
+
+# key: registration.rules.student_status.label
+#: ninefruits/registration/enums.py
+msgid "Student status"
+msgstr "学籍状態"
+
+# key: registration.rules.eligibility.label
+#: ninefruits/registration/enums.py
+msgid "Section eligibility"
+msgstr "開講科目の履修対象"
+
+# key: registration.rules.duplicate_course.label
+#: ninefruits/registration/enums.py
+msgid "Same course twice"
+msgstr "同一科目の重複"
+
+# key: registration.rules.time_conflict.label
+#: ninefruits/registration/enums.py
+msgid "Time conflict"
+msgstr "時間の重複"
+
+# key: registration.rules.credit_limit.label
+#: ninefruits/registration/enums.py
+msgid "Credit limit"
+msgstr "履修単位上限"
+
+# key: registration.rules.requisites.label
+#: ninefruits/registration/enums.py
+msgid "Prerequisites"
+msgstr "先修科目"
+
+# key: registration.rules.repeat_course.label
+#: ninefruits/registration/enums.py
+msgid "Retakes"
+msgstr "再履修"
+
+# key: registration.rules.capacity.label
+#: ninefruits/registration/enums.py
+msgid "Seats"
+msgstr "座席"
+
+# key: registration.rules.window.description
+#: ninefruits/registration/enums.py
+msgid "A registration, add/drop or withdrawal period must be open for the student."
+msgstr "学生に対して履修登録、履修追加・削除、または履修中止の期間が開いている必要があります。"
+
+# key: registration.rules.section_open.description
+#: ninefruits/registration/enums.py
+msgid "The section must be published."
+msgstr "開講科目が公開されている必要があります。"
+
+# key: registration.rules.hold.description
+#: ninefruits/registration/enums.py
+msgid "Students with a hold that blocks registration cannot register."
+msgstr "履修登録を制限する措置がある学生は履修登録できません。"
+
+# key: registration.rules.student_status.description
+#: ninefruits/registration/enums.py
+msgid "Only students with the chosen statuses may register."
+msgstr "選択した学籍状態の学生のみ履修登録できます。"
+
+# key: registration.rules.eligibility.description
+#: ninefruits/registration/enums.py
+msgid "The student must match the section's eligibility and not its exclusions."
+msgstr "学生が開講科目の履修対象条件に該当し、除外条件に該当しない必要があります。"
+
+# key: registration.rules.duplicate_course.description
+#: ninefruits/registration/enums.py
+msgid "A course can be registered only once per term."
+msgstr "同じ科目は 1 学期に 1 回のみ履修登録できます。"
+
+# key: registration.rules.time_conflict.description
+#: ninefruits/registration/enums.py
+msgid "Meeting times must not overlap with other registered sections."
+msgstr "授業時間が他の登録済み開講科目と重ならない必要があります。"
+
+# key: registration.rules.credit_limit.description
+#: ninefruits/registration/enums.py
+msgid "Total credits must not exceed the credit limit that applies to the student."
+msgstr "合計単位が学生に適用される履修単位上限を超えない必要があります。"
+
+# key: registration.rules.requisites.description
+#: ninefruits/registration/enums.py
+msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
+msgstr "先修科目に合格している必要があります(代替科目も可)。同時履修科目は同じ学期に履修できます。"
+
+# key: registration.rules.repeat_course.description
+#: ninefruits/registration/enums.py
+msgid "Whether and how often a passed course may be taken again."
+msgstr "合格した科目を再度履修できるかどうかと、その回数です。"
+
+# key: registration.rules.capacity.description
+#: ninefruits/registration/enums.py
+msgid "A seat must be free (reserved seats count only for their students until released)."
+msgstr "空席が必要です(確保枠は開放されるまで対象学生のみが使用できます)。"
+
+# key: registration.rule_severities.block
+#: ninefruits/registration/enums.py
+msgid "Block"
+msgstr "拒否"
+
+# key: registration.rule_severities.warn
+#: ninefruits/registration/enums.py
+msgid "Warn only"
+msgstr "警告のみ"
+
+# key: registration.waitlist_statuses.waiting
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Waiting"
+msgstr "待機中"
+
+# key: registration.waitlist_statuses.promoted
+#: ninefruits/registration/enums.py
+msgctxt "registration.waitlist_statuses"
+msgid "Registered"
+msgstr "登録済み"
+
+# key: registration.waitlist_statuses.removed
+#: ninefruits/registration/enums.py
+msgid "Removed"
+msgstr "削除"
+
+# key: registration.waitlist_statuses.expired
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Expired"
+msgstr "期限切れ"
+
+# key: validation.date
+#: ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s には有効な日付を指定してください。"
+
+# key: registration.resources.holds.plural_label
+#: ninefruits/registration/importers.py ninefruits/registration/models/holds.py
+msgid "holds"
+msgstr "制限措置"
+
+# key: people.resources.student_records.label
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgid "student record"
+msgstr "学籍"
+
+# key: registration.portal.credits
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Credits"
+msgstr "単位"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/portal/registration.html
+msgid "Retake"
+msgstr "再履修"
+
+# key: registration.fields.enrolled_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html
+msgid "Registered at"
+msgstr "登録日時"
+
+# key: registration.resources.enrollments.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration"
+msgstr "履修"
+
+# key: registration.resources.enrollments.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registrations"
+msgstr "履修"
+
+# key: registration.fields.requested_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Requested"
+msgstr "申込日時"
+
+# key: registration.fields.outcome_note
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Note"
+msgstr "備考"
+
+# key: registration.fields.request_id
+#: ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Request ID"
+msgstr "リクエスト ID"
+
+# key: registration.resources.attempts.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempt"
+msgstr "履修登録試行"
+
+# key: registration.resources.attempts.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempts"
+msgstr "履修登録試行"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "例外適用"
+
+# key: registration.fields.released_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Released"
+msgstr "解除日時"
+
+# key: registration.resources.holds.label
+#: ninefruits/registration/models/holds.py
+msgid "hold"
+msgstr "制限措置"
+
+# key: registration.fields.revoked_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Revoked"
+msgstr "取消日時"
+
+# key: registration.resources.overrides.label
+#: ninefruits/registration/models/holds.py
+msgid "rule override"
+msgstr "ルール例外"
+
+# key: registration.resources.overrides.plural_label
+#: ninefruits/registration/models/holds.py
+msgid "rule overrides"
+msgstr "ルール例外"
+
+# key: offering.fields.note
+#: ninefruits/registration/models/rules.py
+msgctxt "offering"
+msgid "Note"
+msgstr "備考"
+
+# key: registration.resources.rule_sets.label
+#: ninefruits/registration/models/rules.py
+msgid "rule set"
+msgstr "ルールセット"
+
+# key: registration.resources.rule_sets.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "registration rules"
+msgstr "履修登録ルール"
+
+# key: registration.fields.is_enabled
+#: ninefruits/registration/models/rules.py
+msgid "On"
+msgstr "有効"
+
+# key: registration.fields.allows_override
+#: ninefruits/registration/models/rules.py
+msgid "Overrides allowed"
+msgstr "例外を許可"
+
+# key: registration.fields.min_credits
+#: ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Minimum credits"
+msgstr "最低単位数"
+
+# key: registration.fields.priority
+#: ninefruits/registration/models/rules.py
+msgid "Priority"
+msgstr "優先度"
+
+# key: registration.help.priority
+#: ninefruits/registration/models/rules.py
+msgid "When several limits match a student, the highest priority applies."
+msgstr "学生に複数の上限が該当する場合は、優先度が最も高いものが適用されます。"
+
+# key: registration.fields.is_active
+#: ninefruits/registration/models/rules.py
+msgctxt "registration.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: registration.resources.credit_limit_policies.label
+#: ninefruits/registration/models/rules.py
+msgid "credit limit"
+msgstr "履修単位上限"
+
+# key: registration.resources.credit_limit_policies.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "credit limits"
+msgstr "履修単位上限"
+
+# key: registration.mail.waitlist_promoted_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You are registered in %(section)s"
+msgstr "%(section)s に履修登録されました"
+
+# key: registration.mail.waitlist_removed_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s"
+msgstr "%(section)s のキャンセル待ち"
+
+# key: registration.mail.waitlist_expired_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s closed"
+msgstr "%(section)s のキャンセル待ち終了"
+
+# key: registration.mail.waitlist_promoted_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "A seat became free in %(section)s and you have been registered from the waitlist."
+msgstr "%(section)s に空席が出たため、キャンセル待ちから履修登録されました。"
+
+# key: registration.mail.waitlist_removed_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You were removed from the waitlist for %(section)s."
+msgstr "%(section)s のキャンセル待ちから削除されました。"
+
+# key: registration.mail.waitlist_expired_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Registration closed before a seat became free in %(section)s."
+msgstr "%(section)s に空席が出る前に履修登録期間が終了しました。"
+
+# key: security.email_code.mail_greeting
+#: ninefruits/registration/notifications.py
+msgid "Hello,"
+msgstr "こんにちは。"
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "履修登録を開く"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"よろしくお願いいたします。\n"
+"%(app)s"
+
+# key: registration.rules.credit_limit.failed
+#: ninefruits/registration/rules/credit_limit.py
+#, python-format
+msgid "This would make %(total)s credits; your limit is %(limit)s."
+msgstr "合計 %(total)s 単位になります。上限は %(limit)s 単位です。"
+
+# key: registration.rules.duplicate_course.failed
+#: ninefruits/registration/rules/duplicate_course.py
+#, python-format
+msgid "You are already registered in %(section)s."
+msgstr "すでに %(section)s に履修登録しています。"
+
+# key: registration.rules.eligibility.failed
+#: ninefruits/registration/rules/eligibility.py
+msgid "This section is not open to you."
+msgstr "この開講科目は履修対象外です。"
+
+# key: registration.rules.hold.failed
+#: ninefruits/registration/rules/hold.py
+#, python-format
+msgid "You have a hold (%(type)s). Contact the office that placed it."
+msgstr "制限措置(%(type)s)があります。措置を行った部署にお問い合わせください。"
+
+# key: registration.rules.repeat_course.retake
+#: ninefruits/registration/rules/repeat_course.py
+msgid "This registration is a retake."
+msgstr "この履修登録は再履修です。"
+
+# key: registration.rules.repeat_course.not_allowed
+#: ninefruits/registration/rules/repeat_course.py
+msgid "You have already taken this course and retakes are not allowed."
+msgstr "この科目はすでに履修済みで、再履修は認められていません。"
+
+# key: registration.rules.repeat_course.too_many
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "You have reached the maximum of %(max)s attempts for this course."
+msgstr "この科目の最大履修回数(%(max)s 回)に達しています。"
+
+# key: registration.rules.repeat_course.grade_too_high
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "Retakes are allowed only for grades below %(grade)s."
+msgstr "再履修できるのは成績が %(grade)s 未満の場合のみです。"
+
+# key: registration.rules.requisites.failed
+#: ninefruits/registration/rules/requisites.py
+#, python-format
+msgid "Prerequisites not met: %(courses)s."
+msgstr "先修条件を満たしていません: %(courses)s"
+
+# key: registration.rules.section_open.failed
+#: ninefruits/registration/rules/section_open.py
+msgid "This section is not open for registration."
+msgstr "この開講科目は履修登録を受け付けていません。"
+
+# key: registration.rules.student_status.failed
+#: ninefruits/registration/rules/student_status.py
+#, python-format
+msgid "Your status (%(status)s) does not allow registration."
+msgstr "現在の学籍状態(%(status)s)では履修登録できません。"
+
+# key: registration.rules.time_conflict.failed
+#: ninefruits/registration/rules/time_conflict.py
+#, python-format
+msgid "The time overlaps with %(section)s."
+msgstr "%(section)s と時間が重なっています。"
+
+# key: registration.rules.window.failed.enroll
+# key: registration.rules.window.failed.waitlist
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for you now."
+msgstr "現在、履修登録期間ではありません。"
+
+# key: registration.rules.window.failed.drop
+#: ninefruits/registration/rules/window.py
+msgid "Dropping is not open for this course now."
+msgstr "現在、この科目の履修削除期間ではありません。"
+
+# key: registration.rules.window.failed.withdraw
+#: ninefruits/registration/rules/window.py
+msgid "Withdrawal is not open for this course now."
+msgstr "現在、この科目の履修中止期間ではありません。"
+
+# key: registration.rules.window.failed.promote
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for this course now."
+msgstr "現在、この科目の履修登録期間ではありません。"
+
+# key: registration.rules.window.failed.cart
+#: ninefruits/registration/rules/window.py
+msgid "The cart is not open for you now."
+msgstr "現在、履修カートは利用できません。"
+
+# key: security.scope_types.program
+#: ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "security"
+msgid "Program"
+msgstr "プログラム"
+
+# key: common.none
+#: ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "common"
+msgid "None"
+msgstr "なし"
+
+# key: registration.portal.drop
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Drop"
+msgstr "削除"
+
+# key: registration.portal.withdraw
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Withdraw"
+msgstr "履修中止"
+
+# key: registration.portal.leave_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Leave waitlist"
+msgstr "キャンセル待ちを取消"
+
+# key: registration.portal.submit_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Register all"
+msgstr "すべて登録"
+
+# key: portal.profile.remove
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "削除"
+
+# key: registration.portal.add_to_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Add to cart"
+msgstr "カートに追加"
+
+# key: registration.portal.join_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Join waitlist"
+msgstr "キャンセル待ちに登録"
+
+# key: offering.timetable.mode
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Show"
+msgstr "表示"
+
+# key: registration.portal.no_term
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "No term is open for registration."
+msgstr "履修登録を受け付けている学期はありません。"
+
+# key: registration.portal.window
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration.portal"
+msgid "Registration period"
+msgstr "履修登録期間"
+
+# key: registration.portal.registration_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Open"
+msgstr "受付中"
+
+# key: registration.portal.cart_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart only"
+msgstr "カートのみ"
+
+# key: registration.portal.opens_at
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Opens %(date)s"
+msgstr "%(date)s 開始"
+
+# key: registration.portal.closed
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Closed"
+msgstr "受付終了"
+
+# key: registration.portal.sections_count
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Courses"
+msgstr "科目数"
+
+# key: registration.portal.timetable
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Timetable"
+msgstr "時間割"
+
+# key: registration.portal.my_registrations
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "My registrations"
+msgstr "履修中の科目"
+
+# key: registration.portal.drop_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Drop this course?"
+msgstr "この科目の履修を削除しますか?"
+
+# key: registration.portal.withdraw_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Withdraw from this course? A W is recorded."
+msgstr "この科目の履修を中止しますか?W が記録されます。"
+
+# key: registration.portal.waiting
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Waitlist position %(position)s"
+msgstr "キャンセル待ち %(position)s 番目"
+
+# key: registration.portal.cart_empty
+#: ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "The cart is empty."
+msgstr "カートは空です。"
+
+# key: offering.catalog.search
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Search"
+msgstr "検索"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Course code or title"
+msgstr "科目コードまたは科目名"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Instructor to be announced"
+msgstr "担当教員未定"
+
+# key: offering.catalog.time_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Time to be announced"
+msgstr "時間未定"
+
+# key: registration.portal.seats
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
+msgstr "座席: 一般 %(general)s、確保枠 %(reserved)s、定員 %(capacity)s"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/registration/views/portal.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "リクエストが多すぎます。1 分ほど待ってから再度お試しください。"
+
+# key: registration.portal.registered
+#: ninefruits/registration/views/portal.py
+msgid "Registered."
+msgstr "登録しました。"
+
+# key: registration.portal.added_to_cart
+#: ninefruits/registration/views/portal.py
+msgid "Added to the cart."
+msgstr "カートに追加しました。"

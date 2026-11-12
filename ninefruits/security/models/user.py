@@ -7,6 +7,7 @@ from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.core.exceptions import ObjectDoesNotExist
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import gettext_lazy as _
 
 
 class UserManager(BaseUserManager["User"]):
@@ -58,6 +59,8 @@ class User(AbstractBaseUser):
 
     class Meta:
         db_table = "users"
+        verbose_name = _("user")
+        verbose_name_plural = _("users")
 
     def __str__(self) -> str:
         return self.display_name()

@@ -1,0 +1,458 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: curriculum.errors.no_version_to_revise
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "There is no version in effect on that date."
+msgstr "その日付に有効なバージョンがありません。"
+
+# key: curriculum.errors.revise_same_start
+#: ninefruits/curriculum/actions/revise_course.py
+msgid "A version already starts on that date. Edit it instead."
+msgstr "その日付に始まるバージョンがすでにあります。そのバージョンを編集してください。"
+
+# key: reference.fields.name
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: reference.fields.parent
+#: ninefruits/curriculum/admin/course_category.py ninefruits/curriculum/models/course_category.py
+msgid "Parent"
+msgstr "上位"
+
+# key: validation.after_or_equal
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s には %(date)s 以降の日付を指定してください。"
+
+# key: reference.fields.effective_end_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid until"
+msgstr "有効期間(終了)"
+
+# key: reference.fields.effective_start_date
+#: ninefruits/curriculum/admin/courses.py
+msgid "Valid from"
+msgstr "有効期間(開始)"
+
+# key: curriculum.errors.version_overlap
+#: ninefruits/curriculum/admin/courses.py
+msgid "This period overlaps another version of the course."
+msgstr "この期間は科目の別バージョンと重なっています。"
+
+# key: validation.alpha_dash
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s には英数字、ハイフン、アンダースコアのみ使用できます。"
+
+# key: curriculum.fields.code
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Course code"
+msgstr "科目コード"
+
+# key: curriculum.resources.course_versions.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "course version"
+msgstr "科目バージョン"
+
+# key: curriculum.resources.course_versions.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "versions"
+msgstr "バージョン"
+
+# key: curriculum.fields.title
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "科目名"
+
+# key: curriculum.fields.requisites
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Requisites"
+msgstr "履修条件"
+
+# key: curriculum.actions.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "Revise from a date"
+msgstr "日付を指定して改訂"
+
+# key: curriculum.resources.course_equivalencies.label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalency"
+msgstr "代替科目"
+
+# key: curriculum.resources.course_equivalencies.plural_label
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "equivalent courses"
+msgstr "代替科目"
+
+# key: curriculum.fields.managing_unit
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgid "Managing unit"
+msgstr "管理組織"
+
+# key: curriculum.fields.effective_from
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version from"
+msgstr "新バージョンの適用開始日"
+
+# key: common.reason
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: validation.after
+#: ninefruits/curriculum/admin/courses.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s には %(date)s より後の日付を指定してください。"
+
+# key: curriculum.sections.course
+#: ninefruits/curriculum/admin/courses.py
+msgctxt "curriculum.sections"
+msgid "Course"
+msgstr "科目"
+
+# key: curriculum.sections.first_version
+#: ninefruits/curriculum/admin/courses.py
+msgid "First version"
+msgstr "初版"
+
+#: ninefruits/curriculum/admin/courses.py
+msgid "Add course version"
+msgstr "科目バージョンを追加"
+
+# key: curriculum.fields.credits
+#: ninefruits/curriculum/admin/courses.py ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "単位"
+
+# key: curriculum.notifications.revised
+#: ninefruits/curriculum/admin/courses.py
+msgid "New version created."
+msgstr "新しいバージョンを作成しました。"
+
+# key: curriculum.help.revise
+#: ninefruits/curriculum/admin/courses.py
+msgid "The current version ends the day before; the new version starts with a copy of it and its requisites. Sections already offered keep their version."
+msgstr "現行バージョンは前日で終了し、新バージョンはその内容と履修条件をコピーして始まります。すでに開講済みの開講科目は元のバージョンのままです。"
+
+# key: validation.gte.numeric
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s には %(value)s 以上の値を指定してください。"
+
+# key: curriculum.fields.catalog_year_to
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year to"
+msgstr "適用教育課程年度(終了)"
+
+# key: curriculum.fields.catalog_year_from
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Catalog year from"
+msgstr "適用教育課程年度(開始)"
+
+# key: curriculum.errors.requirement_set_overlap
+#: ninefruits/curriculum/admin/requirements.py
+msgid "These catalog years overlap another requirement set of the program and role."
+msgstr "この教育課程年度は、同じプログラム・区分の別の要件セットと重なっています。"
+
+# key: curriculum.resources.courses.plural_label
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/importers.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "courses"
+msgstr "科目"
+
+# key: validation.required
+#: ninefruits/curriculum/admin/requirements.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s は必須です。"
+
+# key: curriculum.fields.category
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgid "Course category"
+msgstr "科目区分"
+
+# key: curriculum.fields.min_credits
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Minimum credits"
+msgstr "最低単位数"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Examination kind"
+msgstr "試験種別"
+
+# key: curriculum.sections.requirements
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Requirements"
+msgstr "要件"
+
+# key: curriculum.fields.program_role
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Program role"
+msgstr "プログラム区分"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/curriculum/admin/requirements.py ninefruits/curriculum/models/requirement.py
+msgid "Programs"
+msgstr "プログラム"
+
+# key: curriculum.grading_bases.graded
+#: ninefruits/curriculum/enums.py
+msgid "Letter grade"
+msgstr "段階評価"
+
+# key: curriculum.grading_bases.pass_fail
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Pass/fail"
+msgstr "合否"
+
+# key: curriculum.program_roles.primary
+#: ninefruits/curriculum/enums.py
+msgctxt "curriculum"
+msgid "Primary program"
+msgstr "主専攻"
+
+# key: curriculum.program_roles.second_major
+# key: people.additional_program_roles.second_major
+#: ninefruits/curriculum/enums.py
+msgid "Second major"
+msgstr "第二専攻"
+
+# key: curriculum.program_roles.minor
+# key: people.additional_program_roles.minor
+#: ninefruits/curriculum/enums.py
+msgid "Minor"
+msgstr "副専攻"
+
+# key: curriculum.requirement_kinds.category_credits
+#: ninefruits/curriculum/enums.py
+msgid "Credits in a category"
+msgstr "区分別単位"
+
+# key: curriculum.requirement_kinds.required_courses
+#: ninefruits/curriculum/enums.py
+msgid "Required courses"
+msgstr "必修科目"
+
+# key: curriculum.requirement_kinds.course_group
+#: ninefruits/curriculum/enums.py
+msgid "Choice from courses"
+msgstr "選択科目群"
+
+# key: curriculum.requirement_kinds.assessment_pass
+#: ninefruits/curriculum/enums.py
+msgid "Passed examination"
+msgstr "試験合格"
+
+# key: curriculum.requisite_kinds.prerequisite
+#: ninefruits/curriculum/enums.py
+msgid "Prerequisite"
+msgstr "先修科目"
+
+# key: curriculum.requisite_kinds.corequisite
+#: ninefruits/curriculum/enums.py
+msgid "Corequisite"
+msgstr "同時履修科目"
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/curriculum/importers.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "選択された %(attribute)s は正しくありません。"
+
+# key: curriculum.import.org_unit_required
+#: ninefruits/curriculum/importers.py
+msgid "New courses need an org_unit (code of the managing unit)."
+msgstr "新しい科目には org_unit(管理組織のコード)が必要です。"
+
+# key: reference.fields.is_active
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/course_category.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/curriculum/models/course.py
+msgid "course"
+msgstr "科目"
+
+# key: curriculum.fields.description
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Description"
+msgstr "説明"
+
+# key: curriculum.fields.lecture_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lecture hours"
+msgstr "講義時間"
+
+# key: curriculum.fields.lab_hours
+#: ninefruits/curriculum/models/course.py
+msgid "Lab hours"
+msgstr "実習時間"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/curriculum/models/course.py
+msgid "Grading"
+msgstr "評価方法"
+
+# key: curriculum.fields.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Counts toward the credit limit"
+msgstr "履修単位上限に含める"
+
+# key: curriculum.help.counts_toward_credit_limit
+#: ninefruits/curriculum/models/course.py
+msgid "Turn off for courses outside the term credit limit (e.g. credit bank courses)."
+msgstr "学期の履修単位上限の対象外とする科目(単位互換科目など)ではオフにします。"
+
+# key: curriculum.fields.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken again for credit"
+msgstr "繰り返し単位取得可"
+
+# key: curriculum.help.is_repeatable
+#: ninefruits/curriculum/models/course.py
+msgid "Taking it again earns credits again (e.g. seminars with changing topics) instead of being a retake."
+msgstr "再履修ではなく、履修するたびに再度単位を取得できます(テーマが変わるゼミなど)。"
+
+# key: evaluation.fields.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgctxt "evaluation.fields"
+msgid "Course evaluation"
+msgstr "授業評価"
+
+# key: evaluation.help.requires_evaluation
+#: ninefruits/curriculum/models/course.py
+msgid "Off for internships or practica that are not evaluated."
+msgstr "評価を行わないインターンシップや実習ではオフにします。"
+
+# key: curriculum.fields.requisite_kind
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum"
+msgid "Kind"
+msgstr "種類"
+
+# key: curriculum.fields.group_number
+#: ninefruits/curriculum/models/course.py
+msgid "Group"
+msgstr "グループ"
+
+# key: curriculum.fields.required_course
+#: ninefruits/curriculum/models/course.py
+msgctxt "curriculum.fields"
+msgid "Course"
+msgstr "科目"
+
+# key: curriculum.fields.minimum_grade
+#: ninefruits/curriculum/models/course.py
+msgid "Minimum grade"
+msgstr "最低成績"
+
+# key: curriculum.fields.allows_concurrent
+#: ninefruits/curriculum/models/course.py
+msgid "May be taken in the same term"
+msgstr "同一学期の履修可"
+
+# key: curriculum.fields.equivalent_course
+#: ninefruits/curriculum/models/course.py
+msgid "Equivalent course"
+msgstr "代替科目"
+
+# key: curriculum.fields.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Mutual"
+msgstr "相互代替"
+
+# key: curriculum.help.is_mutual
+#: ninefruits/curriculum/models/course.py
+msgid "Each counts for the other. Off: only the equivalent course counts for this one."
+msgstr "互いに代替として扱います。オフの場合は、代替科目がこの科目の代わりとしてのみ認められます。"
+
+# key: curriculum.fields.note
+#: ninefruits/curriculum/models/course.py ninefruits/curriculum/models/requirement.py
+msgctxt "curriculum"
+msgid "Note"
+msgstr "備考"
+
+# key: reference.fields.code
+#: ninefruits/curriculum/models/course_category.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: reference.fields.sort_order
+#: ninefruits/curriculum/models/course_category.py ninefruits/curriculum/models/requirement.py
+msgid "Order"
+msgstr "表示順"
+
+# key: reference.resources.course_categories.label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course category"
+msgstr "科目区分"
+
+# key: reference.resources.course_categories.plural_label
+#: ninefruits/curriculum/models/course_category.py
+msgid "course categories"
+msgstr "科目区分"
+
+# key: curriculum.help.catalog_year_to
+#: ninefruits/curriculum/models/requirement.py
+msgid "Empty: also for later catalog years until another set starts."
+msgstr "空欄: 別の要件セットが始まるまで、以降の教育課程年度にも適用します。"
+
+# key: curriculum.fields.total_credits
+#: ninefruits/curriculum/models/requirement.py
+msgid "Total credits"
+msgstr "総単位数"
+
+# key: curriculum.resources.requirement_sets.label
+# key: curriculum.resources.requirement_sets.plural_label
+#: ninefruits/curriculum/models/requirement.py
+msgid "graduation requirements"
+msgstr "卒業要件"
+
+# key: curriculum.fields.requirement_kind
+#: ninefruits/curriculum/models/requirement.py
+msgid "Requirement"
+msgstr "要件"
+
+# key: curriculum.fields.min_courses
+#: ninefruits/curriculum/models/requirement.py
+msgid "Minimum courses"
+msgstr "最低科目数"

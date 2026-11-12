@@ -1,0 +1,519 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: certificate.errors.type_inactive
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "Loại giấy chứng nhận này không còn được cấp."
+
+# key: certificate.errors.hold
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "Sinh viên này đang bị chặn cấp giấy chứng nhận. Hãy gỡ chặn trước."
+
+# key: certificate.errors.no_template
+#: ninefruits/certificate/actions/issue_certificate.py ninefruits/certificate/services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "Loại này chưa có mẫu cho ngôn ngữ \"%(locale)s\"."
+
+# key: certificate.errors.already_revoked
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "Giấy chứng nhận này đã bị thu hồi."
+
+# key: registration.errors.reason_required
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "Hãy nhập lý do."
+
+# key: certificate.errors.audience
+#: ninefruits/certificate/actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "Giấy chứng nhận này chỉ dành cho: %(audience)s."
+
+# key: certificate.fields.type
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "Loại"
+
+# key: common.language
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "common"
+msgid "Language"
+msgstr "Ngôn ngữ"
+
+# key: certificate.fields.purpose
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Purpose"
+msgstr "Mục đích"
+
+# key: certificate.fields.copies
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/models.py
+msgid "Copies"
+msgstr "Số bản"
+
+# key: common.reason
+#: ninefruits/certificate/admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Lý do"
+
+# key: registration.fields.status
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Trạng thái"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/services/renderer.py
+msgid "Student number"
+msgstr "Mã số sinh viên"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/certificate/admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "Họ tên"
+
+# key: certificate.fields.issued_by
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Issued by"
+msgstr "Người cấp"
+
+# key: certificate.actions.download
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: ninefruits/certificate/admin/issues.py
+msgid "Verification page"
+msgstr "Trang xác minh"
+
+# key: certificate.actions.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Render again"
+msgstr "Tạo lại"
+
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Không thể tạo PDF. Vui lòng thử lại sau."
+
+# key: common.saved
+#: ninefruits/certificate/admin/issues.py
+msgid "Saved"
+msgstr "Đã lưu"
+
+# key: certificate.help.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Renders the PDF again from the current data and template. The serial number and verification code stay."
+msgstr "Tạo lại tệp PDF từ dữ liệu và mẫu hiện tại. Số hiệu và mã xác minh được giữ nguyên."
+
+# key: certificate.actions.revoke
+#: ninefruits/certificate/admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "Thu hồi"
+
+# key: certificate.actions.issue
+#: ninefruits/certificate/admin/student_record.py
+msgid "Issue certificate"
+msgstr "Cấp giấy chứng nhận"
+
+# key: certificate.notifications.issued
+#: ninefruits/certificate/admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "Đã cấp giấy chứng nhận %(serial)s."
+
+# key: reference.fields.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Mã"
+
+# key: certificate.help.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "Dùng trong số hiệu, ví dụ ENR, GRD, TRN."
+
+# key: certificate.help.body
+#: ninefruits/certificate/admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "Các đoạn cách nhau bằng một dòng trống. Biến thay thế: %(placeholders)s"
+
+# key: certificate.fields.templates
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Templates"
+msgstr "Mẫu"
+
+# key: reference.fields.name
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Tên"
+
+# key: certificate.fields.audience
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "Đối tượng"
+
+# key: portal.navigation.certificates
+#: ninefruits/certificate/apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "Giấy chứng nhận"
+
+# key: certificate.audiences.any
+#: ninefruits/certificate/enums.py
+msgid "Any student record"
+msgstr "Mọi hồ sơ sinh viên"
+
+# key: certificate.audiences.enrolled
+#: ninefruits/certificate/enums.py
+msgid "Students (not graduated)"
+msgstr "Sinh viên (chưa tốt nghiệp)"
+
+# key: certificate.audiences.graduated
+#: ninefruits/certificate/enums.py
+msgid "Graduates"
+msgstr "Người đã tốt nghiệp"
+
+# key: certificate.statuses.issued
+#: ninefruits/certificate/enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "Đã cấp"
+
+# key: certificate.statuses.revoked
+#: ninefruits/certificate/enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "Đã thu hồi"
+
+# key: certificate.verify.invalid_unknown
+#: ninefruits/certificate/enums.py
+msgid "No certificate matches this code."
+msgstr "Không có giấy chứng nhận nào khớp với mã này."
+
+# key: certificate.verify.invalid_revoked
+#: ninefruits/certificate/enums.py
+msgid "This certificate has been revoked."
+msgstr "Giấy chứng nhận này đã bị thu hồi."
+
+# key: certificate.verify.invalid_expired
+#: ninefruits/certificate/enums.py
+msgid "The verification period for this certificate has ended. Ask the holder for a current one."
+msgstr "Thời hạn xác minh của giấy chứng nhận này đã hết. Hãy đề nghị người sở hữu cung cấp bản mới."
+
+# key: certificate.fields.has_grades
+#: ninefruits/certificate/models.py
+msgid "Includes grades"
+msgstr "Kèm điểm"
+
+# key: certificate.help.has_grades
+#: ninefruits/certificate/models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "Thêm bảng điểm chính thức theo học kỳ (bảng điểm)."
+
+# key: certificate.fields.has_photo
+#: ninefruits/certificate/models.py
+msgid "Includes photo"
+msgstr "Kèm ảnh"
+
+# key: reference.fields.is_active
+#: ninefruits/certificate/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Đang hoạt động"
+
+# key: reference.fields.sort_order
+#: ninefruits/certificate/models.py
+msgid "Order"
+msgstr "Thứ tự"
+
+# key: certificate.resources.types.label
+#: ninefruits/certificate/models.py
+msgid "Certificate kind"
+msgstr "Loại giấy chứng nhận"
+
+# key: certificate.resources.types.plural_label
+#: ninefruits/certificate/models.py
+msgid "Certificate kinds"
+msgstr "Loại giấy chứng nhận"
+
+# key: certificate.fields.title
+#: ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "Tiêu đề"
+
+# key: certificate.fields.body
+#: ninefruits/certificate/models.py
+msgid "Body"
+msgstr "Nội dung"
+
+# key: certificate.fields.footer
+#: ninefruits/certificate/models.py
+msgid "Footer"
+msgstr "Chân trang"
+
+# key: certificate.fields.signer
+#: ninefruits/certificate/models.py
+msgid "Signer"
+msgstr "Người ký"
+
+# key: certificate.help.signer
+#: ninefruits/certificate/models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "Thay thế người ký trong cài đặt giấy chứng nhận cho ngôn ngữ này."
+
+# key: people.resources.student_records.label
+#: ninefruits/certificate/models.py
+msgid "student record"
+msgstr "hồ sơ sinh viên"
+
+# key: certificate.fields.serial_number
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgid "Serial number"
+msgstr "Số hiệu"
+
+# key: certificate.verify.code
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/verify.html
+msgid "Verification code"
+msgstr "Mã xác minh"
+
+# key: certificate.fields.issued_at
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "Ngày cấp"
+
+# key: certificate.resources.issues.label
+#: ninefruits/certificate/models.py
+msgid "Issued certificate"
+msgstr "Giấy chứng nhận đã cấp"
+
+# key: certificate.resources.issues.plural_label
+#: ninefruits/certificate/models.py
+msgid "Issued certificates"
+msgstr "Giấy chứng nhận đã cấp"
+
+# key: certificate.facts.student_name
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "Họ tên"
+
+# key: certificate.facts.birth_date
+#: ninefruits/certificate/services/renderer.py
+msgid "Date of birth"
+msgstr "Ngày sinh"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/certificate/services/renderer.py
+msgid "Gender"
+msgstr "Giới tính"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/certificate/services/renderer.py
+msgid "Nationality"
+msgstr "Quốc tịch"
+
+# key: certificate.facts.program
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "Chương trình đào tạo"
+
+# key: certificate.facts.admission_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "Ngày nhập học"
+
+# key: certificate.facts.graduation_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "Ngày tốt nghiệp"
+
+# key: certificate.facts.status
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "Tình trạng"
+
+# key: certificate.facts.year_level
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "Năm học thứ"
+
+# key: certificate.settings.serial_pattern
+#: ninefruits/certificate/settings_pages.py
+msgid "Serial number pattern"
+msgstr "Mẫu số hiệu"
+
+# key: certificate.settings.serial_pattern_help
+#: ninefruits/certificate/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 digits (required). The sequence restarts for each distinct prefix, so {TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr "Ký hiệu: {TYPE} mã loại, {YYYY} hoặc {YY} năm, {SEQ:6} số thứ tự đủ 6 chữ số (bắt buộc). Số thứ tự bắt đầu lại cho mỗi tiền tố khác nhau, nên {TYPE}-{YYYY}-{SEQ:6} đếm theo từng loại và năm."
+
+# key: certificate.settings.verification_valid_days
+#: ninefruits/certificate/settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "Thời hạn xác minh (ngày)"
+
+# key: certificate.settings.verification_valid_days_help
+#: ninefruits/certificate/settings_pages.py
+msgid "0 = always. After this many days the verification page reports the certificate as expired."
+msgstr "0 = không giới hạn. Sau số ngày này, trang xác minh báo giấy chứng nhận đã hết hạn."
+
+# key: certificate.settings.signer
+#: ninefruits/certificate/settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "Người ký (%(locale)s)"
+
+# key: certificate.settings.title
+#: ninefruits/certificate/settings_pages.py
+msgid "Certificate settings"
+msgstr "Cài đặt giấy chứng nhận"
+
+# key: certificate.settings.signers
+#: ninefruits/certificate/settings_pages.py
+msgid "Signer by language"
+msgstr "Người ký theo ngôn ngữ"
+
+# key: certificate.settings.signers_help
+#: ninefruits/certificate/settings_pages.py
+msgid "Printed above the seal, e.g. \"President, Ninefruits University\". A template can override it."
+msgstr "In phía trên con dấu, ví dụ \"Hiệu trưởng, Trường Đại học Ninefruits\". Mẫu có thể thay thế giá trị này."
+
+# key: certificate.pdf.serial
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "Số"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Mã"
+
+# key: curriculum.fields.title
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Tên học phần"
+
+# key: curriculum.fields.credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Số tín chỉ"
+
+# key: grading.fields.grade
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Điểm"
+
+# key: grading.grades.term_summary
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "Điểm TB %(gpa)s · tích lũy %(earned)s / %(attempted)s tín chỉ"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Điểm TB tích lũy"
+
+# key: grading.fields.earned_credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Tín chỉ tích lũy"
+
+# key: certificate.pdf.verify
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "Xác minh giấy chứng nhận này tại %(url)s"
+
+# key: certificate.portal.title
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/views/portal.py
+msgid "My certificates"
+msgstr "Giấy chứng nhận của tôi"
+
+# key: certificate.portal.intro
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "Certificates issued to you by the registrar. Ask the registrar for a new one."
+msgstr "Các giấy chứng nhận phòng đào tạo đã cấp cho bạn. Liên hệ phòng đào tạo để xin cấp mới."
+
+# key: certificate.portal.none
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "Chưa có giấy chứng nhận nào được cấp."
+
+# key: certificate.verify.title
+#: ninefruits/certificate/templates/certificate/verify.html ninefruits/certificate/views/public.py
+msgid "Certificate verification"
+msgstr "Xác minh giấy chứng nhận"
+
+# key: certificate.verify.intro
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "Nhập mã xác minh in trên giấy chứng nhận hoặc quét mã QR."
+
+# key: certificate.verify.check
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Check"
+msgstr "Kiểm tra"
+
+# key: certificate.verify.valid
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "Giấy chứng nhận này do nhà trường cấp và còn hiệu lực."
+
+# key: certificate.verify.holder
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Holder"
+msgstr "Người sở hữu"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/certificate/views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "Quá nhiều yêu cầu. Vui lòng đợi một phút rồi thử lại."

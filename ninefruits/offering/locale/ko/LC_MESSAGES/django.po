@@ -104,8 +104,7 @@ msgid "The %(attribute)s field is required."
 msgstr "%(attribute)s 필드는 필수입니다."
 
 # key: validation.max.string
-#: actions/update_syllabus.py:27 actions/update_syllabus.py:40
-#: actions/update_syllabus.py:60 actions/update_syllabus.py:104
+#: actions/update_syllabus.py:27 actions/update_syllabus.py:40 actions/update_syllabus.py:60 actions/update_syllabus.py:104
 #, python-format
 msgid "The %(attribute)s field must not be greater than %(max)s characters."
 msgstr "%(attribute)s은(는) %(max)s자보다 클 수 없습니다."
@@ -143,18 +142,14 @@ msgstr "시간표"
 #: admin/sections.py:140
 #, python-format
 msgctxt "offering"
-msgid ""
-"Preview: %(created)s section(s) would be copied, %(skipped)s skipped, "
-"%(with_notes)s with notes."
+msgid "Preview: %(created)s section(s) would be copied, %(skipped)s skipped, %(with_notes)s with notes."
 msgstr "미리 보기: %(created)s개 복사 예정, %(skipped)s개 건너뜀, %(with_notes)s개 확인 필요."
 
 # key: offering.notifications.copied
 #: admin/sections.py:142
 #, python-format
 msgctxt "offering"
-msgid ""
-"%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with "
-"notes."
+msgid "%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with notes."
 msgstr "%(created)s개 복사, %(skipped)s개 건너뜀, %(with_notes)s개 확인 필요."
 
 # key: validation.gte.numeric
@@ -174,8 +169,7 @@ msgid "Admitted from (year)"
 msgstr "입학 연도부터"
 
 # key: offering.fields.session
-#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660
-#: models/section.py:98
+#: admin/sections.py:198 admin/sections.py:244 admin/sections.py:660 models/section.py:98
 msgctxt "offering"
 msgid "Session"
 msgstr "세션"
@@ -192,14 +186,8 @@ msgstr "강좌를 관리하는 조직. 기본은 교과목의 관리 조직."
 
 # key: grading.help.evaluation_method
 #: admin/sections.py:216
-msgid ""
-"Absolute (default): instructors enter scores and the grades follow. Relative:"
-" instructors give grades within the institution's grade caps. Instructors ask"
-" for a change from the grade entry screen; it cannot change once grades are "
-"submitted."
-msgstr ""
-"절대평가(기본): 교원이 점수를 입력하면 성적이 계산된다. 상대평가: 교원이 학교의 등급 비율 안에서 성적을 준다. 변경은 교원이 성적 "
-"입력 화면에서 요청하며, 성적을 제출한 뒤에는 바꿀 수 없다."
+msgid "Absolute (default): instructors enter scores and the grades follow. Relative: instructors give grades within the institution's grade caps. Instructors ask for a change from the grade entry screen; it cannot change once grades are submitted."
+msgstr "절대평가(기본): 교원이 점수를 입력하면 성적이 계산된다. 상대평가: 교원이 학교의 등급 비율 안에서 성적을 준다. 변경은 교원이 성적 입력 화면에서 요청하며, 성적을 제출한 뒤에는 바꿀 수 없다."
 
 # key: offering.fields.section_code
 #: admin/sections.py:226 admin/sections.py:271 models/section.py:114
@@ -209,16 +197,12 @@ msgstr "분반"
 # key: validation.alpha_dash
 #: admin/sections.py:236
 #, python-format
-msgid ""
-"The %(attribute)s field must only contain letters, numbers, dashes, and "
-"underscores."
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
 msgstr "%(attribute)s은(는) 문자, 숫자, 대쉬(-), 밑줄(_)만 포함할 수 있습니다."
 
 # key: offering.help.change_session
 #: admin/sections.py:247 models/section.py:100
-msgid ""
-"Moving to another session takes its dates and the course version in effect "
-"when it starts."
+msgid "Moving to another session takes its dates and the course version in effect when it starts."
 msgstr "다른 세션으로 옮기면 그 세션의 기간과, 세션 시작일에 유효한 교과목 버전을 쓴다."
 
 # key: offering.fields.time_slot
@@ -262,8 +246,7 @@ msgid "The %(attribute)s field must be at least %(min)s."
 msgstr "%(attribute)s은(는) 최소한 %(min)s이어야 합니다."
 
 # key: offering.fields.capacity
-#: admin/sections.py:379 admin/sections.py:673 models/section.py:122
-#: models/section.py:317 templates/offering/portal/section_detail.html:23
+#: admin/sections.py:379 admin/sections.py:673 models/section.py:122 models/section.py:317 templates/offering/portal/section_detail.html:23
 msgctxt "offering"
 msgid "Capacity"
 msgstr "정원"
@@ -285,9 +268,7 @@ msgid "meeting times"
 msgstr "강의 시간"
 
 # key: offering.fields.instructors
-#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664
-#: models/section.py:246 models/section.py:247
-#: templates/offering/portal/section_detail.html:19
+#: admin/sections.py:443 admin/sections.py:444 admin/sections.py:664 models/section.py:246 models/section.py:247 templates/offering/portal/section_detail.html:19
 msgctxt "offering"
 msgid "Instructors"
 msgstr "담당 교원"
@@ -308,9 +289,7 @@ msgid "Students the seats are for"
 msgstr "좌석 대상 학생"
 
 # key: reference.resources.terms.label
-#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90
-#: templates/offering/portal/catalog.html:14
-#: templates/offering/portal/teaching.html:11
+#: admin/sections.py:477 admin/timetables.py:32 models/section.py:90 templates/offering/portal/catalog.html:14 templates/offering/portal/teaching.html:11
 msgid "term"
 msgstr "학기"
 
@@ -320,14 +299,12 @@ msgid "All"
 msgstr "전체"
 
 # key: offering.fields.offering_unit
-#: admin/sections.py:507 models/section.py:119
-#: templates/offering/portal/catalog.html:22
+#: admin/sections.py:507 models/section.py:119 templates/offering/portal/catalog.html:22
 msgid "Offering unit"
 msgstr "개설 조직"
 
 # key: offering.fields.status
-#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765
-#: models/section.py:124
+#: admin/sections.py:518 admin/sections.py:678 admin/sections.py:765 models/section.py:124
 msgctxt "offering"
 msgid "Status"
 msgstr "상태"
@@ -378,8 +355,7 @@ msgid "Credits"
 msgstr "학점"
 
 # key: offering.fields.schedule
-#: admin/sections.py:668 templates/offering/portal/section_detail.html:21
-#: templates/offering/portal/teaching.html:30
+#: admin/sections.py:668 templates/offering/portal/section_detail.html:21 templates/offering/portal/teaching.html:30
 msgid "Schedule"
 msgstr "강의 시간"
 
@@ -400,9 +376,7 @@ msgstr "수강 제외 대상"
 
 # key: offering.help.exclusion
 #: admin/sections.py:748 models/section.py:133
-msgid ""
-"Students matching this cannot register, e.g. the course's own majors for a "
-"general course."
+msgid "Students matching this cannot register, e.g. the course's own majors for a general course."
 msgstr "여기에 해당하는 학생은 신청할 수 없다. 예: 교양 과목에서 해당 전공 학생 제외."
 
 # key: offering.notifications.status_changed
@@ -434,9 +408,7 @@ msgstr "다시 열기"
 
 # key: offering.actions.syllabus
 # key: offering.syllabus.title
-#: admin/sections.py:911 models/section.py:370 models/section.py:371
-#: templates/offering/portal/section_detail.html:39
-#: templates/offering/portal/teaching.html:31
+#: admin/sections.py:911 models/section.py:370 models/section.py:371 templates/offering/portal/section_detail.html:39 templates/offering/portal/teaching.html:31
 msgid "Syllabus"
 msgstr "강의계획서"
 
@@ -447,17 +419,11 @@ msgstr "다른 학기에서 복사"
 
 # key: offering.help.copy_sections
 #: admin/sections.py:946
-msgid ""
-"Copies sections that were not cancelled, in your scope, as drafts: "
-"instructors still employed, meetings with rooms (left out if the room is now "
-"taken), reserved seats and syllabus drafts. Sessions are matched by code."
-msgstr ""
-"폐강되지 않은 강좌 중 권한 범위 안의 것을 작성 중 상태로 복사한다. 재직 중인 담당 교원, 강의실을 포함한 강의 시간(강의실이 이미 "
-"사용 중이면 강의실 없이), 좌석 할당, 강의계획서 초안을 함께 복사한다. 세션은 코드로 맞춘다."
+msgid "Copies sections that were not cancelled, in your scope, as drafts: instructors still employed, meetings with rooms (left out if the room is now taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr "폐강되지 않은 강좌 중 권한 범위 안의 것을 작성 중 상태로 복사한다. 재직 중인 담당 교원, 강의실을 포함한 강의 시간(강의실이 이미 사용 중이면 강의실 없이), 좌석 할당, 강의계획서 초안을 함께 복사한다. 세션은 코드로 맞춘다."
 
 # key: offering.timetable.mode
-#: admin/timetables.py:33 templates/offering/admin/timetables.html:15
-#: templates/offering/portal/teaching.html:15
+#: admin/timetables.py:33 templates/offering/admin/timetables.html:15 templates/offering/portal/teaching.html:15
 msgid "Show"
 msgstr "보기"
 
@@ -541,9 +507,7 @@ msgstr "대기 인원"
 
 # key: registration.help.waitlist_capacity
 #: models/section.py:147
-msgid ""
-"0 means no waitlist. Freed seats go to waiting students in order, after all "
-"rules are checked again."
+msgid "0 means no waitlist. Freed seats go to waiting students in order, after all rules are checked again."
 msgstr "0이면 대기자를 받지 않는다. 빈자리가 생기면 모든 규칙을 다시 확인한 뒤 순서대로 신청된다."
 
 # key: grading.fields.evaluation_method
@@ -673,8 +637,7 @@ msgid "All units"
 msgstr "전체 조직"
 
 # key: offering.catalog.search
-#: templates/offering/portal/catalog.html:31
-#: templates/offering/portal/catalog.html:34
+#: templates/offering/portal/catalog.html:31 templates/offering/portal/catalog.html:34
 msgid "Search"
 msgstr "검색"
 
@@ -690,14 +653,12 @@ msgid "%(credits)s credits"
 msgstr "%(credits)s학점"
 
 # key: offering.catalog.instructor_tba
-#: templates/offering/portal/catalog.html:46
-#: templates/offering/portal/section_detail.html:20
+#: templates/offering/portal/catalog.html:46 templates/offering/portal/section_detail.html:20
 msgid "Instructor to be announced"
 msgstr "담당 교원 미정"
 
 # key: offering.catalog.time_tba
-#: templates/offering/portal/catalog.html:47
-#: templates/offering/portal/section_detail.html:22
+#: templates/offering/portal/catalog.html:47 templates/offering/portal/section_detail.html:22
 msgid "Time to be announced"
 msgstr "시간 미정"
 
@@ -757,8 +718,7 @@ msgid "Description"
 msgstr "교과목 개요"
 
 # key: offering.syllabus.edit
-#: templates/offering/portal/section_detail.html:40
-#: templates/offering/portal/syllabus_editor.html:10
+#: templates/offering/portal/section_detail.html:40 templates/offering/portal/syllabus_editor.html:10
 msgid "Edit syllabus"
 msgstr "강의계획서 작성"
 
@@ -773,21 +733,17 @@ msgid "Draft: students do not see it until it is published."
 msgstr "작성 중: 공개하기 전에는 학생에게 보이지 않습니다."
 
 # key: offering.syllabus.assessment
-#: templates/offering/portal/section_detail.html:54
-#: templates/offering/portal/syllabus_editor.html:35
+#: templates/offering/portal/section_detail.html:54 templates/offering/portal/syllabus_editor.html:35
 msgid "Assessment"
 msgstr "평가 방법"
 
 # key: offering.syllabus.weekly_plan
-#: templates/offering/portal/section_detail.html:62
-#: templates/offering/portal/syllabus_editor.html:48
+#: templates/offering/portal/section_detail.html:62 templates/offering/portal/syllabus_editor.html:48
 msgid "Weekly plan"
 msgstr "주차별 계획"
 
 # key: offering.syllabus.week
-#: templates/offering/portal/section_detail.html:65
-#: templates/offering/portal/syllabus_editor.html:52
-#: templates/offering/portal/syllabus_editor.html:53
+#: templates/offering/portal/section_detail.html:65 templates/offering/portal/syllabus_editor.html:52 templates/offering/portal/syllabus_editor.html:53
 #, python-format
 msgid "Week %(week)s"
 msgstr "%(week)s주"
@@ -863,3 +819,8 @@ msgstr "공개됨"
 #: views/portal.py:322
 msgid "Write"
 msgstr "작성"
+
+# key: curriculum.or
+#: ninefruits/offering/views/portal.py
+msgid "or"
+msgstr "또는"

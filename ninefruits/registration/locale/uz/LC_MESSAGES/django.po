@@ -1,0 +1,1240 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: registration.errors.not_enrolled
+#: ninefruits/registration/actions/drop_enrollment.py
+msgid "This registration is not active."
+msgstr "Bu yozilish faol emas."
+
+# key: registration.errors.reason_required
+#: ninefruits/registration/actions/enroll_student.py
+msgid "Enter a reason."
+msgstr "Sababini kiriting."
+
+# key: registration.capacity.full_waitlist_open
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full. You can join the waitlist."
+msgstr "Fan guruhida boʻsh oʻrin yoʻq. Kutish roʻyxatiga qoʻshilishingiz mumkin."
+
+# key: registration.capacity.full
+#: ninefruits/registration/actions/enroll_student.py
+msgid "The section is full."
+msgstr "Fan guruhida boʻsh oʻrin yoʻq."
+
+# key: registration.capacity.waitlisted
+#: ninefruits/registration/actions/enroll_student.py
+#, python-format
+msgid "You are on the waitlist (position %(position)s)."
+msgstr "Siz kutish roʻyxatidasiz (%(position)s-oʻrin)."
+
+# key: registration.errors.not_waiting
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "This waitlist entry is no longer waiting."
+msgstr "Bu kutish roʻyxati yozuvi endi kutmayapti."
+
+# key: registration.waitlist.left
+#: ninefruits/registration/actions/leave_waitlist.py
+msgid "You left the waitlist."
+msgstr "Siz kutish roʻyxatidan chiqdingiz."
+
+# key: validation.after
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s maydoni %(date)s dan keyingi sana boʻlishi kerak."
+
+# key: admin.role_assignments.fields.ends_at
+# key: registration.fields.ends_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Ends"
+msgstr "Tugashi"
+
+# key: admin.role_assignments.fields.starts_at
+# key: registration.fields.starts_at
+#: ninefruits/registration/actions/manage_holds.py ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Starts"
+msgstr "Boshlanishi"
+
+# key: registration.errors.hold_released
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This hold is already released."
+msgstr "Bu cheklov allaqachon olib tashlangan."
+
+# key: registration.errors.rule_not_overridable
+#: ninefruits/registration/actions/manage_holds.py
+msgid "This rule cannot be overridden."
+msgstr "Bu qoidadan istisno berib boʻlmaydi."
+
+# key: registration.errors.rule_set_exists
+#: ninefruits/registration/actions/prepare_rule_set.py
+msgid "The term already has a rule set."
+msgstr "Semestrda qoidalar toʻplami allaqachon bor."
+
+# key: registration.waitlist.window_closed
+#: ninefruits/registration/actions/promote_waitlist.py
+msgid "Registration closed before a seat became free."
+msgstr "Oʻrin boʻshashidan oldin fanlarga yozilish yopildi."
+
+# key: registration.fields.outcome
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Outcome"
+msgstr "Natija"
+
+# key: registration.fields.action
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgid "Action"
+msgstr "Amal"
+
+# key: registration.fields.attempted_at
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Time"
+msgstr "Vaqt"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgid "Student number"
+msgstr "Talaba raqami"
+
+# key: offering.fields.section
+#: ninefruits/registration/admin/attempts.py ninefruits/registration/admin/common.py ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgctxt "offering"
+msgid "Section"
+msgstr "Fan guruhi"
+
+# key: registration.fields.failed_rules
+#: ninefruits/registration/admin/attempts.py
+msgid "Rules not met"
+msgstr "Bajarilmagan qoidalar"
+
+# key: registration.fields.actor
+#: ninefruits/registration/admin/attempts.py
+msgid "By"
+msgstr "Bajargan"
+
+# key: common.reason
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Sabab"
+
+# key: registration.import.unknown_student
+#: ninefruits/registration/admin/common.py ninefruits/registration/importers.py
+#, python-format
+msgid "No student record with number %(number)s."
+msgstr "%(number)s raqamli talaba yozuvi yoʻq."
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown section %(section)s."
+msgstr "Nomaʼlum fan guruhi: %(section)s."
+
+# key: registration.fields.waive
+#: ninefruits/registration/admin/common.py
+msgid "Waive rules"
+msgstr "Qoidalarni chetlab oʻtish"
+
+# key: registration.fields.waitlist_if_full
+#: ninefruits/registration/admin/common.py
+msgid "Add to the waitlist if full"
+msgstr "Joy boʻlmasa kutish roʻyxatiga qoʻshish"
+
+# key: registration.fields.hold_type
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/models/holds.py
+msgid "Hold type"
+msgstr "Cheklov turi"
+
+# key: registration.fields.blocks_registration
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks registration"
+msgstr "Fanlarga yozilishni toʻsadi"
+
+# key: registration.fields.blocks_grades
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks grade viewing"
+msgstr "Baholarni koʻrishni toʻsadi"
+
+# key: registration.fields.blocks_certificates
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Blocks certificates"
+msgstr "Maʼlumotnomalarni toʻsadi"
+
+# key: reference.resources.terms.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "term"
+msgstr "semestr"
+
+# key: registration.fields.rule
+#: ninefruits/registration/admin/common.py ninefruits/registration/admin/holds.py ninefruits/registration/admin/rules.py ninefruits/registration/models/holds.py ninefruits/registration/models/rules.py
+msgid "Rule"
+msgstr "Qoida"
+
+# key: registration.help.override_section
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty to apply to every section of the term."
+msgstr "Semestrning barcha fan guruhlariga qoʻllash uchun boʻsh qoldiring."
+
+# key: curriculum.resources.courses.label
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "course"
+msgstr "fan"
+
+# key: registration.help.override_course
+#: ninefruits/registration/admin/common.py
+msgid "Leave empty for any course. Ignored when a section is chosen."
+msgstr "Har qanday fan uchun boʻsh qoldiring. Fan guruhi tanlansa, hisobga olinmaydi."
+
+# key: registration.fields.expires_at
+#: ninefruits/registration/admin/common.py ninefruits/registration/models/holds.py
+msgid "Expires"
+msgstr "Muddati tugaydi"
+
+#: ninefruits/registration/admin/common.py
+#, python-format
+msgid "Unknown course %(course)s."
+msgstr "Nomaʼlum fan: %(course)s."
+
+# key: security.scope_types.global
+#: ninefruits/registration/admin/common.py
+msgid "All"
+msgstr "Hammasi"
+
+# key: registration.fields.in_force
+#: ninefruits/registration/admin/common.py
+msgid "In force"
+msgstr "Amalda"
+
+# key: common.yes
+#: ninefruits/registration/admin/common.py
+msgid "Yes"
+msgstr "Ha"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/common.py
+msgid "No"
+msgstr "Yo'q"
+
+# key: registration.fields.status
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Holat"
+
+# key: registration.actions.staff_enroll
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/roster.py
+msgctxt "registration"
+msgid "Register a student"
+msgstr "Talabani fanga yozish"
+
+# key: registration.portal.dropped
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Dropped."
+msgstr "Chiqarildi."
+
+# key: registration.portal.withdrawn
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/views/portal.py
+msgid "Withdrawn."
+msgstr "Voz kechildi."
+
+# key: registration.actions.drop
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Drop"
+msgstr "Chiqarish"
+
+# key: registration.actions.withdraw
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration.actions"
+msgid "Withdraw"
+msgstr "Voz kechish"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/admin/holds.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "people"
+msgid "Name"
+msgstr "Ism"
+
+# key: curriculum.fields.title
+#: ninefruits/registration/admin/enrollments.py
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Nomi"
+
+# key: registration.fields.source
+#: ninefruits/registration/admin/enrollments.py ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "registration"
+msgid "Source"
+msgstr "Manba"
+
+# key: registration.actions.place_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Place a hold"
+msgstr "Cheklov qoʻyish"
+
+# key: registration.actions.release_hold
+#: ninefruits/registration/admin/holds.py
+msgid "Release"
+msgstr "Olib tashlash"
+
+# key: registration.fields.override_limit
+#: ninefruits/registration/admin/holds.py
+msgid "Applies to"
+msgstr "Qoʻllanishi"
+
+# key: registration.fields.whole_term
+#: ninefruits/registration/admin/holds.py
+msgid "Whole term"
+msgstr "Butun semestr"
+
+# key: registration.fields.granted_at
+#: ninefruits/registration/admin/holds.py
+msgid "Granted"
+msgstr "Berilgan"
+
+# key: registration.actions.grant_override
+#: ninefruits/registration/admin/holds.py
+msgid "Grant an override"
+msgstr "Istisno berish"
+
+# key: registration.actions.revoke_override
+#: ninefruits/registration/admin/holds.py
+msgctxt "registration"
+msgid "Revoke"
+msgstr "Bekor qilish"
+
+# key: registration.resources.roster.title
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgctxt "registration"
+msgid "Roster (%(count)s / %(capacity)s)"
+msgstr "Talabalar roʻyxati (%(count)s / %(capacity)s)"
+
+# key: registration.resources.waitlist.plural_label
+#: ninefruits/registration/admin/roster.py ninefruits/registration/models/enrollment.py
+msgctxt "registration.resources.waitlist"
+msgid "Waitlist"
+msgstr "Kutish roʻyxati"
+
+# key: registration.actions.promote_waitlist
+#: ninefruits/registration/admin/roster.py
+msgid "Promote now"
+msgstr "Hozir oʻtkazish"
+
+# key: registration.notifications.promoted
+#: ninefruits/registration/admin/roster.py
+#, python-format
+msgid "Promoted %(promoted)s, removed %(removed)s, expired %(expired)s."
+msgstr "Oʻtkazildi: %(promoted)s, olib tashlandi: %(removed)s, muddati oʻtdi: %(expired)s."
+
+# key: registration.actions.remove_from_waitlist
+#: ninefruits/registration/admin/roster.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Remove"
+msgstr "Olib tashlash"
+
+# key: registration.fields.copy_from
+#: ninefruits/registration/admin/rules.py
+msgctxt "registration"
+msgid "Copy from"
+msgstr "Qayerdan nusxalash"
+
+# key: registration.resources.rules.plural_label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Rules"
+msgstr "Qoidalar"
+
+# key: registration.fields.severity
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "When not met"
+msgstr "Bajarilmasa"
+
+# upstream: Django/allauth catalog
+#: ninefruits/registration/admin/rules.py
+msgid "Edit"
+msgstr "O'zgartirish"
+
+# key: reference.fields.code
+#: ninefruits/registration/admin/rules.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: registration.fields.enabled_rules
+#: ninefruits/registration/admin/rules.py
+msgid "Rules on"
+msgstr "Yoqilgan qoidalar"
+
+# key: registration.fields.copied_from
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Copied from"
+msgstr "Nusxa manbai"
+
+# key: registration.actions.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "Prepare rules for a term"
+msgstr "Semestr uchun qoidalarni tayyorlash"
+
+# key: registration.help.prepare_rule_set
+#: ninefruits/registration/admin/rules.py
+msgid "The rules are copied from the chosen term, or start from the defaults. Review them before registration opens."
+msgstr "Qoidalar tanlangan semestrdan nusxalanadi yoki standart qiymatlardan boshlanadi. Fanlarga yozilish ochilishidan oldin ularni koʻrib chiqing."
+
+# key: registration.parameters.statuses
+#: ninefruits/registration/admin/rules.py
+msgid "Student statuses that may register"
+msgstr "Fanlarga yozilishi mumkin boʻlgan talaba holatlari"
+
+# key: registration.parameters.allowed_overlap_minutes
+#: ninefruits/registration/admin/rules.py
+msgid "Allowed overlap (minutes)"
+msgstr "Ruxsat etilgan ustma-ust tushish (daqiqa)"
+
+# key: registration.parameters.repeat_allowed
+#: ninefruits/registration/admin/rules.py
+msgid "Retakes allowed"
+msgstr "Qayta oʻqishga ruxsat"
+
+# key: registration.parameters.max_attempts
+#: ninefruits/registration/admin/rules.py
+msgid "Maximum attempts per course"
+msgstr "Bir fan uchun maksimal urinishlar"
+
+# key: registration.parameters.max_attempts_help
+#: ninefruits/registration/admin/rules.py
+msgid "Including the first attempt. Empty means no limit."
+msgstr "Birinchi urinish ham hisobga kiradi. Boʻsh — cheklovsiz."
+
+# key: registration.parameters.below_grade
+#: ninefruits/registration/admin/rules.py
+msgid "Only below grade"
+msgstr "Faqat shu bahodan past boʻlsa"
+
+# key: registration.parameters.below_grade_help
+#: ninefruits/registration/admin/rules.py
+msgid "Retake only when the earlier grade is below this grade (e.g. C+). Empty means any grade."
+msgstr "Faqat oldingi baho shu bahodan past boʻlsa qayta oʻqish (masalan, C+). Boʻsh — har qanday baho."
+
+# key: registration.fields.all_term_types
+#: ninefruits/registration/admin/rules.py
+msgid "All term types"
+msgstr "Barcha semestr turlari"
+
+# key: validation.lte.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be less than or equal to %(value)s."
+msgstr "%(attribute)s maydoni %(value)s yoki undan kichik boʻlishi kerak."
+
+# key: curriculum.fields.min_credits
+# key: registration.fields.min_credits
+#: ninefruits/registration/admin/rules.py
+msgid "Minimum credits"
+msgstr "Minimal kreditlar"
+
+# key: registration.fields.max_credits
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "Maximum credits"
+msgstr "Maksimal kreditlar"
+
+# key: validation.between.numeric
+#: ninefruits/registration/admin/rules.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s maydoni %(min)s va %(max)s oraligʻida boʻlishi kerak."
+
+# key: registration.fields.applies_to
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Students"
+msgstr "Talabalar"
+
+# key: registration.help.credit_policy_eligibility
+#: ninefruits/registration/admin/rules.py
+msgid "Leave empty for every student."
+msgstr "Barcha talabalar uchun boʻsh qoldiring."
+
+# key: reference.fields.name
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nomi"
+
+# key: reference.resources.term_types.label
+#: ninefruits/registration/admin/rules.py ninefruits/registration/models/rules.py
+msgid "term type"
+msgstr "semestr turi"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/registration/apps.py ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "Registration"
+msgstr "Fanlarga yozilish"
+
+# key: registration.attempt_actions.enroll
+# key: registration.portal.register
+#: ninefruits/registration/enums.py ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration"
+msgid "Register"
+msgstr "Yozilish"
+
+# key: registration.attempt_actions.drop
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Drop"
+msgstr "Chiqish"
+
+# key: registration.attempt_actions.withdraw
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Withdraw"
+msgstr "Voz kechish"
+
+# key: registration.attempt_actions.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.attempt_actions"
+msgid "Waitlist"
+msgstr "Kutish roʻyxati"
+
+# key: registration.attempt_actions.promote
+#: ninefruits/registration/enums.py
+msgid "Waitlist promotion"
+msgstr "Kutish roʻyxatidan oʻtkazish"
+
+# key: registration.attempt_actions.cart
+# key: registration.portal.cart
+#: ninefruits/registration/enums.py ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart"
+msgstr "Savat"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/registration/enums.py
+msgid "Succeeded"
+msgstr "Muvaffaqiyatli"
+
+# key: registration.attempt_outcomes.waitlisted
+#: ninefruits/registration/enums.py
+msgid "Waitlisted"
+msgstr "Kutish roʻyxatida"
+
+# key: registration.attempt_outcomes.refused
+#: ninefruits/registration/enums.py
+msgid "Refused"
+msgstr "Rad etilgan"
+
+# key: registration.enrollment_sources.student
+# key: security.personas.student
+#: ninefruits/registration/enums.py
+msgid "Student"
+msgstr "Talaba"
+
+# key: registration.enrollment_sources.staff
+#: ninefruits/registration/enums.py
+msgid "Staff"
+msgstr "Xodim"
+
+# key: registration.enrollment_sources.waitlist
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_sources"
+msgid "Waitlist"
+msgstr "Kutish roʻyxati"
+
+# key: registration.enrollment_sources.import
+#: ninefruits/registration/enums.py
+msgid "Import"
+msgstr "Import"
+
+# key: registration.enrollment_statuses.enrolled
+#: ninefruits/registration/enums.py
+msgctxt "registration.enrollment_statuses"
+msgid "Registered"
+msgstr "Yozilgan"
+
+# key: registration.enrollment_statuses.dropped
+#: ninefruits/registration/enums.py
+msgid "Dropped"
+msgstr "Chiqarilgan"
+
+# key: registration.enrollment_statuses.withdrawn
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Withdrawn"
+msgstr "Voz kechilgan"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/registration/enums.py
+msgid "Completed"
+msgstr "Yakunlangan"
+
+# key: registration.hold_types.unregistered
+#: ninefruits/registration/enums.py
+msgid "Not registered for the term"
+msgstr "Semestrga roʻyxatdan oʻtmagan"
+
+# key: registration.hold_types.financial
+#: ninefruits/registration/enums.py
+msgid "Financial"
+msgstr "Moliyaviy"
+
+# key: registration.hold_types.academic
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Academic"
+msgstr "Akademik"
+
+# key: registration.hold_types.administrative
+#: ninefruits/registration/enums.py
+msgid "Administrative"
+msgstr "Maʼmuriy"
+
+# key: people.genders.other
+# key: people.guardian_relationships.other
+# key: registration.hold_types.other
+#: ninefruits/registration/enums.py
+msgid "Other"
+msgstr "Boshqa"
+
+# key: registration.rules.window.label
+#: ninefruits/registration/enums.py
+msgctxt "registration.rules.window"
+msgid "Registration period"
+msgstr "Yozilish muddati"
+
+# key: registration.rules.section_open.label
+#: ninefruits/registration/enums.py
+msgid "Section open"
+msgstr "Fan guruhi ochiq"
+
+# key: registration.rules.hold.label
+#: ninefruits/registration/enums.py
+msgid "Holds"
+msgstr "Cheklovlar"
+
+# key: registration.rules.student_status.label
+#: ninefruits/registration/enums.py
+msgid "Student status"
+msgstr "Talaba holati"
+
+# key: registration.rules.eligibility.label
+#: ninefruits/registration/enums.py
+msgid "Section eligibility"
+msgstr "Fan guruhi shartlari"
+
+# key: registration.rules.duplicate_course.label
+#: ninefruits/registration/enums.py
+msgid "Same course twice"
+msgstr "Bir fanga ikki marta"
+
+# key: registration.rules.time_conflict.label
+#: ninefruits/registration/enums.py
+msgid "Time conflict"
+msgstr "Vaqt toʻqnashuvi"
+
+# key: registration.rules.credit_limit.label
+#: ninefruits/registration/enums.py
+msgid "Credit limit"
+msgstr "Kredit chegarasi"
+
+# key: registration.rules.requisites.label
+#: ninefruits/registration/enums.py
+msgid "Prerequisites"
+msgstr "Prerekvizitlar"
+
+# key: registration.rules.repeat_course.label
+#: ninefruits/registration/enums.py
+msgid "Retakes"
+msgstr "Qayta oʻqishlar"
+
+# key: registration.rules.capacity.label
+#: ninefruits/registration/enums.py
+msgid "Seats"
+msgstr "Oʻrinlar"
+
+# key: registration.rules.window.description
+#: ninefruits/registration/enums.py
+msgid "A registration, add/drop or withdrawal period must be open for the student."
+msgstr "Talaba uchun fanlarga yozilish, qoʻshish/chiqish yoki voz kechish muddati ochiq boʻlishi kerak."
+
+# key: registration.rules.section_open.description
+#: ninefruits/registration/enums.py
+msgid "The section must be published."
+msgstr "Fan guruhi eʼlon qilingan boʻlishi kerak."
+
+# key: registration.rules.hold.description
+#: ninefruits/registration/enums.py
+msgid "Students with a hold that blocks registration cannot register."
+msgstr "Fanlarga yozilishni toʻsuvchi cheklovi bor talabalar yozila olmaydi."
+
+# key: registration.rules.student_status.description
+#: ninefruits/registration/enums.py
+msgid "Only students with the chosen statuses may register."
+msgstr "Faqat tanlangan holatdagi talabalar yozilishi mumkin."
+
+# key: registration.rules.eligibility.description
+#: ninefruits/registration/enums.py
+msgid "The student must match the section's eligibility and not its exclusions."
+msgstr "Talaba fan guruhi shartlariga mos boʻlishi va istisnolariga tushmasligi kerak."
+
+# key: registration.rules.duplicate_course.description
+#: ninefruits/registration/enums.py
+msgid "A course can be registered only once per term."
+msgstr "Bir semestrda fanga faqat bir marta yozilish mumkin."
+
+# key: registration.rules.time_conflict.description
+#: ninefruits/registration/enums.py
+msgid "Meeting times must not overlap with other registered sections."
+msgstr "Dars vaqtlari yozilgan boshqa fan guruhlari bilan ustma-ust tushmasligi kerak."
+
+# key: registration.rules.credit_limit.description
+#: ninefruits/registration/enums.py
+msgid "Total credits must not exceed the credit limit that applies to the student."
+msgstr "Jami kreditlar talabaga qoʻllanadigan kredit chegarasidan oshmasligi kerak."
+
+# key: registration.rules.requisites.description
+#: ninefruits/registration/enums.py
+msgid "Prerequisites must be passed (equivalent courses count); corequisites may be taken in the same term."
+msgstr "Prerekvizitlar oʻzlashtirilgan boʻlishi kerak (muqobil fanlar hisobga olinadi); korekvizitlarni shu semestrda birga oʻqish mumkin."
+
+# key: registration.rules.repeat_course.description
+#: ninefruits/registration/enums.py
+msgid "Whether and how often a passed course may be taken again."
+msgstr "Oʻzlashtirilgan fanni qayta oʻqish mumkinmi va necha marta."
+
+# key: registration.rules.capacity.description
+#: ninefruits/registration/enums.py
+msgid "A seat must be free (reserved seats count only for their students until released)."
+msgstr "Boʻsh oʻrin boʻlishi kerak (ajratilgan oʻrinlar ochilguncha faqat oʻz talabalari uchun hisoblanadi)."
+
+# key: registration.rule_severities.block
+#: ninefruits/registration/enums.py
+msgid "Block"
+msgstr "Toʻsish"
+
+# key: registration.rule_severities.warn
+#: ninefruits/registration/enums.py
+msgid "Warn only"
+msgstr "Faqat ogohlantirish"
+
+# key: registration.waitlist_statuses.waiting
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Waiting"
+msgstr "Kutmoqda"
+
+# key: registration.waitlist_statuses.promoted
+#: ninefruits/registration/enums.py
+msgctxt "registration.waitlist_statuses"
+msgid "Registered"
+msgstr "Yozilgan"
+
+# key: registration.waitlist_statuses.removed
+#: ninefruits/registration/enums.py
+msgid "Removed"
+msgstr "Olib tashlangan"
+
+# key: registration.waitlist_statuses.expired
+#: ninefruits/registration/enums.py
+msgctxt "registration"
+msgid "Expired"
+msgstr "Muddati oʻtgan"
+
+# key: validation.date
+#: ninefruits/registration/importers.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s maydoni toʻgʻri sana boʻlishi kerak."
+
+# key: registration.resources.holds.plural_label
+#: ninefruits/registration/importers.py ninefruits/registration/models/holds.py
+msgid "holds"
+msgstr "cheklovlar"
+
+# key: people.resources.student_records.label
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/models/holds.py
+msgid "student record"
+msgstr "talaba yozuvi"
+
+# key: registration.portal.credits
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Credits"
+msgstr "Kreditlar"
+
+# key: registration.fields.is_retake
+# key: registration.portal.retake
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/portal/registration.html
+msgid "Retake"
+msgstr "Qayta oʻqish"
+
+# key: registration.fields.enrolled_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/roster.html
+msgid "Registered at"
+msgstr "Yozilgan vaqt"
+
+# key: registration.resources.enrollments.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration"
+msgstr "fanga yozilish"
+
+# key: registration.resources.enrollments.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registrations"
+msgstr "fanlarga yozilishlar"
+
+# key: registration.fields.requested_at
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Requested"
+msgstr "Soʻralgan"
+
+# key: registration.fields.outcome_note
+#: ninefruits/registration/models/enrollment.py ninefruits/registration/templates/registration/admin/waitlist.html
+msgctxt "registration"
+msgid "Note"
+msgstr "Izoh"
+
+# key: registration.fields.request_id
+#: ninefruits/registration/models/enrollment.py
+msgctxt "registration"
+msgid "Request ID"
+msgstr "Soʻrov ID"
+
+# key: registration.resources.attempts.label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempt"
+msgstr "yozilishga urinish"
+
+# key: registration.resources.attempts.plural_label
+#: ninefruits/registration/models/enrollment.py
+msgid "registration attempts"
+msgstr "yozilishga urinishlar"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "istisno berilgan"
+
+# key: registration.fields.released_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Released"
+msgstr "Olib tashlangan"
+
+# key: registration.resources.holds.label
+#: ninefruits/registration/models/holds.py
+msgid "hold"
+msgstr "cheklov"
+
+# key: registration.fields.revoked_at
+#: ninefruits/registration/models/holds.py
+msgctxt "registration"
+msgid "Revoked"
+msgstr "Bekor qilingan"
+
+# key: registration.resources.overrides.label
+#: ninefruits/registration/models/holds.py
+msgid "rule override"
+msgstr "qoidadan istisno"
+
+# key: registration.resources.overrides.plural_label
+#: ninefruits/registration/models/holds.py
+msgid "rule overrides"
+msgstr "qoidalardan istisnolar"
+
+# key: offering.fields.note
+#: ninefruits/registration/models/rules.py
+msgctxt "offering"
+msgid "Note"
+msgstr "Izoh"
+
+# key: registration.resources.rule_sets.label
+#: ninefruits/registration/models/rules.py
+msgid "rule set"
+msgstr "qoidalar toʻplami"
+
+# key: registration.resources.rule_sets.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "registration rules"
+msgstr "fanlarga yozilish qoidalari"
+
+# key: registration.fields.is_enabled
+#: ninefruits/registration/models/rules.py
+msgid "On"
+msgstr "Yoqilgan"
+
+# key: registration.fields.allows_override
+#: ninefruits/registration/models/rules.py
+msgid "Overrides allowed"
+msgstr "Istisnoga ruxsat"
+
+# key: registration.fields.min_credits
+#: ninefruits/registration/models/rules.py
+msgctxt "registration"
+msgid "Minimum credits"
+msgstr "Minimal kreditlar"
+
+# key: registration.fields.priority
+#: ninefruits/registration/models/rules.py
+msgid "Priority"
+msgstr "Ustuvorlik"
+
+# key: registration.help.priority
+#: ninefruits/registration/models/rules.py
+msgid "When several limits match a student, the highest priority applies."
+msgstr "Talabaga bir nechta chegara mos kelsa, eng yuqori ustuvorlikdagisi qoʻllanadi."
+
+# key: registration.fields.is_active
+#: ninefruits/registration/models/rules.py
+msgctxt "registration.fields"
+msgid "Active"
+msgstr "Faol"
+
+# key: registration.resources.credit_limit_policies.label
+#: ninefruits/registration/models/rules.py
+msgid "credit limit"
+msgstr "kredit chegarasi"
+
+# key: registration.resources.credit_limit_policies.plural_label
+#: ninefruits/registration/models/rules.py
+msgid "credit limits"
+msgstr "kredit chegaralari"
+
+# key: registration.mail.waitlist_promoted_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You are registered in %(section)s"
+msgstr "Siz %(section)s ga yozildingiz"
+
+# key: registration.mail.waitlist_removed_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s"
+msgstr "%(section)s kutish roʻyxati"
+
+# key: registration.mail.waitlist_expired_subject
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Waitlist for %(section)s closed"
+msgstr "%(section)s kutish roʻyxati yopildi"
+
+# key: registration.mail.waitlist_promoted_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "A seat became free in %(section)s and you have been registered from the waitlist."
+msgstr "%(section)s da oʻrin boʻshadi va siz kutish roʻyxatidan yozildingiz."
+
+# key: registration.mail.waitlist_removed_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "You were removed from the waitlist for %(section)s."
+msgstr "Siz %(section)s kutish roʻyxatidan olib tashlandingiz."
+
+# key: registration.mail.waitlist_expired_intro
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid "Registration closed before a seat became free in %(section)s."
+msgstr "%(section)s da oʻrin boʻshashidan oldin fanlarga yozilish yopildi."
+
+# key: security.email_code.mail_greeting
+#: ninefruits/registration/notifications.py
+msgid "Hello,"
+msgstr "Assalomu alaykum,"
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "Fanlarga yozilishni ochish"
+
+# key: security.email_code.mail_salutation
+#: ninefruits/registration/notifications.py
+#, python-format
+msgid ""
+"Thank you,\n"
+"%(app)s"
+msgstr ""
+"Rahmat,\n"
+"%(app)s"
+
+# key: registration.rules.credit_limit.failed
+#: ninefruits/registration/rules/credit_limit.py
+#, python-format
+msgid "This would make %(total)s credits; your limit is %(limit)s."
+msgstr "Bunda jami %(total)s kredit boʻladi; sizning chegarangiz %(limit)s."
+
+# key: registration.rules.duplicate_course.failed
+#: ninefruits/registration/rules/duplicate_course.py
+#, python-format
+msgid "You are already registered in %(section)s."
+msgstr "Siz allaqachon %(section)s ga yozilgansiz."
+
+# key: registration.rules.eligibility.failed
+#: ninefruits/registration/rules/eligibility.py
+msgid "This section is not open to you."
+msgstr "Bu fan guruhi siz uchun ochiq emas."
+
+# key: registration.rules.hold.failed
+#: ninefruits/registration/rules/hold.py
+#, python-format
+msgid "You have a hold (%(type)s). Contact the office that placed it."
+msgstr "Sizda cheklov bor (%(type)s). Uni qoʻygan boʻlimga murojaat qiling."
+
+# key: registration.rules.repeat_course.retake
+#: ninefruits/registration/rules/repeat_course.py
+msgid "This registration is a retake."
+msgstr "Bu yozilish qayta oʻqish hisoblanadi."
+
+# key: registration.rules.repeat_course.not_allowed
+#: ninefruits/registration/rules/repeat_course.py
+msgid "You have already taken this course and retakes are not allowed."
+msgstr "Siz bu fanni allaqachon oʻqigansiz va qayta oʻqishga ruxsat yoʻq."
+
+# key: registration.rules.repeat_course.too_many
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "You have reached the maximum of %(max)s attempts for this course."
+msgstr "Bu fan uchun maksimal %(max)s ta urinishga yetdingiz."
+
+# key: registration.rules.repeat_course.grade_too_high
+#: ninefruits/registration/rules/repeat_course.py
+#, python-format
+msgid "Retakes are allowed only for grades below %(grade)s."
+msgstr "Qayta oʻqishga faqat %(grade)s dan past baholar uchun ruxsat beriladi."
+
+# key: registration.rules.requisites.failed
+#: ninefruits/registration/rules/requisites.py
+#, python-format
+msgid "Prerequisites not met: %(courses)s."
+msgstr "Prerekvizitlar bajarilmagan: %(courses)s."
+
+# key: registration.rules.section_open.failed
+#: ninefruits/registration/rules/section_open.py
+msgid "This section is not open for registration."
+msgstr "Bu fan guruhiga yozilish ochiq emas."
+
+# key: registration.rules.student_status.failed
+#: ninefruits/registration/rules/student_status.py
+#, python-format
+msgid "Your status (%(status)s) does not allow registration."
+msgstr "Holatingiz (%(status)s) fanlarga yozilishga ruxsat bermaydi."
+
+# key: registration.rules.time_conflict.failed
+#: ninefruits/registration/rules/time_conflict.py
+#, python-format
+msgid "The time overlaps with %(section)s."
+msgstr "Vaqt %(section)s bilan ustma-ust tushadi."
+
+# key: registration.rules.window.failed.enroll
+# key: registration.rules.window.failed.waitlist
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for you now."
+msgstr "Fanlarga yozilish hozir siz uchun ochiq emas."
+
+# key: registration.rules.window.failed.drop
+#: ninefruits/registration/rules/window.py
+msgid "Dropping is not open for this course now."
+msgstr "Bu fandan chiqish hozir ochiq emas."
+
+# key: registration.rules.window.failed.withdraw
+#: ninefruits/registration/rules/window.py
+msgid "Withdrawal is not open for this course now."
+msgstr "Bu fandan voz kechish hozir ochiq emas."
+
+# key: registration.rules.window.failed.promote
+#: ninefruits/registration/rules/window.py
+msgid "Registration is not open for this course now."
+msgstr "Bu fanga yozilish hozir ochiq emas."
+
+# key: registration.rules.window.failed.cart
+#: ninefruits/registration/rules/window.py
+msgid "The cart is not open for you now."
+msgstr "Savat hozir siz uchun ochiq emas."
+
+# key: security.scope_types.program
+#: ninefruits/registration/templates/registration/admin/roster.html
+msgctxt "security"
+msgid "Program"
+msgstr "Taʼlim dasturi"
+
+# key: common.none
+#: ninefruits/registration/templates/registration/admin/roster.html ninefruits/registration/templates/registration/admin/waitlist.html ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "common"
+msgid "None"
+msgstr "Yoʻq"
+
+# key: registration.portal.drop
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Drop"
+msgstr "Chiqish"
+
+# key: registration.portal.withdraw
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "registration.portal"
+msgid "Withdraw"
+msgstr "Voz kechish"
+
+# key: registration.portal.leave_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Leave waitlist"
+msgstr "Kutish roʻyxatidan chiqish"
+
+# key: registration.portal.submit_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Register all"
+msgstr "Hammasiga yozilish"
+
+# key: portal.profile.remove
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "Olib tashlash"
+
+# key: registration.portal.add_to_cart
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Add to cart"
+msgstr "Savatga qoʻshish"
+
+# key: registration.portal.join_waitlist
+#: ninefruits/registration/templates/registration/portal/partials/action.html
+msgid "Join waitlist"
+msgstr "Kutish roʻyxatiga qoʻshilish"
+
+# key: offering.timetable.mode
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Show"
+msgstr "Koʻrsatish"
+
+# key: registration.portal.no_term
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "No term is open for registration."
+msgstr "Fanlarga yozilish ochiq semestr yoʻq."
+
+# key: registration.portal.window
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration.portal"
+msgid "Registration period"
+msgstr "Yozilish muddati"
+
+# key: registration.portal.registration_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Open"
+msgstr "Ochiq"
+
+# key: registration.portal.cart_open
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Cart only"
+msgstr "Faqat savat"
+
+# key: registration.portal.opens_at
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Opens %(date)s"
+msgstr "%(date)s ochiladi"
+
+# key: registration.portal.closed
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Closed"
+msgstr "Yopiq"
+
+# key: registration.portal.sections_count
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "Courses"
+msgstr "Fanlar"
+
+# key: registration.portal.timetable
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Timetable"
+msgstr "Dars jadvali"
+
+# key: registration.portal.my_registrations
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgctxt "registration"
+msgid "My registrations"
+msgstr "Mening fanlarim"
+
+# key: registration.portal.drop_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Drop this course?"
+msgstr "Bu fandan chiqasizmi?"
+
+# key: registration.portal.withdraw_confirm
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Withdraw from this course? A W is recorded."
+msgstr "Bu fandan voz kechasizmi? W qayd etiladi."
+
+# key: registration.portal.waiting
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Waitlist position %(position)s"
+msgstr "Kutish roʻyxatidagi oʻrin: %(position)s"
+
+# key: registration.portal.cart_empty
+#: ninefruits/registration/templates/registration/portal/registration.html ninefruits/registration/views/portal.py
+msgid "The cart is empty."
+msgstr "Savat boʻsh."
+
+# key: offering.catalog.search
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Search"
+msgstr "Qidirish"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Course code or title"
+msgstr "Fan kodi yoki nomi"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Instructor to be announced"
+msgstr "Oʻqituvchi keyinroq eʼlon qilinadi"
+
+# key: offering.catalog.time_tba
+#: ninefruits/registration/templates/registration/portal/registration.html
+msgid "Time to be announced"
+msgstr "Vaqt keyinroq eʼlon qilinadi"
+
+# key: registration.portal.seats
+#: ninefruits/registration/templates/registration/portal/registration.html
+#, python-format
+msgid "Seats: %(general)s open, %(reserved)s reserved, %(capacity)s total"
+msgstr "Oʻrinlar: %(general)s ochiq, %(reserved)s ajratilgan, jami %(capacity)s"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/registration/views/portal.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "Soʻrovlar juda koʻp. Bir daqiqa kutib, qayta urinib koʻring."
+
+# key: registration.portal.registered
+#: ninefruits/registration/views/portal.py
+msgid "Registered."
+msgstr "Yozildingiz."
+
+# key: registration.portal.added_to_cart
+#: ninefruits/registration/views/portal.py
+msgid "Added to the cart."
+msgstr "Savatga qoʻshildi."

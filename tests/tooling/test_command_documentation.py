@@ -1,7 +1,7 @@
 """Manual checks (original tests/Feature/Tooling/CommandDocumentationTest.php, porting-plan 13.3):
-every Ninefruits command is described in the operations manual in all four languages, the
+every Ninefruits command is described in the operations manual in every language, the
 Django built-ins used in operations are described, relative links in the manuals resolve, and
-the four manuals have the same files."""
+the manuals have the same files."""
 
 from __future__ import annotations
 
@@ -14,7 +14,7 @@ from django.core.management import CommandError, call_command, get_commands
 
 ROOT = Path(settings.BASE_DIR)
 MANUAL = ROOT / "docs" / "manual"
-LANGUAGES = ("ko", "en", "zh_Hans", "lo")
+LANGUAGES = ("ko", "en", "zh_Hans", "lo", "de", "ru", "ms", "fil", "fr", "ja", "mn", "ne", "th", "tr", "uz", "vi")
 BUILT_INS = ("migrate", "collectstatic", "compilemessages", "createsuperuser")
 LINK = re.compile(r"(?<!!)\[[^\]]*\]\(([^)\s]+)(?:\s+\"[^\"]*\")?\)")
 

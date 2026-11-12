@@ -1,0 +1,473 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: attendance.errors.forbidden
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "Only the section's instructors and the staff who manage it can do this."
+msgstr "सेक्सनका प्राध्यापक र त्यसको व्यवस्थापन गर्ने कर्मचारीले मात्र यो गर्न सक्छन्।"
+
+# key: attendance.errors.time_order
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "The end time must be after the start time."
+msgstr "अन्त्य समय सुरु समयभन्दा पछि हुनुपर्छ।"
+
+# key: attendance.errors.outside_session
+#: ninefruits/attendance/actions/manage_class_meetings.py ninefruits/attendance/views/portal.py
+msgid "The date is outside the session."
+msgstr "मिति सत्रभन्दा बाहिर छ।"
+
+# key: attendance.errors.duplicate_meeting
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "A meeting at that date and time already exists."
+msgstr "त्यो मिति र समयमा कक्षा पहिले नै छ।"
+
+# key: attendance.errors.already_cancelled
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "This meeting is already cancelled."
+msgstr "यो कक्षा पहिले नै रद्द भइसकेको छ।"
+
+# key: registration.errors.reason_required
+#: ninefruits/attendance/actions/manage_class_meetings.py
+msgid "Enter a reason."
+msgstr "कारण प्रविष्ट गर्नुहोस्।"
+
+# key: attendance.errors.meeting_cancelled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "This meeting is cancelled."
+msgstr "यो कक्षा रद्द गरिएको छ।"
+
+# key: attendance.errors.meeting_future
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Attendance can be entered from the day of the meeting."
+msgstr "कक्षा हुने दिनदेखि हाजिरी प्रविष्ट गर्न सकिन्छ।"
+
+# key: attendance.errors.not_enrolled
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "A student is not enrolled in this section."
+msgstr "एक विद्यार्थी यस सेक्सनमा नामांकित छैन।"
+
+# key: attendance.errors.invalid_status
+#: ninefruits/attendance/actions/record_attendance.py
+msgid "Unknown attendance status."
+msgstr "अज्ञात हाजिरी स्थिति।"
+
+# key: common.reason
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "common"
+msgid "Reason"
+msgstr "कारण"
+
+# key: attendance.fields.meetings
+# key: attendance.portal.meetings
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Class meetings"
+msgstr "कक्षाहरू"
+
+# key: attendance.actions.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Generate meetings"
+msgstr "कक्षाहरू बनाउनुहोस्"
+
+# key: attendance.portal.generated
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+#, python-format
+msgid "%(count)s meeting(s) created."
+msgstr "%(count)s कक्षा बनाइयो।"
+
+# key: attendance.help.generate
+#: ninefruits/attendance/admin/__init__.py
+msgid "Creates one meeting per occurrence of the weekly meeting times within their dates. Existing meetings and their attendance are kept."
+msgstr "साप्ताहिक कक्षा समयको मितिभित्र प्रत्येक पटकका लागि एउटा कक्षा बनाउँछ। अहिले भएका कक्षा र तिनको हाजिरी कायमै रहन्छ।"
+
+# key: attendance.portal.meeting_cancelled
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting cancelled."
+msgstr "कक्षा रद्द गरियो।"
+
+# key: attendance.portal.cancel
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Cancel"
+msgstr "रद्द गर्नुहोस्"
+
+# key: attendance.portal.meeting_restored
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/views/portal.py
+msgid "Meeting restored."
+msgstr "कक्षा पुनर्स्थापना गरियो।"
+
+# key: attendance.portal.restore
+#: ninefruits/attendance/admin/__init__.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Restore"
+msgstr "पुनर्स्थापना"
+
+# key: portal.navigation.attendance
+#: ninefruits/attendance/apps.py
+msgctxt "portal"
+msgid "Attendance"
+msgstr "हाजिरी"
+
+# key: attendance.statuses.present
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Present"
+msgstr "उपस्थित"
+
+# key: attendance.statuses.late
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Late"
+msgstr "ढिलो"
+
+# key: attendance.statuses.absent
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Absent"
+msgstr "अनुपस्थित"
+
+# key: attendance.statuses.excused
+#: ninefruits/attendance/enums.py ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Excused"
+msgstr "बिदा स्वीकृत"
+
+# key: attendance.meeting_statuses.scheduled
+#: ninefruits/attendance/enums.py
+msgid "Scheduled"
+msgstr "तालिकाबद्ध"
+
+# key: attendance.meeting_statuses.cancelled
+#: ninefruits/attendance/enums.py
+msgctxt "attendance"
+msgid "Cancelled"
+msgstr "रद्द"
+
+# key: offering.fields.section
+#: ninefruits/attendance/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "सेक्सन"
+
+# key: attendance.fields.meeting_date
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Date"
+msgstr "मिति"
+
+# key: attendance.fields.start_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Start"
+msgstr "सुरु"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "End"
+msgstr "अन्त्य"
+
+# key: offering.fields.room
+#: ninefruits/attendance/models.py
+msgid "Room"
+msgstr "कोठा"
+
+# key: registration.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/admin/class_meetings.html
+msgctxt "registration"
+msgid "Status"
+msgstr "स्थिति"
+
+#: ninefruits/attendance/models.py
+msgid "class meeting"
+msgstr "कक्षा बैठक"
+
+# key: attendance.fields.status
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.fields"
+msgid "Attendance"
+msgstr "हाजिरी"
+
+# key: attendance.fields.note
+#: ninefruits/attendance/models.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Note"
+msgstr "टिप्पणी"
+
+#: ninefruits/attendance/models.py
+msgid "attendance record"
+msgstr "हाजिरी अभिलेख"
+
+#: ninefruits/attendance/models.py
+msgid "attendance records"
+msgstr "हाजिरी अभिलेखहरू"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Student number"
+msgstr "विद्यार्थी नम्बर"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Name"
+msgstr "नाम"
+
+# key: reference.resources.programs.label
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "program"
+msgstr "कार्यक्रम"
+
+# key: people.fields.year_level
+#: ninefruits/attendance/services/roster.py ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "people"
+msgid "Year"
+msgstr "वर्ष"
+
+# key: people.fields.contact_email
+#: ninefruits/attendance/services/roster.py
+msgid "Contact email"
+msgstr "सम्पर्क इमेल"
+
+# key: attendance.fields.time
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance"
+msgid "Time"
+msgstr "समय"
+
+# key: reference.resources.rooms.label
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "room"
+msgstr "कोठा"
+
+# key: attendance.fields.recorded
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Recorded"
+msgstr "अभिलेख गरिएको"
+
+# key: attendance.portal.no_meetings
+#: ninefruits/attendance/templates/attendance/admin/class_meetings.html ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No class meetings yet. Generate them from the weekly meeting times."
+msgstr "अहिलेसम्म कक्षा छैन। साप्ताहिक कक्षा समयबाट बनाउनुहोस्।"
+
+# key: graduation.report_columns.instructors
+# key: offering.fields.instructors
+# key: permissions.resources.instructors
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "Instructors"
+msgstr "प्राध्यापकहरू"
+
+# key: attendance.sheet.printed
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+#, python-format
+msgctxt "attendance"
+msgid "Printed %(date)s"
+msgstr "%(date)s मा छापिएको"
+
+# key: attendance.sheet.present
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "P"
+msgstr "उ"
+
+# key: attendance.sheet.late
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "L"
+msgstr "ढि"
+
+# key: attendance.sheet.absent
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "A"
+msgstr "अ"
+
+# key: attendance.sheet.excused
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgctxt "attendance.sheet"
+msgid "E"
+msgstr "बि"
+
+# key: attendance.sheet.legend
+#: ninefruits/attendance/templates/attendance/pdf/attendance_sheet.html
+msgid "O present · △ late · X absent · E excused · blank not recorded"
+msgstr "O उपस्थित · △ ढिलो · X अनुपस्थित · E बिदा स्वीकृत · खाली अभिलेख गरिएको छैन"
+
+# key: attendance.portal.my_intro
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Attendance recorded by your instructors, per course."
+msgstr "तपाईंका प्राध्यापकले अभिलेख गरेको हाजिरी, विषयअनुसार।"
+
+# key: reference.resources.terms.label
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "term"
+msgstr "सेमेस्टर"
+
+# key: offering.timetable.mode
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Show"
+msgstr "देखाउनुहोस्"
+
+# key: attendance.fields.rate
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance rate"
+msgstr "हाजिरी दर"
+
+# key: attendance.portal.not_recorded
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "Not recorded"
+msgstr "अभिलेख गरिएको छैन"
+
+# key: attendance.portal.no_courses
+#: ninefruits/attendance/templates/attendance/portal/my_attendance.html
+msgid "No courses in this term."
+msgstr "यस सेमेस्टरमा कुनै विषय छैन।"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "My teaching"
+msgstr "मेरो अध्यापन"
+
+# key: attendance.portal.intro
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "%(held)s meeting(s) held, %(students)s student(s)."
+msgstr "%(held)s कक्षा सञ्चालन, %(students)s विद्यार्थी।"
+
+# key: attendance.portal.roster_csv
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster (CSV)"
+msgstr "विद्यार्थी सूची (CSV)"
+
+# key: attendance.portal.sheet_pdf
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Attendance sheet (PDF)"
+msgstr "हाजिरी पाना (PDF)"
+
+# key: attendance.portal.entry_for
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+#, python-format
+msgid "Attendance on %(date)s %(time)s"
+msgstr "%(date)s %(time)s को हाजिरी"
+
+# key: attendance.portal.mark_all_present
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "All present"
+msgstr "सबै उपस्थित"
+
+# key: evaluation.portal.back
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Back"
+msgstr "पछाडि"
+
+# key: attendance.portal.no_students
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "No students are enrolled."
+msgstr "कुनै विद्यार्थी नामांकित छैनन्।"
+
+# key: attendance.portal.save
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Save attendance"
+msgstr "हाजिरी सुरक्षित गर्नुहोस्"
+
+# key: attendance.portal.roster
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Roster"
+msgstr "विद्यार्थी सूची"
+
+# key: people.sections.photo
+# key: people.fields.photo
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Photo"
+msgstr "फोटो"
+
+# key: attendance.portal.generate
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Generate from meeting times"
+msgstr "कक्षा समयबाट बनाउनुहोस्"
+
+# key: attendance.portal.enter
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgctxt "attendance.portal"
+msgid "Attendance"
+msgstr "हाजिरी"
+
+# key: attendance.portal.cancel_reason
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Why is this meeting cancelled? (holiday, instructor absence, ...)"
+msgstr "यो कक्षा किन रद्द भयो? (बिदा, प्राध्यापक अनुपस्थित, ...)"
+
+# key: attendance.portal.add_meeting
+#: ninefruits/attendance/templates/attendance/portal/section_attendance.html
+msgid "Add a meeting"
+msgstr "कक्षा थप्नुहोस्"
+
+# key: attendance.sheet.marks.present
+#: ninefruits/attendance/views/downloads.py
+msgid "O"
+msgstr "O"
+
+# key: attendance.sheet.marks.late
+#: ninefruits/attendance/views/downloads.py
+msgid "△"
+msgstr "△"
+
+# key: attendance.sheet.marks.absent
+#: ninefruits/attendance/views/downloads.py
+msgid "X"
+msgstr "X"
+
+# key: attendance.sheet.marks.excused
+#: ninefruits/attendance/views/downloads.py
+msgctxt "attendance.sheet.marks"
+msgid "E"
+msgstr "E"
+
+# key: attendance.sheet.title
+#: ninefruits/attendance/views/downloads.py
+msgid "Attendance sheet"
+msgstr "हाजिरी पाना"
+
+#: ninefruits/attendance/views/downloads.py
+msgid "The PDF could not be created. Try again later."
+msgstr "PDF बनाउन सकिएन। केही समयपछि फेरि प्रयास गर्नुहोस्।"
+
+# key: attendance.portal.open
+#: ninefruits/attendance/views/portal.py
+msgctxt "attendance"
+msgid "Open"
+msgstr "खोल्नुहोस्"
+
+# key: attendance.portal.title
+#: ninefruits/attendance/views/portal.py
+msgid "Roster and attendance"
+msgstr "विद्यार्थी सूची र हाजिरी"
+
+# key: attendance.portal.saved
+#: ninefruits/attendance/views/portal.py
+msgid "Attendance saved."
+msgstr "हाजिरी सुरक्षित गरियो।"
+
+# key: attendance.portal.meeting_added
+#: ninefruits/attendance/views/portal.py
+msgid "Meeting added."
+msgstr "कक्षा थपियो।"
+
+# key: attendance.portal.my_title
+#: ninefruits/attendance/views/portal.py
+msgid "My attendance"
+msgstr "मेरो हाजिरी"

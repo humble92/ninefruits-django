@@ -315,7 +315,7 @@ msgstr "ອອກຈາກລະບົບ"
 #: ninefruits/i18n/vendor_strings.py
 #, python-format
 msgid "Add %(name)s"
-msgstr "ເພີ່ມ %(name)s"
+msgstr "ເພີ່ມ%(name)s"
 
 # vendor: Django/allauth/unfold
 #: ninefruits/i18n/vendor_strings.py
@@ -1228,3 +1228,11 @@ msgstr "ຕ້ອງການສະໝັກບໍ?"
 # key: admissions.register.see_cycles
 msgid "See open admissions"
 msgstr "ເບິ່ງຮອບທີ່ເປີດຮັບ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "ຜູ້ໃຊ້"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "ຜູ້ໃຊ້"

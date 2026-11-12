@@ -107,9 +107,7 @@ msgid "Synchronized: %(members)s member(s)."
 msgstr "ຊິງຄ໌ແລ້ວ: ສະມາຊິກ %(members)s ຄົນ."
 
 #: admin/course_links.py
-msgid ""
-"Pushes the course, its instructors and its enrolled students to the platform"
-" again."
+msgid "Pushes the course, its instructors and its enrolled students to the platform again."
 msgstr "ສົ່ງຫ້ອງຮຽນ, ອາຈານຜູ້ສອນ ແລະ ນັກສຶກສາທີ່ລົງທະບຽນຮຽນໄປແພລັດຟອມອີກຄັ້ງ."
 
 #: admin/platforms.py
@@ -130,12 +128,8 @@ msgstr "ໄດຣເວີ"
 
 # key: lms.help.driver
 #: admin/platforms.py
-msgid ""
-"The connector that talks to the platform. \"null\" records what would be "
-"sent without calling anything; use it to prepare and test."
-msgstr ""
-"ຕົວເຊື່ອມຕໍ່ທີ່ສື່ສານກັບແພລດຟອມ. \"null\" "
-"ບັນທຶກສິ່ງທີ່ຈະຖືກສົ່ງໂດຍບໍ່ເອີ້ນໃຊ້ຫຍັງເລີຍ; ໃຊ້ເພື່ອກຽມ ແລະ ທົດສອບ."
+msgid "The connector that talks to the platform. \"null\" records what would be sent without calling anything; use it to prepare and test."
+msgstr "ຕົວເຊື່ອມຕໍ່ທີ່ສື່ສານກັບແພລດຟອມ. \"null\" ບັນທຶກສິ່ງທີ່ຈະຖືກສົ່ງໂດຍບໍ່ເອີ້ນໃຊ້ຫຍັງເລີຍ; ໃຊ້ເພື່ອກຽມ ແລະ ທົດສອບ."
 
 # key: lms.fields.base_url
 #: admin/platforms.py models.py
@@ -149,12 +143,8 @@ msgstr "ຂໍ້ມູນການເຂົ້າເຖິງ"
 
 # key: lms.help.credentials
 #: admin/platforms.py
-msgid ""
-"Tokens and secrets the driver needs (see docs/lms-integration-guide.md). "
-"Stored encrypted; leave empty on edit to keep the stored ones."
-msgstr ""
-"ໂທເຄັນ ແລະ ລະຫັດລັບທີ່ໄດຣເວີຕ້ອງການ (ເບິ່ງ docs/lms-integration-guide.md). "
-"ເກັບແບບເຂົ້າລະຫັດ; ປ່ອຍຫວ່າງເມື່ອແກ້ໄຂເພື່ອຮັກສາຄ່າທີ່ເກັບໄວ້."
+msgid "Tokens and secrets the driver needs (see docs/lms-integration-guide.md). Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr "ໂທເຄັນ ແລະ ລະຫັດລັບທີ່ໄດຣເວີຕ້ອງການ (ເບິ່ງ docs/lms-integration-guide.md). ເກັບແບບເຂົ້າລະຫັດ; ປ່ອຍຫວ່າງເມື່ອແກ້ໄຂເພື່ອຮັກສາຄ່າທີ່ເກັບໄວ້."
 
 #: admin/platforms.py
 msgid "One key=value per line, e.g. token=..."
@@ -162,20 +152,13 @@ msgstr "ແຖວລະໜຶ່ງ key=value, ເຊັ່ນ token=..."
 
 # key: lms.help.is_active
 #: admin/platforms.py
-msgid ""
-"Active platforms receive published sections and roster changes as they "
-"happen, and the nightly reconcile."
-msgstr ""
-"ແພລດຟອມທີ່ເປີດໃຊ້ຈະໄດ້ຮັບກຸ່ມຮຽນທີ່ເຜີຍແຜ່ ແລະ ການປ່ຽນແປງລາຍຊື່ຜູ້ຮຽນທັນທີ, "
-"ພ້ອມທັງການກວດທຽບປະຈຳຄືນ."
+msgid "Active platforms receive published sections and roster changes as they happen, and the nightly reconcile."
+msgstr "ແພລດຟອມທີ່ເປີດໃຊ້ຈະໄດ້ຮັບກຸ່ມຮຽນທີ່ເຜີຍແຜ່ ແລະ ການປ່ຽນແປງລາຍຊື່ຜູ້ຮຽນທັນທີ, ພ້ອມທັງການກວດທຽບປະຈຳຄືນ."
 
 # key: lms.help.should_pull_grades
 #: admin/platforms.py
-msgid ""
-"Lets instructors load the platform's final scores into the grade entry "
-"screen as a draft."
-msgstr ""
-"ອະນຸຍາດໃຫ້ອາຈານໂຫຼດຄະແນນສຸດທ້າຍຈາກແພລດຟອມເຂົ້າໜ້າປ້ອນເກຣດເປັນສະບັບຮ່າງ."
+msgid "Lets instructors load the platform's final scores into the grade entry screen as a draft."
+msgstr "ອະນຸຍາດໃຫ້ອາຈານໂຫຼດຄະແນນສຸດທ້າຍຈາກແພລດຟອມເຂົ້າໜ້າປ້ອນເກຣດເປັນສະບັບຮ່າງ."
 
 #: admin/platforms.py
 msgid "This code is already used."
@@ -356,13 +339,16 @@ msgstr "ໂຫຼດຄະແນນຈາກ LMS"
 # key: grading.entry.lms_imported
 #: services/grades.py
 #, python-format
-msgid ""
-"%(count)s score(s) loaded from the LMS as a draft. Check them and save."
-msgstr ""
-"ໂຫຼດຄະແນນ %(count)s ລາຍການຈາກ LMS ເປັນຮ່າງແລ້ວ. ກະລຸນາກວດສອບ ແລະ ບັນທຶກ."
+msgid "%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "ໂຫຼດຄະແນນ %(count)s ລາຍການຈາກ LMS ເປັນຮ່າງແລ້ວ. ກະລຸນາກວດສອບ ແລະ ບັນທຶກ."
 
 # key: lms.portal.open_course
 #: services/portal.py
 #, python-format
 msgid "Open the course on %(platform)s"
 msgstr "ເປີດວິຊາໃນ %(platform)s"
+
+# key: lms.fields.not_implemented
+#: ninefruits/lms/admin/platforms.py
+msgid "not implemented yet"
+msgstr "ຍັງບໍ່ໄດ້ພັດທະນາ"

@@ -1,0 +1,786 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: tr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: registration.errors.reason_required
+#: ninefruits/assessment/actions/_support.py
+msgid "Enter a reason."
+msgstr "Gerekçe girin."
+
+# key: assessment.errors.pass_score_published
+#: ninefruits/assessment/actions/change_session_pass_score.py
+msgid "The results are published: the pass score cannot change. Use correction requests."
+msgstr "Sonuçlar yayımlandı: geçme puanı değiştirilemez. Düzeltme talebi kullanın."
+
+# key: assessment.errors.not_locked
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "This result is not published; enter it directly."
+msgstr "Bu sonuç yayımlanmadı; doğrudan girin."
+
+# key: assessment.errors.correction_pending
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "A correction request is already pending for this result."
+msgstr "Bu sonuç için bekleyen bir düzeltme talebi zaten var."
+
+# key: grading.errors.request_decided
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "The request is already decided."
+msgstr "Talep hakkında zaten karar verildi."
+
+# key: assessment.errors.own_correction
+#: ninefruits/assessment/actions/correct_assessment_result.py
+msgid "You cannot decide your own correction request."
+msgstr "Kendi düzeltme talebiniz hakkında karar veremezsiniz."
+
+# key: assessment.errors.not_registered
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/actions/register_for_assessment.py
+msgid "The student is not registered for this session."
+msgstr "Öğrenci bu oturuma kayıtlı değil."
+
+# key: assessment.errors.published_locked
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are published: request a correction instead."
+msgstr "Bu oturumun sonuçları yayımlandı: bunun yerine düzeltme isteyin."
+
+# key: assessment.errors.no_external
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind does not take external results."
+msgstr "Bu tür dış sonuç kabul etmiyor."
+
+# key: assessment.errors.future_date
+#: ninefruits/assessment/actions/record_assessment_result.py ninefruits/assessment/admin/forms.py
+msgid "The date cannot be in the future."
+msgstr "Tarih gelecekte olamaz."
+
+# key: assessment.errors.already_published
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "The results of this session are already published."
+msgstr "Bu oturumun sonuçları zaten yayımlandı."
+
+# key: assessment.errors.score_missing
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s is missing."
+msgstr "%(component)s için puan eksik."
+
+# key: assessment.errors.score_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The score for %(component)s must be between 0 and %(max)s."
+msgstr "%(component)s puanı 0 ile %(max)s arasında olmalıdır."
+
+# key: assessment.errors.total_range
+#: ninefruits/assessment/actions/record_assessment_result.py
+#, python-format
+msgid "The total must be between 0 and %(max)s."
+msgstr "Toplam 0 ile %(max)s arasında olmalıdır."
+
+# key: assessment.errors.decision_required
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "Choose passed or not passed."
+msgstr "Başarılı veya başarısız seçin."
+
+# key: assessment.errors.no_pass_score
+#: ninefruits/assessment/actions/record_assessment_result.py
+msgid "This kind has no pass score: choose passed or not passed."
+msgstr "Bu türün geçme puanı yok: başarılı veya başarısız seçin."
+
+# key: assessment.errors.type_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This kind of examination is no longer held."
+msgstr "Bu sınav türü artık yapılmıyor."
+
+# key: assessment.errors.record_inactive
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Only current students can register."
+msgstr "Yalnızca kayıtlı öğrenciler kaydolabilir."
+
+# key: assessment.errors.registration_closed
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Registration for this session is closed."
+msgstr "Bu oturum için kayıtlar kapandı."
+
+# key: assessment.errors.session_past
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session has already been held."
+msgstr "Bu oturum zaten yapıldı."
+
+# key: assessment.errors.already_registered
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "Already registered for this session."
+msgstr "Bu oturuma zaten kayıtlı."
+
+# key: assessment.errors.full
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This session is full."
+msgstr "Bu oturumun kontenjanı dolu."
+
+# key: assessment.errors.already_cancelled
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "This registration is already cancelled."
+msgstr "Bu kayıt zaten iptal edildi."
+
+# key: assessment.errors.has_result
+#: ninefruits/assessment/actions/register_for_assessment.py
+msgid "A result has been entered; the registration cannot be cancelled."
+msgstr "Sonuç girildi; kayıt iptal edilemez."
+
+# key: assessment.fields.type
+#: ninefruits/assessment/admin/common.py ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Kind"
+msgstr "Tür"
+
+# key: assessment.fields.is_passed
+# key: assessment.passed.yes
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Passed"
+msgstr "Başarılı"
+
+# key: assessment.passed.no
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Not passed"
+msgstr "Başarısız"
+
+# key: registration.fields.status
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Durum"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Student number"
+msgstr "Öğrenci numarası"
+
+# key: assessment.fields.previous
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Current values"
+msgstr "Mevcut değerler"
+
+# key: assessment.fields.proposed
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgid "Proposed values"
+msgstr "Önerilen değerler"
+
+# key: common.reason
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Gerekçe"
+
+# key: grading.fields.requested_by
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Requested by"
+msgstr "Talep eden"
+
+# key: grading.fields.decision_note
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Note"
+msgstr "Not"
+
+# key: grading.actions.approve
+# key: people.actions.approve
+#: ninefruits/assessment/admin/corrections.py
+msgid "Approve"
+msgstr "Onayla"
+
+# key: assessment.correction_statuses.approved
+# key: grading.change_statuses.approved
+# key: graduation.waiver_statuses.approved
+# key: people.additional_program_request_statuses.approved
+# key: people.status_change_statuses.approved
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Approved"
+msgstr "Onaylandı"
+
+# key: grading.actions.reject
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Reject"
+msgstr "Reddet"
+
+# key: assessment.correction_statuses.rejected
+# key: grading.change_statuses.rejected
+# key: graduation.waiver_statuses.rejected
+# key: people.additional_program_request_statuses.rejected
+# key: people.status_change_statuses.rejected
+#: ninefruits/assessment/admin/corrections.py ninefruits/assessment/enums.py
+msgid "Rejected"
+msgstr "Reddedildi"
+
+# key: grading.actions.cancel_request
+#: ninefruits/assessment/admin/corrections.py
+msgctxt "grading"
+msgid "Cancel request"
+msgstr "Talebi iptal et"
+
+# key: validation.alpha_dash
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s yalnızca harf, rakam, tire ve alt çizgi içermelidir."
+
+# key: assessment.fields.note
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Note"
+msgstr "Not"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/assessment/admin/forms.py
+msgid "Code"
+msgstr "Kod"
+
+# key: validation.unique
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s has already been taken."
+msgstr "%(attribute)s zaten kullanılıyor."
+
+# key: assessment.fields.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Reason for changing the pass score"
+msgstr "Geçme puanını değiştirme gerekçesi"
+
+# key: assessment.help.pass_score_reason
+#: ninefruits/assessment/admin/forms.py
+msgid "Recorded in the audit log with the students whose result changed."
+msgstr "Sonucu değişen öğrencilerle birlikte denetim günlüğüne kaydedilir."
+
+# key: validation.after
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "%(attribute)s %(date)s tarihinden sonra bir tarih olmalıdır."
+
+# key: assessment.fields.registration_closes_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registration closes"
+msgstr "Kayıt kapanışı"
+
+# key: assessment.fields.registration_opens_at
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/sessions.py
+msgid "Registration opens"
+msgstr "Kayıt açılışı"
+
+# key: assessment.fields.file
+#: ninefruits/assessment/admin/forms.py
+msgid "CSV file"
+msgstr "CSV dosyası"
+
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "Dosya çok büyük (%(size)s bayt, en fazla %(limit)s)."
+
+# key: assessment.fields.total_score
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/admin/registrants.html ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Total"
+msgstr "Toplam"
+
+# key: assessment.help.decision_automatic
+#: ninefruits/assessment/admin/forms.py
+#, python-format
+msgid "Decided from the scores: total at or above %(score)s and every area at or above its minimum."
+msgstr "Puanlara göre belirlenir: toplam %(score)s veya üzeri ve her bölüm en düşük puanında ya da üzerinde."
+
+# key: assessment.fields.taken_date
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Taken on"
+msgstr "Sınav tarihi"
+
+# key: assessment.fields.level
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Level"
+msgstr "Seviye"
+
+# key: assessment.fields.certificate_number
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgid "Certificate number"
+msgstr "Sertifika numarası"
+
+# key: assessment.fields.evidence
+#: ninefruits/assessment/admin/forms.py ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Evidence"
+msgstr "Kanıt belgesi"
+
+# key: assessment.fields.source
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/models/results.py
+msgctxt "assessment"
+msgid "Source"
+msgstr "Kaynak"
+
+# key: common.yes
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "Yes"
+msgstr "Evet"
+
+# upstream: Django/allauth catalog
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/admin/sessions.py
+msgid "No"
+msgstr "Hayır"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/assessment/admin/results.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "people"
+msgid "Name"
+msgstr "Ad"
+
+# key: assessment.actions.record_external
+#: ninefruits/assessment/admin/results.py
+msgid "Record an external result"
+msgstr "Dış sonuç kaydet"
+
+# key: assessment.actions.remove
+#: ninefruits/assessment/admin/results.py
+msgctxt "assessment"
+msgid "Remove"
+msgstr "Kaldır"
+
+# key: assessment.fields.published_at
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Results published"
+msgstr "Sonuçların yayımlanması"
+
+# key: assessment.fields.venue
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Venue"
+msgstr "Yer"
+
+# key: assessment.fields.registrants
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/models/sessions.py
+msgid "Registrants"
+msgstr "Kayıtlılar"
+
+# key: assessment.fields.results
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Results"
+msgstr "Sonuçlar"
+
+# key: assessment.notifications.rejudged
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(count)s result(s) judged again: %(passed)s now passed, %(failed)s now failed."
+msgstr "%(count)s sonuç yeniden değerlendirildi: %(passed)s sonuç artık başarılı, %(failed)s sonuç artık başarısız."
+
+# key: security.scope_types.global
+#: ninefruits/assessment/admin/sessions.py
+msgid "All"
+msgstr "Tümü"
+
+# key: assessment.actions.publish
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Publish results"
+msgstr "Sonuçları yayımla"
+
+# key: assessment.help.publish
+#: ninefruits/assessment/admin/sessions.py
+msgid "Students see their results from now on. Results entered later are visible at once."
+msgstr "Öğrenciler sonuçlarını bundan sonra görür. Sonradan girilen sonuçlar hemen görünür."
+
+#: ninefruits/assessment/admin/sessions.py
+msgid "The file is not UTF-8 text."
+msgstr "Dosya UTF-8 metin değil."
+
+# key: assessment.notifications.imported
+#: ninefruits/assessment/admin/sessions.py
+#, python-format
+msgid "%(recorded)s recorded, %(absent)s absent, %(errors)s error(s)."
+msgstr "%(recorded)s kaydedildi, %(absent)s girmedi, %(errors)s hata."
+
+# key: assessment.actions.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "Import results (CSV)"
+msgstr "Sonuçları içe aktar (CSV)"
+
+# key: assessment.help.import
+#: ninefruits/assessment/admin/sessions.py
+msgid "CSV with a header row: student_number, a column per area code (or total), optionally passed (Y/N), absent (Y) and note. Rows of students not registered are skipped."
+msgstr "Başlık satırı olan CSV: student_number, her bölüm kodu için bir sütun (veya total), isteğe bağlı olarak passed (Y/N), absent (Y) ve note. Kayıtlı olmayan öğrencilerin satırları atlanır."
+
+# key: assessment.actions.register_student
+#: ninefruits/assessment/admin/sessions.py
+msgctxt "assessment"
+msgid "Register a student"
+msgstr "Öğrenci kaydet"
+
+# key: assessment.registration_statuses.registered
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py
+msgctxt "assessment.registration_statuses"
+msgid "Registered"
+msgstr "Kayıtlı"
+
+# key: assessment.actions.enter_result
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Enter result"
+msgstr "Sonuç gir"
+
+# key: assessment.actions.request_correction
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Request a correction"
+msgstr "Düzeltme iste"
+
+# key: assessment.help.correction
+#: ninefruits/assessment/admin/sessions.py
+msgid "The results of this session are published. Propose the new values with a reason; someone else with the manage permission approves and the change is applied."
+msgstr "Bu oturumun sonuçları yayımlandı. Yeni değerleri gerekçesiyle önerin; yönetme yetkisine sahip başka bir kişi onayladığında değişiklik uygulanır."
+
+# key: assessment.actions.absent
+# key: assessment.registration_statuses.absent
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/enums.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment"
+msgid "Absent"
+msgstr "Girmedi"
+
+# key: assessment.actions.cancel
+#: ninefruits/assessment/admin/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgid "Cancel registration"
+msgstr "Kaydı iptal et"
+
+# key: assessment.fields.components
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Areas"
+msgstr "Bölümler"
+
+# key: reference.fields.name
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Ad"
+
+# key: assessment.fields.category
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Category"
+msgstr "Kategori"
+
+# key: assessment.fields.scoring
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/types.py
+msgid "Scoring"
+msgstr "Puanlama"
+
+# key: assessment.fields.pass_score
+#: ninefruits/assessment/admin/types.py ninefruits/assessment/models/sessions.py ninefruits/assessment/models/types.py
+msgid "Pass score"
+msgstr "Geçme puanı"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/apps.py
+msgctxt "portal"
+msgid "Examinations"
+msgstr "Sınavlar"
+
+# key: assessment.categories.language
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Language"
+msgstr "Dil"
+
+# key: assessment.categories.comprehensive
+#: ninefruits/assessment/enums.py
+msgid "Comprehensive"
+msgstr "Yeterlik"
+
+# key: assessment.categories.thesis
+#: ninefruits/assessment/enums.py
+msgid "Thesis"
+msgstr "Tez"
+
+# key: assessment.categories.external
+#: ninefruits/assessment/enums.py
+msgid "External test"
+msgstr "Dış sınav"
+
+# key: assessment.scoring_methods.score
+#: ninefruits/assessment/enums.py ninefruits/assessment/models/results.py
+msgid "Score"
+msgstr "Puan"
+
+# key: assessment.scoring_methods.pass_fail
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pass/fail"
+msgstr "Başarılı/başarısız"
+
+# key: assessment.correction_statuses.cancelled
+# key: assessment.registration_statuses.cancelled
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Cancelled"
+msgstr "İptal edildi"
+
+# key: assessment.correction_statuses.pending
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Pending"
+msgstr "Beklemede"
+
+# key: assessment.sources.session
+#: ninefruits/assessment/enums.py
+msgctxt "assessment"
+msgid "Session"
+msgstr "Oturum"
+
+# key: assessment.sources.external
+#: ninefruits/assessment/enums.py
+msgid "External"
+msgstr "Dış"
+
+# key: people.resources.student_records.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "student record"
+msgstr "öğrenci kaydı"
+
+# key: assessment.resources.sessions.label
+#: ninefruits/assessment/models/results.py ninefruits/assessment/models/sessions.py
+msgid "Examination session"
+msgstr "Sınav oturumu"
+
+# key: assessment.resources.results.label
+#: ninefruits/assessment/models/results.py
+msgid "Examination result"
+msgstr "Sınav sonucu"
+
+# key: assessment.resources.results.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Examination results"
+msgstr "Sınav sonuçları"
+
+# key: grading.fields.requested_at
+#: ninefruits/assessment/models/results.py
+msgctxt "grading"
+msgid "Requested"
+msgstr "Talep tarihi"
+
+# key: assessment.resources.corrections.label
+#: ninefruits/assessment/models/results.py
+msgid "Result correction"
+msgstr "Sonuç düzeltmesi"
+
+# key: assessment.resources.corrections.plural_label
+#: ninefruits/assessment/models/results.py
+msgid "Result corrections"
+msgstr "Sonuç düzeltmeleri"
+
+# key: assessment.fields.held_date
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Date"
+msgstr "Tarih"
+
+# key: assessment.fields.capacity
+#: ninefruits/assessment/models/sessions.py
+msgctxt "assessment"
+msgid "Capacity"
+msgstr "Kontenjan"
+
+# key: assessment.help.session_pass_score
+#: ninefruits/assessment/models/sessions.py
+msgid "Leave empty to use the kind's pass score. Changing it before publication judges every entered result again; after publication it is fixed."
+msgstr "Türün geçme puanını kullanmak için boş bırakın. Yayımlamadan önce değiştirilirse girilmiş tüm sonuçlar yeniden değerlendirilir; yayımlandıktan sonra sabittir."
+
+# key: assessment.resources.sessions.plural_label
+#: ninefruits/assessment/models/sessions.py
+msgid "Examination sessions"
+msgstr "Sınav oturumları"
+
+# key: assessment.fields.registered_at
+#: ninefruits/assessment/models/sessions.py ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "assessment.fields"
+msgid "Registered"
+msgstr "Kayıt tarihi"
+
+# key: reference.fields.code
+#: ninefruits/assessment/models/types.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: assessment.help.scoring
+#: ninefruits/assessment/models/types.py
+msgid "Score: the areas (or one total) against the pass score, with each area at or above its minimum. Pass/fail: staff decide for each student."
+msgstr "Puan: bölümler (veya tek bir toplam) geçme puanıyla karşılaştırılır ve her bölüm en düşük puanına ulaşmalıdır. Başarılı/başarısız: personel her öğrenci için karar verir."
+
+# key: assessment.fields.max_score
+#: ninefruits/assessment/models/types.py
+msgid "Maximum score"
+msgstr "En yüksek puan"
+
+# key: assessment.help.max_score
+#: ninefruits/assessment/models/types.py
+msgid "For kinds without areas. With areas, the maximum is their sum."
+msgstr "Bölümü olmayan türler için. Bölümler varsa en yüksek puan bunların toplamıdır."
+
+# key: assessment.help.pass_score
+#: ninefruits/assessment/models/types.py
+msgid "Total needed to pass. A session can override it."
+msgstr "Geçmek için gereken toplam. Bir oturum bunu değiştirebilir."
+
+# key: assessment.fields.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "External results"
+msgstr "Dış sonuçlar"
+
+# key: assessment.help.allows_external
+#: ninefruits/assessment/models/types.py
+msgid "Results from an outside body (TOPIK, HSK, ...) can be recorded with an evidence file."
+msgstr "Dış bir kurumun sonuçları (TOPIK, HSK, ...) bir kanıt dosyasıyla kaydedilebilir."
+
+# key: reference.fields.is_active
+#: ninefruits/assessment/models/types.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Etkin"
+
+# key: reference.fields.sort_order
+#: ninefruits/assessment/models/types.py
+msgid "Order"
+msgstr "Sıra"
+
+# key: assessment.resources.types.label
+# key: curriculum.fields.assessment_type
+#: ninefruits/assessment/models/types.py
+msgid "Examination kind"
+msgstr "Sınav türü"
+
+# key: assessment.resources.types.plural_label
+#: ninefruits/assessment/models/types.py
+msgid "Examination kinds"
+msgstr "Sınav türleri"
+
+# key: assessment.help.component_code
+#: ninefruits/assessment/models/types.py
+msgid "Column name in the results CSV, e.g. LISTENING."
+msgstr "Sonuç CSV dosyasındaki sütun adı, ör. LISTENING."
+
+# key: assessment.fields.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Minimum to pass"
+msgstr "Geçmek için en düşük puan"
+
+# key: assessment.help.min_score
+#: ninefruits/assessment/models/types.py
+msgid "Below this the student fails whatever the total."
+msgstr "Bunun altında kalan öğrenci, toplamı ne olursa olsun başarısız olur."
+
+# key: common.none
+#: ninefruits/assessment/templates/assessment/admin/registrants.html
+msgctxt "common"
+msgid "None"
+msgstr "Yok"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html ninefruits/assessment/views/portal.py
+msgid "Examinations"
+msgstr "Sınavlar"
+
+# key: assessment.portal.intro
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Register for examination sessions and see your results once they are published."
+msgstr "Sınav oturumlarına kaydolun ve sonuçlarınızı yayımlandıktan sonra görün."
+
+# key: assessment.portal.required
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Required by your curriculum"
+msgstr "Müfredatınızda zorunlu"
+
+# key: assessment.portal.not_yet
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Not yet"
+msgstr "Henüz değil"
+
+# key: assessment.portal.open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Open for registration"
+msgstr "Kayda açık"
+
+# key: assessment.portal.closes
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+#, python-format
+msgid "Registration closes %(time)s"
+msgstr "Kayıt kapanışı: %(time)s"
+
+# key: assessment.portal.confirm_cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "Cancel this registration?"
+msgstr "Bu kayıt iptal edilsin mi?"
+
+# key: assessment.portal.cancel
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Cancel"
+msgstr "İptal et"
+
+# key: assessment.portal.register
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "Register"
+msgstr "Kaydol"
+
+# key: assessment.portal.no_open_sessions
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No session is open for registration."
+msgstr "Kayda açık oturum yok."
+
+# key: assessment.portal.my_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgctxt "assessment"
+msgid "My registrations"
+msgstr "Kayıtlarım"
+
+# key: assessment.portal.no_registrations
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No registrations."
+msgstr "Kayıt yok."
+
+# key: assessment.portal.my_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "My results"
+msgstr "Sonuçlarım"
+
+# key: assessment.portal.no_results
+#: ninefruits/assessment/templates/assessment/portal/my_assessments.html
+msgid "No results yet."
+msgstr "Henüz sonuç yok."
+
+# key: assessment.portal.registered
+#: ninefruits/assessment/views/portal.py
+msgid "You are registered."
+msgstr "Kaydınız yapıldı."
+
+# key: assessment.portal.cancelled
+#: ninefruits/assessment/views/portal.py
+msgid "Your registration is cancelled."
+msgstr "Kaydınız iptal edildi."

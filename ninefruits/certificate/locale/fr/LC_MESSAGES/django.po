@@ -1,0 +1,519 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: certificate.errors.type_inactive
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This kind of certificate is not issued any more."
+msgstr "Ce type d’attestation n’est plus délivré."
+
+# key: certificate.errors.hold
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "A hold blocks certificates for this student. Lift it first."
+msgstr "Un blocage empêche la délivrance d’attestations pour cet étudiant. Levez-le d’abord."
+
+# key: certificate.errors.no_template
+#: ninefruits/certificate/actions/issue_certificate.py ninefruits/certificate/services/renderer.py
+#, python-format
+msgid "This kind has no template for the language \"%(locale)s\"."
+msgstr "Ce type n’a pas de modèle pour la langue « %(locale)s »."
+
+# key: certificate.errors.already_revoked
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "This certificate is already revoked."
+msgstr "Cette attestation est déjà révoquée."
+
+# key: registration.errors.reason_required
+#: ninefruits/certificate/actions/issue_certificate.py
+msgid "Enter a reason."
+msgstr "Saisissez un motif."
+
+# key: certificate.errors.audience
+#: ninefruits/certificate/actions/issue_certificate.py
+#, python-format
+msgid "This certificate is only for: %(audience)s."
+msgstr "Cette attestation est réservée aux : %(audience)s."
+
+# key: certificate.fields.type
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate"
+msgid "Kind"
+msgstr "Type"
+
+# key: common.language
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "common"
+msgid "Language"
+msgstr "Langue"
+
+# key: certificate.fields.purpose
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Purpose"
+msgstr "Objet"
+
+# key: certificate.fields.copies
+#: ninefruits/certificate/admin/common.py ninefruits/certificate/models.py
+msgid "Copies"
+msgstr "Exemplaires"
+
+# key: common.reason
+#: ninefruits/certificate/admin/common.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Motif"
+
+# key: registration.fields.status
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgctxt "registration"
+msgid "Status"
+msgstr "Statut"
+
+# key: certificate.facts.student_number
+# key: graduation.report_columns.student_number
+# key: people.fields.student_number
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/services/renderer.py
+msgid "Student number"
+msgstr "Numéro d’étudiant"
+
+# key: people.fields.name
+# key: people.sections.name
+#: ninefruits/certificate/admin/issues.py
+msgctxt "people"
+msgid "Name"
+msgstr "Nom"
+
+# key: certificate.fields.issued_by
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/models.py
+msgid "Issued by"
+msgstr "Délivrée par"
+
+# key: certificate.actions.download
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "PDF"
+msgstr "PDF"
+
+# key: certificate.actions.verify_page
+#: ninefruits/certificate/admin/issues.py
+msgid "Verification page"
+msgstr "Page de vérification"
+
+# key: certificate.actions.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Render again"
+msgstr "Régénérer"
+
+#: ninefruits/certificate/admin/issues.py ninefruits/certificate/admin/student_record.py
+msgid "The PDF could not be created. Try again later."
+msgstr "Le PDF n’a pas pu être créé. Réessayez plus tard."
+
+# key: common.saved
+#: ninefruits/certificate/admin/issues.py
+msgid "Saved"
+msgstr "Enregistré"
+
+# key: certificate.help.rerender
+#: ninefruits/certificate/admin/issues.py
+msgid "Renders the PDF again from the current data and template. The serial number and verification code stay."
+msgstr "Génère à nouveau le PDF à partir des données et du modèle actuels. Le numéro de série et le code de vérification sont conservés."
+
+# key: certificate.actions.revoke
+#: ninefruits/certificate/admin/issues.py
+msgctxt "certificate"
+msgid "Revoke"
+msgstr "Révoquer"
+
+# key: certificate.actions.issue
+#: ninefruits/certificate/admin/student_record.py
+msgid "Issue certificate"
+msgstr "Délivrer une attestation"
+
+# key: certificate.notifications.issued
+#: ninefruits/certificate/admin/student_record.py
+#, python-format
+msgid "Certificate %(serial)s issued."
+msgstr "Attestation %(serial)s délivrée."
+
+# key: reference.fields.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: certificate.help.code
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Used in serial numbers, e.g. ENR, GRD, TRN."
+msgstr "Utilisé dans les numéros de série, p. ex. ENR, GRD, TRN."
+
+# key: certificate.help.body
+#: ninefruits/certificate/admin/types.py
+#, python-format
+msgid "Paragraphs separated by a blank line. Placeholders: %(placeholders)s"
+msgstr "Paragraphes séparés par une ligne vide. Variables : %(placeholders)s"
+
+# key: certificate.fields.templates
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgid "Templates"
+msgstr "Modèles"
+
+# key: reference.fields.name
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nom"
+
+# key: certificate.fields.audience
+#: ninefruits/certificate/admin/types.py ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "For"
+msgstr "Destinataires"
+
+# key: portal.navigation.certificates
+#: ninefruits/certificate/apps.py
+msgctxt "portal"
+msgid "Certificates"
+msgstr "Attestations"
+
+# key: certificate.audiences.any
+#: ninefruits/certificate/enums.py
+msgid "Any student record"
+msgstr "Tout dossier étudiant"
+
+# key: certificate.audiences.enrolled
+#: ninefruits/certificate/enums.py
+msgid "Students (not graduated)"
+msgstr "Étudiants (non diplômés)"
+
+# key: certificate.audiences.graduated
+#: ninefruits/certificate/enums.py
+msgid "Graduates"
+msgstr "Diplômés"
+
+# key: certificate.statuses.issued
+#: ninefruits/certificate/enums.py
+msgctxt "certificate.statuses"
+msgid "Issued"
+msgstr "Délivrée"
+
+# key: certificate.statuses.revoked
+#: ninefruits/certificate/enums.py
+msgctxt "certificate"
+msgid "Revoked"
+msgstr "Révoquée"
+
+# key: certificate.verify.invalid_unknown
+#: ninefruits/certificate/enums.py
+msgid "No certificate matches this code."
+msgstr "Aucune attestation ne correspond à ce code."
+
+# key: certificate.verify.invalid_revoked
+#: ninefruits/certificate/enums.py
+msgid "This certificate has been revoked."
+msgstr "Cette attestation a été révoquée."
+
+# key: certificate.verify.invalid_expired
+#: ninefruits/certificate/enums.py
+msgid "The verification period for this certificate has ended. Ask the holder for a current one."
+msgstr "La période de vérification de cette attestation est terminée. Demandez-en une récente à son titulaire."
+
+# key: certificate.fields.has_grades
+#: ninefruits/certificate/models.py
+msgid "Includes grades"
+msgstr "Inclut les notes"
+
+# key: certificate.help.has_grades
+#: ninefruits/certificate/models.py
+msgid "Adds a table of the finalized grades by term (transcript)."
+msgstr "Ajoute un tableau des notes définitives par semestre (relevé de notes)."
+
+# key: certificate.fields.has_photo
+#: ninefruits/certificate/models.py
+msgid "Includes photo"
+msgstr "Inclut la photo"
+
+# key: reference.fields.is_active
+#: ninefruits/certificate/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Actif"
+
+# key: reference.fields.sort_order
+#: ninefruits/certificate/models.py
+msgid "Order"
+msgstr "Ordre"
+
+# key: certificate.resources.types.label
+#: ninefruits/certificate/models.py
+msgid "Certificate kind"
+msgstr "Type d’attestation"
+
+# key: certificate.resources.types.plural_label
+#: ninefruits/certificate/models.py
+msgid "Certificate kinds"
+msgstr "Types d’attestation"
+
+# key: certificate.fields.title
+#: ninefruits/certificate/models.py
+msgctxt "certificate"
+msgid "Title"
+msgstr "Titre"
+
+# key: certificate.fields.body
+#: ninefruits/certificate/models.py
+msgid "Body"
+msgstr "Corps"
+
+# key: certificate.fields.footer
+#: ninefruits/certificate/models.py
+msgid "Footer"
+msgstr "Pied de page"
+
+# key: certificate.fields.signer
+#: ninefruits/certificate/models.py
+msgid "Signer"
+msgstr "Signataire"
+
+# key: certificate.help.signer
+#: ninefruits/certificate/models.py
+msgid "Overrides the signer from the certificate settings for this language."
+msgstr "Remplace, pour cette langue, le signataire défini dans les paramètres des attestations."
+
+# key: people.resources.student_records.label
+#: ninefruits/certificate/models.py
+msgid "student record"
+msgstr "dossier étudiant"
+
+# key: certificate.fields.serial_number
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgid "Serial number"
+msgstr "Numéro de série"
+
+# key: certificate.verify.code
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/verify.html
+msgid "Verification code"
+msgstr "Code de vérification"
+
+# key: certificate.fields.issued_at
+#: ninefruits/certificate/models.py ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/templates/certificate/verify.html
+msgctxt "certificate.fields"
+msgid "Issued"
+msgstr "Délivrée le"
+
+# key: certificate.resources.issues.label
+#: ninefruits/certificate/models.py
+msgid "Issued certificate"
+msgstr "Attestation délivrée"
+
+# key: certificate.resources.issues.plural_label
+#: ninefruits/certificate/models.py
+msgid "Issued certificates"
+msgstr "Attestations délivrées"
+
+# key: certificate.facts.student_name
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Name"
+msgstr "Nom"
+
+# key: certificate.facts.birth_date
+#: ninefruits/certificate/services/renderer.py
+msgid "Date of birth"
+msgstr "Date de naissance"
+
+# key: certificate.facts.gender
+# key: people.fields.gender
+#: ninefruits/certificate/services/renderer.py
+msgid "Gender"
+msgstr "Genre"
+
+# key: certificate.facts.nationality
+# key: people.fields.nationality
+#: ninefruits/certificate/services/renderer.py
+msgid "Nationality"
+msgstr "Nationalité"
+
+# key: certificate.facts.program
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Program"
+msgstr "Formation"
+
+# key: certificate.facts.admission_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Admitted"
+msgstr "Date d’admission"
+
+# key: certificate.facts.graduation_date
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Graduated"
+msgstr "Date d’obtention du diplôme"
+
+# key: certificate.facts.status
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Status"
+msgstr "Statut"
+
+# key: certificate.facts.year_level
+#: ninefruits/certificate/services/renderer.py
+msgctxt "certificate"
+msgid "Year"
+msgstr "Année d’études"
+
+# key: certificate.settings.serial_pattern
+#: ninefruits/certificate/settings_pages.py
+msgid "Serial number pattern"
+msgstr "Format du numéro de série"
+
+# key: certificate.settings.serial_pattern_help
+#: ninefruits/certificate/settings_pages.py
+#, python-brace-format
+msgid "Tokens: {TYPE} kind code, {YYYY} or {YY} year, {SEQ:6} sequence padded to 6 digits (required). The sequence restarts for each distinct prefix, so {TYPE}-{YYYY}-{SEQ:6} counts per kind and year."
+msgstr "Variables : {TYPE} code du type, {YYYY} ou {YY} année, {SEQ:6} numéro séquentiel sur 6 chiffres (obligatoire). La séquence repart à zéro pour chaque préfixe distinct : {TYPE}-{YYYY}-{SEQ:6} compte donc par type et par année."
+
+# key: certificate.settings.verification_valid_days
+#: ninefruits/certificate/settings_pages.py
+msgid "Verification valid for (days)"
+msgstr "Durée de validité de la vérification (jours)"
+
+# key: certificate.settings.verification_valid_days_help
+#: ninefruits/certificate/settings_pages.py
+msgid "0 = always. After this many days the verification page reports the certificate as expired."
+msgstr "0 = toujours. Au-delà de ce nombre de jours, la page de vérification indique que l’attestation a expiré."
+
+# key: certificate.settings.signer
+#: ninefruits/certificate/settings_pages.py
+#, python-format
+msgid "Signer (%(locale)s)"
+msgstr "Signataire (%(locale)s)"
+
+# key: certificate.settings.title
+#: ninefruits/certificate/settings_pages.py
+msgid "Certificate settings"
+msgstr "Paramètres des attestations"
+
+# key: certificate.settings.signers
+#: ninefruits/certificate/settings_pages.py
+msgid "Signer by language"
+msgstr "Signataire par langue"
+
+# key: certificate.settings.signers_help
+#: ninefruits/certificate/settings_pages.py
+msgid "Printed above the seal, e.g. \"President, Ninefruits University\". A template can override it."
+msgstr "Imprimé au-dessus du sceau, p. ex. « Le Président, Université Ninefruits ». Un modèle peut le remplacer."
+
+# key: certificate.pdf.serial
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgid "No."
+msgstr "N°"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Code"
+msgstr "Code"
+
+# key: curriculum.fields.title
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "Intitulé"
+
+# key: curriculum.fields.credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "Crédits"
+
+# key: grading.fields.grade
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Grade"
+msgstr "Note"
+
+# key: grading.grades.term_summary
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "GPA %(gpa)s · %(earned)s of %(attempted)s credits earned"
+msgstr "Moyenne %(gpa)s · %(earned)s crédits acquis sur %(attempted)s"
+
+# key: grading.fields.cumulative_gpa
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Cumulative GPA"
+msgstr "Moyenne cumulée"
+
+# key: grading.fields.earned_credits
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+msgctxt "grading"
+msgid "Earned credits"
+msgstr "Crédits acquis"
+
+# key: certificate.pdf.verify
+#: ninefruits/certificate/templates/certificate/pdf/certificate.html
+#, python-format
+msgid "Verify this certificate at %(url)s"
+msgstr "Vérifiez cette attestation sur %(url)s"
+
+# key: certificate.portal.title
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html ninefruits/certificate/views/portal.py
+msgid "My certificates"
+msgstr "Mes attestations"
+
+# key: certificate.portal.intro
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "Certificates issued to you by the registrar. Ask the registrar for a new one."
+msgstr "Attestations qui vous ont été délivrées par le service de la scolarité. Adressez-vous à ce service pour en obtenir une nouvelle."
+
+# key: certificate.portal.none
+#: ninefruits/certificate/templates/certificate/portal/my_certificates.html
+msgid "No certificates have been issued yet."
+msgstr "Aucune attestation n’a encore été délivrée."
+
+# key: certificate.verify.title
+#: ninefruits/certificate/templates/certificate/verify.html ninefruits/certificate/views/public.py
+msgid "Certificate verification"
+msgstr "Vérification d’attestation"
+
+# key: certificate.verify.intro
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Enter the verification code printed on the certificate, or scan its QR code."
+msgstr "Saisissez le code de vérification imprimé sur l’attestation ou scannez son code QR."
+
+# key: certificate.verify.check
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Check"
+msgstr "Vérifier"
+
+# key: certificate.verify.valid
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "This certificate was issued by the institution and is valid."
+msgstr "Cette attestation a été délivrée par l’établissement et est valide."
+
+# key: certificate.verify.holder
+#: ninefruits/certificate/templates/certificate/verify.html
+msgid "Holder"
+msgstr "Titulaire"
+
+# key: registration.errors.too_many_requests
+#: ninefruits/certificate/views/public.py
+msgid "Too many requests. Wait a minute and try again."
+msgstr "Trop de requêtes. Patientez une minute et réessayez."

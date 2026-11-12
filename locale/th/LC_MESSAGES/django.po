@@ -1,0 +1,1201 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "คำแปลต้องเป็นอ็อบเจกต์ที่จับคู่รหัสภาษากับข้อความ"
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "คำแปลแต่ละรายการต้องมีความยาวไม่เกิน %(limit_value)d ตัวอักษร"
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "ต้องระบุค่าภาษา %(language)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "ฟิลด์นี้จำเป็น"
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "ภาษา"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "นำไปใช้"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "เลือกระเบียน"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "เลือกการดำเนินการ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "เลือกการดำเนินการที่จะเรียกใช้"
+
+# key: common.save
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "บันทึก"
+
+# key: security.scope_types.global
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "ทั้งหมด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr " โดย %(filter_title)s "
+
+# key: common.yes
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "ใช่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "ไม่ใช่"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "จาก"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "เป็น"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "ตั้งแต่วันที่"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "ถึงวันที่"
+
+# key: admin.audit.fields.occurred_at
+# key: attendance.fields.time
+# key: offering.fields.time
+# key: registration.fields.attempted_at
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "เวลา"
+
+# key: assessment.fields.held_date
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "วันที่สอบ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "รันคำสั่งที่ถูกเลือก"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "เรียกใช้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "คลิกที่นี่เพื่อเลือกอ็อบเจ็กต์จากหน้าทั้งหมด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "เลือกทั้งหมด %(total_count)s %(module_name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "เคลียร์ตัวเลือก"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "เลือกรายการทั้งหมดในหน้านี้เพื่อดำเนินการ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr ""
+"ไม่มีรายการใดถูกเปลี่ยน\n"
+"รายการจะต้องถูกเลือกก่อนเพื่อที่จะทำตามคำสั่งได้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "โมเดลในแอป %(name)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "คุณไม่มีสิทธิ์ดูหรือแก้ไขสิ่งใด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "เปลี่ยนรหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "ประวัติ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "ดูที่หน้าเว็บ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "กำลังดำเนินการลบ %(object_name)s '%(escaped_object)s'และจะแสดงผลการลบ แต่บัญชีของคุณไม่สามารถทำการลบข้อมูลชนิดนี้ได้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "การลบ %(object_name)s '%(escaped_object)s' จำเป็นจะต้องลบอ็อบเจ็กต์ที่เกี่ยวข้องต่อไปนี้:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "คุณแน่ใจหรือที่จะลบ %(object_name)s \"%(escaped_object)s\"?ข้อมูลที่เกี่ยวข้องทั้งหมดจะถูกลบไปด้วย:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "การลบ %(objects_name)s ที่เลือก จะทำให้อ็อบเจ็กต์ที่เกี่ยวข้องถูกลบไปด้วย แต่บัญชีของคุณไม่มีสิทธิ์ที่จะลบอ็อบเจ็กต์ชนิดนี้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "การลบ %(objects_name)s ที่ถูกเลือก จำเป็นจะต้องลบอ็อบเจ็กต์ที่เกี่ยวข้องต่อไปนี้:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "คุณแน่ใจหรือว่า ต้องการลบ %(objects_name)s ที่ถูกเลือก? เนื่องจากอ็อบเจ็กต์ และรายการที่เกี่ยวข้องทั้งหมดต่อไปนี้จะถูกลบด้วย"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "อ็อบเจ็กต์"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "สรุป"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "ยินดีต้อนรับกลับสู่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "คุณได้ลงชื่อเป็น %(username)s แต่ไม่ได้รับอนุญาตให้เข้าถึงหน้านี้ คุณต้องการลงชื่อเข้าใช้บัญชีอื่นหรือไม่?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "เข้าสู่ระบบ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "ลืมรหัสผ่านหรือชื่อผู้ใช้ของคุณหรือไม่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "แสดงทั้งหมด"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "พิมพ์เพื่อค้นหา"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "บันทึกและกลับมาแก้ไข"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "บันทึกและดู"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "บันทึกและเพิ่ม"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "บันทึกใหม่"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "คุณออกจากระบบผู้ดูแลเรียบร้อยแล้ว"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "ขอบคุณที่ใช้เวลากับเว็บไซต์ในวันนี้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "เข้าสู่ระบบอีกครั้ง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "รหัสผ่านของคุณถูกเปลี่ยนไปแล้ว"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "เพื่อความปลอดภัย กรุณาป้อนรหัสผ่านเดิม จากนั้นป้อนรหัสผ่านใหม่สองครั้งเพื่อตรวจสอบว่าพิมพ์ถูกต้อง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "ไม่มีข้อมูล"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "ดูที่หน้าเว็บ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "ออกจากระบบ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "เพิ่ม %(name)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "แอปพลิเคชันทั้งหมด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "ดู:"
+
+# key: grading.fields.change
+# key: graduation.report_columns.type_name
+# key: reference.fields.change_type
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "การเปลี่ยนแปลง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "เพิ่ม"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "ลบ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "ไม่รู้"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "ใช่"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "ไม่ใช่"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "ใช้ตัวกรอง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "ซ่อนจำนวน"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "แสดงจำนวน"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "ล้างตัวกรองทั้งหมด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "ตัวกรอง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "เปิด/ปิด sorting"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "เอาออกจาก sorting"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "ลำดับการ sorting: %(priority_number)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "เลื่อนไป"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "เลือก"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "ล้าง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "การค้นหาล่าสุด"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "ไม่พบรายการที่ตรงกับการค้นหา"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "ไม่ พาฉันกลับ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "ใช่ ฉันแน่ใจ"
+
+# key: assessment.portal.cancel
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+# key: evaluation.portal.submit
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "ส่ง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "ปิด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "รูปภาพของระเบียน"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "รายการนี้จะถูกลบ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "คลิกเพื่อยกเลิก"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "ไม่พบผลลัพธ์"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "หน้านี้ไม่มีผลลัพธ์"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "รีเซ็ตตัวกรอง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "ตัวอย่างรูปภาพ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "คลิกเพื่อดาวน์โหลด"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "เลือกไฟล์ที่จะอัปโหลด"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "ย้อนกลับ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "การกระทำล่าสุด"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "ไม่ทราบเนื้อหา"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "ก่อนหน้า"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "ถัดไป"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "ค้นหาแอปและโมเดล..."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "แป้นลัดที่ใช้ได้"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "แป้นลัดทั่วไป"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "เปิดเครื่องมือคำสั่ง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "เปิดรายการแป้นลัด"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "เปิด/ปิดแถบด้านข้าง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "สลับโหมดมืด/สว่าง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "แป้นลัดในหน้ารายการ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "เปิด/ปิดตัวกรอง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "สร้างระเบียนใหม่"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "แป้นลัดของเครื่องมือคำสั่ง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "เปิดรายการที่เลือก"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "เปิดรายการที่เลือกในแท็บใหม่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "การจัดการ Django"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "ผู้ดูแลระบบ Django"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "หน้าแรก"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "สว่าง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "มืด"
+
+# key: reference.fields.is_system
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "ระบบ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "กลับไปยังเว็บไซต์"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s ผลลัพธ์"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "%(full_result_count)s ทั้งหมด"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "แสดง/ซ่อนรหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "เปลี่ยนแปลง %(model)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "เพิ่ม %(model)sอีก"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "ดู %(model)s ที่เลือก"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "ลบ %(model)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "เพิ่มแถว"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "กรุณาแก้ไขข้อผิดพลาดด้านล่าง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "การจัดการไซต์"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "เลือก %s เพื่อเปลี่ยนแปลง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "เลือก %s เพื่อดู"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "เพิ่ม %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "เปลี่ยน %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "ดู %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "ลบ %(verbose_name_plural)s ที่เลือก"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "%(count)d %(items)s ถูกลบเรียบร้อยแล้ว"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "เพิ่ม{name} “{obj}” เรียบร้อยแล้ว"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "เปลี่ยน{name} “{obj}” เรียบร้อยแล้ว"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "ลบ%(name)s “%(obj)s” เรียบร้อยแล้ว"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "ไม่มีคำสั่งที่ถูกเลือก"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "คำสั่ง :"
+
+# key: offering.catalog.search
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "ค้นหา"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "วันไหนก็ได้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "วันนี้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "สัปดาห์ที่แล้ว"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "เดือนนี้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "ปีนี้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "ไม่รวมวันที่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "รวมวันที่"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "ว่าง"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "ไม่ว่าง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "ไม่ว่าง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "การกระทำของฉัน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "กรุณาใส่  %(username)s และรหัสผ่านให้ถูกต้อง มีการแยกแยะตัวพิมพ์ใหญ่-เล็ก"
+
+# key: authentication.fields.password
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "กรุณาใส่ค่าที่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "ป้อนที่อยู่อีเมลที่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "กรอกหมายเลข"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "กรอกหมายเลข"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "กรุณาใส่วัน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "กรุณาใส่เวลา"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "กรุณาใส่วันเวลา"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "ใส่ URL ที่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "ใส่รายการ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "เลือกตัวเลือกที่ถูกต้อง. %(value)s ไม่ใช่ตัวเลือกที่ใช้ได้."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "ค่านี้ต้องน้อยกว่าหรือเท่ากับ %(limit_value)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "ค่านี้ต้องมากกว่าหรือเท่ากับ %(limit_value)s"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "ค่านี้ต้องมีความยาวไม่เกิน %(limit_value)d ตัวอักษร (ปัจจุบันมี %(show_value)d)"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "ค่านี้ต้องมีความยาวอย่างน้อย %(limit_value)d ตัวอักษร (ปัจจุบันมี %(show_value)d)"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "ภาษาลาว"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "ลงชื่อเข้าใช้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "ลงชื่อออก"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "คุณแน่ใจหรือว่าต้องการจะลงชื่อออก"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py templates/account/signup.html
+msgid "Email"
+msgstr "อีเมล"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "จดจำการเข้าใช้"
+
+# key: authentication.login.forgot_password
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "ลืมรหัสผ่าน?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "อีเมลและ/หรือรหัสผ่านที่ระบุมาไม่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "พยายามเข้าสู่ระบบล้มเหลวหลายครั้งเกินไป ลองอีกครั้งในภายหลัง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "บัญชีนี้อยู่ในสถานะที่ใช้งานไม่ได้"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "รีเซ็ทรหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "ลืมรหัสผ่านหรือไม่? ป้อนที่อยู่อีเมลของคุณด้านล่าง และเราจะส่งอีเมลไปให้คุณเพื่อรีเซ็ตรหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "รีเซ็ทรหัสผ่านของฉัน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "กรุณาติดต่อเราหากคุณพบปัญหาในการรีเซ็ทรหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "เราได้ส่งอีเมลถึงคุณแล้ว หากต้องการยืนยันตัวตน โปรดคลิกลิงก์ในอีเมลนี้ โปรดไปที่โฟลเดอร์สแปม มิฉะนั้น โปรดติดต่อเราหากไม่ได้รับอีเมลภายในไม่กี่นาที"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "Token เสีย"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "ลิงค์ที่ใช้ในการรีเซ็ทรหัสผ่านไม่ถูกต้อง อาจเป็นไปได้ว่ามันได้ถูกใช้ไปแล้วกรุณาร้องขอ <a href=\"%(passwd_reset_url)s\">การรีเซ็ทรหัสผ่านใหม่</a>"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "รหัสผ่านของคุณได้เปลี่ยนแล้ว"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "เปลี่ยนรหัสผ่าน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "รหัสผ่านปัจจุบัน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "รหัสผ่านใหม่"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "รหัสผ่านใหม่ (อีกครั้ง)"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "ต้องพิมพ์รหัสผ่านเดิมซ้ำอีกครั้ง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "โปรดใส่รหัสผ่านปัจจุบัน"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "รหัสปัจจุบันรหัสผ่านไม่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "รหัสไม่ถูกต้องหรือหมดอายุ"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "token ที่ใช้รีเซ็ทรหัสผ่านไม่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "กรุณาอดทน คุณกำลังส่งคำขอมากเกินไป"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "การตรวจสอบสิทธิ์สองปัจจัย"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "บัญชีของคุณได้รับการปกป้องด้วยการตรวจสอบสิทธิ์สองขั้นตอน โปรดป้อนรหัสตรวจสอบสิทธิ์:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "รหัสตรวจสอบความถูกต้อง"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "รหัส"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "รหัสไม่ถูกต้อง"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "ทางเลือกอื่น"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "ใช้แอปหรือรหัสยืนยันตัวตน"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: templates/account/login.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "เข้าสู่ระบบ"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "รหัสผ่าน"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "จดจำการเข้าสู่ระบบ"
+
+# key: authentication.login.sso
+#: templates/account/login.html
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "เข้าสู่ระบบด้วย %(provider)s"
+
+# key: admissions.register.prompt
+#: templates/account/login.html
+msgid "Want to apply?"
+msgstr "ต้องการสมัครเรียน?"
+
+# key: admissions.register.see_cycles
+#: templates/account/login.html
+msgid "See open admissions"
+msgstr "ดูรอบที่เปิดรับสมัคร"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "ยืนยันรหัสผ่าน"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "เพื่อความปลอดภัย กรุณายืนยันรหัสผ่านเพื่อดำเนินการต่อ"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "ยืนยัน"
+
+# key: admissions.register.title
+#: templates/account/signup.html
+msgid "Create an account"
+msgstr "สร้างบัญชี"
+
+# key: admissions.register.instructions
+#: templates/account/signup.html
+msgid "For applicants. Staff and current students already have an account."
+msgstr "สำหรับผู้สมัคร บุคลากรและนักศึกษาปัจจุบันมีบัญชีอยู่แล้ว"
+
+# key: people.help.romanized
+#: templates/account/signup.html
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "ชื่อตามกฎหมายเป็นอักษรละตินตามหนังสือเดินทาง เพิ่มชื่อที่เขียนในภาษาอื่นได้ด้านล่าง"
+
+# key: authentication.fields.password_confirmation
+#: templates/account/signup.html
+msgid "Confirm password"
+msgstr "ยืนยันรหัสผ่าน"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/account/signup.html
+msgid "Create account"
+msgstr "สร้างบัญชี"
+
+# key: admissions.register.have_account
+#: templates/account/signup.html
+msgid "Already have an account?"
+msgstr "มีบัญชีอยู่แล้ว?"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "การยืนยันตัวตนแบบสองขั้นตอน"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "กรอกรหัส 6 หลักจากแอปยืนยันตัวตนของท่าน"
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "รหัส"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "ใช้รหัสกู้คืนแทน"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "รหัสกู้คืน"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "จดจำอุปกรณ์นี้"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "ยืนยัน"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "กรอกรหัส 6 หลักที่ระบบส่งไปยังอีเมลของท่าน"
+
+# key: authentication.two_factor.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "รหัสทางอีเมล"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "ส่งรหัสทางอีเมลแทน"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "ส่งรหัสใหม่"
+
+# upstream: Django/allauth catalog
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "ปิด"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "เมนูหลัก"
+
+# key: authentication.logout
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "ออกจากระบบ"
+
+# key: security.mfa.set_up
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "ตั้งค่าทันที"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "ผู้ใช้"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "ผู้ใช้"

@@ -1228,3 +1228,11 @@ msgstr "입학 지원을 하시나요?"
 # key: admissions.register.see_cycles
 msgid "See open admissions"
 msgstr "모집 안내 보기"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "사용자"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "사용자"

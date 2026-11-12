@@ -1,0 +1,1207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "翻訳は言語コードとテキストからなるオブジェクトである必要があります。"
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "各翻訳は %(limit_value)d 文字以内にしてください。"
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "%(language)s の値は必須です。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "このフィールドは必須です。"
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "言語"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "適用"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "レコードを選択"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "操作を選択"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "実行する操作を選択"
+
+# key: common.save
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "保存"
+
+# key: security.scope_types.global
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "全体"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr "%(filter_title)s で絞り込む"
+
+# key: common.yes
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "はい"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "いいえ"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "変更前"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "変更後"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "開始日"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "終了日"
+
+# key: admin.audit.fields.occurred_at
+# key: registration.fields.attempted_at
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "日時"
+
+# key: assessment.fields.held_date
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "実施日"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "選択した操作を実行"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "実行"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "すべてのページの項目を選択するにはここをクリックしてください"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "%(total_count)s個ある%(module_name)s を全て選択"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "選択を解除"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "アクション用にこのページのすべてのオブジェクトを選択"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "操作を実行するには、対象を選択する必要があります。何も変更されませんでした。"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "%(name)s アプリケーションのモデル"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "表示または変更のためのパーミッションがありません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "パスワードの変更"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "履歴"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "サイト上で表示"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "%(object_name)s '%(escaped_object)s' を削除すると関連オブジェクトも削除されますが、このアカウントには次の種類のオブジェクトを削除する権限がありません:"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "%(object_name)s '%(escaped_object)s' を削除するには、次の保護された関連オブジェクトを削除する必要があります:"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "%(object_name)s \"%(escaped_object)s\" を削除してもよろしいですか? 次の関連項目もすべて削除されます:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "選択した %(objects_name)s を削除すると関連するオブジェクトも削除しますが、あなたのアカウントは以下のオブジェクト型を削除する権限がありません:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "選択した %(objects_name)s を削除すると以下の保護された関連オブジェクトを削除することになります:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "本当に選択した %(objects_name)s を削除しますか？ 以下の全てのオブジェクトと関連する要素が削除されます:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "オブジェクト"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "概要"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "おかえりなさい:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "あなたは %(username)s として認証されましたが、このページへのアクセス許可がありません。他のアカウントでログインしますか?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "ログイン"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "パスワードまたはユーザー名をお忘れですか?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "全件表示"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "入力して検索"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "保存して編集を続ける"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "保存して表示"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "保存してもう一つ追加"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "新規保存"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "管理画面からログアウトしました"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "ご利用ありがとうございました。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "もう一度ログイン"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "あなたのパスワードは変更されました"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "セキュリティ上の理由から元のパスワードの入力が必要です。新しいパスワードは正しく入力したか確認できるように二度入力してください。"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "データがありません"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "サイトを表示"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "ログアウト"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "%(name)sを追加"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "すべてのアプリケーション"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "表示"
+
+# key: evaluation.actions.change
+# key: grading.fields.change
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "変更"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "追加"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "削除"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "不明"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "はい"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "いいえ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "フィルターを適用"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "件数を非表示"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "件数を表示"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "全てのフィルターを解除"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "フィルター"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "昇順降順を切り替えます"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "ソート条件から外します"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "ソート優先順位: %(priority_number)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "移動"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "選択"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "クリア"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "最近の検索"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "検索に一致する結果はありません"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "戻る"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "はい、大丈夫です"
+
+# key: assessment.portal.cancel
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "取消"
+
+# key: evaluation.portal.submit
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "提出"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "閉じる"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "編集"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "レコードの画像"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "この項目は削除されます。"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "クリックして取り消し"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "結果が見つかりません"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "このページには表示する結果がありません。"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "フィルターをリセット"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "画像のプレビュー"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "クリックしてダウンロード"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "アップロードするファイルを選択"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "戻る"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "最近行った操作"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "不明なコンテント"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "前へ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "次へ"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "アプリとモデルを検索..."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "使用できるショートカット"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "全体のショートカット"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "コマンドツールを開く"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "ショートカット一覧を開く"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "サイドバーの切り替え"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "ダーク/ライトモードの切り替え"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "一覧画面のショートカット"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "フィルターの切り替え"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "新しいレコードを作成"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "コマンドツールのショートカット"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "選択項目を開く"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "選択項目を新しいタブで開く"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "Django 管理サイト"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "Django サイト管理"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "ホーム"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "ライト"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "ダーク"
+
+# key: reference.fields.is_system
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "システム"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "サイトに戻る"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "結果 %(counter)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "全 %(full_result_count)s 件"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "パスワードの表示切り替え"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "選択された %(model)s の変更"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "%(model)s の追加"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "選択された %(model)s を表示"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "選択された %(model)s を削除"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "行を追加"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "下記のエラーを修正してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "サイト管理"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "変更する %s を選択"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "表示する%sを選択"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "%s を追加"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "%s を変更"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "%sを表示"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "選択された %(verbose_name_plural)s の削除"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "%(count)d 個の %(items)s を削除しました。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "{name} “{obj}” を追加しました。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "{name} “{obj}” を変更しました。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "%(name)s “%(obj)s” を削除しました。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "操作が選択されていません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "操作:"
+
+# key: offering.catalog.search
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "検索"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "いつでも"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "今日"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "過去 7 日間"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "今月"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "今年"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "日付なし"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "日付あり"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "空"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "空でない"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "利用不可"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "自分の操作"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "スタッフアカウントの正しい%(username)sとパスワードを入力してください。どちらのフィールドも大文字と小文字は区別されます。"
+
+# key: authentication.fields.password
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "パスワード"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "値を正しく入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "有効なメールアドレスを入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "整数を入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "数値を入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "日付を正しく入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "時間を正しく入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "日時を正しく入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "URLを正しく入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "リストを入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "正しく選択してください。 %(value)s は候補にありません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "この値は %(limit_value)s 以下でなければなりません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "この値は %(limit_value)s 以上でなければなりません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "この値は %(limit_value)d 文字以下でなければなりません( %(show_value)d 文字になっています)。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "この値が少なくとも %(limit_value)d 文字以上であることを確認してください (%(show_value)d 文字になっています)。"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "ラオ語"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "ログイン"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "ログアウト"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "ログアウトしますか?"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py templates/account/signup.html
+msgid "Email"
+msgstr "メールアドレス"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "ログインしたままにする"
+
+# key: authentication.login.forgot_password
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "パスワードをお忘れですか?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "入力されたメールアドレスもしくはパスワードが正しくありません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "ログイン失敗が連続しています。時間が経ってからやり直してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "このアカウントは現在無効です。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "パスワードの再設定"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "パスワードをお忘れですか? パスワードを再設定するために、メールアドレスを入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "パスワードを再設定する"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "パスワードの再設定に問題がある場合はご連絡ください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "確認のためのメールを送信しました。確認メールが届かないときは迷惑メールフォルダをご確認ください。しばらくしてもメールが届かない場合はご連絡ください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "不正なトークン"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "パスワード再設定のリンクが不正です。すでに使用された可能性があります。もう一度 <a href=\"%(passwd_reset_url)s\">パスワードの再設定</a>をお試しください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "パスワードを変更しました。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "パスワード変更"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "現在のパスワード"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "新しいパスワード"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "新しいパスワード (再入力)"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "同じパスワードを入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "現在のパスワードを入力してください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "パスワードが正しくありません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "不正または期限切れのキーです。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "パスワード再設定コードが無効です。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "あなたは大量のリクエストを送信しています。しばらくお待ちください。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "多要素認証"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "あなたのアカウントは多要素認証で保護されています。認証コードを入力してください:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "認証アプリコード"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "コード"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "コードが正しくありません。"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "そのほかの方法"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "認証アプリまたは認証コードを使用する"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: templates/account/login.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "ログイン"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "パスワード"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "ログインしたままにする"
+
+# key: authentication.login.sso
+#: templates/account/login.html
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "%(provider)s でログイン"
+
+# key: admissions.register.prompt
+#: templates/account/login.html
+msgid "Want to apply?"
+msgstr "出願しますか?"
+
+# key: admissions.register.see_cycles
+#: templates/account/login.html
+msgid "See open admissions"
+msgstr "受付中の入試を見る"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "パスワードの確認"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "セキュリティのため、続行するにはパスワードを入力してください。"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "確認"
+
+# key: admissions.register.title
+#: templates/account/signup.html
+msgid "Create an account"
+msgstr "アカウント作成"
+
+# key: admissions.register.instructions
+#: templates/account/signup.html
+msgid "For applicants. Staff and current students already have an account."
+msgstr "志願者向けです。教職員と在学生はすでにアカウントを持っています。"
+
+# key: people.help.romanized
+#: templates/account/signup.html
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "旅券と同じローマ字表記の正式氏名です。他言語での表記は下に追加してください。"
+
+# key: authentication.fields.password_confirmation
+#: templates/account/signup.html
+msgid "Confirm password"
+msgstr "パスワード(確認)"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/account/signup.html
+msgid "Create account"
+msgstr "アカウントを作成"
+
+# key: admissions.register.have_account
+#: templates/account/signup.html
+msgid "Already have an account?"
+msgstr "すでにアカウントをお持ちですか?"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "二要素認証"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "認証アプリに表示された 6 桁のコードを入力してください。"
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "コード"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "リカバリーコードを使用する"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "リカバリーコード"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "このデバイスを記憶する"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "確認"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "メールでお送りした 6 桁のコードを入力してください。"
+
+# key: authentication.two_factor.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "メールのコード"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "代わりにメールでコードを受け取る"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "新しいコードを送信"
+
+# upstream: Django/allauth catalog
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "閉じる"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "メインメニュー"
+
+# key: authentication.logout
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "ログアウト"
+
+# key: security.mfa.set_up
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "今すぐ設定"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "ユーザー"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "ユーザー"

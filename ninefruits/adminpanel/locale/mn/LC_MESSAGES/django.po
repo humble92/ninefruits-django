@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/adminpanel/config.py
+msgctxt "security"
+msgid "Two-factor authentication"
+msgstr "Хоёр шатлалт баталгаажуулалт"
+
+# key: admin.navigation.portal
+#: ninefruits/adminpanel/config.py ninefruits/adminpanel/templates/adminpanel/dashboard.html
+msgctxt "admin"
+msgid "Portal"
+msgstr "Портал"
+
+# key: admin.navigation.student_records
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Students and staff"
+msgstr "Оюутан ба ажилтан"
+
+# key: admin.navigation.admissions
+# key: admin.settings.admissions.title
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Admissions"
+msgstr "Элсэлт"
+
+# key: admin.navigation.curriculum
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Curriculum and sections"
+msgstr "Сургалтын төлөвлөгөө ба бүлэг"
+
+# key: admin.navigation.registration
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Registration"
+msgstr "Хичээл сонголт"
+
+# key: admin.navigation.grading
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Grades"
+msgstr "Дүн"
+
+# key: admin.navigation.evaluation
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Course evaluation"
+msgstr "Хичээлийн үнэлгээ"
+
+# key: admin.navigation.assessments
+# key: assessment.portal.title
+# key: permissions.resources.assessments
+# key: portal.navigation.assessments
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Examinations"
+msgstr "Шалгалт"
+
+# key: admin.navigation.certificates
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Certificates"
+msgstr "Тодорхойлолт"
+
+# key: admin.navigation.graduation
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Graduation"
+msgstr "Төгсөлт"
+
+# key: admin.navigation.reports
+# key: graduation.reports.title
+# key: permissions.resources.reports
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Reports"
+msgstr "Тайлан"
+
+# key: admin.navigation.lms
+# key: permissions.resources.lms
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "LMS integration"
+msgstr "LMS холболт"
+
+# key: admin.navigation.reference_data
+# key: permissions.resources.reference_data
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Reference data"
+msgstr "Лавлах мэдээлэл"
+
+# key: admin.navigation.access
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Users and access"
+msgstr "Хэрэглэгч ба эрх"
+
+# key: admin.navigation.audit
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Audit"
+msgstr "Аудит"
+
+# key: admin.navigation.settings
+#: ninefruits/adminpanel/navigation.py
+msgctxt "admin"
+msgid "Settings"
+msgstr "Тохиргоо"
+
+#: ninefruits/adminpanel/navigation.py ninefruits/adminpanel/sites.py
+msgctxt "admin"
+msgid "Dashboard"
+msgstr "Нүүр"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/adminpanel/templates/adminpanel/action_form.html
+msgctxt "common"
+msgid "Cancel"
+msgstr "Цуцлах"
+
+# key: portal.dashboard.welcome
+#: ninefruits/adminpanel/templates/adminpanel/dashboard.html
+#, python-format
+msgctxt "admin"
+msgid "Welcome, %(name)s"
+msgstr "Тавтай морил, %(name)s"
+
+# key: authentication.logout
+#: ninefruits/adminpanel/templates/adminpanel/dashboard.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Гарах"

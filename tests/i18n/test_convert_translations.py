@@ -133,9 +133,9 @@ def test_fill_mode_translates_entries_written_by_makemessages(tool: ModuleType, 
 
 
 def test_reads_the_real_original_translations(tool: ModuleType) -> None:
-    source = Path("/home/user/src-laravel/lang")
+    source = tool.DEFAULT_SOURCE
     if not source.is_dir():
         pytest.skip("original source not available")
     sources = tool.load_sources(source)
     assert sources["admin.settings.institution.name"].translations["zh_Hans"]
-    assert all(set(item.translations) == {"ko", "zh_Hans", "lo"} for item in sources.values())
+    assert all(set(item.translations) == set(tool.LANGUAGES.values()) for item in sources.values())

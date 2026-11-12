@@ -1,0 +1,826 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: offering.errors.instructor_not_current
+#: ninefruits/offering/actions/assign_section_instructor.py
+msgid "This instructor is not employed when the session starts."
+msgstr "この教員は授業期間の開始時点で在職していません。"
+
+# key: offering.errors.instructor_already_assigned
+#: ninefruits/offering/actions/assign_section_instructor.py
+msgid "This instructor is already assigned."
+msgstr "この教員はすでに割り当てられています。"
+
+# key: offering.errors.reason_required
+#: ninefruits/offering/actions/change_section_status.py
+msgid "Give a reason."
+msgstr "理由を入力してください。"
+
+# key: offering.errors.copy_same_term
+#: ninefruits/offering/actions/copy_sections.py ninefruits/offering/admin/sections.py
+msgid "Choose two different terms."
+msgstr "異なる 2 つの学期を選択してください。"
+
+# key: offering.copy.exists
+#: ninefruits/offering/actions/copy_sections.py
+msgid "already offered in that term"
+msgstr "その学期にすでに開講されています"
+
+# key: offering.copy.no_version
+#: ninefruits/offering/actions/copy_sections.py
+msgid "no course version in effect at the session start"
+msgstr "授業期間の開始時点で有効な科目バージョンがありません"
+
+# key: offering.copy.instructor_left
+#: ninefruits/offering/actions/copy_sections.py
+#, python-format
+msgid "instructor %(instructor)s is no longer employed"
+msgstr "教員 %(instructor)s は在職していません"
+
+# key: offering.copy.room_taken
+#: ninefruits/offering/actions/copy_sections.py
+#, python-format
+msgid "room taken at %(time)s, copied without a room"
+msgstr "%(time)s に教室が使用中のため、教室なしでコピーしました"
+
+# key: offering.errors.no_course_version
+#: ninefruits/offering/actions/create_section.py
+#, python-format
+msgid "Course %(course)s has no version in effect on %(date)s."
+msgstr "科目 %(course)s には %(date)s に有効なバージョンがありません。"
+
+# key: offering.errors.section_code_taken
+#: ninefruits/offering/actions/create_section.py
+msgid "This section number is already used for the course in this term."
+msgstr "このクラス番号は、この学期の同じ科目ですでに使用されています。"
+
+# key: offering.errors.meeting_outside_session
+#: ninefruits/offering/actions/save_section_meeting.py
+msgid "Meeting dates must be within the session."
+msgstr "授業日は授業期間内にしてください。"
+
+# key: offering.errors.meeting_time_order
+#: ninefruits/offering/actions/save_section_meeting.py ninefruits/offering/admin/sections.py
+msgctxt "offering"
+msgid "The end must be after the start."
+msgstr "終了は開始より後にしてください。"
+
+#: ninefruits/offering/actions/update_section.py
+msgid "Choose a session of the section's term."
+msgstr "開講科目の学期の授業期間を選択してください。"
+
+# key: grading.errors.method_has_grades
+#: ninefruits/offering/actions/update_section.py
+msgid "Grades are already entered; the evaluation method cannot change."
+msgstr "すでに成績が入力されているため、評価方式は変更できません。"
+
+# key: registration.errors.capacity_below_enrolled
+#: ninefruits/offering/actions/update_section.py
+#, python-format
+msgid "Capacity cannot be below the %(count)s students already registered."
+msgstr "定員を、すでに登録済みの学生数(%(count)s 名)より少なくすることはできません。"
+
+# key: validation.required
+#: ninefruits/offering/actions/update_syllabus.py ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s は必須です。"
+
+# key: validation.max.string
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s は %(max)s 文字以下で入力してください。"
+
+# key: validation.string
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be a string."
+msgstr "%(attribute)s には文字列を指定してください。"
+
+# key: validation.max.array
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must not have more than %(max)s items."
+msgstr "%(attribute)s の項目数は %(max)s 個以下にしてください。"
+
+# key: validation.between.numeric
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s は %(min)s から %(max)s の間で指定してください。"
+
+# key: validation.integer
+#: ninefruits/offering/actions/update_syllabus.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s には整数を指定してください。"
+
+# key: offering.timetable.title
+#: ninefruits/offering/admin/__init__.py ninefruits/offering/admin/timetables.py
+msgid "Timetables"
+msgstr "時間割"
+
+# key: offering.notifications.copy_preview
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "Preview: %(created)s section(s) would be copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "プレビュー: %(created)s 件の開講科目をコピー、%(skipped)s 件をスキップ予定です(注記あり %(with_notes)s 件)。"
+
+# key: offering.notifications.copied
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "%(created)s section(s) copied, %(skipped)s skipped, %(with_notes)s with notes."
+msgstr "%(created)s 件の開講科目をコピーし、%(skipped)s 件をスキップしました(注記あり %(with_notes)s 件)。"
+
+# key: validation.gte.numeric
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s には %(value)s 以上の値を指定してください。"
+
+# key: reference.fields.admission_year_to
+#: ninefruits/offering/admin/sections.py
+msgid "Admitted until (year)"
+msgstr "入学年度(まで)"
+
+# key: reference.fields.admission_year_from
+#: ninefruits/offering/admin/sections.py
+msgid "Admitted from (year)"
+msgstr "入学年度(から)"
+
+# key: offering.fields.session
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Session"
+msgstr "授業期間"
+
+# key: curriculum.resources.courses.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "course"
+msgstr "科目"
+
+# key: offering.help.offering_unit
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Unit whose staff manage the section; the course's unit by default."
+msgstr "開講科目を管理する職員の所属組織です。既定は科目の管理組織です。"
+
+# key: grading.help.evaluation_method
+#: ninefruits/offering/admin/sections.py
+msgid "Absolute (default): instructors enter scores and the grades follow. Relative: instructors give grades within the institution's grade caps. Instructors ask for a change from the grade entry screen; it cannot change once grades are submitted."
+msgstr "絶対評価(既定): 教員が素点を入力し、成績はそれに従います。相対評価: 教員は機関の成績分布上限の範囲内で成績を付けます。教員は成績入力画面から変更を申請でき、成績提出後は変更できません。"
+
+# key: offering.fields.section_code
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Section number"
+msgstr "クラス番号"
+
+# key: validation.alpha_dash
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "%(attribute)s には英数字、ハイフン、アンダースコアのみ使用できます。"
+
+# key: offering.help.change_session
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Moving to another session takes its dates and the course version in effect when it starts."
+msgstr "別の授業期間に移すと、その期間の日付と、開始時点で有効な科目バージョンが適用されます。"
+
+# key: offering.fields.time_slot
+#: ninefruits/offering/admin/sections.py
+msgid "Period"
+msgstr "時限"
+
+# key: offering.help.time_slot
+#: ninefruits/offering/admin/sections.py
+msgid "Fills start and end from a period."
+msgstr "時限から開始・終了時刻を入力します。"
+
+# key: offering.fields.weekday
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Day"
+msgstr "曜日"
+
+# key: offering.help.meeting_dates
+#: ninefruits/offering/admin/sections.py
+msgid "Empty: the session's dates."
+msgstr "空欄: 授業期間の日付。"
+
+# key: offering.fields.start_time
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Start"
+msgstr "開始"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: people.actions.end_additional_program
+# key: reference.fields.end_time
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "End"
+msgstr "終了"
+
+# key: validation.min.numeric
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s には %(min)s 以上の値を指定してください。"
+
+# key: offering.fields.capacity
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "offering"
+msgid "Capacity"
+msgstr "定員"
+
+# key: offering.errors.seat_groups_exceed_capacity
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgid "Reserved seats together exceed the section capacity (%(capacity)s)."
+msgstr "確保枠の合計が開講科目の定員(%(capacity)s)を超えています。"
+
+# key: offering.resources.meetings.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "meeting"
+msgstr "授業時間"
+
+# key: offering.resources.meetings.plural_label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "meeting times"
+msgstr "授業時間"
+
+# key: offering.fields.instructors
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "offering"
+msgid "Instructors"
+msgstr "担当教員"
+
+# key: offering.resources.seat_groups.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "seat group"
+msgstr "確保枠"
+
+# key: offering.resources.seat_groups.plural_label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "reserved seats"
+msgstr "確保枠"
+
+# key: offering.fields.seat_group_eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Students the seats are for"
+msgstr "確保枠の対象学生"
+
+# key: reference.resources.terms.label
+#: ninefruits/offering/admin/sections.py ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "term"
+msgstr "学期"
+
+# key: security.scope_types.global
+#: ninefruits/offering/admin/sections.py
+msgid "All"
+msgstr "全体"
+
+# key: offering.fields.offering_unit
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Offering unit"
+msgstr "開講組織"
+
+# key: offering.fields.status
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Status"
+msgstr "状態"
+
+# key: common.reason
+#: ninefruits/offering/admin/sections.py
+msgctxt "common"
+msgid "Reason"
+msgstr "理由"
+
+# key: offering.fields.from_term
+#: ninefruits/offering/admin/sections.py
+msgctxt "offering"
+msgid "Copy from"
+msgstr "コピー元"
+
+# key: offering.fields.to_term
+#: ninefruits/offering/admin/sections.py
+msgid "Copy into"
+msgstr "コピー先"
+
+# key: offering.fields.dry_run
+#: ninefruits/offering/admin/sections.py
+msgid "Preview only"
+msgstr "プレビューのみ"
+
+# key: offering.help.dry_run
+#: ninefruits/offering/admin/sections.py
+msgid "Shows the result without saving."
+msgstr "保存せずに結果を表示します。"
+
+# key: offering.fields.section
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/teaching.html
+msgctxt "offering"
+msgid "Section"
+msgstr "開講科目"
+
+# key: curriculum.fields.title
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/teaching.html
+msgctxt "curriculum"
+msgid "Title"
+msgstr "科目名"
+
+# key: curriculum.fields.credits
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "curriculum"
+msgid "Credits"
+msgstr "単位"
+
+# key: offering.fields.schedule
+#: ninefruits/offering/admin/sections.py ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Schedule"
+msgstr "時間割"
+
+# key: offering.fields.eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Who may register"
+msgstr "履修可能な対象"
+
+# key: offering.help.eligibility
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Empty: everyone. Registration (Phase 5) checks it."
+msgstr "空欄: 全員。履修登録(フェーズ 5)で確認されます。"
+
+# key: offering.fields.exclusion
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Who may not register"
+msgstr "履修できない対象"
+
+# key: offering.help.exclusion
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py
+msgid "Students matching this cannot register, e.g. the course's own majors for a general course."
+msgstr "該当する学生は履修登録できません。例: 教養科目における当該学科の専攻生。"
+
+# key: offering.notifications.status_changed
+#: ninefruits/offering/admin/sections.py
+#, python-format
+msgctxt "offering"
+msgid "Section is now %(status)s."
+msgstr "開講科目の状態を %(status)s にしました。"
+
+# key: offering.actions.publish
+#: ninefruits/offering/admin/sections.py
+msgid "Publish"
+msgstr "公開"
+
+# key: offering.actions.unpublish
+#: ninefruits/offering/admin/sections.py
+msgid "Back to draft"
+msgstr "下書きに戻す"
+
+# key: offering.actions.cancel
+#: ninefruits/offering/admin/sections.py
+msgid "Cancel section"
+msgstr "開講を取消"
+
+# key: offering.actions.reopen
+#: ninefruits/offering/admin/sections.py
+msgid "Reopen"
+msgstr "再開"
+
+# key: offering.actions.syllabus
+# key: offering.syllabus.title
+#: ninefruits/offering/admin/sections.py ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Syllabus"
+msgstr "シラバス"
+
+# key: offering.actions.copy_sections
+#: ninefruits/offering/admin/sections.py
+msgid "Copy from another term"
+msgstr "別の学期からコピー"
+
+# key: offering.help.copy_sections
+#: ninefruits/offering/admin/sections.py
+msgid "Copies sections that were not cancelled, in your scope, as drafts: instructors still employed, meetings with rooms (left out if the room is now taken), reserved seats and syllabus drafts. Sessions are matched by code."
+msgstr "自分の範囲内で休講になっていない開講科目を下書きとしてコピーします: 在職中の教員、教室付きの授業時間(教室が使用中の場合は除外)、確保枠、シラバスの下書き。授業期間はコードで対応付けます。"
+
+# key: offering.timetable.mode
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/templates/offering/admin/timetables.html ninefruits/offering/templates/offering/portal/teaching.html
+msgid "Show"
+msgstr "表示"
+
+# key: offering.fields.room
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py
+msgid "Room"
+msgstr "教室"
+
+# key: people.resources.instructors.label
+#: ninefruits/offering/admin/timetables.py ninefruits/offering/models/section.py
+msgid "instructor"
+msgstr "教員"
+
+# key: portal.navigation.catalog
+#: ninefruits/offering/apps.py
+msgctxt "portal"
+msgid "Course catalog"
+msgstr "開講科目一覧"
+
+# key: offering.teaching.title
+# key: portal.navigation.teaching
+#: ninefruits/offering/apps.py ninefruits/offering/views/portal.py
+msgid "My teaching"
+msgstr "担当授業"
+
+# key: offering.section_statuses.draft
+# key: offering.syllabus.draft
+#: ninefruits/offering/enums.py ninefruits/offering/views/portal.py
+msgctxt "offering"
+msgid "Draft"
+msgstr "下書き"
+
+# key: offering.section_statuses.published
+#: ninefruits/offering/enums.py
+msgctxt "offering.section_statuses"
+msgid "Published"
+msgstr "公開"
+
+# key: offering.section_statuses.cancelled
+#: ninefruits/offering/enums.py
+msgctxt "offering"
+msgid "Cancelled"
+msgstr "開講取消"
+
+# key: offering.instructor_roles.primary
+#: ninefruits/offering/enums.py
+msgctxt "offering"
+msgid "Instructor"
+msgstr "担当教員"
+
+# key: offering.instructor_roles.co_instructor
+#: ninefruits/offering/enums.py
+msgid "Co-instructor"
+msgstr "共同担当教員"
+
+# key: offering.instructor_roles.assistant
+#: ninefruits/offering/enums.py
+msgid "Teaching assistant"
+msgstr "TA"
+
+# key: offering.fields.instruction_language
+#: ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Language of instruction"
+msgstr "授業言語"
+
+# key: offering.help.instruction_language
+#: ninefruits/offering/models/section.py
+msgid "e.g. ko, en"
+msgstr "例: ko、en"
+
+# key: offering.fields.note
+#: ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Note"
+msgstr "備考"
+
+# key: registration.fields.waitlist_capacity
+#: ninefruits/offering/models/section.py
+msgid "Waitlist size"
+msgstr "キャンセル待ちの人数"
+
+# key: registration.help.waitlist_capacity
+#: ninefruits/offering/models/section.py
+msgid "0 means no waitlist. Freed seats go to waiting students in order, after all rules are checked again."
+msgstr "0 はキャンセル待ちなしを意味します。空いた席は、すべてのルールを再確認したうえで、待機中の学生に順番に割り当てられます。"
+
+# key: grading.fields.evaluation_method
+#: ninefruits/offering/models/section.py
+msgid "Evaluation"
+msgstr "評価方式"
+
+# key: offering.resources.sections.label
+#: ninefruits/offering/models/section.py
+msgid "section"
+msgstr "開講科目"
+
+# key: offering.resources.sections.plural_label
+#: ninefruits/offering/models/section.py
+msgid "sections"
+msgstr "開講科目"
+
+# key: offering.fields.instructor_role
+#: ninefruits/offering/models/section.py
+msgctxt "offering"
+msgid "Role"
+msgstr "役割"
+
+# key: reference.fields.start_date
+#: ninefruits/offering/models/section.py
+msgid "Start date"
+msgstr "開始日"
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/offering/models/section.py
+msgid "End date"
+msgstr "終了日"
+
+# key: reference.fields.name
+#: ninefruits/offering/models/section.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: offering.fields.releases_at
+#: ninefruits/offering/models/section.py
+msgid "Opens to everyone at"
+msgstr "全員への開放日時"
+
+# key: offering.help.releases_at
+#: ninefruits/offering/models/section.py
+msgid "Unused reserved seats become open seats at this time."
+msgstr "この日時に未使用の確保枠が一般枠になります。"
+
+# key: reference.fields.sort_order
+#: ninefruits/offering/models/section.py
+msgid "Order"
+msgstr "表示順"
+
+# key: offering.syllabus.language
+#: ninefruits/offering/models/section.py ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgctxt "offering"
+msgid "Language"
+msgstr "言語"
+
+# key: offering.errors.instructor_conflict
+#: ninefruits/offering/services/schedule_conflicts.py
+#, python-format
+msgid "%(instructor)s already teaches %(section)s at this time."
+msgstr "%(instructor)s はこの時間にすでに %(section)s を担当しています。"
+
+# key: offering.errors.room_conflict
+#: ninefruits/offering/services/schedule_conflicts.py
+#, python-format
+msgid "The room is already booked at this time by %(section)s."
+msgstr "この時間、教室はすでに %(section)s で使用されています。"
+
+# key: offering.errors.meetings_overlap
+#: ninefruits/offering/services/schedule_conflicts.py
+msgid "This section already meets at an overlapping time."
+msgstr "この開講科目には時間が重なる授業時間がすでにあります。"
+
+# key: offering.weekdays.1
+#: ninefruits/offering/services/timetable.py
+msgid "Mon"
+msgstr "月"
+
+# key: offering.weekdays.2
+#: ninefruits/offering/services/timetable.py
+msgid "Tue"
+msgstr "火"
+
+# key: offering.weekdays.3
+#: ninefruits/offering/services/timetable.py
+msgid "Wed"
+msgstr "水"
+
+# key: offering.weekdays.4
+#: ninefruits/offering/services/timetable.py
+msgid "Thu"
+msgstr "木"
+
+# key: offering.weekdays.5
+#: ninefruits/offering/services/timetable.py
+msgid "Fri"
+msgstr "金"
+
+# key: offering.weekdays.6
+#: ninefruits/offering/services/timetable.py
+msgid "Sat"
+msgstr "土"
+
+# key: offering.weekdays.7
+#: ninefruits/offering/services/timetable.py
+msgid "Sun"
+msgstr "日"
+
+# key: offering.timetable.choose
+#: ninefruits/offering/templates/offering/admin/timetables.html
+msgid "Choose a term and a room or instructor."
+msgstr "学期と、教室または教員を選択してください。"
+
+# key: offering.timetable.empty
+#: ninefruits/offering/templates/offering/partials/timetable.html
+msgid "Nothing scheduled."
+msgstr "予定はありません。"
+
+# key: offering.catalog.all_units
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "All units"
+msgstr "すべての組織"
+
+# key: offering.catalog.search
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Search"
+msgstr "検索"
+
+# key: offering.catalog.search_placeholder
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Course code or title"
+msgstr "科目コードまたは科目名"
+
+# key: offering.catalog.credits
+#: ninefruits/offering/templates/offering/portal/catalog.html
+#, python-format
+msgid "%(credits)s credits"
+msgstr "%(credits)s 単位"
+
+# key: offering.catalog.instructor_tba
+#: ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Instructor to be announced"
+msgstr "担当教員未定"
+
+# key: offering.catalog.time_tba
+#: ninefruits/offering/templates/offering/portal/catalog.html ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Time to be announced"
+msgstr "時間未定"
+
+# key: offering.syllabus.available
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Syllabus available"
+msgstr "シラバスあり"
+
+# key: offering.catalog.none
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "No sections found."
+msgstr "開講科目が見つかりません。"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Pages"
+msgstr "ページ"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Previous"
+msgstr "前へ"
+
+#: ninefruits/offering/templates/offering/portal/catalog.html
+msgid "Next"
+msgstr "次へ"
+
+# key: offering.catalog.title
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/views/portal.py
+msgctxt "offering"
+msgid "Course catalog"
+msgstr "開講科目一覧"
+
+# key: offering.syllabus.hours
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+#, python-format
+msgid "lecture %(lecture)s h, lab %(lab)s h"
+msgstr "講義 %(lecture)s 時間、実習 %(lab)s 時間"
+
+# key: curriculum.fields.category
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Course category"
+msgstr "科目区分"
+
+# key: curriculum.fields.grading_basis
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Grading"
+msgstr "評価方法"
+
+# key: curriculum.fields.requisites
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Requisites"
+msgstr "履修条件"
+
+# key: curriculum.fields.description
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgctxt "curriculum"
+msgid "Description"
+msgstr "説明"
+
+# key: offering.syllabus.edit
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html ninefruits/offering/views/portal.py
+msgid "Edit syllabus"
+msgstr "シラバスを編集"
+
+# key: offering.syllabus.none
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "No syllabus yet."
+msgstr "まだシラバスはありません。"
+
+# key: offering.syllabus.draft_notice
+#: ninefruits/offering/templates/offering/portal/section_detail.html
+msgid "Draft: students do not see it until it is published."
+msgstr "下書き: 公開するまで学生には表示されません。"
+
+# key: offering.syllabus.assessment
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Assessment"
+msgstr "成績評価"
+
+# key: offering.syllabus.weekly_plan
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Weekly plan"
+msgstr "授業計画"
+
+# key: offering.syllabus.week
+#: ninefruits/offering/templates/offering/portal/section_detail.html ninefruits/offering/templates/offering/portal/syllabus_editor.html
+#, python-format
+msgid "Week %(week)s"
+msgstr "第 %(week)s 回"
+
+# key: offering.syllabus.publish
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Published (visible to students)"
+msgstr "公開(学生に表示)"
+
+# key: offering.syllabus.assessment_item
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Item"
+msgstr "評価項目"
+
+# key: offering.syllabus.weight
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Weight"
+msgstr "割合"
+
+# key: portal.profile.remove
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgctxt "portal"
+msgid "Remove"
+msgstr "削除"
+
+# key: offering.syllabus.add_assessment
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Add item"
+msgstr "項目を追加"
+
+# key: common.save
+#: ninefruits/offering/templates/offering/portal/syllabus_editor.html
+msgid "Save"
+msgstr "保存"
+
+# key: offering.teaching.none
+#: ninefruits/offering/templates/offering/portal/teaching.html
+msgid "No sections in this term."
+msgstr "この学期の担当開講科目はありません。"
+
+# key: curriculum.or
+#: ninefruits/offering/views/portal.py
+msgid "or"
+msgstr "または"
+
+# key: offering.syllabus.overview
+#: ninefruits/offering/views/portal.py
+msgid "Overview"
+msgstr "授業概要"
+
+# key: offering.syllabus.objectives
+#: ninefruits/offering/views/portal.py
+msgid "Learning objectives"
+msgstr "到達目標"
+
+# key: offering.syllabus.materials
+#: ninefruits/offering/views/portal.py
+msgid "Textbooks and materials"
+msgstr "教科書・参考資料"
+
+# key: offering.syllabus.policies
+#: ninefruits/offering/views/portal.py
+msgid "Course policies"
+msgstr "授業の方針"
+
+# key: offering.syllabus.saved
+#: ninefruits/offering/views/portal.py
+msgid "Syllabus saved."
+msgstr "シラバスを保存しました。"
+
+# key: offering.syllabus.published
+#: ninefruits/offering/views/portal.py
+msgctxt "offering.syllabus"
+msgid "Published"
+msgstr "公開"
+
+# key: offering.syllabus.write
+#: ninefruits/offering/views/portal.py
+msgid "Write"
+msgstr "作成"

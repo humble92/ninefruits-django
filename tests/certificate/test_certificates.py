@@ -146,8 +146,8 @@ def test_enforces_the_audience_active_kinds_holds_templates_and_permissions(
     with pytest.raises(PermissionDenied):
         issue_certificate.handle(record, enrollment, "ko", clerk)
 
-    with pytest.raises(ValidationError, match='language "fr"'):
-        issue_certificate.handle(record, enrollment, "fr", officer)
+    with pytest.raises(ValidationError, match='language "es"'):
+        issue_certificate.handle(record, enrollment, "es", officer)
     # Refused issues leave nothing behind.
     assert CertificateIssue.objects.count() == 1
 

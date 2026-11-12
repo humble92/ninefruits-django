@@ -1,0 +1,1212 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "Les traductions doivent être un objet associant un code de langue à un texte."
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "Chaque traduction doit comporter au plus %(limit_value)d caractères."
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "La valeur en %(language)s est obligatoire."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "Ce champ est obligatoire."
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "Langue"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "Appliquer"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "Sélectionner l’enregistrement"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "Sélectionner une action"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "Sélectionner l’action à exécuter"
+
+# key: common.save
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "Enregistrer"
+
+# key: security.scope_types.global
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "Tout"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr " Par %(filter_title)s "
+
+# key: common.yes
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "Oui"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "Non"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "De"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "À"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "Date de début"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "Date de fin"
+
+# key: admin.audit.fields.occurred_at
+# key: registration.fields.attempted_at
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "Date et heure"
+
+# key: assessment.fields.held_date
+# key: attendance.fields.meeting_date
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "Date"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "Exécuter l’action sélectionnée"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "Exécuter"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "Cliquez ici pour sélectionner les objets de toutes les pages"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "Sélectionner tous les %(total_count)s %(module_name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "Effacer la sélection"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "Sélectionner tous les objets de cette page en vue d’une action"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "Des éléments doivent être sélectionnés afin d’appliquer les actions. Aucun élément n’a été modifié."
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "Modèles de l’application %(name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "Vous n’avez pas la permission de voir ou de modifier quoi que ce soit."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "Modifier le mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "Historique"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "Voir sur le site"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "Supprimer l’objet %(object_name)s « %(escaped_object)s » entraînerait la suppression d’objets liés, mais votre compte n’a pas la permission de supprimer les types d’objets suivants :"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "Supprimer l’objet %(object_name)s « %(escaped_object)s » nécessiterait de supprimer les objets liés protégés suivants :"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "Voulez-vous vraiment supprimer l’objet %(object_name)s « %(escaped_object)s » ? Tous les éléments liés suivants seront supprimés :"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "La suppression des objets %(objects_name)s sélectionnés provoquerait la suppression d’objets liés, mais votre compte n’est pas autorisé à supprimer les types d’objet suivants :"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "La suppression des objets %(objects_name)s sélectionnés provoquerait la suppression des objets liés et protégés suivants :"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "Voulez-vous vraiment supprimer les objets %(objects_name)s sélectionnés ? Tous les objets suivants et les éléments liés seront supprimés :"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "Objets"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "Résumé"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "Bon retour sur"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "Vous êtes authentifié sous le nom %(username)s, mais vous n’êtes pas autorisé à accéder à cette page. Souhaitez-vous vous connecter avec un autre compte utilisateur ?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "Connexion"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "Mot de passe ou nom d’utilisateur oublié ?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "Tout afficher"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "Tapez pour rechercher"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "Enregistrer et continuer les modifications"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "Enregistrer et afficher"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "Enregistrer et ajouter un nouveau"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "Enregistrer en tant que nouveau"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "Vous avez été déconnecté de l’administration"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Merci pour le temps que vous avez accordé à ce site aujourd’hui."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "Connectez-vous à nouveau"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "Votre mot de passe a été modifié."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Pour des raisons de sécurité, saisissez votre ancien mot de passe puis votre nouveau mot de passe à deux reprises afin de vérifier qu’il est correctement saisi."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "Aucune donnée"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "Voir le site"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "Déconnexion"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "Ajouter %(name)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "Toutes les applications"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "Afficher"
+
+# key: graduation.report_columns.type_name
+# key: reference.fields.change_type
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "Changement"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "Ajouter"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "Supprimer"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "Inconnu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "Vrai"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "Faux"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "Appliquer les filtres"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "Masquer les nombres"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "Afficher les nombres"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "Effacer tous les filtres"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "Filtres"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "Inverser le tri"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "Enlever du tri"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "Priorité de tri : %(priority_number)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "Naviguer"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "Sélectionner"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "Effacer"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "Recherches récentes"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "Aucun résultat ne correspond à votre recherche"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "Non, revenir à la page précédente"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "Oui, je suis sûr"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "Annuler"
+
+# key: evaluation.portal.submit
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "Envoyer"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "Fermer"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "Modifier"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "Image de l’enregistrement"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "Cet élément sera supprimé."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "Cliquez pour annuler"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "Aucun résultat"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "Cette page ne contient aucun résultat."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "Réinitialiser les filtres"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "Aperçu de l’image"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "Cliquez pour télécharger"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "Choisir un fichier à téléverser"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "Retour"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "Actions récentes"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "Contenu inconnu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "Précédent"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "Suivant"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "Rechercher des applications et des modèles…"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "Raccourcis disponibles"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "Raccourcis globaux"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "Ouvrir l’outil de commande"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "Ouvrir la liste des raccourcis"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "Afficher/masquer la barre latérale"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "Basculer entre mode sombre et clair"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "Raccourcis de la liste"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "Afficher/masquer le filtre"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "Créer un enregistrement"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "Raccourcis de l’outil de commande"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "Ouvrir la sélection"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "Ouvrir la sélection dans un nouvel onglet"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "Administration de Django"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "Site d’administration de Django"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "Accueil"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "Clair"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "Sombre"
+
+# key: reference.fields.is_system
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "Système"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "Retour au site"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s résultat"
+msgstr[1] "%(counter)s résultats"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "%(full_result_count)s résultats"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "Afficher/masquer le mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "Modifier l’objet %(model)s sélectionné"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "Ajouter un autre objet %(model)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "Afficher l'objet %(model)s sélectionné"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "Supprimer l’objet %(model)s sélectionné"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "Ajouter une ligne"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Corrigez l’erreur ci-dessous."
+msgstr[1] "Corrigez les erreurs ci-dessous."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "Site d’administration"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "Sélectionnez l’objet %s à changer"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "Sélectionnez l’objet %s à afficher"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "Ajout de %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "Modification de %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "Affichage de %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "Supprimer les %(verbose_name_plural)s sélectionnés"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "La suppression de %(count)d %(items)s a réussi."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "L'objet {name} « {obj} » a été ajouté avec succès."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "L’objet {name} « {obj} » a été modifié avec succès."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "L’objet %(name)s « %(obj)s » a été supprimé avec succès."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "Aucune action sélectionnée."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "Action :"
+
+# key: offering.catalog.search
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "Rechercher"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "Toutes les dates"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "Aujourd’hui"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "Les 7 derniers jours"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "Ce mois-ci"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "Cette année"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "Aucune date"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "Possède une date"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "Vide"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "Non vide"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "Aucun(e) disponible"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "Mes actions"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "Veuillez compléter correctement les champs « %(username)s » et « mot de passe » d'un compte autorisé. Sachez que les deux champs peuvent être sensibles à la casse."
+
+# key: authentication.fields.password
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "Mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "Saisissez une valeur valide."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "Saisissez une adresse de courriel valide."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "Saisissez un nombre entier."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "Saisissez un nombre."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "Saisissez une date valide."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "Saisissez une heure valide."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "Saisissez une date et une heure valides."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "Saisissez une URL valide."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "Saisissez une liste de valeurs."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Sélectionnez un choix valide. %(value)s n’en fait pas partie."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Assurez-vous que cette valeur est inférieure ou égale à %(limit_value)s."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Assurez-vous que cette valeur est supérieure ou égale à %(limit_value)s."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "Assurez-vous que cette valeur comporte au plus %(limit_value)d caractère (actuellement %(show_value)d)."
+msgstr[1] "Assurez-vous que cette valeur comporte au plus %(limit_value)d caractères (actuellement %(show_value)d)."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "Assurez-vous que cette valeur comporte au moins %(limit_value)d caractère (actuellement %(show_value)d)."
+msgstr[1] "Assurez-vous que cette valeur comporte au moins %(limit_value)d caractères (actuellement %(show_value)d)."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "Lao"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "Connexion"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "Se déconnecter"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "Êtes-vous sûr(e) de vouloir vous déconnecter ?"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py templates/account/signup.html
+msgid "Email"
+msgstr "E-mail"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "Se souvenir de moi"
+
+# key: authentication.login.forgot_password
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "Mot de passe oublié ?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "L’adresse e-mail ou le mot de passe sont incorrects."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "Trop de tentatives de connexion échouées. Veuillez réessayer ultérieurement."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "Ce compte est actuellement désactivé."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "Réinitialisation du mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "Mot de passe oublié ? Indiquez votre adresse e-mail ci-dessous et nous vous enverrons un e-mail pour le réinitialiser."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "Réinitialiser mon mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Merci de nous contacter si vous ne parvenez pas à réinitialiser votre mot de passe."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "Nous vous avons envoyé un e-mail. Si vous ne l'avez pas reçu, veuillez vérifier votre dossier de spam. Sinon, contactez-nous si vous ne le recevez pas dans quelques minutes."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "Mauvais jeton d'identification"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "Le lien de réinitialisation du mot de passe est invalide. Il a peut être déjà été utilisé. Veuillez faire une nouvelle <a href=\"%(passwd_reset_url)s\">demande de réinitialisation de mot de passe</a>."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "Votre mot de passe a été modifié."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "Modifier le mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "Mot de passe actuel"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "Nouveau mot de passe"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "Nouveau mot de passe (confirmation)"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "Vous devez saisir deux fois le même mot de passe."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "Merci d'indiquer votre mot de passe actuel."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "Mot de passe incorrect."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "Clé invalide ou expirée."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "Le jeton de réinitialisation de mot de passe est invalide."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "Soyez patient, vous envoyez trop de requêtes."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "Authentification à deux facteurs"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "Votre compte est protégé par l'authentification à deux facteurs. Veuillez saisir un code d'authentification :"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "Code de l'authentificateur"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "Code"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "Code incorrect."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "Options alternatives"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "Utilisez une application d'authentification ou un code"
+
+# key: authentication.login.submit
+#: templates/account/login.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "Se connecter"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "Mot de passe"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "Rester connecté"
+
+# key: authentication.login.sso
+#: templates/account/login.html
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "Se connecter avec %(provider)s"
+
+# key: admissions.register.prompt
+#: templates/account/login.html
+msgid "Want to apply?"
+msgstr "Vous souhaitez candidater ?"
+
+# key: admissions.register.see_cycles
+#: templates/account/login.html
+msgid "See open admissions"
+msgstr "Voir les admissions ouvertes"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "Confirmez votre mot de passe"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "Pour votre sécurité, veuillez confirmer votre mot de passe pour continuer."
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "Confirmer"
+
+# key: admissions.register.title
+#: templates/account/signup.html
+msgid "Create an account"
+msgstr "Créer un compte"
+
+# key: admissions.register.instructions
+#: templates/account/signup.html
+msgid "For applicants. Staff and current students already have an account."
+msgstr "Pour les candidats. Les personnels et les étudiants inscrits disposent déjà d’un compte."
+
+# key: people.help.romanized
+#: templates/account/signup.html
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "Nom légal en caractères latins, tel qu’il figure sur le passeport. Ajoutez ci-dessous le nom tel qu’il s’écrit dans d’autres langues."
+
+# key: authentication.fields.password_confirmation
+#: templates/account/signup.html
+msgid "Confirm password"
+msgstr "Confirmer le mot de passe"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/account/signup.html
+msgid "Create account"
+msgstr "Créer le compte"
+
+# key: admissions.register.have_account
+#: templates/account/signup.html
+msgid "Already have an account?"
+msgstr "Vous avez déjà un compte ?"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "Double authentification"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "Saisissez le code à 6 chiffres de votre application d’authentification."
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "Code"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "Utiliser plutôt un code de récupération"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "Code de récupération"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "Mémoriser cet appareil"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "Vérifier"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "Saisissez le code à 6 chiffres que nous avons envoyé à votre adresse e-mail."
+
+# key: authentication.two_factor.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "Code reçu par e-mail"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "Recevoir plutôt un code par e-mail"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "Envoyer un nouveau code"
+
+# upstream: Django/allauth catalog
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "Fermer"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "Menu principal"
+
+# key: authentication.logout
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Se déconnecter"
+
+# key: security.mfa.set_up
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "Configurer maintenant"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "utilisateur"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "utilisateurs"

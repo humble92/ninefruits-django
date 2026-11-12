@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: mn\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# key: reference.import.title
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(type)s import finished"
+msgstr "%(type)s оруулалт дууслаа"
+
+# key: reference.import.completed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) imported."
+msgstr "%(count)s мөр орууллаа."
+
+# key: reference.import.failed
+#: ninefruits/importing/admin.py
+#, python-format
+msgid "%(count)s row(s) failed; download the failed rows to fix them."
+msgstr "%(count)s мөр амжилтгүй; засахын тулд амжилтгүй мөрүүдийг татаж авна уу."
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed row"
+msgstr "амжилтгүй мөр"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "failed rows"
+msgstr "амжилтгүй мөрүүд"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Row"
+msgstr "Мөр"
+
+#: ninefruits/importing/admin.py ninefruits/importing/models/imports.py
+msgid "Import type"
+msgstr "Оруулгын төрөл"
+
+#: ninefruits/importing/admin.py
+msgid "Failed rows"
+msgstr "Амжилтгүй мөрүүд"
+
+# key: admissions.fields.status
+# key: certificate.facts.status
+# key: graduation.report_columns.status
+# key: offering.fields.status
+# key: people.fields.status
+# key: reference.fields.status
+# key: registration.fields.status
+#: ninefruits/importing/admin.py
+msgid "Status"
+msgstr "Төлөв"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/importing/admin.py
+msgid "Queued"
+msgstr "Дараалалд"
+
+#: ninefruits/importing/admin.py
+msgid "Download failed rows"
+msgstr "Амжилтгүй мөрүүдийг татаж авах"
+
+# key: reference.resources.org_units.plural_label
+#: ninefruits/importing/importers.py
+msgid "org units"
+msgstr "бүтцийн нэгжүүд"
+
+# key: reference.resources.programs.plural_label
+#: ninefruits/importing/importers.py
+msgid "programs"
+msgstr "хөтөлбөрүүд"
+
+# key: reference.resources.buildings.plural_label
+#: ninefruits/importing/importers.py
+msgid "buildings"
+msgstr "байрууд"
+
+# key: reference.resources.rooms.plural_label
+#: ninefruits/importing/importers.py
+msgid "rooms"
+msgstr "танхимууд"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/importing/importers.py
+msgid "codes"
+msgstr "кодууд"
+
+# key: registration.enrollment_statuses.completed
+#: ninefruits/importing/models/imports.py
+msgctxt "importing"
+msgid "Completed"
+msgstr "Дүүргэсэн"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "File"
+msgstr "Файл"
+
+#: ninefruits/importing/models/imports.py
+msgid "Processed rows"
+msgstr "Боловсруулсан мөр"
+
+#: ninefruits/importing/models/imports.py
+msgid "Rows"
+msgstr "Мөрийн тоо"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported rows"
+msgstr "Оруулсан мөр"
+
+#: ninefruits/importing/models/imports.py
+msgid "Imported by"
+msgstr "Оруулсан хүн"
+
+# key: lms.fields.started_at
+#: ninefruits/importing/models/imports.py
+msgid "Started"
+msgstr "Эхэлсэн"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV import"
+msgstr "CSV оруулга"
+
+#: ninefruits/importing/models/imports.py
+msgid "CSV imports"
+msgstr "CSV оруулгууд"
+
+# upstream: Django/allauth catalog
+#: ninefruits/importing/models/imports.py
+msgid "Error"
+msgstr "Алдаа"
+
+# key: validation.required
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field is required."
+msgstr "%(attribute)s талбарыг заавал бөглөнө."
+
+# key: validation.after_or_equal
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "%(attribute)s талбар %(date)s буюу түүнээс хойшхи огноо байх ёстой."
+
+# key: validation.max.string
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must not be greater than %(max)s characters."
+msgstr "%(attribute)s талбар %(max)s тэмдэгтээс урт байж болохгүй."
+
+# key: validation.enum
+# key: validation.exists
+# key: validation.in
+# key: validation.not_in
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The selected %(attribute)s is invalid."
+msgstr "Сонгосон %(attribute)s буруу байна."
+
+# key: validation.integer
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be an integer."
+msgstr "%(attribute)s талбар бүхэл тоо байх ёстой."
+
+# key: validation.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a number."
+msgstr "%(attribute)s талбар тоо байх ёстой."
+
+# key: validation.boolean
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be true or false."
+msgstr "%(attribute)s талбар үнэн эсвэл худал байх ёстой."
+
+# key: validation.date
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be a valid date."
+msgstr "%(attribute)s талбар хүчинтэй огноо байх ёстой."
+
+# key: validation.between.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be between %(min)s and %(max)s."
+msgstr "%(attribute)s талбар %(min)s-ээс %(max)s хооронд байх ёстой."
+
+# key: validation.min.numeric
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "The %(attribute)s field must be at least %(min)s."
+msgstr "%(attribute)s талбар дор хаяж %(min)s байх ёстой."
+
+# key: reference.import.unknown_code
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Unknown %(column)s code \"%(code)s\"."
+msgstr "Тодорхойгүй %(column)s код \"%(code)s\"."
+
+# key: reference.import.row_rejected
+#: ninefruits/importing/resources.py
+#, python-format
+msgid "Rejected by the database: %(message)s"
+msgstr "Өгөгдлийн сан татгалзсан: %(message)s"

@@ -1,0 +1,356 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ne\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Each score must be a number from 0 to 100."
+msgstr "प्रत्येक अङ्क 0 देखि 100 सम्मको सङ्ख्या हुनुपर्छ।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown operation."
+msgstr "अज्ञात कार्य।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown status."
+msgstr "अज्ञात स्थिति।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Unknown sync log entry."
+msgstr "अज्ञात सिङ्क लग प्रविष्टि।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "This step is already finished."
+msgstr "यो चरण पहिले नै सकिएको छ।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The operation does not match the sync log entry."
+msgstr "कार्य सिङ्क लग प्रविष्टिसँग मेल खाँदैन।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "The section is not linked to this platform."
+msgstr "यो सेक्सन यस प्लेटफर्मसँग जोडिएको छैन।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "Send an object of user id to score."
+msgstr "प्रयोगकर्ता ID अनुसार अङ्कको वस्तु (object) पठाउनुहोस्।"
+
+#: ninefruits/lms/actions/deliver.py
+msgid "No section is linked to this course."
+msgstr "यस विषयसँग कुनै सेक्सन जोडिएको छैन।"
+
+# key: lms.resources.platforms.label
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "LMS platform"
+msgstr "LMS प्लेटफर्म"
+
+# key: registration.fields.status
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "registration"
+msgid "Status"
+msgstr "स्थिति"
+
+# key: reference.resources.terms.label
+#: ninefruits/lms/admin/course_links.py
+msgid "term"
+msgstr "सेमेस्टर"
+
+# key: offering.fields.section
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgctxt "offering"
+msgid "Section"
+msgstr "सेक्सन"
+
+# key: lms.fields.external_course_id
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course id on the platform"
+msgstr "प्लेटफर्ममा विषयको id"
+
+# key: lms.fields.external_url
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Course URL"
+msgstr "विषयको URL"
+
+# key: lms.fields.last_error
+#: ninefruits/lms/admin/course_links.py ninefruits/lms/models.py
+msgid "Last error"
+msgstr "अन्तिम त्रुटि"
+
+# key: lms.actions.resync
+#: ninefruits/lms/admin/course_links.py
+msgid "Synchronize again"
+msgstr "फेरि सिङ्क गर्नुहोस्"
+
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronization failed: %(error)s"
+msgstr "सिङ्क असफल भयो: %(error)s"
+
+# key: lms.notifications.synced
+#: ninefruits/lms/admin/course_links.py
+#, python-format
+msgid "Synchronized: %(members)s member(s)."
+msgstr "सिङ्क भयो: %(members)s सदस्य।"
+
+#: ninefruits/lms/admin/course_links.py
+msgid "Pushes the course, its instructors and its enrolled students to the platform again."
+msgstr "विषय, यसका प्राध्यापकहरू र भर्ना भएका विद्यार्थीहरूलाई फेरि प्लेटफर्ममा पठाउँछ।"
+
+# key: lms.fields.not_implemented
+#: ninefruits/lms/admin/platforms.py
+msgid "not implemented yet"
+msgstr "अहिलेसम्म लागू गरिएको छैन"
+
+#: ninefruits/lms/admin/platforms.py
+#, python-format
+msgid "Line %(number)s: write key=value."
+msgstr "पङ्क्ति %(number)s: key=value लेख्नुहोस्।"
+
+# key: reference.fields.code
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Code"
+msgstr "कोड"
+
+# key: lms.fields.driver
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Driver"
+msgstr "ड्राइभर"
+
+# key: lms.help.driver
+#: ninefruits/lms/admin/platforms.py
+msgid "The connector that talks to the platform. \"null\" records what would be sent without calling anything; use it to prepare and test."
+msgstr "प्लेटफर्मसँग कुरा गर्ने कनेक्टर। \"null\" ले केही नबोलाई पठाइने कुरा मात्र अभिलेख गर्छ; तयारी र परीक्षणका लागि प्रयोग गर्नुहोस्।"
+
+# key: lms.fields.base_url
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Base URL"
+msgstr "आधार URL"
+
+# key: lms.fields.credentials
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Credentials"
+msgstr "पहुँच विवरण"
+
+# key: lms.help.credentials
+#: ninefruits/lms/admin/platforms.py
+msgid "Tokens and secrets the driver needs (see docs/lms-integration-guide.md). Stored encrypted; leave empty on edit to keep the stored ones."
+msgstr "ड्राइभरलाई चाहिने टोकन र सिक्रेट (docs/lms-integration-guide.md हेर्नुहोस्)। इन्क्रिप्ट गरेर राखिन्छ; सम्पादन गर्दा राखिएका मान कायम राख्न खाली छोड्नुहोस्।"
+
+#: ninefruits/lms/admin/platforms.py
+msgid "One key=value per line, e.g. token=..."
+msgstr "प्रति पङ्क्ति एउटा key=value, जस्तै token=..."
+
+# key: lms.help.is_active
+#: ninefruits/lms/admin/platforms.py
+msgid "Active platforms receive published sections and roster changes as they happen, and the nightly reconcile."
+msgstr "सक्रिय प्लेटफर्मले प्रकाशित सेक्सन र विद्यार्थी सूचीका परिवर्तनहरू भइरहँदा, र रातिको मिलान पाउँछन्।"
+
+# key: lms.help.should_pull_grades
+#: ninefruits/lms/admin/platforms.py
+msgid "Lets instructors load the platform's final scores into the grade entry screen as a draft."
+msgstr "प्राध्यापकलाई प्लेटफर्मका अन्तिम अङ्क ग्रेड प्रविष्टि स्क्रिनमा मस्यौदाका रूपमा ल्याउन दिन्छ।"
+
+#: ninefruits/lms/admin/platforms.py
+msgid "This code is already used."
+msgstr "यो कोड पहिले नै प्रयोगमा छ।"
+
+# key: reference.fields.name
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgctxt "reference"
+msgid "Name"
+msgstr "नाम"
+
+# key: lms.resources.course_links.plural_label
+# key: lms.fields.course_links
+#: ninefruits/lms/admin/platforms.py ninefruits/lms/models.py
+msgid "Course links"
+msgstr "विषय लिङ्कहरू"
+
+# key: admin.record_changes.fields.operation
+# key: lms.fields.operation
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Operation"
+msgstr "कार्य"
+
+# key: admin.audit.fields.actor
+#: ninefruits/lms/admin/sync_logs.py
+msgid "User"
+msgstr "प्रयोगकर्ता"
+
+# key: lms.fields.message
+#: ninefruits/lms/admin/sync_logs.py ninefruits/lms/models.py
+msgid "Message"
+msgstr "सन्देश"
+
+#: ninefruits/lms/admin/sync_logs.py
+msgid "Payload"
+msgstr "पेलोड"
+
+# key: lms.link_statuses.pending
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Pending"
+msgstr "विचाराधीन"
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/lms/enums.py
+msgid "Linked"
+msgstr "जोडिएको"
+
+# key: lms.link_statuses.failed
+# key: lms.sync_statuses.failed
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Failed"
+msgstr "असफल"
+
+# key: lms.drivers.null
+#: ninefruits/lms/enums.py
+msgid "None (records only)"
+msgstr "छैन (अभिलेख मात्र)"
+
+# key: lms.operations.course.sync
+#: ninefruits/lms/enums.py
+msgctxt "lms"
+msgid "Course"
+msgstr "विषय"
+
+# key: lms.operations.enrollment.add
+#: ninefruits/lms/enums.py
+msgid "Add member"
+msgstr "सदस्य थप्नुहोस्"
+
+# key: lms.operations.enrollment.remove
+#: ninefruits/lms/enums.py
+msgid "Remove member"
+msgstr "सदस्य हटाउनुहोस्"
+
+# key: lms.operations.grades.pull
+#: ninefruits/lms/enums.py
+msgid "Pull scores"
+msgstr "अङ्क ल्याउनुहोस्"
+
+#: ninefruits/lms/enums.py
+msgid "Scores delivered"
+msgstr "पठाइएका अङ्कहरू"
+
+# key: lms.operations.reconcile
+#: ninefruits/lms/enums.py
+msgid "Reconcile"
+msgstr "मिलान"
+
+# key: lms.sync_statuses.queued
+#: ninefruits/lms/enums.py
+msgid "Queued"
+msgstr "लाइनमा"
+
+# key: lms.sync_statuses.succeeded
+# key: registration.attempt_outcomes.succeeded
+#: ninefruits/lms/enums.py
+msgid "Succeeded"
+msgstr "सफल"
+
+# key: lms.sync_statuses.skipped
+#: ninefruits/lms/enums.py
+msgid "Skipped"
+msgstr "छोडिएको"
+
+#: ninefruits/lms/models.py
+msgid "Options"
+msgstr "विकल्पहरू"
+
+# key: reference.fields.is_active
+#: ninefruits/lms/models.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "सक्रिय"
+
+# key: lms.fields.should_sync_enrollments
+#: ninefruits/lms/models.py
+msgid "Synchronize rosters"
+msgstr "विद्यार्थी सूची सिङ्क गर्नुहोस्"
+
+# key: lms.fields.should_pull_grades
+#: ninefruits/lms/models.py
+msgid "Pull final scores"
+msgstr "अन्तिम अङ्क ल्याउनुहोस्"
+
+# key: lms.resources.platforms.plural_label
+#: ninefruits/lms/models.py
+msgid "LMS platforms"
+msgstr "LMS प्लेटफर्महरू"
+
+# key: lms.fields.last_synced_at
+#: ninefruits/lms/models.py
+msgid "Last synced"
+msgstr "अन्तिम सिङ्क"
+
+# key: lms.resources.course_links.label
+#: ninefruits/lms/models.py
+msgid "Course link"
+msgstr "विषय लिङ्क"
+
+#: ninefruits/lms/models.py
+msgid "User id on the platform"
+msgstr "प्लेटफर्ममा प्रयोगकर्ता ID"
+
+#: ninefruits/lms/models.py
+msgid "User link"
+msgstr "प्रयोगकर्ता लिङ्क"
+
+#: ninefruits/lms/models.py
+msgid "User links"
+msgstr "प्रयोगकर्ता लिङ्कहरू"
+
+# key: lms.fields.started_at
+#: ninefruits/lms/models.py
+msgid "Started"
+msgstr "सुरु"
+
+#: ninefruits/lms/models.py
+msgid "Finished"
+msgstr "सकियो"
+
+# key: lms.resources.sync_logs.label
+#: ninefruits/lms/models.py
+msgid "Sync log"
+msgstr "सिङ्क लग"
+
+# key: lms.resources.sync_logs.plural_label
+#: ninefruits/lms/models.py
+msgid "Sync logs"
+msgstr "सिङ्क लगहरू"
+
+# key: grading.entry.import_lms
+#: ninefruits/lms/services/grades.py
+msgid "Load scores from the LMS"
+msgstr "LMS बाट अङ्क ल्याउनुहोस्"
+
+# key: grading.entry.lms_imported
+#: ninefruits/lms/services/grades.py
+#, python-format
+msgid "%(count)s score(s) loaded from the LMS as a draft. Check them and save."
+msgstr "LMS बाट %(count)s अङ्क मस्यौदाका रूपमा ल्याइयो। जाँचेर सुरक्षित गर्नुहोस्।"
+
+# key: lms.portal.open_course
+#: ninefruits/lms/services/portal.py
+#, python-format
+msgid "Open the course on %(platform)s"
+msgstr "%(platform)s मा विषय खोल्नुहोस्"

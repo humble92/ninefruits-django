@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: fil\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+# key: reference.fields.iso_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
+msgid "ISO code"
+msgstr "ISO code"
+
+# key: reference.fields.alpha3_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
+msgid "Three-letter code"
+msgstr "Code na may tatlong titik"
+
+# key: reference.fields.numeric_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
+msgid "Numeric code"
+msgstr "Numerong code"
+
+# key: validation.size.string
+#: ninefruits/institution/admin.py
+#, python-format
+msgid "The %(attribute)s field must be %(size)s characters."
+msgstr "Dapat %(size)s character ang field na %(attribute)s."
+
+# key: reference.fields.name
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Pangalan"
+
+# key: validation.not_regex
+# key: validation.regex
+#: ninefruits/institution/admin.py
+#, python-format
+msgid "The %(attribute)s field format is invalid."
+msgstr "Hindi wasto ang format ng field na %(attribute)s."
+
+# key: reference.resources.lookup_values.label
+#: ninefruits/institution/admin.py ninefruits/institution/models/lookup.py
+msgid "code"
+msgstr "code"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/institution/admin.py ninefruits/institution/models/lookup.py
+msgid "codes"
+msgstr "mga code"
+
+# key: reference.fields.values_count
+#: ninefruits/institution/admin.py
+msgid "Codes"
+msgstr "Mga code"
+
+# key: reference.errors.in_use_title
+#: ninefruits/institution/admin_support.py
+msgid "Still in use"
+msgstr "Ginagamit pa"
+
+# key: reference.errors.in_use_body
+#: ninefruits/institution/admin_support.py
+msgid "Other records refer to this one. Deactivate it or end its validity instead."
+msgstr "May ibang rekord na tumutukoy rito. I-deactivate na lang ito o wakasan ang bisa nito."
+
+# key: assessment.fields.file
+#: ninefruits/institution/admin_support.py
+msgid "CSV file"
+msgstr "CSV file"
+
+#: ninefruits/institution/admin_support.py
+msgid "UTF-8 with a header row."
+msgstr "UTF-8 na may header row."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "Masyadong malaki ang file (%(size)s byte, hanggang %(limit)s lamang)."
+
+# key: reference.actions.import_csv
+#: ninefruits/institution/admin_support.py
+msgid "Import CSV"
+msgstr "Mag-import ng CSV"
+
+#: ninefruits/institution/admin_support.py
+msgid "The file is not UTF-8 text."
+msgstr "Ang file ay hindi UTF-8 na teksto."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Missing required columns: %(columns)s."
+msgstr "Kulang ang mga kinakailangang column: %(columns)s."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Columns: %(columns)s"
+msgstr "Mga column: %(columns)s"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Required columns: %(columns)s"
+msgstr "Mga kinakailangang column: %(columns)s"
+
+#: ninefruits/institution/admin_support.py
+msgid "Rows are matched by code: importing the same file again updates instead of duplicating. Empty translation cells keep existing translations."
+msgstr "Itinutugma ang mga hilera ayon sa code: ang muling pag-import ng parehong file ay nag-a-update sa halip na gumawa ng duplicate. Pinapanatili ng mga walang lamang cell ng salin ang mga kasalukuyang salin."
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Import #%(id)s queued (%(rows)s rows). This page shows the result when it is finished."
+msgstr "Naka-queue ang import #%(id)s (%(rows)s hilera). Ipapakita ng pahinang ito ang resulta kapag tapos na ito."
+
+# key: reference.fields.is_active
+#: ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Aktibo"
+
+# key: reference.resources.countries.label
+#: ninefruits/institution/models/country.py
+msgid "country"
+msgstr "bansa"
+
+# key: reference.resources.countries.plural_label
+#: ninefruits/institution/models/country.py
+msgid "countries"
+msgstr "mga bansa"
+
+# key: reference.resources.languages.label
+#: ninefruits/institution/models/language.py
+msgid "language"
+msgstr "wika"
+
+# key: reference.resources.languages.plural_label
+#: ninefruits/institution/models/language.py
+msgid "languages"
+msgstr "mga wika"
+
+# key: reference.fields.code
+#: ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Code"
+
+# key: reference.fields.description
+#: ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Description"
+msgstr "Paglalarawan"
+
+# key: reference.fields.is_system
+#: ninefruits/institution/models/lookup.py
+msgid "System"
+msgstr "Sistema"
+
+# key: reference.resources.lookup_types.label
+#: ninefruits/institution/models/lookup.py
+msgid "code list"
+msgstr "listahan ng code"
+
+# key: reference.resources.lookup_types.plural_label
+#: ninefruits/institution/models/lookup.py
+msgid "code lists"
+msgstr "mga listahan ng code"
+
+# key: reference.fields.sort_order
+#: ninefruits/institution/models/lookup.py
+msgid "Order"
+msgstr "Pagkakasunod"
+
+# key: reference.fields.year_levels
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Year levels"
+msgstr "Mga year level"
+
+# key: reference.fields.admission_year_from
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Admitted from (year)"
+msgstr "Pinasok mula (taon)"
+
+# key: reference.fields.admission_year_to
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Admitted until (year)"
+msgstr "Pinasok hanggang (taon)"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Programs"
+msgstr "Mga programa"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Org units"
+msgstr "Mga yunit ng organisasyon"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Includes all units below the selected ones."
+msgstr "Kasama ang lahat ng yunit sa ilalim ng mga napili."
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Academic standing"
+msgstr "Academic standing"
+
+# key: grading.help.standing_criteria
+#: ninefruits/institution/target_criteria_fields.py
+msgid "The standing from the latest term close. Leave empty for any."
+msgstr "Ang standing mula sa pinakahuling pagsasara ng termino. Iwanang blangko para sa kahit ano."
+
+# key: validation.gte.numeric
+#: ninefruits/institution/target_criteria_fields.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "Dapat mas malaki o katumbas ng %(value)s ang field na %(attribute)s."
+
+# key: reference.fields.admission_years
+#: ninefruits/institution/target_criteria_fields.py
+msgctxt "reference"
+msgid "Admitted"
+msgstr "Pinasok"

@@ -1,0 +1,298 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/portal/menu.py ninefruits/portal/views/dashboard.py
+msgctxt "portal"
+msgid "Home"
+msgstr "Trang chủ"
+
+# key: admin.settings.security.title
+# key: portal.navigation.security
+#: ninefruits/portal/menu.py
+msgctxt "portal"
+msgid "Security"
+msgstr "Bảo mật"
+
+# key: portal.navigation.admin
+#: ninefruits/portal/menu.py ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Administration"
+msgstr "Quản trị"
+
+# key: portal.dashboard.welcome
+#: ninefruits/portal/templates/portal/dashboard.html
+#, python-format
+msgctxt "portal"
+msgid "Welcome, %(name)s"
+msgstr "Xin chào, %(name)s"
+
+# key: portal.dashboard.access
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Your access"
+msgstr "Quyền truy cập của bạn"
+
+# key: permissions.resources.roles
+# key: portal.dashboard.roles
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Roles"
+msgstr "Vai trò"
+
+# key: common.none
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "common"
+msgid "None"
+msgstr "Không có"
+
+# key: portal.dashboard.personas
+#: ninefruits/portal/templates/portal/dashboard.html
+msgctxt "portal"
+msgid "Personas"
+msgstr "Đối tượng"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: ninefruits/portal/templates/portal/security.html ninefruits/portal/views/security.py
+msgid "Two-factor authentication"
+msgstr "Xác thực hai yếu tố"
+
+# key: security.mfa.description
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication protects your account with a code from an authenticator app in addition to your password."
+msgstr "Xác thực hai yếu tố bảo vệ tài khoản của bạn bằng mã từ ứng dụng xác thực, bên cạnh mật khẩu."
+
+# key: security.mfa.enrollment_required
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is required for your account. Please set it up to continue."
+msgstr "Tài khoản của bạn bắt buộc dùng xác thực hai yếu tố. Vui lòng thiết lập để tiếp tục."
+
+# key: security.mfa_methods.authenticator_app
+#: ninefruits/portal/templates/portal/security.html
+msgid "Authenticator app"
+msgstr "Ứng dụng xác thực"
+
+# key: security.mfa.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Two-factor authentication is enabled."
+msgstr "Đã bật xác thực hai yếu tố."
+
+# key: security.mfa.regenerate_recovery_codes
+#: ninefruits/portal/templates/portal/security.html
+msgid "Generate new recovery codes"
+msgstr "Tạo mã khôi phục mới"
+
+# key: security.mfa.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Disable two-factor authentication?"
+msgstr "Tắt xác thực hai yếu tố?"
+
+# key: security.mfa.disable
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Disable"
+msgstr "Tắt"
+
+# key: security.mfa.scan_qr_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Scan this QR code with your authenticator app, then enter the code it shows."
+msgstr "Quét mã QR này bằng ứng dụng xác thực, sau đó nhập mã hiển thị."
+
+# key: security.mfa.setup_key
+#: ninefruits/portal/templates/portal/security.html
+msgid "Setup key"
+msgstr "Khóa thiết lập"
+
+# key: authentication.two_factor.code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "Mã"
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "Xác nhận"
+
+# key: security.mfa.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Enable two-factor authentication"
+msgstr "Bật xác thực hai yếu tố"
+
+# key: security.mfa.recovery_codes_instructions
+#: ninefruits/portal/templates/portal/security.html
+msgid "Store these recovery codes in a safe place. Each can be used once if you lose your device."
+msgstr "Hãy lưu các mã khôi phục này ở nơi an toàn. Mỗi mã dùng được một lần nếu bạn mất thiết bị."
+
+# key: authentication.two_factor.email_code
+# key: security.mfa_methods.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email code"
+msgstr "Mã qua email"
+
+# key: security.email_code.description
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid "Receive a one-time code at %(email)s each time you sign in. Less secure than an authenticator app; use it if you cannot install one."
+msgstr "Nhận mã dùng một lần tại %(email)s mỗi khi đăng nhập. Kém an toàn hơn ứng dụng xác thực; hãy dùng nếu bạn không thể cài ứng dụng."
+
+# key: security.email_code.enabled
+#: ninefruits/portal/templates/portal/security.html
+msgid "Email codes are turned on."
+msgstr "Đã bật mã qua email."
+
+# key: security.email_code.disable_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Turn off email codes?"
+msgstr "Tắt mã qua email?"
+
+# key: authentication.two_factor.email_code
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "Mã qua email"
+
+# key: authentication.two_factor.resend_email_code
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a new code"
+msgstr "Gửi mã mới"
+
+# key: security.email_code.enable
+#: ninefruits/portal/templates/portal/security.html
+msgid "Send a code to set up"
+msgstr "Gửi mã để thiết lập"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Remembered devices"
+msgstr "Thiết bị đã ghi nhớ"
+
+#: ninefruits/portal/templates/portal/security.html
+#, python-format
+msgid "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s day."
+msgid_plural "When you tick \"Remember this device\" at sign-in, this browser skips the code for %(days)s days."
+msgstr[0] "Khi bạn chọn \"Ghi nhớ thiết bị này\" lúc đăng nhập, trình duyệt này sẽ không hỏi mã trong %(days)s ngày."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Changing your two-factor setup forgets every remembered device."
+msgstr "Thay đổi thiết lập xác thực hai yếu tố sẽ xóa ghi nhớ của mọi thiết bị."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Forget this device"
+msgstr "Bỏ ghi nhớ thiết bị này"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "This device is not remembered."
+msgstr "Thiết bị này chưa được ghi nhớ."
+
+# upstream: Django/allauth catalog
+#: ninefruits/portal/templates/portal/security.html
+msgid "Change password"
+msgstr "Đổi mật khẩu"
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Your password was changed. Other sessions were signed out."
+msgstr "Đã đổi mật khẩu. Các phiên khác đã bị đăng xuất."
+
+#: ninefruits/portal/templates/portal/security.html
+msgid "Current password"
+msgstr "Mật khẩu hiện tại"
+
+# key: authentication.fields.new_password
+#: ninefruits/portal/templates/portal/security.html
+msgid "New password"
+msgstr "Mật khẩu mới"
+
+# key: authentication.fields.password_confirmation
+#: ninefruits/portal/templates/portal/security.html
+msgid "Confirm password"
+msgstr "Xác nhận mật khẩu"
+
+# key: security.sso.title
+#: ninefruits/portal/templates/portal/security.html
+msgid "School sign-in"
+msgstr "Đăng nhập của trường"
+
+# key: security.sso.help
+#: ninefruits/portal/templates/portal/security.html
+msgid "Link your school account to sign in with it."
+msgstr "Liên kết tài khoản của trường để đăng nhập bằng tài khoản đó."
+
+# key: lms.link_statuses.linked
+# key: security.sso.linked_status
+#: ninefruits/portal/templates/portal/security.html
+msgid "Linked"
+msgstr "Đã liên kết"
+
+# key: security.sso.unlink_confirm
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink this school account? You will need your password to sign in."
+msgstr "Hủy liên kết tài khoản của trường này? Bạn sẽ cần mật khẩu để đăng nhập."
+
+# key: security.sso.unlink
+#: ninefruits/portal/templates/portal/security.html
+msgid "Unlink"
+msgstr "Hủy liên kết"
+
+# key: security.sso.link
+#: ninefruits/portal/templates/portal/security.html
+msgctxt "security"
+msgid "Link"
+msgstr "Liên kết"
+
+# key: security.mfa.required_by
+#: ninefruits/portal/templatetags/portal.py
+#, python-format
+msgctxt "security"
+msgid "Two-factor authentication is required for your account. Please set it up by %(date)s."
+msgstr "Tài khoản của bạn bắt buộc dùng xác thực hai yếu tố. Vui lòng thiết lập trước %(date)s."
+
+# key: security.mfa.recommended
+#: ninefruits/portal/templatetags/portal.py
+msgctxt "security"
+msgid "We recommend enabling two-factor authentication for your account."
+msgstr "Chúng tôi khuyến nghị bật xác thực hai yếu tố cho tài khoản của bạn."
+
+#: ninefruits/portal/views/security.py
+msgid "Start the setup again."
+msgstr "Hãy bắt đầu thiết lập lại từ đầu."
+
+#: ninefruits/portal/views/security.py
+msgid "The code must be 6 digits."
+msgstr "Mã phải gồm 6 chữ số."
+
+# key: security.email_code.not_allowed
+#: ninefruits/portal/views/security.py
+msgid "Email codes are not available at this institution."
+msgstr "Cơ sở đào tạo này không hỗ trợ mã qua email."
+
+# key: security.email_code.wait
+#: ninefruits/portal/views/security.py
+#, python-format
+msgid "Please wait %(seconds)s seconds before requesting another code."
+msgstr "Vui lòng đợi %(seconds)s giây trước khi yêu cầu mã khác."
+
+#: ninefruits/portal/views/security.py
+msgid "The email code must be 6 digits."
+msgstr "Mã email phải gồm 6 chữ số."

@@ -1224,3 +1224,13 @@ msgstr "ລົງທະບຽນແລ້ວ."
 #: views/portal.py:334
 msgid "Added to the cart."
 msgstr "ເພີ່ມໃສ່ກະຕ່າແລ້ວ."
+
+# key: registration.mail.open_registration
+#: ninefruits/registration/notifications.py
+msgid "Open registration"
+msgstr "ເປີດການລົງທະບຽນຮຽນ"
+
+# key: registration.fields.overridden
+#: ninefruits/registration/models/enrollment.py
+msgid "overridden"
+msgstr "ຍົກເວັ້ນແລ້ວ"

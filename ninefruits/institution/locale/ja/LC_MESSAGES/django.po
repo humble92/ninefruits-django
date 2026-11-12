@@ -1,0 +1,238 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.fields.iso_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
+msgid "ISO code"
+msgstr "ISO コード"
+
+# key: reference.fields.alpha3_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py
+msgid "Three-letter code"
+msgstr "3 文字コード"
+
+# key: reference.fields.numeric_code
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py
+msgid "Numeric code"
+msgstr "数字コード"
+
+# key: validation.size.string
+#: ninefruits/institution/admin.py
+#, python-format
+msgid "The %(attribute)s field must be %(size)s characters."
+msgstr "%(attribute)s は %(size)s 文字で入力してください。"
+
+# key: reference.fields.name
+#: ninefruits/institution/admin.py ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Name"
+msgstr "名称"
+
+# key: validation.not_regex
+# key: validation.regex
+#: ninefruits/institution/admin.py
+#, python-format
+msgid "The %(attribute)s field format is invalid."
+msgstr "%(attribute)s の形式が正しくありません。"
+
+# key: reference.resources.lookup_values.label
+#: ninefruits/institution/admin.py ninefruits/institution/models/lookup.py
+msgid "code"
+msgstr "コード"
+
+# key: reference.resources.lookup_values.plural_label
+#: ninefruits/institution/admin.py ninefruits/institution/models/lookup.py
+msgid "codes"
+msgstr "コード"
+
+# key: reference.fields.values_count
+#: ninefruits/institution/admin.py
+msgid "Codes"
+msgstr "コード数"
+
+# key: reference.errors.in_use_title
+#: ninefruits/institution/admin_support.py
+msgid "Still in use"
+msgstr "使用中"
+
+# key: reference.errors.in_use_body
+#: ninefruits/institution/admin_support.py
+msgid "Other records refer to this one. Deactivate it or end its validity instead."
+msgstr "他のレコードから参照されています。無効にするか、有効期間を終了してください。"
+
+# key: assessment.fields.file
+#: ninefruits/institution/admin_support.py
+msgid "CSV file"
+msgstr "CSV ファイル"
+
+#: ninefruits/institution/admin_support.py
+msgid "UTF-8 with a header row."
+msgstr "ヘッダー行のある UTF-8 ファイル。"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "The file is too big (%(size)s bytes, at most %(limit)s)."
+msgstr "ファイルが大きすぎます(%(size)s バイト、上限 %(limit)s)。"
+
+# key: reference.actions.import_csv
+#: ninefruits/institution/admin_support.py
+msgid "Import CSV"
+msgstr "CSV 取り込み"
+
+#: ninefruits/institution/admin_support.py
+msgid "The file is not UTF-8 text."
+msgstr "ファイルが UTF-8 テキストではありません。"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Missing required columns: %(columns)s."
+msgstr "必須の列がありません: %(columns)s。"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Columns: %(columns)s"
+msgstr "列: %(columns)s"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Required columns: %(columns)s"
+msgstr "必須の列: %(columns)s"
+
+#: ninefruits/institution/admin_support.py
+msgid "Rows are matched by code: importing the same file again updates instead of duplicating. Empty translation cells keep existing translations."
+msgstr "行はコードで照合されます。同じファイルを再度取り込むと、重複せずに更新されます。空の翻訳セルは既存の翻訳を保持します。"
+
+#: ninefruits/institution/admin_support.py
+#, python-format
+msgid "Import #%(id)s queued (%(rows)s rows). This page shows the result when it is finished."
+msgstr "取り込み #%(id)s(%(rows)s 行)を受け付けました。完了するとこの画面に結果が表示されます。"
+
+# key: reference.fields.is_active
+#: ninefruits/institution/models/country.py ninefruits/institution/models/language.py ninefruits/institution/models/lookup.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "有効"
+
+# key: reference.resources.countries.label
+#: ninefruits/institution/models/country.py
+msgid "country"
+msgstr "国"
+
+# key: reference.resources.countries.plural_label
+#: ninefruits/institution/models/country.py
+msgid "countries"
+msgstr "国"
+
+# key: reference.resources.languages.label
+#: ninefruits/institution/models/language.py
+msgid "language"
+msgstr "言語"
+
+# key: reference.resources.languages.plural_label
+#: ninefruits/institution/models/language.py
+msgid "languages"
+msgstr "言語"
+
+# key: reference.fields.code
+#: ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Code"
+msgstr "コード"
+
+# key: reference.fields.description
+#: ninefruits/institution/models/lookup.py
+msgctxt "reference"
+msgid "Description"
+msgstr "説明"
+
+# key: reference.fields.is_system
+#: ninefruits/institution/models/lookup.py
+msgid "System"
+msgstr "システム"
+
+# key: reference.resources.lookup_types.label
+#: ninefruits/institution/models/lookup.py
+msgid "code list"
+msgstr "コード種別"
+
+# key: reference.resources.lookup_types.plural_label
+#: ninefruits/institution/models/lookup.py
+msgid "code lists"
+msgstr "コード種別"
+
+# key: reference.fields.sort_order
+#: ninefruits/institution/models/lookup.py
+msgid "Order"
+msgstr "表示順"
+
+# key: reference.fields.year_levels
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Year levels"
+msgstr "学年"
+
+# key: reference.fields.admission_year_from
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Admitted from (year)"
+msgstr "入学年度(から)"
+
+# key: reference.fields.admission_year_to
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Admitted until (year)"
+msgstr "入学年度(まで)"
+
+# key: permissions.resources.programs
+# key: reference.fields.programs
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Programs"
+msgstr "プログラム"
+
+# key: permissions.resources.org_units
+# key: reference.fields.org_units
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Org units"
+msgstr "組織単位"
+
+# key: reference.help.org_unit_descendants
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Includes all units below the selected ones."
+msgstr "選択した組織の下位組織もすべて含みます。"
+
+# key: grading.fields.standing
+# key: grading.settings.standing
+#: ninefruits/institution/target_criteria_fields.py
+msgid "Academic standing"
+msgstr "学業状況"
+
+# key: grading.help.standing_criteria
+#: ninefruits/institution/target_criteria_fields.py
+msgid "The standing from the latest term close. Leave empty for any."
+msgstr "直近の成績締めで判定された学業状況です。指定しない場合は空欄にします。"
+
+# key: validation.gte.numeric
+#: ninefruits/institution/target_criteria_fields.py
+#, python-format
+msgid "The %(attribute)s field must be greater than or equal to %(value)s."
+msgstr "%(attribute)s には %(value)s 以上の値を指定してください。"
+
+# key: reference.fields.admission_years
+#: ninefruits/institution/target_criteria_fields.py
+msgctxt "reference"
+msgid "Admitted"
+msgstr "入学年度"

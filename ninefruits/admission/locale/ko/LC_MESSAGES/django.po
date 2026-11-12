@@ -908,3 +908,8 @@ msgstr "입학 지원"
 #: views/public.py
 msgid "A new link was sent."
 msgstr "새 링크를 보냈습니다."
+
+# key: admissions.mail.view_application
+#: ninefruits/admission/notifications.py
+msgid "View application"
+msgstr "지원서 보기"

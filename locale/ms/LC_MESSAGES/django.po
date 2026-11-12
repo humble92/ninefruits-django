@@ -1,0 +1,1180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ninefruits/i18n/fields.py
+msgid "Translations must be an object of language code to text."
+msgstr "Terjemahan mestilah objek kod bahasa kepada teks."
+
+#: ninefruits/i18n/fields.py ninefruits/i18n/forms.py
+#, python-format
+msgid "Ensure each translation has at most %(limit_value)d characters."
+msgstr "Pastikan setiap terjemahan mempunyai paling banyak %(limit_value)d aksara."
+
+#: ninefruits/i18n/fields.py
+#, python-format
+msgid "The %(language)s value is required."
+msgstr "Nilai %(language)s diperlukan."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/forms.py ninefruits/i18n/vendor_strings.py
+msgid "This field is required."
+msgstr "Medan ini diperlukan."
+
+# key: common.language
+#: ninefruits/i18n/templates/i18n/locale_switcher.html ninefruits/i18n/views.py
+msgctxt "common"
+msgid "Language"
+msgstr "Bahasa"
+
+# key: common.apply
+#: ninefruits/i18n/templates/i18n/locale_switcher.html
+msgctxt "common"
+msgid "Apply"
+msgstr "Guna"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select record"
+msgstr "Pilih rekod"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action"
+msgstr "Pilih tindakan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select action to run"
+msgstr "Pilih tindakan untuk dijalankan"
+
+# key: common.save
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save"
+msgstr "Simpan"
+
+# key: security.scope_types.global
+#: ninefruits/i18n/vendor_strings.py
+msgid "All"
+msgstr "Semua"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid " By %(filter_title)s "
+msgstr "Daripada %(filter_title)s"
+
+# key: common.yes
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes"
+msgstr "Ya"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No"
+msgstr "Tidak"
+
+# key: graduation.report_columns.from_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "From"
+msgstr "Daripada"
+
+# key: graduation.report_columns.to_status
+#: ninefruits/i18n/vendor_strings.py
+msgid "To"
+msgstr "Kepada"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date from"
+msgstr "Tarikh dari"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date to"
+msgstr "Tarikh hingga"
+
+# key: admin.audit.fields.occurred_at
+# key: attendance.fields.time
+# key: offering.fields.time
+# key: registration.fields.attempted_at
+#: ninefruits/i18n/vendor_strings.py
+msgid "Time"
+msgstr "Masa"
+
+# key: assessment.fields.held_date
+# key: attendance.fields.meeting_date
+#: ninefruits/i18n/vendor_strings.py
+msgid "Date"
+msgstr "Tarikh"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run the selected action"
+msgstr "Jalankan tindakan yang dipilih"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Run"
+msgstr "Jalankan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click here to select the objects across all pages"
+msgstr "Klik disini untuk memilih objek-objek disemua laman"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select all %(total_count)s %(module_name)s"
+msgstr "Pilih kesemua %(total_count)s%(module_name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear selection"
+msgstr "Padam pilihan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select all objects on this page for an action"
+msgstr "Pilih semua objek pada halaman ini untuk tindakan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Items must be selected in order to perform actions on them. No items have been changed."
+msgstr "Item-item perlu dipilih mengikut turutan untuk tindakan lanjut. Tiada item-item yang diubah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Models in the %(name)s application"
+msgstr "Model didalam aplikasi %(name)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "You don’t have permission to view or edit anything."
+msgstr "Anda tidak mempunyai kebenaran untuk melihat atau edit apa-apa."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change password"
+msgstr "Tukar kata laluan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "History"
+msgstr "Sejarah"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View on site"
+msgstr "Lihat di laman"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "Memadam %(object_name)s '%(escaped_object)s' akan menyebabkan pembuangan objek-objek yang berkaitan, tetapi akaun anda tidak mempunyai kebenaran untuk memadam jenis-jenis objek-objek berikut:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the %(object_name)s '%(escaped_object)s' would require deleting the following protected related objects:"
+msgstr "Membuang  %(object_name)s '%(escaped_object)s' memerlukan pembuangan objek-objek berkaitan yang dilindungi:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the %(object_name)s \"%(escaped_object)s\"? All of the following related items will be deleted:"
+msgstr "Adakah anda pasti anda ingin membuang %(object_name)s \"%(escaped_object)s\"? Semua item-item berkaitan berikut akan turut dibuang:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:"
+msgstr "Membuang %(objects_name)s akan menyebabkan pembuangan objek-objek yang berkaitan, tetapi akaun anda tidak mempunyai kebenaran to membuang jenis objek-objek berikut:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Deleting the selected %(objects_name)s would require deleting the following protected related objects:"
+msgstr "Membuang %(objects_name)s memerlukan pembuangan objek-objek berkaitan yang dilindungi:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Are you sure you want to delete the selected %(objects_name)s? All of the following objects and their related items will be deleted:"
+msgstr "Adakah anda pasti untuk membuang %(objects_name)s yang dipilih? Segala objek-objek berikut dan item-item yang berkaitan akan turut dibuang:"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Objects"
+msgstr "Objek-objek"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Summary"
+msgstr "Rumusan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Welcome back to"
+msgstr "Selamat kembali ke"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "You are authenticated as %(username)s, but are not authorized to access this page. Would you like to login to a different account?"
+msgstr "Anda telah disahkan sebagai %(username)s, tetapi anda tidak dibenarkan untuk mengakses ruangan ini. Adakah anda ingin log masuk menggunakan akaun lain?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in"
+msgstr "Log masuk"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password or username?"
+msgstr "Terlupa kata laluan atau nama pengguna anda?"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show all"
+msgstr "Tunjuk semua"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Type to search"
+msgstr "Taip untuk mencari"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and continue editing"
+msgstr "Simpan dan teruskan mengedit"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and view"
+msgstr "Simpan dan lihat"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save and add another"
+msgstr "Simpan dan tambah lagi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Save as new"
+msgstr "Simpan sebagai baru"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You have been successfully logged out from the administration"
+msgstr "Anda telah berjaya log keluar daripada pentadbiran"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Thanks for spending some quality time with the web site today."
+msgstr "Terima kasih kerana meluangkan masa di laman sesawang ini hari ini."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log in again"
+msgstr "Log masuk semula"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password was changed."
+msgstr "Kata laluan anda telah ditukarkan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please enter your old password, for security’s sake, and then enter your new password twice so we can verify you typed it in correctly."
+msgstr "Untuk tujuan keselamatan, sila masukkan kata laluan lama, kemudian masukkan kata laluan baru dua kali supaya kami dapat memastikan anda memasukkannya dengan betul."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No data"
+msgstr "Tiada data"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View site"
+msgstr "Lihat laman"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Log out"
+msgstr "Log keluar"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %(name)s"
+msgstr "Tambah %(name)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "All applications"
+msgstr "Semua aplikasi"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "View"
+msgstr "Lihat"
+
+# key: graduation.report_columns.type_name
+# key: reference.fields.change_type
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change"
+msgstr "Perubahan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add"
+msgstr "Tambah"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Delete"
+msgstr "Padam"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown"
+msgstr "Tidak diketahui"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "True"
+msgstr "Benar"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "False"
+msgstr "Palsu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Apply Filters"
+msgstr "Gunakan tapisan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Hide counts"
+msgstr "Sembunyikan kiraan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Show counts"
+msgstr "Tunjukkan kiraan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear all filters"
+msgstr "Kosongkan kesemua tapisan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Filters"
+msgstr "Tapisan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sorting"
+msgstr "Togol penyusunan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remove from sorting"
+msgstr "Buang daripada penyusunan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Sorting priority: %(priority_number)s"
+msgstr "Keutamaan susunan: %(priority_number)s"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Navigate"
+msgstr "Navigasi"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Select"
+msgstr "Pilih"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Clear"
+msgstr "Kosongkan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent searches"
+msgstr "Carian terkini"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Nothing matched your search"
+msgstr "Tiada yang sepadan dengan carian anda"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No, take me back"
+msgstr "Tidak, bawa saya kembali"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Yes, I’m sure"
+msgstr "Ya, saya pasti"
+
+# key: assessment.portal.cancel
+# key: attendance.portal.cancel
+#: ninefruits/i18n/vendor_strings.py
+msgid "Cancel"
+msgstr "Batal"
+
+# key: evaluation.portal.submit
+#: ninefruits/i18n/vendor_strings.py
+msgid "Submit"
+msgstr "Hantar"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Close"
+msgstr "Tutup"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Edit"
+msgstr "Sunting"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Record picture"
+msgstr "Gambar rekod"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This item will be deleted."
+msgstr "Item ini akan dipadam."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to cancel"
+msgstr "Klik untuk membatalkan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "No results found"
+msgstr "Tiada hasil ditemui"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This page yielded into no results."
+msgstr "Halaman ini tidak menghasilkan sebarang hasil."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset filters"
+msgstr "Set semula tapisan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Image preview"
+msgstr "Pratonton imej"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Click to download"
+msgstr "Klik untuk memuat turun"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Choose file to upload"
+msgstr "Pilih fail untuk dimuat naik"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Go back"
+msgstr "Kembali"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Recent actions"
+msgstr "Tindakan terkini"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Unknown content"
+msgstr "Kandungan tidak diketahui"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Previous"
+msgstr "Sebelumnya"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Next"
+msgstr "Seterusnya"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search apps and models..."
+msgstr "Cari aplikasi dan model..."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Available shortcuts"
+msgstr "Pintasan yang tersedia"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Global shortcuts"
+msgstr "Pintasan global"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open command tool"
+msgstr "Buka alat arahan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open shortcuts list"
+msgstr "Buka senarai pintasan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle sidebar"
+msgstr "Togol bar sisi"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle dark/light mode"
+msgstr "Togol mod gelap/cerah"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Changelist shortcuts"
+msgstr "Pintasan senarai perubahan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle filter"
+msgstr "Togol tapisan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Create new record"
+msgstr "Cipta rekod baharu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Command tool shortcuts"
+msgstr "Pintasan alat arahan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection"
+msgstr "Buka pilihan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Open selection in new tab"
+msgstr "Buka pilihan dalam tab baharu"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Django administration"
+msgstr "Pentadbiran Django"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py templates/admin/base_site.html
+msgid "Django site admin"
+msgstr "Pentadbiran laman Django"
+
+# key: portal.navigation.dashboard
+# key: portal.dashboard.title
+#: ninefruits/i18n/vendor_strings.py
+msgid "Home"
+msgstr "Laman utama"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Light"
+msgstr "Cerah"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Dark"
+msgstr "Gelap"
+
+# key: reference.fields.is_system
+#: ninefruits/i18n/vendor_strings.py
+msgid "System"
+msgstr "Sistem"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Return to site"
+msgstr "Kembali ke laman"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(counter)s result"
+msgid_plural "%(counter)s results"
+msgstr[0] "%(counter)s keputusan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "%(full_result_count)s total"
+msgstr "%(full_result_count)s jumlah"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Toggle password visibility"
+msgstr "Togol keterlihatan kata laluan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change selected %(model)s"
+msgstr "Tukar %(model)s yang dipilih"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add another %(model)s"
+msgstr "Tambah %(model)s"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View selected %(model)s"
+msgstr "Lihat %(model)s yang dipilih"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(model)s"
+msgstr "Buang %(model)s pilihan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Add row"
+msgstr "Tambah baris"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please correct the error below."
+msgid_plural "Please correct the errors below."
+msgstr[0] "Sila betulkan ralat di bawah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Site administration"
+msgstr "Pentadbiran laman"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to change"
+msgstr "Pilih %s untuk diubah"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select %s to view"
+msgstr "Pilih %s untuk lihat"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Add %s"
+msgstr "Tambah %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Change %s"
+msgstr "Tukar %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "View %s"
+msgstr "Lihat %s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Delete selected %(verbose_name_plural)s"
+msgstr "Padam pilihan %(verbose_name_plural)s"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Successfully deleted %(count)d %(items)s."
+msgstr "%(count)d %(items)s berjaya dipadamkan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was added successfully."
+msgstr "{name} \"{obj}\" telah berjaya ditambah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-brace-format
+msgid "The {name} “{obj}” was changed successfully."
+msgstr "{name} \"{obj}\" berjaya diubah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The %(name)s “%(obj)s” was deleted successfully."
+msgstr "%(name)s \"%(obj)s\" berjaya dipadam."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No action selected."
+msgstr "Tiada tindakan dipilih."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Action:"
+msgstr "Tindakan"
+
+# key: offering.catalog.search
+#: ninefruits/i18n/vendor_strings.py
+msgid "Search"
+msgstr "Cari"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Any date"
+msgstr "Sebarang tarikh"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Today"
+msgstr "Hari ini"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Past 7 days"
+msgstr "7 hari lalu"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This month"
+msgstr "Bulan ini"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "This year"
+msgstr "Tahun ini"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "No date"
+msgstr "Tiada tarikh"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Has date"
+msgstr "Mempunyai tarikh"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Empty"
+msgstr "Kosong"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Not empty"
+msgstr "Tidak kosong"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "None available"
+msgstr "Tiada yang tersedia"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "My actions"
+msgstr "Tindakan saya"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Please enter the correct %(username)s and password for a staff account. Note that both fields may be case-sensitive."
+msgstr "Sila masukkan %(username)s dan kata-laluan bagi akaun staf. Kedua-dua medan berkemungkinan kes-sensitif."
+
+# key: authentication.fields.password
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password"
+msgstr "Kata laluan"
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid value."
+msgstr "Masukkan nilai yang sah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid email address."
+msgstr "Masukkan alamat emel yang sah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a whole number."
+msgstr "Masukkan nombor bulat."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a number."
+msgstr "Masukkan nombor."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date."
+msgstr "Masukkan tarikh yang sah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid time."
+msgstr "Masukkan masa yang sah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid date/time."
+msgstr "Masukkan tarikh/masa yang sah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a valid URL."
+msgstr "Masukkan URL yang sah."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+msgid "Enter a list of values."
+msgstr "Masukkan senarai nilai."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr "Pilih pilihan yang sah. %(value)s bukan pilihan yang tersedia."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr "Pastikan nilai ini kurang daripada atau sama dengan %(limit_value)s."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr "Pastikan nilai ini lebih daripada atau sama dengan %(limit_value)s."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at most %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at most %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "Pastikan nilai ini mempunyai sepalingnya %(limit_value)d karakter (ia mempunyai %(show_value)d)."
+
+# upstream: Django/allauth catalog
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "Ensure this value has at least %(limit_value)d character (it has %(show_value)d)."
+msgid_plural "Ensure this value has at least %(limit_value)d characters (it has %(show_value)d)."
+msgstr[0] "Pastikan nilai ini mempunyai sekurang-kurangnya %(limit_value)d karater (ia mempunyai %(show_value)d)."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Lao"
+msgstr "Bahasa Lao"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign In"
+msgstr "Log Masuk"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Sign Out"
+msgstr "Log Keluar"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Are you sure you want to sign out?"
+msgstr "Adakah anda pasti mahu log keluar?"
+
+# key: admin.users.fields.email
+# key: authentication.fields.email
+#: ninefruits/i18n/vendor_strings.py templates/account/signup.html
+msgid "Email"
+msgstr "E-mel"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Remember Me"
+msgstr "Ingat Saya"
+
+# key: authentication.login.forgot_password
+#: ninefruits/i18n/vendor_strings.py templates/account/login.html
+msgid "Forgot your password?"
+msgstr "Terlupa kata laluan?"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "The email address and/or password you specified are not correct."
+msgstr "Alamat e-mel dan/atau kata laluan yang anda masukkan tidak betul."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Too many failed login attempts. Try again later."
+msgstr "Terlalu banyak percubaan log masuk yang gagal. Cuba lagi kemudian."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "This account is currently inactive."
+msgstr "Akaun ini tidak aktif buat masa ini."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Password Reset"
+msgstr "Set Semula Kata Laluan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Forgotten your password? Enter your email address below, and we'll send you an email allowing you to reset it."
+msgstr "Terlupa kata laluan anda? Masukkan alamat e-mel anda di bawah, dan kami akan menghantar e-mel kepada anda untuk menetapkannya semula."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Reset My Password"
+msgstr "Set Semula Kata Laluan Saya"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please contact us if you have any trouble resetting your password."
+msgstr "Sila hubungi kami jika anda menghadapi masalah menetapkan semula kata laluan anda."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "We have sent you an email. If you have not received it please check your spam folder. Otherwise contact us if you do not receive it in a few minutes."
+msgstr "Kami telah menghantar e-mel kepada anda. Jika anda tidak menerimanya, sila semak folder spam anda. Jika tidak, hubungi kami jika anda tidak menerimanya dalam beberapa minit."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Bad Token"
+msgstr "Token Tidak Sah"
+
+#: ninefruits/i18n/vendor_strings.py
+#, python-format
+msgid "The password reset link was invalid, possibly because it has already been used.  Please request a <a href=\"%(passwd_reset_url)s\">new password reset</a>."
+msgstr "Pautan set semula kata laluan tidak sah, mungkin kerana ia telah digunakan.  Sila mohon <a href=\"%(passwd_reset_url)s\">set semula kata laluan baharu</a>."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your password is now changed."
+msgstr "Kata laluan anda kini telah ditukar."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Change Password"
+msgstr "Tukar Kata Laluan"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Current Password"
+msgstr "Kata Laluan Semasa"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password"
+msgstr "Kata Laluan Baharu"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "New Password (again)"
+msgstr "Kata Laluan Baharu (sekali lagi)"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "You must type the same password each time."
+msgstr "Anda mesti menaip kata laluan yang sama setiap kali."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Please type your current password."
+msgstr "Sila taip kata laluan semasa anda."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect password."
+msgstr "Kata laluan tidak betul."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Invalid or expired key."
+msgstr "Kunci tidak sah atau telah tamat tempoh."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "The password reset token was invalid."
+msgstr "Token set semula kata laluan tidak sah."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Be patient, you are sending too many requests."
+msgstr "Sila bersabar, anda menghantar terlalu banyak permintaan."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Two-Factor Authentication"
+msgstr "Pengesahan Dua Faktor"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Your account is protected by two-factor authentication. Please enter an authenticator code:"
+msgstr "Akaun anda dilindungi oleh pengesahan dua faktor. Sila masukkan kod pengesah:"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Authenticator code"
+msgstr "Kod pengesah"
+
+# key: authentication.two_factor.code
+# key: reference.fields.code
+#: ninefruits/i18n/vendor_strings.py
+msgid "Code"
+msgstr "Kod"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Incorrect code."
+msgstr "Kod tidak betul."
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Alternative options"
+msgstr "Pilihan alternatif"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "Use authenticator app or code"
+msgstr "Gunakan aplikasi pengesah atau kod"
+
+# key: authentication.login.submit
+# key: authentication.login.title
+#: templates/account/login.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Sign in"
+msgstr "Log masuk"
+
+# key: authentication.fields.password
+#: templates/account/login.html templates/account/reauthenticate.html templates/account/signup.html
+msgctxt "authentication"
+msgid "Password"
+msgstr "Kata laluan"
+
+# key: authentication.login.remember_me
+#: templates/account/login.html
+msgid "Keep me signed in"
+msgstr "Kekalkan log masuk saya"
+
+# key: authentication.login.sso
+#: templates/account/login.html
+#, python-format
+msgid "Sign in with %(provider)s"
+msgstr "Log masuk dengan %(provider)s"
+
+# key: admissions.register.prompt
+#: templates/account/login.html
+msgid "Want to apply?"
+msgstr "Ingin memohon?"
+
+# key: admissions.register.see_cycles
+#: templates/account/login.html
+msgid "See open admissions"
+msgstr "Lihat pengambilan yang dibuka"
+
+# key: authentication.confirm_password.title
+#: templates/account/reauthenticate.html
+msgid "Confirm your password"
+msgstr "Sahkan kata laluan anda"
+
+# key: authentication.confirm_password.instructions
+#: templates/account/reauthenticate.html
+msgid "For your security, please confirm your password to continue."
+msgstr "Demi keselamatan anda, sila sahkan kata laluan untuk meneruskan."
+
+# key: authentication.confirm_password.submit
+# key: security.mfa.confirm
+#: templates/account/reauthenticate.html
+msgctxt "security"
+msgid "Confirm"
+msgstr "Sahkan"
+
+# key: admissions.register.title
+#: templates/account/signup.html
+msgid "Create an account"
+msgstr "Cipta akaun"
+
+# key: admissions.register.instructions
+#: templates/account/signup.html
+msgid "For applicants. Staff and current students already have an account."
+msgstr "Untuk pemohon. Kakitangan dan pelajar semasa sudah mempunyai akaun."
+
+# key: people.help.romanized
+#: templates/account/signup.html
+msgid "Legal name in Latin letters, as in the passport. Add the name as written in other languages below."
+msgstr "Nama sah dalam huruf Rumi, seperti dalam pasport. Tambah nama yang ditulis dalam bahasa lain di bawah."
+
+# key: authentication.fields.password_confirmation
+#: templates/account/signup.html
+msgid "Confirm password"
+msgstr "Sahkan kata laluan"
+
+# key: admissions.register.submit
+# key: people.invitations.mail_action
+# key: people.invitations.submit
+#: templates/account/signup.html
+msgid "Create account"
+msgstr "Cipta akaun"
+
+# key: admissions.register.have_account
+#: templates/account/signup.html
+msgid "Already have an account?"
+msgstr "Sudah mempunyai akaun?"
+
+# key: admin.settings.security.mfa_section
+# key: authentication.two_factor.title
+# key: security.mfa.title
+#: templates/mfa/two_factor_challenge.html
+msgid "Two-factor authentication"
+msgstr "Pengesahan dua faktor"
+
+# key: authentication.two_factor.instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code from your authenticator app."
+msgstr "Masukkan kod 6 digit daripada aplikasi pengesah anda."
+
+# key: authentication.two_factor.code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Code"
+msgstr "Kod"
+
+# key: authentication.two_factor.use_recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Use a recovery code instead"
+msgstr "Gunakan kod pemulihan"
+
+# key: authentication.two_factor.recovery_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Recovery code"
+msgstr "Kod pemulihan"
+
+# key: authentication.two_factor.remember_device
+#: templates/mfa/two_factor_challenge.html
+msgid "Remember this device"
+msgstr "Ingat peranti ini"
+
+# key: authentication.two_factor.submit
+#: templates/mfa/two_factor_challenge.html
+msgid "Verify"
+msgstr "Sahkan"
+
+# key: authentication.two_factor.email_instructions
+#: templates/mfa/two_factor_challenge.html
+msgid "Enter the 6-digit code we sent to your email."
+msgstr "Masukkan kod 6 digit yang kami hantar ke e-mel anda."
+
+# key: authentication.two_factor.email_code
+#: templates/mfa/two_factor_challenge.html
+msgctxt "authentication"
+msgid "Email code"
+msgstr "Kod e-mel"
+
+# key: authentication.two_factor.send_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a code by email instead"
+msgstr "Hantar kod melalui e-mel"
+
+# key: authentication.two_factor.resend_email_code
+#: templates/mfa/two_factor_challenge.html
+msgid "Send a new code"
+msgstr "Hantar kod baharu"
+
+# upstream: Django/allauth catalog
+#: templates/partials/messages.html
+msgctxt "common"
+msgid "Close"
+msgstr "Tutup"
+
+#: templates/portal/base.html
+msgctxt "portal"
+msgid "Main menu"
+msgstr "Menu utama"
+
+# key: authentication.logout
+#: templates/portal/base.html
+msgctxt "authentication"
+msgid "Sign out"
+msgstr "Log keluar"
+
+# key: security.mfa.set_up
+#: templates/portal/partials/mfa_reminder.html
+msgctxt "security"
+msgid "Set up now"
+msgstr "Sediakan sekarang"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "user"
+msgstr "pengguna"
+
+#: ninefruits/i18n/vendor_strings.py
+msgid "users"
+msgstr "pengguna"

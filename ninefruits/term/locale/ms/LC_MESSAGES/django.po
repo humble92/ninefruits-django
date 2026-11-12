@@ -1,0 +1,397 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: ninefruits\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-12 19:45+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# key: reference.errors.term_status_transition
+#: ninefruits/term/actions/change_term_status.py
+#, python-format
+msgid "A term cannot move from %(from)s to %(to)s."
+msgstr "Semester tidak boleh bertukar daripada %(from)s kepada %(to)s."
+
+# key: reference.errors.invalid_session_copy
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "Choose another session of the same term."
+msgstr "Pilih sesi lain dalam semester yang sama."
+
+# key: reference.errors.session_has_windows
+#: ninefruits/term/actions/copy_session_windows.py
+msgid "This session already has windows."
+msgstr "Sesi ini sudah mempunyai tempoh."
+
+# key: reference.fields.name
+#: ninefruits/term/admin.py ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Name"
+msgstr "Nama"
+
+# key: validation.after
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after %(date)s."
+msgstr "Medan %(attribute)s mestilah tarikh selepas %(date)s."
+
+# key: people.fields.end_date
+# key: reference.fields.end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "End date"
+msgstr "Tarikh tamat"
+
+# key: reference.fields.start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Start date"
+msgstr "Tarikh mula"
+
+# key: validation.after_or_equal
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must be a date after or equal to %(date)s."
+msgstr "Medan %(attribute)s mestilah tarikh selepas atau sama dengan %(date)s."
+
+# key: reference.fields.instruction_end_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes end"
+msgstr "Kuliah tamat"
+
+# key: reference.fields.instruction_start_date
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Classes start"
+msgstr "Kuliah bermula"
+
+# key: reference.errors.sessions_outside_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Some sessions would fall outside the new dates. Change them first."
+msgstr "Sesetengah sesi akan berada di luar tarikh baharu. Ubah sesi tersebut dahulu."
+
+# key: validation.alpha_dash
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The %(attribute)s field must only contain letters, numbers, dashes, and underscores."
+msgstr "Medan %(attribute)s hanya boleh mengandungi huruf, nombor, sengkang dan garis bawah."
+
+#: ninefruits/term/admin.py
+#, python-format
+msgid "The session must lie within its term (%(start)s - %(end)s)."
+msgstr "Sesi mestilah berada dalam semesternya (%(start)s - %(end)s)."
+
+#: ninefruits/term/admin.py
+msgid "The full-term session belongs to the term and cannot be deleted."
+msgstr "Sesi semester penuh adalah milik semester dan tidak boleh dipadam."
+
+# key: reference.resources.term_sessions.label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "session"
+msgstr "sesi"
+
+# key: reference.resources.term_sessions.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "sessions"
+msgstr "sesi"
+
+# key: reference.resources.term_windows.plural_label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term windows"
+msgstr "tempoh urusan"
+
+# key: reference.actions.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copy windows"
+msgstr "Salin tempoh"
+
+# key: reference.fields.is_full_term
+# key: reference.term_sessions.full_term
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Full term"
+msgstr "Semester penuh"
+
+# key: reference.fields.closes_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Closes"
+msgstr "Ditutup"
+
+# key: reference.fields.opens_at
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Opens"
+msgstr "Dibuka"
+
+# key: reference.resources.term_windows.label
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "term window"
+msgstr "tempoh urusan"
+
+# key: reference.fields.eligibility
+#: ninefruits/term/admin.py ninefruits/term/models/window.py
+msgid "Eligibility"
+msgstr "Kelayakan"
+
+# key: reference.help.eligibility
+#: ninefruits/term/admin.py
+msgid "Leave empty for everyone. Several windows of the same type with different conditions open in stages."
+msgstr "Biarkan kosong untuk semua. Beberapa tempoh dengan jenis yang sama tetapi syarat berbeza dibuka secara berperingkat."
+
+# key: reference.eligibility.everyone
+#: ninefruits/term/admin.py
+msgid "Everyone"
+msgstr "Semua"
+
+# key: reference.eligibility.restricted
+#: ninefruits/term/admin.py
+msgid "Restricted"
+msgstr "Terhad"
+
+# key: reference.fields.status
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgctxt "reference"
+msgid "Status"
+msgstr "Status"
+
+# key: common.reason
+#: ninefruits/term/admin.py
+msgctxt "common"
+msgid "Reason"
+msgstr "Sebab"
+
+# key: reference.fields.source_session
+#: ninefruits/term/admin.py
+msgid "Copy from session"
+msgstr "Salin daripada sesi"
+
+# key: reference.fields.academic_year
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Academic year"
+msgstr "Tahun akademik"
+
+# key: reference.fields.term_type
+#: ninefruits/term/admin.py ninefruits/term/models/term.py
+msgid "Term type"
+msgstr "Jenis semester"
+
+# key: reference.fields.windows_count
+#: ninefruits/term/admin.py
+msgid "Windows"
+msgstr "Tempoh"
+
+# key: reference.actions.change_status
+#: ninefruits/term/admin.py
+msgid "Change status"
+msgstr "Tukar status"
+
+# key: reference.notifications.term_status_changed
+#: ninefruits/term/admin.py
+msgid "Term status changed."
+msgstr "Status semester ditukar."
+
+#: ninefruits/term/admin.py
+msgid "No windows to copy."
+msgstr "Tiada tempoh untuk disalin."
+
+# key: reference.notifications.session_windows_copied
+#: ninefruits/term/admin.py
+#, python-format
+msgid "One window copied."
+msgid_plural "%(count)s windows copied."
+msgstr[0] "%(count)s tempoh disalin."
+
+# key: reference.help.copy_session_windows
+#: ninefruits/term/admin.py
+msgid "Copies the course windows (add/drop, withdrawal, grading, evaluation) of another session, moved to this session's dates: early windows keep their distance from the start, late ones from the end. Adjust them after copying."
+msgstr "Menyalin tempoh kursus (tambah/gugur, tarik diri, penggredan, penilaian) daripada sesi lain, dipindahkan ke tarikh sesi ini: tempoh awal mengekalkan jaraknya dari tarikh mula, tempoh lewat dari tarikh tamat. Laraskannya selepas menyalin."
+
+# key: reference.fields.weekdays
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "Days"
+msgstr "Hari"
+
+# key: attendance.fields.end_time
+# key: offering.fields.end_time
+# key: reference.fields.end_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgid "End"
+msgstr "Tamat"
+
+# key: reference.fields.start_time
+#: ninefruits/term/admin.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Start"
+msgstr "Mula"
+
+# key: reference.term_statuses.planned
+#: ninefruits/term/enums.py
+msgid "Planned"
+msgstr "Dirancang"
+
+# key: reference.term_statuses.published
+#: ninefruits/term/enums.py
+msgctxt "reference.term_statuses"
+msgid "Published"
+msgstr "Diterbitkan"
+
+# key: reference.term_statuses.grades_closed
+#: ninefruits/term/enums.py
+msgid "Grades closed"
+msgstr "Gred ditutup"
+
+# key: reference.term_statuses.archived
+#: ninefruits/term/enums.py
+msgid "Archived"
+msgstr "Diarkibkan"
+
+# key: reference.term_window_types.registration_cart
+#: ninefruits/term/enums.py
+msgid "Registration cart"
+msgstr "Troli pendaftaran"
+
+# key: admin.navigation.registration
+# key: portal.navigation.registration
+# key: reference.term_window_types.registration
+# key: registration.portal.title
+#: ninefruits/term/enums.py
+msgid "Registration"
+msgstr "Pendaftaran kursus"
+
+# key: reference.term_window_types.add_drop
+#: ninefruits/term/enums.py
+msgid "Add/drop"
+msgstr "Tambah/gugur"
+
+# key: reference.term_window_types.withdrawal
+#: ninefruits/term/enums.py
+msgid "Withdrawal"
+msgstr "Tarik diri kursus"
+
+# key: grading.entry.title
+# key: reference.term_window_types.grade_entry
+#: ninefruits/term/enums.py
+msgid "Grade entry"
+msgstr "Kemasukan gred"
+
+# key: reference.term_window_types.grade_appeal
+#: ninefruits/term/enums.py
+msgid "Grade appeal"
+msgstr "Rayuan gred"
+
+# key: reference.term_window_types.course_evaluation
+#: ninefruits/term/enums.py
+msgctxt "reference.term_window_types"
+msgid "Course evaluation"
+msgstr "Penilaian kursus"
+
+# key: reference.term_window_types.graduation_application
+#: ninefruits/term/enums.py
+msgid "Graduation application"
+msgstr "Permohonan bergraduat"
+
+# key: reference.term_window_types.additional_program_application
+#: ninefruits/term/enums.py
+msgid "Second major and minor applications"
+msgstr "Permohonan major kedua dan minor"
+
+# key: reference.fields.code
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgctxt "reference"
+msgid "Code"
+msgstr "Kod"
+
+# key: reference.resources.academic_years.label
+#: ninefruits/term/models/term.py
+msgid "academic year"
+msgstr "tahun akademik"
+
+# key: reference.resources.academic_years.plural_label
+#: ninefruits/term/models/term.py
+msgid "academic years"
+msgstr "tahun akademik"
+
+# key: reference.fields.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular term"
+msgstr "Semester biasa"
+
+# key: reference.help.is_regular
+#: ninefruits/term/models/term.py
+msgid "Regular terms (e.g. spring, fall) and intensive sessions follow different rules later, such as credit limits."
+msgstr "Semester biasa (cth. semester 1, semester 2) dan sesi intensif mengikut peraturan berbeza kemudian, seperti had kredit."
+
+# key: reference.fields.sort_order
+#: ninefruits/term/models/term.py ninefruits/term/models/time_slot.py
+msgid "Order"
+msgstr "Susunan"
+
+# key: reference.resources.term_types.label
+#: ninefruits/term/models/term.py
+msgid "term type"
+msgstr "jenis semester"
+
+# key: reference.resources.term_types.plural_label
+#: ninefruits/term/models/term.py
+msgid "term types"
+msgstr "jenis semester"
+
+# key: reference.help.term_code
+#: ninefruits/term/models/term.py
+msgid "For display only, e.g. 2026-FA. The code carries no business meaning."
+msgstr "Untuk paparan sahaja, cth. 2026-FA. Kod ini tidak membawa makna perniagaan."
+
+# key: reference.resources.terms.label
+#: ninefruits/term/models/term.py
+msgid "term"
+msgstr "semester"
+
+# key: reference.resources.terms.plural_label
+#: ninefruits/term/models/term.py
+msgid "terms"
+msgstr "semester"
+
+# key: reference.fields.is_active
+#: ninefruits/term/models/time_slot.py
+msgctxt "reference.fields"
+msgid "Active"
+msgstr "Aktif"
+
+# key: reference.resources.time_slots.label
+#: ninefruits/term/models/time_slot.py
+msgid "class period"
+msgstr "slot masa"
+
+# key: reference.resources.time_slots.plural_label
+#: ninefruits/term/models/time_slot.py
+msgid "class periods"
+msgstr "slot masa"
+
+# key: reference.fields.term_session
+#: ninefruits/term/models/window.py
+msgctxt "reference"
+msgid "Session"
+msgstr "Sesi"
+
+# key: reference.help.term_session
+#: ninefruits/term/models/window.py
+msgid "Course deadlines follow the session of the course: the full term unless the window is for a shorter session."
+msgstr "Tarikh akhir kursus mengikut sesi kursus tersebut: semester penuh melainkan tempoh itu adalah bagi sesi yang lebih pendek."
+
+# key: reference.fields.window_type
+#: ninefruits/term/models/window.py
+msgid "Window"
+msgstr "Tempoh"
+
+# key: reference.fields.window_name
+#: ninefruits/term/models/window.py
+msgid "Name (optional)"
+msgstr "Nama (pilihan)"
