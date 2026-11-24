@@ -141,7 +141,7 @@ class RegistrationRuleSetAdmin(CatalogAdmin):
     def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
         form = super().get_form(request, obj, change=change, **kwargs)
         if "note" in form.base_fields:
-            form.base_fields["note"].max_length = 2000  # type: ignore[attr-defined]
+            form.base_fields["note"].max_length = 2000
         return form
 
     @display(description=_("term"), ordering="term__start_date")

@@ -17,7 +17,7 @@ from __future__ import annotations
 import inspect
 from typing import Any, ClassVar
 
-from django.http import HttpRequest
+from django.http import HttpRequest, HttpResponse
 from django.urls import reverse
 from unfold.admin import ModelAdmin
 
@@ -29,10 +29,10 @@ from .navigation import NavigationGroup
 def _call_permission(check: Any, request: HttpRequest, object_id: Any) -> bool:
     """``has_<permission>_permission`` with the row when it takes one (``object_id``)."""
     try:
-        parameters = inspect.signature(check).parameters
+        parameters = list(inspect.signature(check).parameters.values())
     except TypeError, ValueError:
-        parameters = {}
-    takes_row = len(parameters) > 1 or any(p.kind is p.VAR_POSITIONAL for p in parameters.values())
+        parameters = []
+    takes_row = len(parameters) > 1 or any(p.kind is p.VAR_POSITIONAL for p in parameters)
     return bool(check(request, object_id) if takes_row else check(request))
 
 
@@ -73,8 +73,14 @@ class CatalogPermissionMixin:
         return visible_to(request.user) if visible_to else queryset
 
     def render_change_form(
-        self, request: HttpRequest, context: dict[str, Any], add: bool = False, change: bool = False, **kwargs: Any
-    ) -> Any:
+        self,
+        request: HttpRequest,
+        context: dict[str, Any],
+        add: bool = False,
+        change: bool = False,
+        form_url: str = "",
+        obj: Any = None,
+    ) -> HttpResponse:
         # A user who may open this record but not the list gets no link to the list (it would
         # answer 403): no "Close" button (templates/admin/change_form.html) and the list part of
         # the page header as text (templates/unfold/helpers/header_title.html).
@@ -85,7 +91,10 @@ class CatalogPermissionMixin:
             request.admin_hidden_list_url = reverse(  # type: ignore[attr-defined]
                 f"{self.admin_site.name}:{opts.app_label}_{opts.model_name}_changelist"  # type: ignore[attr-defined]
             )
-        return super().render_change_form(request, context, add=add, change=change, **kwargs)  # type: ignore[misc]
+        response: HttpResponse = super().render_change_form(  # type: ignore[misc]
+            request, context, add=add, change=change, form_url=form_url, obj=obj
+        )
+        return response
 
     def row_action_allowed(self, request: HttpRequest, action_name: str, object_id: Any) -> bool:
         """Whether the row action ``action_name`` (the URL name, ``<app>_<model>_<action>``)

@@ -29,7 +29,7 @@ def catalog_submit_row(context: template.Context) -> dict[str, Any]:
     ``hide_close``: a user who may open the record but not the list (``CatalogPermissionMixin``)."""
     from django.contrib.admin.templatetags.admin_modify import submit_row
 
-    values: dict[str, Any] = submit_row(context).flatten()
+    values: dict[str, Any] = {str(key): value for key, value in submit_row(context).flatten().items()}  # type: ignore[arg-type]
     if context.get("hide_close"):
         values["show_close"] = False
     return values

@@ -119,8 +119,9 @@ def test_searches_translated_names_in_every_language(manager: User) -> None:
     response = client.get("/admin/institution/country/?q=대한민국")
 
     assert response.status_code == 200
-    assert "KR" in response.content.decode()
-    assert "JP" not in response.content.decode()
+    # The code cells, not bare substrings: random tokens on the page (CSRF) may contain "JP".
+    assert ">KR</a>" in response.content.decode()
+    assert ">JP</a>" not in response.content.decode()
 
 
 def test_lets_viewers_look_but_not_change() -> None:
