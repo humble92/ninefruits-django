@@ -176,6 +176,12 @@ class SectionGradeAdmin(CatalogAdmin):
     def exception_badge(self, obj: SectionGrade) -> str:
         return str(_("Submitted as an exception")) if obj.grade_exception_at is not None else "-"
 
+    def change_view(
+        self, request: HttpRequest, object_id: str, form_url: str = "", extra_context: dict[str, Any] | None = None
+    ) -> HttpResponse:
+        # There is no detail page of its own: a row opens the same page as the row action.
+        return self.open_entry(request, object_id)
+
     # -- actions ---------------------------------------------------------------------------------
     def _section(self, request: HttpRequest, object_id: Any) -> SectionGrade:
         grade: SectionGrade = get_object_or_404(

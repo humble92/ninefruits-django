@@ -1205,3 +1205,63 @@ msgstr "ユーザー"
 #: ninefruits/i18n/vendor_strings.py
 msgid "users"
 msgstr "ユーザー"
+
+#: ninefruits/core/errors.py
+msgid "No information to show"
+msgstr "表示できる情報がありません"
+
+#: ninefruits/core/errors.py
+msgid "There is no information matching your request."
+msgstr "ご要求に一致する情報はありません。"
+
+#: ninefruits/core/errors.py
+msgid "Bad request"
+msgstr "不正なリクエスト"
+
+#: ninefruits/core/errors.py
+msgid "The request could not be processed. Check the address and try again."
+msgstr "リクエストを処理できませんでした。アドレスを確認して、もう一度お試しください。"
+
+#: ninefruits/core/errors.py
+msgid "No permission"
+msgstr "権限がありません"
+
+#: ninefruits/core/errors.py
+msgid "You do not have permission to view this page or to perform this action."
+msgstr "このページを表示する権限、またはこの操作を行う権限がありません。"
+
+#: ninefruits/core/errors.py
+msgid "The page has expired"
+msgstr "ページの有効期限が切れました"
+
+#: ninefruits/core/errors.py
+msgid "The form was open for too long or your session changed. Reload the page and try again."
+msgstr "フォームを開いたままの時間が長すぎるか、セッションが変わりました。ページを再読み込みして、もう一度お試しください。"
+
+#: ninefruits/core/errors.py
+msgid "Too many requests"
+msgstr "リクエストが多すぎます"
+
+#: ninefruits/core/errors.py
+msgid "Wait a minute and try again."
+msgstr "しばらく待ってから、もう一度お試しください。"
+
+#: ninefruits/core/errors.py
+msgid "Something went wrong"
+msgstr "問題が発生しました"
+
+#: ninefruits/core/errors.py
+msgid "An unexpected error occurred. Try again later. If it keeps happening, tell the administrator the reference below."
+msgstr "予期しないエラーが発生しました。しばらくしてから、もう一度お試しください。繰り返し発生する場合は、下の参照番号を管理者に伝えてください。"
+
+#: ninefruits/core/errors.py
+msgid "Temporarily unavailable"
+msgstr "一時的に利用できません"
+
+#: ninefruits/core/errors.py
+msgid "The service is temporarily unavailable. Try again later."
+msgstr "サービスは一時的に利用できません。しばらくしてから、もう一度お試しください。"
+
+#: templates/errors/error.html
+msgid "Reference"
+msgstr "参照番号"

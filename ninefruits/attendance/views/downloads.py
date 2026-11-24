@@ -115,9 +115,9 @@ class AttendanceSheetView(LoginRequiredMixin, View):
         try:
             pdf = get_renderer().render(html, PdfOptions(landscape=True))
         except PdfRenderingError:
-            return HttpResponse(
-                _("The PDF could not be created. Try again later."), status=503, content_type="text/plain"
-            )
+            from ninefruits.core.errors import error_page
+
+            return error_page(request, "unavailable", _("The PDF could not be created. Try again later."))
         response = HttpResponse(pdf, content_type="application/pdf")
         file_name = header_safe_file_name(f"{section.label()}-attendance.pdf")
         response["Content-Disposition"] = f'inline; filename="{file_name}"'

@@ -140,6 +140,12 @@ class SectionEvaluationAdmin(CatalogAdmin):
             return "-"
         return f"{rate(int(getattr(obj, 'responses_count', 0)), expected)}%"
 
+    def change_view(
+        self, request: HttpRequest, object_id: str, form_url: str = "", extra_context: dict[str, Any] | None = None
+    ) -> HttpResponse:
+        # There is no detail page of its own: a row opens the same page as the row action.
+        return self.results(request, object_id)
+
     # -- actions ---------------------------------------------------------------------------------
     def has_results_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
         return self.has_view_permission(request)

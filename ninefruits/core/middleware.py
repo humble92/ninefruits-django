@@ -73,3 +73,29 @@ def _reset_on_request_finished(**kwargs: object) -> None:
 
 
 request_finished.connect(_reset_on_request_finished, dispatch_uid="ninefruits.core.reset_db_context")
+
+
+class ErrorPageMiddleware:
+    """Browser screens: ``Http404`` and ``PermissionDenied`` raised by a view show the 404 and
+    403 error pages (``ninefruits.core.errors``) also with ``DEBUG`` on, instead of Django's
+    technical page."""
+
+    def __init__(self, get_response: Callable[[HttpRequest], HttpResponse]) -> None:
+        self.get_response = get_response
+
+    def __call__(self, request: HttpRequest) -> HttpResponse:
+        return self.get_response(request)
+
+    def process_exception(self, request: HttpRequest, exception: Exception) -> HttpResponse | None:
+        from django.core.exceptions import PermissionDenied
+        from django.http import Http404
+
+        from ninefruits.core.errors import error_page, is_browser_request
+
+        if not is_browser_request(request):
+            return None
+        if isinstance(exception, Http404):
+            return error_page(request, "not_found")
+        if isinstance(exception, PermissionDenied):
+            return error_page(request, "permission_denied")
+        return None

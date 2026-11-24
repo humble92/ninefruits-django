@@ -1236,3 +1236,63 @@ msgstr "ຜູ້ໃຊ້"
 #: ninefruits/i18n/vendor_strings.py
 msgid "users"
 msgstr "ຜູ້ໃຊ້"
+
+#: ninefruits/core/errors.py
+msgid "No information to show"
+msgstr "ບໍ່ມີຂໍ້ມູນທີ່ຈະສະແດງ"
+
+#: ninefruits/core/errors.py
+msgid "There is no information matching your request."
+msgstr "ບໍ່ມີຂໍ້ມູນທີ່ກົງກັບຄຳຮ້ອງຂໍຂອງທ່ານ."
+
+#: ninefruits/core/errors.py
+msgid "Bad request"
+msgstr "ຄຳຮ້ອງຂໍບໍ່ຖືກຕ້ອງ"
+
+#: ninefruits/core/errors.py
+msgid "The request could not be processed. Check the address and try again."
+msgstr "ບໍ່ສາມາດດຳເນີນການຄຳຮ້ອງຂໍໄດ້. ກະລຸນາກວດເບິ່ງທີ່ຢູ່ ແລ້ວລອງໃໝ່."
+
+#: ninefruits/core/errors.py
+msgid "No permission"
+msgstr "ບໍ່ມີສິດ"
+
+#: ninefruits/core/errors.py
+msgid "You do not have permission to view this page or to perform this action."
+msgstr "ທ່ານບໍ່ມີສິດເບິ່ງໜ້ານີ້ ຫຼື ດຳເນີນການນີ້."
+
+#: ninefruits/core/errors.py
+msgid "The page has expired"
+msgstr "ໜ້ານີ້ໝົດອາຍຸແລ້ວ"
+
+#: ninefruits/core/errors.py
+msgid "The form was open for too long or your session changed. Reload the page and try again."
+msgstr "ແບບຟອມຖືກເປີດໄວ້ດົນເກີນໄປ ຫຼື ເຊດຊັນຂອງທ່ານປ່ຽນໄປ. ກະລຸນາໂຫຼດໜ້າຄືນໃໝ່ ແລ້ວລອງອີກຄັ້ງ."
+
+#: ninefruits/core/errors.py
+msgid "Too many requests"
+msgstr "ຄຳຮ້ອງຂໍຫຼາຍເກີນໄປ"
+
+#: ninefruits/core/errors.py
+msgid "Wait a minute and try again."
+msgstr "ກະລຸນາລໍຖ້າຈັກໜ້ອຍ ແລ້ວລອງໃໝ່."
+
+#: ninefruits/core/errors.py
+msgid "Something went wrong"
+msgstr "ເກີດບັນຫາຂຶ້ນ"
+
+#: ninefruits/core/errors.py
+msgid "An unexpected error occurred. Try again later. If it keeps happening, tell the administrator the reference below."
+msgstr "ເກີດຂໍ້ຜິດພາດທີ່ບໍ່ຄາດຄິດ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ. ຖ້າຍັງເກີດຂຶ້ນອີກ, ກະລຸນາແຈ້ງເລກອ້າງອີງຂ້າງລຸ່ມນີ້ໃຫ້ຜູ້ດູແລລະບົບ."
+
+#: ninefruits/core/errors.py
+msgid "Temporarily unavailable"
+msgstr "ບໍ່ສາມາດໃຊ້ງານໄດ້ຊົ່ວຄາວ"
+
+#: ninefruits/core/errors.py
+msgid "The service is temporarily unavailable. Try again later."
+msgstr "ບໍລິການບໍ່ສາມາດໃຊ້ງານໄດ້ຊົ່ວຄາວ. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ."
+
+#: templates/errors/error.html
+msgid "Reference"
+msgstr "ເລກອ້າງອີງ"

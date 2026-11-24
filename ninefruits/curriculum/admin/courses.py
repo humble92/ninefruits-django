@@ -374,7 +374,11 @@ class CourseAdmin(ReferenceAdmin):
                 (pgettext_lazy("curriculum.sections", "Course"), {"fields": ("code", "org_unit", "is_active")}),
                 (_("First version"), {"fields": VERSION_FIELDS}),
             )
-        return ((None, {"fields": ("code", "org_unit", "is_active", "add_version_link")}),)
+        fields: tuple[str, ...] = ("code", "org_unit", "is_active")
+        version_admin = self.admin_site._registry.get(CourseVersion)
+        if version_admin is not None and version_admin.has_add_permission(request):
+            fields += ("add_version_link",)
+        return ((None, {"fields": fields}),)
 
     def get_readonly_fields(self, request: HttpRequest, obj: Any = None) -> Any:
         return ("add_version_link",) if obj is not None else ()

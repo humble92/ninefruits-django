@@ -1236,3 +1236,63 @@ msgstr "用户"
 #: ninefruits/i18n/vendor_strings.py
 msgid "users"
 msgstr "用户"
+
+#: ninefruits/core/errors.py
+msgid "No information to show"
+msgstr "没有可显示的信息"
+
+#: ninefruits/core/errors.py
+msgid "There is no information matching your request."
+msgstr "没有与您的请求相符的信息。"
+
+#: ninefruits/core/errors.py
+msgid "Bad request"
+msgstr "请求无效"
+
+#: ninefruits/core/errors.py
+msgid "The request could not be processed. Check the address and try again."
+msgstr "无法处理该请求。请检查地址后重试。"
+
+#: ninefruits/core/errors.py
+msgid "No permission"
+msgstr "没有权限"
+
+#: ninefruits/core/errors.py
+msgid "You do not have permission to view this page or to perform this action."
+msgstr "您没有权限查看此页面或执行此操作。"
+
+#: ninefruits/core/errors.py
+msgid "The page has expired"
+msgstr "页面已过期"
+
+#: ninefruits/core/errors.py
+msgid "The form was open for too long or your session changed. Reload the page and try again."
+msgstr "表单打开时间过长或您的会话已更改。请刷新页面后重试。"
+
+#: ninefruits/core/errors.py
+msgid "Too many requests"
+msgstr "请求过多"
+
+#: ninefruits/core/errors.py
+msgid "Wait a minute and try again."
+msgstr "请稍等片刻后重试。"
+
+#: ninefruits/core/errors.py
+msgid "Something went wrong"
+msgstr "出现问题"
+
+#: ninefruits/core/errors.py
+msgid "An unexpected error occurred. Try again later. If it keeps happening, tell the administrator the reference below."
+msgstr "发生了意外错误。请稍后重试。如果问题持续出现，请将下方的参考编号告知管理员。"
+
+#: ninefruits/core/errors.py
+msgid "Temporarily unavailable"
+msgstr "暂时无法使用"
+
+#: ninefruits/core/errors.py
+msgid "The service is temporarily unavailable. Try again later."
+msgstr "服务暂时无法使用。请稍后重试。"
+
+#: templates/errors/error.html
+msgid "Reference"
+msgstr "参考编号"

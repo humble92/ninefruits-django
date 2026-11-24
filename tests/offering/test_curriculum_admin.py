@@ -161,7 +161,11 @@ def test_shows_a_room_timetable(manager: User, section: Section) -> None:
 def test_publishes_and_cancels_a_section_from_its_page(manager: User, section: Section) -> None:
     draft = SectionFactory(term=section.term, section_code="DR")
     client = signed_in(manager)
-    assert client.get(f"/admin/offering/section/{draft.pk}/publish/").status_code == 302
+    # The button only asks for confirmation; the POST publishes.
+    assert client.get(f"/admin/offering/section/{draft.pk}/publish/").status_code == 200
+    draft.refresh_from_db()
+    assert draft.status == SectionStatus.DRAFT
+    assert client.post(f"/admin/offering/section/{draft.pk}/publish/").status_code == 302
     draft.refresh_from_db()
     assert draft.status == SectionStatus.PUBLISHED
     client.post(f"/admin/offering/section/{draft.pk}/cancel/", {"_form_submitted": "on", "reason": "Too few students"})

@@ -12,6 +12,7 @@ from django_ratelimit.core import is_ratelimited
 
 from ninefruits.certificate.services.serials import institution_now
 from ninefruits.certificate.services.verification import CertificateVerification
+from ninefruits.core.errors import error_page
 
 RATE = "30/m"
 
@@ -22,9 +23,7 @@ class VerifyCertificateView(View):
 
     def get(self, request: HttpRequest, code: str | None = None) -> HttpResponse:
         if is_ratelimited(request, group="certificate.verify", key="ip", rate=RATE, increment=True):
-            return HttpResponse(
-                _("Too many requests. Wait a minute and try again."), status=429, content_type="text/plain"
-            )
+            return error_page(request, "too_many_requests", _("Too many requests. Wait a minute and try again."))
         code = (code if code is not None else request.GET.get("code", "")).strip()
         result = CertificateVerification().check(code) if code else None
         issue = result.issue if result is not None else None

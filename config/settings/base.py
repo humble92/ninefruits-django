@@ -107,6 +107,8 @@ MIDDLEWARE = [
     # Idle session expiry (original): refreshes the expiry at most every SESSION_REFRESH_SECONDS.
     "ninefruits.security.middleware.SlidingSessionExpiryMiddleware",
     "ninefruits.security.middleware.EnforceMfaPolicyMiddleware",
+    # Http404 / PermissionDenied of a page view -> the 404 / 403 error pages (ninefruits.core.errors).
+    "ninefruits.core.middleware.ErrorPageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django.middleware.csp.ContentSecurityPolicyMiddleware",
     "allauth.account.middleware.AccountMiddleware",
@@ -395,6 +397,7 @@ SECURE_CSP = {
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_REFERRER_POLICY = "same-origin"
 X_FRAME_OPTIONS = "DENY"
+CSRF_FAILURE_VIEW = "ninefruits.core.errors.csrf_failure"
 
 # --- Logging ---------------------------------------------------------------------------------
 LOGGING = {

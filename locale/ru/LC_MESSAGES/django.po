@@ -1219,3 +1219,63 @@ msgstr "пользователь"
 #: ninefruits/i18n/vendor_strings.py
 msgid "users"
 msgstr "пользователи"
+
+#: ninefruits/core/errors.py
+msgid "No information to show"
+msgstr "Нет данных для отображения"
+
+#: ninefruits/core/errors.py
+msgid "There is no information matching your request."
+msgstr "Нет данных, соответствующих вашему запросу."
+
+#: ninefruits/core/errors.py
+msgid "Bad request"
+msgstr "Неверный запрос"
+
+#: ninefruits/core/errors.py
+msgid "The request could not be processed. Check the address and try again."
+msgstr "Не удалось обработать запрос. Проверьте адрес и повторите попытку."
+
+#: ninefruits/core/errors.py
+msgid "No permission"
+msgstr "Нет доступа"
+
+#: ninefruits/core/errors.py
+msgid "You do not have permission to view this page or to perform this action."
+msgstr "У вас нет прав на просмотр этой страницы или выполнение этого действия."
+
+#: ninefruits/core/errors.py
+msgid "The page has expired"
+msgstr "Срок действия страницы истёк"
+
+#: ninefruits/core/errors.py
+msgid "The form was open for too long or your session changed. Reload the page and try again."
+msgstr "Форма была открыта слишком долго или ваш сеанс изменился. Обновите страницу и повторите попытку."
+
+#: ninefruits/core/errors.py
+msgid "Too many requests"
+msgstr "Слишком много запросов"
+
+#: ninefruits/core/errors.py
+msgid "Wait a minute and try again."
+msgstr "Подождите минуту и повторите попытку."
+
+#: ninefruits/core/errors.py
+msgid "Something went wrong"
+msgstr "Что-то пошло не так"
+
+#: ninefruits/core/errors.py
+msgid "An unexpected error occurred. Try again later. If it keeps happening, tell the administrator the reference below."
+msgstr "Произошла непредвиденная ошибка. Повторите попытку позже. Если ошибка повторяется, сообщите администратору номер обращения ниже."
+
+#: ninefruits/core/errors.py
+msgid "Temporarily unavailable"
+msgstr "Временно недоступно"
+
+#: ninefruits/core/errors.py
+msgid "The service is temporarily unavailable. Try again later."
+msgstr "Сервис временно недоступен. Повторите попытку позже."
+
+#: templates/errors/error.html
+msgid "Reference"
+msgstr "Номер обращения"

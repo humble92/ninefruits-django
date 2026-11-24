@@ -1,5 +1,5 @@
 {% extends "portal/base.html" %}
-{% load i18n %}
+{% load i18n portal %}
 {% comment %}Roster and attendance of a section (original livewire/portal/section-attendance).
 The forms post an action; with HTMX the block #attendance is swapped.{% endcomment %}
 {% block content %}
@@ -7,7 +7,7 @@ The forms post an action; with HTMX the block #attendance is swapped.{% endcomme
 <div id="attendance" class="space-y-6">
     <div class="flex flex-wrap items-start justify-between gap-2">
         <div>
-            <a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>
+            {% menu_visible "teaching" as show_teaching %}{% if show_teaching %}<a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>{% endif %}
             <h1 class="text-2xl font-semibold">{{ section.label }} {{ section.version.title }}</h1>
             <p class="text-sm text-zinc-600" data-intro>
                 {% blocktranslate with held=summary.held students=enrollments|length %}{{ held }} meeting(s) held, {{ students }} student(s).{% endblocktranslate %}

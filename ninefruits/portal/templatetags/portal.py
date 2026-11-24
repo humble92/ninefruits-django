@@ -18,6 +18,14 @@ register = template.Library()
 SECURITY_URL_NAME = "portal:security"
 
 
+@register.simple_tag(takes_context=True)
+def menu_visible(context: template.Context, key: str) -> bool:
+    """Whether the portal menu item ``key`` is shown to the user, so a page links to it only
+    then (e.g. "My teaching" on a grade entry page that staff open too)."""
+    item = menu._items.get(key)
+    return bool(item is not None and item.is_visible(context["request"]))
+
+
 @register.inclusion_tag("portal/partials/navigation.html", takes_context=True)
 def portal_navigation(context: template.Context) -> dict[str, Any]:
     request = context["request"]

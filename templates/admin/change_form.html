@@ -1,0 +1,5 @@
+{% extends "admin/change_form.html" %}
+{% load adminpanel_actions %}
+{% comment %}unfold's change form; the submit line hides "Close" (a link to the list) for users who
+may open the record but not the list (CatalogPermissionMixin.render_change_form).{% endcomment %}
+{% block submit_buttons_bottom %}{% catalog_submit_row %}{% endblock %}

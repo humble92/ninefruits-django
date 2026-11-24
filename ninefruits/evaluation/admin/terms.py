@@ -119,6 +119,13 @@ class TermEvaluationAdmin(CatalogAdmin):
     def get_queryset(self, request: HttpRequest) -> Any:
         return super().get_queryset(request).annotate(_responses=response_count())
 
+    def get_list_display_links(self, request: HttpRequest, list_display: Any) -> Any:
+        # A row opens the "Change" row action (same URL as Django's change page), which only
+        # users who may set up evaluations can open.
+        if not self.has_prepare_permission(request):
+            return None
+        return super().get_list_display_links(request, list_display)
+
     # -- columns ---------------------------------------------------------------------------------
     @display(description=_("term"), ordering="term__start_date")
     def term_name(self, obj: TermEvaluation) -> str:

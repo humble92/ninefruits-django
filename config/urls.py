@@ -22,3 +22,10 @@ urlpatterns = [
 
 if settings.DEBUG and "debug_toolbar" in settings.INSTALLED_APPS:  # pragma: no cover
     urlpatterns.append(path("__debug__/", include("debug_toolbar.urls")))
+
+# Error pages of browser screens (ninefruits.core.errors); handler429 is read by allauth.
+handler400 = "ninefruits.core.errors.bad_request"
+handler403 = "ninefruits.core.errors.permission_denied"
+handler404 = "ninefruits.core.errors.page_not_found"
+handler500 = "ninefruits.core.errors.server_error"
+handler429 = "ninefruits.core.errors.too_many_requests"

@@ -160,7 +160,20 @@ class DegreeRequirementWaiverAdmin(CatalogAdmin):
         return f"{waiver.student_record.student_number} · {requirement_name(waiver.requirement)} · {waiver.reason}"
 
     def has_decide_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return self.has_view_permission(request)
+        if not self.has_view_permission(request):
+            return False
+        if object_id is None:
+            return True
+        waiver = self.row_object(request, object_id)
+        return waiver is not None and WaiveRequirement().can_decide(waiver, request.user)
+
+    def has_lift_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
+        if not self.has_view_permission(request):
+            return False
+        if object_id is None:
+            return True
+        waiver = self.row_object(request, object_id)
+        return waiver is not None and WaiveRequirement().can_lift(waiver, request.user)
 
     @action(description=_("Approve"), url_path="approve", permissions=["decide"], icon="check")
     def approve_row(self, request: HttpRequest, object_id: Any) -> HttpResponse:
@@ -206,7 +219,7 @@ class DegreeRequirementWaiverAdmin(CatalogAdmin):
             subtitle=self._subtitle(waiver),
         )
 
-    @action(description=_("Lift the waiver"), url_path="lift", permissions=["decide"], icon="undo")
+    @action(description=_("Lift the waiver"), url_path="lift", permissions=["lift"], icon="undo")
     def lift_row(self, request: HttpRequest, object_id: Any) -> HttpResponse:
         waiver = self._waiver(request, object_id)
         waive = WaiveRequirement()

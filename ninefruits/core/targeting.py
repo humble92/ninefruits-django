@@ -178,6 +178,15 @@ class TargetCriteriaAttribute(DeferredAttribute):
         instance.__dict__[self.field.attname] = TargetCriteria.coerce(value)
 
 
+class TargetCriteriaEncoder(json.JSONEncoder):
+    """Serialises a :class:`TargetCriteria` as its stored object (read-only admin display)."""
+
+    def default(self, o: Any) -> Any:
+        if isinstance(o, TargetCriteria):
+            return o.to_dict()
+        return super().default(o)
+
+
 class TargetCriteriaField(models.JSONField):
     """jsonb column holding a :class:`TargetCriteria` (original ``TargetCriteria`` cast). A saved
     value is always an object, ``{}`` for everyone. Admin forms use
@@ -185,6 +194,16 @@ class TargetCriteriaField(models.JSONField):
 
     descriptor_class = TargetCriteriaAttribute
     description = "Target criteria (JSON object)"
+
+    def __init__(self, *args: Any, **kwargs: Any) -> None:
+        kwargs.setdefault("encoder", TargetCriteriaEncoder)
+        super().__init__(*args, **kwargs)
+
+    def deconstruct(self) -> Any:
+        name, path, args, kwargs = super().deconstruct()
+        if kwargs.get("encoder") is TargetCriteriaEncoder:
+            del kwargs["encoder"]
+        return name, path, args, kwargs
 
     def from_db_value(self, value: Any, expression: Any, connection: Any) -> Any:
         return TargetCriteria.coerce(super().from_db_value(value, expression, connection))

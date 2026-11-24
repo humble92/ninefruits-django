@@ -15,6 +15,10 @@ class AdminPanelConfig(AppConfig):
         if admin.site.is_registered(Group):
             admin.site.unregister(Group)
 
+        from . import readonly_links
+
+        readonly_links.install()
+
 
 class NinefruitsAdminConfig(admin_apps.AdminConfig):
     """Replaces ``django.contrib.admin`` in INSTALLED_APPS so the default site is ours."""

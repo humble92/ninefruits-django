@@ -162,7 +162,24 @@ class GradeChangeRequestAdmin(CatalogAdmin):
         )
 
     def has_decide_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
-        return self.has_view_permission(request)
+        if not self.has_view_permission(request):
+            return False
+        if object_id is None:
+            return True
+        change = self.row_object(request, object_id)
+        return change is not None and ManageGradeChanges().can_decide(change, request.user)
+
+    def has_cancel_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
+        if not self.has_view_permission(request):
+            return False
+        if object_id is None:
+            return True
+        change = self.row_object(request, object_id)
+        return (
+            change is not None
+            and change.status == GradeChangeStatus.PENDING
+            and change.requested_by_id == request.user.pk
+        )
 
     @action(description=_("Approve"), url_path="approve", permissions=["decide"], icon="check")
     def approve_row(self, request: HttpRequest, object_id: Any) -> HttpResponse:
@@ -211,7 +228,7 @@ class GradeChangeRequestAdmin(CatalogAdmin):
         )
 
     @action(
-        description=pgettext_lazy("grading", "Cancel request"), url_path="cancel", permissions=["decide"], icon="cancel"
+        description=pgettext_lazy("grading", "Cancel request"), url_path="cancel", permissions=["cancel"], icon="cancel"
     )
     def cancel_row(self, request: HttpRequest, object_id: Any) -> HttpResponse:
         change = self._request(request, object_id)

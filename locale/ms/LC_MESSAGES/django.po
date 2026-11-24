@@ -1178,3 +1178,63 @@ msgstr "pengguna"
 #: ninefruits/i18n/vendor_strings.py
 msgid "users"
 msgstr "pengguna"
+
+#: ninefruits/core/errors.py
+msgid "No information to show"
+msgstr "Tiada maklumat untuk dipaparkan"
+
+#: ninefruits/core/errors.py
+msgid "There is no information matching your request."
+msgstr "Tiada maklumat yang sepadan dengan permintaan anda."
+
+#: ninefruits/core/errors.py
+msgid "Bad request"
+msgstr "Permintaan tidak sah"
+
+#: ninefruits/core/errors.py
+msgid "The request could not be processed. Check the address and try again."
+msgstr "Permintaan tidak dapat diproses. Semak alamat dan cuba lagi."
+
+#: ninefruits/core/errors.py
+msgid "No permission"
+msgstr "Tiada kebenaran"
+
+#: ninefruits/core/errors.py
+msgid "You do not have permission to view this page or to perform this action."
+msgstr "Anda tidak mempunyai kebenaran untuk melihat halaman ini atau melakukan tindakan ini."
+
+#: ninefruits/core/errors.py
+msgid "The page has expired"
+msgstr "Halaman telah tamat tempoh"
+
+#: ninefruits/core/errors.py
+msgid "The form was open for too long or your session changed. Reload the page and try again."
+msgstr "Borang dibuka terlalu lama atau sesi anda telah berubah. Muat semula halaman dan cuba lagi."
+
+#: ninefruits/core/errors.py
+msgid "Too many requests"
+msgstr "Terlalu banyak permintaan"
+
+#: ninefruits/core/errors.py
+msgid "Wait a minute and try again."
+msgstr "Tunggu sebentar dan cuba lagi."
+
+#: ninefruits/core/errors.py
+msgid "Something went wrong"
+msgstr "Berlaku masalah"
+
+#: ninefruits/core/errors.py
+msgid "An unexpected error occurred. Try again later. If it keeps happening, tell the administrator the reference below."
+msgstr "Ralat yang tidak dijangka telah berlaku. Cuba lagi kemudian. Jika ia terus berlaku, beritahu pentadbir rujukan di bawah."
+
+#: ninefruits/core/errors.py
+msgid "Temporarily unavailable"
+msgstr "Tidak tersedia buat sementara"
+
+#: ninefruits/core/errors.py
+msgid "The service is temporarily unavailable. Try again later."
+msgstr "Perkhidmatan tidak tersedia buat sementara waktu. Cuba lagi kemudian."
+
+#: templates/errors/error.html
+msgid "Reference"
+msgstr "Rujukan"

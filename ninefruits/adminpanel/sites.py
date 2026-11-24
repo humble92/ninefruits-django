@@ -125,6 +125,13 @@ class NinefruitsAdminSite(UnfoldAdminSite):  # type: ignore[misc]
                 merged[group] = {**app, "name": group.label}
         return [merged[group] for group in order if group in merged] + others
 
+    def app_index(self, request: HttpRequest, app_label: str, extra_context: dict[str, Any] | None = None) -> Any:
+        """An app without a list the user may open (Django: 404) goes to the dashboard: the
+        app index is only navigation (e.g. the breadcrumb of a page the user may open)."""
+        if not self.get_app_list(request, app_label):
+            return HttpResponseRedirect(reverse(f"{self.name}:index"))
+        return super().app_index(request, app_label, extra_context)
+
     # -- custom views ----------------------------------------------------------------------
     def register_view(
         self,

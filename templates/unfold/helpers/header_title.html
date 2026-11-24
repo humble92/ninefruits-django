@@ -1,0 +1,13 @@
+{% comment %}unfold's page header (unfold/helpers/header_title.html); the part linking to a list the
+user may not open (request.admin_hidden_list_url, CatalogPermissionMixin.render_change_form) is
+text, not a link.{% endcomment %}{% spaceless %}
+    {% for part in parts %}
+        {% if part.link and part.link != "" and part.link != request.admin_hidden_list_url %}<a href="{{ part.link }}"{% else %}<span{% endif %} class="align-middle inline-block leading-5 min-w-0 truncate tracking-tight">
+        {{ part.title|capfirst }}
+        {% if part.link and part.link != "" and part.link != request.admin_hidden_list_url %}</a>{% else %}</span>{% endif %}
+
+        {% if not forloop.last %}
+            <span class="material-symbols-outlined inline-block align-middle leading-5 mx-2 text-base-400 dark:text-base-500 rtl:-scale-x-100">chevron_right</span>
+        {% endif %}
+    {% endfor %}
+{% endspaceless %}

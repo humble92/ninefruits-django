@@ -67,9 +67,9 @@ def respond(request: HttpRequest, record: Any, context: dict[str, Any]) -> HttpR
         try:
             pdf = get_renderer().render(html)
         except PdfRenderingError:
-            return HttpResponse(
-                _("The PDF could not be created. Try again later."), status=503, content_type="text/plain"
-            )
+            from ninefruits.core.errors import error_page
+
+            return error_page(request, "unavailable", _("The PDF could not be created. Try again later."))
         response = HttpResponse(pdf, content_type="application/pdf")
         response["Content-Disposition"] = f'inline; filename="transcript-{record.student_number}.pdf"'
         return response

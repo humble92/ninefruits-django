@@ -918,9 +918,17 @@ class SectionAdmin(SectionRegistrationMixin, SectionClassMeetingsMixin, CatalogA
         return self._status_permission(request, object_id, (SectionStatus.CANCELLED,))
 
     def _change_status(
-        self, request: HttpRequest, object_id: Any, status: SectionStatus, reason: str | None = None
+        self,
+        request: HttpRequest,
+        object_id: Any,
+        status: SectionStatus,
+        reason: str | None = None,
+        title: Any = None,
     ) -> HttpResponse:
         section = get_object_or_404(Section, pk=object_id)
+        if request.method != "POST":
+            # The buttons are links: a GET only asks for confirmation (never changes data).
+            return render_action_form(self, request, forms.Form(), title, admin_url(section), subtitle=section.label())
         try:
             ChangeSectionStatus()(section, status, request.user, reason)
         except ValidationError as error:
@@ -931,11 +939,11 @@ class SectionAdmin(SectionRegistrationMixin, SectionClassMeetingsMixin, CatalogA
 
     @action(description=_("Publish"), url_path="publish", permissions=["publish"], icon="visibility")
     def publish(self, request: HttpRequest, object_id: Any) -> HttpResponse:
-        return self._change_status(request, object_id, SectionStatus.PUBLISHED)
+        return self._change_status(request, object_id, SectionStatus.PUBLISHED, title=_("Publish"))
 
     @action(description=_("Back to draft"), url_path="unpublish", permissions=["unpublish"], icon="visibility_off")
     def unpublish(self, request: HttpRequest, object_id: Any) -> HttpResponse:
-        return self._change_status(request, object_id, SectionStatus.DRAFT)
+        return self._change_status(request, object_id, SectionStatus.DRAFT, title=_("Back to draft"))
 
     @action(
         description=_("Cancel section"),
@@ -949,7 +957,7 @@ class SectionAdmin(SectionRegistrationMixin, SectionClassMeetingsMixin, CatalogA
 
     @action(description=_("Reopen"), url_path="reopen", permissions=["reopen"], icon="undo")
     def reopen(self, request: HttpRequest, object_id: Any) -> HttpResponse:
-        return self._change_status(request, object_id, SectionStatus.DRAFT)
+        return self._change_status(request, object_id, SectionStatus.DRAFT, title=_("Reopen"))
 
     def has_open_syllabus_permission(self, request: HttpRequest, object_id: Any = None) -> bool:
         section = Section.objects.filter(pk=object_id).first() if object_id is not None else None

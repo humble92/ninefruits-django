@@ -1236,3 +1236,63 @@ msgstr "사용자"
 #: ninefruits/i18n/vendor_strings.py
 msgid "users"
 msgstr "사용자"
+
+#: ninefruits/core/errors.py
+msgid "No information to show"
+msgstr "표시할 자료가 없습니다"
+
+#: ninefruits/core/errors.py
+msgid "There is no information matching your request."
+msgstr "요청하신 내용과 일치하는 자료가 없습니다."
+
+#: ninefruits/core/errors.py
+msgid "Bad request"
+msgstr "잘못된 요청"
+
+#: ninefruits/core/errors.py
+msgid "The request could not be processed. Check the address and try again."
+msgstr "요청을 처리할 수 없습니다. 주소를 확인하고 다시 시도하세요."
+
+#: ninefruits/core/errors.py
+msgid "No permission"
+msgstr "권한 없음"
+
+#: ninefruits/core/errors.py
+msgid "You do not have permission to view this page or to perform this action."
+msgstr "이 페이지를 보거나 이 작업을 할 권한이 없습니다."
+
+#: ninefruits/core/errors.py
+msgid "The page has expired"
+msgstr "페이지가 만료되었습니다"
+
+#: ninefruits/core/errors.py
+msgid "The form was open for too long or your session changed. Reload the page and try again."
+msgstr "양식을 너무 오래 열어 두었거나 세션이 바뀌었습니다. 페이지를 새로 고친 뒤 다시 시도하세요."
+
+#: ninefruits/core/errors.py
+msgid "Too many requests"
+msgstr "요청이 너무 많습니다"
+
+#: ninefruits/core/errors.py
+msgid "Wait a minute and try again."
+msgstr "잠시 후 다시 시도하세요."
+
+#: ninefruits/core/errors.py
+msgid "Something went wrong"
+msgstr "문제가 발생했습니다"
+
+#: ninefruits/core/errors.py
+msgid "An unexpected error occurred. Try again later. If it keeps happening, tell the administrator the reference below."
+msgstr "예기치 않은 오류가 발생했습니다. 잠시 후 다시 시도하세요. 계속 발생하면 아래 참조 번호를 관리자에게 알려 주세요."
+
+#: ninefruits/core/errors.py
+msgid "Temporarily unavailable"
+msgstr "일시적으로 사용할 수 없음"
+
+#: ninefruits/core/errors.py
+msgid "The service is temporarily unavailable. Try again later."
+msgstr "서비스를 일시적으로 사용할 수 없습니다. 잠시 후 다시 시도하세요."
+
+#: templates/errors/error.html
+msgid "Reference"
+msgstr "참조 번호"

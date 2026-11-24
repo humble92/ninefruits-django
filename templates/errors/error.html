@@ -1,0 +1,19 @@
+{% extends layout %}
+{% load i18n %}
+{% comment %}Every error page (ninefruits.core.errors): code, icon, title, message, a link home and
+the request id for support. Inline styles, so it looks the same in the admin, the portal and the
+self-contained layout (errors/standalone.html) that the 400 and 500 pages use.{% endcomment %}
+{% block content %}
+<section role="alert" style="max-width:32rem;margin:3rem auto;padding:0 1.5rem;text-align:center">
+    <div style="display:inline-flex;align-items:center;justify-content:center;width:4.5rem;height:4.5rem;margin-bottom:1.25rem;border-radius:9999px;background:{{ error.tint }};color:{{ error.color }}">
+        {% include "errors/icon.html" with icon=error.icon %}
+    </div>
+    <p style="margin:0 0 .25rem;font-size:.8125rem;font-weight:600;letter-spacing:.08em;color:{{ error.color }}">{{ status }}</p>
+    <h1 style="margin:0 0 .5rem;font-size:1.25rem;font-weight:600;line-height:1.4">{{ error.title }}</h1>
+    <p style="margin:0 0 1.75rem;font-size:.9375rem;line-height:1.6;opacity:.75">{{ message }}</p>
+    <a href="{{ home_url }}" style="display:inline-block;padding:.5rem 1.25rem;border-radius:.375rem;background:{{ error.color }};color:#fff;font-size:.875rem;font-weight:500;text-decoration:none">{% translate "Home" %}</a>
+    {% if request_id %}
+        <p style="margin:2rem 0 0;font-size:.75rem;opacity:.55">{% translate "Reference" %}: <code>{{ request_id }}</code></p>
+    {% endif %}
+</section>
+{% endblock %}

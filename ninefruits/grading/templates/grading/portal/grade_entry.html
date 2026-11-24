@@ -1,12 +1,12 @@
 {% extends "portal/base.html" %}
-{% load i18n %}
+{% load i18n portal %}
 {% comment %}Grade entry (original livewire/portal/grade-entry). One form: the buttons post an
 action; with HTMX the block #grade-entry is swapped. A score asks the server for the grade it
 gives (partial "preview").{% endcomment %}
 {% block content %}
 <div id="grade-entry" class="space-y-6">
     <div>
-        <a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>
+        {% menu_visible "teaching" as show_teaching %}{% if show_teaching %}<a href="{% url 'portal:teaching' %}?term={{ section.term_id }}" class="text-sm underline">{% translate "My teaching" %}</a>{% endif %}
         <h1 class="text-2xl font-semibold">{% translate "Grade entry" %}: {{ section.label }} {{ section.version.title }}</h1>
         <p class="text-sm text-zinc-600">
             {{ section.term.name }} ·
