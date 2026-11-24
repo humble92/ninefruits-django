@@ -9,7 +9,7 @@ dependencies = [
     "cryptography>=50.0.2",
     "django>=6.1.2,<6.2",
     "django-allauth[mfa,socialaccount]>=65.20.1",
-    "django-celery-beat>=2.1.0",
+    "django-celery-beat>=2.9.0",
     "django-environ>=0.14.0",
     "django-filter>=26.2",
     "django-health-check>=4.10.0",
@@ -103,3 +103,8 @@ django_settings_module = "config.settings.test"
 
 [tool.bandit]
 exclude_dirs = ["tests", ".venv"]
+
+[tool.uv]
+# django-celery-beat 2.9.0 (latest) caps Django <6.1; without lifting the cap uv falls back to
+# 2.1.0, which uses pytz and crashes beat on zoneinfo. Lift the cap until a release supports 6.1.
+override-dependencies = ["django>=6.1.2,<6.2"]
