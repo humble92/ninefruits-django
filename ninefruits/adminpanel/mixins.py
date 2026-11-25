@@ -17,6 +17,8 @@ from __future__ import annotations
 import inspect
 from typing import Any, ClassVar
 
+from django import forms
+from django.forms.models import BaseInlineFormSet
 from django.http import HttpRequest, HttpResponse
 from django.urls import reverse
 from unfold.admin import ModelAdmin
@@ -121,22 +123,25 @@ class CatalogPermissionMixin:
             cache[key] = self.get_queryset(request).filter(pk=object_id).first()
         return cache[key]
 
-    def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
+    def get_form(
+        self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any
+    ) -> type[forms.ModelForm[Any]]:
         # On a view-only change page Django excludes every field from the form, so custom
         # forms that adjust ``self.fields[...]`` in ``__init__`` raise KeyError. The page shows
         # all fields read-only anyway and Django refuses a POST without the change
         # permission, so keep the fields in the form.
         if change and obj is not None and not self.has_change_permission(request, obj):
             change = False
-        form = super().get_form(request, obj, change=change, **kwargs)  # type: ignore[misc]
-        # A new class per call: read-only related-record links check the user's access with it
-        # (ninefruits.adminpanel.readonly_links).
-        form._admin_request = request
+        form: type[forms.ModelForm[Any]] = super().get_form(request, obj, change=change, **kwargs)  # type: ignore[misc]
+        # A new class per call; ninefruits.adminpanel.readonly_links reads the request from it.
+        form._admin_request = request  # type: ignore[attr-defined]
         return form
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         """Inlines: the same request on the formset's (new) form class as ``get_form``."""
-        formset = super().get_formset(request, obj, **kwargs)  # type: ignore[misc]
+        formset: type[BaseInlineFormSet[Any, Any, Any]] = super().get_formset(request, obj, **kwargs)  # type: ignore[misc]
         formset.form._admin_request = request
         return formset
 

@@ -138,11 +138,10 @@ class RegistrationRuleSetAdmin(CatalogAdmin):
         actions.pop("delete_selected", None)
         return actions
 
-    def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
-        form = super().get_form(request, obj, change=change, **kwargs)
-        if "note" in form.base_fields:
-            form.base_fields["note"].max_length = 2000
-        return form
+    def formfield_for_dbfield(self, db_field: Any, request: HttpRequest, **kwargs: Any) -> forms.Field | None:
+        if db_field.name == "note":
+            kwargs["max_length"] = 2000  # a text column; the original form allows 2000 characters
+        return super().formfield_for_dbfield(db_field, request, **kwargs)
 
     @display(description=_("term"), ordering="term__start_date")
     def term_name(self, obj: RegistrationRuleSet) -> str:

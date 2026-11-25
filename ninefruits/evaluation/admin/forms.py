@@ -9,6 +9,7 @@ from typing import Any
 from django import forms
 from django.contrib import admin
 from django.db.models import Count
+from django.forms.models import BaseInlineFormSet
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
@@ -99,7 +100,9 @@ class QuestionInline(CatalogPermissionMixin, StackedInline):
     def has_delete_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return self._editable(request, obj)
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         formset = super().get_formset(request, obj, **kwargs)
         if "question_type" in formset.form.base_fields:
             formset.form.base_fields["question_type"].initial = QuestionType.SCALE

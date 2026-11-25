@@ -16,6 +16,7 @@ from django import forms
 from django.contrib import admin, messages
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.db.models import Count, Q
+from django.forms.models import BaseInlineFormSet
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404, render
 from django.urls import path, reverse
@@ -203,7 +204,9 @@ class RoleAssignmentInline(CatalogPermissionMixin, TabularInline):
         url = reverse("admin:security_user_revoke_assignment", args=[obj.user_id, obj.pk])
         return format_html('<a href="{}" class="text-red-600 underline">{}</a>', url, _("End assignment"))
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         self._request = request
         return super().get_formset(request, obj, **kwargs)
 
@@ -236,9 +239,11 @@ class UserAdmin(CatalogAdmin):
     def get_inlines(self, request: HttpRequest, obj: Any) -> Any:
         return self.inlines if obj is not None else ()
 
-    def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
-        form: Any = super().get_form(request, obj, change, **kwargs)
-        form.actor = request.user
+    def get_form(
+        self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any
+    ) -> type[forms.ModelForm[Any]]:
+        form = super().get_form(request, obj, change, **kwargs)
+        form.actor = request.user  # type: ignore[attr-defined]
         return form
 
     def has_delete_permission(self, request: HttpRequest, obj: Any = None) -> bool:

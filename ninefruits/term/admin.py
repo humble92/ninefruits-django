@@ -14,6 +14,7 @@ from django.contrib import admin, messages
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.db import models
 from django.db.models import Count
+from django.forms.models import BaseInlineFormSet
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import path, reverse
@@ -203,7 +204,9 @@ class TermSessionInline(CatalogPermissionMixin, TabularInline):
     def get_queryset(self, request: HttpRequest) -> Any:
         return super().get_queryset(request).annotate(window_total=Count("windows"))
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         self._request = request
         kwargs["form"] = type("TermSessionForm", (self.form,), {"term": obj})
         return super().get_formset(request, obj, **kwargs)
@@ -298,7 +301,9 @@ class TermWindowInline(CatalogPermissionMixin, StackedInline):
     def get_queryset(self, request: HttpRequest) -> Any:
         return super().get_queryset(request).select_related("session").order_by("opens_at", "id")
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         kwargs["form"] = type("TermWindowForm", (self.form,), {"term": obj})
         return super().get_formset(request, obj, **kwargs)
 

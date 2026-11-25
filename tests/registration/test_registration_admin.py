@@ -238,6 +238,21 @@ def test_prepares_a_rule_set_by_copying_and_edits_a_rule_with_its_parameters(man
     assert rule_set.rules.get(rule_code=RuleCode.HOLD).parameters is None
 
 
+def test_limits_the_rule_set_note_to_2000_characters(manager: User) -> None:
+    from django.contrib import admin
+    from django.test import RequestFactory
+
+    rule_set = RegistrationRuleSet.objects.order_by("id").first()
+    url = f"/admin/registration/registrationruleset/{rule_set.pk}/change/"
+    assert 'maxlength="2000"' in signed_in(manager).get(url).content.decode()
+
+    request = RequestFactory().get(url)
+    request.user = manager
+    form_class = admin.site._registry[RegistrationRuleSet].get_form(request, rule_set, change=True)
+    assert not form_class({"note": "x" * 2001}, instance=rule_set).is_valid()
+    assert form_class({"note": "x" * 2000}, instance=rule_set).is_valid()
+
+
 def test_creates_a_credit_limit_for_a_group_of_students(manager: User) -> None:
     response = signed_in(manager).post(
         "/admin/registration/creditlimitpolicy/add/",

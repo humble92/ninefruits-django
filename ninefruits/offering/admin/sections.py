@@ -720,7 +720,9 @@ class SectionAdmin(SectionRegistrationMixin, SectionClassMeetingsMixin, CatalogA
         return str(SectionStatus(obj.status).label)
 
     # -- forms -----------------------------------------------------------------------------------
-    def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
+    def get_form(
+        self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any
+    ) -> type[forms.ModelForm[Any]]:
         if obj is None:
             kwargs["form"] = SectionCreateForm
             kwargs["fields"] = SectionCreateForm.Meta.fields

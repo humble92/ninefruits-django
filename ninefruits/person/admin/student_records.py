@@ -14,6 +14,7 @@ from django import forms
 from django.contrib import admin, messages
 from django.core.exceptions import PermissionDenied, ValidationError
 from django.db import transaction
+from django.forms.models import BaseInlineFormSet
 from django.http import HttpRequest, HttpResponse, HttpResponseRedirect
 from django.shortcuts import get_object_or_404
 from django.urls import path, reverse
@@ -252,7 +253,9 @@ class AdditionalProgramInline(CatalogPermissionMixin, TabularInline):
     def has_change_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return False
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         self._request = request
         return super().get_formset(request, obj, **kwargs)
 

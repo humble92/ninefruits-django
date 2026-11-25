@@ -363,7 +363,9 @@ class PersonAdmin(CatalogAdmin):
     def has_delete_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return False
 
-    def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
+    def get_form(
+        self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any
+    ) -> type[forms.ModelForm[Any]]:
         kwargs["form"] = type("PersonAdminForm", (PersonAdminForm,), person_field_definitions())
         return super().get_form(request, obj, change, **kwargs)
 

@@ -362,7 +362,9 @@ class CourseAdmin(ReferenceAdmin):
     ordering = ("code",)
     inlines = (CourseVersionInline, CourseEquivalencyInline)
 
-    def get_form(self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any) -> Any:
+    def get_form(
+        self, request: HttpRequest, obj: Any = None, change: bool = False, **kwargs: Any
+    ) -> type[forms.ModelForm[Any]]:
         if obj is None:
             kwargs["form"] = CourseCreateForm
             kwargs["fields"] = ("code", "org_unit", "is_active")

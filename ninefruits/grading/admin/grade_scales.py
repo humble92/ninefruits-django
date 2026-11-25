@@ -9,6 +9,7 @@ from typing import Any, ClassVar
 from django import forms
 from django.contrib import admin
 from django.db.models import Count
+from django.forms.models import BaseInlineFormSet
 from django.http import HttpRequest
 from django.utils.translation import gettext_lazy as _
 from django.utils.translation import pgettext_lazy
@@ -96,7 +97,9 @@ class GradeScaleItemInline(CatalogPermissionMixin, TabularInline):
     def has_add_permission(self, request: HttpRequest, obj: Any = None) -> bool:
         return self._allowed(request, "add")
 
-    def get_formset(self, request: HttpRequest, obj: Any = None, **kwargs: Any) -> Any:
+    def get_formset(
+        self, request: HttpRequest, obj: Any = None, **kwargs: Any
+    ) -> type[BaseInlineFormSet[Any, Any, Any]]:
         kwargs["form"] = type("GradeScaleItemForm", (self.form,), {"scale": obj})
         return super().get_formset(request, obj, **kwargs)
 
