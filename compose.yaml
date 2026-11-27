@@ -96,7 +96,7 @@ services:
       - "${FORWARD_MAILPIT_DASHBOARD_PORT:-8025}:8025"
 
   gotenberg:
-    image: gotenberg/gotenberg:8
+    image: gotenberg/gotenberg:9.10.2-chromium
     ports:
       - "${FORWARD_GOTENBERG_PORT:-3000}:3000"
 
