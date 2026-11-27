@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | ประเภท | คอลัมน์ที่ต้องมีสำหรับแถวใหม่ | คอลัมน์ที่ไม่บังคับ |
 |---|---|---|
 | ระเบียนนักศึกษา | `student_number`, `program` (รหัสหลักสูตร), `admission_date`, `family_name` | `catalog_year` (หากว่างใช้ปีที่เข้าศึกษา), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| อาจารย์ | `employee_number`, `org_unit` (รหัสหน่วยงาน), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| อาจารย์ | `employee_number`, `org_unit` (รหัสหน่วยงาน), `employment_type`, `family_name` | `academic_title` (รหัสตำแหน่งทางวิชาการ), `hire_date`, `end_date` |
 | คอลัมน์ข้อมูลบุคคล (ใช้ร่วมกัน) | — | `given_name`, ชื่อตามภาษา เช่น `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - ค่าของ `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (สำหรับ graduated ต้องมี `graduation_date`) สถานภาพที่เปลี่ยนโดยการนำเข้าถือเป็น **การแก้ไขข้อมูล** และไม่สร้างประวัติการเปลี่ยนสถานภาพ การเปลี่ยนแปลงจริงให้บันทึกบนหน้าจอ ([บทที่ 13](13-status-changes-and-advisors.md))

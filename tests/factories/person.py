@@ -131,7 +131,6 @@ class InstructorFactory(factory.django.DjangoModelFactory):
     employee_number = factory.Sequence(lambda n: f"F{n:05d}")
     org_unit = factory.SubFactory(OrgUnitFactory)
     employment_type = EmploymentType.FULL_TIME
-    academic_title = factory.LazyFunction(lambda: {"en": "Professor", "ko": "교수", "zh-hans": "教授"})
     hire_date = factory.Faker("date_between", start_date="-20y", end_date="-1y")
 
 

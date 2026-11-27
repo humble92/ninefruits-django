@@ -34,6 +34,7 @@ def test_seeds_iso_countries_and_languages_with_names_in_every_installed_languag
     assert Language.objects.get(code="ko").name_translations["zh-hans"] == "韩语"
     assert Language.objects.count() == 184
     assert sorted(LookupType.objects.filter(is_system=True).values_list("code", flat=True)) == [
+        "academic_title",
         "admission_type",
         "application_document_type",
         "ethnicity",

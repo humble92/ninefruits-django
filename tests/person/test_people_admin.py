@@ -11,6 +11,7 @@ from django.test import Client
 from django.utils import timezone
 
 from ninefruits.audit.models import SecurityEvent
+from ninefruits.institution.models import LookupValue
 from ninefruits.person.enums import AdditionalProgramRequestStatus, StatusChangeStatus, StudentStatus
 from ninefruits.person.models import Instructor, Person, StudentRecord, StudentStatusChange
 from ninefruits.security.enums import MfaEnforcement, Permission, ScopeType
@@ -78,6 +79,29 @@ def test_renders_every_people_and_student_record_page(manager: User) -> None:
     for url in pages:
         response = client.get(url)
         assert response.status_code == 200, url
+
+
+def test_registers_an_instructor_with_an_academic_title_code(manager: User) -> None:
+    title = LookupValue.objects.of_type(Instructor.ACADEMIC_TITLE_LOOKUP).get(code="professor")
+    org_unit = Instructor.objects.first().org_unit
+    client = signed_in(manager)
+    response = client.post(
+        "/admin/person/instructor/add/",
+        {
+            "person_mode": "new",
+            "new_person_family_name": "Example",
+            "employee_number": "INSTRUCTOR-101",
+            "org_unit": org_unit.pk,
+            "employment_type": "full_time",
+            "academic_title": title.pk,
+        },
+    )
+    assert response.status_code == 302
+    instructor = Instructor.objects.get(employee_number="INSTRUCTOR-101")
+    assert instructor.academic_title_id == title.pk
+    response = client.get("/admin/person/instructor/?q=INSTRUCTOR-101")
+    assert response.status_code == 200
+    assert "Professor" in response.content.decode()
 
 
 def test_limits_a_department_assistant_to_records_of_their_department() -> None:

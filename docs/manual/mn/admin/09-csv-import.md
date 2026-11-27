@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | Төрөл | Шинэ мөрөнд заавал багана | Сонголтот багана |
 |---|---|---|
 | Оюутны бүртгэл | `student_number`, `program` (хөтөлбөрийн код), `admission_date`, `family_name` | `catalog_year` (хоосон бол элссэн он), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Багш | `employee_number`, `org_unit` (бүтцийн нэгжийн код), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Багш | `employee_number`, `org_unit` (бүтцийн нэгжийн код), `employment_type`, `family_name` | `academic_title` (албан тушаалын код), `hire_date`, `end_date` |
 | Хувь хүний багана (нийтлэг) | — | `given_name`, `name_ko` зэрэг хэл тус бүрийн нэр, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - `status`-ийн утгууд: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (graduated бол `graduation_date` заавал). Оруулалтаар өөрчилсөн төлөвийг **өгөгдлийн засвар** гэж үзэх бөгөөд шилжилт хөдөлгөөний түүх үүсгэхгүй. Бодит өөрчлөлтийг дэлгэц дээр бүртгэнэ ([13-р бүлэг](13-status-changes-and-advisors.md)).

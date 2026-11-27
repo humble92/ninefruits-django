@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from ninefruits.institution.models import LookupType
+from ninefruits.person.models import Instructor
 from ninefruits.setup.seeders.base import Seeder, seed_row
 
 #: Code list of admission types (Phase 3 ``Application.ADMISSION_TYPE_LOOKUP``).
@@ -16,6 +17,24 @@ class LookupTypeSeeder(Seeder):
     from profiles, CSV import or the admin panel."""
 
     SYSTEM_TYPES: dict[str, dict[str, str]] = {
+        Instructor.ACADEMIC_TITLE_LOOKUP: {
+            "en": "Academic title",
+            "ko": "직위",
+            "zh-hans": "职称",
+            "de": "Akademische Position",
+            "fil": "Akademikong titulo",
+            "fr": "Titre universitaire",
+            "ja": "職位",
+            "lo": "ຕຳແໜ່ງ",
+            "mn": "Албан тушаал",
+            "ms": "Gelaran akademik",
+            "ne": "शैक्षिक पद",
+            "ru": "Академическая должность",
+            "th": "ตำแหน่งทางวิชาการ",
+            "tr": "Akademik unvan",
+            "uz": "Akademik lavozim",
+            "vi": "Chức danh",
+        },
         "ethnicity": {
             "en": "Ethnicity",
             "ko": "민족",

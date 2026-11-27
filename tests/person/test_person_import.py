@@ -12,6 +12,7 @@ import pytest
 from django.core.management import call_command
 from django.utils import translation
 
+from ninefruits.institution.models import LookupType, LookupValue
 from ninefruits.person.enums import EmploymentType, StudentStatus
 from ninefruits.person.models import Instructor, Person, StudentRecord
 from tests.factories.organization import ProgramFactory
@@ -94,20 +95,38 @@ def test_attaches_a_readmission_to_the_existing_person_by_national_id(tmp_path: 
     assert Person.objects.count() == 1
 
 
-def test_imports_instructors_with_translated_titles(tmp_path: Path, setup: Any) -> None:
+def test_imports_instructors_with_title_codes(tmp_path: Path, setup: Any) -> None:
+    title = LookupValue.objects.create(
+        lookup_type=LookupType.objects.get(code=Instructor.ACADEMIC_TITLE_LOOKUP),
+        code="professor",
+        name={"en": "Professor", "ko": "교수"},
+    )
+    LookupValue.objects.create(
+        lookup_type=LookupType.objects.get(code="ethnicity"),
+        code="wrong_list",
+        name={"en": "Other list value"},
+    )
     path = people_csv(
         tmp_path,
         [
-            ["employee_number", "org_unit", "employment_type", "academic_title_en", "academic_title_ko", "family_name"],
-            ["F00001", setup.org_unit.code, "full_time", "Professor", "교수", "Choi"],
+            ["employee_number", "org_unit", "employment_type", "academic_title", "family_name"],
+            ["F00001", setup.org_unit.code, "full_time", title.code, "Choi"],
+            ["F00002", setup.org_unit.code, "full_time", "wrong_list", "Rejected"],
         ],
-    )  # fmt: skip
-    assert import_people("instructors", path) == 0
+    )
+    assert import_people("instructors", path) == 2
 
-    instructor = Instructor.objects.get(employee_number="F00001")
+    instructor = Instructor.objects.select_related("academic_title").get(employee_number="F00001")
     assert instructor.employment_type == EmploymentType.FULL_TIME
-    assert instructor.academic_title_translations == {"en": "Professor", "ko": "교수"}
+    assert instructor.academic_title == title
+    assert instructor.academic_title.name_translations == {"en": "Professor", "ko": "교수"}
     assert instructor.person.family_name == "Choi"
+    assert not Person.objects.filter(family_name="Rejected").exists()
+
+    update = people_csv(tmp_path, [["employee_number", "academic_title"], ["F00001", ""]])
+    assert import_people("instructors", update) == 0
+    instructor.refresh_from_db()
+    assert instructor.academic_title_id == title.pk
 
 
 def test_leaves_no_person_behind_when_the_database_rejects_a_row(tmp_path: Path) -> None:

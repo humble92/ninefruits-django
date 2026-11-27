@@ -14,7 +14,6 @@ from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 from ninefruits.core.models import TimeStampedModel, VisibleQuerySet
-from ninefruits.i18n.fields import TranslatableJSONField
 from ninefruits.person.enums import EmploymentType
 
 
@@ -26,6 +25,8 @@ class InstructorQuerySet(VisibleQuerySet):
 
 
 class Instructor(TimeStampedModel):
+    ACADEMIC_TITLE_LOOKUP = "academic_title"
+
     person = models.OneToOneField(
         "person.Person", on_delete=models.RESTRICT, related_name="instructor", verbose_name=_("Person")
     )
@@ -34,7 +35,14 @@ class Instructor(TimeStampedModel):
         "organization.OrgUnit", on_delete=models.RESTRICT, related_name="instructors", verbose_name=_("Org unit")
     )
     employment_type = models.CharField(_("Employment type"), max_length=32, choices=EmploymentType.choices)
-    academic_title = TranslatableJSONField(_("Academic title"), null=True, blank=True)
+    academic_title = models.ForeignKey(
+        "institution.LookupValue",
+        on_delete=models.RESTRICT,
+        null=True,
+        blank=True,
+        related_name="instructors_with_title",
+        verbose_name=_("Academic title"),
+    )
     hire_date = models.DateField(_("Hire date"), null=True, blank=True)
     end_date = models.DateField(_("End date"), null=True, blank=True)
 

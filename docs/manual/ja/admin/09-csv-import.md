@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | 種類 | 新しい行の必須の列 | 任意の列 |
 |---|---|---|
 | 学籍 | `student_number`、`program`(プログラムコード)、`admission_date`、`family_name` | `catalog_year`(空の場合は入学年度)、`year_level`、`status`、`graduation_date`、`institutional_email` |
-| 教員 | `employee_number`、`org_unit`(組織単位コード)、`employment_type`、`family_name` | `academic_title_*`、`hire_date`、`end_date` |
+| 教員 | `employee_number`、`org_unit`(組織単位コード)、`employment_type`、`family_name` | `academic_title` (職位コード)、`hire_date`、`end_date` |
 | 人物の列(共通) | — | `given_name`、`name_ko` などの言語別の氏名、`birth_date`、`gender`、`email`、`phone`、`national_id` |
 
 - `status` の値: `enrolled`、`on_leave`、`withdrawn`、`dismissed`、`graduated`(`graduated` の場合は `graduation_date` が必須)。取り込みで変更された学籍状態は **データ訂正** として扱われ、学籍異動の履歴は作成されません。実際の異動は画面で記録します([第 13 章](13-status-changes-and-advisors.md))。

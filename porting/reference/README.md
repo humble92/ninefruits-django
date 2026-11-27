@@ -1,7 +1,7 @@
 # 원본 스키마 기준 자료
 
-- `schema-fingerprint.txt`: 원본 v1.0.0 마이그레이션을 PostgreSQL 18.6 빈 DB에 실행한 뒤 `ninefruits.core.schema.fingerprint()`로 뜬 카탈로그 지문. `tests/db/test_schema_equivalence.py`가 비교한다.
-- `laravel-schema.sql`: 같은 DB의 `pg_dump --schema-only --no-owner --no-privileges`. 사람이 읽는 용도.
+- `schema-fingerprint.txt`: 원본 v1.0.0 마이그레이션을 PostgreSQL 18.6 빈 DB에 실행한 뒤 `ninefruits.core.schema.fingerprint()`로 뜬 카탈로그 지문에 Laravel의 교원 직위 코드 마이그레이션 변경을 반영했다. `tests/db/test_schema_equivalence.py`가 비교한다.
+- `laravel-schema.sql`: v1.0.0 기준 DB의 `pg_dump --schema-only --no-owner --no-privileges`. 사람이 읽는 용도.
 
 다시 만드는 방법(원본 저장소에서):
 

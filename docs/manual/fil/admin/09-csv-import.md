@@ -41,7 +41,7 @@ Itinutugma at ina-update ang mga rekord ng mag-aaral ayon sa `student_number`, a
 | Uri | Mga kinakailangang column para sa bagong row | Mga opsiyonal na column |
 |---|---|---|
 | Mga rekord ng mag-aaral | `student_number`, `program` (code ng programa), `admission_date`, `family_name` | `catalog_year` (taon ng admisyon kapag walang laman), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Mga instruktor | `employee_number`, `org_unit` (code ng yunit ng organisasyon), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Mga instruktor | `employee_number`, `org_unit` (code ng yunit ng organisasyon), `employment_type`, `family_name` | `academic_title` (code ng akademikong titulo), `hire_date`, `end_date` |
 | Mga column ng tao (magkasalo) | — | `given_name`, mga pangalan bawat wika gaya ng `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - Mga halaga ng `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (kinakailangan ang `graduation_date` para sa graduated). Ang katayuang binago sa pag-import ay itinuturing na **pagwawasto ng datos** at hindi gumagawa ng kasaysayan ng pagbabago ng katayuan. Ang mga tunay na pagbabago ay itinatala sa screen ([kabanata 13](13-status-changes-and-advisors.md)).

@@ -41,7 +41,7 @@ Talaba yozuvlari `student_number` boʻyicha, oʻqituvchilar `employee_number` bo
 | Tur | Yangi qatorlar uchun majburiy ustunlar | Ixtiyoriy ustunlar |
 |---|---|---|
 | Talaba yozuvlari | `student_number`, `program` (taʼlim dasturi kodi), `admission_date`, `family_name` | `catalog_year` (boʻsh boʻlsa, qabul yili), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Oʻqituvchilar | `employee_number`, `org_unit` (tashkiliy birlik kodi), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Oʻqituvchilar | `employee_number`, `org_unit` (tashkiliy birlik kodi), `employment_type`, `family_name` | `academic_title` (akademik lavozim kodi), `hire_date`, `end_date` |
 | Shaxs ustunlari (umumiy) | — | `given_name`, `name_ko` kabi tillar boʻyicha ismlar, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - `status` qiymatlari: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (graduated uchun `graduation_date` majburiy). Import orqali oʻzgartirilgan maqom **maʼlumotni tuzatish** hisoblanadi va maqom oʻzgarishi tarixini yaratmaydi. Haqiqiy oʻzgarishlar ekranda qayd etiladi ([13-bob](13-status-changes-and-advisors.md)).

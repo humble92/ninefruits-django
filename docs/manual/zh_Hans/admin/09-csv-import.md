@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | 种类 | 新行必填列 | 可选列 |
 |---|---|---|
 | 学籍 | `student_number`、`program`（专业项目代码）、`admission_date`、`family_name` | `catalog_year`（为空时取入学年份）、`year_level`、`status`、`graduation_date`、`institutional_email` |
-| 教师 | `employee_number`、`org_unit`（单位代码）、`employment_type`、`family_name` | `academic_title_*`、`hire_date`、`end_date` |
+| 教师 | `employee_number`、`org_unit`（单位代码）、`employment_type`、`family_name` | `academic_title` (职称代码)、`hire_date`、`end_date` |
 | 人员列（通用） | — | `given_name`、`name_ko` 等各语言姓名、`birth_date`、`gender`、`email`、`phone`、`national_id` |
 
 - `status` 的值：`enrolled`、`on_leave`、`withdrawn`、`dismissed`、`graduated`（为毕业时 `graduation_date` 必填）。通过导入更改的状态视为 **资料更正**，不会生成学籍异动历史。实际的异动在界面上办理（[第 13 章](13-status-changes-and-advisors.md)）。

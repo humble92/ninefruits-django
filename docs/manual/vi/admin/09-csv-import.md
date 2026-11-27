@@ -41,7 +41,7 @@ Hồ sơ sinh viên được đối chiếu và cập nhật theo `student_numbe
 | Loại | Cột bắt buộc với dòng mới | Cột không bắt buộc |
 |---|---|---|
 | Hồ sơ sinh viên | `student_number`, `program` (mã chương trình đào tạo), `admission_date`, `family_name` | `catalog_year` (để trống thì lấy năm nhập học), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Giảng viên | `employee_number`, `org_unit` (mã đơn vị tổ chức), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Giảng viên | `employee_number`, `org_unit` (mã đơn vị tổ chức), `employment_type`, `family_name` | `academic_title` (mã chức danh), `hire_date`, `end_date` |
 | Cột thông tin cá nhân (dùng chung) | — | `given_name`, tên theo ngôn ngữ như `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - Giá trị của `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (với graduated bắt buộc có `graduation_date`). Tình trạng thay đổi qua nhập CSV được coi là **hiệu chỉnh dữ liệu** và không tạo lịch sử biến động sinh viên. Các biến động thực tế được ghi nhận trên màn hình ([chương 13](13-status-changes-and-advisors.md)).

@@ -28,6 +28,7 @@ from unfold.widgets import (
 from ninefruits.adminpanel.navigation import NavigationGroup
 from ninefruits.i18n.forms import TranslatableFormField
 from ninefruits.institution.admin_support import ReferenceAdmin
+from ninefruits.institution.models import LookupValue
 from ninefruits.organization.models import OrgUnit
 from ninefruits.person.enums import EmploymentType, StudentStatus
 from ninefruits.person.models import Instructor, Person, StudentStatusChangeType
@@ -37,7 +38,15 @@ from .common import admin_change_url, apply_errors, form_page
 from .people import PersonFields
 
 
-def instructor_fields() -> dict[str, forms.Field]:
+class AcademicTitleChoiceField(forms.ModelChoiceField):  # type: ignore[type-arg]
+    def label_from_instance(self, obj: LookupValue) -> str:
+        return f"{obj.name} ({obj.code})"
+
+
+def instructor_fields(current_title_id: int | None = None) -> dict[str, forms.Field]:
+    titles = LookupValue.objects.of_type(Instructor.ACADEMIC_TITLE_LOOKUP).filter(
+        Q(is_active=True) | Q(pk=current_title_id)
+    )
     return {
         "employee_number": forms.CharField(
             label=_("Employee number"), max_length=32, widget=UnfoldAdminTextInputWidget
@@ -50,7 +59,9 @@ def instructor_fields() -> dict[str, forms.Field]:
         "employment_type": forms.ChoiceField(
             label=_("Employment type"), choices=EmploymentType.choices, widget=UnfoldAdminSelectWidget
         ),
-        "academic_title": TranslatableFormField(label=_("Academic title"), required=False),
+        "academic_title": AcademicTitleChoiceField(
+            label=_("Academic title"), queryset=titles, required=False, widget=UnfoldAdminSelectWidget
+        ),
         "hire_date": forms.DateField(label=_("Hire date"), required=False, widget=UnfoldAdminDateWidget),
         "end_date": forms.DateField(label=_("End date"), required=False, widget=UnfoldAdminDateWidget),
     }
@@ -73,7 +84,7 @@ class InstructorAdminForm(forms.ModelForm):  # type: ignore[type-arg]
 
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
-        for name, field in instructor_fields().items():
+        for name, field in instructor_fields(self.instance.academic_title_id).items():
             self.fields[name] = field
 
     def clean_employee_number(self) -> str:
@@ -154,7 +165,7 @@ class InstructorAdmin(ReferenceAdmin):
     form = InstructorAdminForm
     list_display = ("employee_number", "name_column", "org_unit", "employment_type", "title_column", "end_date")
     list_filter = (CurrentInstructorFilter,)
-    list_select_related = ("person", "org_unit")
+    list_select_related = ("person", "org_unit", "academic_title")
     ordering = ("employee_number",)
 
     def has_view_permission(self, request: HttpRequest, obj: Any = None) -> bool:
@@ -207,7 +218,7 @@ class InstructorAdmin(ReferenceAdmin):
                         employee_number=data["employee_number"],
                         org_unit=data["org_unit"],
                         employment_type=data["employment_type"],
-                        academic_title=data.get("academic_title") or None,
+                        academic_title=data.get("academic_title"),
                         hire_date=data.get("hire_date"),
                         end_date=data.get("end_date"),
                     )

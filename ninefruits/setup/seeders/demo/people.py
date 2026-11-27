@@ -9,6 +9,7 @@ from django.contrib.auth.hashers import make_password
 from django.utils import timezone
 from faker import Faker
 
+from ninefruits.institution.models import LookupType, LookupValue
 from ninefruits.organization.models import Program
 from ninefruits.person.enums import AdvisorRole, EmploymentType, Gender, GuardianRelationship, StudentStatus
 from ninefruits.person.models import (
@@ -107,6 +108,11 @@ class DemoPeopleSeeder(Seeder):
     def instructors(self, programs: list[Program], options: DemoOptions) -> dict[int, list[Instructor]]:
         units = list(dict.fromkeys(program.org_unit_id for program in programs))
         per_unit = max(2, options.scale(20) // len(programs))
+        professor, _ = LookupValue.objects.get_or_create(
+            lookup_type=LookupType.objects.get(code=Instructor.ACADEMIC_TITLE_LOOKUP),
+            code="professor",
+            defaults={"name": {"en": "Professor", "ko": "교수", "zh-hans": "教授"}},
+        )
         people = [self.names.person(None, self.today) for _ in range(per_unit * len(units))]
         Person.objects.bulk_create(people, batch_size=BATCH)
         rows: list[Instructor] = []
@@ -128,7 +134,7 @@ class DemoPeopleSeeder(Seeder):
                                 EmploymentType.ADJUNCT,
                             ]
                         ),
-                        academic_title={"en": "Professor", "ko": "교수", "zh-hans": "教授"},
+                        academic_title=professor,
                         hire_date=self.today - timedelta(days=self.rng.randint(365, 20 * 365)),
                     )
                 )

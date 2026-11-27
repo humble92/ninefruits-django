@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | Вид | Обязательные столбцы для новых строк | Необязательные столбцы |
 |---|---|---|
 | Личные дела студентов | `student_number`, `program` (код программы), `admission_date`, `family_name` | `catalog_year` (если пусто — год поступления), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Преподаватели | `employee_number`, `org_unit` (код подразделения), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Преподаватели | `employee_number`, `org_unit` (код подразделения), `employment_type`, `family_name` | `academic_title` (код академической должности), `hire_date`, `end_date` |
 | Столбцы лица (общие) | — | `given_name`, имена на разных языках, например `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - Значения `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (для `graduated` обязателен `graduation_date`). Статус, изменённый импортом, считается **исправлением данных** и не создаёт истории изменения статуса. Фактические изменения записываются на экране ([глава 13](13-status-changes-and-advisors.md)).

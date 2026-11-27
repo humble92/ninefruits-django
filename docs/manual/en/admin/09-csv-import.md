@@ -41,10 +41,11 @@ Student records are matched and updated by `student_number`, instructors by `emp
 | Kind | Required columns for new rows | Optional columns |
 |---|---|---|
 | Student records | `student_number`, `program` (program code), `admission_date`, `family_name` | `catalog_year` (admission year when empty), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Instructors | `employee_number`, `org_unit` (org unit code), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Instructors | `employee_number`, `org_unit` (org unit code), `employment_type`, `family_name` | `academic_title` (title code), `hire_date`, `end_date` |
 | Person columns (shared) | — | `given_name`, per-language names such as `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - `status` values: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (`graduation_date` is required for graduated). A status changed by import is treated as a **data correction** and creates no status change history. Real changes are recorded on screen ([chapter 13](13-status-changes-and-advisors.md)).
+- Replace the legacy `academic_title_en` and `academic_title_ko` columns with one `academic_title` column containing an active code from **Reference data → Code Lists → Academic title**. Leave it blank to keep an existing title.
 - `employment_type` values: `full_time`, `part_time`, `adjunct`, `visiting`, `emeritus`. `gender` values: `female`, `male`, `other`, `undisclosed`.
 - If the `national_id` of a new student record matches an existing person, the record is attached to that person (readmission). Otherwise a new person is created. On update, empty cells do not erase existing values.
 - Imported students and instructors have no account. Send them an invitation with [account invitations](14-merge-and-invitations.md#account-invitations).

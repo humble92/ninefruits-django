@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | Tür | Yeni satırlar için zorunlu sütunlar | İsteğe bağlı sütunlar |
 |---|---|---|
 | Öğrenci kayıtları | `student_number`, `program` (program kodu), `admission_date`, `family_name` | `catalog_year` (boşsa giriş yılı), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Öğretim elemanları | `employee_number`, `org_unit` (birim kodu), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Öğretim elemanları | `employee_number`, `org_unit` (birim kodu), `employment_type`, `family_name` | `academic_title` (akademik unvan kodu), `hire_date`, `end_date` |
 | Kişi sütunları (ortak) | — | `given_name`, `name_ko` gibi dile göre adlar, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - `status` değerleri: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (`graduated` için `graduation_date` zorunludur). İçe aktarmayla değiştirilen bir durum **veri düzeltmesi** olarak değerlendirilir ve durum değişikliği geçmişi oluşturmaz. Gerçek değişiklikler ekranda kaydedilir ([bölüm 13](13-status-changes-and-advisors.md)).

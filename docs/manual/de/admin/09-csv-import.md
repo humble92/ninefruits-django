@@ -41,7 +41,7 @@ Studierendenakten werden über `student_number` zugeordnet und aktualisiert, Leh
 | Art | Pflichtspalten für neue Zeilen | Optionale Spalten |
 |---|---|---|
 | Studierendenakten | `student_number`, `program` (Code des Studiengangs), `admission_date`, `family_name` | `catalog_year` (bei leerem Wert das Zulassungsjahr), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Lehrpersonen | `employee_number`, `org_unit` (Code der Organisationseinheit), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Lehrpersonen | `employee_number`, `org_unit` (Code der Organisationseinheit), `employment_type`, `family_name` | `academic_title` (Code der akademischen Position), `hire_date`, `end_date` |
 | Personenspalten (gemeinsam) | — | `given_name`, sprachabhängige Namen wie `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - Werte für `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (für `graduated` ist `graduation_date` Pflicht). Ein per Import geänderter Status gilt als **Datenkorrektur** und erzeugt keinen Verlauf der Statusänderungen. Echte Änderungen werden auf dem Bildschirm erfasst ([Kapitel 13](13-status-changes-and-advisors.md)).

@@ -579,7 +579,7 @@ column: public.imports.successful_rows integer not null default 0
 column: public.imports.total_rows integer not null
 column: public.imports.updated_at timestamp(0) with time zone
 column: public.imports.user_id bigint not null
-column: public.instructors.academic_title jsonb
+column: public.instructors.academic_title_id bigint
 column: public.instructors.created_at timestamp(0) with time zone
 column: public.instructors.employee_number character varying(32) not null
 column: public.instructors.employment_type character varying(32) not null
@@ -1820,7 +1820,7 @@ constraint: public.imports imports_successful_rows_not_null NOT NULL successful_
 constraint: public.imports imports_total_rows_not_null NOT NULL total_rows
 constraint: public.imports imports_user_id_foreign FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
 constraint: public.imports imports_user_id_not_null NOT NULL user_id
-constraint: public.instructors instructors_academic_title_object_check CHECK (((academic_title IS NULL) OR (jsonb_typeof(academic_title) = 'object'::text)))
+constraint: public.instructors instructors_academic_title_id_foreign FOREIGN KEY (academic_title_id) REFERENCES lookup_values(id) ON DELETE RESTRICT
 constraint: public.instructors instructors_employee_number_not_null NOT NULL employee_number
 constraint: public.instructors instructors_employee_number_unique UNIQUE (employee_number)
 constraint: public.instructors instructors_employment_type_not_null NOT NULL employment_type
@@ -2894,6 +2894,7 @@ index: CREATE INDEX evaluation_responses_section_id_index ON public.evaluation_r
 index: CREATE INDEX failed_jobs_connection_queue_failed_at_index ON public.failed_jobs USING btree (connection, queue, failed_at)
 index: CREATE INDEX grade_change_requests_status_requested_at_index ON public.grade_change_requests USING btree (status, requested_at)
 index: CREATE INDEX guardians_person_id_index ON public.guardians USING btree (person_id)
+index: CREATE INDEX instructors_academic_title_id_index ON public.instructors USING btree (academic_title_id)
 index: CREATE INDEX instructors_org_unit_id_index ON public.instructors USING btree (org_unit_id)
 index: CREATE INDEX jobs_queue_index ON public.jobs USING btree (queue)
 index: CREATE INDEX lms_sync_logs_lms_platform_id_started_at_index ON public.lms_sync_logs USING btree (lms_platform_id, started_at)

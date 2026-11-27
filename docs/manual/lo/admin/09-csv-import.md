@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | ປະເພດ | ຖັນບັງຄັບສຳລັບແຖວໃໝ່ | ຖັນທາງເລືອກ |
 |---|---|---|
 | ບັນທຶກນັກສຶກສາ | `student_number`, `program` (ລະຫັດຫຼັກສູດ), `admission_date`, `family_name` | `catalog_year` (ຖ້າວ່າງ ໃຊ້ປີຮັບເຂົ້າ), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| ອາຈານ | `employee_number`, `org_unit` (ລະຫັດໜ່ວຍງານ), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| ອາຈານ | `employee_number`, `org_unit` (ລະຫັດໜ່ວຍງານ), `employment_type`, `family_name` | `academic_title` (ລະຫັດຕຳແໜ່ງ), `hire_date`, `end_date` |
 | ຖັນບຸກຄົນ (ຮ່ວມກັນ) | — | `given_name`, ຊື່ຕາມພາສາ ເຊັ່ນ `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - ຄ່າ `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (ຖ້າຈົບການສຶກສາ ຕ້ອງມີ `graduation_date`). ສະຖານະທີ່ປ່ຽນດ້ວຍການນຳເຂົ້າຖືກຖືວ່າເປັນ **ການແກ້ໄຂຂໍ້ມູນ** ແລະ ຈະບໍ່ສ້າງປະຫວັດການປ່ຽນສະຖານະ. ການປ່ຽນສະຖານະຕົວຈິງໃຫ້ດຳເນີນການຈາກໜ້າຈໍ ([ບົດ 13](13-status-changes-and-advisors.md)).

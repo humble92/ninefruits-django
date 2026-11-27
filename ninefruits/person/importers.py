@@ -26,8 +26,9 @@ from ninefruits.importing.resources import (
     RowImportFailed,
     attribute_label,
     is_new_record,
-    translatable_columns,
+    unknown_code,
 )
+from ninefruits.institution.models import LookupValue
 from ninefruits.organization.models import OrgUnit, Program
 from ninefruits.person.enums import EmploymentType, Gender, StudentStatus
 from ninefruits.person.models import Instructor, Person, StudentRecord
@@ -192,8 +193,18 @@ def _fill_institutional_email(resource: ReferenceResource, record: Any, value: A
     record.institutional_email = value
 
 
+def _fill_academic_title(resource: ReferenceResource, record: models.Model, value: Any) -> None:
+    if value is None:
+        return
+    assert isinstance(record, Instructor)
+    title = LookupValue.objects.of_type(Instructor.ACADEMIC_TITLE_LOOKUP).filter(code=value, is_active=True).first()
+    if title is None:
+        raise RowImportFailed(unknown_code("academic_title", value))
+    record.academic_title = title
+
+
 class InstructorResource(PersonRecordResource):
-    """Columns: employee_number, org_unit (code), employment_type, academic_title_{language},
+    """Columns: employee_number, org_unit (code), employment_type, academic_title (code),
     hire_date, end_date, plus the person columns. Matched by employee_number."""
 
     type_key = "instructors"
@@ -208,7 +219,7 @@ class InstructorResource(PersonRecordResource):
             Column("employee_number", "employee_number", required_mapping=True, required=True, max_length=32),
             Column("org_unit", "org_unit", required=is_new_record, relation=(OrgUnit, "code")),
             Column("employment_type", "employment_type", required=is_new_record, choices=EmploymentType),
-            *translatable_columns("academic_title", required=False),
+            Column("academic_title", None, max_length=64, fill=_fill_academic_title),
             Column("hire_date", "hire_date", kind="date"),
             Column("end_date", "end_date", kind="date"),
             *person_columns(),

@@ -41,7 +41,7 @@ Rekod pelajar dipadankan dan dikemas kini mengikut `student_number`, manakala pe
 | Jenis | Lajur wajib bagi baris baharu | Lajur pilihan |
 |---|---|---|
 | Rekod pelajar | `student_number`, `program` (kod program), `admission_date`, `family_name` | `catalog_year` (tahun kemasukan jika kosong), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Pensyarah | `employee_number`, `org_unit` (kod unit organisasi), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Pensyarah | `employee_number`, `org_unit` (kod unit organisasi), `employment_type`, `family_name` | `academic_title` (kod gelaran akademik), `hire_date`, `end_date` |
 | Lajur individu (dikongsi) | — | `given_name`, nama mengikut bahasa seperti `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - Nilai `status`: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (`graduation_date` wajib bagi graduated). Status yang ditukar melalui import dianggap sebagai **pembetulan data** dan tidak mencipta sejarah perubahan status. Perubahan sebenar direkodkan pada skrin ([bab 13](13-status-changes-and-advisors.md)).

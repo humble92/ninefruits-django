@@ -41,7 +41,7 @@ Les dossiers étudiants sont rapprochés et mis à jour par `student_number`, le
 | Type | Colonnes obligatoires pour les nouvelles lignes | Colonnes facultatives |
 |---|---|---|
 | Dossiers étudiants | `student_number`, `program` (code de la formation), `admission_date`, `family_name` | `catalog_year` (année d’admission si vide), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| Enseignants | `employee_number`, `org_unit` (code de l’unité organisationnelle), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| Enseignants | `employee_number`, `org_unit` (code de l’unité organisationnelle), `employment_type`, `family_name` | `academic_title` (code du titre universitaire), `hire_date`, `end_date` |
 | Colonnes relatives à la personne (communes) | — | `given_name`, noms par langue tels que `name_ko`, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - Valeurs de `status` : `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (`graduation_date` est obligatoire pour `graduated`). Un statut modifié par import est traité comme une **correction de données** et ne crée aucun historique de changement de statut. Les changements réels sont enregistrés à l’écran ([chapitre 13](13-status-changes-and-advisors.md)).

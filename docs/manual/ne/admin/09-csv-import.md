@@ -41,7 +41,7 @@ CSE,department,ENG,Computer Science,컴퓨터공학과,1995-03-01
 | प्रकार | नयाँ पङ्क्तिका अनिवार्य स्तम्भ | वैकल्पिक स्तम्भ |
 |---|---|---|
 | विद्यार्थी अभिलेख | `student_number`, `program` (कार्यक्रम कोड), `admission_date`, `family_name` | `catalog_year` (खाली भएमा भर्ना वर्ष), `year_level`, `status`, `graduation_date`, `institutional_email` |
-| प्राध्यापक | `employee_number`, `org_unit` (संगठन एकाइको कोड), `employment_type`, `family_name` | `academic_title_*`, `hire_date`, `end_date` |
+| प्राध्यापक | `employee_number`, `org_unit` (संगठन एकाइको कोड), `employment_type`, `family_name` | `academic_title` (शैक्षिक पदको कोड), `hire_date`, `end_date` |
 | व्यक्तिका स्तम्भ (साझा) | — | `given_name`, `name_ko` जस्ता भाषाअनुसारका नाम, `birth_date`, `gender`, `email`, `phone`, `national_id` |
 
 - `status` का मानहरू: `enrolled`, `on_leave`, `withdrawn`, `dismissed`, `graduated` (graduated का लागि `graduation_date` अनिवार्य)। आयातद्वारा परिवर्तन गरिएको स्थितिलाई **डेटा सुधार** मानिन्छ र अभिलेख स्थिति परिवर्तनको इतिहास बन्दैन। वास्तविक परिवर्तनहरू स्क्रिनमा अभिलेख गरिन्छन् ([अध्याय 13](13-status-changes-and-advisors.md))।
