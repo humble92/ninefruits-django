@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+ນຳໃຊ້ວຽກປັບລະດັບປີຮຽນທີ່ອະນຸມັດແລ້ວ ແລະເຖິງເວລາກຳນົດ. ວຽກທີ່ສຳເລັດແລ້ວຈະບໍ່ຖືກນຳໃຊ້ຊ້ຳ.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

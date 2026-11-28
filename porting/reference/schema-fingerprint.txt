@@ -771,6 +771,7 @@ column: public.programs.name jsonb not null
 column: public.programs.org_unit_id bigint not null
 column: public.programs.standard_duration_years numeric(3,1)
 column: public.programs.updated_at timestamp(0) with time zone
+column: public.programs.year_level_rule_id bigint
 column: public.registration_attempts.action character varying(16) not null
 column: public.registration_attempts.actor_id bigint
 column: public.registration_attempts.attempted_at timestamp(0) with time zone not null
@@ -1107,6 +1108,32 @@ column: public.waitlist_entries.section_id bigint not null
 column: public.waitlist_entries.status character varying(16) not null default 'waiting'::character varying
 column: public.waitlist_entries.student_record_id bigint not null
 column: public.waitlist_entries.updated_at timestamp(0) with time zone
+column: public.year_level_changes.basis character varying(16) not null
+column: public.year_level_changes.from_level smallint not null
+column: public.year_level_changes.id bigint not null default nextval('year_level_changes_id_seq'::regclass)
+column: public.year_level_changes.measured_value numeric(10,1) not null
+column: public.year_level_changes.outcome character varying(16)
+column: public.year_level_changes.program_id bigint not null
+column: public.year_level_changes.rule_name character varying(255) not null
+column: public.year_level_changes.student_record_id bigint not null
+column: public.year_level_changes.to_level smallint not null
+column: public.year_level_changes.year_level_run_id bigint not null
+column: public.year_level_rules.basis character varying(16) not null
+column: public.year_level_rules.created_at timestamp with time zone
+column: public.year_level_rules.id bigint not null default nextval('year_level_rules_id_seq'::regclass)
+column: public.year_level_rules.is_default boolean not null default false
+column: public.year_level_rules.name jsonb not null
+column: public.year_level_rules.thresholds jsonb not null
+column: public.year_level_rules.updated_at timestamp with time zone
+column: public.year_level_runs.applied_at timestamp with time zone
+column: public.year_level_runs.approved_by_id bigint
+column: public.year_level_runs.created_at timestamp with time zone
+column: public.year_level_runs.cutoff_date date not null
+column: public.year_level_runs.id bigint not null default nextval('year_level_runs_id_seq'::regclass)
+column: public.year_level_runs.scheduled_at timestamp with time zone
+column: public.year_level_runs.status character varying(16) not null default 'draft'::character varying
+column: public.year_level_runs.term_id bigint not null
+column: public.year_level_runs.updated_at timestamp with time zone
 column: reporting.course_grades.course_category text
 column: reporting.course_grades.course_category_id bigint
 column: reporting.course_grades.course_code character varying(32)
@@ -2005,6 +2032,7 @@ constraint: public.programs programs_name_object_check CHECK ((jsonb_typeof(name
 constraint: public.programs programs_org_unit_id_foreign FOREIGN KEY (org_unit_id) REFERENCES org_units(id) ON DELETE RESTRICT
 constraint: public.programs programs_org_unit_id_not_null NOT NULL org_unit_id
 constraint: public.programs programs_pkey PRIMARY KEY (id)
+constraint: public.programs programs_year_level_rule_id_fkey FOREIGN KEY (year_level_rule_id) REFERENCES year_level_rules(id) ON DELETE RESTRICT
 constraint: public.registration_attempts registration_attempts_action_check CHECK (((action)::text = ANY ((ARRAY['enroll'::character varying, 'drop'::character varying, 'withdraw'::character varying, 'waitlist'::character varying, 'promote'::character varying, 'cart'::character varying])::text[])))
 constraint: public.registration_attempts registration_attempts_action_not_null NOT NULL action
 constraint: public.registration_attempts registration_attempts_actor_id_foreign FOREIGN KEY (actor_id) REFERENCES users(id) ON DELETE SET NULL
@@ -2367,6 +2395,40 @@ constraint: public.waitlist_entries waitlist_entries_status_check CHECK (((statu
 constraint: public.waitlist_entries waitlist_entries_status_not_null NOT NULL status
 constraint: public.waitlist_entries waitlist_entries_student_record_id_foreign FOREIGN KEY (student_record_id) REFERENCES student_records(id) ON DELETE CASCADE
 constraint: public.waitlist_entries waitlist_entries_student_record_id_not_null NOT NULL student_record_id
+constraint: public.year_level_changes year_level_changes_basis_check CHECK (((basis)::text = ANY ((ARRAY['credits'::character varying, 'terms'::character varying])::text[])))
+constraint: public.year_level_changes year_level_changes_basis_not_null NOT NULL basis
+constraint: public.year_level_changes year_level_changes_check CHECK ((((to_level >= 2) AND (to_level <= 10)) AND (to_level > from_level)))
+constraint: public.year_level_changes year_level_changes_from_level_check CHECK (((from_level >= 1) AND (from_level <= 10)))
+constraint: public.year_level_changes year_level_changes_from_level_not_null NOT NULL from_level
+constraint: public.year_level_changes year_level_changes_id_not_null NOT NULL id
+constraint: public.year_level_changes year_level_changes_measured_value_not_null NOT NULL measured_value
+constraint: public.year_level_changes year_level_changes_outcome_check CHECK (((outcome)::text = ANY ((ARRAY['applied'::character varying, 'stale'::character varying, 'excluded'::character varying])::text[])))
+constraint: public.year_level_changes year_level_changes_pkey PRIMARY KEY (id)
+constraint: public.year_level_changes year_level_changes_program_id_fkey FOREIGN KEY (program_id) REFERENCES programs(id) ON DELETE RESTRICT
+constraint: public.year_level_changes year_level_changes_program_id_not_null NOT NULL program_id
+constraint: public.year_level_changes year_level_changes_rule_name_not_null NOT NULL rule_name
+constraint: public.year_level_changes year_level_changes_student_record_id_fkey FOREIGN KEY (student_record_id) REFERENCES student_records(id) ON DELETE RESTRICT
+constraint: public.year_level_changes year_level_changes_student_record_id_not_null NOT NULL student_record_id
+constraint: public.year_level_changes year_level_changes_to_level_not_null NOT NULL to_level
+constraint: public.year_level_changes year_level_changes_year_level_run_id_fkey FOREIGN KEY (year_level_run_id) REFERENCES year_level_runs(id) ON DELETE RESTRICT
+constraint: public.year_level_changes year_level_changes_year_level_run_id_not_null NOT NULL year_level_run_id
+constraint: public.year_level_changes year_level_changes_year_level_run_id_student_record_id_key UNIQUE (year_level_run_id, student_record_id)
+constraint: public.year_level_rules year_level_rules_basis_check CHECK (((basis)::text = ANY ((ARRAY['credits'::character varying, 'terms'::character varying, 'manual'::character varying])::text[])))
+constraint: public.year_level_rules year_level_rules_basis_not_null NOT NULL basis
+constraint: public.year_level_rules year_level_rules_id_not_null NOT NULL id
+constraint: public.year_level_rules year_level_rules_is_default_not_null NOT NULL is_default
+constraint: public.year_level_rules year_level_rules_name_not_null NOT NULL name
+constraint: public.year_level_rules year_level_rules_pkey PRIMARY KEY (id)
+constraint: public.year_level_rules year_level_rules_thresholds_check CHECK ((jsonb_typeof(thresholds) = 'array'::text))
+constraint: public.year_level_rules year_level_rules_thresholds_not_null NOT NULL thresholds
+constraint: public.year_level_runs year_level_runs_approved_by_id_fkey FOREIGN KEY (approved_by_id) REFERENCES users(id) ON DELETE RESTRICT
+constraint: public.year_level_runs year_level_runs_cutoff_date_not_null NOT NULL cutoff_date
+constraint: public.year_level_runs year_level_runs_id_not_null NOT NULL id
+constraint: public.year_level_runs year_level_runs_pkey PRIMARY KEY (id)
+constraint: public.year_level_runs year_level_runs_status_check CHECK (((status)::text = ANY ((ARRAY['draft'::character varying, 'scheduled'::character varying, 'applied'::character varying, 'canceled'::character varying])::text[])))
+constraint: public.year_level_runs year_level_runs_status_not_null NOT NULL status
+constraint: public.year_level_runs year_level_runs_term_id_fkey FOREIGN KEY (term_id) REFERENCES terms(id) ON DELETE RESTRICT
+constraint: public.year_level_runs year_level_runs_term_id_not_null NOT NULL term_id
 default_acl: audit r app_runtime=r/app_migrator
 default_acl: public S app_runtime=rU/app_migrator
 default_acl: public r app_runtime=arwd/app_migrator
@@ -2834,6 +2896,18 @@ grant: public.waitlist_entries app_runtime DELETE
 grant: public.waitlist_entries app_runtime INSERT
 grant: public.waitlist_entries app_runtime SELECT
 grant: public.waitlist_entries app_runtime UPDATE
+grant: public.year_level_changes app_runtime DELETE
+grant: public.year_level_changes app_runtime INSERT
+grant: public.year_level_changes app_runtime SELECT
+grant: public.year_level_changes app_runtime UPDATE
+grant: public.year_level_rules app_runtime DELETE
+grant: public.year_level_rules app_runtime INSERT
+grant: public.year_level_rules app_runtime SELECT
+grant: public.year_level_rules app_runtime UPDATE
+grant: public.year_level_runs app_runtime DELETE
+grant: public.year_level_runs app_runtime INSERT
+grant: public.year_level_runs app_runtime SELECT
+grant: public.year_level_runs app_runtime UPDATE
 grant: reporting.course_grades app_reporting SELECT
 grant: reporting.course_grades app_runtime SELECT
 grant: reporting.degree_audits app_reporting SELECT
@@ -2912,6 +2986,7 @@ index: CREATE INDEX people_name_search_index ON public.people USING gin (((((((f
 index: CREATE INDEX people_national_id_hash_index ON public.people USING btree (national_id_hash)
 index: CREATE INDEX people_passport_number_hash_index ON public.people USING btree (passport_number_hash)
 index: CREATE INDEX programs_name_search_index ON public.programs USING gin (util.i18n_search_text(name) gin_trgm_ops)
+index: CREATE INDEX programs_year_level_rule_id_index ON public.programs USING btree (year_level_rule_id)
 index: CREATE INDEX registration_attempts_section_id_attempted_at_index ON public.registration_attempts USING btree (section_id, attempted_at)
 index: CREATE INDEX registration_attempts_student_record_id_attempted_at_index ON public.registration_attempts USING btree (student_record_id, attempted_at)
 index: CREATE INDEX registration_holds_student_record_id_index ON public.registration_holds USING btree (student_record_id)
@@ -2940,6 +3015,7 @@ index: CREATE INDEX term_windows_window_type_opens_at_closes_at_index ON public.
 index: CREATE INDEX terms_no_overlap_excl ON public.terms USING gist (term_type_id, instruction_period)
 index: CREATE INDEX waitlist_entries_section_id_status_requested_at_index ON public.waitlist_entries USING btree (section_id, status, requested_at)
 index: CREATE INDEX waitlist_entries_student_record_id_index ON public.waitlist_entries USING btree (student_record_id)
+index: CREATE INDEX year_level_runs_due ON public.year_level_runs USING btree (scheduled_at) WHERE ((status)::text = 'scheduled'::text)
 index: CREATE UNIQUE INDEX academic_years_code_unique ON public.academic_years USING btree (code)
 index: CREATE UNIQUE INDEX academic_years_pkey ON public.academic_years USING btree (id)
 index: CREATE UNIQUE INDEX activity_log_pkey ON audit.activity_log USING btree (id)
@@ -3136,6 +3212,12 @@ index: CREATE UNIQUE INDEX users_person_id_unique ON public.users USING btree (p
 index: CREATE UNIQUE INDEX users_pkey ON public.users USING btree (id)
 index: CREATE UNIQUE INDEX waitlist_entries_pkey ON public.waitlist_entries USING btree (id)
 index: CREATE UNIQUE INDEX waitlist_entries_single_waiting_unique ON public.waitlist_entries USING btree (section_id, student_record_id) WHERE ((status)::text = 'waiting'::text)
+index: CREATE UNIQUE INDEX year_level_changes_pkey ON public.year_level_changes USING btree (id)
+index: CREATE UNIQUE INDEX year_level_changes_year_level_run_id_student_record_id_key ON public.year_level_changes USING btree (year_level_run_id, student_record_id)
+index: CREATE UNIQUE INDEX year_level_rules_pkey ON public.year_level_rules USING btree (id)
+index: CREATE UNIQUE INDEX year_level_rules_single_default ON public.year_level_rules USING btree (is_default) WHERE is_default
+index: CREATE UNIQUE INDEX year_level_runs_active_term ON public.year_level_runs USING btree (term_id) WHERE ((status)::text = ANY ((ARRAY['draft'::character varying, 'scheduled'::character varying])::text[]))
+index: CREATE UNIQUE INDEX year_level_runs_pkey ON public.year_level_runs USING btree (id)
 policy: public.additional_program_requests additional_program_requests_approver_select PERMISSIVE SELECT roles=public using=(( SELECT util.has_permission('additional_programs.approve'::text) AS has_permission) OR (org_unit_id = ANY (( SELECT util.permission_org_unit_ids('additional_programs.approve'::text) AS permission_org_unit_ids)::bigint[])) OR (program_id = ANY (( SELECT util.permission_scope_ids('additional_programs.approve'::text, 'program'::text) AS permission_scope_ids)::bigint[]))) check=
 policy: public.additional_program_requests additional_program_requests_approver_update PERMISSIVE UPDATE roles=public using=(( SELECT util.has_permission('additional_programs.approve'::text) AS has_permission) OR (org_unit_id = ANY (( SELECT util.permission_org_unit_ids('additional_programs.approve'::text) AS permission_org_unit_ids)::bigint[])) OR (program_id = ANY (( SELECT util.permission_scope_ids('additional_programs.approve'::text, 'program'::text) AS permission_scope_ids)::bigint[]))) check=(( SELECT util.has_permission('additional_programs.approve'::text) AS has_permission) OR (org_unit_id = ANY (( SELECT util.permission_org_unit_ids('additional_programs.approve'::text) AS permission_org_unit_ids)::bigint[])) OR (program_id = ANY (( SELECT util.permission_scope_ids('additional_programs.approve'::text, 'program'::text) AS permission_scope_ids)::bigint[])))
 policy: public.additional_program_requests additional_program_requests_owner_insert PERMISSIVE INSERT roles=public using= check=(((status)::text = 'requested'::text) AND (requested_by_id = ( SELECT util.current_user_id() AS current_user_id)) AND (EXISTS ( SELECT 1 FROM student_records sr WHERE ((sr.id = additional_program_requests.student_record_id) AND (sr.person_id = ( SELECT util.current_person_id() AS current_person_id))))))
@@ -3256,6 +3338,13 @@ policy: public.waitlist_entries waitlist_entries_owner_update PERMISSIVE UPDATE 
 policy: public.waitlist_entries waitlist_entries_record_select PERMISSIVE SELECT roles=public using=(EXISTS ( SELECT 1 FROM student_records sr WHERE (sr.id = waitlist_entries.student_record_id))) check=
 policy: public.waitlist_entries waitlist_entries_staff_all PERMISSIVE ALL roles=public using=(( SELECT util.has_permission('registration.manage'::text) AS has_permission) OR (EXISTS ( SELECT 1 FROM sections s WHERE ((s.id = waitlist_entries.section_id) AND (s.org_unit_id = ANY (( SELECT util.permission_org_unit_ids('registration.manage'::text) AS permission_org_unit_ids)::bigint[])))))) check=(( SELECT util.has_permission('registration.manage'::text) AS has_permission) OR (EXISTS ( SELECT 1 FROM sections s WHERE ((s.id = waitlist_entries.section_id) AND (s.org_unit_id = ANY (( SELECT util.permission_org_unit_ids('registration.manage'::text) AS permission_org_unit_ids)::bigint[]))))))
 policy: public.waitlist_entries waitlist_entries_system_all PERMISSIVE ALL roles=public using=( SELECT util.is_system_context() AS is_system_context) check=( SELECT util.is_system_context() AS is_system_context)
+policy: public.year_level_changes year_level_changes_staff PERMISSIVE ALL roles=public using=( SELECT util.has_permission('student_records.manage'::text) AS has_permission) check=( SELECT util.has_permission('student_records.manage'::text) AS has_permission)
+policy: public.year_level_changes year_level_changes_system PERMISSIVE ALL roles=public using=( SELECT util.is_system_context() AS is_system_context) check=( SELECT util.is_system_context() AS is_system_context)
+policy: public.year_level_rules year_level_rules_manage PERMISSIVE ALL roles=public using=( SELECT util.has_permission('institution_settings.manage'::text) AS has_permission) check=( SELECT util.has_permission('institution_settings.manage'::text) AS has_permission)
+policy: public.year_level_rules year_level_rules_read PERMISSIVE SELECT roles=public using=(( SELECT util.has_permission('student_records.manage'::text) AS has_permission) OR ( SELECT util.has_permission('programs.manage'::text) AS has_permission) OR (cardinality(( SELECT util.permission_scope_ids('programs.manage'::text, 'org_unit'::text) AS permission_scope_ids)) > 0) OR (cardinality(( SELECT util.permission_scope_ids('programs.manage'::text, 'program'::text) AS permission_scope_ids)) > 0)) check=
+policy: public.year_level_rules year_level_rules_system PERMISSIVE ALL roles=public using=( SELECT util.is_system_context() AS is_system_context) check=( SELECT util.is_system_context() AS is_system_context)
+policy: public.year_level_runs year_level_runs_staff PERMISSIVE ALL roles=public using=( SELECT util.has_permission('student_records.manage'::text) AS has_permission) check=( SELECT util.has_permission('student_records.manage'::text) AS has_permission)
+policy: public.year_level_runs year_level_runs_system PERMISSIVE ALL roles=public using=( SELECT util.is_system_context() AS is_system_context) check=( SELECT util.is_system_context() AS is_system_context)
 relation: audit.activity_log kind=r rls=false force_rls=false
 relation: audit.activity_log_id_seq kind=S rls=false force_rls=false
 relation: audit.record_changes kind=r rls=false force_rls=false
@@ -3459,6 +3548,12 @@ relation: public.users kind=r rls=false force_rls=false
 relation: public.users_id_seq kind=S rls=false force_rls=false
 relation: public.waitlist_entries kind=r rls=true force_rls=false
 relation: public.waitlist_entries_id_seq kind=S rls=false force_rls=false
+relation: public.year_level_changes kind=r rls=true force_rls=false
+relation: public.year_level_changes_id_seq kind=S rls=false force_rls=false
+relation: public.year_level_rules kind=r rls=true force_rls=false
+relation: public.year_level_rules_id_seq kind=S rls=false force_rls=false
+relation: public.year_level_runs kind=r rls=true force_rls=false
+relation: public.year_level_runs_id_seq kind=S rls=false force_rls=false
 relation: reporting.course_grades kind=v rls=false force_rls=false
 relation: reporting.degree_audits kind=v rls=false force_rls=false
 relation: reporting.headcount kind=v rls=false force_rls=false
@@ -3641,6 +3736,12 @@ trigger: CREATE TRIGGER users_after_truncate_audit AFTER TRUNCATE ON public.user
 trigger: CREATE TRIGGER users_after_write_audit AFTER INSERT OR DELETE OR UPDATE ON public.users FOR EACH ROW EXECUTE FUNCTION audit.record_change('password', 'remember_token', 'two_factor_secret', 'two_factor_recovery_codes') enabled=O
 trigger: CREATE TRIGGER waitlist_entries_after_truncate_audit AFTER TRUNCATE ON public.waitlist_entries FOR EACH STATEMENT EXECUTE FUNCTION audit.record_change() enabled=O
 trigger: CREATE TRIGGER waitlist_entries_after_write_audit AFTER INSERT OR DELETE OR UPDATE ON public.waitlist_entries FOR EACH ROW EXECUTE FUNCTION audit.record_change() enabled=O
+trigger: CREATE TRIGGER year_level_changes_after_truncate_audit AFTER TRUNCATE ON public.year_level_changes FOR EACH STATEMENT EXECUTE FUNCTION audit.record_change() enabled=O
+trigger: CREATE TRIGGER year_level_changes_after_write_audit AFTER INSERT OR DELETE OR UPDATE ON public.year_level_changes FOR EACH ROW EXECUTE FUNCTION audit.record_change() enabled=O
+trigger: CREATE TRIGGER year_level_rules_after_truncate_audit AFTER TRUNCATE ON public.year_level_rules FOR EACH STATEMENT EXECUTE FUNCTION audit.record_change() enabled=O
+trigger: CREATE TRIGGER year_level_rules_after_write_audit AFTER INSERT OR DELETE OR UPDATE ON public.year_level_rules FOR EACH ROW EXECUTE FUNCTION audit.record_change() enabled=O
+trigger: CREATE TRIGGER year_level_runs_after_truncate_audit AFTER TRUNCATE ON public.year_level_runs FOR EACH STATEMENT EXECUTE FUNCTION audit.record_change() enabled=O
+trigger: CREATE TRIGGER year_level_runs_after_write_audit AFTER INSERT OR DELETE OR UPDATE ON public.year_level_runs FOR EACH ROW EXECUTE FUNCTION audit.record_change() enabled=O
 view: reporting.course_grades SELECT e.id AS enrollment_id, e.student_record_id, sr.student_number, t.code AS term_code, util.i18n(t.name) AS term_name, c.code AS course_code, util.i18n(cv.title) AS course_title, cv.title AS course_title_i18n, s.section_code, e.credits, e.course_category_id, util.i18n(cc.name) AS course_category, e.status, e.grade_status, e.grade_code, e.is_passed, e.is_retake FROM enrollments e JOIN student_records sr ON sr.id = e.student_record_id JOIN terms t ON t.id = e.term_id JOIN courses c ON c.id = e.course_id JOIN course_versions cv ON cv.id = e.course_version_id JOIN sections s ON s.id = e.section_id LEFT JOIN course_categories cc ON cc.id = e.course_category_id;
 view: reporting.degree_audits SELECT da.id AS degree_audit_id, da.student_record_id, sr.student_number, da.program_role, pr.code AS program_code, util.i18n(pr.name) AS program_name, da.is_satisfied, da.earned_credits, da.required_credits, da.cumulative_gpa, da.audited_at, t.code AS term_code FROM degree_audits da JOIN student_records sr ON sr.id = da.student_record_id JOIN programs pr ON pr.id = da.program_id LEFT JOIN terms t ON t.id = da.term_id WHERE (da.id IN ( SELECT max(degree_audits.id) AS max FROM degree_audits GROUP BY degree_audits.student_record_id, degree_audits.program_role));
 view: reporting.headcount SELECT ou.id AS org_unit_id, ou.code AS org_unit_code, util.i18n(ou.name) AS org_unit_name, pr.id AS program_id, pr.code AS program_code, util.i18n(pr.name) AS program_name, sr.year_level, sr.status, count(*) AS students FROM student_records sr JOIN programs pr ON pr.id = sr.program_id JOIN org_units ou ON ou.id = sr.org_unit_id GROUP BY ou.id, ou.code, ou.name, pr.id, pr.code, pr.name, sr.year_level, sr.status;

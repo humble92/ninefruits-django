@@ -1336,3 +1336,178 @@ msgstr "ຂໍ້ມູນຂອງຂ້ອຍ"
 msgctxt "portal"
 msgid "Advisees"
 msgstr "ນັກສຶກສາໃນທີ່ປຶກສາ"
+
+msgid "Add rule"
+msgstr "ເພີ່ມກົດເກນ"
+
+#. English fallback for the new progression workflow.
+msgid "Applied"
+msgstr "Applied"
+
+msgid "Apply at"
+msgstr "ເວລານຳໃຊ້"
+
+msgid "Approve and schedule"
+msgstr "ອະນຸມັດ ແລະກຳນົດເວລາ"
+
+#. English fallback for the new progression workflow.
+msgid "Back to runs"
+msgstr "Back to runs"
+
+#. English fallback for the new progression workflow.
+msgid "Calculated total"
+msgstr "Calculated total"
+
+msgid "Calculation basis"
+msgstr "ເກນການຄິດໄລ່"
+
+#. English fallback for the new progression workflow.
+msgid "Cancel run"
+msgstr "Cancel run"
+
+#. English fallback for the new progression workflow.
+msgid "Canceled"
+msgstr "Canceled"
+
+msgid "Completed terms"
+msgstr "ພາກຮຽນທີ່ຮຽນຈົບ"
+
+msgid "Create preview"
+msgstr "ສ້າງລາຍການກວດກ່ອນ"
+
+msgid "Draft"
+msgstr "ຮ່າງ"
+
+msgid "Earned credits"
+msgstr "ໜ່ວຍກິດທີ່ໄດ້"
+
+#. English fallback for the new progression workflow.
+msgid ""
+"Enter comma-separated minimum totals in ascending order, starting with year "
+"2."
+msgstr ""
+"Enter comma-separated minimum totals in ascending order, starting with year "
+"2."
+
+#. English fallback for the new progression workflow.
+msgid "Exclude"
+msgstr "Exclude"
+
+#. English fallback for the new progression workflow.
+msgid "Excluded"
+msgstr "Excluded"
+
+#. English fallback for the new progression workflow.
+msgid "Include again"
+msgstr "Include again"
+
+msgid "Institution default"
+msgstr "ຄ່າເລີ່ມຕົ້ນຂອງສະຖາບັນ"
+
+msgid "Manual only"
+msgstr "ຈັດການດ້ວຍຕົນເອງ"
+
+msgid "Name"
+msgstr "ຊື່"
+
+msgid "Next"
+msgstr "ຖັດໄປ"
+
+#. English fallback for the new progression workflow.
+msgid "No progression runs yet."
+msgstr "No progression runs yet."
+
+#. English fallback for the new progression workflow.
+msgid "No proposed changes."
+msgstr "No proposed changes."
+
+#. English fallback for the new progression workflow.
+msgid "Only a draft with included changes can be scheduled for a future time."
+msgstr ""
+"Only a draft with included changes can be scheduled for a future time."
+
+#. English fallback for the new progression workflow.
+msgid "Only draft or scheduled runs can be canceled."
+msgstr "Only draft or scheduled runs can be canceled."
+
+msgid "Pending"
+msgstr "ລໍຖ້າພິຈາລະນາ"
+
+msgid "Previous"
+msgstr "ກ່ອນໜ້າ"
+
+msgid "Program"
+msgstr "ຫຼັກສູດ"
+
+msgid "Promotion thresholds"
+msgstr "ຄ່າຂັ້ນຕ່ຳສຳລັບເລື່ອນປີຮຽນ"
+
+#. English fallback for the new progression workflow.
+msgid "Record changed after preview"
+msgstr "Record changed after preview"
+
+#. English fallback for the new progression workflow.
+msgid "Result"
+msgstr "Result"
+
+#. English fallback for the new progression workflow.
+msgid "Results through"
+msgstr "Results through"
+
+msgid "Save"
+msgstr "ບັນທຶກ"
+
+msgid "Scheduled"
+msgstr "ຕາມກຳນົດ"
+
+#. English fallback for the new progression workflow.
+msgid "Set an institution default rule before creating a preview."
+msgstr "Set an institution default rule before creating a preview."
+
+#. English fallback for the new progression workflow.
+msgid "Target term"
+msgstr "Target term"
+
+#. English fallback for the new progression workflow.
+msgid ""
+"The results cutoff must be today or earlier and before the target term "
+"starts."
+msgstr ""
+"The results cutoff must be today or earlier and before the target term "
+"starts."
+
+#. English fallback for the new progression workflow.
+msgid "This term already has a draft or scheduled progression run."
+msgstr "This term already has a draft or scheduled progression run."
+
+#. English fallback for the new progression workflow.
+msgid "Updated"
+msgstr "Updated"
+
+#. English fallback for the new progression workflow.
+msgid ""
+"Use increasing positive thresholds. Terms must be whole numbers and credits "
+"can have one decimal place."
+msgstr ""
+"Use increasing positive thresholds. Terms must be whole numbers and credits "
+"can have one decimal place."
+
+msgid "Year-level change"
+msgstr "ການປ່ຽນລະດັບປີຮຽນ"
+
+msgid "Year-level progression"
+msgstr "ການເລື່ອນປີຮຽນ"
+
+msgid "Year-level rule"
+msgstr "ກົດເກນການເລື່ອນປີຮຽນ"
+
+msgid "Year-level rules"
+msgstr "ກົດເກນການເລື່ອນປີຮຽນ"
+
+#. English fallback for the new progression workflow.
+msgid "You can only review changes in a draft."
+msgstr "You can only review changes in a draft."
+
+msgctxt "people"
+msgid "Student number"
+msgstr "ລະຫັດນັກສຶກສາ"

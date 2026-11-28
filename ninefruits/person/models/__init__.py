@@ -11,6 +11,7 @@ from .student_record import (
     StudentRecordProgramQuerySet,
     StudentRecordQuerySet,
 )
+from .year_levels import YearLevelChange, YearLevelRule, YearLevelRun
 
 __all__ = [
     "PERSON_VISIBILITY",
@@ -32,4 +33,7 @@ __all__ = [
     "StudentStatusChange",
     "StudentStatusChangeQuerySet",
     "StudentStatusChangeType",
+    "YearLevelChange",
+    "YearLevelRule",
+    "YearLevelRun",
 ]

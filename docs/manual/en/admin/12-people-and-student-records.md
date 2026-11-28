@@ -59,6 +59,16 @@ The student number and status of a record are not changed on the edit page. The 
 
 The same rules exist in the database (row level security), so queries outside the screens (reports, direct connections) cannot exceed the scope either.
 
+## Year-level progression
+
+1. Under **Settings → Year-level rules**, create a rule and mark one rule as the institution default. Choose **Earned credits**, **Completed terms**, or **Manual only**. For example, earned-credit comma-separated thresholds of `24, 48, 72` are the cumulative minimums for years 2, 3, and 4. Use whole numbers for term thresholds.
+2. Under **Reference data → Programs**, inherit the institution default or select another rule. Assign a **Manual only** rule to programs that handle all promotions manually.
+3. After finalizing grades and closing the applicable terms, open **Students and staff → Year-level progression → Create preview**. Select the target term and the results cutoff. The calculation uses closed term records for terms that ended by the cutoff. A term with positive earned credits counts as a completed term. The credit rule uses the latest eligible term record’s official cumulative earned credits, which already account for retakes. The preview lists enrolled students whose calculated level is above their current level.
+4. Review the student numbers, applied rules, totals, and proposed changes. Exclude individual exceptions. Choose **Approve and schedule** and enter the date and time in the institution's time zone. Schedule the run before enrollment opens if it uses the new year levels.
+5. Check the run history for updated, excluded, and skipped records. The run skips students whose status, program, or current year level changed since the preview. For rule or grade corrections, cancel the run before it applies and create a new preview.
+
+Rule configuration requires global **Manage institution settings** permission. Reviewing and scheduling runs requires global **Create and edit student records** permission. Individual and CSV corrections remain available.
+
 ## Instructors
 
 With **Add instructor** at the top of the **Instructors** list (the page is titled **New instructor**), choose an existing person or enter a new one (`Manage instructors` permission). Once the end date has passed, the instructor leaves the current instructor list (default filter) and the advisor selector.

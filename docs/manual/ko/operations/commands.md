@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+예약 시각이 지난 승인된 진급 작업을 반영합니다. 같은 명령을 다시 실행해도 완료된 작업은 다시 적용되지 않습니다.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

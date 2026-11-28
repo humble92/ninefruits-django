@@ -21,5 +21,6 @@ app.conf.beat_schedule = {
     "waitlist-promote": {"task": "registration.promote_waitlists", "schedule": crontab(minute=0)},
     "lms-reconcile": {"task": "lms.reconcile", "schedule": crontab(hour=2, minute=30)},
     "audit-seal": {"task": "audit.seal", "schedule": crontab(hour=3, minute=30)},
+    "students-apply-year-levels": {"task": "person.apply_year_levels", "schedule": crontab()},
     "system-heartbeat": {"task": "core.heartbeat", "schedule": crontab()},
 }

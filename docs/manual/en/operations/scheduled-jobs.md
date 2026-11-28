@@ -54,3 +54,5 @@ The registrations are the `beat_schedule` in `config/celery.py`; beat aligns the
 While a task runs, the DB actor is recorded as `system:task:{task name}` (for example `system:task:grading.close_term_records`), together with the request ID and the user of the request that queued it.
 
 Flower shows failed tasks (**Tasks**, state `FAILURE`) and their exceptions. Celery tasks use `acks_late`, so a task interrupted by a dying worker runs again. Every task is built to give the same result when run again (idempotent).
+
+**`person.apply_year_levels`** checks for due runs every minute. If a due run is still scheduled, check the Celery beat and worker logs.

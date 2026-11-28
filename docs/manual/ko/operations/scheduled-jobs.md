@@ -54,3 +54,5 @@ beat는 `ExecStart=... celery -A config beat --loglevel=INFO`로 같은 형식�
 큐 작업은 실행 중 DB 수행자가 `system:task:{작업 이름}`(예: `system:task:grading.close_term_records`)으로 기록되고, 작업을 일으킨 요청의 요청 ID와 사용자가 함께 남는다.
 
 Flower에서 실패 작업(**Tasks**, 상태 `FAILURE`)과 예외를 본다. Celery 작업은 `acks_late`이므로 worker가 작업 중에 죽으면 다시 실행된다. 모든 작업은 다시 실행해도 같은 결과가 나오도록(멱등) 만들어져 있다.
+
+**`person.apply_year_levels`**는 매분 예약을 확인합니다. 반영 시각이 지났는데 작업이 예약 상태에 머물면 Celery beat와 워커 로그를 확인합니다.

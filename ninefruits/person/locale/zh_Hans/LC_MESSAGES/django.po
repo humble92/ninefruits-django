@@ -1329,3 +1329,148 @@ msgstr "我的信息"
 msgctxt "portal"
 msgid "Advisees"
 msgstr "指导学生"
+
+msgid "Add rule"
+msgstr "添加规则"
+
+msgid "Applied"
+msgstr "已生效"
+
+msgid "Apply at"
+msgstr "生效时间"
+
+msgid "Approve and schedule"
+msgstr "批准并安排生效"
+
+msgid "Back to runs"
+msgstr "返回任务列表"
+
+msgid "Calculated total"
+msgstr "计算总值"
+
+msgid "Calculation basis"
+msgstr "计算依据"
+
+msgid "Cancel run"
+msgstr "取消晋升任务"
+
+msgid "Canceled"
+msgstr "已取消"
+
+msgid "Completed terms"
+msgstr "已完成学期"
+
+msgid "Create preview"
+msgstr "创建晋升预览"
+
+msgid "Draft"
+msgstr "草稿"
+
+msgid "Earned credits"
+msgstr "已获学分"
+
+msgid ""
+"Enter comma-separated minimum totals in ascending order, starting with year "
+"2."
+msgstr "从二年级起按升序输入累计最低值，以逗号分隔。"
+
+msgid "Exclude"
+msgstr "排除"
+
+msgid "Excluded"
+msgstr "已排除"
+
+msgid "Include again"
+msgstr "重新纳入"
+
+msgid "Institution default"
+msgstr "全校默认规则"
+
+msgid "Manual only"
+msgstr "仅手动管理"
+
+msgid "Name"
+msgstr "名称"
+
+msgid "Next"
+msgstr "下一页"
+
+msgid "No progression runs yet."
+msgstr "尚无晋升任务。"
+
+msgid "No proposed changes."
+msgstr "没有拟议的变更。"
+
+msgid "Only a draft with included changes can be scheduled for a future time."
+msgstr "只有包含待执行变更的草稿才能安排到将来执行。"
+
+msgid "Only draft or scheduled runs can be canceled."
+msgstr "仅可取消草稿或已安排的任务。"
+
+msgid "Pending"
+msgstr "待处理"
+
+msgid "Previous"
+msgstr "上一页"
+
+msgid "Program"
+msgstr "专业"
+
+msgid "Promotion thresholds"
+msgstr "晋升门槛"
+
+msgid "Record changed after preview"
+msgstr "预览后学籍已变更"
+
+msgid "Result"
+msgstr "结果"
+
+msgid "Results through"
+msgstr "成绩截止日期"
+
+msgid "Save"
+msgstr "保存"
+
+msgid "Scheduled"
+msgstr "已安排"
+
+msgid "Set an institution default rule before creating a preview."
+msgstr "创建预览前请设置全校默认规则。"
+
+msgid "Target term"
+msgstr "目标学期"
+
+msgid ""
+"The results cutoff must be today or earlier and before the target term "
+"starts."
+msgstr "成绩截止日期须不晚于今天且早于目标学期开始日期。"
+
+msgid "This term already has a draft or scheduled progression run."
+msgstr "此学期已有草稿或已安排的晋升任务。"
+
+msgid "Updated"
+msgstr "已更新"
+
+msgid ""
+"Use increasing positive thresholds. Terms must be whole numbers and credits "
+"can have one decimal place."
+msgstr "门槛必须为递增正数。学期数为整数，学分可保留一位小数。"
+
+msgid "Year-level change"
+msgstr "年级变更"
+
+msgid "Year-level progression"
+msgstr "年级晋升"
+
+msgid "Year-level rule"
+msgstr "年级晋升规则"
+
+msgid "Year-level rules"
+msgstr "年级晋升规则"
+
+msgid "You can only review changes in a draft."
+msgstr "仅可审核草稿中的变更。"
+
+msgctxt "people"
+msgid "Student number"
+msgstr "学号"

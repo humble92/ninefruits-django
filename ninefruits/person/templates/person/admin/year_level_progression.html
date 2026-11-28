@@ -1,0 +1,71 @@
+{% extends "admin/base_site.html" %}
+{% load i18n tz %}
+{% block content %}
+  {% if run %}
+    <p><a class="underline" href="{% url 'admin:year_level_progression' %}">{% translate "Back to runs" %}</a></p>
+    <p class="my-4">{{ run.term.code }} · {% translate "Results through" %} {{ run.cutoff_date }} · {{ run_status }}
+      {% if run.scheduled_at %}· {% translate "Apply at" %} {{ run.scheduled_at|localtime|date:"Y-m-d H:i T" }}{% endif %}</p>
+    <div class="overflow-x-auto">
+      <table class="w-full text-left">
+        <thead><tr>
+          <th scope="col" class="p-2">{% translate "Student number" context "people" %}</th>
+          <th scope="col" class="p-2">{% translate "Program" %}</th>
+          <th scope="col" class="p-2">{% translate "Year-level rule" %}</th>
+          <th scope="col" class="p-2">{% translate "Calculated total" %}</th>
+          <th scope="col" class="p-2">{% translate "Year-level change" %}</th>
+          <th scope="col" class="p-2">{% translate "Result" %}</th>
+          {% if run.status == "draft" %}<th></th>{% endif %}
+        </tr></thead>
+        <tbody>
+          {% for change, basis, outcome in change_rows %}
+            <tr class="border-t border-base-200 dark:border-base-700">
+              <td class="p-2">{{ change.student_record.student_number }}</td>
+              <td class="p-2">{{ change.program.code }}</td>
+              <td class="p-2">{{ change.rule_name }}</td>
+              <td class="p-2">{{ change.measured_value }} · {{ basis }}</td>
+              <td class="p-2">{{ change.from_level }} → {{ change.to_level }}</td>
+              <td class="p-2">{{ outcome }}</td>
+              {% if run.status == "draft" %}
+                <td class="p-2"><form method="post">
+                  {% csrf_token %}<input type="hidden" name="change" value="{{ change.pk }}">
+                  <button class="underline" name="action" value="exclude">
+                    {% if change.outcome == "excluded" %}{% translate "Include again" %}{% else %}{% translate "Exclude" %}{% endif %}
+                  </button>
+                </form></td>
+              {% endif %}
+            </tr>
+          {% empty %}<tr><td class="p-2" colspan="7">{% translate "No proposed changes." %}</td></tr>{% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if run.status == "draft" %}
+      <form method="post" class="mt-4 space-y-2">
+        {% csrf_token %}
+        <p>{{ zone }}</p>{{ form.as_p }}
+        <button class="border rounded px-4 py-2" name="action" value="schedule">{% translate "Approve and schedule" %}</button>
+      </form>
+    {% endif %}
+    {% if run.status == "draft" or run.status == "scheduled" %}
+      <form method="post" class="mt-4">{% csrf_token %}
+        <button class="border rounded px-4 py-2" name="action" value="cancel">{% translate "Cancel run" %}</button>
+      </form>
+    {% endif %}
+  {% else %}
+    <ul class="mb-6 space-y-2">
+      {% for item, status in run_rows %}
+        <li><a class="underline" href="?run={{ item.pk }}">{{ item.term.code }} · #{{ item.pk }}</a> · {{ status }}</li>
+      {% empty %}<li>{% translate "No progression runs yet." %}</li>{% endfor %}
+    </ul>
+    <form method="post" class="space-y-4">
+      {% csrf_token %}{{ form.as_p }}
+      <button class="border rounded px-4 py-2" name="action" value="preview">{% translate "Create preview" %}</button>
+    </form>
+  {% endif %}
+  {% if items.has_other_pages %}
+    <nav class="mt-4 flex gap-4">
+      {% if items.has_previous %}<a class="underline" href="?{% if run %}run={{ run.pk }}&amp;{% endif %}page={{ items.previous_page_number }}">{% translate "Previous" %}</a>{% endif %}
+      <span>{{ items.number }} / {{ items.paginator.num_pages }}</span>
+      {% if items.has_next %}<a class="underline" href="?{% if run %}run={{ run.pk }}&amp;{% endif %}page={{ items.next_page_number }}">{% translate "Next" %}</a>{% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}

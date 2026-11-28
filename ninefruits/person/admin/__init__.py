@@ -3,4 +3,4 @@ group). Importing registers the model admins and the student record settings pag
 
 from ninefruits.person import settings_pages  # noqa: F401  (registers the settings page)
 
-from . import instructors, people, requests, student_records  # noqa: F401
+from . import instructors, people, requests, student_records, year_levels  # noqa: F401

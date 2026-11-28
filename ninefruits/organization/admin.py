@@ -254,6 +254,7 @@ class ProgramForm(EffectivePeriodForm):
             "degree_level",
             "org_unit",
             "standard_duration_years",
+            "year_level_rule",
             "effective_start_date",
             "effective_end_date",
             "allows_second_major",
@@ -263,6 +264,7 @@ class ProgramForm(EffectivePeriodForm):
     def __init__(self, *args: Any, **kwargs: Any) -> None:
         super().__init__(*args, **kwargs)
         self.fields["org_unit"].queryset = OrgUnit.objects.order_by("code")  # type: ignore[attr-defined]
+        self.fields["year_level_rule"].empty_label = _("Use institution default")  # type: ignore[attr-defined]
         self.fields["degree_level"].choices = DegreeLevel.choices  # type: ignore[attr-defined]
         if not self.instance.pk:
             self.fields["effective_start_date"].initial = timezone.localdate()

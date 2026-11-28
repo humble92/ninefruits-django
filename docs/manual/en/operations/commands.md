@@ -527,3 +527,11 @@ Every command runs as `uv run manage.py {command}`. In the Docker development en
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Applies approved progression runs whose scheduled time has arrived. Re-running the command does not apply a completed run again.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

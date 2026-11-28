@@ -1294,3 +1294,190 @@ msgstr "Миний мэдээлэл"
 msgctxt "portal"
 msgid "Advisees"
 msgstr "Зөвлөх оюутнууд"
+
+#. English fallback for the new progression workflow.
+msgid "Add rule"
+msgstr "Add rule"
+
+#. English fallback for the new progression workflow.
+msgid "Applied"
+msgstr "Applied"
+
+#. English fallback for the new progression workflow.
+msgid "Apply at"
+msgstr "Apply at"
+
+#. English fallback for the new progression workflow.
+msgid "Approve and schedule"
+msgstr "Approve and schedule"
+
+#. English fallback for the new progression workflow.
+msgid "Back to runs"
+msgstr "Back to runs"
+
+#. English fallback for the new progression workflow.
+msgid "Calculated total"
+msgstr "Calculated total"
+
+#. English fallback for the new progression workflow.
+msgid "Calculation basis"
+msgstr "Calculation basis"
+
+#. English fallback for the new progression workflow.
+msgid "Cancel run"
+msgstr "Cancel run"
+
+#. English fallback for the new progression workflow.
+msgid "Canceled"
+msgstr "Canceled"
+
+#. English fallback for the new progression workflow.
+msgid "Completed terms"
+msgstr "Completed terms"
+
+#. English fallback for the new progression workflow.
+msgid "Create preview"
+msgstr "Create preview"
+
+msgid "Draft"
+msgstr "Ноорог"
+
+msgid "Earned credits"
+msgstr "Цуглуулсан кредит"
+
+#. English fallback for the new progression workflow.
+msgid ""
+"Enter comma-separated minimum totals in ascending order, starting with year "
+"2."
+msgstr ""
+"Enter comma-separated minimum totals in ascending order, starting with year "
+"2."
+
+#. English fallback for the new progression workflow.
+msgid "Exclude"
+msgstr "Exclude"
+
+#. English fallback for the new progression workflow.
+msgid "Excluded"
+msgstr "Excluded"
+
+#. English fallback for the new progression workflow.
+msgid "Include again"
+msgstr "Include again"
+
+#. English fallback for the new progression workflow.
+msgid "Institution default"
+msgstr "Institution default"
+
+#. English fallback for the new progression workflow.
+msgid "Manual only"
+msgstr "Manual only"
+
+msgid "Name"
+msgstr "Нэр"
+
+msgid "Next"
+msgstr "Дараах"
+
+#. English fallback for the new progression workflow.
+msgid "No progression runs yet."
+msgstr "No progression runs yet."
+
+#. English fallback for the new progression workflow.
+msgid "No proposed changes."
+msgstr "No proposed changes."
+
+#. English fallback for the new progression workflow.
+msgid "Only a draft with included changes can be scheduled for a future time."
+msgstr ""
+"Only a draft with included changes can be scheduled for a future time."
+
+#. English fallback for the new progression workflow.
+msgid "Only draft or scheduled runs can be canceled."
+msgstr "Only draft or scheduled runs can be canceled."
+
+msgid "Pending"
+msgstr "Хүлээгдэж буй"
+
+msgid "Previous"
+msgstr "Өмнөх"
+
+msgid "Program"
+msgstr "Хөтөлбөр"
+
+#. English fallback for the new progression workflow.
+msgid "Promotion thresholds"
+msgstr "Promotion thresholds"
+
+#. English fallback for the new progression workflow.
+msgid "Record changed after preview"
+msgstr "Record changed after preview"
+
+#. English fallback for the new progression workflow.
+msgid "Result"
+msgstr "Result"
+
+#. English fallback for the new progression workflow.
+msgid "Results through"
+msgstr "Results through"
+
+msgid "Save"
+msgstr "Хадгалах"
+
+msgid "Scheduled"
+msgstr "Товлосон"
+
+#. English fallback for the new progression workflow.
+msgid "Set an institution default rule before creating a preview."
+msgstr "Set an institution default rule before creating a preview."
+
+#. English fallback for the new progression workflow.
+msgid "Target term"
+msgstr "Target term"
+
+#. English fallback for the new progression workflow.
+msgid ""
+"The results cutoff must be today or earlier and before the target term "
+"starts."
+msgstr ""
+"The results cutoff must be today or earlier and before the target term "
+"starts."
+
+#. English fallback for the new progression workflow.
+msgid "This term already has a draft or scheduled progression run."
+msgstr "This term already has a draft or scheduled progression run."
+
+#. English fallback for the new progression workflow.
+msgid "Updated"
+msgstr "Updated"
+
+#. English fallback for the new progression workflow.
+msgid ""
+"Use increasing positive thresholds. Terms must be whole numbers and credits "
+"can have one decimal place."
+msgstr ""
+"Use increasing positive thresholds. Terms must be whole numbers and credits "
+"can have one decimal place."
+
+#. English fallback for the new progression workflow.
+msgid "Year-level change"
+msgstr "Year-level change"
+
+#. English fallback for the new progression workflow.
+msgid "Year-level progression"
+msgstr "Year-level progression"
+
+msgid "Year-level rule"
+msgstr "Year-level rule"
+
+#. English fallback for the new progression workflow.
+msgid "Year-level rules"
+msgstr "Year-level rules"
+
+#. English fallback for the new progression workflow.
+msgid "You can only review changes in a draft."
+msgstr "You can only review changes in a draft."
+
+msgctxt "people"
+msgid "Student number"
+msgstr "Оюутны код"

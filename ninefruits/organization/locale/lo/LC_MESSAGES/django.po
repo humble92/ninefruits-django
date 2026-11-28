@@ -267,3 +267,9 @@ msgstr "ຫຼັກສູດ"
 #: ninefruits/organization/models/program.py
 msgid "programs"
 msgstr "ຫຼັກສູດ"
+
+msgid "Use institution default"
+msgstr "ໃຊ້ຄ່າເລີ່ມຕົ້ນຂອງສະຖາບັນ"
+
+msgid "Year-level rule"
+msgstr "ກົດເກນການເລື່ອນປີຮຽນ"

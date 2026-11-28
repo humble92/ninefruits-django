@@ -1328,3 +1328,148 @@ msgstr "내 정보"
 msgctxt "portal"
 msgid "Advisees"
 msgstr "지도 학생"
+
+msgid "Add rule"
+msgstr "규칙 추가"
+
+msgid "Applied"
+msgstr "반영 완료"
+
+msgid "Apply at"
+msgstr "반영 일시"
+
+msgid "Approve and schedule"
+msgstr "확정 및 반영 예약"
+
+msgid "Back to runs"
+msgstr "진급 작업 목록"
+
+msgid "Calculated total"
+msgstr "산정값"
+
+msgid "Calculation basis"
+msgstr "산정 기준"
+
+msgid "Cancel run"
+msgstr "진급 작업 취소"
+
+msgid "Canceled"
+msgstr "취소됨"
+
+msgid "Completed terms"
+msgstr "이수 학기"
+
+msgid "Create preview"
+msgstr "진급 미리보기 만들기"
+
+msgid "Draft"
+msgstr "검토 중"
+
+msgid "Earned credits"
+msgstr "취득학점"
+
+msgid ""
+"Enter comma-separated minimum totals in ascending order, starting with year "
+"2."
+msgstr "2학년부터 최소 누적값을 오름차순으로 쉼표로 구분해 입력합니다."
+
+msgid "Exclude"
+msgstr "제외"
+
+msgid "Excluded"
+msgstr "제외됨"
+
+msgid "Include again"
+msgstr "다시 포함"
+
+msgid "Institution default"
+msgstr "학교 기본 규칙"
+
+msgid "Manual only"
+msgstr "수동 관리"
+
+msgid "Name"
+msgstr "이름"
+
+msgid "Next"
+msgstr "다음"
+
+msgid "No progression runs yet."
+msgstr "등록된 진급 작업이 없습니다."
+
+msgid "No proposed changes."
+msgstr "변경 대상이 없습니다."
+
+msgid "Only a draft with included changes can be scheduled for a future time."
+msgstr "포함된 변경이 있는 검토 중 작업만 미래 시각에 예약할 수 있습니다."
+
+msgid "Only draft or scheduled runs can be canceled."
+msgstr "검토 중이거나 예약된 작업만 취소할 수 있습니다."
+
+msgid "Pending"
+msgstr "대기"
+
+msgid "Previous"
+msgstr "이전"
+
+msgid "Program"
+msgstr "프로그램"
+
+msgid "Promotion thresholds"
+msgstr "진급 기준값"
+
+msgid "Record changed after preview"
+msgstr "검토 후 학적 변경으로 건너뜀"
+
+msgid "Result"
+msgstr "처리 결과"
+
+msgid "Results through"
+msgstr "성적 기준일"
+
+msgid "Save"
+msgstr "저장"
+
+msgid "Scheduled"
+msgstr "반영 예약됨"
+
+msgid "Set an institution default rule before creating a preview."
+msgstr "미리보기를 만들기 전에 학교 기본 진급 규칙을 지정하세요."
+
+msgid "Target term"
+msgstr "적용 학기"
+
+msgid ""
+"The results cutoff must be today or earlier and before the target term "
+"starts."
+msgstr "성적 기준일은 오늘까지의 날짜이면서 적용 학기 시작일보다 앞서야 합니다."
+
+msgid "This term already has a draft or scheduled progression run."
+msgstr "이 학기의 검토 중이거나 예약된 진급 작업이 이미 있습니다."
+
+msgid "Updated"
+msgstr "변경 완료"
+
+msgid ""
+"Use increasing positive thresholds. Terms must be whole numbers and credits "
+"can have one decimal place."
+msgstr "기준값은 양수이며 학년별로 증가해야 합니다. 학기 수는 정수, 학점은 소수 첫째 자리까지 입력합니다."
+
+msgid "Year-level change"
+msgstr "학년 변경"
+
+msgid "Year-level progression"
+msgstr "학년 진급"
+
+msgid "Year-level rule"
+msgstr "학년 진급 규칙"
+
+msgid "Year-level rules"
+msgstr "학년 진급 규칙"
+
+msgid "You can only review changes in a draft."
+msgstr "검토 중인 작업의 변경만 검토할 수 있습니다."
+
+msgctxt "people"
+msgid "Student number"
+msgstr "학번"

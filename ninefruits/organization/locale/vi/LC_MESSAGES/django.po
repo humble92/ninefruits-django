@@ -268,3 +268,11 @@ msgstr "chương trình đào tạo"
 #: ninefruits/organization/models/program.py
 msgid "programs"
 msgstr "chương trình đào tạo"
+
+#. English fallback for the new progression workflow.
+msgid "Use institution default"
+msgstr "Use institution default"
+
+#. English fallback for the new progression workflow.
+msgid "Year-level rule"
+msgstr "Year-level rule"

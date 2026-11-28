@@ -33,6 +33,14 @@ class Program(EffectivePeriodMixin, TimeStampedModel):
     allows_second_major = models.BooleanField(_("Accepts second majors"), default=False)
     allows_minor = models.BooleanField(_("Accepts minors"), default=False)
 
+    year_level_rule = models.ForeignKey(
+        "person.YearLevelRule",
+        on_delete=models.RESTRICT,
+        null=True,
+        blank=True,
+        verbose_name=_("Year-level rule"),
+    )
+
     objects = ProgramQuerySet.as_manager()
 
     class Meta:

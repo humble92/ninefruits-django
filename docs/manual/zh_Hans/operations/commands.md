@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+执行已到生效时间且已批准的年级晋升任务。重新运行不会重复执行已完成的任务。
+
+```bash
+uv run manage.py students_apply_year_levels
+```

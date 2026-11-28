@@ -268,3 +268,11 @@ msgstr "कार्यक्रम"
 #: ninefruits/organization/models/program.py
 msgid "programs"
 msgstr "कार्यक्रमहरू"
+
+#. English fallback for the new progression workflow.
+msgid "Use institution default"
+msgstr "Use institution default"
+
+#. English fallback for the new progression workflow.
+msgid "Year-level rule"
+msgstr "Year-level rule"

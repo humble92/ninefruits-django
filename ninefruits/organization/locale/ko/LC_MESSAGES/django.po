@@ -268,3 +268,9 @@ msgstr "프로그램"
 #: ninefruits/organization/models/program.py
 msgid "programs"
 msgstr "프로그램"
+
+msgid "Use institution default"
+msgstr "학교 기본 규칙 사용"
+
+msgid "Year-level rule"
+msgstr "학년 진급 규칙"

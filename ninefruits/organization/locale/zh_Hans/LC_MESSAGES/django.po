@@ -268,3 +268,9 @@ msgstr "专业项目"
 #: ninefruits/organization/models/program.py
 msgid "programs"
 msgstr "专业项目"
+
+msgid "Use institution default"
+msgstr "使用全校默认规则"
+
+msgid "Year-level rule"
+msgstr "年级晋升规则"

@@ -1,0 +1,16 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block content %}
+  <ul class="mb-6 space-y-2">
+    {% for rule, basis in rules %}
+      <li><a class="underline" href="?rule={{ rule.pk }}">{{ rule.name }}</a> · {{ basis }}
+        {% if rule.is_default %}· {% translate "Institution default" %}{% endif %}</li>
+    {% endfor %}
+  </ul>
+  <a class="underline" href="{% url 'admin:year_level_rules' %}">{% translate "Add rule" %}</a>
+  <form method="post" class="mt-4 max-w-3xl space-y-4">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="border rounded px-4 py-2">{% translate "Save" %}</button>
+  </form>
+{% endblock %}
