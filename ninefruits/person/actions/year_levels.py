@@ -72,7 +72,7 @@ class ManageYearLevels:
         return rule
 
     @transaction.atomic
-    def preview(self, term_id: int, cutoff: date, staff: User) -> YearLevelRun:
+    def preview(self, term_id: int, cutoff: date, staff: User, program_id: int | None = None) -> YearLevelRun:
         if not self.can_manage(staff):
             raise PermissionDenied
         term = Term.objects.select_for_update().get(pk=term_id)
@@ -84,8 +84,10 @@ class ManageYearLevels:
         default = next((rule for rule in rules.values() if rule.is_default), None)
         if default is None:
             raise ValidationError(_("Set an institution default rule before creating a preview."))
-        run = YearLevelRun.objects.create(term=term, cutoff_date=cutoff)
+        run = YearLevelRun.objects.create(term=term, cutoff_date=cutoff, program_id=program_id)
         records = StudentRecord.objects.filter(status=StudentStatus.ENROLLED, admission_date__lte=cutoff)
+        if program_id is not None:
+            records = records.filter(program_id=program_id)
         after = 0
         while chunk := list(records.filter(pk__gt=after).select_related("program").order_by("pk")[:500]):
             after = chunk[-1].pk

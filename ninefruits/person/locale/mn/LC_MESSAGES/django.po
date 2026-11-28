@@ -1481,3 +1481,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "Оюутны код"
+
+msgid "All programs"
+msgstr "Бүх хөтөлбөр"
+
+msgid "Program filter (display only)"
+msgstr "Хөтөлбөрийн шүүлтүүр (зөвхөн харагдац)"
+
+msgid "Apply"
+msgstr "Хэрэгжүүлэх"

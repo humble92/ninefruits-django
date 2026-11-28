@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+निर्धारित समय पुगेका स्वीकृत तह बढुवा कार्यहरू लागू गर्छ। पूरा भइसकेको कार्य फेरि लागू हुँदैन।
+
+```bash
+uv run manage.py students_apply_year_levels
+```

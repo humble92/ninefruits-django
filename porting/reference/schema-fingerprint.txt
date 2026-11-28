@@ -1130,6 +1130,7 @@ column: public.year_level_runs.approved_by_id bigint
 column: public.year_level_runs.created_at timestamp with time zone
 column: public.year_level_runs.cutoff_date date not null
 column: public.year_level_runs.id bigint not null default nextval('year_level_runs_id_seq'::regclass)
+column: public.year_level_runs.program_id bigint
 column: public.year_level_runs.scheduled_at timestamp with time zone
 column: public.year_level_runs.status character varying(16) not null default 'draft'::character varying
 column: public.year_level_runs.term_id bigint not null
@@ -2425,6 +2426,7 @@ constraint: public.year_level_runs year_level_runs_approved_by_id_fkey FOREIGN K
 constraint: public.year_level_runs year_level_runs_cutoff_date_not_null NOT NULL cutoff_date
 constraint: public.year_level_runs year_level_runs_id_not_null NOT NULL id
 constraint: public.year_level_runs year_level_runs_pkey PRIMARY KEY (id)
+constraint: public.year_level_runs year_level_runs_program_id_fkey FOREIGN KEY (program_id) REFERENCES programs(id) ON DELETE RESTRICT
 constraint: public.year_level_runs year_level_runs_status_check CHECK (((status)::text = ANY ((ARRAY['draft'::character varying, 'scheduled'::character varying, 'applied'::character varying, 'canceled'::character varying])::text[])))
 constraint: public.year_level_runs year_level_runs_status_not_null NOT NULL status
 constraint: public.year_level_runs year_level_runs_term_id_fkey FOREIGN KEY (term_id) REFERENCES terms(id) ON DELETE RESTRICT
@@ -3015,6 +3017,7 @@ index: CREATE INDEX term_windows_window_type_opens_at_closes_at_index ON public.
 index: CREATE INDEX terms_no_overlap_excl ON public.terms USING gist (term_type_id, instruction_period)
 index: CREATE INDEX waitlist_entries_section_id_status_requested_at_index ON public.waitlist_entries USING btree (section_id, status, requested_at)
 index: CREATE INDEX waitlist_entries_student_record_id_index ON public.waitlist_entries USING btree (student_record_id)
+index: CREATE INDEX year_level_changes_run_program_index ON public.year_level_changes USING btree (year_level_run_id, program_id)
 index: CREATE INDEX year_level_runs_due ON public.year_level_runs USING btree (scheduled_at) WHERE ((status)::text = 'scheduled'::text)
 index: CREATE UNIQUE INDEX academic_years_code_unique ON public.academic_years USING btree (code)
 index: CREATE UNIQUE INDEX academic_years_pkey ON public.academic_years USING btree (id)

@@ -1483,3 +1483,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "Talaba raqami"
+
+msgid "All programs"
+msgstr "Barcha dasturlar"
+
+msgid "Program filter (display only)"
+msgstr "Dastur filtri (faqat ko‘rish uchun)"
+
+msgid "Apply"
+msgstr "Qo‘llash"

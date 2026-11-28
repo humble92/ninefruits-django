@@ -1511,3 +1511,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "ລະຫັດນັກສຶກສາ"
+
+msgid "All programs"
+msgstr "ທຸກຫຼັກສູດ"
+
+msgid "Program filter (display only)"
+msgstr "ກັ່ນຕອງຫຼັກສູດ (ສະແດງເທົ່ານັ້ນ)"
+
+msgid "Apply"
+msgstr "ນຳໃຊ້"

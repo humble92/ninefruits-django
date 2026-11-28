@@ -527,3 +527,11 @@ Tumatakbo ang bawat command bilang `uv run manage.py {command}`. Sa Docker devel
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Inilalapat ang mga aprubadong pag-angat ng taon kapag dumating ang nakatakdang oras. Hindi inuulit ang natapos nang paglalapat.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

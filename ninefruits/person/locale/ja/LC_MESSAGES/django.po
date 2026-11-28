@@ -1484,3 +1484,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "学籍番号"
+
+msgid "All programs"
+msgstr "すべてのプログラム"
+
+msgid "Program filter (display only)"
+msgstr "プログラムで絞り込み（表示のみ）"
+
+msgid "Apply"
+msgstr "適用"

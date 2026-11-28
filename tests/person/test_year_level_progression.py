@@ -128,3 +128,58 @@ def test_staff_can_save_a_rule_and_open_the_preview(client: Client) -> None:
     response = client.post(preview_url, {"action": "preview", "term": term.pk, "cutoff_date": "2026-06-30"})
     assert response.status_code == 302
     assert client.get(response["Location"]).status_code == 200
+
+
+def test_scopes_preview_to_program_and_filters_the_full_review(client: Client) -> None:
+    settings = SecuritySettings.load()
+    settings.mfa_enforcement = MfaEnforcement.DISABLED
+    settings.save()
+    staff = UserFactory(
+        permissions=[
+            Permission.ADMIN_PANEL_ACCESS,
+            Permission.STUDENT_RECORDS_MANAGE,
+            Permission.INSTITUTION_SETTINGS_MANAGE,
+        ]
+    )
+    service = ManageYearLevels()
+    service.save_rule(
+        YearLevelRule(),
+        {
+            "name": {"en": "Credits"},
+            "basis": "credits",
+            "is_default": True,
+            "thresholds": [{"minimum": 24}],
+        },
+        staff,
+    )
+    target = TermFactory(start_date=date(2026, 9, 1), end_date=date(2026, 12, 31))
+    prior = TermFactory(start_date=date(2026, 3, 2), end_date=date(2026, 6, 30))
+    first, other = StudentRecordFactory.create_batch(2, admission_date=date(2025, 3, 1))
+    for student in (first, other):
+        TermRecord.objects.create(
+            student_record=student,
+            term=prior,
+            attempted_credits=24,
+            earned_credits=24,
+            cumulative_earned_credits=24,
+            calculated_at=timezone.now(),
+            closed_at=timezone.now(),
+        )
+
+    client.force_login(staff)
+    url = reverse("admin:year_level_progression")
+    response = client.post(
+        url, {"action": "preview", "term": target.pk, "cutoff_date": "2026-06-30", "program": first.program_id}
+    )
+    assert response.status_code == 302
+    scoped = YearLevelRun.objects.get(term=target)
+    assert scoped.program_id == first.program_id
+    assert scoped.changes.get().student_record_id == first.pk
+    service.cancel(scoped.pk, staff)
+
+    entire = service.preview(target.pk, prior.end_date, staff)
+    response = client.get(url, {"run": entire.pk, "program": first.program_id})
+    assert response.status_code == 200
+    assert first.student_number.encode() in response.content
+    assert other.student_number.encode() not in response.content
+    assert entire.changes.count() == 2

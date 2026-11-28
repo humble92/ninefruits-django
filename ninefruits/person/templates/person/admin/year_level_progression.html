@@ -3,8 +3,15 @@
 {% block content %}
   {% if run %}
     <p><a class="underline" href="{% url 'admin:year_level_progression' %}">{% translate "Back to runs" %}</a></p>
-    <p class="my-4">{{ run.term.code }} · {% translate "Results through" %} {{ run.cutoff_date }} · {{ run_status }}
+    <p class="my-4">{{ run.term.code }} · {% if run.program %}{{ run.program.code }}{% else %}{% translate "All programs" %}{% endif %} · {% translate "Results through" %} {{ run.cutoff_date }} · {{ run_status }}
       {% if run.scheduled_at %}· {% translate "Apply at" %} {{ run.scheduled_at|localtime|date:"Y-m-d H:i T" }}{% endif %}</p>
+    {% if review_filter %}
+      <form method="get" class="mb-4">
+        <input type="hidden" name="run" value="{{ run.pk }}">
+        {{ review_filter.as_p }}
+        <button type="submit" class="border rounded px-4 py-2">{% translate "Apply" %}</button>
+      </form>
+    {% endif %}
     <div class="overflow-x-auto">
       <table class="w-full text-left">
         <thead><tr>
@@ -53,7 +60,7 @@
   {% else %}
     <ul class="mb-6 space-y-2">
       {% for item, status in run_rows %}
-        <li><a class="underline" href="?run={{ item.pk }}">{{ item.term.code }} · #{{ item.pk }}</a> · {{ status }}</li>
+        <li><a class="underline" href="?run={{ item.pk }}">{{ item.term.code }} · #{{ item.pk }}</a> · {% if item.program %}{{ item.program.code }}{% else %}{% translate "All programs" %}{% endif %} · {{ status }}</li>
       {% empty %}<li>{% translate "No progression runs yet." %}</li>{% endfor %}
     </ul>
     <form method="post" class="space-y-4">
@@ -63,9 +70,9 @@
   {% endif %}
   {% if items.has_other_pages %}
     <nav class="mt-4 flex gap-4">
-      {% if items.has_previous %}<a class="underline" href="?{% if run %}run={{ run.pk }}&amp;{% endif %}page={{ items.previous_page_number }}">{% translate "Previous" %}</a>{% endif %}
+      {% if items.has_previous %}<a class="underline" href="{% querystring page=items.previous_page_number %}">{% translate "Previous" %}</a>{% endif %}
       <span>{{ items.number }} / {{ items.paginator.num_pages }}</span>
-      {% if items.has_next %}<a class="underline" href="?{% if run %}run={{ run.pk }}&amp;{% endif %}page={{ items.next_page_number }}">{% translate "Next" %}</a>{% endif %}
+      {% if items.has_next %}<a class="underline" href="{% querystring page=items.next_page_number %}">{% translate "Next" %}</a>{% endif %}
     </nav>
   {% endif %}
 {% endblock %}

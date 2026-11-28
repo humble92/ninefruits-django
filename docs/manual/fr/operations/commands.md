@@ -527,3 +527,11 @@ Toutes les commandes s’exécutent avec `uv run manage.py {command}`. Dans l’
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Applique les passages en année supérieure approuvés lorsque l’heure prévue est atteinte. Un traitement terminé ne peut pas être appliqué une seconde fois.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Применяет утверждённые переводы на следующий курс после наступления назначенного времени. Завершённые запуски повторно не применяются.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+予定時刻に達した承認済みの進級処理を適用します。完了した処理は再適用されません。
+
+```bash
+uv run manage.py students_apply_year_levels
+```

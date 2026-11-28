@@ -527,3 +527,11 @@ Her komut `uv run manage.py {command}` olarak çalışır. Docker geliştirme or
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Zamanı gelen onaylı sınıf yükseltmelerini uygular. Tamamlanan işlemler yeniden uygulanmaz.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

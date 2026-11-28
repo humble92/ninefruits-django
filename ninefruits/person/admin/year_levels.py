@@ -10,11 +10,13 @@ from django.http import HttpRequest, HttpResponse, QueryDict
 from django.shortcuts import get_object_or_404, redirect, render
 from django.urls import reverse
 from django.utils import timezone
+from django.utils.http import urlencode
 from django.utils.translation import gettext_lazy as _
 from unfold.widgets import UnfoldAdminDateWidget, UnfoldAdminSelectWidget, UnfoldAdminTextInputWidget
 
 from ninefruits.adminpanel.navigation import NavigationGroup
 from ninefruits.i18n.formatting import institution_timezone
+from ninefruits.organization.models import Program
 from ninefruits.person.actions.year_levels import ManageYearLevels
 from ninefruits.person.models import YearLevelRule, YearLevelRun
 from ninefruits.security.enums import Permission
@@ -56,7 +58,30 @@ class PreviewForm(forms.Form):
     term = forms.ModelChoiceField(
         label=_("Target term"), queryset=Term.objects.order_by("-start_date"), widget=UnfoldAdminSelectWidget
     )
+    program = forms.ModelChoiceField(
+        label=_("Program"),
+        queryset=Program.objects.order_by("code"),
+        required=False,
+        empty_label=_("All programs"),
+        widget=UnfoldAdminSelectWidget,
+    )
     cutoff_date = forms.DateField(label=_("Results through"), widget=UnfoldAdminDateWidget)
+
+
+class ReviewFilter(forms.Form):
+    program = forms.ModelChoiceField(
+        label=_("Program filter (display only)"),
+        queryset=Program.objects.none(),
+        required=False,
+        empty_label=_("All programs"),
+        widget=UnfoldAdminSelectWidget,
+    )
+
+    def __init__(self, data: QueryDict, run: YearLevelRun) -> None:
+        super().__init__(data)
+        field = self.fields["program"]
+        assert isinstance(field, forms.ModelChoiceField)
+        field.queryset = Program.objects.filter(pk__in=run.changes.values("program_id")).order_by("code")
 
 
 class ScheduleForm(forms.Form):
@@ -112,7 +137,7 @@ def progression_view(request: HttpRequest) -> HttpResponse:
     if not actions.can_manage(staff):
         raise PermissionDenied
     run_id = _pk(request.GET, "run")
-    run = get_object_or_404(YearLevelRun.objects.select_related("term"), pk=run_id) if run_id else None
+    run = get_object_or_404(YearLevelRun.objects.select_related("term", "program"), pk=run_id) if run_id else None
     institution_zone = institution_timezone()
     with timezone.override(institution_zone):
         return _progression_response(request, actions, staff, run, str(institution_zone))
@@ -134,7 +159,13 @@ def _progression_response(
         action = bound.get("action")
         try:
             if run is None and action == "preview" and form.is_valid():
-                created = actions.preview(form.cleaned_data["term"].pk, form.cleaned_data["cutoff_date"], staff)
+                program = form.cleaned_data["program"]
+                created = actions.preview(
+                    form.cleaned_data["term"].pk,
+                    form.cleaned_data["cutoff_date"],
+                    staff,
+                    program_id=program.pk if program else None,
+                )
                 return redirect(f"{url}?run={created.pk}")
             if run is not None:
                 if action == "schedule" and form.is_valid():
@@ -147,19 +178,26 @@ def _progression_response(
                     change_id = _pk(bound, "change")
                     get_object_or_404(run.changes, pk=change_id)
                     actions.exclude(run.pk, cast(int, change_id), staff)
-                    return redirect(f"{url}?run={run.pk}&page={_pk(request.GET, 'page') or 1}")
+                    params = {"run": run.pk, "page": _pk(request.GET, "page") or 1}
+                    if program_id := _pk(request.GET, "program"):
+                        params["program"] = program_id
+                    return redirect(f"{url}?{urlencode(params)}")
         except ValidationError as exc:
             messages.error(request, " ".join(exc.messages))
     page = _pk(request.GET, "page") or 1
+    paginated: dict[str, object]
     if run is None:
-        run_page = Paginator(YearLevelRun.objects.select_related("term").order_by("-pk"), 25).get_page(page)
+        run_page = Paginator(YearLevelRun.objects.select_related("term", "program").order_by("-pk"), 25).get_page(page)
         paginated = {"items": run_page, "run_rows": [(item, STATUSES[item.status]) for item in run_page]}
     else:
-        change_page = Paginator(run.changes.select_related("student_record", "program").order_by("pk"), 50).get_page(
-            page
-        )
+        changes = run.changes.select_related("student_record", "program").order_by("pk")
+        review_filter = ReviewFilter(request.GET, run) if run.program_id is None else None
+        if review_filter and review_filter.is_valid() and (program := review_filter.cleaned_data["program"]):
+            changes = changes.filter(program=program)
+        change_page = Paginator(changes, 50).get_page(page)
         paginated = {
             "items": change_page,
+            "review_filter": review_filter,
             "change_rows": [(item, BASES[item.basis], OUTCOMES[item.outcome]) for item in change_page],
         }
     return render(

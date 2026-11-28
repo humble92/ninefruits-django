@@ -1482,3 +1482,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "विद्यार्थी नम्बर"
+
+msgid "All programs"
+msgstr "सबै कार्यक्रम"
+
+msgid "Program filter (display only)"
+msgstr "कार्यक्रम फिल्टर (प्रदर्शन मात्र)"
+
+msgid "Apply"
+msgstr "लागू गर्नुहोस्"

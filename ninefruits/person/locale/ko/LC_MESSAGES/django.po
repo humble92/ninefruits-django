@@ -1473,3 +1473,12 @@ msgstr "검토 중인 작업의 변경만 검토할 수 있습니다."
 msgctxt "people"
 msgid "Student number"
 msgstr "학번"
+
+msgid "All programs"
+msgstr "모든 프로그램"
+
+msgid "Program filter (display only)"
+msgstr "프로그램 필터 (화면에만 적용)"
+
+msgid "Apply"
+msgstr "적용"

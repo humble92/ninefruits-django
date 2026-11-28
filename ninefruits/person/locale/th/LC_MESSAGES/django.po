@@ -1484,3 +1484,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "รหัสนักศึกษา"
+
+msgid "All programs"
+msgstr "ทุกหลักสูตร"
+
+msgid "Program filter (display only)"
+msgstr "ตัวกรองหลักสูตร (เฉพาะการแสดงผล)"
+
+msgid "Apply"
+msgstr "ใช้ตัวกรอง"

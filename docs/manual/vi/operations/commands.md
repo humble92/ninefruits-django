@@ -527,3 +527,11 @@ Mọi lệnh đều chạy dưới dạng `uv run manage.py {command}`. Trong m�
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Áp dụng các đợt lên năm học đã được duyệt khi đến thời gian đã định. Các đợt đã hoàn tất sẽ không được áp dụng lại.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+ดำเนินการเลื่อนชั้นปีที่อนุมัติแล้วเมื่อถึงเวลาที่กำหนด งานที่เสร็จแล้วจะไม่ถูกดำเนินการซ้ำ
+
+```bash
+uv run manage.py students_apply_year_levels
+```

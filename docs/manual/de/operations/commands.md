@@ -527,3 +527,11 @@ Jeder Befehl wird als `uv run manage.py {command}` ausgeführt. In der Docker-En
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Wendet genehmigte Jahrgangswechsel an, deren Ausführungszeit erreicht ist. Bereits abgeschlossene Läufe werden nicht erneut angewendet.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

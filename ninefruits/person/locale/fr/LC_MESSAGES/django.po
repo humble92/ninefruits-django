@@ -1480,3 +1480,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "Numéro d’étudiant"
+
+msgid "All programs"
+msgstr "Tous les programmes"
+
+msgid "Program filter (display only)"
+msgstr "Filtre par programme (affichage uniquement)"
+
+msgid "Apply"
+msgstr "Appliquer"

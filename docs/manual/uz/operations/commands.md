@@ -527,3 +527,11 @@ Har bir buyruq `uv run manage.py {command}` sifatida ishga tushiriladi. Docker i
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Belgilangan vaqti kelgan tasdiqlangan kursga o‘tkazish ishlarini qo‘llaydi. Yakunlangan ishlar qayta qo‘llanmaydi.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

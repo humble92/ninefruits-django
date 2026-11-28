@@ -527,3 +527,11 @@
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Товлосон цаг нь болсон, батлагдсан анги дэвшилтийг хэрэгжүүлнэ. Дууссан ажиллагааг дахин хэрэгжүүлэхгүй.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

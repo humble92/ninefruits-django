@@ -1483,3 +1483,12 @@ msgstr "You can only review changes in a draft."
 msgctxt "people"
 msgid "Student number"
 msgstr "Nombor matrik"
+
+msgid "All programs"
+msgstr "Semua program"
+
+msgid "Program filter (display only)"
+msgstr "Penapis program (paparan sahaja)"
+
+msgid "Apply"
+msgstr "Gunakan"

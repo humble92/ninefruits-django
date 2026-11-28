@@ -527,3 +527,11 @@ Setiap arahan dijalankan sebagai `uv run manage.py {command}`. Dalam persekitara
   ```bash
   uv run manage.py naming_check
   ```
+
+### `students_apply_year_levels`
+
+Memproses kenaikan tahun pengajian yang diluluskan apabila tiba masa yang dijadualkan. Proses yang selesai tidak dijalankan semula.
+
+```bash
+uv run manage.py students_apply_year_levels
+```

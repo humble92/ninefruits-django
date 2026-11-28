@@ -23,6 +23,7 @@ class YearLevelRule(models.Model):
 
 class YearLevelRun(models.Model):
     term = models.ForeignKey("term.Term", on_delete=models.RESTRICT)
+    program = models.ForeignKey("organization.Program", on_delete=models.RESTRICT, null=True, blank=True)
     cutoff_date = models.DateField()
     status = models.CharField(max_length=16, default="draft")
     scheduled_at = models.DateTimeField(null=True, blank=True)

@@ -1474,3 +1474,12 @@ msgstr "仅可审核草稿中的变更。"
 msgctxt "people"
 msgid "Student number"
 msgstr "学号"
+
+msgid "All programs"
+msgstr "全部专业"
+
+msgid "Program filter (display only)"
+msgstr "专业筛选（仅影响显示）"
+
+msgid "Apply"
+msgstr "应用"

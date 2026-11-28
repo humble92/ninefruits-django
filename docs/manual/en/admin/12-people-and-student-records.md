@@ -67,6 +67,8 @@ The same rules exist in the database (row level security), so queries outside th
 4. Review the student numbers, applied rules, totals, and proposed changes. Exclude individual exceptions. Choose **Approve and schedule** and enter the date and time in the institution's time zone. Schedule the run before enrollment opens if it uses the new year levels.
 5. Check the run history for updated, excluded, and skipped records. The run skips students whose status, program, or current year level changed since the preview. For rule or grade corrections, cancel the run before it applies and create a new preview.
 
+Select a **Program** when creating the preview to limit calculation and application to that program. In a run for **All programs**, use **Program filter (display only)** to narrow the review list. Scheduling still applies every included proposal in the run. Each term can have one draft or scheduled run at a time.
+
 Rule configuration requires global **Manage institution settings** permission. Reviewing and scheduling runs requires global **Create and edit student records** permission. Individual and CSV corrections remain available.
 
 ## Instructors
